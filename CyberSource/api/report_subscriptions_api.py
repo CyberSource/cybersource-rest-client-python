@@ -149,8 +149,8 @@ class ReportSubscriptionsApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'predefined_subscription_request_bean', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "create_standard_or_classic_subscription,create_standard_or_classic_subscription_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_standard_or_classic_subscription,create_standard_or_classic_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -272,8 +272,8 @@ class ReportSubscriptionsApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_report_subscription_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "create_subscription,create_subscription_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_subscription,create_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -399,8 +399,8 @@ class ReportSubscriptionsApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "delete_subscription,delete_subscription_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "delete_subscription,delete_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -516,8 +516,8 @@ class ReportSubscriptionsApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_all_subscriptions,get_all_subscriptions_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_all_subscriptions,get_all_subscriptions_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -643,8 +643,8 @@ class ReportSubscriptionsApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_subscription,get_subscription_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_subscription,get_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting

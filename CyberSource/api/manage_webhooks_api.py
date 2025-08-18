@@ -149,8 +149,8 @@ class ManageWebhooksApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "delete_webhook_subscription,delete_webhook_subscription_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "delete_webhook_subscription,delete_webhook_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -272,8 +272,8 @@ class ManageWebhooksApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_webhook_subscription_by_id,get_webhook_subscription_by_id_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_webhook_subscription_by_id,get_webhook_subscription_by_id_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -402,8 +402,8 @@ class ManageWebhooksApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_webhook_subscriptions_by_org,get_webhook_subscriptions_by_org_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_webhook_subscriptions_by_org,get_webhook_subscriptions_by_org_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -525,8 +525,8 @@ class ManageWebhooksApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "notification_subscriptions_v1_webhooks_webhook_id_post,notification_subscriptions_v1_webhooks_webhook_id_post_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "notification_subscriptions_v1_webhooks_webhook_id_post,notification_subscriptions_v1_webhooks_webhook_id_post_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -649,8 +649,8 @@ class ManageWebhooksApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'update_webhook', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "notification_subscriptions_v2_webhooks_webhook_id_patch,notification_subscriptions_v2_webhooks_webhook_id_patch_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "notification_subscriptions_v2_webhooks_webhook_id_patch,notification_subscriptions_v2_webhooks_webhook_id_patch_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -773,8 +773,8 @@ class ManageWebhooksApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'update_status', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "notification_subscriptions_v2_webhooks_webhook_id_status_put,notification_subscriptions_v2_webhooks_webhook_id_status_put_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "notification_subscriptions_v2_webhooks_webhook_id_status_put,notification_subscriptions_v2_webhooks_webhook_id_status_put_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -914,8 +914,8 @@ class ManageWebhooksApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'save_asym_egress_key', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "save_asym_egress_key,save_asym_egress_key_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "save_asym_egress_key,save_asym_egress_key_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
