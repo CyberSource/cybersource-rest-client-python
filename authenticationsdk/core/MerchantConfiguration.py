@@ -1,4 +1,6 @@
+import copy
 from CyberSource.logging.log_configuration import LogConfiguration
+from authenticationsdk.util.CertificateUtility import CertificateUtility
 from authenticationsdk.util.GlobalLabelParameters import *
 from wsgiref.handlers import format_date_time
 from datetime import datetime
@@ -54,9 +56,12 @@ class MerchantConfiguration:
         self.enableRequestMLEForOptionalApisGlobally = None
         self.disableRequestMLEForMandatoryApisGlobally = None
         self.mapToControlMLEonAPI = None
-        self.mleKeyAlias = None 
+        self.mleKeyAlias = None
+        self.mleForRequestPublicCertPath = None
+        self.p12KeyFilePath = None
         self.logger = LogFactory.setup_logger(self.__class__.__name__)
 
+#region Getters and Setters
     def set_merchant_keyid(self, value):
         if not (value.get('merchant_keyid') is None):
             self.merchant_keyid = value['merchant_keyid']
@@ -90,7 +95,7 @@ class MerchantConfiguration:
             self.use_metakey = value['use_metakey']
         else:
             self.use_metakey = False
-    
+
     def set_portfolio_id(self, value):
         if not (value.get('portfolio_id') is None):
             self.portfolio_id = value['portfolio_id']
@@ -140,7 +145,7 @@ class MerchantConfiguration:
             self.enable_client_cert = value['enable_client_cert']
         else:
             self.enable_client_cert = False
-    
+
     def set_client_cert_dir(self, value):
         if not (value.get('client_cert_dir') is None):
             self.client_cert_dir = value['client_cert_dir']
@@ -185,7 +190,7 @@ class MerchantConfiguration:
 
     def get_jwePEMFileDirectory(self):
         return self.__jwePEMFileDirectory
-    
+
     def set_useMLEGlobally(self, value):
         if not (value.get('useMLEGlobally') is None):
             self.useMLEGlobally = value['useMLEGlobally']
@@ -227,7 +232,7 @@ class MerchantConfiguration:
 
     def get_mapToControlMLEonAPI(self):
         return self.mapToControlMLEonAPI
-    
+
     def set_mleKeyAlias(self, value):
         if value.get('mleKeyAlias') is not None and value.get('mleKeyAlias').strip():
             self.mleKeyAlias = value['mleKeyAlias'].strip()
@@ -237,6 +242,25 @@ class MerchantConfiguration:
     def get_mleKeyAlias(self):
         return self.mleKeyAlias
 
+    def set_mleForRequestPublicCertPath(self, value):
+        if value.get('mleForRequestPublicCertPath') is not None and value.get('mleForRequestPublicCertPath').strip():
+            self.mleForRequestPublicCertPath = value['mleForRequestPublicCertPath'].strip()
+        else:
+            self.mleForRequestPublicCertPath = None
+
+    def get_mleForRequestPublicCertPath(self):
+        return self.mleForRequestPublicCertPath
+
+    def set_p12KeyFilePath(self, value):
+        if value.get('p12KeyFilePath') is not None and value.get('p12KeyFilePath').strip():
+            self.p12KeyFilePath = value['p12KeyFilePath'].strip()
+        else:
+            self.p12KeyFilePath = None
+
+    def get_p12KeyFilePath(self):
+        return self.p12KeyFilePath
+
+#endregion
 
     # This method sets the Merchant Configuration Variables to its respective values after reading from cybs.properties
     def set_merchantconfig(self, val):
@@ -273,6 +297,7 @@ class MerchantConfiguration:
         self.set_enableRequestMLEForOptionalApisGlobally(val)
         self.set_disableRequestMLEForMandatoryApisGlobally(val)
         self.set_mapToControlMLEonAPI(val)
+        self.set_mleForRequestPublicCertPath(val)
         self.set_mleKeyAlias(val)
 
     # Returns the time in format as defined by RFC7231
@@ -307,12 +332,12 @@ class MerchantConfiguration:
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.CLIENT_CERT_DIR_EMPTY,
                                                                                self.log_config)
-            
+
             if self.ssl_client_cert is None or self.ssl_client_cert == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.SSL_CLIENT_CERT_EMPTY,
                                                                                self.log_config)
-            
+
             if self.private_key is None or self.private_key == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.PRIVATE_KEY_EMPTY,
@@ -328,7 +353,7 @@ class MerchantConfiguration:
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.MERCHANTID_REQ,
                                                                                self.log_config)
-                
+
                 if self.merchant_keyid is None or self.merchant_keyid == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                        GlobalLabelParameters.MERCHANT_KEY_ID_REQ,
@@ -344,7 +369,7 @@ class MerchantConfiguration:
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.MERCHANTID_REQ,
                                                                                self.log_config)
-                
+
                 if self.key_alias is None or self.key_alias == "":
                     self.key_alias = self.merchant_id
                     authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
@@ -375,23 +400,26 @@ class MerchantConfiguration:
                                                                                  GlobalLabelParameters.KEY_FILE_EMPTY,
                                                                                  self.log_config)
 
-            elif self.authentication_type.lower() == GlobalLabelParameters.OAUTH.lower():                
+                if not self.check_key_file():
+                    authenticationsdk.util.ExceptionAuth.log_exception(self.logger, f"Error finding or accessing the Key Directory or Key File. Please review the values in the merchant configuration.", self.log_config)
+
+            elif self.authentication_type.lower() == GlobalLabelParameters.OAUTH.lower():
                 if self.access_token is None or self.access_token == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.ACCESS_TOKEN_EMPTY,
                                                                                self.log_config)
-            
+
                 if self.ssl_client_cert is None or self.ssl_client_cert == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.REFRESH_TOKEN_EMPTY,
                                                                                self.log_config)
-            
-            elif self.authentication_type.lower() == GlobalLabelParameters.MUTUAL_AUTH.lower():                
+
+            elif self.authentication_type.lower() == GlobalLabelParameters.MUTUAL_AUTH.lower():
                 if self.client_id is None or self.client_id == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.CLIENT_ID_EMPTY,
                                                                                self.log_config)
-            
+
                 if self.client_secret is None or self.client_secret == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.CLIENT_SECRET_EMPTY,
@@ -421,14 +449,58 @@ class MerchantConfiguration:
                                                                                GlobalLabelParameters.MLE_AUTH_ERROR,
                                                                                self.log_config)
 
+        self.validate_MLE_configuration()
+        self.p12KeyFilePath = os.path.join(self.key_file_path, self.key_file_name) + GlobalLabelParameters.P12_PREFIX
+
         log_items = GlobalLabelParameters.HIDE_MERCHANT_CONFIG_PROPS
         # This displays the logic for logging all cybs.json values
+        details_copy = copy.deepcopy(details)
         if self.log_config.enable_log is True:
-            for key, value in list(details.items()):
+            for key, value in list(details_copy.items()):
                 if key in log_items:
-                    del details[key]
+                    del details_copy[key]
 
-                for keys, values in list(details.items()):
-                    details[keys] = str(values)
+                for keys, values in list(details_copy.items()):
+                    details_copy[keys] = str(values)
 
-            self.logger.info("Mconfig >      " + str(ast.literal_eval(json.dumps(details))))
+            self.logger.info("Mconfig >      " + str(ast.literal_eval(json.dumps(details_copy))))
+
+    def check_key_file(self):
+        if not(self.key_file_name and self.key_file_name.strip()):
+            self.logger.error("Key Filename not provided. Assigning the value of Merchant ID")
+            if self.merchant_id and self.merchant_id.strip():
+                self.key_file_name = self.merchant_id
+
+        if not(self.key_file_path and self.key_file_path.strip()):
+            self.key_file_path = GlobalLabelParameters.DEFAULT_KEY_FILE_PATH
+            self.logger.error(f"Keys Directory not provided. Using Default Path: {self.key_file_path}")
+
+        # Directory exists?
+        if not os.path.isdir(self.key_file_path):
+            self.logger.error(f"Keys Directory not found. Entered directory : {self.key_file_path}")
+            return False
+
+        keyFilePath = os.path.join(self.key_file_path, self.key_file_name) + GlobalLabelParameters.P12_PREFIX
+
+        # File exists?
+        if not os.path.isfile(keyFilePath):
+            self.logger.error(f"Key File not found. Check path/filename entered. Entered path/filename : {keyFilePath}")
+            return False
+
+        self.logger.info(f"Entered value for Key File Path : {keyFilePath}")
+
+        # Can file be opened for reading?
+        try:
+            with open(keyFilePath, 'rb'):
+                return True
+        except Exception:
+            self.logger.info(f"File cannot be accessed. Permission denied : {keyFilePath}")
+            return False
+
+    def validate_MLE_configuration(self):
+        if self.mleForRequestPublicCertPath and self.mleForRequestPublicCertPath.strip():
+            try:
+                CertificateUtility.validate_path_and_file(self.mleForRequestPublicCertPath, "mleForRequestPublicCertPath", self.log_config)
+            except Exception as err:
+                self.logger.error(err)
+                raise err

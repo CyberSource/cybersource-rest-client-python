@@ -45,7 +45,6 @@ class Authorization:
                 return sig_token
             # JWT-Call
             elif authentication_type.upper() == GlobalLabelParameters.JWT.upper():
-
                 jwt_sig_token = JwtSignatureToken()
                 jwt_sig_token.jwt_signature_token(mconfig, date_time)
                 sig_token_jwt = jwt_sig_token.get_token()
