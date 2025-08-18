@@ -51,6 +51,8 @@ class MerchantConfiguration:
         self.log_config = None
         self.__jwePEMFileDirectory = None
         self.useMLEGlobally = None
+        self.enableRequestMLEForOptionalApisGlobally = None
+        self.disableRequestMLEForMandatoryApisGlobally = None
         self.mapToControlMLEonAPI = None
         self.mleKeyAlias = None 
         self.logger = LogFactory.setup_logger(self.__class__.__name__)
@@ -187,11 +189,33 @@ class MerchantConfiguration:
     def set_useMLEGlobally(self, value):
         if not (value.get('useMLEGlobally') is None):
             self.useMLEGlobally = value['useMLEGlobally']
-        else:
-            self.useMLEGlobally = False
 
     def get_useMLEGlobally(self):
         return self.useMLEGlobally
+    
+    def set_enableRequestMLEForOptionalApisGlobally(self, value):
+        enable_mle = value.get('enableRequestMLEForOptionalApisGlobally')
+        use_mle = value.get('useMLEGlobally')
+
+        if enable_mle is not None and use_mle is not None and enable_mle != use_mle:
+            raise ValueError("useMLEGlobally and enableRequestMLEForOptionalApisGlobally must have the same value.")
+
+        self.enableRequestMLEForOptionalApisGlobally = (
+            enable_mle if enable_mle is not None else (use_mle if use_mle is not None else False)
+        )
+
+    def get_enableRequestMLEForOptionalApisGlobally(self):
+        return self.enableRequestMLEForOptionalApisGlobally
+    
+
+    def set_disableRequestMLEForMandatoryApisGlobally(self, value):
+        self.disableRequestMLEForMandatoryApisGlobally = (
+            value.get('disableRequestMLEForMandatoryApisGlobally')
+            or False
+        )
+
+    def get_disableRequestMLEForMandatoryApisGlobally(self):
+        return self.disableRequestMLEForMandatoryApisGlobally
     
     def set_mapToControlMLEonAPI(self, value):
         map_to_control_mle_on_api = value.get('mapToControlMLEonAPI')
@@ -246,6 +270,8 @@ class MerchantConfiguration:
         self.set_log_configuration(val)
         self.set_jwePEMFileDirectory(val)
         self.set_useMLEGlobally(val)
+        self.set_enableRequestMLEForOptionalApisGlobally(val)
+        self.set_disableRequestMLEForMandatoryApisGlobally(val)
         self.set_mapToControlMLEonAPI(val)
         self.set_mleKeyAlias(val)
 
@@ -374,9 +400,16 @@ class MerchantConfiguration:
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.AUTH_ERROR,
                                                                                self.log_config)
+            
+        use_mle = self.useMLEGlobally
+        enable_mle = self.enableRequestMLEForOptionalApisGlobally
+
+        if use_mle is not None and enable_mle is not None and use_mle != enable_mle:
+            raise ValueError("useMLEGlobally and enableRequestMLEForOptionalApisGlobally must have the same value.")
+        
         # useMLEGlobally check for auth Type
-        if self.useMLEGlobally is True or self.mapToControlMLEonAPI is not None:
-            if self.useMLEGlobally is True and self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
+        if self.enableRequestMLEForOptionalApisGlobally is True or self.mapToControlMLEonAPI is not None:
+            if self.enableRequestMLEForOptionalApisGlobally is True and self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
                  authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.MLE_AUTH_ERROR,
                                                                                self.log_config)

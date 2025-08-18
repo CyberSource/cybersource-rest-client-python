@@ -16,11 +16,16 @@ class MLEUtility:
             self.errors = errors
 
     @staticmethod
-    def check_is_mle_for_api(merchant_config, is_mle_supported_by_cybs_for_api, operation_ids):
-
+    def check_is_mle_for_api(merchant_config, inbound_mle_status, operation_ids):
         is_mle_for_api = False
-        if is_mle_supported_by_cybs_for_api and merchant_config.get_useMLEGlobally():
+
+        if str(inbound_mle_status).lower() == "optional" and merchant_config.get_enableRequestMLEForOptionalApisGlobally():
             is_mle_for_api = True
+
+        if str(inbound_mle_status).lower() == "mandatory":
+            is_mle_for_api = not merchant_config.get_disableRequestMLEForMandatoryApisGlobally()
+
+        
         operation_array = [op_id.strip() for op_id in operation_ids.split(",")]
         map_to_control_mle = merchant_config.get_mapToControlMLEonAPI()
         if map_to_control_mle is not None and map_to_control_mle:
@@ -36,7 +41,7 @@ class MLEUtility:
             return request_body
 
         logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
-             
+                      
         if merchant_config.log_config.enable_log:
             logger.debug(f"{GlobalLabelParameters.MESSAGE_BEFORE_MLE_REQUEST}{request_body}")
 
