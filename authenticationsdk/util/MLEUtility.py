@@ -1,26 +1,33 @@
 import json
 import time
-from datetime import datetime, timezone
 
-from cryptography import x509
-from jwcrypto import jwk, jwe
+from cryptography.hazmat.primitives import serialization
+from cryptography.x509.oid import NameOID
+from jwcrypto import jwe, jwk
 
 from authenticationsdk.util.Cache import FileCache
 from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
 import CyberSource.logging.log_factory as LogFactory
 
 class MLEUtility:
+    logger = None
+
     class MLEException(Exception):
         def __init__(self, message, errors=None):
             super().__init__(message)
             self.errors = errors
 
     @staticmethod
-    def check_is_mle_for_api(merchant_config, is_mle_supported_by_cybs_for_api, operation_ids):
-
+    def check_is_mle_for_api(merchant_config, inbound_mle_status, operation_ids):
         is_mle_for_api = False
-        if is_mle_supported_by_cybs_for_api and merchant_config.get_useMLEGlobally():
+
+        if str(inbound_mle_status).lower() == "optional" and merchant_config.get_enableRequestMLEForOptionalApisGlobally():
             is_mle_for_api = True
+
+        if str(inbound_mle_status).lower() == "mandatory":
+            is_mle_for_api = not merchant_config.get_disableRequestMLEForMandatoryApisGlobally()
+
+        
         operation_array = [op_id.strip() for op_id in operation_ids.split(",")]
         map_to_control_mle = merchant_config.get_mapToControlMLEonAPI()
         if map_to_control_mle is not None and map_to_control_mle:
@@ -32,101 +39,81 @@ class MLEUtility:
 
     @staticmethod
     def encrypt_request_payload(merchant_config, request_body):
-        if request_body is None or request_body == "":
+        if MLEUtility.logger is None:
+            MLEUtility.logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
+        logger = MLEUtility.logger
+
+        if request_body is None:
+            return None
+
+        payload = str(request_body)
+        logger.debug(GlobalLabelParameters.MESSAGE_BEFORE_MLE_REQUEST + ' ' + payload)
+
+        mle_certificate = MLEUtility.get_mle_certificate(merchant_config)
+
+        # Special case: MLE Certificate is not currently available for HTTP Signature
+        if (mle_certificate is None and merchant_config.authentication_type.lower() == GlobalLabelParameters.HTTP.lower()):
+            logger.debug("The certificate to use for MLE for requests is not provided in the merchant configuration. Please ensure that the certificate path is provided.")
+            logger.debug("Currently, MLE for requests using HTTP Signature as authentication is not supported by Cybersource. By default, the SDK will fall back to non-encrypted requests.")
             return request_body
 
-        logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
-             
-        if merchant_config.log_config.enable_log:
-            logger.debug(f"{GlobalLabelParameters.MESSAGE_BEFORE_MLE_REQUEST}{request_body}")
+        serial_number = MLEUtility.get_serial_number_from_certificate(mle_certificate, merchant_config)
+        payload_bytes = payload.encode('utf-8')
 
-        cert = MLEUtility.get_mle_certificate(merchant_config, logger)
+        # Extract the public RSA key from the certificate
+        public_key = mle_certificate.public_key()  # cryptography.x509.Certificate object
 
-        try:
-            serialized_jwe_token = MLEUtility.generate_token(cert, request_body, merchant_config.log_config, logger)
-            mleRequest = MLEUtility.create_json_object(serialized_jwe_token)
-            if merchant_config.log_config.enable_log:
-                logger.debug(f"{GlobalLabelParameters.MESSAGE_AFTER_MLE_REQUEST}{mleRequest}")
-            return mleRequest
+        # Convert public key to jwk
+        rsa_pem = public_key.public_bytes(encoding=serialization.Encoding.PEM, format=serialization.PublicFormat.SubjectPublicKeyInfo)
+        jwk_key = jwk.JWK.from_pem(rsa_pem)
 
-        except Exception as e:
-            if merchant_config.log_config.enable_log:
-                logger.error(f"Error encrypting request payload.")
-            raise MLEUtility.MLEException(f"Error encrypting request payload.")
-
-    @staticmethod
-    def generate_token(cert, request_body, log_config, logger):
-        public_key = cert.public_key()
-        serial_number = MLEUtility.extract_serial_number(cert, log_config, logger)
-
-        jwk_key = jwk.JWK.from_pyca(public_key)
-        payload = request_body.encode('utf-8')
-
-        header = {
+        # Prepare JWE headers
+        headers = {
             "alg": "RSA-OAEP-256",
             "enc": "A256GCM",
-            "cty": "JWT",
             "kid": serial_number,
             "iat": int(time.time())
         }
 
-        jwe_token = jwe.JWE(plaintext=payload, protected=json.dumps(header))
+        # Create the JWE object and encrypt
+        jwe_token = jwe.JWE(plaintext=payload_bytes, protected=json.dumps(headers))
         jwe_token.add_recipient(jwk_key)
 
-        return jwe_token.serialize(compact=True)
+        mle_request = MLEUtility.create_json_object(jwe_token.serialize(compact=True))
+        logger.debug(GlobalLabelParameters.MESSAGE_AFTER_MLE_REQUEST + ' ' + str(mle_request))
+
+        return mle_request
 
     @staticmethod
-    def get_mle_certificate(merchant_config, logger):
+    def get_mle_certificate(merchant_config):
         cache_obj = FileCache()
-        try:
-            cert_data = cache_obj.grab_file(merchant_config, merchant_config.key_file_path, merchant_config.key_file_name)
-            mle_certificate_x509 = cert_data[3]
-            if mle_certificate_x509 is not None:
-                MLEUtility.validate_certificate_expiry(mle_certificate_x509, merchant_config.get_mleKeyAlias(), merchant_config.log_config, logger)
-                return mle_certificate_x509
-            else:
-                if merchant_config.log_config.enable_log:
-                    logger.error(f"No certificate found for MLE for given mleKeyAlias {merchant_config.get_mleKeyAlias()} in p12 file {merchant_config.key_file_name}.p12")
-                raise MLEUtility.MLEException(f"No certificate found for MLE for given mleKeyAlias {merchant_config.get_mleKeyAlias()} in p12 file {merchant_config.key_file_name}.p12")
-        except KeyError:
-            if merchant_config.log_config.enable_log:
-                logger.error(f"No certificate found for MLE for given mleKeyAlias {merchant_config.get_mleKeyAlias()} in p12 file {merchant_config.key_file_name}.p12")
-            raise MLEUtility.MLEException(f"No certificate found for MLE for given mleKeyAlias {merchant_config.get_mleKeyAlias()} in p12 file {merchant_config.key_file_name}.p12")
-        except Exception as e:
-            if merchant_config.log_config.enable_log:
-                logger.error(f"Unable to load certificate: {str(e)}")
-            raise MLEUtility.MLEException(f"Unable to load PEM file: {str(e)}")
+        mle_certificate = cache_obj.get_request_mle_cert_from_cache(merchant_config)
+        return mle_certificate
 
     @staticmethod
-    def extract_serial_number(x509_certificate, log_config, logger):
-        serial_number = None
+    def get_serial_number_from_certificate(certificate, merchant_config):
+        if MLEUtility.logger is None:
+            MLEUtility.logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
+        logger = MLEUtility.logger
 
-        for attribute in x509_certificate.subject:
-            if attribute.oid == x509.NameOID.SERIAL_NUMBER:
+        if certificate is None:
+            raise ValueError("MLE certificate is null")
+
+        # Get subject and look for 'serialNumber'
+        subject = certificate.subject
+        serial_number = None
+        for attribute in subject:
+            if attribute.oid == NameOID.SERIAL_NUMBER:
                 serial_number = attribute.value
                 break
-        if serial_number is None:
-            if log_config.enable_log:
-                logger.warning("Serial number not found in MLE certificate for alias.")
-                serial_number = str(x509_certificate.serial_number)
+
+        if not serial_number:
+            logger.warning(f"Serial number not found in MLE certificate for alias {merchant_config.mle_key_alias} in {merchant_config.p12_keyfilepath}.p12")
+            # Use the hex serial number from the certificate as fallback
+            return format(certificate.serial_number, 'x')
+
         return serial_number
 
     @staticmethod
     def create_json_object(jwe_token):
         return json.dumps({"encryptedRequest": jwe_token})
-
-    @staticmethod
-    def validate_certificate_expiry(certificate, key_alias, log_config, logger):
-        try:
-            if certificate.not_valid_after_utc < datetime.now(timezone.utc):
-                if log_config.enable_log:
-                    logger.warning(f"Certificate with MLE alias {key_alias} is expired as of {certificate.not_valid_after_utc}. Please update p12 file.")
-                    # raise Exception(f"Certificate with MLE alias {key_alias} is expired.")
-            else:
-                time_to_expire = (certificate.not_valid_after_utc - datetime.now(timezone.utc)).total_seconds()
-                if time_to_expire < GlobalLabelParameters.CERTIFICATE_EXPIRY_DATE_WARNING_DAYS * 24 * 60 * 60:
-                    if log_config.enable_log:
-                        logger.warning(f"Certificate for MLE with alias {key_alias} is going to expire on {certificate.not_valid_after_utc}. Please update p12 file before that.")
-        except Exception as e:
-            if log_config.enable_log:
-                logger.error(f"Error while checking certificate expiry: {str(e)}")

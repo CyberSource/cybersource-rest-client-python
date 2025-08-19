@@ -23,33 +23,24 @@ class JwtSignatureToken(TokenGeneration):
     def set_token(self):
         token = ""
 
-        if self.jwt_method.upper() == GlobalLabelParameters.GET:
-            token = self.token_for_get()
-        elif self.jwt_method.upper() == GlobalLabelParameters.POST:
-            token = self.token_for_post()
-        elif self.jwt_method.upper() == GlobalLabelParameters.PUT:
-            token = self.token_for_put()
-        elif self.jwt_method.upper() == GlobalLabelParameters.DELETE:
-            token = self.token_for_delete()
-        elif self.jwt_method.upper() == GlobalLabelParameters.PATCH:
-            token = self.token_for_patch()
+        if self.jwt_method.upper() == GlobalLabelParameters.GET or self.jwt_method.upper() == GlobalLabelParameters.DELETE:
+            token = self.token_for_get_and_delete()
+        elif self.jwt_method.upper() == GlobalLabelParameters.POST or self.jwt_method.upper() == GlobalLabelParameters.PUT or self.jwt_method.upper() == GlobalLabelParameters.PATCH:
+            token = self.token_for_post_and_put_and_patch()
 
         return token
 
     # This function has the logic to generate token when the Jwt_method is get
-    def token_for_get(self):
-
+    def token_for_get_and_delete(self):
         # Setting the jwt body for JWT-get
         jwt_body = {GlobalLabelParameters.JWT_TIME: self.date}
         # reading the p12 file from cache memory
         cache_obj = FileCache()
-        cache_memory = cache_obj.grab_file(self.merchant_config, self.merchant_config.key_file_path,
-                                           self.merchant_config.key_file_name)
-        der_cert_string = cache_memory[0]
-        private_key = cache_memory[1]
+        cache_memory = cache_obj.fetch_cached_p12_certificate(self.merchant_config, self.merchant_config.p12KeyFilePath, self.merchant_config.key_password)
+        der_cert_string = cache_memory.certificate
+        private_key = cache_memory.private_key
         # setting the headers  -merchant_id and the public key
-        headers_jwt = {
-            GlobalLabelParameters.MERCHANT_ID: str(self.merchant_config.key_alias)}
+        headers_jwt = {GlobalLabelParameters.MERCHANT_ID: str(self.merchant_config.key_alias)}
         public_key_list = ([])
         public_key_list.append(der_cert_string.decode("utf-8"))
         public_key_headers = {GlobalLabelParameters.PUBLIC_KEY: public_key_list}
@@ -61,99 +52,20 @@ class JwtSignatureToken(TokenGeneration):
 
         return encoded_jwt
 
-    def token_for_post(self):
-
+    def token_for_post_and_put_and_patch(self):
         digest_payload_obj = DigestAndPayload()
         digest = digest_payload_obj.string_digest_generation(
             self.merchant_config.request_json_path_data)
         # Setting the jwt body for JWT-post
 
-        jwt_body = {GlobalLabelParameters.JWT_DIGEST: digest.decode("utf-8"), GlobalLabelParameters.JWT_ALGORITHM: "SHA-256",
-                    GlobalLabelParameters.JWT_TIME: self.date}
+        jwt_body = {GlobalLabelParameters.JWT_DIGEST: digest.decode("utf-8"), GlobalLabelParameters.JWT_ALGORITHM: "SHA-256", GlobalLabelParameters.JWT_TIME: self.date}
         # reading the p12 file from cache memory
         cache_obj = FileCache()
-        cache_memory = cache_obj.grab_file(self.merchant_config, self.merchant_config.key_file_path,
-                                           self.merchant_config.key_file_name)
-        der_cert_string = cache_memory[0]
-        private_key = cache_memory[1]
+        cache_memory = cache_obj.fetch_cached_p12_certificate(self.merchant_config, self.merchant_config.p12KeyFilePath, self.merchant_config.key_password)
+        der_cert_string = cache_memory.certificate
+        private_key = cache_memory.private_key
         # setting the headers  -merchant_id and the public key
-        headers_jwt = {
-            GlobalLabelParameters.MERCHANT_ID: str(self.merchant_config.key_alias)}
-        public_key_list = ([])
-        public_key_list.append(der_cert_string.decode("utf-8"))
-        public_key_headers = {GlobalLabelParameters.PUBLIC_KEY: public_key_list}
-        headers_jwt.update(public_key_headers)
-        # generating the token of jwt
-        encoded_jwt = jwt.encode(jwt_body, private_key, algorithm='RS256', headers=headers_jwt)
-
-        return encoded_jwt
-
-    def token_for_put(self):
-
-        digest_payload_obj = DigestAndPayload()
-        digest = digest_payload_obj.string_digest_generation(
-            self.merchant_config.request_json_path_data)
-        # Setting the jwt body for JWT-post
-        jwt_body = {GlobalLabelParameters.JWT_DIGEST: digest.decode("utf-8"), GlobalLabelParameters.JWT_ALGORITHM: "SHA-256",
-                    GlobalLabelParameters.JWT_TIME: self.date}
-        # reading the p12 file from cache memory
-        cache_obj = FileCache()
-        cache_memory = cache_obj.grab_file(self.merchant_config, self.merchant_config.key_file_path,
-                                           self.merchant_config.key_file_name)
-        der_cert_string = cache_memory[0]
-        private_key = cache_memory[1]
-        # setting the headers  -merchant_id and the public key
-        headers_jwt = {
-            GlobalLabelParameters.MERCHANT_ID: str(self.merchant_config.key_alias)}
-        public_key_list = ([])
-        public_key_list.append(der_cert_string.decode("utf-8"))
-        public_key_headers = {GlobalLabelParameters.PUBLIC_KEY: public_key_list}
-        headers_jwt.update(public_key_headers)
-        # generating the token of jwt
-        encoded_jwt = jwt.encode(jwt_body, private_key, algorithm='RS256', headers=headers_jwt)
-
-        return encoded_jwt
-
-    def token_for_patch(self):
-
-        digest_payload_obj = DigestAndPayload()
-        digest = digest_payload_obj.string_digest_generation(
-            self.merchant_config.request_json_path_data)
-        # Setting the jwt body for JWT-post
-        jwt_body = {GlobalLabelParameters.JWT_DIGEST: digest.decode("utf-8"),
-                    GlobalLabelParameters.JWT_ALGORITHM: "SHA-256",
-                    GlobalLabelParameters.JWT_TIME: self.date}
-        # reading the p12 file from cache memory
-        cache_obj = FileCache()
-        cache_memory = cache_obj.grab_file(self.merchant_config, self.merchant_config.key_file_path,
-                                           self.merchant_config.key_file_name)
-        der_cert_string = cache_memory[0]
-        private_key = cache_memory[1]
-        # setting the headers  -merchant_id and the public key
-        headers_jwt = {
-            GlobalLabelParameters.MERCHANT_ID: str(self.merchant_config.key_alias)}
-        public_key_list = ([])
-        public_key_list.append(der_cert_string.decode("utf-8"))
-        public_key_headers = {GlobalLabelParameters.PUBLIC_KEY: public_key_list}
-        headers_jwt.update(public_key_headers)
-        # generating the token of jwt
-        encoded_jwt = jwt.encode(jwt_body, private_key, algorithm='RS256', headers=headers_jwt)
-
-        return encoded_jwt
-
-    def token_for_delete(self):
-
-        # Setting the jwt body for JWT-get
-        jwt_body = {GlobalLabelParameters.JWT_TIME: self.date}
-        # reading the p12 file from cache memory
-        cache_obj = FileCache()
-        cache_memory = cache_obj.grab_file(self.merchant_config, self.merchant_config.key_file_path,
-                                           self.merchant_config.key_file_name)
-        der_cert_string = cache_memory[0]
-        private_key = cache_memory[1]
-        # setting the headers  -merchant_id and the public key
-        headers_jwt = {
-            GlobalLabelParameters.MERCHANT_ID: str(self.merchant_config.key_alias)}
+        headers_jwt = {GlobalLabelParameters.MERCHANT_ID: str(self.merchant_config.key_alias)}
         public_key_list = ([])
         public_key_list.append(der_cert_string.decode("utf-8"))
         public_key_headers = {GlobalLabelParameters.PUBLIC_KEY: public_key_list}

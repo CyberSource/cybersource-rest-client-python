@@ -97,3 +97,5 @@ class GlobalLabelParameters:
     CERTIFICATE_EXPIRY_DATE_WARNING_DAYS = 90
     MESSAGE_BEFORE_MLE_REQUEST = "Request before MLE: "
     MESSAGE_AFTER_MLE_REQUEST = "Request after MLE: "
+    MLE_CACHE_IDENTIFIER_FOR_CONFIG_CERT = "mleCertFromMerchantConfig"
+    MLE_CACHE_IDENTIFIER_FOR_P12_CERT = "mleCertFromP12"
