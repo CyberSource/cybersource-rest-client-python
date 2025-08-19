@@ -10,11 +10,13 @@ class JwtSignatureToken(TokenGeneration):
         self.request_body = None
         self.jwt_method = None
         self.date = None
+        self.request_json_path_data = None
 
-    def jwt_signature_token(self, mconfig, date_time):
+    def jwt_signature_token(self, mconfig, date_time, request_type_method, request_json_path_data=None):
         self.merchant_config = mconfig
-        self.jwt_method = mconfig.request_type_method
+        self.jwt_method = request_type_method
         self.date = date_time
+        self.request_json_path_data = request_json_path_data
 
     def get_token(self):
         return self.set_token()
@@ -55,7 +57,7 @@ class JwtSignatureToken(TokenGeneration):
     def token_for_post_and_put_and_patch(self):
         digest_payload_obj = DigestAndPayload()
         digest = digest_payload_obj.string_digest_generation(
-            self.merchant_config.request_json_path_data)
+            self.request_json_path_data)
         # Setting the jwt body for JWT-post
 
         jwt_body = {GlobalLabelParameters.JWT_DIGEST: digest.decode("utf-8"), GlobalLabelParameters.JWT_ALGORITHM: "SHA-256", GlobalLabelParameters.JWT_TIME: self.date}

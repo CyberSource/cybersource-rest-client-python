@@ -23,8 +23,6 @@ class MerchantConfiguration:
         self.host_name = None
         self.url = None
         self.request_host = None
-        self.request_type_method = None
-        self.request_target = None
         self.authentication_type = None
         self.key_file_path = None
         self.run_environment = None
@@ -48,7 +46,6 @@ class MerchantConfiguration:
         self.proxy_address = None
         self.proxy_port = None
         self.key_file_name = None
-        self.request_json_path_data = None
         self.solution_id = None
         self.log_config = None
         self.__jwePEMFileDirectory = None

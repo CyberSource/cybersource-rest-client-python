@@ -19,10 +19,12 @@ class GetSignatureParameter:
         self.merchant_config_sigparam = None
         self.date = None
 
-    def get_signature_parameter(self, mconfig, merchant_secret_key, merchant_id, httpmethod, date):
+    def get_signature_parameter(self, mconfig, merchant_secret_key, merchant_id, httpmethod, date, request_target=None, request_json_path_data=None):
 
         self.merchant_config_sigparam = mconfig
         self.date = date
+        self.request_target = request_target
+        self.request_json_path_data = request_json_path_data
 
         return self.get_signature_param(merchant_secret_key, merchant_id, httpmethod)
 
@@ -51,20 +53,20 @@ class GetSignatureParameter:
         signature_list.append(": ")
         # This forms the get_request_target
         if httpmethod.upper() == GlobalLabelParameters.GET:
-            get_request_target = GlobalLabelParameters.GET_LOWER_CASE + self.merchant_config_sigparam.request_target
+            get_request_target = GlobalLabelParameters.GET_LOWER_CASE + self.request_target
             signature_list.append(get_request_target)
         # This forms the post_request_target
         elif httpmethod.upper() == GlobalLabelParameters.POST:
-            post_request_target = GlobalLabelParameters.POST_LOWER_CASE + self.merchant_config_sigparam.request_target
+            post_request_target = GlobalLabelParameters.POST_LOWER_CASE + self.request_target
             signature_list.append(post_request_target)
         elif httpmethod.upper() == GlobalLabelParameters.PUT:
-            put_request_target = GlobalLabelParameters.PUT_LOWER_CASE + self.merchant_config_sigparam.request_target
+            put_request_target = GlobalLabelParameters.PUT_LOWER_CASE + self.request_target
             signature_list.append(put_request_target)
         elif httpmethod.upper() == GlobalLabelParameters.PATCH:
-            patch_request_target = GlobalLabelParameters.PATCH_LOWER_CASE + self.merchant_config_sigparam.request_target
+            patch_request_target = GlobalLabelParameters.PATCH_LOWER_CASE + self.request_target
             signature_list.append(patch_request_target)
         elif httpmethod.upper() == GlobalLabelParameters.DELETE:
-            delete_request_target = GlobalLabelParameters.DELETE_LOWER_CASE + self.merchant_config_sigparam.request_target
+            delete_request_target = GlobalLabelParameters.DELETE_LOWER_CASE + self.request_target
             signature_list.append(delete_request_target)
 
         signature_list.append("\n")
@@ -73,7 +75,7 @@ class GetSignatureParameter:
         if httpmethod.upper() == GlobalLabelParameters.POST or httpmethod.upper() == GlobalLabelParameters.PUT or httpmethod.upper() == GlobalLabelParameters.PATCH :
             digest_get_obj = DigestAndPayload()
             digest = digest_get_obj.string_digest_generation(
-                self.merchant_config_sigparam.request_json_path_data)
+                self.request_json_path_data)
             signature_list.append(GlobalLabelParameters.DIGEST.lower())
             signature_list.append(": ")
             signature_list.append(GlobalLabelParameters.DIGEST_PREFIX + digest.decode("utf-8"))

@@ -169,16 +169,9 @@ class ApiClient(object):
             self.host = self.mconfig.request_host
 
     # Calling the authentication header
-    def call_authentication_header(self, method, header_params, body):
+    def call_authentication_header(self, method, header_params, body, request_target=None):
         
         time = self.mconfig.get_time()
-
-        self.mconfig.request_type_method = method
-        
-
-        
-        if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
-            self.mconfig.request_json_path_data = body
 
         header_params['v-c-client-id'] = self.client_id
 
@@ -186,7 +179,7 @@ class ApiClient(object):
             # header_params['v-c-solution-id'] = self.mconfig.solution_id
 
         auth = Authorization()
-        token = auth.get_token(self.mconfig, self.mconfig.get_time())
+        token = auth.get_token(self.mconfig, time, method, request_target, body)
         if self.mconfig.authentication_type.upper() == GlobalLabelParameters.HTTP.upper():
             header_params['Accept-Encoding'] = '*'
             header_params['v-c-merchant-id'] = self.mconfig.merchant_id
@@ -466,13 +459,10 @@ class ApiClient(object):
             post_params = body
         
         query_param_path = self.set_query_params(resource_path, query_params)
-        if query_param_path:
-            self.mconfig.request_target = query_param_path
-        else:
-            self.mconfig.request_target = resource_path
+        request_target = query_param_path if query_param_path else resource_path
         
         if self.mconfig.authentication_type.upper() != GlobalLabelParameters.MUTUAL_AUTH.upper():
-            self.call_authentication_header(method, header_params, body)
+            self.call_authentication_header(method, header_params, body, request_target)
         
         """
         Makes the HTTP request (synchronous) and return the deserialized data.
