@@ -43,7 +43,8 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
         'ship_to': 'bool',
         'phone_number': 'bool',
         'email': 'bool',
-        'enable_merchant_email_notifications': 'bool'
+        'enable_merchant_email_notifications': 'bool',
+        'custom_labels': 'list[InvoicingV2InvoicesPost201ResponseInvoiceInformationCustomLabels]'
     }
 
     attribute_map = {
@@ -60,10 +61,11 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
         'ship_to': 'shipTo',
         'phone_number': 'phoneNumber',
         'email': 'email',
-        'enable_merchant_email_notifications': 'enableMerchantEmailNotifications'
+        'enable_merchant_email_notifications': 'enableMerchantEmailNotifications',
+        'custom_labels': 'customLabels'
     }
 
-    def __init__(self, merchant_logo=None, merchant_display_name=None, custom_email_message=None, enable_reminders=None, header_style=None, delivery_language=None, default_currency_code=None, payer_authentication3_ds_version=False, show_vat_number=False, vat_registration_number=None, ship_to=False, phone_number=False, email=False, enable_merchant_email_notifications=False):
+    def __init__(self, merchant_logo=None, merchant_display_name=None, custom_email_message=None, enable_reminders=None, header_style=None, delivery_language=None, default_currency_code=None, payer_authentication3_ds_version=False, show_vat_number=False, vat_registration_number=None, ship_to=False, phone_number=False, email=False, enable_merchant_email_notifications=False, custom_labels=None):
         """
         InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation - a model defined in Swagger
         """
@@ -82,6 +84,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
         self._phone_number = None
         self._email = None
         self._enable_merchant_email_notifications = None
+        self._custom_labels = None
 
         if merchant_logo is not None:
           self.merchant_logo = merchant_logo
@@ -111,6 +114,8 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
           self.email = email
         if enable_merchant_email_notifications is not None:
           self.enable_merchant_email_notifications = enable_merchant_email_notifications
+        if custom_labels is not None:
+          self.custom_labels = custom_labels
 
     @property
     def merchant_logo(self):
@@ -431,6 +436,29 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
         """
 
         self._enable_merchant_email_notifications = enable_merchant_email_notifications
+
+    @property
+    def custom_labels(self):
+        """
+        Gets the custom_labels of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        A list of custom labels that allows you to override (rename) default field names and control the visibility of specific fields on invoices and items. If the list is empty, the labels will not be overwritten. 
+
+        :return: The custom_labels of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :rtype: list[InvoicingV2InvoicesPost201ResponseInvoiceInformationCustomLabels]
+        """
+        return self._custom_labels
+
+    @custom_labels.setter
+    def custom_labels(self, custom_labels):
+        """
+        Sets the custom_labels of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        A list of custom labels that allows you to override (rename) default field names and control the visibility of specific fields on invoices and items. If the list is empty, the labels will not be overwritten. 
+
+        :param custom_labels: The custom_labels of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :type: list[InvoicingV2InvoicesPost201ResponseInvoiceInformationCustomLabels]
+        """
+
+        self._custom_labels = custom_labels
 
     def to_dict(self):
         """

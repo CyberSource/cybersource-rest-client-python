@@ -62,6 +62,14 @@ class TestInvoicesApi(unittest.TestCase):
         """
         pass
 
+    def test_perform_publish_action(self):
+        """
+        Test case for perform_publish_action
+
+        Publish an Invoice
+        """
+        pass
+
     def test_perform_send_action(self):
         """
         Test case for perform_send_action

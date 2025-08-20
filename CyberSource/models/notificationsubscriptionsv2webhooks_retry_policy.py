@@ -51,7 +51,7 @@ class Notificationsubscriptionsv2webhooksRetryPolicy(object):
         'additional_attributes': 'additionalAttributes'
     }
 
-    def __init__(self, algorithm=None, first_retry=None, interval=None, number_of_retries=None, deactivate_flag=None, repeat_sequence_count=None, repeat_sequence_wait_time=None, additional_attributes=None):
+    def __init__(self, algorithm='ARITHMETIC', first_retry=None, interval=None, number_of_retries=None, deactivate_flag=None, repeat_sequence_count=None, repeat_sequence_wait_time=None, additional_attributes=None):
         """
         Notificationsubscriptionsv2webhooksRetryPolicy - a model defined in Swagger
         """

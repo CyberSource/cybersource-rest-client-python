@@ -56,7 +56,7 @@ class Notificationsubscriptionsv2webhooksSecurityPolicy(object):
     def security_type(self):
         """
         Gets the security_type of this Notificationsubscriptionsv2webhooksSecurityPolicy.
-        Security Policy of the client server.
+        Security Policy of the client server.  Possible values: - key - oAuth - oAuth_JWT
 
         :return: The security_type of this Notificationsubscriptionsv2webhooksSecurityPolicy.
         :rtype: str
@@ -67,7 +67,7 @@ class Notificationsubscriptionsv2webhooksSecurityPolicy(object):
     def security_type(self, security_type):
         """
         Sets the security_type of this Notificationsubscriptionsv2webhooksSecurityPolicy.
-        Security Policy of the client server.
+        Security Policy of the client server.  Possible values: - key - oAuth - oAuth_JWT
 
         :param security_type: The security_type of this Notificationsubscriptionsv2webhooksSecurityPolicy.
         :type: str

@@ -51,7 +51,7 @@ class Ptsv2paymentsidcapturesPaymentInformationPaymentTypeMethod(object):
     def name(self):
         """
         Gets the name of this Ptsv2paymentsidcapturesPaymentInformationPaymentTypeMethod.
-        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal, 7Eleven, alfamart, etc  For Japan Payment Processing Valid Values: - 1 Banking Data - 2 Authorization Data  #### Via KCP - `KCP` : Local Card, Bank Transfer and Carrier Billing. - `PAYCO` - `KAKAOPAY` - `NAVERPAY` 
+        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal, 7Eleven, alfamart, bofaPayByBank, payToPayByBank, etc  For Japan Payment Processing Valid Values: - 1 Banking Data - 2 Authorization Data  #### Via KCP - `KCP` : Local Card, Bank Transfer and Carrier Billing. - `PAYCO` - `KAKAOPAY` - `NAVERPAY` 
 
         :return: The name of this Ptsv2paymentsidcapturesPaymentInformationPaymentTypeMethod.
         :rtype: str
@@ -62,7 +62,7 @@ class Ptsv2paymentsidcapturesPaymentInformationPaymentTypeMethod(object):
     def name(self, name):
         """
         Sets the name of this Ptsv2paymentsidcapturesPaymentInformationPaymentTypeMethod.
-        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal, 7Eleven, alfamart, etc  For Japan Payment Processing Valid Values: - 1 Banking Data - 2 Authorization Data  #### Via KCP - `KCP` : Local Card, Bank Transfer and Carrier Billing. - `PAYCO` - `KAKAOPAY` - `NAVERPAY` 
+        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal, 7Eleven, alfamart, bofaPayByBank, payToPayByBank, etc  For Japan Payment Processing Valid Values: - 1 Banking Data - 2 Authorization Data  #### Via KCP - `KCP` : Local Card, Bank Transfer and Carrier Billing. - `PAYCO` - `KAKAOPAY` - `NAVERPAY` 
 
         :param name: The name of this Ptsv2paymentsidcapturesPaymentInformationPaymentTypeMethod.
         :type: str

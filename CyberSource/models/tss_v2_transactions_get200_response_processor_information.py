@@ -45,7 +45,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'event_status': 'str',
         'system_trace_audit_number': 'str',
         'response_code_source': 'str',
-        'payment_account_reference_number': 'str'
+        'payment_account_reference_number': 'str',
+        'routing': 'PtsV2PaymentsPost201ResponseProcessorInformationRouting'
     }
 
     attribute_map = {
@@ -64,10 +65,11 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'event_status': 'eventStatus',
         'system_trace_audit_number': 'systemTraceAuditNumber',
         'response_code_source': 'responseCodeSource',
-        'payment_account_reference_number': 'paymentAccountReferenceNumber'
+        'payment_account_reference_number': 'paymentAccountReferenceNumber',
+        'routing': 'routing'
     }
 
-    def __init__(self, processor=None, multi_processor_routing=None, transaction_id=None, network_transaction_id=None, retrieval_reference_number=None, response_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, event_status=None, system_trace_audit_number=None, response_code_source=None, payment_account_reference_number=None):
+    def __init__(self, processor=None, multi_processor_routing=None, transaction_id=None, network_transaction_id=None, retrieval_reference_number=None, response_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, event_status=None, system_trace_audit_number=None, response_code_source=None, payment_account_reference_number=None, routing=None):
         """
         TssV2TransactionsGet200ResponseProcessorInformation - a model defined in Swagger
         """
@@ -88,6 +90,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         self._system_trace_audit_number = None
         self._response_code_source = None
         self._payment_account_reference_number = None
+        self._routing = None
 
         if processor is not None:
           self.processor = processor
@@ -121,6 +124,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
           self.response_code_source = response_code_source
         if payment_account_reference_number is not None:
           self.payment_account_reference_number = payment_account_reference_number
+        if routing is not None:
+          self.routing = routing
 
     @property
     def processor(self):
@@ -479,6 +484,27 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         """
 
         self._payment_account_reference_number = payment_account_reference_number
+
+    @property
+    def routing(self):
+        """
+        Gets the routing of this TssV2TransactionsGet200ResponseProcessorInformation.
+
+        :return: The routing of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :rtype: PtsV2PaymentsPost201ResponseProcessorInformationRouting
+        """
+        return self._routing
+
+    @routing.setter
+    def routing(self, routing):
+        """
+        Sets the routing of this TssV2TransactionsGet200ResponseProcessorInformation.
+
+        :param routing: The routing of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :type: PtsV2PaymentsPost201ResponseProcessorInformationRouting
+        """
+
+        self._routing = routing
 
     def to_dict(self):
         """

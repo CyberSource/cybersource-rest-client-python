@@ -30,55 +30,32 @@ class Notificationsubscriptionsv2webhooksSecurityPolicyConfig(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'o_auth_token_expiry': 'str',
         'o_auth_url': 'str',
-        'o_auth_token_type': 'str'
+        'o_auth_token_type': 'str',
+        'additional_config': 'Notificationsubscriptionsv2webhooksSecurityPolicyConfigAdditionalConfig'
     }
 
     attribute_map = {
-        'o_auth_token_expiry': 'oAuthTokenExpiry',
         'o_auth_url': 'oAuthURL',
-        'o_auth_token_type': 'oAuthTokenType'
+        'o_auth_token_type': 'oAuthTokenType',
+        'additional_config': 'additionalConfig'
     }
 
-    def __init__(self, o_auth_token_expiry=None, o_auth_url=None, o_auth_token_type=None):
+    def __init__(self, o_auth_url=None, o_auth_token_type=None, additional_config=None):
         """
         Notificationsubscriptionsv2webhooksSecurityPolicyConfig - a model defined in Swagger
         """
 
-        self._o_auth_token_expiry = None
         self._o_auth_url = None
         self._o_auth_token_type = None
+        self._additional_config = None
 
-        if o_auth_token_expiry is not None:
-          self.o_auth_token_expiry = o_auth_token_expiry
         if o_auth_url is not None:
           self.o_auth_url = o_auth_url
         if o_auth_token_type is not None:
           self.o_auth_token_type = o_auth_token_type
-
-    @property
-    def o_auth_token_expiry(self):
-        """
-        Gets the o_auth_token_expiry of this Notificationsubscriptionsv2webhooksSecurityPolicyConfig.
-        Token expiration for the oAuth server.
-
-        :return: The o_auth_token_expiry of this Notificationsubscriptionsv2webhooksSecurityPolicyConfig.
-        :rtype: str
-        """
-        return self._o_auth_token_expiry
-
-    @o_auth_token_expiry.setter
-    def o_auth_token_expiry(self, o_auth_token_expiry):
-        """
-        Sets the o_auth_token_expiry of this Notificationsubscriptionsv2webhooksSecurityPolicyConfig.
-        Token expiration for the oAuth server.
-
-        :param o_auth_token_expiry: The o_auth_token_expiry of this Notificationsubscriptionsv2webhooksSecurityPolicyConfig.
-        :type: str
-        """
-
-        self._o_auth_token_expiry = o_auth_token_expiry
+        if additional_config is not None:
+          self.additional_config = additional_config
 
     @property
     def o_auth_url(self):
@@ -107,7 +84,7 @@ class Notificationsubscriptionsv2webhooksSecurityPolicyConfig(object):
     def o_auth_token_type(self):
         """
         Gets the o_auth_token_type of this Notificationsubscriptionsv2webhooksSecurityPolicyConfig.
-        Token type for the oAuth config.
+        Token type for the oAuth config.  Possible values: - Bearer
 
         :return: The o_auth_token_type of this Notificationsubscriptionsv2webhooksSecurityPolicyConfig.
         :rtype: str
@@ -118,13 +95,34 @@ class Notificationsubscriptionsv2webhooksSecurityPolicyConfig(object):
     def o_auth_token_type(self, o_auth_token_type):
         """
         Sets the o_auth_token_type of this Notificationsubscriptionsv2webhooksSecurityPolicyConfig.
-        Token type for the oAuth config.
+        Token type for the oAuth config.  Possible values: - Bearer
 
         :param o_auth_token_type: The o_auth_token_type of this Notificationsubscriptionsv2webhooksSecurityPolicyConfig.
         :type: str
         """
 
         self._o_auth_token_type = o_auth_token_type
+
+    @property
+    def additional_config(self):
+        """
+        Gets the additional_config of this Notificationsubscriptionsv2webhooksSecurityPolicyConfig.
+
+        :return: The additional_config of this Notificationsubscriptionsv2webhooksSecurityPolicyConfig.
+        :rtype: Notificationsubscriptionsv2webhooksSecurityPolicyConfigAdditionalConfig
+        """
+        return self._additional_config
+
+    @additional_config.setter
+    def additional_config(self, additional_config):
+        """
+        Sets the additional_config of this Notificationsubscriptionsv2webhooksSecurityPolicyConfig.
+
+        :param additional_config: The additional_config of this Notificationsubscriptionsv2webhooksSecurityPolicyConfig.
+        :type: Notificationsubscriptionsv2webhooksSecurityPolicyConfigAdditionalConfig
+        """
+
+        self._additional_config = additional_config
 
     def to_dict(self):
         """

@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**get_all_invoices**](InvoicesApi.md#get_all_invoices) | **GET** /invoicing/v2/invoices | Get a List of Invoices
 [**get_invoice**](InvoicesApi.md#get_invoice) | **GET** /invoicing/v2/invoices/{id} | Get Invoice Details
 [**perform_cancel_action**](InvoicesApi.md#perform_cancel_action) | **POST** /invoicing/v2/invoices/{id}/cancelation | Cancel an Invoice
+[**perform_publish_action**](InvoicesApi.md#perform_publish_action) | **POST** /invoicing/v2/invoices/{id}/publication | Publish an Invoice
 [**perform_send_action**](InvoicesApi.md#perform_send_action) | **POST** /invoicing/v2/invoices/{id}/delivery | Send an Invoice
 [**update_invoice**](InvoicesApi.md#update_invoice) | **PUT** /invoicing/v2/invoices/{id} | Update an Invoice
 
@@ -196,6 +197,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**InvoicingV2InvoicesCancel200Response**](InvoicingV2InvoicesCancel200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json, application/hal+json, application/json;charset=utf-8, application/hal+json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **perform_publish_action**
+> InvoicingV2InvoicesPublish200Response perform_publish_action(id)
+
+Publish an Invoice
+
+You can publish an invoice in DRAFT status. After invoking this method, the invoice status is changed to CREATED.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.InvoicesApi()
+id = 'id_example' # str | The invoice number.
+
+try: 
+    # Publish an Invoice
+    api_response = api_instance.perform_publish_action(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling InvoicesApi->perform_publish_action: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The invoice number. | 
+
+### Return type
+
+[**InvoicingV2InvoicesPublish200Response**](InvoicingV2InvoicesPublish200Response.md)
 
 ### Authorization
 
