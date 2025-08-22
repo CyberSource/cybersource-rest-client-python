@@ -459,7 +459,7 @@ class ApiClient(object):
             post_params = body
         
         query_param_path = self.set_query_params(resource_path, query_params)
-        request_target = query_param_path if query_param_path else resource_pat
+        request_target = query_param_path if query_param_path else resource_path
         
         if self.mconfig.authentication_type.upper() != GlobalLabelParameters.MUTUAL_AUTH.upper():
             self.call_authentication_header(method, header_params, body, request_target)
