@@ -29,13 +29,38 @@ class MLEUtility:
 
         
         operation_array = [op_id.strip() for op_id in operation_ids.split(",")]
-        map_to_control_mle = merchant_config.get_mapToControlMLEonAPI()
-        if map_to_control_mle is not None and map_to_control_mle:
+        # Use internalMapToControlRequestMLEonAPI instead of mapToControlMLEonAPI
+        if (merchant_config.internalMapToControlRequestMLEonAPI is not None and 
+            merchant_config.internalMapToControlRequestMLEonAPI):
             for op_id in operation_array:
-                if op_id in map_to_control_mle:
-                    is_mle_for_api = map_to_control_mle[op_id]
+                if op_id in merchant_config.internalMapToControlRequestMLEonAPI:
+                    is_mle_for_api = merchant_config.internalMapToControlRequestMLEonAPI[op_id]
                     break
         return is_mle_for_api
+
+    @staticmethod
+    def check_is_response_mle_for_api(merchant_config, operation_ids):
+        """
+        Checks if response MLE should be enabled for the specified API operation
+        
+        Args:
+            merchant_config: The merchant configuration object
+            operation_ids: Comma-separated list of operation IDs
+            
+        Returns:
+            bool: True if response MLE should be enabled, False otherwise
+        """
+        is_response_mle_for_api = False
+        if merchant_config.get_enableResponseMleGlobally():
+            is_response_mle_for_api = True
+        operation_array = [op_id.strip() for op_id in operation_ids.split(",")]
+        if (merchant_config.internalMapToControlResponseMLEonAPI is not None and 
+            merchant_config.internalMapToControlResponseMLEonAPI):
+            for op_id in operation_array:
+                if op_id in merchant_config.internalMapToControlResponseMLEonAPI:
+                    is_response_mle_for_api = merchant_config.internalMapToControlResponseMLEonAPI[op_id]
+                    break
+        return is_response_mle_for_api
 
     @staticmethod
     def encrypt_request_payload(merchant_config, request_body):
