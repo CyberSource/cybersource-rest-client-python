@@ -53,9 +53,19 @@ class MerchantConfiguration:
         self.enableRequestMLEForOptionalApisGlobally = None
         self.disableRequestMLEForMandatoryApisGlobally = None
         self.mapToControlMLEonAPI = None
+        # Optional parameter. User can pass a custom requestMleKeyAlias to fetch from the certificate.
+        # Older flag "mleKeyAlias" is deprecated and will be used as alias/another name for requestMleKeyAlias.
         self.mleKeyAlias = None
+        self.requestMleKeyAlias = None
         self.mleForRequestPublicCertPath = None
         self.p12KeyFilePath = None
+        self.internalMapToControlRequestMLEonAPI = None
+        self.internalMapToControlResponseMLEonAPI = None
+        self.enableResponseMleGlobally = None
+        self.responseMleKID = None
+        self.responseMlePrivateKeyFilePath = None
+        self.responseMlePrivateKeyFilePassword = None
+        self.responseMlePrivateKey = None
         self.logger = LogFactory.setup_logger(self.__class__.__name__)
 
 #region Getters and Setters
@@ -219,25 +229,25 @@ class MerchantConfiguration:
     def get_disableRequestMLEForMandatoryApisGlobally(self):
         return self.disableRequestMLEForMandatoryApisGlobally
     
-    def set_mapToControlMLEonAPI(self, value):
-        map_to_control_mle_on_api = value.get('mapToControlMLEonAPI')
-        if map_to_control_mle_on_api is not None:
-            if isinstance(map_to_control_mle_on_api, dict) and all(isinstance(v, (str, bool)) for v in map_to_control_mle_on_api.values()):
-                self.mapToControlMLEonAPI = map_to_control_mle_on_api
-            else:
-                raise ValueError("mapToControlMLEonAPI in merchantConfig must be a dictionary with string : boolean values.")
+    # def set_mapToControlMLEonAPI(self, value):
+    #     map_to_control_mle_on_api = value.get('mapToControlMLEonAPI')
+    #     if map_to_control_mle_on_api is not None:
+    #         if isinstance(map_to_control_mle_on_api, dict) and all(isinstance(v, (str, bool)) for v in map_to_control_mle_on_api.values()):
+    #             self.mapToControlMLEonAPI = map_to_control_mle_on_api
+    #         else:
+    #             raise ValueError("mapToControlMLEonAPI in merchantConfig must be a dictionary with string : boolean values.")
 
     def get_mapToControlMLEonAPI(self):
         return self.mapToControlMLEonAPI
 
-    def set_mleKeyAlias(self, value):
-        if value.get('mleKeyAlias') is not None and value.get('mleKeyAlias').strip():
-            self.mleKeyAlias = value['mleKeyAlias'].strip()
-        else:
-            self.mleKeyAlias = GlobalLabelParameters.DEFAULT_MLE_ALIAS_FOR_CERT
+    # def set_mleKeyAlias(self, value):
+    #     if value.get('mleKeyAlias') is not None and value.get('mleKeyAlias').strip():
+    #         self.mleKeyAlias = value['mleKeyAlias'].strip()
+    #     else:
+    #         self.mleKeyAlias = GlobalLabelParameters.DEFAULT_MLE_ALIAS_FOR_CERT
 
-    def get_mleKeyAlias(self):
-        return self.mleKeyAlias
+    # def get_mleKeyAlias(self):
+    #     return self.mleKeyAlias
 
     def set_mleForRequestPublicCertPath(self, value):
         if value.get('mleForRequestPublicCertPath') is not None and value.get('mleForRequestPublicCertPath').strip():
@@ -256,6 +266,91 @@ class MerchantConfiguration:
 
     def get_p12KeyFilePath(self):
         return self.p12KeyFilePath
+    
+    def set_enableResponseMleGlobally(self, value):
+        if not (value.get('enableResponseMleGlobally') is None):
+            self.enableResponseMleGlobally = value['enableResponseMleGlobally']
+        else:
+            self.enableResponseMleGlobally = False
+
+    def set_responseMleKID(self, value):
+        if not (value.get('responseMleKID') is None):
+            self.responseMleKID = value['responseMleKID']
+
+    def set_responseMlePrivateKeyFilePath(self, value):
+        if not (value.get('responseMlePrivateKeyFilePath') is None):
+            self.responseMlePrivateKeyFilePath = value['responseMlePrivateKeyFilePath']
+
+    def set_responseMlePrivateKeyFilePassword(self, value):
+        if not (value.get('responseMlePrivateKeyFilePassword') is None):
+            self.responseMlePrivateKeyFilePassword = value['responseMlePrivateKeyFilePassword']
+
+    def set_responseMlePrivateKey(self, value):
+        if not (value.get('responseMlePrivateKey') is None):
+            self.responseMlePrivateKey = value['responseMlePrivateKey']
+
+    def set_requestMleKeyAlias(self, value):
+        if not (value.get('requestMleKeyAlias') is None) and value.get('requestMleKeyAlias').strip():
+            self.requestMleKeyAlias = value['requestMleKeyAlias'].strip()
+        elif not (value.get('mleKeyAlias') is None) and value.get('mleKeyAlias').strip():
+            self.requestMleKeyAlias = value['mleKeyAlias'].strip()
+        else:
+            self.requestMleKeyAlias = GlobalLabelParameters.DEFAULT_MLE_ALIAS_FOR_CERT
+            
+    def get_requestMleKeyAlias(self):
+        return self.requestMleKeyAlias
+
+    def set_mleForRequestPublicCertPath(self, value):
+        if not (value.get('mleForRequestPublicCertPath') is None):
+            self.mleForRequestPublicCertPath = value['mleForRequestPublicCertPath']
+
+    def set_internalMapToControlMLEonAPI(self):
+        if self.mapToControlMLEonAPI is not None:
+            # Initialize internal maps
+            self.internalMapToControlRequestMLEonAPI = {}
+            self.internalMapToControlResponseMLEonAPI = {}
+
+            for api_name, value in self.mapToControlMLEonAPI.items():
+                if isinstance(value, bool):
+                    # If value is boolean, it only applies to request MLE
+                    self.internalMapToControlRequestMLEonAPI[api_name] = value
+                elif isinstance(value, str) and '::' in value:
+                    # Format: "requestMLE::responseMLE"
+                    parts = value.split('::', 1)  # Split at first occurrence of '::'
+                    request_mle = parts[0].strip()
+                    response_mle = parts[1].strip() if len(parts) > 1 else ""
+
+                    # Set request MLE value if provided
+                    if request_mle:
+                        self.internalMapToControlRequestMLEonAPI[api_name] = request_mle.lower() == 'true'
+
+                    # Set response MLE value if provided
+                    if response_mle:
+                        self.internalMapToControlResponseMLEonAPI[api_name] = response_mle.lower() == 'true'
+                elif isinstance(value, str):
+                    # Format: "true" or "false" - applies to request MLE only
+                    self.internalMapToControlRequestMLEonAPI[api_name] = value.lower() == 'true'
+
+    def get_enableResponseMleGlobally(self):
+        return self.enableResponseMleGlobally
+
+    def get_responseMleKID(self):
+        return self.responseMleKID
+
+    def get_responseMlePrivateKeyFilePath(self):
+        return self.responseMlePrivateKeyFilePath
+
+    def get_responseMlePrivateKeyFilePassword(self):
+        return self.responseMlePrivateKeyFilePassword
+
+    def get_responseMlePrivateKey(self):
+        return self.responseMlePrivateKey
+
+    def get_internalMapToControlRequestMLEonAPI(self):
+        return self.internalMapToControlRequestMLEonAPI
+
+    def get_internalMapToControlResponseMLEonAPI(self):
+        return self.internalMapToControlResponseMLEonAPI
 
 #endregion
 
@@ -295,7 +390,13 @@ class MerchantConfiguration:
         self.set_disableRequestMLEForMandatoryApisGlobally(val)
         self.set_mapToControlMLEonAPI(val)
         self.set_mleForRequestPublicCertPath(val)
-        self.set_mleKeyAlias(val)
+        self.set_requestMleKeyAlias(val)
+        self.set_enableResponseMleGlobally(val)
+        self.set_responseMleKID(val)
+        self.set_responseMlePrivateKeyFilePath(val)
+        self.set_responseMlePrivateKeyFilePassword(val)
+        self.set_responseMlePrivateKey(val)
+        self.set_internalMapToControlMLEonAPI()
 
     # Returns the time in format as defined by RFC7231
     def get_time(self):
@@ -501,3 +602,147 @@ class MerchantConfiguration:
             except Exception as err:
                 self.logger.error(err)
                 raise err
+            
+        # Response MLE checks
+        use_mle = False
+        if self.enableRequestMLEForOptionalApisGlobally is True or self.useMLEGlobally is True:
+            use_mle = True
+
+        # Verify mleForRequestPublicCertPath is valid if provided
+        if self.mleForRequestPublicCertPath is not None and self.mleForRequestPublicCertPath.strip():
+            if not os.path.isfile(self.mleForRequestPublicCertPath):
+                authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                    f"Invalid mleForRequestPublicCertPath: {self.mleForRequestPublicCertPath}",
+                    self.log_config)
+
+        # Check JWT auth for request MLE
+        if use_mle and self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
+            authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                GlobalLabelParameters.MLE_AUTH_ERROR,
+                self.log_config)
+
+        # Validate Response MLE configuration
+        response_mle_configured = self.enableResponseMleGlobally
+
+        # Check if any API has response MLE enabled in the control map
+        if self.internalMapToControlResponseMLEonAPI is not None:
+            for api_name, enabled in self.internalMapToControlResponseMLEonAPI.items():
+                if enabled:
+                    response_mle_configured = True
+                    break
+
+        if response_mle_configured:
+        # Validate auth type - Response MLE only supported with JWT
+            if self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
+                authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                    "Response MLE is only supported for JWT auth type",
+                    self.log_config)
+
+        # Check for private key (either path or object)
+            if self.responseMlePrivateKey is None and (self.responseMlePrivateKeyFilePath is None or not self.responseMlePrivateKeyFilePath.strip()):
+                authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                    "Response MLE is enabled but no private key provided. Either provide responseMlePrivateKey object or responseMlePrivateKeyFilePath.",
+                    self.log_config)
+
+        # Don't allow both private key object and file path
+            if self.responseMlePrivateKey is not None and self.responseMlePrivateKeyFilePath is not None and self.responseMlePrivateKeyFilePath.strip():
+                authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                    "Both responseMlePrivateKey object and responseMlePrivateKeyFilePath are provided. Please provide only one of them for response MLE private key.",
+                    self.log_config)
+
+        # Validate private key file path exists if provided
+            if self.responseMlePrivateKeyFilePath is not None and self.responseMlePrivateKeyFilePath.strip():
+                if not os.path.isfile(self.responseMlePrivateKeyFilePath):
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                        f"Invalid responseMlePrivateKeyFilePath: {self.responseMlePrivateKeyFilePath}",
+                        self.log_config)
+
+        # Validate KID is provided
+            if self.responseMleKID is None or not self.responseMleKID.strip():
+                authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                    "Response MLE is enabled but responseMleKID is not provided.",
+                    self.log_config)
+            
+    def is_valid_boolean_string(self, value):
+        """
+        Check if a string represents a valid boolean value.
+    
+        Args:
+            value (str): The string to check
+            
+        Returns:
+            bool: True if the value is 'true' or 'false' (case-insensitive)
+        """
+        if isinstance(value, str):
+            return value.lower() in ('true', 'false')
+        return False
+
+
+    def validate_map_to_control_mle_on_api_values(self, map_to_control_mle_on_api):
+        """
+        Validates the map values for MLE control API configuration.
+        Allowed formats: "true::true", "false::false", "::true", "true::", "::false", "false::", "true", "false"
+        
+        Args:
+            map_to_control_mle_on_api (dict): The map to validate
+            
+        Raises:
+            ValueError: If any value in the map has invalid format
+        """
+        for key, value in map_to_control_mle_on_api.items():
+            if not value:
+                self.logger.error(f"Invalid MLE control map value for key '{key}'. Value cannot be null or empty.")
+                raise ValueError(f"Invalid MLE control map value for key '{key}'. Value cannot be null or empty.")
+
+
+            # Check if value contains "::" separator
+            if "::" in value:
+                parts = value.split("::", -1)  # -1 to include empty strings
+
+
+                if len(parts) != 2:
+                    error_msg = f"Invalid MLE control map value format for key '{key}'. Expected format: true/false for 'requestMLE::responseMLE' but got: '{value}'"
+                    self.logger.error(error_msg)
+                    raise ValueError(error_msg)
+
+
+                request_mle = parts[0]
+                response_mle = parts[1]
+
+
+                # Validate first part (request MLE) - can be empty, "true", or "false"
+                if request_mle and not self.is_valid_boolean_string(request_mle):
+                    error_msg = f"Invalid request MLE value for key '{key}'. Expected 'true', 'false', or empty but got: '{request_mle}'"
+                    self.logger.error(error_msg)
+                    raise ValueError(error_msg)
+
+
+                # Validate second part (response MLE) - can be empty, "true", or "false"
+                if response_mle and not self.is_valid_boolean_string(response_mle):
+                    error_msg = f"Invalid response MLE value for key '{key}'. Expected 'true', 'false', or empty but got: '{response_mle}'"
+                    self.logger.error(error_msg)
+                    raise ValueError(error_msg)
+            else:
+                # Value without "::" separator - should be "true" or "false"
+                if not self.is_valid_boolean_string(value):
+                    error_msg = f"Invalid MLE control map value for key '{key}'. Expected 'true' or 'false' for requestMLE but got: '{value}'"
+                    self.logger.error(error_msg)
+                    raise ValueError(error_msg)
+
+    def set_mapToControlMLEonAPI(self, value):
+        map_to_control_mle_on_api = value.get('mapToControlMLEonAPI')
+        if map_to_control_mle_on_api is not None:
+            try:
+                # First, validate the input is a dictionary with appropriate types
+                if not isinstance(map_to_control_mle_on_api, dict):
+                    raise ValueError("mapToControlMLEonAPI must be a dictionary")
+
+
+                # Validate the map values
+                self.validate_map_to_control_mle_on_api_values(map_to_control_mle_on_api)
+
+                # Set the map
+                self.mapToControlMLEonAPI = map_to_control_mle_on_api
+            except Exception as e:
+                self.logger.error(f"Unable to initialize MLE control Map from config: {str(e)}")
+                raise ValueError(f"Unable to initialize MLE control Map from config: {str(e)}")
