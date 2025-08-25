@@ -228,26 +228,9 @@ class MerchantConfiguration:
 
     def get_disableRequestMLEForMandatoryApisGlobally(self):
         return self.disableRequestMLEForMandatoryApisGlobally
-    
-    # def set_mapToControlMLEonAPI(self, value):
-    #     map_to_control_mle_on_api = value.get('mapToControlMLEonAPI')
-    #     if map_to_control_mle_on_api is not None:
-    #         if isinstance(map_to_control_mle_on_api, dict) and all(isinstance(v, (str, bool)) for v in map_to_control_mle_on_api.values()):
-    #             self.mapToControlMLEonAPI = map_to_control_mle_on_api
-    #         else:
-    #             raise ValueError("mapToControlMLEonAPI in merchantConfig must be a dictionary with string : boolean values.")
 
     def get_mapToControlMLEonAPI(self):
         return self.mapToControlMLEonAPI
-
-    # def set_mleKeyAlias(self, value):
-    #     if value.get('mleKeyAlias') is not None and value.get('mleKeyAlias').strip():
-    #         self.mleKeyAlias = value['mleKeyAlias'].strip()
-    #     else:
-    #         self.mleKeyAlias = GlobalLabelParameters.DEFAULT_MLE_ALIAS_FOR_CERT
-
-    # def get_mleKeyAlias(self):
-    #     return self.mleKeyAlias
 
     def set_mleForRequestPublicCertPath(self, value):
         if value.get('mleForRequestPublicCertPath') is not None and value.get('mleForRequestPublicCertPath').strip():
@@ -603,23 +586,15 @@ class MerchantConfiguration:
                 self.logger.error(err)
                 raise err
             
-        # Response MLE checks
-        use_mle = False
-        if self.enableRequestMLEForOptionalApisGlobally is True or self.useMLEGlobally is True:
-            use_mle = True
+        # use_mle = False
+        # if self.enableRequestMLEForOptionalApisGlobally is True or self.useMLEGlobally is True:
+        #     use_mle = True
 
-        # Verify mleForRequestPublicCertPath is valid if provided
-        if self.mleForRequestPublicCertPath is not None and self.mleForRequestPublicCertPath.strip():
-            if not os.path.isfile(self.mleForRequestPublicCertPath):
-                authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
-                    f"Invalid mleForRequestPublicCertPath: {self.mleForRequestPublicCertPath}",
-                    self.log_config)
-
-        # Check JWT auth for request MLE
-        if use_mle and self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
-            authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
-                GlobalLabelParameters.MLE_AUTH_ERROR,
-                self.log_config)
+        # # Check JWT auth for request MLE
+        # if use_mle and self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
+        #     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+        #         GlobalLabelParameters.MLE_AUTH_ERROR,
+        #         self.log_config)
 
         # Validate Response MLE configuration
         response_mle_configured = self.enableResponseMleGlobally
