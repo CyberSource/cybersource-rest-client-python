@@ -55,7 +55,7 @@ class MerchantConfiguration:
         self.mapToControlMLEonAPI = None
         # Optional parameter. User can pass a custom requestMleKeyAlias to fetch from the certificate.
         # Older flag "mleKeyAlias" is deprecated and will be used as alias/another name for requestMleKeyAlias.
-        self.mleKeyAlias = None
+        # self.mleKeyAlias = None
         self.requestMleKeyAlias = None
         self.mleForRequestPublicCertPath = None
         self.p12KeyFilePath = None
