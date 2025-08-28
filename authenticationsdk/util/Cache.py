@@ -142,22 +142,22 @@ class FileCache:
         if cache_key.endswith(GlobalLabelParameters.MLE_CACHE_IDENTIFIER_FOR_CONFIG_CERT):
             certificates = CertificateUtility.load_certificates_from_pem_file(certificate_file_path)
             try:
-                mle_certificate = CertificateUtility.get_cert_based_on_key_alias(certificates, merchant_config.mleKeyAlias)
+                mle_certificate = CertificateUtility.get_cert_based_on_key_alias(certificates, merchant_config.requestMleKeyAlias)
             except Exception:
                 if mle_certificate is None:
                     file_name = os.path.basename(certificate_file_path)
-                    logger.warning(f"No certificate found for the specified mle_key_alias '{merchant_config.mleKeyAlias}'. Using the first certificate from file {file_name} as the MLE request certificate.")
+                    logger.warning(f"No certificate found for the specified mle_key_alias '{merchant_config.requestMleKeyAlias}'. Using the first certificate from file {file_name} as the MLE request certificate.")
                     mle_certificate = certificates[0]  # Take first certificate
 
         # Handle P12 certificate case
         if cache_key.endswith(GlobalLabelParameters.MLE_CACHE_IDENTIFIER_FOR_P12_CERT):
             try:
                 private_key, certificates = CertificateUtility.fetch_certificate_collection_from_p12_file(merchant_config.p12KeyFilePath, merchant_config.key_password)
-                mle_certificate = CertificateUtility.get_cert_based_on_key_alias(certificates, merchant_config.mleKeyAlias)
+                mle_certificate = CertificateUtility.get_cert_based_on_key_alias(certificates, merchant_config.requestMleKeyAlias)
             except Exception:
                 file_name = os.path.basename(merchant_config.p12KeyFilePath)
-                logger.error(f"No certificate found for the specified mle_key_alias '{merchant_config.mleKeyAlias}' in file {file_name}.")
-                raise ValueError(f"No certificate found for the specified mle_key_alias '{merchant_config.mleKeyAlias}' in file {file_name}.")
+                logger.error(f"No certificate found for the specified mle_key_alias '{merchant_config.requestMleKeyAlias}' in file {file_name}.")
+                raise ValueError(f"No certificate found for the specified mle_key_alias '{merchant_config.requestMleKeyAlias}' in file {file_name}.")
 
         # Save to cache (thread-safe)
         cert_info = CertInfo(

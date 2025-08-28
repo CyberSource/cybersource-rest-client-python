@@ -649,7 +649,7 @@ class MerchantConfiguration:
             bool: True if the value is 'true' or 'false' (case-insensitive)
         """
         if isinstance(value, str):
-            return value.lower() in ('true', 'false')
+            return value.strip().lower() in ("true", "false")
         return False
 
 
@@ -665,10 +665,11 @@ class MerchantConfiguration:
             ValueError: If any value in the map has invalid format
         """
         for key, value in map_to_control_mle_on_api.items():
-            if not value:
-                self.logger.error(f"Invalid MLE control map value for key '{key}'. Value cannot be null or empty.")
-                raise ValueError(f"Invalid MLE control map value for key '{key}'. Value cannot be null or empty.")
-
+            if value is None or (isinstance(value, str) and not value.strip()):
+                error_msg = f"Invalid MLE control map value for key '{key}'. Value cannot be null or empty."
+                authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger, error_msg, self.log_config)
+            
+            value = str(value).strip().lower()
 
             # Check if value contains "::" separator
             if "::" in value:
