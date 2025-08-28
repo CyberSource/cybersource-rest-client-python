@@ -713,6 +713,7 @@ class MerchantConfiguration:
                 if not isinstance(map_to_control_mle_on_api, dict):
                     raise ValueError("mapToControlMLEonAPI must be a dictionary")
 
+                # Check map value types - must be string or boolean
 
                 # Validate the map values
                 self.validate_map_to_control_mle_on_api_values(map_to_control_mle_on_api)
