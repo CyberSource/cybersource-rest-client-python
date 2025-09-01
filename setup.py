@@ -22,7 +22,7 @@ setup(
     install_requires=[
         "certifi",
         "pycryptodome",
-        "PyJWT",
+        "PyJWT<2.10.0",
         "DateTime",
         "setuptools",
         "six",
