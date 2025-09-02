@@ -36,7 +36,8 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
         'expiration_date': 'date',
         'allow_partial_payments': 'bool',
         'payment_link': 'str',
-        'delivery_mode': 'str'
+        'delivery_mode': 'str',
+        'custom_labels': 'list[InvoicingV2InvoicesPost201ResponseInvoiceInformationCustomLabels]'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
         'expiration_date': 'expirationDate',
         'allow_partial_payments': 'allowPartialPayments',
         'payment_link': 'paymentLink',
-        'delivery_mode': 'deliveryMode'
+        'delivery_mode': 'deliveryMode',
+        'custom_labels': 'customLabels'
     }
 
-    def __init__(self, invoice_number=None, description=None, due_date=None, expiration_date=None, allow_partial_payments=False, payment_link=None, delivery_mode=None):
+    def __init__(self, invoice_number=None, description=None, due_date=None, expiration_date=None, allow_partial_payments=False, payment_link=None, delivery_mode=None, custom_labels=None):
         """
         InvoicingV2InvoicesPost201ResponseInvoiceInformation - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
         self._allow_partial_payments = None
         self._payment_link = None
         self._delivery_mode = None
+        self._custom_labels = None
 
         if invoice_number is not None:
           self.invoice_number = invoice_number
@@ -76,6 +79,8 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
           self.payment_link = payment_link
         if delivery_mode is not None:
           self.delivery_mode = delivery_mode
+        if custom_labels is not None:
+          self.custom_labels = custom_labels
 
     @property
     def invoice_number(self):
@@ -237,6 +242,29 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
         """
 
         self._delivery_mode = delivery_mode
+
+    @property
+    def custom_labels(self):
+        """
+        Gets the custom_labels of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
+        A list of custom labels that allows you to override (rename) default field names and control the visibility of specific fields on invoices and items. If the list is empty, the labels will not be overwritten. 
+
+        :return: The custom_labels of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
+        :rtype: list[InvoicingV2InvoicesPost201ResponseInvoiceInformationCustomLabels]
+        """
+        return self._custom_labels
+
+    @custom_labels.setter
+    def custom_labels(self, custom_labels):
+        """
+        Sets the custom_labels of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
+        A list of custom labels that allows you to override (rename) default field names and control the visibility of specific fields on invoices and items. If the list is empty, the labels will not be overwritten. 
+
+        :param custom_labels: The custom_labels of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
+        :type: list[InvoicingV2InvoicesPost201ResponseInvoiceInformationCustomLabels]
+        """
+
+        self._custom_labels = custom_labels
 
     def to_dict(self):
         """

@@ -30,185 +30,375 @@ class InlineResponse2005(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'total_count': 'int',
-        'offset': 'int',
-        'limit': 'int',
-        'sort': 'str',
-        'count': 'int',
-        'devices': 'list[InlineResponse2005Devices]'
+        'webhook_id': 'str',
+        'organization_id': 'str',
+        'products': 'list[Notificationsubscriptionsv2webhooksProducts]',
+        'webhook_url': 'str',
+        'health_check_url': 'str',
+        'status': 'str',
+        'name': 'str',
+        'description': 'str',
+        'retry_policy': 'Notificationsubscriptionsv2webhooksRetryPolicy',
+        'security_policy': 'Notificationsubscriptionsv2webhooksSecurityPolicy',
+        'created_on': 'str',
+        'updated_on': 'str',
+        'notification_scope': 'str'
     }
 
     attribute_map = {
-        'total_count': 'totalCount',
-        'offset': 'offset',
-        'limit': 'limit',
-        'sort': 'sort',
-        'count': 'count',
-        'devices': 'devices'
+        'webhook_id': 'webhookId',
+        'organization_id': 'organizationId',
+        'products': 'products',
+        'webhook_url': 'webhookUrl',
+        'health_check_url': 'healthCheckUrl',
+        'status': 'status',
+        'name': 'name',
+        'description': 'description',
+        'retry_policy': 'retryPolicy',
+        'security_policy': 'securityPolicy',
+        'created_on': 'createdOn',
+        'updated_on': 'updatedOn',
+        'notification_scope': 'notificationScope'
     }
 
-    def __init__(self, total_count=None, offset=None, limit=None, sort=None, count=None, devices=None):
+    def __init__(self, webhook_id=None, organization_id=None, products=None, webhook_url=None, health_check_url=None, status='INACTIVE', name=None, description=None, retry_policy=None, security_policy=None, created_on=None, updated_on=None, notification_scope='DESCENDANTS'):
         """
         InlineResponse2005 - a model defined in Swagger
         """
 
-        self._total_count = None
-        self._offset = None
-        self._limit = None
-        self._sort = None
-        self._count = None
-        self._devices = None
+        self._webhook_id = None
+        self._organization_id = None
+        self._products = None
+        self._webhook_url = None
+        self._health_check_url = None
+        self._status = None
+        self._name = None
+        self._description = None
+        self._retry_policy = None
+        self._security_policy = None
+        self._created_on = None
+        self._updated_on = None
+        self._notification_scope = None
 
-        if total_count is not None:
-          self.total_count = total_count
-        if offset is not None:
-          self.offset = offset
-        if limit is not None:
-          self.limit = limit
-        if sort is not None:
-          self.sort = sort
-        if count is not None:
-          self.count = count
-        if devices is not None:
-          self.devices = devices
-
-    @property
-    def total_count(self):
-        """
-        Gets the total_count of this InlineResponse2005.
-        Total number of results.
-
-        :return: The total_count of this InlineResponse2005.
-        :rtype: int
-        """
-        return self._total_count
-
-    @total_count.setter
-    def total_count(self, total_count):
-        """
-        Sets the total_count of this InlineResponse2005.
-        Total number of results.
-
-        :param total_count: The total_count of this InlineResponse2005.
-        :type: int
-        """
-
-        self._total_count = total_count
+        if webhook_id is not None:
+          self.webhook_id = webhook_id
+        if organization_id is not None:
+          self.organization_id = organization_id
+        if products is not None:
+          self.products = products
+        if webhook_url is not None:
+          self.webhook_url = webhook_url
+        if health_check_url is not None:
+          self.health_check_url = health_check_url
+        if status is not None:
+          self.status = status
+        if name is not None:
+          self.name = name
+        if description is not None:
+          self.description = description
+        if retry_policy is not None:
+          self.retry_policy = retry_policy
+        if security_policy is not None:
+          self.security_policy = security_policy
+        if created_on is not None:
+          self.created_on = created_on
+        if updated_on is not None:
+          self.updated_on = updated_on
+        if notification_scope is not None:
+          self.notification_scope = notification_scope
 
     @property
-    def offset(self):
+    def webhook_id(self):
         """
-        Gets the offset of this InlineResponse2005.
-        Controls the starting point within the collection of results, which defaults to 0. The first item in the collection is retrieved by setting a zero offset.  For example, if you have a collection of 15 items to be retrieved from a resource and you specify limit=5, you can retrieve the entire set of results in 3 successive requests by varying the offset value like this:  `offset=0` `offset=5` `offset=10`  **Note:** If an offset larger than the number of results is provided, this will result in no embedded object being returned. 
+        Gets the webhook_id of this InlineResponse2005.
+        Webhook Id. This is generated by the server.
 
-        :return: The offset of this InlineResponse2005.
-        :rtype: int
-        """
-        return self._offset
-
-    @offset.setter
-    def offset(self, offset):
-        """
-        Sets the offset of this InlineResponse2005.
-        Controls the starting point within the collection of results, which defaults to 0. The first item in the collection is retrieved by setting a zero offset.  For example, if you have a collection of 15 items to be retrieved from a resource and you specify limit=5, you can retrieve the entire set of results in 3 successive requests by varying the offset value like this:  `offset=0` `offset=5` `offset=10`  **Note:** If an offset larger than the number of results is provided, this will result in no embedded object being returned. 
-
-        :param offset: The offset of this InlineResponse2005.
-        :type: int
-        """
-
-        self._offset = offset
-
-    @property
-    def limit(self):
-        """
-        Gets the limit of this InlineResponse2005.
-        Controls the maximum number of items that may be returned for a single request. The default is 20, the maximum is 2500. 
-
-        :return: The limit of this InlineResponse2005.
-        :rtype: int
-        """
-        return self._limit
-
-    @limit.setter
-    def limit(self, limit):
-        """
-        Sets the limit of this InlineResponse2005.
-        Controls the maximum number of items that may be returned for a single request. The default is 20, the maximum is 2500. 
-
-        :param limit: The limit of this InlineResponse2005.
-        :type: int
-        """
-
-        self._limit = limit
-
-    @property
-    def sort(self):
-        """
-        Gets the sort of this InlineResponse2005.
-        A comma separated list of the following form:  `submitTimeUtc:desc` 
-
-        :return: The sort of this InlineResponse2005.
+        :return: The webhook_id of this InlineResponse2005.
         :rtype: str
         """
-        return self._sort
+        return self._webhook_id
 
-    @sort.setter
-    def sort(self, sort):
+    @webhook_id.setter
+    def webhook_id(self, webhook_id):
         """
-        Sets the sort of this InlineResponse2005.
-        A comma separated list of the following form:  `submitTimeUtc:desc` 
+        Sets the webhook_id of this InlineResponse2005.
+        Webhook Id. This is generated by the server.
 
-        :param sort: The sort of this InlineResponse2005.
+        :param webhook_id: The webhook_id of this InlineResponse2005.
         :type: str
         """
 
-        self._sort = sort
+        self._webhook_id = webhook_id
 
     @property
-    def count(self):
+    def organization_id(self):
         """
-        Gets the count of this InlineResponse2005.
-        Results for this page, this could be below the limit.
+        Gets the organization_id of this InlineResponse2005.
+        Organization ID.
 
-        :return: The count of this InlineResponse2005.
-        :rtype: int
+        :return: The organization_id of this InlineResponse2005.
+        :rtype: str
         """
-        return self._count
+        return self._organization_id
 
-    @count.setter
-    def count(self, count):
+    @organization_id.setter
+    def organization_id(self, organization_id):
         """
-        Sets the count of this InlineResponse2005.
-        Results for this page, this could be below the limit.
+        Sets the organization_id of this InlineResponse2005.
+        Organization ID.
 
-        :param count: The count of this InlineResponse2005.
-        :type: int
+        :param organization_id: The organization_id of this InlineResponse2005.
+        :type: str
         """
 
-        self._count = count
+        self._organization_id = organization_id
 
     @property
-    def devices(self):
+    def products(self):
         """
-        Gets the devices of this InlineResponse2005.
-        A collection of devices
+        Gets the products of this InlineResponse2005.
 
-        :return: The devices of this InlineResponse2005.
-        :rtype: list[InlineResponse2005Devices]
+        :return: The products of this InlineResponse2005.
+        :rtype: list[Notificationsubscriptionsv2webhooksProducts]
         """
-        return self._devices
+        return self._products
 
-    @devices.setter
-    def devices(self, devices):
+    @products.setter
+    def products(self, products):
         """
-        Sets the devices of this InlineResponse2005.
-        A collection of devices
+        Sets the products of this InlineResponse2005.
 
-        :param devices: The devices of this InlineResponse2005.
-        :type: list[InlineResponse2005Devices]
+        :param products: The products of this InlineResponse2005.
+        :type: list[Notificationsubscriptionsv2webhooksProducts]
         """
 
-        self._devices = devices
+        self._products = products
+
+    @property
+    def webhook_url(self):
+        """
+        Gets the webhook_url of this InlineResponse2005.
+        The client's endpoint (URL) to receive webhooks.
+
+        :return: The webhook_url of this InlineResponse2005.
+        :rtype: str
+        """
+        return self._webhook_url
+
+    @webhook_url.setter
+    def webhook_url(self, webhook_url):
+        """
+        Sets the webhook_url of this InlineResponse2005.
+        The client's endpoint (URL) to receive webhooks.
+
+        :param webhook_url: The webhook_url of this InlineResponse2005.
+        :type: str
+        """
+
+        self._webhook_url = webhook_url
+
+    @property
+    def health_check_url(self):
+        """
+        Gets the health_check_url of this InlineResponse2005.
+        The client's health check endpoint (URL).
+
+        :return: The health_check_url of this InlineResponse2005.
+        :rtype: str
+        """
+        return self._health_check_url
+
+    @health_check_url.setter
+    def health_check_url(self, health_check_url):
+        """
+        Sets the health_check_url of this InlineResponse2005.
+        The client's health check endpoint (URL).
+
+        :param health_check_url: The health_check_url of this InlineResponse2005.
+        :type: str
+        """
+
+        self._health_check_url = health_check_url
+
+    @property
+    def status(self):
+        """
+        Gets the status of this InlineResponse2005.
+        Webhook status.
+
+        :return: The status of this InlineResponse2005.
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this InlineResponse2005.
+        Webhook status.
+
+        :param status: The status of this InlineResponse2005.
+        :type: str
+        """
+
+        self._status = status
+
+    @property
+    def name(self):
+        """
+        Gets the name of this InlineResponse2005.
+        Client friendly webhook name.
+
+        :return: The name of this InlineResponse2005.
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """
+        Sets the name of this InlineResponse2005.
+        Client friendly webhook name.
+
+        :param name: The name of this InlineResponse2005.
+        :type: str
+        """
+
+        self._name = name
+
+    @property
+    def description(self):
+        """
+        Gets the description of this InlineResponse2005.
+        Client friendly webhook description.
+
+        :return: The description of this InlineResponse2005.
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """
+        Sets the description of this InlineResponse2005.
+        Client friendly webhook description.
+
+        :param description: The description of this InlineResponse2005.
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def retry_policy(self):
+        """
+        Gets the retry_policy of this InlineResponse2005.
+
+        :return: The retry_policy of this InlineResponse2005.
+        :rtype: Notificationsubscriptionsv2webhooksRetryPolicy
+        """
+        return self._retry_policy
+
+    @retry_policy.setter
+    def retry_policy(self, retry_policy):
+        """
+        Sets the retry_policy of this InlineResponse2005.
+
+        :param retry_policy: The retry_policy of this InlineResponse2005.
+        :type: Notificationsubscriptionsv2webhooksRetryPolicy
+        """
+
+        self._retry_policy = retry_policy
+
+    @property
+    def security_policy(self):
+        """
+        Gets the security_policy of this InlineResponse2005.
+
+        :return: The security_policy of this InlineResponse2005.
+        :rtype: Notificationsubscriptionsv2webhooksSecurityPolicy
+        """
+        return self._security_policy
+
+    @security_policy.setter
+    def security_policy(self, security_policy):
+        """
+        Sets the security_policy of this InlineResponse2005.
+
+        :param security_policy: The security_policy of this InlineResponse2005.
+        :type: Notificationsubscriptionsv2webhooksSecurityPolicy
+        """
+
+        self._security_policy = security_policy
+
+    @property
+    def created_on(self):
+        """
+        Gets the created_on of this InlineResponse2005.
+        Date on which webhook was created/registered.
+
+        :return: The created_on of this InlineResponse2005.
+        :rtype: str
+        """
+        return self._created_on
+
+    @created_on.setter
+    def created_on(self, created_on):
+        """
+        Sets the created_on of this InlineResponse2005.
+        Date on which webhook was created/registered.
+
+        :param created_on: The created_on of this InlineResponse2005.
+        :type: str
+        """
+
+        self._created_on = created_on
+
+    @property
+    def updated_on(self):
+        """
+        Gets the updated_on of this InlineResponse2005.
+        Date on which webhook was most recently updated.
+
+        :return: The updated_on of this InlineResponse2005.
+        :rtype: str
+        """
+        return self._updated_on
+
+    @updated_on.setter
+    def updated_on(self, updated_on):
+        """
+        Sets the updated_on of this InlineResponse2005.
+        Date on which webhook was most recently updated.
+
+        :param updated_on: The updated_on of this InlineResponse2005.
+        :type: str
+        """
+
+        self._updated_on = updated_on
+
+    @property
+    def notification_scope(self):
+        """
+        Gets the notification_scope of this InlineResponse2005.
+        The webhook scope. 1. SELF The Webhook is used to deliver webhooks for only this Organization (or Merchant). 2. DESCENDANTS The Webhook is used to deliver webhooks for this Organization and its children. This field is optional.    Possible values: - SELF - DESCENDANTS
+
+        :return: The notification_scope of this InlineResponse2005.
+        :rtype: str
+        """
+        return self._notification_scope
+
+    @notification_scope.setter
+    def notification_scope(self, notification_scope):
+        """
+        Sets the notification_scope of this InlineResponse2005.
+        The webhook scope. 1. SELF The Webhook is used to deliver webhooks for only this Organization (or Merchant). 2. DESCENDANTS The Webhook is used to deliver webhooks for this Organization and its children. This field is optional.    Possible values: - SELF - DESCENDANTS
+
+        :param notification_scope: The notification_scope of this InlineResponse2005.
+        :type: str
+        """
+
+        self._notification_scope = notification_scope
 
     def to_dict(self):
         """

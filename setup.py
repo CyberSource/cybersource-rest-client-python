@@ -4,7 +4,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "cybersource-rest-client-python"
-VERSION = "0.0.68"
+VERSION = "0.0.69"
 # To install the library, run the following
 #
 # python setup.py install
@@ -22,7 +22,7 @@ setup(
     install_requires=[
         "certifi",
         "pycryptodome",
-        "PyJWT",
+        "PyJWT<2.10.0",
         "DateTime",
         "setuptools",
         "six",

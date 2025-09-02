@@ -63,7 +63,7 @@ class DeviceSearchApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostDeviceSearchRequest post_device_search_request: (required)
-        :return: InlineResponse2005
+        :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -93,7 +93,7 @@ class DeviceSearchApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostDeviceSearchRequest post_device_search_request: (required)
-        :return: InlineResponse2005
+        :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -145,8 +145,8 @@ class DeviceSearchApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_device_search_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "post_search_query,post_search_query_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_search_query,post_search_query_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -159,7 +159,7 @@ class DeviceSearchApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2005',
+                                        response_type='InlineResponse2006',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -182,7 +182,7 @@ class DeviceSearchApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostDeviceSearchRequestV3 post_device_search_request_v3: (required)
-        :return: InlineResponse2007
+        :return: InlineResponse2008
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -212,7 +212,7 @@ class DeviceSearchApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostDeviceSearchRequestV3 post_device_search_request_v3: (required)
-        :return: InlineResponse2007
+        :return: InlineResponse2008
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -264,8 +264,8 @@ class DeviceSearchApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_device_search_request_v3', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "post_search_query_v3,post_search_query_v3_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_search_query_v3,post_search_query_v3_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -278,7 +278,7 @@ class DeviceSearchApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2007',
+                                        response_type='InlineResponse2008',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

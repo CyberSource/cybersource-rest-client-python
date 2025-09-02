@@ -51,7 +51,7 @@ class PaymentLinksApi(object):
     def create_payment_link(self, create_payment_link_request, **kwargs):
         """
         Create a Payment Link
-        Create a new payment link.
+        Pay by Link is an easy and fast way to securely sell products or receive donations online. This solution is ideal for distributing the same payment link to multiple customers.   Links for making purchases are referred to as fixed-price links, and links for making donations are referred to as customer-set price links. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -81,7 +81,7 @@ class PaymentLinksApi(object):
     def create_payment_link_with_http_info(self, create_payment_link_request, **kwargs):
         """
         Create a Payment Link
-        Create a new payment link.
+        Pay by Link is an easy and fast way to securely sell products or receive donations online. This solution is ideal for distributing the same payment link to multiple customers.   Links for making purchases are referred to as fixed-price links, and links for making donations are referred to as customer-set price links. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -145,8 +145,8 @@ class PaymentLinksApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_payment_link_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "create_payment_link,create_payment_link_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_payment_link,create_payment_link_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -280,8 +280,8 @@ class PaymentLinksApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_all_payment_links,get_all_payment_links_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_all_payment_links,get_all_payment_links_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -403,8 +403,8 @@ class PaymentLinksApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_payment_link,get_payment_link_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_payment_link,get_payment_link_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -428,7 +428,7 @@ class PaymentLinksApi(object):
     def update_payment_link(self, id, update_payment_link_request, **kwargs):
         """
         Update a Payment Link
-        You can update all information except the payment link number until any payment is received for a payment link.
+        You can update all information except the payment link number for a payment link. Changes made to amount/price will apply to new payments made using the payment link. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -459,7 +459,7 @@ class PaymentLinksApi(object):
     def update_payment_link_with_http_info(self, id, update_payment_link_request, **kwargs):
         """
         Update a Payment Link
-        You can update all information except the payment link number until any payment is received for a payment link.
+        You can update all information except the payment link number for a payment link. Changes made to amount/price will apply to new payments made using the payment link. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -532,8 +532,8 @@ class PaymentLinksApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'update_payment_link_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "update_payment_link,update_payment_link_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "update_payment_link,update_payment_link_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting

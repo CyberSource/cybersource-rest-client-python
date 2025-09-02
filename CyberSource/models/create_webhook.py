@@ -37,7 +37,8 @@ class CreateWebhook(object):
         'webhook_url': 'str',
         'health_check_url': 'str',
         'retry_policy': 'Notificationsubscriptionsv2webhooksRetryPolicy',
-        'security_policy': 'Notificationsubscriptionsv2webhooksSecurityPolicy1'
+        'notification_scope': 'str',
+        'security_policy': 'Notificationsubscriptionsv2webhooksSecurityPolicy'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class CreateWebhook(object):
         'webhook_url': 'webhookUrl',
         'health_check_url': 'healthCheckUrl',
         'retry_policy': 'retryPolicy',
+        'notification_scope': 'notificationScope',
         'security_policy': 'securityPolicy'
     }
 
-    def __init__(self, name=None, description=None, organization_id=None, products=None, webhook_url=None, health_check_url=None, retry_policy=None, security_policy=None):
+    def __init__(self, name=None, description=None, organization_id=None, products=None, webhook_url=None, health_check_url=None, retry_policy=None, notification_scope='DESCENDANTS', security_policy=None):
         """
         CreateWebhook - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class CreateWebhook(object):
         self._webhook_url = None
         self._health_check_url = None
         self._retry_policy = None
+        self._notification_scope = None
         self._security_policy = None
 
         if name is not None:
@@ -79,6 +82,8 @@ class CreateWebhook(object):
           self.health_check_url = health_check_url
         if retry_policy is not None:
           self.retry_policy = retry_policy
+        if notification_scope is not None:
+          self.notification_scope = notification_scope
         if security_policy is not None:
           self.security_policy = security_policy
 
@@ -201,7 +206,7 @@ class CreateWebhook(object):
     def health_check_url(self):
         """
         Gets the health_check_url of this CreateWebhook.
-        The client's health check endpoint (URL). This should be as close as possible to the actual webhookUrl. If the user does not provide the health check URL, it is the user's responsibility to re-activate the webhook if it is deactivated by calling the test endpoint. 
+        The client's health check endpoint (URL). If the user does not provide the health check URL, it is the user's responsibility to re-activate the webhook if it is deactivated by calling the test endpoint. 
 
         :return: The health_check_url of this CreateWebhook.
         :rtype: str
@@ -212,7 +217,7 @@ class CreateWebhook(object):
     def health_check_url(self, health_check_url):
         """
         Sets the health_check_url of this CreateWebhook.
-        The client's health check endpoint (URL). This should be as close as possible to the actual webhookUrl. If the user does not provide the health check URL, it is the user's responsibility to re-activate the webhook if it is deactivated by calling the test endpoint. 
+        The client's health check endpoint (URL). If the user does not provide the health check URL, it is the user's responsibility to re-activate the webhook if it is deactivated by calling the test endpoint. 
 
         :param health_check_url: The health_check_url of this CreateWebhook.
         :type: str
@@ -242,12 +247,35 @@ class CreateWebhook(object):
         self._retry_policy = retry_policy
 
     @property
+    def notification_scope(self):
+        """
+        Gets the notification_scope of this CreateWebhook.
+        The webhook scope. 1. SELF The Webhook is used to deliver webhooks for only this Organization (or Merchant). 2. DESCENDANTS The Webhook is used to deliver webhooks for this Organization and its children. This field is optional.    Possible values: - SELF - DESCENDANTS
+
+        :return: The notification_scope of this CreateWebhook.
+        :rtype: str
+        """
+        return self._notification_scope
+
+    @notification_scope.setter
+    def notification_scope(self, notification_scope):
+        """
+        Sets the notification_scope of this CreateWebhook.
+        The webhook scope. 1. SELF The Webhook is used to deliver webhooks for only this Organization (or Merchant). 2. DESCENDANTS The Webhook is used to deliver webhooks for this Organization and its children. This field is optional.    Possible values: - SELF - DESCENDANTS
+
+        :param notification_scope: The notification_scope of this CreateWebhook.
+        :type: str
+        """
+
+        self._notification_scope = notification_scope
+
+    @property
     def security_policy(self):
         """
         Gets the security_policy of this CreateWebhook.
 
         :return: The security_policy of this CreateWebhook.
-        :rtype: Notificationsubscriptionsv2webhooksSecurityPolicy1
+        :rtype: Notificationsubscriptionsv2webhooksSecurityPolicy
         """
         return self._security_policy
 
@@ -257,7 +285,7 @@ class CreateWebhook(object):
         Sets the security_policy of this CreateWebhook.
 
         :param security_policy: The security_policy of this CreateWebhook.
-        :type: Notificationsubscriptionsv2webhooksSecurityPolicy1
+        :type: Notificationsubscriptionsv2webhooksSecurityPolicy
         """
 
         self._security_policy = security_policy

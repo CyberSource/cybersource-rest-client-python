@@ -40,7 +40,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         'bank_transfer_options': 'TssV2TransactionsGet200ResponseProcessingInformationBankTransferOptions',
         'capture_options': 'TssV2TransactionsGet200ResponseProcessingInformationCaptureOptions',
         'reconciliation_id': 'str',
-        'japan_payment_options': 'TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions'
+        'japan_payment_options': 'TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions',
+        'validation_level': 'int'
     }
 
     attribute_map = {
@@ -54,10 +55,11 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         'bank_transfer_options': 'bankTransferOptions',
         'capture_options': 'captureOptions',
         'reconciliation_id': 'reconciliationId',
-        'japan_payment_options': 'japanPaymentOptions'
+        'japan_payment_options': 'japanPaymentOptions',
+        'validation_level': 'validationLevel'
     }
 
-    def __init__(self, bin_source=None, industry_data_type=None, payment_solution=None, commerce_indicator=None, commerce_indicator_label=None, business_application_id=None, authorization_options=None, bank_transfer_options=None, capture_options=None, reconciliation_id=None, japan_payment_options=None):
+    def __init__(self, bin_source=None, industry_data_type=None, payment_solution=None, commerce_indicator=None, commerce_indicator_label=None, business_application_id=None, authorization_options=None, bank_transfer_options=None, capture_options=None, reconciliation_id=None, japan_payment_options=None, validation_level=None):
         """
         TssV2TransactionsGet200ResponseProcessingInformation - a model defined in Swagger
         """
@@ -73,6 +75,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         self._capture_options = None
         self._reconciliation_id = None
         self._japan_payment_options = None
+        self._validation_level = None
 
         if bin_source is not None:
           self.bin_source = bin_source
@@ -96,6 +99,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
           self.reconciliation_id = reconciliation_id
         if japan_payment_options is not None:
           self.japan_payment_options = japan_payment_options
+        if validation_level is not None:
+          self.validation_level = validation_level
 
     @property
     def bin_source(self):
@@ -341,6 +346,29 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         """
 
         self._japan_payment_options = japan_payment_options
+
+    @property
+    def validation_level(self):
+        """
+        Gets the validation_level of this TssV2TransactionsGet200ResponseProcessingInformation.
+        Enter 1 for routing and account number validation. 
+
+        :return: The validation_level of this TssV2TransactionsGet200ResponseProcessingInformation.
+        :rtype: int
+        """
+        return self._validation_level
+
+    @validation_level.setter
+    def validation_level(self, validation_level):
+        """
+        Sets the validation_level of this TssV2TransactionsGet200ResponseProcessingInformation.
+        Enter 1 for routing and account number validation. 
+
+        :param validation_level: The validation_level of this TssV2TransactionsGet200ResponseProcessingInformation.
+        :type: int
+        """
+
+        self._validation_level = validation_level
 
     def to_dict(self):
         """

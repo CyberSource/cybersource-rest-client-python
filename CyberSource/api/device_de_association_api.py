@@ -145,8 +145,8 @@ class DeviceDeAssociationApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'de_association_request_body', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "delete_terminal_association,delete_terminal_association_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "delete_terminal_association,delete_terminal_association_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -182,7 +182,7 @@ class DeviceDeAssociationApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param list[DeviceDeAssociateV3Request] device_de_associate_v3_request: deviceId that has to be de-associated to the destination organizationId. (required)
-        :return: list[InlineResponse2006]
+        :return: list[InlineResponse2007]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -212,7 +212,7 @@ class DeviceDeAssociationApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param list[DeviceDeAssociateV3Request] device_de_associate_v3_request: deviceId that has to be de-associated to the destination organizationId. (required)
-        :return: list[InlineResponse2006]
+        :return: list[InlineResponse2007]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -264,8 +264,8 @@ class DeviceDeAssociationApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'device_de_associate_v3_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "post_de_associate_v3_terminal,post_de_associate_v3_terminal_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_de_associate_v3_terminal,post_de_associate_v3_terminal_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -278,7 +278,7 @@ class DeviceDeAssociationApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='list[InlineResponse2006]',
+                                        response_type='list[InlineResponse2007]',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

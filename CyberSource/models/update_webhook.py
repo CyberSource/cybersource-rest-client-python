@@ -35,9 +35,9 @@ class UpdateWebhook(object):
         'description': 'str',
         'products': 'list[Notificationsubscriptionsv2webhooksProducts]',
         'webhook_url': 'str',
+        'notification_scope': 'str',
         'health_check_url': 'str',
-        'security_policy': 'Notificationsubscriptionsv2webhooksSecurityPolicy',
-        'additional_attributes': 'list[dict(str, str)]'
+        'security_policy': 'Notificationsubscriptionsv2webhooksSecurityPolicy'
     }
 
     attribute_map = {
@@ -46,12 +46,12 @@ class UpdateWebhook(object):
         'description': 'description',
         'products': 'products',
         'webhook_url': 'webhookUrl',
+        'notification_scope': 'notificationScope',
         'health_check_url': 'healthCheckUrl',
-        'security_policy': 'securityPolicy',
-        'additional_attributes': 'additionalAttributes'
+        'security_policy': 'securityPolicy'
     }
 
-    def __init__(self, name=None, organization_id=None, description=None, products=None, webhook_url=None, health_check_url=None, security_policy=None, additional_attributes=None):
+    def __init__(self, name=None, organization_id=None, description=None, products=None, webhook_url=None, notification_scope='DESCENDANTS', health_check_url=None, security_policy=None):
         """
         UpdateWebhook - a model defined in Swagger
         """
@@ -61,9 +61,9 @@ class UpdateWebhook(object):
         self._description = None
         self._products = None
         self._webhook_url = None
+        self._notification_scope = None
         self._health_check_url = None
         self._security_policy = None
-        self._additional_attributes = None
 
         if name is not None:
           self.name = name
@@ -75,12 +75,12 @@ class UpdateWebhook(object):
           self.products = products
         if webhook_url is not None:
           self.webhook_url = webhook_url
+        if notification_scope is not None:
+          self.notification_scope = notification_scope
         if health_check_url is not None:
           self.health_check_url = health_check_url
         if security_policy is not None:
           self.security_policy = security_policy
-        if additional_attributes is not None:
-          self.additional_attributes = additional_attributes
 
     @property
     def name(self):
@@ -196,10 +196,33 @@ class UpdateWebhook(object):
         self._webhook_url = webhook_url
 
     @property
+    def notification_scope(self):
+        """
+        Gets the notification_scope of this UpdateWebhook.
+        The webhook scope. 1. SELF The Webhook is used to deliver webhooks for only this Organization (or Merchant). 2. DESCENDANTS The Webhook is used to deliver webhooks for this Organization and its children. This field is optional.    Possible values: - SELF - DESCENDANTS
+
+        :return: The notification_scope of this UpdateWebhook.
+        :rtype: str
+        """
+        return self._notification_scope
+
+    @notification_scope.setter
+    def notification_scope(self, notification_scope):
+        """
+        Sets the notification_scope of this UpdateWebhook.
+        The webhook scope. 1. SELF The Webhook is used to deliver webhooks for only this Organization (or Merchant). 2. DESCENDANTS The Webhook is used to deliver webhooks for this Organization and its children. This field is optional.    Possible values: - SELF - DESCENDANTS
+
+        :param notification_scope: The notification_scope of this UpdateWebhook.
+        :type: str
+        """
+
+        self._notification_scope = notification_scope
+
+    @property
     def health_check_url(self):
         """
         Gets the health_check_url of this UpdateWebhook.
-        The client's health check endpoint (URL). This should be as close as possible to the actual webhookUrl.
+        The client's health check endpoint (URL).
 
         :return: The health_check_url of this UpdateWebhook.
         :rtype: str
@@ -210,7 +233,7 @@ class UpdateWebhook(object):
     def health_check_url(self, health_check_url):
         """
         Sets the health_check_url of this UpdateWebhook.
-        The client's health check endpoint (URL). This should be as close as possible to the actual webhookUrl.
+        The client's health check endpoint (URL).
 
         :param health_check_url: The health_check_url of this UpdateWebhook.
         :type: str
@@ -238,29 +261,6 @@ class UpdateWebhook(object):
         """
 
         self._security_policy = security_policy
-
-    @property
-    def additional_attributes(self):
-        """
-        Gets the additional_attributes of this UpdateWebhook.
-        Additional, free form configuration data.
-
-        :return: The additional_attributes of this UpdateWebhook.
-        :rtype: list[dict(str, str)]
-        """
-        return self._additional_attributes
-
-    @additional_attributes.setter
-    def additional_attributes(self, additional_attributes):
-        """
-        Sets the additional_attributes of this UpdateWebhook.
-        Additional, free form configuration data.
-
-        :param additional_attributes: The additional_attributes of this UpdateWebhook.
-        :type: list[dict(str, str)]
-        """
-
-        self._additional_attributes = additional_attributes
 
     def to_dict(self):
         """

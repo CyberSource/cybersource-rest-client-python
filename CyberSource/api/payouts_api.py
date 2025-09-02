@@ -145,8 +145,8 @@ class PayoutsApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'oct_create_payment_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = True
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "oct_create_payment,oct_create_payment_with_http_info"):
+        inbound_mle_status = "optional"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "oct_create_payment,oct_create_payment_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting

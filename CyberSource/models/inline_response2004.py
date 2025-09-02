@@ -41,7 +41,7 @@ class InlineResponse2004(object):
         'retry_policy': 'Notificationsubscriptionsv2webhooksRetryPolicy',
         'security_policy': 'Notificationsubscriptionsv2webhooksSecurityPolicy',
         'created_on': 'str',
-        'updated_on': 'str'
+        'notification_scope': 'str'
     }
 
     attribute_map = {
@@ -56,10 +56,10 @@ class InlineResponse2004(object):
         'retry_policy': 'retryPolicy',
         'security_policy': 'securityPolicy',
         'created_on': 'createdOn',
-        'updated_on': 'updatedOn'
+        'notification_scope': 'notificationScope'
     }
 
-    def __init__(self, webhook_id=None, organization_id=None, products=None, webhook_url=None, health_check_url=None, status='INACTIVE', name=None, description=None, retry_policy=None, security_policy=None, created_on=None, updated_on=None):
+    def __init__(self, webhook_id=None, organization_id=None, products=None, webhook_url=None, health_check_url=None, status='INACTIVE', name=None, description=None, retry_policy=None, security_policy=None, created_on=None, notification_scope='DESCENDANTS'):
         """
         InlineResponse2004 - a model defined in Swagger
         """
@@ -75,7 +75,7 @@ class InlineResponse2004(object):
         self._retry_policy = None
         self._security_policy = None
         self._created_on = None
-        self._updated_on = None
+        self._notification_scope = None
 
         if webhook_id is not None:
           self.webhook_id = webhook_id
@@ -99,8 +99,8 @@ class InlineResponse2004(object):
           self.security_policy = security_policy
         if created_on is not None:
           self.created_on = created_on
-        if updated_on is not None:
-          self.updated_on = updated_on
+        if notification_scope is not None:
+          self.notification_scope = notification_scope
 
     @property
     def webhook_id(self):
@@ -196,7 +196,7 @@ class InlineResponse2004(object):
     def health_check_url(self):
         """
         Gets the health_check_url of this InlineResponse2004.
-        The client's health check endpoint (URL). This should be as close as possible to the actual webhookUrl.
+        The client's health check endpoint (URL).
 
         :return: The health_check_url of this InlineResponse2004.
         :rtype: str
@@ -207,7 +207,7 @@ class InlineResponse2004(object):
     def health_check_url(self, health_check_url):
         """
         Sets the health_check_url of this InlineResponse2004.
-        The client's health check endpoint (URL). This should be as close as possible to the actual webhookUrl.
+        The client's health check endpoint (URL).
 
         :param health_check_url: The health_check_url of this InlineResponse2004.
         :type: str
@@ -350,27 +350,27 @@ class InlineResponse2004(object):
         self._created_on = created_on
 
     @property
-    def updated_on(self):
+    def notification_scope(self):
         """
-        Gets the updated_on of this InlineResponse2004.
-        Date on which webhook was most recently updated.
+        Gets the notification_scope of this InlineResponse2004.
+        The webhook scope. 1. SELF The Webhook is used to deliver webhooks for only this Organization (or Merchant). 2. DESCENDANTS The Webhook is used to deliver webhooks for this Organization and its children. This field is optional.    Possible values: - SELF - DESCENDANTS
 
-        :return: The updated_on of this InlineResponse2004.
+        :return: The notification_scope of this InlineResponse2004.
         :rtype: str
         """
-        return self._updated_on
+        return self._notification_scope
 
-    @updated_on.setter
-    def updated_on(self, updated_on):
+    @notification_scope.setter
+    def notification_scope(self, notification_scope):
         """
-        Sets the updated_on of this InlineResponse2004.
-        Date on which webhook was most recently updated.
+        Sets the notification_scope of this InlineResponse2004.
+        The webhook scope. 1. SELF The Webhook is used to deliver webhooks for only this Organization (or Merchant). 2. DESCENDANTS The Webhook is used to deliver webhooks for this Organization and its children. This field is optional.    Possible values: - SELF - DESCENDANTS
 
-        :param updated_on: The updated_on of this InlineResponse2004.
+        :param notification_scope: The notification_scope of this InlineResponse2004.
         :type: str
         """
 
-        self._updated_on = updated_on
+        self._notification_scope = notification_scope
 
     def to_dict(self):
         """

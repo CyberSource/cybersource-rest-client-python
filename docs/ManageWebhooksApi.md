@@ -209,7 +209,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notification_subscriptions_v2_webhooks_webhook_id_patch**
-> notification_subscriptions_v2_webhooks_webhook_id_patch(webhook_id, update_webhook=update_webhook)
+> InlineResponse2005 notification_subscriptions_v2_webhooks_webhook_id_patch(webhook_id, update_webhook=update_webhook)
 
 Update a Webhook Subscription
 
@@ -230,7 +230,8 @@ update_webhook = CyberSource.UpdateWebhook() # UpdateWebhook | The webhook paylo
 
 try: 
     # Update a Webhook Subscription
-    api_instance.notification_subscriptions_v2_webhooks_webhook_id_patch(webhook_id, update_webhook=update_webhook)
+    api_response = api_instance.notification_subscriptions_v2_webhooks_webhook_id_patch(webhook_id, update_webhook=update_webhook)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ManageWebhooksApi->notification_subscriptions_v2_webhooks_webhook_id_patch: %s\n" % e)
 ```
@@ -244,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 

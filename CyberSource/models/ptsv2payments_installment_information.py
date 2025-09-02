@@ -45,7 +45,9 @@ class Ptsv2paymentsInstallmentInformation(object):
         'first_installment_amount': 'str',
         'validation_indicator': 'str',
         'identifier': 'str',
-        'annual_interest_rate': 'str'
+        'annual_interest_rate': 'str',
+        'interest_indicator': 'str',
+        'is_government_plan': 'bool'
     }
 
     attribute_map = {
@@ -64,10 +66,12 @@ class Ptsv2paymentsInstallmentInformation(object):
         'first_installment_amount': 'firstInstallmentAmount',
         'validation_indicator': 'validationIndicator',
         'identifier': 'identifier',
-        'annual_interest_rate': 'annualInterestRate'
+        'annual_interest_rate': 'annualInterestRate',
+        'interest_indicator': 'interestIndicator',
+        'is_government_plan': 'isGovernmentPlan'
     }
 
-    def __init__(self, amount=None, frequency=None, plan_type=None, sequence=None, total_amount=None, total_count=None, first_installment_date=None, invoice_data=None, payment_type=None, eligibility_inquiry=None, grace_period_duration=None, grace_period_duration_type=None, first_installment_amount=None, validation_indicator=None, identifier=None, annual_interest_rate=None):
+    def __init__(self, amount=None, frequency=None, plan_type=None, sequence=None, total_amount=None, total_count=None, first_installment_date=None, invoice_data=None, payment_type=None, eligibility_inquiry=None, grace_period_duration=None, grace_period_duration_type=None, first_installment_amount=None, validation_indicator=None, identifier=None, annual_interest_rate=None, interest_indicator=None, is_government_plan=None):
         """
         Ptsv2paymentsInstallmentInformation - a model defined in Swagger
         """
@@ -88,6 +92,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         self._validation_indicator = None
         self._identifier = None
         self._annual_interest_rate = None
+        self._interest_indicator = None
+        self._is_government_plan = None
 
         if amount is not None:
           self.amount = amount
@@ -121,6 +127,10 @@ class Ptsv2paymentsInstallmentInformation(object):
           self.identifier = identifier
         if annual_interest_rate is not None:
           self.annual_interest_rate = annual_interest_rate
+        if interest_indicator is not None:
+          self.interest_indicator = interest_indicator
+        if is_government_plan is not None:
+          self.is_government_plan = is_government_plan
 
     @property
     def amount(self):
@@ -489,6 +499,52 @@ class Ptsv2paymentsInstallmentInformation(object):
         """
 
         self._annual_interest_rate = annual_interest_rate
+
+    @property
+    def interest_indicator(self):
+        """
+        Gets the interest_indicator of this Ptsv2paymentsInstallmentInformation.
+        Indicates if the installment plan has interest.  Possible values: -Y - with interest -N - without interest -NULL - Do not send the field if no information available 
+
+        :return: The interest_indicator of this Ptsv2paymentsInstallmentInformation.
+        :rtype: str
+        """
+        return self._interest_indicator
+
+    @interest_indicator.setter
+    def interest_indicator(self, interest_indicator):
+        """
+        Sets the interest_indicator of this Ptsv2paymentsInstallmentInformation.
+        Indicates if the installment plan has interest.  Possible values: -Y - with interest -N - without interest -NULL - Do not send the field if no information available 
+
+        :param interest_indicator: The interest_indicator of this Ptsv2paymentsInstallmentInformation.
+        :type: str
+        """
+
+        self._interest_indicator = interest_indicator
+
+    @property
+    def is_government_plan(self):
+        """
+        Gets the is_government_plan of this Ptsv2paymentsInstallmentInformation.
+        Indicates if an installment plan is a government sponsored or part of a government program.  Possible values:  -true -false  This field defaults to false when no value is provided. 
+
+        :return: The is_government_plan of this Ptsv2paymentsInstallmentInformation.
+        :rtype: bool
+        """
+        return self._is_government_plan
+
+    @is_government_plan.setter
+    def is_government_plan(self, is_government_plan):
+        """
+        Sets the is_government_plan of this Ptsv2paymentsInstallmentInformation.
+        Indicates if an installment plan is a government sponsored or part of a government program.  Possible values:  -true -false  This field defaults to false when no value is provided. 
+
+        :param is_government_plan: The is_government_plan of this Ptsv2paymentsInstallmentInformation.
+        :type: bool
+        """
+
+        self._is_government_plan = is_government_plan
 
     def to_dict(self):
         """

@@ -37,6 +37,7 @@ class TssV2TransactionsGet200Response(object):
         'submit_time_utc': 'str',
         'status': 'str',
         'application_information': 'TssV2TransactionsGet200ResponseApplicationInformation',
+        'bank_account_validation': 'TssV2TransactionsGet200ResponseBankAccountValidation',
         'buyer_information': 'TssV2TransactionsGet200ResponseBuyerInformation',
         'client_reference_information': 'TssV2TransactionsGet200ResponseClientReferenceInformation',
         'consumer_authentication_information': 'TssV2TransactionsGet200ResponseConsumerAuthenticationInformation',
@@ -70,6 +71,7 @@ class TssV2TransactionsGet200Response(object):
         'submit_time_utc': 'submitTimeUTC',
         'status': 'status',
         'application_information': 'applicationInformation',
+        'bank_account_validation': 'bankAccountValidation',
         'buyer_information': 'buyerInformation',
         'client_reference_information': 'clientReferenceInformation',
         'consumer_authentication_information': 'consumerAuthenticationInformation',
@@ -95,7 +97,7 @@ class TssV2TransactionsGet200Response(object):
         'links': '_links'
     }
 
-    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, submit_time_utc=None, status=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, payment_insights_information=None, payout_options=None, unscheduled_payment_information=None, processing_information=None, processor_information=None, recurring_payment_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, token_information=None, links=None):
+    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, submit_time_utc=None, status=None, application_information=None, bank_account_validation=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, payment_insights_information=None, payout_options=None, unscheduled_payment_information=None, processing_information=None, processor_information=None, recurring_payment_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, token_information=None, links=None):
         """
         TssV2TransactionsGet200Response - a model defined in Swagger
         """
@@ -107,6 +109,7 @@ class TssV2TransactionsGet200Response(object):
         self._submit_time_utc = None
         self._status = None
         self._application_information = None
+        self._bank_account_validation = None
         self._buyer_information = None
         self._client_reference_information = None
         self._consumer_authentication_information = None
@@ -145,6 +148,8 @@ class TssV2TransactionsGet200Response(object):
           self.status = status
         if application_information is not None:
           self.application_information = application_information
+        if bank_account_validation is not None:
+          self.bank_account_validation = bank_account_validation
         if buyer_information is not None:
           self.buyer_information = buyer_information
         if client_reference_information is not None:
@@ -350,6 +355,27 @@ class TssV2TransactionsGet200Response(object):
         """
 
         self._application_information = application_information
+
+    @property
+    def bank_account_validation(self):
+        """
+        Gets the bank_account_validation of this TssV2TransactionsGet200Response.
+
+        :return: The bank_account_validation of this TssV2TransactionsGet200Response.
+        :rtype: TssV2TransactionsGet200ResponseBankAccountValidation
+        """
+        return self._bank_account_validation
+
+    @bank_account_validation.setter
+    def bank_account_validation(self, bank_account_validation):
+        """
+        Sets the bank_account_validation of this TssV2TransactionsGet200Response.
+
+        :param bank_account_validation: The bank_account_validation of this TssV2TransactionsGet200Response.
+        :type: TssV2TransactionsGet200ResponseBankAccountValidation
+        """
+
+        self._bank_account_validation = bank_account_validation
 
     @property
     def buyer_information(self):
