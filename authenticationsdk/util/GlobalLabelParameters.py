@@ -99,3 +99,4 @@ class GlobalLabelParameters:
     MESSAGE_AFTER_MLE_REQUEST = "Request after MLE: "
     MLE_CACHE_IDENTIFIER_FOR_CONFIG_CERT = "mleCertFromMerchantConfig"
     MLE_CACHE_IDENTIFIER_FOR_P12_CERT = "mleCertFromP12"
+    MLE_CACHE_KEY_IDENTIFIER_FOR_RESPONSE_PRIVATE_KEY = "response_mle_private_key"

@@ -31,6 +31,8 @@ from authenticationsdk.core.Authorization import *
 from authenticationsdk.core.MerchantConfiguration import *
 from authenticationsdk.util.PropertiesUtil import *
 from authenticationsdk.util.GlobalLabelParameters import *
+from authenticationsdk.util.MLEUtility import MLEUtility
+
 from six.moves.urllib.parse import urlencode
 
 
@@ -169,7 +171,7 @@ class ApiClient(object):
             self.host = self.mconfig.request_host
 
     # Calling the authentication header
-    def call_authentication_header(self, method, header_params, body, request_target=None):
+    def call_authentication_header(self, method, header_params, body, request_target=None, isResponseMLEforApi=False):
         
         time = self.mconfig.get_time()
 
@@ -179,7 +181,7 @@ class ApiClient(object):
             # header_params['v-c-solution-id'] = self.mconfig.solution_id
 
         auth = Authorization()
-        token = auth.get_token(self.mconfig, time, method, request_target, body)
+        token = auth.get_token(self.mconfig, time, method, request_target, body, isResponseMLEforApi)
         if self.mconfig.authentication_type.upper() == GlobalLabelParameters.HTTP.upper():
             header_params['Accept-Encoding'] = '*'
             header_params['v-c-merchant-id'] = self.mconfig.merchant_id
@@ -226,7 +228,7 @@ class ApiClient(object):
                    body=None, post_params=None, files=None,
                    response_type=None, auth_settings=None, callback=None,
                    _return_http_data_only=None, collection_formats=None, _preload_content=True,
-                   _request_timeout=None):
+                   _request_timeout=None, isResponseMLE=False):
 
         config = Configuration()
 
@@ -309,6 +311,22 @@ class ApiClient(object):
                                      post_params=post_params, body=body,
                                      _preload_content=_preload_content,
                                      _request_timeout=_request_timeout)
+        
+        if hasattr(self, 'mconfig'):
+
+                # Check if response MLE is enabled for this operation
+                if isResponseMLE:
+                    # Try to decrypt the response if it's MLE encrypted
+                    try:
+                        if MLEUtility.check_is_mle_encrypted_response(response_data.data):
+                            decrypted_data = MLEUtility.decrypt_mle_response_payload(self.mconfig, response_data.data)
+                            response_data.data = decrypted_data
+                    except Exception as e:
+                        # Log the error but continue with the response
+                        if hasattr(self.mconfig, 'log_config') and self.mconfig.log_config.enable_log:
+                            import logging
+                            logger = logging.getLogger(__name__)
+                            logger.error(f"Failed to decrypt MLE response: {str(e)}")
 
         if self.download_file_path is None:
             self.last_response = response_data
@@ -453,7 +471,7 @@ class ApiClient(object):
                  body=None, post_params=None, files=None,
                  response_type=None, auth_settings=None, callback=None,
                  _return_http_data_only=None, collection_formats=None, _preload_content=True,
-                 _request_timeout=None):
+                 _request_timeout=None, isResponseMLEforApi=False):
         
         if header_params['Content-Type'] == 'application/x-www-form-urlencoded':
             post_params = body
@@ -462,7 +480,7 @@ class ApiClient(object):
         request_target = query_param_path if query_param_path else resource_path
         
         if self.mconfig.authentication_type.upper() != GlobalLabelParameters.MUTUAL_AUTH.upper():
-            self.call_authentication_header(method, header_params, body, request_target)
+            self.call_authentication_header(method, header_params, body, request_target, isResponseMLEforApi=False)
         
         """
         Makes the HTTP request (synchronous) and return the deserialized data.
