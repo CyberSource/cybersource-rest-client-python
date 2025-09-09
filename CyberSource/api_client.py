@@ -187,7 +187,7 @@ class ApiClient(object):
             # header_params['v-c-solution-id'] = self.mconfig.solution_id
 
         auth = Authorization()
-        token = auth.get_token(self.mconfig, time, method, request_target, body, isResponseMLEforApi)
+        token = auth.get_token(self.mconfig, time, method, request_target, body, isResponseMLEforApi=isResponseMLEforApi)
         if self.mconfig.authentication_type.upper() == GlobalLabelParameters.HTTP.upper():
             header_params['Accept-Encoding'] = '*'
             header_params['v-c-merchant-id'] = self.mconfig.merchant_id
@@ -487,7 +487,7 @@ class ApiClient(object):
         request_target = query_param_path if query_param_path else resource_path
         
         if self.mconfig.authentication_type.upper() != GlobalLabelParameters.MUTUAL_AUTH.upper():
-            self.call_authentication_header(method, header_params, body, request_target, isResponseMLEforApi)
+            self.call_authentication_header(method, header_params, body, request_target, isResponseMLEforApi=isResponseMLEforApi)
         
         """
         Makes the HTTP request (synchronous) and return the deserialized data.
@@ -528,7 +528,7 @@ class ApiClient(object):
                                    path_params, query_params, header_params,
                                    body, post_params, files,
                                    response_type, auth_settings, callback,
-                                   _return_http_data_only, collection_formats, _preload_content, _request_timeout)
+                                   _return_http_data_only, collection_formats, _preload_content, _request_timeout, isResponseMLEforApi=isResponseMLEforApi)
         else:
             thread = threading.Thread(target=self.__call_api,
                                       args=(resource_path, method,
@@ -537,7 +537,7 @@ class ApiClient(object):
                                             post_params, files,
                                             response_type, auth_settings,
                                             callback, _return_http_data_only,
-                                            collection_formats, _preload_content, _request_timeout))
+                                            collection_formats, _preload_content, _request_timeout, isResponseMLEforApi))
             thread.start()
             return thread
 

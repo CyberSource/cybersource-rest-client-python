@@ -5,6 +5,7 @@ import os
 from cryptography.hazmat.primitives import serialization
 from cryptography.x509.oid import NameOID
 from jwcrypto import jwe, jwk
+import json
 
 from authenticationsdk.util.Cache import FileCache
 from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
@@ -132,7 +133,6 @@ class MLEUtility:
             return False
             
         try:
-            import json
             response_json = json.loads(response_body)
             
             # Check if the JSON has exactly one key named "encryptedResponse"
