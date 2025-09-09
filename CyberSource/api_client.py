@@ -17,6 +17,8 @@ import mimetypes
 import tempfile
 import threading
 import pkg_resources
+import logging
+import CyberSource.logging.log_factory as LogFactory
 
 from datetime import date, datetime
 
@@ -154,6 +156,10 @@ class ApiClient(object):
 
         # To reinitialize with logging config
         self.rest_client = RESTClientObject(log_config=self.mconfig.log_config)
+        try:
+            self.logger = LogFactory.setup_logger(self.__class__.__name__, self.mconfig.log_config)
+        except Exception:
+            self.logger = logging.getLogger(self.__class__.__name__)
 
         set_client_cert = rconfig.set_merchantclientcert(config)
         set_proxy = rconfig.set_merchantproxyconfig(config)
@@ -228,7 +234,7 @@ class ApiClient(object):
                    body=None, post_params=None, files=None,
                    response_type=None, auth_settings=None, callback=None,
                    _return_http_data_only=None, collection_formats=None, _preload_content=True,
-                   _request_timeout=None, isResponseMLE=False):
+                   _request_timeout=None, isResponseMLEforApi=False):
 
         config = Configuration()
 
@@ -315,7 +321,7 @@ class ApiClient(object):
         if hasattr(self, 'mconfig'):
 
                 # Check if response MLE is enabled for this operation
-                if isResponseMLE:
+                if isResponseMLEforApi:
                     # Try to decrypt the response if it's MLE encrypted
                     try:
                         if MLEUtility.check_is_mle_encrypted_response(response_data.data):
@@ -323,10 +329,11 @@ class ApiClient(object):
                             response_data.data = decrypted_data
                     except Exception as e:
                         # Log the error but continue with the response
-                        if hasattr(self.mconfig, 'log_config') and self.mconfig.log_config.enable_log:
-                            import logging
-                            logger = logging.getLogger(__name__)
-                            logger.error(f"Failed to decrypt MLE response: {str(e)}")
+                        if (hasattr(self, "logger") and
+                            hasattr(self.mconfig, "log_config") and
+                            self.mconfig.log_config.enable_log):
+                            self.logger.error(f"[MLE] Failed to decrypt response resource_path={resource_path} "
+                                              f"error={type(e).__name__}: {e}")
 
         if self.download_file_path is None:
             self.last_response = response_data
@@ -480,7 +487,7 @@ class ApiClient(object):
         request_target = query_param_path if query_param_path else resource_path
         
         if self.mconfig.authentication_type.upper() != GlobalLabelParameters.MUTUAL_AUTH.upper():
-            self.call_authentication_header(method, header_params, body, request_target, isResponseMLEforApi=False)
+            self.call_authentication_header(method, header_params, body, request_target, isResponseMLEforApi)
         
         """
         Makes the HTTP request (synchronous) and return the deserialized data.
