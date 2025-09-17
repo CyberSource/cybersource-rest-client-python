@@ -142,5 +142,10 @@ class CertificateUtility:
         pwd_bytes = password.encode("utf-8") if password else None
         try:
             return load_pem_private_key(data, password=pwd_bytes, backend=default_backend())
+        except ValueError as ve:
+            msg = str(ve).lower()
+            if 'bad decrypt' in msg or 'incorrect password' in msg:
+                raise ValueError("Incorrect password for encrypted private key")
+            raise
         except Exception:
             raise ValueError(f"Failed to load private key from {pem_file_path}")

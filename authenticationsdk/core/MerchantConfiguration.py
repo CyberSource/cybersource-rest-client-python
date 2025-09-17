@@ -745,6 +745,9 @@ class MerchantConfiguration:
                     raise ValueError("mapToControlMLEonAPI must be a dictionary")
 
                 # Check map value types - must be string or boolean
+                for key, val in map_to_control_mle_on_api.items():
+                    if not isinstance(val, (str, bool)):
+                        raise ValueError(f"mapToControlMLEonAPI values must be string or boolean.")
 
                 # Validate the map values
                 self.validate_map_to_control_mle_on_api_values(map_to_control_mle_on_api)
