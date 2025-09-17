@@ -275,11 +275,9 @@ class PaymentsApi(object):
             body_params = process_body(body_params)
 
         inbound_mle_status = "optional"
-        isResponseMLEforApi = False
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_payment,create_payment_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
-        if MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_payment,create_payment_with_http_info"):
-                isResponseMLEforApi=True
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_payment,create_payment_with_http_info")
         # Authentication setting
         auth_settings = []
 

@@ -283,10 +283,6 @@ class MerchantConfiguration:
     def get_requestMleKeyAlias(self):
         return self.requestMleKeyAlias
 
-    def set_mleForRequestPublicCertPath(self, value):
-        if not (value.get('mleForRequestPublicCertPath') is None):
-            self.mleForRequestPublicCertPath = value['mleForRequestPublicCertPath']
-
     def set_internalMapToControlMLEonAPI(self):
         if self.mapToControlMLEonAPI is not None:
             # Initialize internal maps
@@ -534,8 +530,21 @@ class MerchantConfiguration:
         self.p12KeyFilePath = os.path.join(self.key_file_path, self.key_file_name) + GlobalLabelParameters.P12_PREFIX
 
         log_items = GlobalLabelParameters.HIDE_MERCHANT_CONFIG_PROPS
+        # To prevent pickling error from deep copying
+        _no_deepcopy_keys = {
+            "responseMlePrivateKeyFilePath",
+            "responseMlePrivateKeyFilePassword",
+            "responseMlePrivateKey"
+        }
+        _temp_details = {}
+        for _k, _v in details.items():
+            if _k in _no_deepcopy_keys:
+                # Do not deepcopy; mask instead
+                _temp_details[_k] = "***"
+            else:
+                _temp_details[_k] = _v
         # This displays the logic for logging all cybs.json values
-        details_copy = copy.deepcopy(details)
+        details_copy = copy.deepcopy(_temp_details)
         if self.log_config.enable_log is True:
             for key, value in list(details_copy.items()):
                 if key in log_items:
@@ -585,16 +594,6 @@ class MerchantConfiguration:
             except Exception as err:
                 self.logger.error(err)
                 raise err
-            
-        # use_mle = False
-        # if self.enableRequestMLEForOptionalApisGlobally is True or self.useMLEGlobally is True:
-        #     use_mle = True
-
-        # # Check JWT auth for request MLE
-        # if use_mle and self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
-        #     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
-        #         GlobalLabelParameters.MLE_AUTH_ERROR,
-        #         self.log_config)
 
         # Validate Response MLE configuration
         response_mle_configured = self.enableResponseMleGlobally
@@ -652,12 +651,44 @@ class MerchantConfiguration:
             return value.strip().lower() in ("true", "false")
         return False
 
+        # Expected value (in config / cybs.json):
+        # "mapToControlMLEonAPI": {
+        #   "apiFunctionName1": "true::true",   # request MLE = true,  response MLE = true
+        #   "apiFunctionName2": "false::false", # request MLE = false, response MLE = false
+        #   "apiFunctionName3": "true::false",  # request MLE = true,  response MLE = false
+        #   "apiFunctionName4": "false::true",  # request MLE = false, response MLE = true
+        #   "apiFunctionName5": "true",         # request MLE = true,  response uses global flag
+        #   "apiFunctionName6": "false",        # request MLE = false, response uses global flag
+        #   "apiFunctionName7": "::true",       # response MLE = true, request uses global flag
+        #   "apiFunctionName8": "true::",       # request MLE = true,  response uses global flag
+        # }
+        # IMPORTANT:
+        #   Use STRING values when you need to control both request & response (use '::' separator).
+        #   A bare boolean True/False (or "true"/"false") only applies to request MLE.
 
     def validate_map_to_control_mle_on_api_values(self, map_to_control_mle_on_api):
         """
         Validates the map values for MLE control API configuration.
-        Allowed formats: "true::true", "false::false", "::true", "true::", "::false", "false::", "true", "false"
-        
+        Allowed formats (case‑insensitive):
+          "true::true"   - request MLE true,  response MLE true
+          "false::false" - request MLE false, response MLE false
+          "true::false"  - request MLE true,  response MLE false
+          "false::true"  - request MLE false, response MLE true
+          "true"         - request MLE true,  response uses global flag
+          "false"        - request MLE false, response uses global flag
+          "::true"       - response MLE true, request uses global flag
+          "true::"       - request MLE true,  response uses global flag
+
+        Invalid:
+          "::"                (both empty)
+          "true::true::false" (multiple separators)
+          ""                  (empty string)
+          "invalid::true" / "true::invalid"
+
+        Notes:
+          - A Python boolean (True / False) is treated the same as "true"/"false" (request only).
+          - Missing side around '::' -> that side falls back to global enable/disable flags.
+                
         Args:
             map_to_control_mle_on_api (dict): The map to validate
             

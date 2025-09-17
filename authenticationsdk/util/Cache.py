@@ -142,45 +142,35 @@ class FileCache:
 
         # Handle Response MLE Private Key
         if cache_key.endswith(GlobalLabelParameters.MLE_CACHE_KEY_IDENTIFIER_FOR_RESPONSE_PRIVATE_KEY):
-            try:                
+            try:
                 file_extension = os.path.splitext(file_path)[1].lower()
-                
-                # Handle different file formats
-                if file_extension in ['.p12', '.pfx']:
-                    # PKCS#12 format
-                    with open(file_path, 'rb') as f:
-                        p12_data = f.read()
-                    
-                    password_bytes = merchant_config.responseMlePrivateKeyFilePassword.encode('utf-8') if merchant_config.responseMlePrivateKeyFilePassword else None
-                    private_key, _, _ = pkcs12.load_key_and_certificates(
-                        p12_data, password_bytes, default_backend()
+                password = merchant_config.responseMlePrivateKeyFilePassword
+
+                if file_extension in ('.p12', '.pfx'):
+                    private_key, _certs = CertificateUtility.fetch_certificate_collection_from_p12_file(
+                        file_path,
+                        password
                     )
-                elif file_extension in ['.pem', '.key', '.p8']:
-                    # PEM format
-                    with open(file_path, 'rb') as f:
-                        pem_data = f.read()
-                    
-                    password_bytes = merchant_config.responseMlePrivateKeyFilePassword.encode('utf-8') if merchant_config.responseMlePrivateKeyFilePassword else None
-                    private_key = load_pem_private_key(
-                        pem_data, password=password_bytes, backend=default_backend()
+                elif file_extension in ('.pem', '.key', '.p8'):
+                    private_key = CertificateUtility.load_private_key_from_pem(
+                        file_path,
+                        password
                     )
                 else:
                     raise ValueError(f"Unsupported file format: {file_extension}")
-                
-                # Save to cache (thread-safe)
+
                 cert_info = CertInfo(
-                    None,  # No certificate for private key
+                    None,  # No certificate for standalone private key
                     os.path.getmtime(file_path),
                     private_key
                 )
                 with self._mle_cache_lock:
                     self.mlecache[cache_key] = cert_info
-                
                 return
             except Exception as e:
-                logger.error(f"Error loading Response MLE private key: {str(e)}")
-                raise ValueError(f"Error loading Response MLE private key: {str(e)}")
-        
+                logger.error(f"Error loading Response MLE private key: {e}")
+                raise ValueError(f"Error loading Response MLE private key: {e}")
+
         # Handle PEM certificate case
         if cache_key.endswith(GlobalLabelParameters.MLE_CACHE_IDENTIFIER_FOR_CONFIG_CERT):
             certificates = CertificateUtility.load_certificates_from_pem_file(file_path)
@@ -229,17 +219,16 @@ class FileCache:
         
         # Check if key exists in cache
         cert_info = self.mlecache.get(cache_key)
-        
         try:
-            file_timestamp = os.path.getmtime(file_path)
-            
+                file_timestamp = os.path.getmtime(file_path)
             # If not in cache or file was modified, load it
-            if cert_info is None or cert_info.timestamp != file_timestamp:
-                self.setup_mle_cache(merchant_config, cache_key, file_path)
-                cert_info = self.mlecache.get(cache_key)
+                if cert_info is None or cert_info.timestamp != file_timestamp:
+                    self.setup_mle_cache(merchant_config, cache_key, file_path)
+                    cert_info = self.mlecache.get(cache_key)
                 
-            return cert_info.private_key if cert_info else None
+                return cert_info.private_key if cert_info else None
         except Exception as e:
             if FileCache.logger:
                 FileCache.logger.error(f"Error getting Response MLE private key: {str(e)}")
             raise ValueError(f"Error getting Response MLE private key: {str(e)}")
+        

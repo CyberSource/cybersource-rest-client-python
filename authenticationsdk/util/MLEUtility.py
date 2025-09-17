@@ -11,6 +11,7 @@ from authenticationsdk.util.Cache import FileCache
 from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
 import CyberSource.logging.log_factory as LogFactory
 from CyberSource.utilities.JWEResponse.JWEUtility import JWEUtility
+from authenticationsdk.util.Utility import to_jwk_private_key
 
 class MLEUtility:
     logger = None
@@ -134,7 +135,6 @@ class MLEUtility:
             
         try:
             response_json = json.loads(response_body)
-            
             # Check if the JSON has exactly one key named "encryptedResponse"
             if len(response_json) != 1:
                 return False
@@ -165,7 +165,7 @@ class MLEUtility:
         try:
             # Get private key for decryption
             private_key = MLEUtility._get_mle_response_private_key(merchant_config)
-            
+            private_key_jwk = to_jwk_private_key(private_key)
             # Extract the JWE token
             jwe_response_token = MLEUtility._get_response_mle_token(mle_response_body)
             
@@ -178,7 +178,7 @@ class MLEUtility:
                 MLEUtility.logger.debug(f"LOG_NETWORK_RESPONSE_BEFORE_MLE_DECRYPTION: {mle_response_body}")
                 
             decrypted_response = JWEUtility.decrypt_jwe_response_using_private_key(
-                private_key, jwe_response_token
+                private_key_jwk, jwe_response_token
             )
             
             if MLEUtility.logger:

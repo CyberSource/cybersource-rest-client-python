@@ -319,21 +319,19 @@ class ApiClient(object):
                                      _request_timeout=_request_timeout)
         
         if hasattr(self, 'mconfig'):
+                try:
+                    if MLEUtility.check_is_mle_encrypted_response(response_data.data):
+                        decrypted_data = MLEUtility.decrypt_mle_response_payload(self.mconfig, response_data.data)
+                        response_data.data = decrypted_data #check this
+                except Exception as e:
+                    # Log the error but continue with the response
+                    if (hasattr(self, "logger") and
+                        hasattr(self.mconfig, "log_config") and
+                        self.mconfig.log_config.enable_log):
+                        self.logger.error(f"[MLE] Failed to decrypt response resource_path={resource_path} "
+                                            f"error={type(e).__name__}: {e}")
+                        raise ApiException(status=500, reason=f"MLE response decryption failed: {e}")
 
-                # Check if response MLE is enabled for this operation
-                if isResponseMLEforApi:
-                    # Try to decrypt the response if it's MLE encrypted
-                    try:
-                        if MLEUtility.check_is_mle_encrypted_response(response_data.data):
-                            decrypted_data = MLEUtility.decrypt_mle_response_payload(self.mconfig, response_data.data)
-                            response_data.data = decrypted_data
-                    except Exception as e:
-                        # Log the error but continue with the response
-                        if (hasattr(self, "logger") and
-                            hasattr(self.mconfig, "log_config") and
-                            self.mconfig.log_config.enable_log):
-                            self.logger.error(f"[MLE] Failed to decrypt response resource_path={resource_path} "
-                                              f"error={type(e).__name__}: {e}")
 
         if self.download_file_path is None:
             self.last_response = response_data
