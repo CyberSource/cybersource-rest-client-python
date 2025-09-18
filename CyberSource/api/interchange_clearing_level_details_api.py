@@ -36,13 +36,10 @@ class InterchangeClearingLevelDetailsApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -70,8 +67,7 @@ class InterchangeClearingLevelDetailsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_interchange_clearing_level_details` STARTED")
+        self.logger.info("CALL TO METHOD `get_interchange_clearing_level_details` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -119,13 +115,11 @@ class InterchangeClearingLevelDetailsApi(object):
         del params['kwargs']
         # verify the required parameter 'start_time' is set
         if ('start_time' not in params) or (params['start_time'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `start_time` when calling `get_interchange_clearing_level_details`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `start_time` when calling `get_interchange_clearing_level_details`")
             raise ValueError("Missing the required parameter `start_time` when calling `get_interchange_clearing_level_details`")
         # verify the required parameter 'end_time' is set
         if ('end_time' not in params) or (params['end_time'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `end_time` when calling `get_interchange_clearing_level_details`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `end_time` when calling `get_interchange_clearing_level_details`")
             raise ValueError("Missing the required parameter `end_time` when calling `get_interchange_clearing_level_details`")
 
 

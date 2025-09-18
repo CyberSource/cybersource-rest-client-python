@@ -36,13 +36,10 @@ class PayerAuthenticationApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -68,8 +65,7 @@ class PayerAuthenticationApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `check_payer_auth_enrollment` STARTED")
+        self.logger.info("CALL TO METHOD `check_payer_auth_enrollment` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -115,8 +111,7 @@ class PayerAuthenticationApi(object):
         del params['kwargs']
         # verify the required parameter 'check_payer_auth_enrollment_request' is set
         if ('check_payer_auth_enrollment_request' not in params) or (params['check_payer_auth_enrollment_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `check_payer_auth_enrollment_request` when calling `check_payer_auth_enrollment`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `check_payer_auth_enrollment_request` when calling `check_payer_auth_enrollment`")
             raise ValueError("Missing the required parameter `check_payer_auth_enrollment_request` when calling `check_payer_auth_enrollment`")
 
 
@@ -187,8 +182,7 @@ class PayerAuthenticationApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `payer_auth_setup` STARTED")
+        self.logger.info("CALL TO METHOD `payer_auth_setup` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -234,8 +228,7 @@ class PayerAuthenticationApi(object):
         del params['kwargs']
         # verify the required parameter 'payer_auth_setup_request' is set
         if ('payer_auth_setup_request' not in params) or (params['payer_auth_setup_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `payer_auth_setup_request` when calling `payer_auth_setup`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `payer_auth_setup_request` when calling `payer_auth_setup`")
             raise ValueError("Missing the required parameter `payer_auth_setup_request` when calling `payer_auth_setup`")
 
 
@@ -306,8 +299,7 @@ class PayerAuthenticationApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `validate_authentication_results` STARTED")
+        self.logger.info("CALL TO METHOD `validate_authentication_results` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -353,8 +345,7 @@ class PayerAuthenticationApi(object):
         del params['kwargs']
         # verify the required parameter 'validate_request' is set
         if ('validate_request' not in params) or (params['validate_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `validate_request` when calling `validate_authentication_results`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `validate_request` when calling `validate_authentication_results`")
             raise ValueError("Missing the required parameter `validate_request` when calling `validate_authentication_results`")
 
 

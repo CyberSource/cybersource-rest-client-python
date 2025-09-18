@@ -36,13 +36,10 @@ class DownloadXSDApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -68,8 +65,7 @@ class DownloadXSDApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_xsdv2` STARTED")
+        self.logger.info("CALL TO METHOD `get_xsdv2` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -115,8 +111,7 @@ class DownloadXSDApi(object):
         del params['kwargs']
         # verify the required parameter 'report_definition_name_version' is set
         if ('report_definition_name_version' not in params) or (params['report_definition_name_version'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `report_definition_name_version` when calling `get_xsdv2`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `report_definition_name_version` when calling `get_xsdv2`")
             raise ValueError("Missing the required parameter `report_definition_name_version` when calling `get_xsdv2`")
 
 

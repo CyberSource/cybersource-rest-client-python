@@ -36,13 +36,10 @@ class PaymentsApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -69,8 +66,7 @@ class PaymentsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `create_order_request` STARTED")
+        self.logger.info("CALL TO METHOD `create_order_request` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -117,13 +113,11 @@ class PaymentsApi(object):
         del params['kwargs']
         # verify the required parameter 'order_payment_request' is set
         if ('order_payment_request' not in params) or (params['order_payment_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `order_payment_request` when calling `create_order_request`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `order_payment_request` when calling `create_order_request`")
             raise ValueError("Missing the required parameter `order_payment_request` when calling `create_order_request`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `create_order_request`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `create_order_request`")
             raise ValueError("Missing the required parameter `id` when calling `create_order_request`")
 
 
@@ -197,8 +191,7 @@ class PaymentsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `create_payment` STARTED")
+        self.logger.info("CALL TO METHOD `create_payment` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -244,8 +237,7 @@ class PaymentsApi(object):
         del params['kwargs']
         # verify the required parameter 'create_payment_request' is set
         if ('create_payment_request' not in params) or (params['create_payment_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `create_payment_request` when calling `create_payment`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `create_payment_request` when calling `create_payment`")
             raise ValueError("Missing the required parameter `create_payment_request` when calling `create_payment`")
 
 
@@ -316,8 +308,7 @@ class PaymentsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `create_session_request` STARTED")
+        self.logger.info("CALL TO METHOD `create_session_request` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -363,8 +354,7 @@ class PaymentsApi(object):
         del params['kwargs']
         # verify the required parameter 'create_session_req' is set
         if ('create_session_req' not in params) or (params['create_session_req'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `create_session_req` when calling `create_session_request`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `create_session_req` when calling `create_session_request`")
             raise ValueError("Missing the required parameter `create_session_req` when calling `create_session_request`")
 
 
@@ -436,8 +426,7 @@ class PaymentsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `increment_auth` STARTED")
+        self.logger.info("CALL TO METHOD `increment_auth` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -484,13 +473,11 @@ class PaymentsApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `increment_auth`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `increment_auth`")
             raise ValueError("Missing the required parameter `id` when calling `increment_auth`")
         # verify the required parameter 'increment_auth_request' is set
         if ('increment_auth_request' not in params) or (params['increment_auth_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `increment_auth_request` when calling `increment_auth`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `increment_auth_request` when calling `increment_auth`")
             raise ValueError("Missing the required parameter `increment_auth_request` when calling `increment_auth`")
 
 
@@ -565,8 +552,7 @@ class PaymentsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `refresh_payment_status` STARTED")
+        self.logger.info("CALL TO METHOD `refresh_payment_status` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -613,13 +599,11 @@ class PaymentsApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `refresh_payment_status`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `refresh_payment_status`")
             raise ValueError("Missing the required parameter `id` when calling `refresh_payment_status`")
         # verify the required parameter 'refresh_payment_status_request' is set
         if ('refresh_payment_status_request' not in params) or (params['refresh_payment_status_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `refresh_payment_status_request` when calling `refresh_payment_status`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `refresh_payment_status_request` when calling `refresh_payment_status`")
             raise ValueError("Missing the required parameter `refresh_payment_status_request` when calling `refresh_payment_status`")
 
 
@@ -694,8 +678,7 @@ class PaymentsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `update_session_req` STARTED")
+        self.logger.info("CALL TO METHOD `update_session_req` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -742,13 +725,11 @@ class PaymentsApi(object):
         del params['kwargs']
         # verify the required parameter 'create_session_request' is set
         if ('create_session_request' not in params) or (params['create_session_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `create_session_request` when calling `update_session_req`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `create_session_request` when calling `update_session_req`")
             raise ValueError("Missing the required parameter `create_session_request` when calling `update_session_req`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `update_session_req`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `update_session_req`")
             raise ValueError("Missing the required parameter `id` when calling `update_session_req`")
 
 

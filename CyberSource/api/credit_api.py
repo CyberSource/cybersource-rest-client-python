@@ -36,13 +36,10 @@ class CreditApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -68,8 +65,7 @@ class CreditApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `create_credit` STARTED")
+        self.logger.info("CALL TO METHOD `create_credit` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -115,8 +111,7 @@ class CreditApi(object):
         del params['kwargs']
         # verify the required parameter 'create_credit_request' is set
         if ('create_credit_request' not in params) or (params['create_credit_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `create_credit_request` when calling `create_credit`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `create_credit_request` when calling `create_credit`")
             raise ValueError("Missing the required parameter `create_credit_request` when calling `create_credit`")
 
 

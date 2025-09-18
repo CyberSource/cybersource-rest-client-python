@@ -36,13 +36,10 @@ class DeviceSearchApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -68,8 +65,7 @@ class DeviceSearchApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `post_search_query` STARTED")
+        self.logger.info("CALL TO METHOD `post_search_query` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -115,8 +111,7 @@ class DeviceSearchApi(object):
         del params['kwargs']
         # verify the required parameter 'post_device_search_request' is set
         if ('post_device_search_request' not in params) or (params['post_device_search_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `post_device_search_request` when calling `post_search_query`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `post_device_search_request` when calling `post_search_query`")
             raise ValueError("Missing the required parameter `post_device_search_request` when calling `post_search_query`")
 
 
@@ -187,8 +182,7 @@ class DeviceSearchApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `post_search_query_v3` STARTED")
+        self.logger.info("CALL TO METHOD `post_search_query_v3` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -234,8 +228,7 @@ class DeviceSearchApi(object):
         del params['kwargs']
         # verify the required parameter 'post_device_search_request_v3' is set
         if ('post_device_search_request_v3' not in params) or (params['post_device_search_request_v3'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `post_device_search_request_v3` when calling `post_search_query_v3`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `post_device_search_request_v3` when calling `post_search_query_v3`")
             raise ValueError("Missing the required parameter `post_device_search_request_v3` when calling `post_search_query_v3`")
 
 

@@ -36,13 +36,10 @@ class TokenizedCardApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -69,8 +66,7 @@ class TokenizedCardApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `delete_tokenized_card` STARTED")
+        self.logger.info("CALL TO METHOD `delete_tokenized_card` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -117,8 +113,7 @@ class TokenizedCardApi(object):
         del params['kwargs']
         # verify the required parameter 'tokenized_card_id' is set
         if ('tokenized_card_id' not in params) or (params['tokenized_card_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `tokenized_card_id` when calling `delete_tokenized_card`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `tokenized_card_id` when calling `delete_tokenized_card`")
             raise ValueError("Missing the required parameter `tokenized_card_id` when calling `delete_tokenized_card`")
 
 
@@ -196,8 +191,7 @@ class TokenizedCardApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_tokenized_card` STARTED")
+        self.logger.info("CALL TO METHOD `get_tokenized_card` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -244,8 +238,7 @@ class TokenizedCardApi(object):
         del params['kwargs']
         # verify the required parameter 'tokenized_card_id' is set
         if ('tokenized_card_id' not in params) or (params['tokenized_card_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `tokenized_card_id` when calling `get_tokenized_card`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `tokenized_card_id` when calling `get_tokenized_card`")
             raise ValueError("Missing the required parameter `tokenized_card_id` when calling `get_tokenized_card`")
 
 
@@ -323,8 +316,7 @@ class TokenizedCardApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `post_tokenized_card` STARTED")
+        self.logger.info("CALL TO METHOD `post_tokenized_card` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -371,8 +363,7 @@ class TokenizedCardApi(object):
         del params['kwargs']
         # verify the required parameter 'tokenizedcard_request' is set
         if ('tokenizedcard_request' not in params) or (params['tokenizedcard_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `tokenizedcard_request` when calling `post_tokenized_card`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `tokenizedcard_request` when calling `post_tokenized_card`")
             raise ValueError("Missing the required parameter `tokenizedcard_request` when calling `post_tokenized_card`")
 
 

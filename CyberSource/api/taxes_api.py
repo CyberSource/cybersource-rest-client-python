@@ -36,13 +36,10 @@ class TaxesApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -68,8 +65,7 @@ class TaxesApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `calculate_tax` STARTED")
+        self.logger.info("CALL TO METHOD `calculate_tax` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -115,8 +111,7 @@ class TaxesApi(object):
         del params['kwargs']
         # verify the required parameter 'tax_request' is set
         if ('tax_request' not in params) or (params['tax_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `tax_request` when calling `calculate_tax`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `tax_request` when calling `calculate_tax`")
             raise ValueError("Missing the required parameter `tax_request` when calling `calculate_tax`")
 
 
@@ -188,8 +183,7 @@ class TaxesApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `void_tax` STARTED")
+        self.logger.info("CALL TO METHOD `void_tax` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -236,13 +230,11 @@ class TaxesApi(object):
         del params['kwargs']
         # verify the required parameter 'void_tax_request' is set
         if ('void_tax_request' not in params) or (params['void_tax_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `void_tax_request` when calling `void_tax`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `void_tax_request` when calling `void_tax`")
             raise ValueError("Missing the required parameter `void_tax_request` when calling `void_tax`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_tax`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_tax`")
             raise ValueError("Missing the required parameter `id` when calling `void_tax`")
 
 

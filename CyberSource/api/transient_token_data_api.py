@@ -36,13 +36,10 @@ class TransientTokenDataApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -68,8 +65,7 @@ class TransientTokenDataApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_payment_credentials_for_transient_token` STARTED")
+        self.logger.info("CALL TO METHOD `get_payment_credentials_for_transient_token` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -115,8 +111,7 @@ class TransientTokenDataApi(object):
         del params['kwargs']
         # verify the required parameter 'payment_credentials_reference' is set
         if ('payment_credentials_reference' not in params) or (params['payment_credentials_reference'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `payment_credentials_reference` when calling `get_payment_credentials_for_transient_token`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `payment_credentials_reference` when calling `get_payment_credentials_for_transient_token`")
             raise ValueError("Missing the required parameter `payment_credentials_reference` when calling `get_payment_credentials_for_transient_token`")
 
 
@@ -191,8 +186,7 @@ class TransientTokenDataApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_transaction_for_transient_token` STARTED")
+        self.logger.info("CALL TO METHOD `get_transaction_for_transient_token` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -238,8 +232,7 @@ class TransientTokenDataApi(object):
         del params['kwargs']
         # verify the required parameter 'transient_token' is set
         if ('transient_token' not in params) or (params['transient_token'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `transient_token` when calling `get_transaction_for_transient_token`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `transient_token` when calling `get_transaction_for_transient_token`")
             raise ValueError("Missing the required parameter `transient_token` when calling `get_transaction_for_transient_token`")
 
 

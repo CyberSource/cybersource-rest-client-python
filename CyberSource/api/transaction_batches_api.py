@@ -36,13 +36,10 @@ class TransactionBatchesApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -70,8 +67,7 @@ class TransactionBatchesApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_transaction_batch_details` STARTED")
+        self.logger.info("CALL TO METHOD `get_transaction_batch_details` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -119,8 +115,7 @@ class TransactionBatchesApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_transaction_batch_details`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_transaction_batch_details`")
             raise ValueError("Missing the required parameter `id` when calling `get_transaction_batch_details`")
 
 
@@ -199,8 +194,7 @@ class TransactionBatchesApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_transaction_batch_id` STARTED")
+        self.logger.info("CALL TO METHOD `get_transaction_batch_id` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -246,8 +240,7 @@ class TransactionBatchesApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_transaction_batch_id`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_transaction_batch_id`")
             raise ValueError("Missing the required parameter `id` when calling `get_transaction_batch_id`")
 
 
@@ -323,8 +316,7 @@ class TransactionBatchesApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_transaction_batches` STARTED")
+        self.logger.info("CALL TO METHOD `get_transaction_batches` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -371,13 +363,11 @@ class TransactionBatchesApi(object):
         del params['kwargs']
         # verify the required parameter 'start_time' is set
         if ('start_time' not in params) or (params['start_time'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `start_time` when calling `get_transaction_batches`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `start_time` when calling `get_transaction_batches`")
             raise ValueError("Missing the required parameter `start_time` when calling `get_transaction_batches`")
         # verify the required parameter 'end_time' is set
         if ('end_time' not in params) or (params['end_time'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `end_time` when calling `get_transaction_batches`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `end_time` when calling `get_transaction_batches`")
             raise ValueError("Missing the required parameter `end_time` when calling `get_transaction_batches`")
 
 
@@ -453,8 +443,7 @@ class TransactionBatchesApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `upload_transaction_batch` STARTED")
+        self.logger.info("CALL TO METHOD `upload_transaction_batch` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -500,8 +489,7 @@ class TransactionBatchesApi(object):
         del params['kwargs']
         # verify the required parameter 'file' is set
         if ('file' not in params) or (params['file'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `file` when calling `upload_transaction_batch`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `file` when calling `upload_transaction_batch`")
             raise ValueError("Missing the required parameter `file` when calling `upload_transaction_batch`")
 
 

@@ -13,7 +13,6 @@ import CyberSource.logging.log_factory as LogFactory
 
 
 class MerchantConfiguration:
-
     def __init__(self):
         self.merchant_keyid = None
         self.merchant_secretkey = None
@@ -371,9 +370,8 @@ class MerchantConfiguration:
     def validate_merchant_details(self, details, mconfig = None):
         # verify Mandatory Properties
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.log_config)
-        if self.log_config.enable_log is True:
-            self.logger.info("START> ======================================= ")
-
+        self.logger.info("START> ======================================= ")
+        
         if self.authentication_type is None or self.authentication_type == "":
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.AUTHENTICATION_REQ,
@@ -515,73 +513,62 @@ class MerchantConfiguration:
         log_items = GlobalLabelParameters.HIDE_MERCHANT_CONFIG_PROPS
         # This displays the logic for logging all cybs.json values
         details_copy = copy.deepcopy(details)
-        if self.log_config.enable_log is True:
-            for key, value in list(details_copy.items()):
-                if key in log_items:
-                    del details_copy[key]
+        for key, value in list(details_copy.items()):
+            if key in log_items:
+                del details_copy[key]
 
-                for keys, values in list(details_copy.items()):
-                    details_copy[keys] = str(values)
+            for keys, values in list(details_copy.items()):
+                details_copy[keys] = str(values)
 
-            self.logger.info("Mconfig >      " + str(ast.literal_eval(json.dumps(details_copy))))
+        self.logger.info("Mconfig >      " + str(ast.literal_eval(json.dumps(details_copy))))
 
         import numbers
         if not isinstance(self.max_num_idle_connections, numbers.Number):
             self.max_num_idle_connections = GlobalLabelParameters.DEFAULT_MAX_IDLE_CONNECTIONS
-            if self.log_config.enable_log:
-                self.logger.error(f"maxNumIdleConnections is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_IDLE_CONNECTIONS}")
+            self.logger.error(f"maxNumIdleConnections is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_IDLE_CONNECTIONS}")
 
         if not isinstance(self.max_pool_size, numbers.Number):
             self.max_pool_size = GlobalLabelParameters.DEFAULT_MAX_POOL_SIZE
-            if self.log_config.enable_log:
-                self.logger.error(f"maxPoolSize is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_POOL_SIZE}")
+            self.logger.error(f"maxPoolSize is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_POOL_SIZE}")
 
         if not isinstance(self.max_keep_alive_delay, numbers.Number):
             self.max_keep_alive_delay = GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_DELAY
-            if self.log_config.enable_log:
-                self.logger.error(f"maxKeepAliveDelay is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_DELAY}")
+            self.logger.error(f"maxKeepAliveDelay is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_DELAY}")
 
         if not isinstance(self.max_keep_alive_idle_window, numbers.Number):
             self.max_keep_alive_idle_window = GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_IDLE_WINDOW
-            if self.log_config.enable_log:
-                self.logger.error(f"maxKeepAliveIdleWindow is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_IDLE_WINDOW}")
+            self.logger.error(f"maxKeepAliveIdleWindow is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_IDLE_WINDOW}")
 
     def check_key_file(self):
         if not(self.key_file_name and self.key_file_name.strip()):
-            if self.log_config.enable_log:
-                self.logger.error("Key Filename not provided. Assigning the value of Merchant ID")
+            self.logger.error("Key Filename not provided. Assigning the value of Merchant ID")
             if self.merchant_id and self.merchant_id.strip():
                 self.key_file_name = self.merchant_id
 
         if not(self.key_file_path and self.key_file_path.strip()):
             self.key_file_path = GlobalLabelParameters.DEFAULT_KEY_FILE_PATH
-            if self.log_config.enable_log:
-                self.logger.error(f"Keys Directory not provided. Using Default Path: {self.key_file_path}")
+            self.logger.error(f"Keys Directory not provided. Using Default Path: {self.key_file_path}")
 
         # Directory exists?
         if not os.path.isdir(self.key_file_path):
-            if self.log_config.enable_log:
-                self.logger.error(f"Keys Directory not found. Entered directory : {self.key_file_path}")
+            self.logger.error(f"Keys Directory not found. Entered directory : {self.key_file_path}")
             return False
 
         keyFilePath = os.path.join(self.key_file_path, self.key_file_name) + GlobalLabelParameters.P12_PREFIX
 
         # File exists?
         if not os.path.isfile(keyFilePath):
-            if self.log_config.enable_log:
-                self.logger.error(f"Key File not found. Check path/filename entered. Entered path/filename : {keyFilePath}")
+            self.logger.error(f"Key File not found. Check path/filename entered. Entered path/filename : {keyFilePath}")
             return False
 
-        if self.log_config.enable_log:
-            self.logger.info(f"Entered value for Key File Path : {keyFilePath}")
+        self.logger.info(f"Entered value for Key File Path : {keyFilePath}")
 
         # Can file be opened for reading?
         try:
             with open(keyFilePath, 'rb'):
                 return True
         except Exception:
-            if self.log_config.enable_log:
-                self.logger.info(f"File cannot be accessed. Permission denied : {keyFilePath}")
+            self.logger.info(f"File cannot be accessed. Permission denied : {keyFilePath}")
             return False
 
     def validate_MLE_configuration(self):
@@ -589,6 +576,5 @@ class MerchantConfiguration:
             try:
                 CertificateUtility.validate_path_and_file(self.mleForRequestPublicCertPath, "mleForRequestPublicCertPath", self.log_config)
             except Exception as err:
-                if self.log_config.enable_log:
-                    self.logger.error(str(err))
+                self.logger.error(str(err))
                 raise err

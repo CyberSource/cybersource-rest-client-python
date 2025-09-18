@@ -35,7 +35,6 @@ except ImportError:
 
 
 class RESTResponse(io.IOBase):
-
     def __init__(self, resp):
         self.urllib3_response = resp
         self.status = resp.status
@@ -179,7 +178,6 @@ class RESTClientObject(object):
                 hash_candidates['proxy_auth_headers'] = proxy_auth_headers
 
         self.pool_manager = self.__class__.get_pool_manager(hash_candidates)
-
 
     def request(self, method, url, query_params=None, headers=None,
                 body=None, post_params=None, _preload_content=True, _request_timeout=None):

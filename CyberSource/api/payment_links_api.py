@@ -36,13 +36,10 @@ class PaymentLinksApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -68,8 +65,7 @@ class PaymentLinksApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `create_payment_link` STARTED")
+        self.logger.info("CALL TO METHOD `create_payment_link` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -115,8 +111,7 @@ class PaymentLinksApi(object):
         del params['kwargs']
         # verify the required parameter 'create_payment_link_request' is set
         if ('create_payment_link_request' not in params) or (params['create_payment_link_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `create_payment_link_request` when calling `create_payment_link`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `create_payment_link_request` when calling `create_payment_link`")
             raise ValueError("Missing the required parameter `create_payment_link_request` when calling `create_payment_link`")
 
 
@@ -189,8 +184,7 @@ class PaymentLinksApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_all_payment_links` STARTED")
+        self.logger.info("CALL TO METHOD `get_all_payment_links` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -238,13 +232,11 @@ class PaymentLinksApi(object):
         del params['kwargs']
         # verify the required parameter 'offset' is set
         if ('offset' not in params) or (params['offset'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `offset` when calling `get_all_payment_links`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `offset` when calling `get_all_payment_links`")
             raise ValueError("Missing the required parameter `offset` when calling `get_all_payment_links`")
         # verify the required parameter 'limit' is set
         if ('limit' not in params) or (params['limit'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `limit` when calling `get_all_payment_links`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `limit` when calling `get_all_payment_links`")
             raise ValueError("Missing the required parameter `limit` when calling `get_all_payment_links`")
 
 
@@ -322,8 +314,7 @@ class PaymentLinksApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_payment_link` STARTED")
+        self.logger.info("CALL TO METHOD `get_payment_link` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -369,8 +360,7 @@ class PaymentLinksApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_payment_link`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_payment_link`")
             raise ValueError("Missing the required parameter `id` when calling `get_payment_link`")
 
 
@@ -446,8 +436,7 @@ class PaymentLinksApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `update_payment_link` STARTED")
+        self.logger.info("CALL TO METHOD `update_payment_link` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -494,13 +483,11 @@ class PaymentLinksApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `update_payment_link`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `update_payment_link`")
             raise ValueError("Missing the required parameter `id` when calling `update_payment_link`")
         # verify the required parameter 'update_payment_link_request' is set
         if ('update_payment_link_request' not in params) or (params['update_payment_link_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `update_payment_link_request` when calling `update_payment_link`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `update_payment_link_request` when calling `update_payment_link`")
             raise ValueError("Missing the required parameter `update_payment_link_request` when calling `update_payment_link`")
 
 
