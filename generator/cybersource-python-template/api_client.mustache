@@ -63,7 +63,6 @@ class ApiClient(object):
         """
         Constructor of the class.
         """
-        self.rest_client = RESTClientObject()
         self.default_headers = {}
         if header_name is not None:
             self.default_headers[header_name] = header_value
@@ -140,17 +139,8 @@ class ApiClient(object):
     def set_configuration(self,config):
         self.mconfig = MerchantConfiguration()
         self.mconfig.set_merchantconfig(config)
-        rconfig = Configuration()
 
-        # To reinitialize with logging config
-        self.rest_client = RESTClientObject(log_config=self.mconfig.log_config)
-
-        set_client_cert = rconfig.set_merchantclientcert(config)
-        set_proxy = rconfig.set_merchantproxyconfig(config)
-
-        # The below two lines are to set proxy details, client cert details and if present reinitialize the REST object as a proxy manager
-        if set_client_cert or set_proxy:
-            self.rest_client = RESTClientObject(rconfig, log_config=self.mconfig.log_config) # Reinitialising REST object as a proxy manager instead of pool manager
+        self.rest_client = RESTClientObject(mconfig=self.mconfig)
 
         # This implements the fall back logic for JWT parameters key alias,key password,json file path
         self.mconfig.validate_merchant_details(config)

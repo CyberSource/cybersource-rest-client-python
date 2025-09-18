@@ -26,7 +26,7 @@ setup(
         "DateTime",
         "setuptools",
         "six",
-        "urllib3",
+        "urllib3-future",
         "jwcrypto",
         "cryptography",
         "pgpy"
