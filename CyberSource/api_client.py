@@ -328,8 +328,7 @@ class ApiClient(object):
                     if (hasattr(self, "logger") and
                         hasattr(self.mconfig, "log_config") and
                         self.mconfig.log_config.enable_log):
-                        self.logger.error(f"[MLE] Failed to decrypt response resource_path={resource_path} "
-                                            f"error={type(e).__name__}: {e}")
+                        self.logger.error("[MLE] Failed to decrypt response.")
                         raise ApiException(status=500, reason=f"MLE response decryption failed: {e}")
 
 

@@ -203,7 +203,7 @@ class MLEUtility:
             return response_json.get("encryptedResponse")
         except Exception as e:
             if MLEUtility.logger:
-                MLEUtility.logger.error(f"Failed to extract Response MLE token: {str(e)}")
+                MLEUtility.logger.error("Failed to extract response MLE token from response body.")
             return None
     
     @staticmethod

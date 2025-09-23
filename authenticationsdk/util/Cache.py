@@ -168,7 +168,7 @@ class FileCache:
                     self.mlecache[cache_key] = cert_info
                 return
             except Exception as e:
-                logger.error(f"Error loading Response MLE private key: {e}")
+                logger.error("Error loading Response MLE private key")
                 raise ValueError(f"Error loading Response MLE private key: {e}")
 
         # Handle PEM certificate case
@@ -229,6 +229,6 @@ class FileCache:
                 return cert_info.private_key if cert_info else None
         except Exception as e:
             if FileCache.logger:
-                FileCache.logger.error(f"Error getting Response MLE private key: {str(e)}")
+                FileCache.logger.error(f"Error getting Response MLE private key")
             raise ValueError(f"Error getting Response MLE private key: {str(e)}")
         

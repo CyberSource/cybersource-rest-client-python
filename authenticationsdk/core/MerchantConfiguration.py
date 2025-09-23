@@ -755,5 +755,5 @@ class MerchantConfiguration:
                 # Set the map
                 self.mapToControlMLEonAPI = map_to_control_mle_on_api
             except Exception as e:
-                self.logger.error(f"Unable to initialize MLE control Map from config: {str(e)}")
+                self.logger.error(f"Unable to initialize MLE control Map from config")
                 raise ValueError(f"Unable to initialize MLE control Map from config: {str(e)}")
