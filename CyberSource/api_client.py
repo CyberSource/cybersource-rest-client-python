@@ -322,7 +322,7 @@ class ApiClient(object):
                 try:
                     if MLEUtility.check_is_mle_encrypted_response(response_data.data):
                         decrypted_data = MLEUtility.decrypt_mle_response_payload(self.mconfig, response_data.data)
-                        response_data.data = decrypted_data #check this
+                        response_data.data = decrypted_data
                 except Exception as e:
                     # Log the error but continue with the response
                     if (hasattr(self, "logger") and
