@@ -592,7 +592,7 @@ class MerchantConfiguration:
             try:
                 CertificateUtility.validate_path_and_file(self.mleForRequestPublicCertPath, "mleForRequestPublicCertPath", self.log_config)
             except Exception as err:
-                self.logger.error(err)
+                self.logger.error(str(err))
                 raise err
 
         # Validate Response MLE configuration

@@ -259,7 +259,7 @@ class MLEUtility:
                 break
 
         if not serial_number:
-            logger.warning(f"Serial number not found in MLE certificate for alias {merchant_config.requestMleKeyAlias} in {merchant_config.p12KeyFilePath}.p12")
+            logger.warning(f"Serial number not found in MLE certificate for alias {merchant_config.requestMleKeyAlias} in {merchant_config.p12KeyFilePath}")
             # Use the hex serial number from the certificate as fallback
             return format(certificate.serial_number, 'x')
 
