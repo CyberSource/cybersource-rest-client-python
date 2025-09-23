@@ -17,8 +17,6 @@ import mimetypes
 import tempfile
 import threading
 import pkg_resources
-import logging
-import CyberSource.logging.log_factory as LogFactory
 
 from datetime import date, datetime
 
@@ -34,8 +32,9 @@ from authenticationsdk.core.MerchantConfiguration import *
 from authenticationsdk.util.PropertiesUtil import *
 from authenticationsdk.util.GlobalLabelParameters import *
 from authenticationsdk.util.MLEUtility import MLEUtility
-
 from six.moves.urllib.parse import urlencode
+import logging
+import CyberSource.logging.log_factory as LogFactory 
 
 
 class ApiClient(object):
@@ -156,6 +155,7 @@ class ApiClient(object):
 
         # To reinitialize with logging config
         self.rest_client = RESTClientObject(log_config=self.mconfig.log_config)
+
         try:
             self.logger = LogFactory.setup_logger(self.__class__.__name__, self.mconfig.log_config)
         except Exception:
@@ -317,20 +317,18 @@ class ApiClient(object):
                                      post_params=post_params, body=body,
                                      _preload_content=_preload_content,
                                      _request_timeout=_request_timeout)
-        
-        if hasattr(self, 'mconfig'):
-                try:
-                    if MLEUtility.check_is_mle_encrypted_response(response_data.data):
-                        decrypted_data = MLEUtility.decrypt_mle_response_payload(self.mconfig, response_data.data)
-                        response_data.data = decrypted_data
-                except Exception as e:
-                    # Log the error but continue with the response
-                    if (hasattr(self, "logger") and
-                        hasattr(self.mconfig, "log_config") and
-                        self.mconfig.log_config.enable_log):
-                        self.logger.error("[MLE] Failed to decrypt response.")
-                        raise ApiException(status=500, reason=f"MLE response decryption failed: {e}")
 
+        if hasattr(self, 'mconfig'):
+                    try:
+                        if MLEUtility.check_is_mle_encrypted_response(response_data.data):
+                            decrypted_data = MLEUtility.decrypt_mle_response_payload(self.mconfig, response_data.data)
+                            response_data.data = decrypted_data
+                    except Exception as e:
+                        if (hasattr(self, "logger") and
+                            hasattr(self.mconfig, "log_config") and
+                            self.mconfig.log_config.enable_log):
+                            self.logger.error("[MLE] Failed to decrypt response")
+                        raise ApiException(status=500, reason=f"MLE response decryption failed: {e}")
 
         if self.download_file_path is None:
             self.last_response = response_data
@@ -482,7 +480,6 @@ class ApiClient(object):
         
         query_param_path = self.set_query_params(resource_path, query_params)
         request_target = query_param_path if query_param_path else resource_path
-        
         if self.mconfig.authentication_type.upper() != GlobalLabelParameters.MUTUAL_AUTH.upper():
             self.call_authentication_header(method, header_params, body, request_target, isResponseMLEforApi=isResponseMLEforApi)
         
@@ -525,7 +522,8 @@ class ApiClient(object):
                                    path_params, query_params, header_params,
                                    body, post_params, files,
                                    response_type, auth_settings, callback,
-                                   _return_http_data_only, collection_formats, _preload_content, _request_timeout, isResponseMLEforApi=isResponseMLEforApi)
+                                   _return_http_data_only, collection_formats, _preload_content, _request_timeout,
+                                   isResponseMLEforApi=isResponseMLEforApi)
         else:
             thread = threading.Thread(target=self.__call_api,
                                       args=(resource_path, method,

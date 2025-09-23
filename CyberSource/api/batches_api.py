@@ -153,6 +153,8 @@ class BatchesApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_batch_report,get_batch_report_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_batch_report,get_batch_report_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -169,7 +171,8 @@ class BatchesApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def get_batch_status(self, batch_id, **kwargs):
         """
@@ -276,6 +279,8 @@ class BatchesApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_batch_status,get_batch_status_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_batch_status,get_batch_status_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -292,7 +297,8 @@ class BatchesApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def get_batches_list(self, **kwargs):
         """
@@ -405,6 +411,8 @@ class BatchesApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_batches_list,get_batches_list_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_batches_list,get_batches_list_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -421,7 +429,8 @@ class BatchesApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def post_batch(self, body, **kwargs):
         """
@@ -524,6 +533,8 @@ class BatchesApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_batch,post_batch_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_batch,post_batch_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -540,4 +551,5 @@ class BatchesApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
