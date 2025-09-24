@@ -1,5 +1,7 @@
 import json
 import re
+from cryptography.hazmat.primitives import serialization
+from jwcrypto import jwk 
 
 def get_response_code_message(response):
     switcher = {
@@ -46,3 +48,21 @@ def process_body(body):
     body = body.replace("productSku", "productSKU")
     body = body.replace("secCode", "SECCode")
     return body
+
+def to_jwk_private_key(private_key):
+    """
+    Ensure the provided private_key is a jwcrypto.jwk.JWK instance.
+    Accepts a jwk.JWK or a cryptography private key object.
+    """
+    if private_key is None:
+        raise ValueError("Private key is None")
+    if isinstance(private_key, jwk.JWK):
+        return private_key
+    if hasattr(private_key, "private_bytes"):
+        pem = private_key.private_bytes(
+            serialization.Encoding.PEM,
+            serialization.PrivateFormat.PKCS8,
+            serialization.NoEncryption()
+        )
+        return jwk.JWK.from_pem(pem)
+    raise ValueError("Unsupported private key type for JWK conversion")

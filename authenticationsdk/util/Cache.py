@@ -7,14 +7,14 @@ from jwcrypto import jwk
 from cryptography import x509
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.backends import default_backend
-from cryptography.hazmat.primitives.serialization import pkcs12
+from cryptography.hazmat.primitives.serialization import pkcs12, load_pem_private_key
 
 from typing_extensions import deprecated
 
 from authenticationsdk.util.CertificateUtility import CertificateUtility
 from authenticationsdk.util.GlobalLabelParameters import *
 import CyberSource.logging.log_factory as LogFactory
-import threading
+import os
 
 class CertInfo:
     def __init__(self, certificate, timestamp, private_key):
@@ -101,11 +101,13 @@ class FileCache:
         certificate_file_path = None
 
         # Priority #1: Get cert from merchantConfig.mle_for_request_public_cert_path if certPath is provided
-        if merchant_config.mleForRequestPublicCertPath and merchant_config.mleForRequestPublicCertPath.strip():
+        if (merchant_config.mleForRequestPublicCertPath and 
+            merchant_config.mleForRequestPublicCertPath.strip()):
             certificate_identifier = GlobalLabelParameters.MLE_CACHE_IDENTIFIER_FOR_CONFIG_CERT
             certificate_file_path = merchant_config.mleForRequestPublicCertPath
         # Priority #2: If mle_for_request_public_cert_path not provided, get mlecert from p12 if provided and jwt auth type
-        elif (GlobalLabelParameters.JWT.lower() == merchant_config.authentication_type.lower() and merchant_config.p12KeyFilePath):
+        elif (GlobalLabelParameters.JWT.lower() == merchant_config.authentication_type.lower() and 
+              merchant_config.p12KeyFilePath):
             certificate_identifier = GlobalLabelParameters.MLE_CACHE_IDENTIFIER_FOR_P12_CERT
             certificate_file_path = merchant_config.p12KeyFilePath
         # Priority #3: Get mlecert from default cert in SDK as per CAS or PROD env.
@@ -130,7 +132,7 @@ class FileCache:
 
         return cert_info.certificate if cert_info else None
 
-    def setup_mle_cache(self, merchant_config, cache_key, certificate_file_path):
+    def setup_mle_cache(self, merchant_config, cache_key, file_path):
         if FileCache.logger is None:
             FileCache.logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
         logger = FileCache.logger
@@ -138,14 +140,45 @@ class FileCache:
         mle_certificate = None
         private_key = None
 
+        # Handle Response MLE Private Key
+        if cache_key.endswith(GlobalLabelParameters.MLE_CACHE_KEY_IDENTIFIER_FOR_RESPONSE_PRIVATE_KEY):
+            try:
+                file_extension = os.path.splitext(file_path)[1].lower()
+                password = merchant_config.responseMlePrivateKeyFilePassword
+
+                if file_extension in ('.p12', '.pfx'):
+                    private_key, _certs = CertificateUtility.fetch_certificate_collection_from_p12_file(
+                        file_path,
+                        password
+                    )
+                elif file_extension in ('.pem', '.key', '.p8'):
+                    private_key = CertificateUtility.load_private_key_from_pem(
+                        file_path,
+                        password
+                    )
+                else:
+                    raise ValueError(f"Unsupported file format: {file_extension}")
+
+                cert_info = CertInfo(
+                    None,  # No certificate for standalone private key
+                    os.path.getmtime(file_path),
+                    private_key
+                )
+                with self._mle_cache_lock:
+                    self.mlecache[cache_key] = cert_info
+                return
+            except Exception as e:
+                logger.error("Error loading Response MLE private key")
+                raise ValueError(f"Error loading Response MLE private key: {e}")
+
         # Handle PEM certificate case
         if cache_key.endswith(GlobalLabelParameters.MLE_CACHE_IDENTIFIER_FOR_CONFIG_CERT):
-            certificates = CertificateUtility.load_certificates_from_pem_file(certificate_file_path)
+            certificates = CertificateUtility.load_certificates_from_pem_file(file_path)
             try:
                 mle_certificate = CertificateUtility.get_cert_based_on_key_alias(certificates, merchant_config.requestMleKeyAlias)
             except Exception:
                 if mle_certificate is None:
-                    file_name = os.path.basename(certificate_file_path)
+                    file_name = os.path.basename(file_path)
                     logger.warning(f"No certificate found for the specified mle_key_alias '{merchant_config.requestMleKeyAlias}'. Using the first certificate from file {file_name} as the MLE request certificate.")
                     mle_certificate = certificates[0]  # Take first certificate
 
@@ -162,8 +195,40 @@ class FileCache:
         # Save to cache (thread-safe)
         cert_info = CertInfo(
             mle_certificate,
-            os.path.getmtime(certificate_file_path),
+            os.path.getmtime(file_path),
             private_key
         )
         with self._mle_cache_lock:
             self.mlecache[cache_key] = cert_info
+
+    def get_mle_response_private_key(self, merchant_config):
+        """
+        Gets the private key for Response MLE decryption.
+        
+        :param merchant_config: Merchant configuration object
+        :return: Private key object for decryption
+        :raises ValueError: If the private key cannot be obtained
+        """
+        merchant_id = merchant_config.merchant_id
+        identifier = GlobalLabelParameters.MLE_CACHE_KEY_IDENTIFIER_FOR_RESPONSE_PRIVATE_KEY
+        cache_key = f"{merchant_id}_{identifier}"
+        file_path = merchant_config.responseMlePrivateKeyFilePath
+        
+        if not file_path:
+            raise ValueError("Response MLE private key file path not provided")
+        
+        # Check if key exists in cache
+        cert_info = self.mlecache.get(cache_key)
+        try:
+                file_timestamp = os.path.getmtime(file_path)
+            # If not in cache or file was modified, load it
+                if cert_info is None or cert_info.timestamp != file_timestamp:
+                    self.setup_mle_cache(merchant_config, cache_key, file_path)
+                    cert_info = self.mlecache.get(cache_key)
+                
+                return cert_info.private_key if cert_info else None
+        except Exception as e:
+            if FileCache.logger:
+                FileCache.logger.error(f"Error getting Response MLE private key")
+            raise ValueError(f"Error getting Response MLE private key: {str(e)}")
+        

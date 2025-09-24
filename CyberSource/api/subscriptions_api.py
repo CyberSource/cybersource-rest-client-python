@@ -157,6 +157,8 @@ class SubscriptionsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "activate_subscription,activate_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "activate_subscription,activate_subscription_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -173,7 +175,8 @@ class SubscriptionsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def cancel_subscription(self, id, **kwargs):
         """
@@ -280,6 +283,8 @@ class SubscriptionsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "cancel_subscription,cancel_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "cancel_subscription,cancel_subscription_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -296,7 +301,8 @@ class SubscriptionsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def create_subscription(self, create_subscription_request, **kwargs):
         """
@@ -399,6 +405,8 @@ class SubscriptionsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_subscription,create_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_subscription,create_subscription_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -415,7 +423,8 @@ class SubscriptionsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def get_all_subscriptions(self, **kwargs):
         """
@@ -528,6 +537,8 @@ class SubscriptionsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_all_subscriptions,get_all_subscriptions_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_all_subscriptions,get_all_subscriptions_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -544,7 +555,8 @@ class SubscriptionsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def get_subscription(self, id, **kwargs):
         """
@@ -651,6 +663,8 @@ class SubscriptionsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_subscription,get_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_subscription,get_subscription_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -667,7 +681,8 @@ class SubscriptionsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def get_subscription_code(self, **kwargs):
         """
@@ -763,6 +778,8 @@ class SubscriptionsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_subscription_code,get_subscription_code_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_subscription_code,get_subscription_code_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -779,7 +796,8 @@ class SubscriptionsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def suspend_subscription(self, id, **kwargs):
         """
@@ -886,6 +904,8 @@ class SubscriptionsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "suspend_subscription,suspend_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "suspend_subscription,suspend_subscription_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -902,7 +922,8 @@ class SubscriptionsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def update_subscription(self, id, update_subscription, **kwargs):
         """
@@ -1015,6 +1036,8 @@ class SubscriptionsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "update_subscription,update_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "update_subscription,update_subscription_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -1031,4 +1054,5 @@ class SubscriptionsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)

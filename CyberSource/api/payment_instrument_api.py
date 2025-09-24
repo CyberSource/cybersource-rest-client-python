@@ -157,6 +157,8 @@ class PaymentInstrumentApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "delete_payment_instrument,delete_payment_instrument_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "delete_payment_instrument,delete_payment_instrument_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -173,7 +175,8 @@ class PaymentInstrumentApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def get_payment_instrument(self, payment_instrument_id, **kwargs):
         """
@@ -288,6 +291,8 @@ class PaymentInstrumentApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_payment_instrument,get_payment_instrument_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_payment_instrument,get_payment_instrument_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -304,7 +309,8 @@ class PaymentInstrumentApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def patch_payment_instrument(self, payment_instrument_id, patch_payment_instrument_request, **kwargs):
         """
@@ -429,6 +435,8 @@ class PaymentInstrumentApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "patch_payment_instrument,patch_payment_instrument_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "patch_payment_instrument,patch_payment_instrument_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -445,7 +453,8 @@ class PaymentInstrumentApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def post_payment_instrument(self, post_payment_instrument_request, **kwargs):
         """
@@ -556,6 +565,8 @@ class PaymentInstrumentApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_payment_instrument,post_payment_instrument_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_payment_instrument,post_payment_instrument_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -572,4 +583,5 @@ class PaymentInstrumentApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
