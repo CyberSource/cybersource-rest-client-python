@@ -7,7 +7,7 @@ from cryptography.x509.oid import NameOID
 from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
 import CyberSource.logging.log_factory as LogFactory
 from CyberSource.logging.log_configuration import LogConfiguration
-from cryptography.hazmat.primitives.serialization import pkcs12
+from cryptography.hazmat.primitives.serialization import pkcs12, load_pem_private_key, load_der_private_key
 
 class CertificateUtility:
     logger = None
@@ -129,3 +129,23 @@ class CertificateUtility:
         if additional_certs is not None:
             certs.extend(additional_certs)
         return private_key, certs
+
+    @staticmethod
+    def load_private_key_from_pem(pem_file_path, password=None):
+        """
+        Load a private key from a PEM/PKCS#8 file (.pem/.key/.p8).
+        """
+        if not os.path.exists(pem_file_path):
+            raise ValueError(f"PEM private key file not found: {pem_file_path}")
+        with open(pem_file_path, "rb") as f:
+            data = f.read()
+        pwd_bytes = password.encode("utf-8") if password else None
+        try:
+            return load_pem_private_key(data, password=pwd_bytes, backend=default_backend())
+        except ValueError as ve:
+            msg = str(ve).lower()
+            if 'bad decrypt' in msg or 'incorrect password' in msg:
+                raise ValueError("Incorrect password for encrypted private key")
+            raise
+        except Exception:
+            raise ValueError(f"Failed to load private key from {pem_file_path}")

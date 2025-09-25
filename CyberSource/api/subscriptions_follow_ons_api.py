@@ -159,6 +159,8 @@ class SubscriptionsFollowOnsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_follow_on_subscription,create_follow_on_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_follow_on_subscription,create_follow_on_subscription_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -175,7 +177,8 @@ class SubscriptionsFollowOnsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def get_follow_on_subscription(self, request_id, **kwargs):
         """
@@ -282,6 +285,8 @@ class SubscriptionsFollowOnsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_follow_on_subscription,get_follow_on_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_follow_on_subscription,get_follow_on_subscription_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -298,4 +303,5 @@ class SubscriptionsFollowOnsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)

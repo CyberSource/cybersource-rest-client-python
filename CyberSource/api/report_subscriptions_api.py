@@ -153,6 +153,8 @@ class ReportSubscriptionsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_standard_or_classic_subscription,create_standard_or_classic_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_standard_or_classic_subscription,create_standard_or_classic_subscription_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -169,7 +171,8 @@ class ReportSubscriptionsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def create_subscription(self, create_report_subscription_request, **kwargs):
         """
@@ -276,6 +279,8 @@ class ReportSubscriptionsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_subscription,create_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_subscription,create_subscription_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -292,7 +297,8 @@ class ReportSubscriptionsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def delete_subscription(self, report_name, **kwargs):
         """
@@ -403,6 +409,8 @@ class ReportSubscriptionsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "delete_subscription,delete_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "delete_subscription,delete_subscription_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -419,7 +427,8 @@ class ReportSubscriptionsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def get_all_subscriptions(self, **kwargs):
         """
@@ -520,6 +529,8 @@ class ReportSubscriptionsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_all_subscriptions,get_all_subscriptions_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_all_subscriptions,get_all_subscriptions_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -536,7 +547,8 @@ class ReportSubscriptionsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def get_subscription(self, report_name, **kwargs):
         """
@@ -647,6 +659,8 @@ class ReportSubscriptionsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_subscription,get_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_subscription,get_subscription_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -663,4 +677,5 @@ class ReportSubscriptionsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)

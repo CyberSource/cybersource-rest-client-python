@@ -159,6 +159,8 @@ class BillingAgreementsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "billing_agreements_de_registration,billing_agreements_de_registration_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "billing_agreements_de_registration,billing_agreements_de_registration_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -175,7 +177,8 @@ class BillingAgreementsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def billing_agreements_intimation(self, intimate_billing_agreement, id, **kwargs):
         """
@@ -288,6 +291,8 @@ class BillingAgreementsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "billing_agreements_intimation,billing_agreements_intimation_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "billing_agreements_intimation,billing_agreements_intimation_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -304,7 +309,8 @@ class BillingAgreementsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def billing_agreements_registration(self, create_billing_agreement, **kwargs):
         """
@@ -407,6 +413,8 @@ class BillingAgreementsApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "billing_agreements_registration,billing_agreements_registration_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "billing_agreements_registration,billing_agreements_registration_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -423,4 +431,5 @@ class BillingAgreementsApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
