@@ -319,8 +319,8 @@ class ApiClient(object):
                         if (hasattr(self, "logger") and
                             hasattr(self.mconfig, "log_config") and
                             self.mconfig.log_config.enable_log):
-                            self.logger.error("[MLE] Failed to decrypt response")
-                        raise ApiException(status=500, reason=f"MLE response decryption failed: {e}")
+                            self.logger.error("[MLE] Response decryption unsuccessful")
+                        raise ApiException(status=0, reason=f"Response decryption unsuccessful: {e}")
 
         if self.download_file_path is None:
             self.last_response = response_data

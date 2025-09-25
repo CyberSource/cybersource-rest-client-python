@@ -592,7 +592,7 @@ class MerchantConfiguration:
             try:
                 CertificateUtility.validate_path_and_file(self.mleForRequestPublicCertPath, "mleForRequestPublicCertPath", self.log_config)
             except Exception as err:
-                self.logger.error(str(err))
+                self.logger.error("Error validating mleForRequestPublicCertPath.")
                 raise err
 
         # Validate Response MLE configuration
@@ -667,7 +667,7 @@ class MerchantConfiguration:
         #   A bare boolean True/False (or "true"/"false") only applies to request MLE.
 
     def validate_map_to_control_mle_on_api_values(self, map_to_control_mle_on_api):
-        """
+        """validate_map_to_control_mle_on_api_values
         Validates the map values for MLE control API configuration.
         Allowed formats (case‑insensitive):
           "true::true"   - request MLE true,  response MLE true
@@ -697,7 +697,7 @@ class MerchantConfiguration:
         """
         for key, value in map_to_control_mle_on_api.items():
             if value is None or (isinstance(value, str) and not value.strip()):
-                error_msg = f"Invalid MLE control map value for key '{key}'. Value cannot be null or empty."
+                error_msg = f"Invalid MLE control map value for key '{key}'. Value cannot be None or empty."
                 authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger, error_msg, self.log_config)
             
             value = str(value).strip().lower()

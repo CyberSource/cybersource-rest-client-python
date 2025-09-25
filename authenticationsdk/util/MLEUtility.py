@@ -5,7 +5,6 @@ import os
 from cryptography.hazmat.primitives import serialization
 from cryptography.x509.oid import NameOID
 from jwcrypto import jwe, jwk
-import json
 
 from authenticationsdk.util.Cache import FileCache
 from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
@@ -198,7 +197,6 @@ class MLEUtility:
         :return: JWE token string or None if extraction fails
         """
         try:
-            import json
             response_json = json.loads(mle_response_body)
             return response_json.get("encryptedResponse")
         except Exception as e:
