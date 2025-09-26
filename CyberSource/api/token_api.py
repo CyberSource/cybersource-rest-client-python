@@ -36,13 +36,10 @@ class TokenApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -70,8 +67,7 @@ class TokenApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_card_art_asset` STARTED")
+        self.logger.info("CALL TO METHOD `get_card_art_asset` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -119,18 +115,15 @@ class TokenApi(object):
         del params['kwargs']
         # verify the required parameter 'instrument_identifier_id' is set
         if ('instrument_identifier_id' not in params) or (params['instrument_identifier_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `get_card_art_asset`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `get_card_art_asset`")
             raise ValueError("Missing the required parameter `instrument_identifier_id` when calling `get_card_art_asset`")
         # verify the required parameter 'token_provider' is set
         if ('token_provider' not in params) or (params['token_provider'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `token_provider` when calling `get_card_art_asset`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `token_provider` when calling `get_card_art_asset`")
             raise ValueError("Missing the required parameter `token_provider` when calling `get_card_art_asset`")
         # verify the required parameter 'asset_type' is set
         if ('asset_type' not in params) or (params['asset_type'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `asset_type` when calling `get_card_art_asset`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `asset_type` when calling `get_card_art_asset`")
             raise ValueError("Missing the required parameter `asset_type` when calling `get_card_art_asset`")
 
 
@@ -213,8 +206,7 @@ class TokenApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `post_token_payment_credentials` STARTED")
+        self.logger.info("CALL TO METHOD `post_token_payment_credentials` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -262,13 +254,11 @@ class TokenApi(object):
         del params['kwargs']
         # verify the required parameter 'token_id' is set
         if ('token_id' not in params) or (params['token_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `token_id` when calling `post_token_payment_credentials`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `token_id` when calling `post_token_payment_credentials`")
             raise ValueError("Missing the required parameter `token_id` when calling `post_token_payment_credentials`")
         # verify the required parameter 'post_payment_credentials_request' is set
         if ('post_payment_credentials_request' not in params) or (params['post_payment_credentials_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `post_payment_credentials_request` when calling `post_token_payment_credentials`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `post_payment_credentials_request` when calling `post_token_payment_credentials`")
             raise ValueError("Missing the required parameter `post_payment_credentials_request` when calling `post_token_payment_credentials`")
 
 

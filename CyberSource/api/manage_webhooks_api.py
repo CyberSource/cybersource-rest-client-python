@@ -36,13 +36,10 @@ class ManageWebhooksApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -68,8 +65,7 @@ class ManageWebhooksApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `delete_webhook_subscription` STARTED")
+        self.logger.info("CALL TO METHOD `delete_webhook_subscription` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -115,8 +111,7 @@ class ManageWebhooksApi(object):
         del params['kwargs']
         # verify the required parameter 'webhook_id' is set
         if ('webhook_id' not in params) or (params['webhook_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `delete_webhook_subscription`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `delete_webhook_subscription`")
             raise ValueError("Missing the required parameter `webhook_id` when calling `delete_webhook_subscription`")
 
 
@@ -191,8 +186,7 @@ class ManageWebhooksApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_webhook_subscription_by_id` STARTED")
+        self.logger.info("CALL TO METHOD `get_webhook_subscription_by_id` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -238,8 +232,7 @@ class ManageWebhooksApi(object):
         del params['kwargs']
         # verify the required parameter 'webhook_id' is set
         if ('webhook_id' not in params) or (params['webhook_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `get_webhook_subscription_by_id`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `get_webhook_subscription_by_id`")
             raise ValueError("Missing the required parameter `webhook_id` when calling `get_webhook_subscription_by_id`")
 
 
@@ -316,8 +309,7 @@ class ManageWebhooksApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_webhook_subscriptions_by_org` STARTED")
+        self.logger.info("CALL TO METHOD `get_webhook_subscriptions_by_org` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -365,8 +357,7 @@ class ManageWebhooksApi(object):
         del params['kwargs']
         # verify the required parameter 'organization_id' is set
         if ('organization_id' not in params) or (params['organization_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `organization_id` when calling `get_webhook_subscriptions_by_org`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `organization_id` when calling `get_webhook_subscriptions_by_org`")
             raise ValueError("Missing the required parameter `organization_id` when calling `get_webhook_subscriptions_by_org`")
 
 
@@ -444,8 +435,7 @@ class ManageWebhooksApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `notification_subscriptions_v1_webhooks_webhook_id_post` STARTED")
+        self.logger.info("CALL TO METHOD `notification_subscriptions_v1_webhooks_webhook_id_post` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -491,8 +481,7 @@ class ManageWebhooksApi(object):
         del params['kwargs']
         # verify the required parameter 'webhook_id' is set
         if ('webhook_id' not in params) or (params['webhook_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `notification_subscriptions_v1_webhooks_webhook_id_post`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `notification_subscriptions_v1_webhooks_webhook_id_post`")
             raise ValueError("Missing the required parameter `webhook_id` when calling `notification_subscriptions_v1_webhooks_webhook_id_post`")
 
 
@@ -568,8 +557,7 @@ class ManageWebhooksApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `notification_subscriptions_v2_webhooks_webhook_id_patch` STARTED")
+        self.logger.info("CALL TO METHOD `notification_subscriptions_v2_webhooks_webhook_id_patch` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -616,8 +604,7 @@ class ManageWebhooksApi(object):
         del params['kwargs']
         # verify the required parameter 'webhook_id' is set
         if ('webhook_id' not in params) or (params['webhook_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `notification_subscriptions_v2_webhooks_webhook_id_patch`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `notification_subscriptions_v2_webhooks_webhook_id_patch`")
             raise ValueError("Missing the required parameter `webhook_id` when calling `notification_subscriptions_v2_webhooks_webhook_id_patch`")
 
 
@@ -692,8 +679,7 @@ class ManageWebhooksApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `notification_subscriptions_v2_webhooks_webhook_id_status_put` STARTED")
+        self.logger.info("CALL TO METHOD `notification_subscriptions_v2_webhooks_webhook_id_status_put` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -740,8 +726,7 @@ class ManageWebhooksApi(object):
         del params['kwargs']
         # verify the required parameter 'webhook_id' is set
         if ('webhook_id' not in params) or (params['webhook_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `notification_subscriptions_v2_webhooks_webhook_id_status_put`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `notification_subscriptions_v2_webhooks_webhook_id_status_put`")
             raise ValueError("Missing the required parameter `webhook_id` when calling `notification_subscriptions_v2_webhooks_webhook_id_status_put`")
 
 
@@ -818,8 +803,7 @@ class ManageWebhooksApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `save_asym_egress_key` STARTED")
+        self.logger.info("CALL TO METHOD `save_asym_egress_key` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -868,18 +852,15 @@ class ManageWebhooksApi(object):
         del params['kwargs']
         # verify the required parameter 'v_c_sender_organization_id' is set
         if ('v_c_sender_organization_id' not in params) or (params['v_c_sender_organization_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_sender_organization_id` when calling `save_asym_egress_key`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_sender_organization_id` when calling `save_asym_egress_key`")
             raise ValueError("Missing the required parameter `v_c_sender_organization_id` when calling `save_asym_egress_key`")
         # verify the required parameter 'v_c_permissions' is set
         if ('v_c_permissions' not in params) or (params['v_c_permissions'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_permissions` when calling `save_asym_egress_key`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_permissions` when calling `save_asym_egress_key`")
             raise ValueError("Missing the required parameter `v_c_permissions` when calling `save_asym_egress_key`")
         # verify the required parameter 'save_asym_egress_key' is set
         if ('save_asym_egress_key' not in params) or (params['save_asym_egress_key'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `save_asym_egress_key` when calling `save_asym_egress_key`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `save_asym_egress_key` when calling `save_asym_egress_key`")
             raise ValueError("Missing the required parameter `save_asym_egress_key` when calling `save_asym_egress_key`")
 
 

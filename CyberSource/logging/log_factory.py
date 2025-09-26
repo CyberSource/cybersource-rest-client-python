@@ -5,16 +5,19 @@ from logging.handlers import RotatingFileHandler
 from .log_configuration import LogConfiguration
 from .sensitive_formatter import SensitiveFormatter
 
-
 def setup_logger(className, log_config = None):
     if log_config is None:
         log_config = LogConfiguration()
-    if log_config.enable_log is True:
-        # create logger
-        logger = logging.getLogger(className)
-        log_level = log_config.log_level.upper()
-        logger.setLevel(log_level)
 
+    # create logger
+    logger = logging.getLogger(className)
+    log_level = log_config.log_level.upper()
+    logger.setLevel(log_level)
+
+    if logger.hasHandlers():
+        logger.handlers.clear()
+
+    if log_config.enable_log is True:
         log_folder = log_config.log_directory
         log_file_name = log_config.log_file_name
 
@@ -38,4 +41,4 @@ def setup_logger(className, log_config = None):
         # add ch to logger
         logger.addHandler(handler)
 
-        return logger
+    return logger

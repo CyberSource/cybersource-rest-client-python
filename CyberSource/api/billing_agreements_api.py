@@ -36,13 +36,10 @@ class BillingAgreementsApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -69,8 +66,7 @@ class BillingAgreementsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `billing_agreements_de_registration` STARTED")
+        self.logger.info("CALL TO METHOD `billing_agreements_de_registration` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -117,13 +113,11 @@ class BillingAgreementsApi(object):
         del params['kwargs']
         # verify the required parameter 'modify_billing_agreement' is set
         if ('modify_billing_agreement' not in params) or (params['modify_billing_agreement'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `modify_billing_agreement` when calling `billing_agreements_de_registration`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `modify_billing_agreement` when calling `billing_agreements_de_registration`")
             raise ValueError("Missing the required parameter `modify_billing_agreement` when calling `billing_agreements_de_registration`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `billing_agreements_de_registration`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `billing_agreements_de_registration`")
             raise ValueError("Missing the required parameter `id` when calling `billing_agreements_de_registration`")
 
 
@@ -198,8 +192,7 @@ class BillingAgreementsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `billing_agreements_intimation` STARTED")
+        self.logger.info("CALL TO METHOD `billing_agreements_intimation` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -246,13 +239,11 @@ class BillingAgreementsApi(object):
         del params['kwargs']
         # verify the required parameter 'intimate_billing_agreement' is set
         if ('intimate_billing_agreement' not in params) or (params['intimate_billing_agreement'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `intimate_billing_agreement` when calling `billing_agreements_intimation`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `intimate_billing_agreement` when calling `billing_agreements_intimation`")
             raise ValueError("Missing the required parameter `intimate_billing_agreement` when calling `billing_agreements_intimation`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `billing_agreements_intimation`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `billing_agreements_intimation`")
             raise ValueError("Missing the required parameter `id` when calling `billing_agreements_intimation`")
 
 
@@ -326,8 +317,7 @@ class BillingAgreementsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `billing_agreements_registration` STARTED")
+        self.logger.info("CALL TO METHOD `billing_agreements_registration` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -373,8 +363,7 @@ class BillingAgreementsApi(object):
         del params['kwargs']
         # verify the required parameter 'create_billing_agreement' is set
         if ('create_billing_agreement' not in params) or (params['create_billing_agreement'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `create_billing_agreement` when calling `billing_agreements_registration`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `create_billing_agreement` when calling `billing_agreements_registration`")
             raise ValueError("Missing the required parameter `create_billing_agreement` when calling `billing_agreements_registration`")
 
 

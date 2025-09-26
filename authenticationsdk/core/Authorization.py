@@ -27,20 +27,19 @@ class Authorization:
                 http_sig_token.http_signature_token(mconfig, date_time, request_type_method, request_target, request_json_path_data)
                 sig_token = http_sig_token.get_token()
                 # Logging the parameters Content-Type,Merchant id,Date ,Host to the log file
-                if mconfig.log_config.enable_log is True:
-                    self.logger.info("Using Request Target:   " + request_target)
-                    self.logger.info("Authentication Type:   " + mconfig.authentication_type)
-                    self.logger.info("Request-Type:      " + request_type_method)
-                    self.logger.info(GlobalLabelParameters.CONTENT_TYPE + ":   " + GlobalLabelParameters.APPLICATION_JSON)
-                    self.logger.info(GlobalLabelParameters.MERCHANT_ID + ":   " + str(mconfig.merchant_id))
-                    self.logger.info(GlobalLabelParameters.DATE + ":   " + date_time)
-                    self.logger.info(GlobalLabelParameters.HOST + ":   " + mconfig.request_host)
-                    # Logging the Digest when Request_type_method is Post
-                    if request_type_method.upper() == GlobalLabelParameters.POST or request_type_method.upper() == GlobalLabelParameters.PUT:
-                        digest_obj = DigestAndPayload()
-                        encoded_digest = digest_obj.string_digest_generation(request_json_path_data)
-                        # self.logger.info(GlobalLabelParameters.DIGEST + ":" + GlobalLabelParameters.DIGEST_PREFIX + (encoded_digest).decode("utf-8"))
-                    # self.logger.info("Signature:     " + sig_token)
+                self.logger.info("Using Request Target:   " + request_target)
+                self.logger.info("Authentication Type:   " + mconfig.authentication_type)
+                self.logger.info("Request-Type:      " + request_type_method)
+                self.logger.info(GlobalLabelParameters.CONTENT_TYPE + ":   " + GlobalLabelParameters.APPLICATION_JSON)
+                self.logger.info(GlobalLabelParameters.MERCHANT_ID + ":   " + str(mconfig.merchant_id))
+                self.logger.info(GlobalLabelParameters.DATE + ":   " + date_time)
+                self.logger.info(GlobalLabelParameters.HOST + ":   " + mconfig.request_host)
+                # Logging the Digest when Request_type_method is Post
+                if request_type_method.upper() == GlobalLabelParameters.POST or request_type_method.upper() == GlobalLabelParameters.PUT:
+                    digest_obj = DigestAndPayload()
+                    encoded_digest = digest_obj.string_digest_generation(request_json_path_data)
+                    # self.logger.info(GlobalLabelParameters.DIGEST + ":" + GlobalLabelParameters.DIGEST_PREFIX + (encoded_digest).decode("utf-8"))
+                # self.logger.info("Signature:     " + sig_token)
 
                 return sig_token
             # JWT-Call
@@ -50,16 +49,15 @@ class Authorization:
                 sig_token_jwt = jwt_sig_token.get_token()
 
                 # Logging the parameters Content-Type,Merchant id,Date ,Host to the log file
-                if mconfig.log_config.enable_log is True:
-                    self.logger.info("Using Request Target:   " + request_target)
-                    self.logger.info("Authentication Type:   " + mconfig.authentication_type)
-                    self.logger.info("Request-Type:      " + request_type_method)
-                    self.logger.info(GlobalLabelParameters.CONTENT_TYPE + ":   " + GlobalLabelParameters.APPLICATION_JSON)
-                    self.logger.info(GlobalLabelParameters.MERCHANT_ID + ":   " + str(mconfig.merchant_id))
-                    self.logger.info(GlobalLabelParameters.DATE + ":   " + date_time)
-                    self.logger.info(GlobalLabelParameters.HOST + ":   " + mconfig.request_host)
-                    # Logging the Digest when Request_type_method is Post
-                    # self.logger.info("Authorization Bearer:     " + sig_token_jwt.encode("utf-8").decode("utf-8"))
+                self.logger.info("Using Request Target:   " + request_target)
+                self.logger.info("Authentication Type:   " + mconfig.authentication_type)
+                self.logger.info("Request-Type:      " + request_type_method)
+                self.logger.info(GlobalLabelParameters.CONTENT_TYPE + ":   " + GlobalLabelParameters.APPLICATION_JSON)
+                self.logger.info(GlobalLabelParameters.MERCHANT_ID + ":   " + str(mconfig.merchant_id))
+                self.logger.info(GlobalLabelParameters.DATE + ":   " + date_time)
+                self.logger.info(GlobalLabelParameters.HOST + ":   " + mconfig.request_host)
+                # Logging the Digest when Request_type_method is Post
+                # self.logger.info("Authorization Bearer:     " + sig_token_jwt.encode("utf-8").decode("utf-8"))
                 return sig_token_jwt
             elif authentication_type.upper() == GlobalLabelParameters.OAUTH.upper():
                 token = OAuthToken()

@@ -36,13 +36,10 @@ class PaymentTokensApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -68,8 +65,7 @@ class PaymentTokensApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `retrieve_or_delete_payment_token` STARTED")
+        self.logger.info("CALL TO METHOD `retrieve_or_delete_payment_token` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -115,8 +111,7 @@ class PaymentTokensApi(object):
         del params['kwargs']
         # verify the required parameter 'request' is set
         if ('request' not in params) or (params['request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `request` when calling `retrieve_or_delete_payment_token`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `request` when calling `retrieve_or_delete_payment_token`")
             raise ValueError("Missing the required parameter `request` when calling `retrieve_or_delete_payment_token`")
 
 

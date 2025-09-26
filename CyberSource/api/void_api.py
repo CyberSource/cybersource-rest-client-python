@@ -36,13 +36,10 @@ class VoidApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -68,8 +65,7 @@ class VoidApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `mit_void` STARTED")
+        self.logger.info("CALL TO METHOD `mit_void` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -115,8 +111,7 @@ class VoidApi(object):
         del params['kwargs']
         # verify the required parameter 'mit_void_request' is set
         if ('mit_void_request' not in params) or (params['mit_void_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `mit_void_request` when calling `mit_void`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `mit_void_request` when calling `mit_void`")
             raise ValueError("Missing the required parameter `mit_void_request` when calling `mit_void`")
 
 
@@ -188,8 +183,7 @@ class VoidApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `void_capture` STARTED")
+        self.logger.info("CALL TO METHOD `void_capture` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -236,13 +230,11 @@ class VoidApi(object):
         del params['kwargs']
         # verify the required parameter 'void_capture_request' is set
         if ('void_capture_request' not in params) or (params['void_capture_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `void_capture_request` when calling `void_capture`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `void_capture_request` when calling `void_capture`")
             raise ValueError("Missing the required parameter `void_capture_request` when calling `void_capture`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_capture`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_capture`")
             raise ValueError("Missing the required parameter `id` when calling `void_capture`")
 
 
@@ -317,8 +309,7 @@ class VoidApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `void_credit` STARTED")
+        self.logger.info("CALL TO METHOD `void_credit` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -365,13 +356,11 @@ class VoidApi(object):
         del params['kwargs']
         # verify the required parameter 'void_credit_request' is set
         if ('void_credit_request' not in params) or (params['void_credit_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `void_credit_request` when calling `void_credit`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `void_credit_request` when calling `void_credit`")
             raise ValueError("Missing the required parameter `void_credit_request` when calling `void_credit`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_credit`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_credit`")
             raise ValueError("Missing the required parameter `id` when calling `void_credit`")
 
 
@@ -446,8 +435,7 @@ class VoidApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `void_payment` STARTED")
+        self.logger.info("CALL TO METHOD `void_payment` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -494,13 +482,11 @@ class VoidApi(object):
         del params['kwargs']
         # verify the required parameter 'void_payment_request' is set
         if ('void_payment_request' not in params) or (params['void_payment_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `void_payment_request` when calling `void_payment`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `void_payment_request` when calling `void_payment`")
             raise ValueError("Missing the required parameter `void_payment_request` when calling `void_payment`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_payment`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_payment`")
             raise ValueError("Missing the required parameter `id` when calling `void_payment`")
 
 
@@ -575,8 +561,7 @@ class VoidApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `void_refund` STARTED")
+        self.logger.info("CALL TO METHOD `void_refund` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -623,13 +608,11 @@ class VoidApi(object):
         del params['kwargs']
         # verify the required parameter 'void_refund_request' is set
         if ('void_refund_request' not in params) or (params['void_refund_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `void_refund_request` when calling `void_refund`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `void_refund_request` when calling `void_refund`")
             raise ValueError("Missing the required parameter `void_refund_request` when calling `void_refund`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_refund`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_refund`")
             raise ValueError("Missing the required parameter `id` when calling `void_refund`")
 
 

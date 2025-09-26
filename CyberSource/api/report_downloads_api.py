@@ -36,13 +36,10 @@ class ReportDownloadsApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -70,8 +67,7 @@ class ReportDownloadsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `download_report` STARTED")
+        self.logger.info("CALL TO METHOD `download_report` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -119,13 +115,11 @@ class ReportDownloadsApi(object):
         del params['kwargs']
         # verify the required parameter 'report_date' is set
         if ('report_date' not in params) or (params['report_date'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `report_date` when calling `download_report`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `report_date` when calling `download_report`")
             raise ValueError("Missing the required parameter `report_date` when calling `download_report`")
         # verify the required parameter 'report_name' is set
         if ('report_name' not in params) or (params['report_name'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `report_name` when calling `download_report`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `report_name` when calling `download_report`")
             raise ValueError("Missing the required parameter `report_name` when calling `download_report`")
 
 

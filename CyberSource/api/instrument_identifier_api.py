@@ -36,13 +36,10 @@ class InstrumentIdentifierApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -69,8 +66,7 @@ class InstrumentIdentifierApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `delete_instrument_identifier` STARTED")
+        self.logger.info("CALL TO METHOD `delete_instrument_identifier` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -117,8 +113,7 @@ class InstrumentIdentifierApi(object):
         del params['kwargs']
         # verify the required parameter 'instrument_identifier_id' is set
         if ('instrument_identifier_id' not in params) or (params['instrument_identifier_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `delete_instrument_identifier`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `delete_instrument_identifier`")
             raise ValueError("Missing the required parameter `instrument_identifier_id` when calling `delete_instrument_identifier`")
 
 
@@ -197,8 +192,7 @@ class InstrumentIdentifierApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_instrument_identifier` STARTED")
+        self.logger.info("CALL TO METHOD `get_instrument_identifier` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -246,8 +240,7 @@ class InstrumentIdentifierApi(object):
         del params['kwargs']
         # verify the required parameter 'instrument_identifier_id' is set
         if ('instrument_identifier_id' not in params) or (params['instrument_identifier_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `get_instrument_identifier`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `get_instrument_identifier`")
             raise ValueError("Missing the required parameter `instrument_identifier_id` when calling `get_instrument_identifier`")
 
 
@@ -330,8 +323,7 @@ class InstrumentIdentifierApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_instrument_identifier_payment_instruments_list` STARTED")
+        self.logger.info("CALL TO METHOD `get_instrument_identifier_payment_instruments_list` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -381,8 +373,7 @@ class InstrumentIdentifierApi(object):
         del params['kwargs']
         # verify the required parameter 'instrument_identifier_id' is set
         if ('instrument_identifier_id' not in params) or (params['instrument_identifier_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `get_instrument_identifier_payment_instruments_list`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `get_instrument_identifier_payment_instruments_list`")
             raise ValueError("Missing the required parameter `instrument_identifier_id` when calling `get_instrument_identifier_payment_instruments_list`")
 
 
@@ -469,8 +460,7 @@ class InstrumentIdentifierApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `patch_instrument_identifier` STARTED")
+        self.logger.info("CALL TO METHOD `patch_instrument_identifier` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -520,13 +510,11 @@ class InstrumentIdentifierApi(object):
         del params['kwargs']
         # verify the required parameter 'instrument_identifier_id' is set
         if ('instrument_identifier_id' not in params) or (params['instrument_identifier_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `patch_instrument_identifier`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `patch_instrument_identifier`")
             raise ValueError("Missing the required parameter `instrument_identifier_id` when calling `patch_instrument_identifier`")
         # verify the required parameter 'patch_instrument_identifier_request' is set
         if ('patch_instrument_identifier_request' not in params) or (params['patch_instrument_identifier_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `patch_instrument_identifier_request` when calling `patch_instrument_identifier`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `patch_instrument_identifier_request` when calling `patch_instrument_identifier`")
             raise ValueError("Missing the required parameter `patch_instrument_identifier_request` when calling `patch_instrument_identifier`")
 
 
@@ -608,8 +596,7 @@ class InstrumentIdentifierApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `post_instrument_identifier` STARTED")
+        self.logger.info("CALL TO METHOD `post_instrument_identifier` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -657,8 +644,7 @@ class InstrumentIdentifierApi(object):
         del params['kwargs']
         # verify the required parameter 'post_instrument_identifier_request' is set
         if ('post_instrument_identifier_request' not in params) or (params['post_instrument_identifier_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `post_instrument_identifier_request` when calling `post_instrument_identifier`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `post_instrument_identifier_request` when calling `post_instrument_identifier`")
             raise ValueError("Missing the required parameter `post_instrument_identifier_request` when calling `post_instrument_identifier`")
 
 
@@ -735,8 +721,7 @@ class InstrumentIdentifierApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `post_instrument_identifier_enrollment` STARTED")
+        self.logger.info("CALL TO METHOD `post_instrument_identifier_enrollment` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -784,13 +769,11 @@ class InstrumentIdentifierApi(object):
         del params['kwargs']
         # verify the required parameter 'instrument_identifier_id' is set
         if ('instrument_identifier_id' not in params) or (params['instrument_identifier_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `post_instrument_identifier_enrollment`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `post_instrument_identifier_enrollment`")
             raise ValueError("Missing the required parameter `instrument_identifier_id` when calling `post_instrument_identifier_enrollment`")
         # verify the required parameter 'post_instrument_identifier_enrollment_request' is set
         if ('post_instrument_identifier_enrollment_request' not in params) or (params['post_instrument_identifier_enrollment_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `post_instrument_identifier_enrollment_request` when calling `post_instrument_identifier_enrollment`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `post_instrument_identifier_enrollment_request` when calling `post_instrument_identifier_enrollment`")
             raise ValueError("Missing the required parameter `post_instrument_identifier_enrollment_request` when calling `post_instrument_identifier_enrollment`")
 
 

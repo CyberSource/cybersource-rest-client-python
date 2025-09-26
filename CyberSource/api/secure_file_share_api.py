@@ -36,13 +36,10 @@ class SecureFileShareApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -69,8 +66,7 @@ class SecureFileShareApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_file` STARTED")
+        self.logger.info("CALL TO METHOD `get_file` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -117,8 +113,7 @@ class SecureFileShareApi(object):
         del params['kwargs']
         # verify the required parameter 'file_id' is set
         if ('file_id' not in params) or (params['file_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `file_id` when calling `get_file`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `file_id` when calling `get_file`")
             raise ValueError("Missing the required parameter `file_id` when calling `get_file`")
 
 
@@ -198,8 +193,7 @@ class SecureFileShareApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_file_detail` STARTED")
+        self.logger.info("CALL TO METHOD `get_file_detail` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -248,13 +242,11 @@ class SecureFileShareApi(object):
         del params['kwargs']
         # verify the required parameter 'start_date' is set
         if ('start_date' not in params) or (params['start_date'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `start_date` when calling `get_file_detail`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `start_date` when calling `get_file_detail`")
             raise ValueError("Missing the required parameter `start_date` when calling `get_file_detail`")
         # verify the required parameter 'end_date' is set
         if ('end_date' not in params) or (params['end_date'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `end_date` when calling `get_file_detail`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `end_date` when calling `get_file_detail`")
             raise ValueError("Missing the required parameter `end_date` when calling `get_file_detail`")
 
 
