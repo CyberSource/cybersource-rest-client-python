@@ -38,6 +38,7 @@ class InvoicingV2InvoicesGet200Response(object):
         'processing_information': 'Invoicingv2invoicesProcessingInformation',
         'invoice_information': 'InvoicingV2InvoicesPost201ResponseInvoiceInformation',
         'order_information': 'InvoicingV2InvoicesPost201ResponseOrderInformation',
+        'merchant_defined_field_values_with_definition': 'list[InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition]',
         'invoice_history': 'list[InvoicingV2InvoicesGet200ResponseInvoiceHistory]'
     }
 
@@ -50,10 +51,11 @@ class InvoicingV2InvoicesGet200Response(object):
         'processing_information': 'processingInformation',
         'invoice_information': 'invoiceInformation',
         'order_information': 'orderInformation',
+        'merchant_defined_field_values_with_definition': 'merchantDefinedFieldValuesWithDefinition',
         'invoice_history': 'invoiceHistory'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, customer_information=None, processing_information=None, invoice_information=None, order_information=None, invoice_history=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, customer_information=None, processing_information=None, invoice_information=None, order_information=None, merchant_defined_field_values_with_definition=None, invoice_history=None):
         """
         InvoicingV2InvoicesGet200Response - a model defined in Swagger
         """
@@ -66,6 +68,7 @@ class InvoicingV2InvoicesGet200Response(object):
         self._processing_information = None
         self._invoice_information = None
         self._order_information = None
+        self._merchant_defined_field_values_with_definition = None
         self._invoice_history = None
 
         if links is not None:
@@ -84,6 +87,8 @@ class InvoicingV2InvoicesGet200Response(object):
           self.invoice_information = invoice_information
         if order_information is not None:
           self.order_information = order_information
+        if merchant_defined_field_values_with_definition is not None:
+          self.merchant_defined_field_values_with_definition = merchant_defined_field_values_with_definition
         if invoice_history is not None:
           self.invoice_history = invoice_history
 
@@ -260,6 +265,27 @@ class InvoicingV2InvoicesGet200Response(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def merchant_defined_field_values_with_definition(self):
+        """
+        Gets the merchant_defined_field_values_with_definition of this InvoicingV2InvoicesGet200Response.
+
+        :return: The merchant_defined_field_values_with_definition of this InvoicingV2InvoicesGet200Response.
+        :rtype: list[InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition]
+        """
+        return self._merchant_defined_field_values_with_definition
+
+    @merchant_defined_field_values_with_definition.setter
+    def merchant_defined_field_values_with_definition(self, merchant_defined_field_values_with_definition):
+        """
+        Sets the merchant_defined_field_values_with_definition of this InvoicingV2InvoicesGet200Response.
+
+        :param merchant_defined_field_values_with_definition: The merchant_defined_field_values_with_definition of this InvoicingV2InvoicesGet200Response.
+        :type: list[InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition]
+        """
+
+        self._merchant_defined_field_values_with_definition = merchant_defined_field_values_with_definition
 
     @property
     def invoice_history(self):

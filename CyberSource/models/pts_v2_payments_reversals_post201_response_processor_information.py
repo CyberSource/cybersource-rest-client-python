@@ -38,7 +38,8 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         'master_card_service_code': 'str',
         'master_card_service_reply_code': 'str',
         'response_details': 'str',
-        'provider_response': 'str'
+        'provider_response': 'str',
+        'network': 'Ptsv2paymentsProcessorInformationReversalNetwork'
     }
 
     attribute_map = {
@@ -50,10 +51,11 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         'master_card_service_code': 'masterCardServiceCode',
         'master_card_service_reply_code': 'masterCardServiceReplyCode',
         'response_details': 'responseDetails',
-        'provider_response': 'providerResponse'
+        'provider_response': 'providerResponse',
+        'network': 'network'
     }
 
-    def __init__(self, transaction_id=None, response_code=None, network_transaction_id=None, response_category_code=None, forwarded_acquirer_code=None, master_card_service_code=None, master_card_service_reply_code=None, response_details=None, provider_response=None):
+    def __init__(self, transaction_id=None, response_code=None, network_transaction_id=None, response_category_code=None, forwarded_acquirer_code=None, master_card_service_code=None, master_card_service_reply_code=None, response_details=None, provider_response=None, network=None):
         """
         PtsV2PaymentsReversalsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -67,6 +69,7 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         self._master_card_service_reply_code = None
         self._response_details = None
         self._provider_response = None
+        self._network = None
 
         if transaction_id is not None:
           self.transaction_id = transaction_id
@@ -86,6 +89,8 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
           self.response_details = response_details
         if provider_response is not None:
           self.provider_response = provider_response
+        if network is not None:
+          self.network = network
 
     @property
     def transaction_id(self):
@@ -252,7 +257,7 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
     def response_details(self):
         """
         Gets the response_details of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
-        This field might contain information about a decline. This field is supported only for **CyberSource through VisaNet**. 
+        This field might contain information about a decline. 
 
         :return: The response_details of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :rtype: str
@@ -263,7 +268,7 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
     def response_details(self, response_details):
         """
         Sets the response_details of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
-        This field might contain information about a decline. This field is supported only for **CyberSource through VisaNet**. 
+        This field might contain information about a decline. 
 
         :param response_details: The response_details of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
@@ -293,6 +298,27 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         """
 
         self._provider_response = provider_response
+
+    @property
+    def network(self):
+        """
+        Gets the network of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+
+        :return: The network of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        :rtype: Ptsv2paymentsProcessorInformationReversalNetwork
+        """
+        return self._network
+
+    @network.setter
+    def network(self, network):
+        """
+        Sets the network of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+
+        :param network: The network of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        :type: Ptsv2paymentsProcessorInformationReversalNetwork
+        """
+
+        self._network = network
 
     def to_dict(self):
         """

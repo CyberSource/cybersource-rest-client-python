@@ -30,7 +30,7 @@ class RiskProductsDecisionManager(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'subscription_information': 'PaymentsProductsAlternativePaymentMethodsSubscriptionInformation',
+        'subscription_information': 'PaymentsProductsPayerAuthenticationSubscriptionInformation',
         'configuration_information': 'RiskProductsDecisionManagerConfigurationInformation'
     }
 
@@ -58,7 +58,7 @@ class RiskProductsDecisionManager(object):
         Gets the subscription_information of this RiskProductsDecisionManager.
 
         :return: The subscription_information of this RiskProductsDecisionManager.
-        :rtype: PaymentsProductsAlternativePaymentMethodsSubscriptionInformation
+        :rtype: PaymentsProductsPayerAuthenticationSubscriptionInformation
         """
         return self._subscription_information
 
@@ -68,7 +68,7 @@ class RiskProductsDecisionManager(object):
         Sets the subscription_information of this RiskProductsDecisionManager.
 
         :param subscription_information: The subscription_information of this RiskProductsDecisionManager.
-        :type: PaymentsProductsAlternativePaymentMethodsSubscriptionInformation
+        :type: PaymentsProductsPayerAuthenticationSubscriptionInformation
         """
 
         self._subscription_information = subscription_information

@@ -33,7 +33,7 @@ class Ptsv2intentsPaymentInformationTokenizedPaymentMethod(object):
         'description': 'str',
         'usage_pattern': 'str',
         'usage_type': 'str',
-        'allow_multiple_tokens': 'bool'
+        'allow_multiple_tokens': 'str'
     }
 
     attribute_map = {
@@ -138,7 +138,7 @@ class Ptsv2intentsPaymentInformationTokenizedPaymentMethod(object):
         Create multiple payment tokens for the same payer, merchant/platform combination. This helps to identify customers distinctly even though they may share the same PayPal account. 
 
         :return: The allow_multiple_tokens of this Ptsv2intentsPaymentInformationTokenizedPaymentMethod.
-        :rtype: bool
+        :rtype: str
         """
         return self._allow_multiple_tokens
 
@@ -149,7 +149,7 @@ class Ptsv2intentsPaymentInformationTokenizedPaymentMethod(object):
         Create multiple payment tokens for the same payer, merchant/platform combination. This helps to identify customers distinctly even though they may share the same PayPal account. 
 
         :param allow_multiple_tokens: The allow_multiple_tokens of this Ptsv2intentsPaymentInformationTokenizedPaymentMethod.
-        :type: bool
+        :type: str
         """
 
         self._allow_multiple_tokens = allow_multiple_tokens

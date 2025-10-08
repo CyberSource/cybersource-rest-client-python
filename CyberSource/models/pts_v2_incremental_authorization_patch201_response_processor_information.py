@@ -38,7 +38,8 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         'response_details': 'str',
         'merchant_advice': 'PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice',
         'merchant_risk_prediction': 'str',
-        'seller_protection': 'PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection'
+        'seller_protection': 'PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection',
+        'network': 'Ptsv2paymentsProcessorInformationReversalNetwork'
     }
 
     attribute_map = {
@@ -50,10 +51,11 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         'response_details': 'responseDetails',
         'merchant_advice': 'merchantAdvice',
         'merchant_risk_prediction': 'merchantRiskPrediction',
-        'seller_protection': 'sellerProtection'
+        'seller_protection': 'sellerProtection',
+        'network': 'network'
     }
 
-    def __init__(self, approval_code=None, transaction_id=None, network_transaction_id=None, response_code=None, system_trace_audit_number=None, response_details=None, merchant_advice=None, merchant_risk_prediction=None, seller_protection=None):
+    def __init__(self, approval_code=None, transaction_id=None, network_transaction_id=None, response_code=None, system_trace_audit_number=None, response_details=None, merchant_advice=None, merchant_risk_prediction=None, seller_protection=None, network=None):
         """
         PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -67,6 +69,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         self._merchant_advice = None
         self._merchant_risk_prediction = None
         self._seller_protection = None
+        self._network = None
 
         if approval_code is not None:
           self.approval_code = approval_code
@@ -86,6 +89,8 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
           self.merchant_risk_prediction = merchant_risk_prediction
         if seller_protection is not None:
           self.seller_protection = seller_protection
+        if network is not None:
+          self.network = network
 
     @property
     def approval_code(self):
@@ -206,7 +211,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
     def response_details(self):
         """
         Gets the response_details of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
-        This field might contain information about a decline. This field is supported only for **CyberSource through VisaNet**. 
+        This field might contain information about a decline. 
 
         :return: The response_details of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
         :rtype: str
@@ -217,7 +222,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
     def response_details(self, response_details):
         """
         Sets the response_details of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
-        This field might contain information about a decline. This field is supported only for **CyberSource through VisaNet**. 
+        This field might contain information about a decline. 
 
         :param response_details: The response_details of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
         :type: str
@@ -289,6 +294,27 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         """
 
         self._seller_protection = seller_protection
+
+    @property
+    def network(self):
+        """
+        Gets the network of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+
+        :return: The network of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+        :rtype: Ptsv2paymentsProcessorInformationReversalNetwork
+        """
+        return self._network
+
+    @network.setter
+    def network(self, network):
+        """
+        Sets the network of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+
+        :param network: The network of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+        :type: Ptsv2paymentsProcessorInformationReversalNetwork
+        """
+
+        self._network = network
 
     def to_dict(self):
         """

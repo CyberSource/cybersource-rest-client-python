@@ -48,7 +48,12 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         'account_level_management': 'bool',
         'online_gambling_block': 'bool',
         'auto_substantiation': 'bool',
-        'flex_credential': 'bool'
+        'flex_credential': 'bool',
+        'product_id': 'str',
+        'product_id_subtype': 'str',
+        'three_ds_support': 'bool',
+        'si_eligible': 'bool',
+        'emi_eligible': 'bool'
     }
 
     attribute_map = {
@@ -70,10 +75,15 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         'account_level_management': 'accountLevelManagement',
         'online_gambling_block': 'onlineGamblingBlock',
         'auto_substantiation': 'autoSubstantiation',
-        'flex_credential': 'flexCredential'
+        'flex_credential': 'flexCredential',
+        'product_id': 'productId',
+        'product_id_subtype': 'productIdSubtype',
+        'three_ds_support': 'threeDSSupport',
+        'si_eligible': 'siEligible',
+        'emi_eligible': 'emiEligible'
     }
 
-    def __init__(self, account_funding_source=None, account_funding_source_sub_type=None, card_product=None, message_type=None, acceptance_level=None, card_platform=None, combo_card=None, corporate_purchase=None, health_card=None, shared_bin=None, pos_domestic_only=None, gambling_allowed=None, commercial_card_level2=None, commercial_card_level3=None, exempt_bin=None, account_level_management=None, online_gambling_block=None, auto_substantiation=None, flex_credential=None):
+    def __init__(self, account_funding_source=None, account_funding_source_sub_type=None, card_product=None, message_type=None, acceptance_level=None, card_platform=None, combo_card=None, corporate_purchase=None, health_card=None, shared_bin=None, pos_domestic_only=None, gambling_allowed=None, commercial_card_level2=None, commercial_card_level3=None, exempt_bin=None, account_level_management=None, online_gambling_block=None, auto_substantiation=None, flex_credential=None, product_id=None, product_id_subtype=None, three_ds_support=None, si_eligible=None, emi_eligible=None):
         """
         TmsBinLookupPaymentAccountInformationFeatures - a model defined in Swagger
         """
@@ -97,6 +107,11 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         self._online_gambling_block = None
         self._auto_substantiation = None
         self._flex_credential = None
+        self._product_id = None
+        self._product_id_subtype = None
+        self._three_ds_support = None
+        self._si_eligible = None
+        self._emi_eligible = None
 
         if account_funding_source is not None:
           self.account_funding_source = account_funding_source
@@ -136,6 +151,16 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
           self.auto_substantiation = auto_substantiation
         if flex_credential is not None:
           self.flex_credential = flex_credential
+        if product_id is not None:
+          self.product_id = product_id
+        if product_id_subtype is not None:
+          self.product_id_subtype = product_id_subtype
+        if three_ds_support is not None:
+          self.three_ds_support = three_ds_support
+        if si_eligible is not None:
+          self.si_eligible = si_eligible
+        if emi_eligible is not None:
+          self.emi_eligible = emi_eligible
 
     @property
     def account_funding_source(self):
@@ -573,6 +598,121 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         """
 
         self._flex_credential = flex_credential
+
+    @property
+    def product_id(self):
+        """
+        Gets the product_id of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field contains the Visa-assigned product identifier associated with the BIN. This field is only supported for Visa BINs. Example values:   - Q4   - P   - AX 
+
+        :return: The product_id of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: str
+        """
+        return self._product_id
+
+    @product_id.setter
+    def product_id(self, product_id):
+        """
+        Sets the product_id of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field contains the Visa-assigned product identifier associated with the BIN. This field is only supported for Visa BINs. Example values:   - Q4   - P   - AX 
+
+        :param product_id: The product_id of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: str
+        """
+
+        self._product_id = product_id
+
+    @property
+    def product_id_subtype(self):
+        """
+        Gets the product_id_subtype of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field contains the Visa-assigned product subtype identifier associated with the BIN. This field is only supported for Visa BINs. Example values:   - BB   - EX   - L2   - C2 
+
+        :return: The product_id_subtype of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: str
+        """
+        return self._product_id_subtype
+
+    @product_id_subtype.setter
+    def product_id_subtype(self, product_id_subtype):
+        """
+        Sets the product_id_subtype of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field contains the Visa-assigned product subtype identifier associated with the BIN. This field is only supported for Visa BINs. Example values:   - BB   - EX   - L2   - C2 
+
+        :param product_id_subtype: The product_id_subtype of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: str
+        """
+
+        self._product_id_subtype = product_id_subtype
+
+    @property
+    def three_ds_support(self):
+        """
+        Gets the three_ds_support of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the payment instrument supports 3D Secure authentication. Possible values:     - `true`     - `false` 
+
+        :return: The three_ds_support of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._three_ds_support
+
+    @three_ds_support.setter
+    def three_ds_support(self, three_ds_support):
+        """
+        Sets the three_ds_support of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the payment instrument supports 3D Secure authentication. Possible values:     - `true`     - `false` 
+
+        :param three_ds_support: The three_ds_support of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._three_ds_support = three_ds_support
+
+    @property
+    def si_eligible(self):
+        """
+        Gets the si_eligible of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the payment instrument is eligible for Standing Instructions (recurring payments). Possible values:     - `true`     - `false` 
+
+        :return: The si_eligible of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._si_eligible
+
+    @si_eligible.setter
+    def si_eligible(self, si_eligible):
+        """
+        Sets the si_eligible of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the payment instrument is eligible for Standing Instructions (recurring payments). Possible values:     - `true`     - `false` 
+
+        :param si_eligible: The si_eligible of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._si_eligible = si_eligible
+
+    @property
+    def emi_eligible(self):
+        """
+        Gets the emi_eligible of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the card is eligible for Equated Monthly Installments (EMI). Possible values:     - `true`     - `false` 
+
+        :return: The emi_eligible of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._emi_eligible
+
+    @emi_eligible.setter
+    def emi_eligible(self, emi_eligible):
+        """
+        Sets the emi_eligible of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the card is eligible for Equated Monthly Installments (EMI). Possible values:     - `true`     - `false` 
+
+        :param emi_eligible: The emi_eligible of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._emi_eligible = emi_eligible
 
     def to_dict(self):
         """

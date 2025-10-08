@@ -38,7 +38,8 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         'ach_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationAchVerification',
         'network_transaction_id': 'str',
         'settlement_date': 'str',
-        'update_time_utc': 'str'
+        'update_time_utc': 'str',
+        'network': 'Ptsv2paymentsProcessorInformationReversalNetwork'
     }
 
     attribute_map = {
@@ -50,10 +51,11 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         'ach_verification': 'achVerification',
         'network_transaction_id': 'networkTransactionId',
         'settlement_date': 'settlementDate',
-        'update_time_utc': 'updateTimeUtc'
+        'update_time_utc': 'updateTimeUtc',
+        'network': 'network'
     }
 
-    def __init__(self, approval_code=None, transaction_id=None, forwarded_acquirer_code=None, merchant_number=None, response_code=None, ach_verification=None, network_transaction_id=None, settlement_date=None, update_time_utc=None):
+    def __init__(self, approval_code=None, transaction_id=None, forwarded_acquirer_code=None, merchant_number=None, response_code=None, ach_verification=None, network_transaction_id=None, settlement_date=None, update_time_utc=None, network=None):
         """
         PtsV2PaymentsRefundPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -67,6 +69,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         self._network_transaction_id = None
         self._settlement_date = None
         self._update_time_utc = None
+        self._network = None
 
         if approval_code is not None:
           self.approval_code = approval_code
@@ -86,6 +89,8 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
           self.settlement_date = settlement_date
         if update_time_utc is not None:
           self.update_time_utc = update_time_utc
+        if network is not None:
+          self.network = network
 
     @property
     def approval_code(self):
@@ -291,6 +296,27 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         """
 
         self._update_time_utc = update_time_utc
+
+    @property
+    def network(self):
+        """
+        Gets the network of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+
+        :return: The network of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :rtype: Ptsv2paymentsProcessorInformationReversalNetwork
+        """
+        return self._network
+
+    @network.setter
+    def network(self, network):
+        """
+        Sets the network of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+
+        :param network: The network of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :type: Ptsv2paymentsProcessorInformationReversalNetwork
+        """
+
+        self._network = network
 
     def to_dict(self):
         """

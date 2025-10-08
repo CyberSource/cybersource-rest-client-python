@@ -30,11 +30,11 @@ class InlineResponse4041(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'datetime',
-        'status': 'str',
+        'submit_time_utc': 'str',
+        'status': 'int',
         'reason': 'str',
         'message': 'str',
-        'details': 'list[InlineResponse4007Details]'
+        'details': 'list[InlineResponse4041Details]'
     }
 
     attribute_map = {
@@ -71,10 +71,10 @@ class InlineResponse4041(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this InlineResponse4041.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        The time the response was submitted
 
         :return: The submit_time_utc of this InlineResponse4041.
-        :rtype: datetime
+        :rtype: str
         """
         return self._submit_time_utc
 
@@ -82,10 +82,10 @@ class InlineResponse4041(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this InlineResponse4041.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        The time the response was submitted
 
         :param submit_time_utc: The submit_time_utc of this InlineResponse4041.
-        :type: datetime
+        :type: str
         """
 
         self._submit_time_utc = submit_time_utc
@@ -94,10 +94,10 @@ class InlineResponse4041(object):
     def status(self):
         """
         Gets the status of this InlineResponse4041.
-        The http status description of the submitted request.
+        The status code of the response
 
         :return: The status of this InlineResponse4041.
-        :rtype: str
+        :rtype: int
         """
         return self._status
 
@@ -105,10 +105,10 @@ class InlineResponse4041(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse4041.
-        The http status description of the submitted request.
+        The status code of the response
 
         :param status: The status of this InlineResponse4041.
-        :type: str
+        :type: int
         """
 
         self._status = status
@@ -117,7 +117,7 @@ class InlineResponse4041(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse4041.
-        Documented reason codes. Client should be able to use the key for generating their own error message Possible Values:   - 'RESOURCE_NOT_FOUND' 
+        The reason for the response
 
         :return: The reason of this InlineResponse4041.
         :rtype: str
@@ -128,7 +128,7 @@ class InlineResponse4041(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse4041.
-        Documented reason codes. Client should be able to use the key for generating their own error message Possible Values:   - 'RESOURCE_NOT_FOUND' 
+        The reason for the response
 
         :param reason: The reason of this InlineResponse4041.
         :type: str
@@ -140,7 +140,7 @@ class InlineResponse4041(object):
     def message(self):
         """
         Gets the message of this InlineResponse4041.
-        Descriptive message for the error.
+        The message of the response
 
         :return: The message of this InlineResponse4041.
         :rtype: str
@@ -151,7 +151,7 @@ class InlineResponse4041(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse4041.
-        Descriptive message for the error.
+        The message of the response
 
         :param message: The message of this InlineResponse4041.
         :type: str
@@ -163,9 +163,10 @@ class InlineResponse4041(object):
     def details(self):
         """
         Gets the details of this InlineResponse4041.
+        The details of the validation error
 
         :return: The details of this InlineResponse4041.
-        :rtype: list[InlineResponse4007Details]
+        :rtype: list[InlineResponse4041Details]
         """
         return self._details
 
@@ -173,9 +174,10 @@ class InlineResponse4041(object):
     def details(self, details):
         """
         Sets the details of this InlineResponse4041.
+        The details of the validation error
 
         :param details: The details of this InlineResponse4041.
-        :type: list[InlineResponse4007Details]
+        :type: list[InlineResponse4041Details]
         """
 
         self._details = details

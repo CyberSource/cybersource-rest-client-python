@@ -43,7 +43,8 @@ class CapturePaymentRequest(object):
         'merchant_defined_secure_information': 'Ptsv2paymentsMerchantDefinedSecureInformation',
         'installment_information': 'Ptsv2paymentsidcapturesInstallmentInformation',
         'travel_information': 'Ptsv2paymentsTravelInformation',
-        'promotion_information': 'Ptsv2paymentsPromotionInformation'
+        'promotion_information': 'Ptsv2paymentsPromotionInformation',
+        'processor_information': 'Ptsv2reversalsProcessorInformation'
     }
 
     attribute_map = {
@@ -60,10 +61,11 @@ class CapturePaymentRequest(object):
         'merchant_defined_secure_information': 'merchantDefinedSecureInformation',
         'installment_information': 'installmentInformation',
         'travel_information': 'travelInformation',
-        'promotion_information': 'promotionInformation'
+        'promotion_information': 'promotionInformation',
+        'processor_information': 'processorInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, promotion_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, promotion_information=None, processor_information=None):
         """
         CapturePaymentRequest - a model defined in Swagger
         """
@@ -82,6 +84,7 @@ class CapturePaymentRequest(object):
         self._installment_information = None
         self._travel_information = None
         self._promotion_information = None
+        self._processor_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -111,6 +114,8 @@ class CapturePaymentRequest(object):
           self.travel_information = travel_information
         if promotion_information is not None:
           self.promotion_information = promotion_information
+        if processor_information is not None:
+          self.processor_information = processor_information
 
     @property
     def client_reference_information(self):
@@ -407,6 +412,27 @@ class CapturePaymentRequest(object):
         """
 
         self._promotion_information = promotion_information
+
+    @property
+    def processor_information(self):
+        """
+        Gets the processor_information of this CapturePaymentRequest.
+
+        :return: The processor_information of this CapturePaymentRequest.
+        :rtype: Ptsv2reversalsProcessorInformation
+        """
+        return self._processor_information
+
+    @processor_information.setter
+    def processor_information(self, processor_information):
+        """
+        Sets the processor_information of this CapturePaymentRequest.
+
+        :param processor_information: The processor_information of this CapturePaymentRequest.
+        :type: Ptsv2reversalsProcessorInformation
+        """
+
+        self._processor_information = processor_information
 
     def to_dict(self):
         """

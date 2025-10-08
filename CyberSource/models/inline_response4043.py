@@ -30,66 +30,58 @@ class InlineResponse4043(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'status': 'str',
+        'reason': 'str',
         'message': 'str',
-        'code': 'str',
-        'submit_time_utc': 'str'
+        'details': 'list[InlineResponse4043Details]'
     }
 
     attribute_map = {
-        'status': 'status',
+        'reason': 'reason',
         'message': 'message',
-        'code': 'code',
-        'submit_time_utc': 'submitTimeUtc'
+        'details': 'details'
     }
 
-    def __init__(self, status=None, message=None, code=None, submit_time_utc=None):
+    def __init__(self, reason=None, message=None, details=None):
         """
         InlineResponse4043 - a model defined in Swagger
         """
 
-        self._status = None
+        self._reason = None
         self._message = None
-        self._code = None
-        self._submit_time_utc = None
+        self._details = None
 
-        if status is not None:
-          self.status = status
+        if reason is not None:
+          self.reason = reason
         if message is not None:
           self.message = message
-        if code is not None:
-          self.code = code
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
+        if details is not None:
+          self.details = details
 
     @property
-    def status(self):
+    def reason(self):
         """
-        Gets the status of this InlineResponse4043.
-        The status of the submitted request.   Possible values: - NOT_FOUND
+        Gets the reason of this InlineResponse4043.
 
-        :return: The status of this InlineResponse4043.
+        :return: The reason of this InlineResponse4043.
         :rtype: str
         """
-        return self._status
+        return self._reason
 
-    @status.setter
-    def status(self, status):
+    @reason.setter
+    def reason(self, reason):
         """
-        Sets the status of this InlineResponse4043.
-        The status of the submitted request.   Possible values: - NOT_FOUND
+        Sets the reason of this InlineResponse4043.
 
-        :param status: The status of this InlineResponse4043.
+        :param reason: The reason of this InlineResponse4043.
         :type: str
         """
 
-        self._status = status
+        self._reason = reason
 
     @property
     def message(self):
         """
         Gets the message of this InlineResponse4043.
-        The detail message related to the status and reason listed above.
 
         :return: The message of this InlineResponse4043.
         :rtype: str
@@ -100,7 +92,6 @@ class InlineResponse4043(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse4043.
-        The detail message related to the status and reason listed above.
 
         :param message: The message of this InlineResponse4043.
         :type: str
@@ -109,50 +100,25 @@ class InlineResponse4043(object):
         self._message = message
 
     @property
-    def code(self):
+    def details(self):
         """
-        Gets the code of this InlineResponse4043.
-        An optional short string which identifies the exact error.
+        Gets the details of this InlineResponse4043.
 
-        :return: The code of this InlineResponse4043.
-        :rtype: str
+        :return: The details of this InlineResponse4043.
+        :rtype: list[InlineResponse4043Details]
         """
-        return self._code
+        return self._details
 
-    @code.setter
-    def code(self, code):
+    @details.setter
+    def details(self, details):
         """
-        Sets the code of this InlineResponse4043.
-        An optional short string which identifies the exact error.
+        Sets the details of this InlineResponse4043.
 
-        :param code: The code of this InlineResponse4043.
-        :type: str
+        :param details: The details of this InlineResponse4043.
+        :type: list[InlineResponse4043Details]
         """
 
-        self._code = code
-
-    @property
-    def submit_time_utc(self):
-        """
-        Gets the submit_time_utc of this InlineResponse4043.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :return: The submit_time_utc of this InlineResponse4043.
-        :rtype: str
-        """
-        return self._submit_time_utc
-
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
-        """
-        Sets the submit_time_utc of this InlineResponse4043.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :param submit_time_utc: The submit_time_utc of this InlineResponse4043.
-        :type: str
-        """
-
-        self._submit_time_utc = submit_time_utc
+        self._details = details
 
     def to_dict(self):
         """

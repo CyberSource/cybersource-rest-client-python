@@ -33,17 +33,19 @@ class UpdateInvoiceRequest(object):
         'customer_information': 'Invoicingv2invoicesCustomerInformation',
         'processing_information': 'Invoicingv2invoicesProcessingInformation',
         'invoice_information': 'Invoicingv2invoicesidInvoiceInformation',
-        'order_information': 'Invoicingv2invoicesOrderInformation'
+        'order_information': 'Invoicingv2invoicesOrderInformation',
+        'merchant_defined_field_values': 'list[Invoicingv2invoicesMerchantDefinedFieldValues]'
     }
 
     attribute_map = {
         'customer_information': 'customerInformation',
         'processing_information': 'processingInformation',
         'invoice_information': 'invoiceInformation',
-        'order_information': 'orderInformation'
+        'order_information': 'orderInformation',
+        'merchant_defined_field_values': 'merchantDefinedFieldValues'
     }
 
-    def __init__(self, customer_information=None, processing_information=None, invoice_information=None, order_information=None):
+    def __init__(self, customer_information=None, processing_information=None, invoice_information=None, order_information=None, merchant_defined_field_values=None):
         """
         UpdateInvoiceRequest - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class UpdateInvoiceRequest(object):
         self._processing_information = None
         self._invoice_information = None
         self._order_information = None
+        self._merchant_defined_field_values = None
 
         if customer_information is not None:
           self.customer_information = customer_information
@@ -59,6 +62,8 @@ class UpdateInvoiceRequest(object):
           self.processing_information = processing_information
         self.invoice_information = invoice_information
         self.order_information = order_information
+        if merchant_defined_field_values is not None:
+          self.merchant_defined_field_values = merchant_defined_field_values
 
     @property
     def customer_information(self):
@@ -143,6 +148,27 @@ class UpdateInvoiceRequest(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def merchant_defined_field_values(self):
+        """
+        Gets the merchant_defined_field_values of this UpdateInvoiceRequest.
+
+        :return: The merchant_defined_field_values of this UpdateInvoiceRequest.
+        :rtype: list[Invoicingv2invoicesMerchantDefinedFieldValues]
+        """
+        return self._merchant_defined_field_values
+
+    @merchant_defined_field_values.setter
+    def merchant_defined_field_values(self, merchant_defined_field_values):
+        """
+        Sets the merchant_defined_field_values of this UpdateInvoiceRequest.
+
+        :param merchant_defined_field_values: The merchant_defined_field_values of this UpdateInvoiceRequest.
+        :type: list[Invoicingv2invoicesMerchantDefinedFieldValues]
+        """
+
+        self._merchant_defined_field_values = merchant_defined_field_values
 
     def to_dict(self):
         """

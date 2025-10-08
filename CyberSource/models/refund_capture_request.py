@@ -41,7 +41,8 @@ class RefundCaptureRequest(object):
         'point_of_sale_information': 'Ptsv2paymentsidrefundsPointOfSaleInformation',
         'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
         'travel_information': 'Ptsv2paymentsTravelInformation',
-        'promotion_information': 'Ptsv2paymentsPromotionInformation'
+        'promotion_information': 'Ptsv2paymentsPromotionInformation',
+        'processor_information': 'Ptsv2reversalsProcessorInformation'
     }
 
     attribute_map = {
@@ -56,10 +57,11 @@ class RefundCaptureRequest(object):
         'point_of_sale_information': 'pointOfSaleInformation',
         'merchant_defined_information': 'merchantDefinedInformation',
         'travel_information': 'travelInformation',
-        'promotion_information': 'promotionInformation'
+        'promotion_information': 'promotionInformation',
+        'processor_information': 'processorInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None, travel_information=None, promotion_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None, travel_information=None, promotion_information=None, processor_information=None):
         """
         RefundCaptureRequest - a model defined in Swagger
         """
@@ -76,6 +78,7 @@ class RefundCaptureRequest(object):
         self._merchant_defined_information = None
         self._travel_information = None
         self._promotion_information = None
+        self._processor_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -101,6 +104,8 @@ class RefundCaptureRequest(object):
           self.travel_information = travel_information
         if promotion_information is not None:
           self.promotion_information = promotion_information
+        if processor_information is not None:
+          self.processor_information = processor_information
 
     @property
     def client_reference_information(self):
@@ -355,6 +360,27 @@ class RefundCaptureRequest(object):
         """
 
         self._promotion_information = promotion_information
+
+    @property
+    def processor_information(self):
+        """
+        Gets the processor_information of this RefundCaptureRequest.
+
+        :return: The processor_information of this RefundCaptureRequest.
+        :rtype: Ptsv2reversalsProcessorInformation
+        """
+        return self._processor_information
+
+    @processor_information.setter
+    def processor_information(self, processor_information):
+        """
+        Sets the processor_information of this RefundCaptureRequest.
+
+        :param processor_information: The processor_information of this RefundCaptureRequest.
+        :type: Ptsv2reversalsProcessorInformation
+        """
+
+        self._processor_information = processor_information
 
     def to_dict(self):
         """

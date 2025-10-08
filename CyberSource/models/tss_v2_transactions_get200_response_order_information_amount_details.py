@@ -36,6 +36,7 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         'authorized_amount': 'str',
         'settlement_amount': 'str',
         'settlement_currency': 'str',
+        'refund_balance': 'str',
         'surcharge': 'Ptsv2payoutsOrderInformationAmountDetailsSurcharge'
     }
 
@@ -46,10 +47,11 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         'authorized_amount': 'authorizedAmount',
         'settlement_amount': 'settlementAmount',
         'settlement_currency': 'settlementCurrency',
+        'refund_balance': 'refundBalance',
         'surcharge': 'surcharge'
     }
 
-    def __init__(self, total_amount=None, currency=None, tax_amount=None, authorized_amount=None, settlement_amount=None, settlement_currency=None, surcharge=None):
+    def __init__(self, total_amount=None, currency=None, tax_amount=None, authorized_amount=None, settlement_amount=None, settlement_currency=None, refund_balance=None, surcharge=None):
         """
         TssV2TransactionsGet200ResponseOrderInformationAmountDetails - a model defined in Swagger
         """
@@ -60,6 +62,7 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         self._authorized_amount = None
         self._settlement_amount = None
         self._settlement_currency = None
+        self._refund_balance = None
         self._surcharge = None
 
         if total_amount is not None:
@@ -74,6 +77,8 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
           self.settlement_amount = settlement_amount
         if settlement_currency is not None:
           self.settlement_currency = settlement_currency
+        if refund_balance is not None:
+          self.refund_balance = refund_balance
         if surcharge is not None:
           self.surcharge = surcharge
 
@@ -214,6 +219,29 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         """
 
         self._settlement_currency = settlement_currency
+
+    @property
+    def refund_balance(self):
+        """
+        Gets the refund_balance of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
+        The remaining amount which can be refunded.
+
+        :return: The refund_balance of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._refund_balance
+
+    @refund_balance.setter
+    def refund_balance(self, refund_balance):
+        """
+        Sets the refund_balance of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
+        The remaining amount which can be refunded.
+
+        :param refund_balance: The refund_balance of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._refund_balance = refund_balance
 
     @property
     def surcharge(self):

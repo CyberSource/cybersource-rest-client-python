@@ -30,27 +30,22 @@ class PaymentsProductsAlternativePaymentMethodsSubscriptionInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'enabled': 'bool',
-        'self_serviceability': 'str'
+        'enabled': 'bool'
     }
 
     attribute_map = {
-        'enabled': 'enabled',
-        'self_serviceability': 'selfServiceability'
+        'enabled': 'enabled'
     }
 
-    def __init__(self, enabled=None, self_serviceability='NOT_SELF_SERVICEABLE'):
+    def __init__(self, enabled=None):
         """
         PaymentsProductsAlternativePaymentMethodsSubscriptionInformation - a model defined in Swagger
         """
 
         self._enabled = None
-        self._self_serviceability = None
 
         if enabled is not None:
           self.enabled = enabled
-        if self_serviceability is not None:
-          self.self_serviceability = self_serviceability
 
     @property
     def enabled(self):
@@ -72,29 +67,6 @@ class PaymentsProductsAlternativePaymentMethodsSubscriptionInformation(object):
         """
 
         self._enabled = enabled
-
-    @property
-    def self_serviceability(self):
-        """
-        Gets the self_serviceability of this PaymentsProductsAlternativePaymentMethodsSubscriptionInformation.
-        Indicates if the organization can enable this product using self service.  Possible values: - SELF_SERVICEABLE - NOT_SELF_SERVICEABLE - SELF_SERVICE_ONLY
-
-        :return: The self_serviceability of this PaymentsProductsAlternativePaymentMethodsSubscriptionInformation.
-        :rtype: str
-        """
-        return self._self_serviceability
-
-    @self_serviceability.setter
-    def self_serviceability(self, self_serviceability):
-        """
-        Sets the self_serviceability of this PaymentsProductsAlternativePaymentMethodsSubscriptionInformation.
-        Indicates if the organization can enable this product using self service.  Possible values: - SELF_SERVICEABLE - NOT_SELF_SERVICEABLE - SELF_SERVICE_ONLY
-
-        :param self_serviceability: The self_serviceability of this PaymentsProductsAlternativePaymentMethodsSubscriptionInformation.
-        :type: str
-        """
-
-        self._self_serviceability = self_serviceability
 
     def to_dict(self):
         """
