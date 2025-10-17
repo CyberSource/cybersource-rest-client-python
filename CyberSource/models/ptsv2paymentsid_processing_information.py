@@ -30,22 +30,27 @@ class Ptsv2paymentsidProcessingInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'authorization_options': 'Ptsv2paymentsidProcessingInformationAuthorizationOptions'
+        'authorization_options': 'Ptsv2paymentsidProcessingInformationAuthorizationOptions',
+        'network': 'Ptsv2paymentsProcessorInformationReversalNetwork'
     }
 
     attribute_map = {
-        'authorization_options': 'authorizationOptions'
+        'authorization_options': 'authorizationOptions',
+        'network': 'network'
     }
 
-    def __init__(self, authorization_options=None):
+    def __init__(self, authorization_options=None, network=None):
         """
         Ptsv2paymentsidProcessingInformation - a model defined in Swagger
         """
 
         self._authorization_options = None
+        self._network = None
 
         if authorization_options is not None:
           self.authorization_options = authorization_options
+        if network is not None:
+          self.network = network
 
     @property
     def authorization_options(self):
@@ -67,6 +72,27 @@ class Ptsv2paymentsidProcessingInformation(object):
         """
 
         self._authorization_options = authorization_options
+
+    @property
+    def network(self):
+        """
+        Gets the network of this Ptsv2paymentsidProcessingInformation.
+
+        :return: The network of this Ptsv2paymentsidProcessingInformation.
+        :rtype: Ptsv2paymentsProcessorInformationReversalNetwork
+        """
+        return self._network
+
+    @network.setter
+    def network(self, network):
+        """
+        Sets the network of this Ptsv2paymentsidProcessingInformation.
+
+        :param network: The network of this Ptsv2paymentsidProcessingInformation.
+        :type: Ptsv2paymentsProcessorInformationReversalNetwork
+        """
+
+        self._network = network
 
     def to_dict(self):
         """

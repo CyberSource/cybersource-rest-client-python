@@ -36,13 +36,10 @@ class InvoiceSettingsApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -67,8 +64,7 @@ class InvoiceSettingsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_invoice_settings` STARTED")
+        self.logger.info("CALL TO METHOD `get_invoice_settings` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -180,8 +176,7 @@ class InvoiceSettingsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `update_invoice_settings` STARTED")
+        self.logger.info("CALL TO METHOD `update_invoice_settings` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -227,8 +222,7 @@ class InvoiceSettingsApi(object):
         del params['kwargs']
         # verify the required parameter 'invoice_settings_request' is set
         if ('invoice_settings_request' not in params) or (params['invoice_settings_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `invoice_settings_request` when calling `update_invoice_settings`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `invoice_settings_request` when calling `update_invoice_settings`")
             raise ValueError("Missing the required parameter `invoice_settings_request` when calling `update_invoice_settings`")
 
 

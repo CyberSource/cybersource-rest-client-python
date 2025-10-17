@@ -32,16 +32,18 @@ class Ptsv2paymentsProcessorInformation(object):
     swagger_types = {
         'pre_approval_token': 'str',
         'authorization_options': 'Ptsv2paymentsProcessorInformationAuthorizationOptions',
-        'reversal': 'Ptsv2paymentsProcessorInformationReversal'
+        'reversal': 'Ptsv2paymentsProcessorInformationReversal',
+        'network': 'Ptsv2paymentsProcessorInformationReversalNetwork'
     }
 
     attribute_map = {
         'pre_approval_token': 'preApprovalToken',
         'authorization_options': 'authorizationOptions',
-        'reversal': 'reversal'
+        'reversal': 'reversal',
+        'network': 'network'
     }
 
-    def __init__(self, pre_approval_token=None, authorization_options=None, reversal=None):
+    def __init__(self, pre_approval_token=None, authorization_options=None, reversal=None, network=None):
         """
         Ptsv2paymentsProcessorInformation - a model defined in Swagger
         """
@@ -49,6 +51,7 @@ class Ptsv2paymentsProcessorInformation(object):
         self._pre_approval_token = None
         self._authorization_options = None
         self._reversal = None
+        self._network = None
 
         if pre_approval_token is not None:
           self.pre_approval_token = pre_approval_token
@@ -56,6 +59,8 @@ class Ptsv2paymentsProcessorInformation(object):
           self.authorization_options = authorization_options
         if reversal is not None:
           self.reversal = reversal
+        if network is not None:
+          self.network = network
 
     @property
     def pre_approval_token(self):
@@ -121,6 +126,27 @@ class Ptsv2paymentsProcessorInformation(object):
         """
 
         self._reversal = reversal
+
+    @property
+    def network(self):
+        """
+        Gets the network of this Ptsv2paymentsProcessorInformation.
+
+        :return: The network of this Ptsv2paymentsProcessorInformation.
+        :rtype: Ptsv2paymentsProcessorInformationReversalNetwork
+        """
+        return self._network
+
+    @network.setter
+    def network(self, network):
+        """
+        Sets the network of this Ptsv2paymentsProcessorInformation.
+
+        :param network: The network of this Ptsv2paymentsProcessorInformation.
+        :type: Ptsv2paymentsProcessorInformationReversalNetwork
+        """
+
+        self._network = network
 
     def to_dict(self):
         """

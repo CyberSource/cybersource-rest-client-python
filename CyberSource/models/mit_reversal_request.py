@@ -34,7 +34,8 @@ class MitReversalRequest(object):
         'reversal_information': 'Ptsv2paymentsidreversalsReversalInformation',
         'processing_information': 'Ptsv2paymentsidreversalsProcessingInformation',
         'order_information': 'Ptsv2paymentsidreversalsOrderInformation',
-        'point_of_sale_information': 'Ptsv2paymentsidreversalsPointOfSaleInformation'
+        'point_of_sale_information': 'Ptsv2paymentsidreversalsPointOfSaleInformation',
+        'processor_information': 'Ptsv2reversalsProcessorInformation'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class MitReversalRequest(object):
         'reversal_information': 'reversalInformation',
         'processing_information': 'processingInformation',
         'order_information': 'orderInformation',
-        'point_of_sale_information': 'pointOfSaleInformation'
+        'point_of_sale_information': 'pointOfSaleInformation',
+        'processor_information': 'processorInformation'
     }
 
-    def __init__(self, client_reference_information=None, reversal_information=None, processing_information=None, order_information=None, point_of_sale_information=None):
+    def __init__(self, client_reference_information=None, reversal_information=None, processing_information=None, order_information=None, point_of_sale_information=None, processor_information=None):
         """
         MitReversalRequest - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class MitReversalRequest(object):
         self._processing_information = None
         self._order_information = None
         self._point_of_sale_information = None
+        self._processor_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -66,6 +69,8 @@ class MitReversalRequest(object):
           self.order_information = order_information
         if point_of_sale_information is not None:
           self.point_of_sale_information = point_of_sale_information
+        if processor_information is not None:
+          self.processor_information = processor_information
 
     @property
     def client_reference_information(self):
@@ -171,6 +176,27 @@ class MitReversalRequest(object):
         """
 
         self._point_of_sale_information = point_of_sale_information
+
+    @property
+    def processor_information(self):
+        """
+        Gets the processor_information of this MitReversalRequest.
+
+        :return: The processor_information of this MitReversalRequest.
+        :rtype: Ptsv2reversalsProcessorInformation
+        """
+        return self._processor_information
+
+    @processor_information.setter
+    def processor_information(self, processor_information):
+        """
+        Sets the processor_information of this MitReversalRequest.
+
+        :param processor_information: The processor_information of this MitReversalRequest.
+        :type: Ptsv2reversalsProcessorInformation
+        """
+
+        self._processor_information = processor_information
 
     def to_dict(self):
         """

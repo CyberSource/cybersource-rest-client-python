@@ -36,13 +36,10 @@ class PlansApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -68,8 +65,7 @@ class PlansApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `activate_plan` STARTED")
+        self.logger.info("CALL TO METHOD `activate_plan` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -115,8 +111,7 @@ class PlansApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `activate_plan`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `activate_plan`")
             raise ValueError("Missing the required parameter `id` when calling `activate_plan`")
 
 
@@ -191,8 +186,7 @@ class PlansApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `create_plan` STARTED")
+        self.logger.info("CALL TO METHOD `create_plan` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -238,8 +232,7 @@ class PlansApi(object):
         del params['kwargs']
         # verify the required parameter 'create_plan_request' is set
         if ('create_plan_request' not in params) or (params['create_plan_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `create_plan_request` when calling `create_plan`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `create_plan_request` when calling `create_plan`")
             raise ValueError("Missing the required parameter `create_plan_request` when calling `create_plan`")
 
 
@@ -310,8 +303,7 @@ class PlansApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `deactivate_plan` STARTED")
+        self.logger.info("CALL TO METHOD `deactivate_plan` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -357,8 +349,7 @@ class PlansApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `deactivate_plan`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `deactivate_plan`")
             raise ValueError("Missing the required parameter `id` when calling `deactivate_plan`")
 
 
@@ -433,8 +424,7 @@ class PlansApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `delete_plan` STARTED")
+        self.logger.info("CALL TO METHOD `delete_plan` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -480,8 +470,7 @@ class PlansApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `delete_plan`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `delete_plan`")
             raise ValueError("Missing the required parameter `id` when calling `delete_plan`")
 
 
@@ -556,8 +545,7 @@ class PlansApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_plan` STARTED")
+        self.logger.info("CALL TO METHOD `get_plan` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -603,8 +591,7 @@ class PlansApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_plan`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_plan`")
             raise ValueError("Missing the required parameter `id` when calling `get_plan`")
 
 
@@ -678,8 +665,7 @@ class PlansApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_plan_code` STARTED")
+        self.logger.info("CALL TO METHOD `get_plan_code` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -795,8 +781,7 @@ class PlansApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_plans` STARTED")
+        self.logger.info("CALL TO METHOD `get_plans` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -925,8 +910,7 @@ class PlansApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `update_plan` STARTED")
+        self.logger.info("CALL TO METHOD `update_plan` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -973,13 +957,11 @@ class PlansApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `update_plan`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `update_plan`")
             raise ValueError("Missing the required parameter `id` when calling `update_plan`")
         # verify the required parameter 'update_plan_request' is set
         if ('update_plan_request' not in params) or (params['update_plan_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `update_plan_request` when calling `update_plan`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `update_plan_request` when calling `update_plan`")
             raise ValueError("Missing the required parameter `update_plan_request` when calling `update_plan`")
 
 

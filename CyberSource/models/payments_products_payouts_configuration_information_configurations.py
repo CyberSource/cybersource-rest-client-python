@@ -30,69 +30,69 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurations(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'pullfunds': 'dict(str, PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds)',
-        'pushfunds': 'dict(str, PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds)'
+        'common': 'PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon',
+        'processors': 'dict(str, object)'
     }
 
     attribute_map = {
-        'pullfunds': 'pullfunds',
-        'pushfunds': 'pushfunds'
+        'common': 'common',
+        'processors': 'processors'
     }
 
-    def __init__(self, pullfunds=None, pushfunds=None):
+    def __init__(self, common=None, processors=None):
         """
         PaymentsProductsPayoutsConfigurationInformationConfigurations - a model defined in Swagger
         """
 
-        self._pullfunds = None
-        self._pushfunds = None
+        self._common = None
+        self._processors = None
 
-        if pullfunds is not None:
-          self.pullfunds = pullfunds
-        if pushfunds is not None:
-          self.pushfunds = pushfunds
-
-    @property
-    def pullfunds(self):
-        """
-        Gets the pullfunds of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
-
-        :return: The pullfunds of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
-        :rtype: dict(str, PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds)
-        """
-        return self._pullfunds
-
-    @pullfunds.setter
-    def pullfunds(self, pullfunds):
-        """
-        Sets the pullfunds of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
-
-        :param pullfunds: The pullfunds of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
-        :type: dict(str, PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds)
-        """
-
-        self._pullfunds = pullfunds
+        if common is not None:
+          self.common = common
+        if processors is not None:
+          self.processors = processors
 
     @property
-    def pushfunds(self):
+    def common(self):
         """
-        Gets the pushfunds of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
+        Gets the common of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
 
-        :return: The pushfunds of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
-        :rtype: dict(str, PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds)
+        :return: The common of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
+        :rtype: PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon
         """
-        return self._pushfunds
+        return self._common
 
-    @pushfunds.setter
-    def pushfunds(self, pushfunds):
+    @common.setter
+    def common(self, common):
         """
-        Sets the pushfunds of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
+        Sets the common of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
 
-        :param pushfunds: The pushfunds of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
-        :type: dict(str, PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds)
+        :param common: The common of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
+        :type: PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon
         """
 
-        self._pushfunds = pushfunds
+        self._common = common
+
+    @property
+    def processors(self):
+        """
+        Gets the processors of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
+
+        :return: The processors of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
+        :rtype: dict(str, object)
+        """
+        return self._processors
+
+    @processors.setter
+    def processors(self, processors):
+        """
+        Sets the processors of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
+
+        :param processors: The processors of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
+        :type: dict(str, object)
+        """
+
+        self._processors = processors
 
     def to_dict(self):
         """

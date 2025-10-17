@@ -36,13 +36,10 @@ class CustomerShippingAddressApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -70,8 +67,7 @@ class CustomerShippingAddressApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `delete_customer_shipping_address` STARTED")
+        self.logger.info("CALL TO METHOD `delete_customer_shipping_address` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -119,13 +115,11 @@ class CustomerShippingAddressApi(object):
         del params['kwargs']
         # verify the required parameter 'customer_id' is set
         if ('customer_id' not in params) or (params['customer_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `delete_customer_shipping_address`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `delete_customer_shipping_address`")
             raise ValueError("Missing the required parameter `customer_id` when calling `delete_customer_shipping_address`")
         # verify the required parameter 'shipping_address_id' is set
         if ('shipping_address_id' not in params) or (params['shipping_address_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_id` when calling `delete_customer_shipping_address`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_id` when calling `delete_customer_shipping_address`")
             raise ValueError("Missing the required parameter `shipping_address_id` when calling `delete_customer_shipping_address`")
 
 
@@ -207,8 +201,7 @@ class CustomerShippingAddressApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_customer_shipping_address` STARTED")
+        self.logger.info("CALL TO METHOD `get_customer_shipping_address` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -256,13 +249,11 @@ class CustomerShippingAddressApi(object):
         del params['kwargs']
         # verify the required parameter 'customer_id' is set
         if ('customer_id' not in params) or (params['customer_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `get_customer_shipping_address`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `get_customer_shipping_address`")
             raise ValueError("Missing the required parameter `customer_id` when calling `get_customer_shipping_address`")
         # verify the required parameter 'shipping_address_id' is set
         if ('shipping_address_id' not in params) or (params['shipping_address_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_id` when calling `get_customer_shipping_address`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_id` when calling `get_customer_shipping_address`")
             raise ValueError("Missing the required parameter `shipping_address_id` when calling `get_customer_shipping_address`")
 
 
@@ -345,8 +336,7 @@ class CustomerShippingAddressApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_customer_shipping_addresses_list` STARTED")
+        self.logger.info("CALL TO METHOD `get_customer_shipping_addresses_list` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -395,8 +385,7 @@ class CustomerShippingAddressApi(object):
         del params['kwargs']
         # verify the required parameter 'customer_id' is set
         if ('customer_id' not in params) or (params['customer_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `get_customer_shipping_addresses_list`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `get_customer_shipping_addresses_list`")
             raise ValueError("Missing the required parameter `customer_id` when calling `get_customer_shipping_addresses_list`")
 
 
@@ -481,8 +470,7 @@ class CustomerShippingAddressApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `patch_customers_shipping_address` STARTED")
+        self.logger.info("CALL TO METHOD `patch_customers_shipping_address` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -532,18 +520,15 @@ class CustomerShippingAddressApi(object):
         del params['kwargs']
         # verify the required parameter 'customer_id' is set
         if ('customer_id' not in params) or (params['customer_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `patch_customers_shipping_address`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `patch_customers_shipping_address`")
             raise ValueError("Missing the required parameter `customer_id` when calling `patch_customers_shipping_address`")
         # verify the required parameter 'shipping_address_id' is set
         if ('shipping_address_id' not in params) or (params['shipping_address_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_id` when calling `patch_customers_shipping_address`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_id` when calling `patch_customers_shipping_address`")
             raise ValueError("Missing the required parameter `shipping_address_id` when calling `patch_customers_shipping_address`")
         # verify the required parameter 'patch_customer_shipping_address_request' is set
         if ('patch_customer_shipping_address_request' not in params) or (params['patch_customer_shipping_address_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `patch_customer_shipping_address_request` when calling `patch_customers_shipping_address`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `patch_customer_shipping_address_request` when calling `patch_customers_shipping_address`")
             raise ValueError("Missing the required parameter `patch_customer_shipping_address_request` when calling `patch_customers_shipping_address`")
 
 
@@ -626,8 +611,7 @@ class CustomerShippingAddressApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `post_customer_shipping_address` STARTED")
+        self.logger.info("CALL TO METHOD `post_customer_shipping_address` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -675,13 +659,11 @@ class CustomerShippingAddressApi(object):
         del params['kwargs']
         # verify the required parameter 'customer_id' is set
         if ('customer_id' not in params) or (params['customer_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `post_customer_shipping_address`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `post_customer_shipping_address`")
             raise ValueError("Missing the required parameter `customer_id` when calling `post_customer_shipping_address`")
         # verify the required parameter 'post_customer_shipping_address_request' is set
         if ('post_customer_shipping_address_request' not in params) or (params['post_customer_shipping_address_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `post_customer_shipping_address_request` when calling `post_customer_shipping_address`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `post_customer_shipping_address_request` when calling `post_customer_shipping_address`")
             raise ValueError("Missing the required parameter `post_customer_shipping_address_request` when calling `post_customer_shipping_address`")
 
 

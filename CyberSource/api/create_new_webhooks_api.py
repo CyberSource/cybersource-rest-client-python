@@ -36,13 +36,10 @@ class CreateNewWebhooksApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -63,13 +60,12 @@ class CreateNewWebhooksApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str organization_id: The Organization Identifier. (required)
-        :return: list[InlineResponse2003]
+        :return: list[InlineResponse2004]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `find_products_to_subscribe` STARTED")
+        self.logger.info("CALL TO METHOD `find_products_to_subscribe` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -93,7 +89,7 @@ class CreateNewWebhooksApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str organization_id: The Organization Identifier. (required)
-        :return: list[InlineResponse2003]
+        :return: list[InlineResponse2004]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -115,8 +111,7 @@ class CreateNewWebhooksApi(object):
         del params['kwargs']
         # verify the required parameter 'organization_id' is set
         if ('organization_id' not in params) or (params['organization_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `organization_id` when calling `find_products_to_subscribe`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `organization_id` when calling `find_products_to_subscribe`")
             raise ValueError("Missing the required parameter `organization_id` when calling `find_products_to_subscribe`")
 
 
@@ -163,7 +158,7 @@ class CreateNewWebhooksApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='list[InlineResponse2003]',
+                                        response_type='list[InlineResponse2004]',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -191,8 +186,7 @@ class CreateNewWebhooksApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `notification_subscriptions_v2_webhooks_post` STARTED")
+        self.logger.info("CALL TO METHOD `notification_subscriptions_v2_webhooks_post` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -308,8 +302,7 @@ class CreateNewWebhooksApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `save_sym_egress_key` STARTED")
+        self.logger.info("CALL TO METHOD `save_sym_egress_key` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -358,13 +351,11 @@ class CreateNewWebhooksApi(object):
         del params['kwargs']
         # verify the required parameter 'v_c_sender_organization_id' is set
         if ('v_c_sender_organization_id' not in params) or (params['v_c_sender_organization_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_sender_organization_id` when calling `save_sym_egress_key`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_sender_organization_id` when calling `save_sym_egress_key`")
             raise ValueError("Missing the required parameter `v_c_sender_organization_id` when calling `save_sym_egress_key`")
         # verify the required parameter 'v_c_permissions' is set
         if ('v_c_permissions' not in params) or (params['v_c_permissions'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_permissions` when calling `save_sym_egress_key`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_permissions` when calling `save_sym_egress_key`")
             raise ValueError("Missing the required parameter `v_c_permissions` when calling `save_sym_egress_key`")
 
 

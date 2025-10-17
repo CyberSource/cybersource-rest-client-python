@@ -79,7 +79,7 @@ class PtsV2PaymentsPost201Response1IssuerInformation(object):
     def code(self):
         """
         Gets the code of this PtsV2PaymentsPost201Response1IssuerInformation.
-        Unique code for card issuer provided by the processor. 
+        Unique code for card issuer provided by the processor.
 
         :return: The code of this PtsV2PaymentsPost201Response1IssuerInformation.
         :rtype: str
@@ -90,7 +90,7 @@ class PtsV2PaymentsPost201Response1IssuerInformation(object):
     def code(self, code):
         """
         Sets the code of this PtsV2PaymentsPost201Response1IssuerInformation.
-        Unique code for card issuer provided by the processor. 
+        Unique code for card issuer provided by the processor.
 
         :param code: The code of this PtsV2PaymentsPost201Response1IssuerInformation.
         :type: str

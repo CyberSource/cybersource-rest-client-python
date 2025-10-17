@@ -30,7 +30,7 @@ class PaymentsProductsDifferentialFeeSubscriptionInformationFeatures(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'surcharge': 'PaymentsProductsDifferentialFeeSubscriptionInformationFeaturesSurcharge'
+        'surcharge': 'PaymentsProductsAlternativePaymentMethodsSubscriptionInformation'
     }
 
     attribute_map = {
@@ -53,7 +53,7 @@ class PaymentsProductsDifferentialFeeSubscriptionInformationFeatures(object):
         Gets the surcharge of this PaymentsProductsDifferentialFeeSubscriptionInformationFeatures.
 
         :return: The surcharge of this PaymentsProductsDifferentialFeeSubscriptionInformationFeatures.
-        :rtype: PaymentsProductsDifferentialFeeSubscriptionInformationFeaturesSurcharge
+        :rtype: PaymentsProductsAlternativePaymentMethodsSubscriptionInformation
         """
         return self._surcharge
 
@@ -63,7 +63,7 @@ class PaymentsProductsDifferentialFeeSubscriptionInformationFeatures(object):
         Sets the surcharge of this PaymentsProductsDifferentialFeeSubscriptionInformationFeatures.
 
         :param surcharge: The surcharge of this PaymentsProductsDifferentialFeeSubscriptionInformationFeatures.
-        :type: PaymentsProductsDifferentialFeeSubscriptionInformationFeaturesSurcharge
+        :type: PaymentsProductsAlternativePaymentMethodsSubscriptionInformation
         """
 
         self._surcharge = surcharge

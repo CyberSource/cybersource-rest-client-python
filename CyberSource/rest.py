@@ -18,6 +18,7 @@ import ssl
 import certifi
 import CyberSource.logging.log_factory as LogFactory
 import re
+import hashlib
 
 # python 2 and python 3 compatibility library
 from six import PY3
@@ -34,7 +35,6 @@ except ImportError:
 
 
 class RESTResponse(io.IOBase):
-
     def __init__(self, resp):
         self.urllib3_response = resp
         self.status = resp.status
@@ -55,8 +55,50 @@ class RESTResponse(io.IOBase):
 
 
 class RESTClientObject(object):
+    _urllib3_poolmanagers = {}
 
-    def __init__(self, rconfig = None, pools_size=4, maxsize=4, log_config = None):
+    @classmethod
+    def get_pool_manager(cls, hash_candidates_dict):
+        sorted_items = sorted(hash_candidates_dict.items())
+        json_string = json.dumps(sorted_items, separators=(',', ':')).encode('utf-8')
+        hash_object = hashlib.sha256()
+        hash_object.update(json_string)
+        hashed_key = hash_object.hexdigest()
+
+        if hashed_key not in cls._urllib3_poolmanagers:
+            my_pool_manager = None
+            if 'proxy' in hash_candidates_dict:
+                my_pool_manager = urllib3.ProxyManager(
+                    num_pools=hash_candidates_dict['pools_size'],
+                    maxsize=hash_candidates_dict['maxsize'],
+                    cert_reqs=hash_candidates_dict['cert_reqs'],
+                    ca_certs=hash_candidates_dict['ca_certs'],
+                    cert_file=hash_candidates_dict['cert_file'],
+                    key_file=hash_candidates_dict['key_file'],
+                    key_password=hash_candidates_dict['key_password'],
+                    proxy_url=hash_candidates_dict['proxy'],
+                    proxy_headers=hash_candidates_dict['proxy_auth_headers'],
+                    keepalive_delay=hash_candidates_dict['keepalive_delay'],
+                    keepalive_idle_window=hash_candidates_dict['keepalive_idle_window']
+                )
+            else:
+                my_pool_manager = urllib3.PoolManager(
+                    num_pools=hash_candidates_dict['pools_size'],
+                    maxsize=hash_candidates_dict['maxsize'],
+                    cert_reqs=hash_candidates_dict['cert_reqs'],
+                    ca_certs=hash_candidates_dict['ca_certs'],
+                    cert_file=hash_candidates_dict['cert_file'],
+                    key_file=hash_candidates_dict['key_file'],
+                    key_password=hash_candidates_dict['key_password'],
+                    keepalive_delay=hash_candidates_dict['keepalive_delay'],
+                    keepalive_idle_window=hash_candidates_dict['keepalive_idle_window']
+                )
+
+            cls._urllib3_poolmanagers[hashed_key] = my_pool_manager
+        
+        return cls._urllib3_poolmanagers[hashed_key]
+
+    def __init__(self, mconfig = None):
         # urllib3.PoolManager will pass all kw parameters to connectionpool
         # https://github.com/shazow/urllib3/blob/f9409436f83aeb79fbaf090181cd81b784f1b8ce/urllib3/poolmanager.py#L75
         # https://github.com/shazow/urllib3/blob/f9409436f83aeb79fbaf090181cd81b784f1b8ce/urllib3/connectionpool.py#L680
@@ -64,73 +106,78 @@ class RESTClientObject(object):
         # ca_certs vs cert_file vs key_file
         # http://stackoverflow.com/a/23957365/2985775
 
+        if mconfig is None:
+            raise ValueError("Merchant Configuration cannot be None")
+        
+        log_config = mconfig.log_config
+
         self.logger = LogFactory.setup_logger(self.__class__.__name__, log_config)
         if log_config is not None:
             self.enable_log = log_config.enable_log
         else:
             self.enable_log = False
 
-        if rconfig is None:
-            rconfig = Configuration()
-
         # cert_reqs
-        if rconfig.verify_ssl:
+        if mconfig.ssl_verify:
             cert_reqs = ssl.CERT_REQUIRED
         else:
             cert_reqs = ssl.CERT_NONE
 
         # ca_certs
-        if rconfig.ssl_ca_cert:
-            ca_certs = rconfig.ssl_ca_cert
-        else:
-            # if not set certificate file, use Mozilla's root certificates.
-            ca_certs = certifi.where()
+        ca_certs = certifi.where()
 
-        # cert_file
-        cert_file = rconfig.cert_file
+        cert_file = None
+        key_file = None
+        key_password = None
 
-        # key file
-        key_file = rconfig.key_file
+        if mconfig.enable_client_cert:
+            import os
+            # cert_file
+            cert_file = os.path.join(mconfig.client_cert_dir, mconfig.ssl_client_cert)
 
-        # key pass
-        key_password = rconfig.key_password
+            # key file
+            key_file = os.path.join(mconfig.client_cert_dir, mconfig.private_key)
+
+            # key pass
+            key_password = mconfig.ssl_key_password
+
+        pools_size = mconfig.get_MaxPoolSize()
+        maxsize = mconfig.get_MaxNumIdleConnections()
+        keepalive_delay = mconfig.get_MaxKeepAliveDelay()
+        keepalive_idle_window = mconfig.get_MaxKeepAliveIdleWindow()
+
+        hash_candidates = {}
+        hash_candidates['cert_reqs'] = cert_reqs
+        hash_candidates['ca_certs'] = ca_certs
+        hash_candidates['cert_file'] = cert_file
+        hash_candidates['key_file'] = key_file
+        hash_candidates['key_password'] = key_password
+        hash_candidates['pools_size'] = pools_size
+        hash_candidates['maxsize'] = maxsize
+        hash_candidates['keepalive_delay'] = keepalive_delay
+        hash_candidates['keepalive_idle_window'] = keepalive_idle_window
 
         # proxy
-        proxy = rconfig.proxy
+        proxy_host = mconfig.proxy_address
 
         # https pool manager
-        if proxy:
+        if mconfig.use_proxy and not (proxy_host is None or proxy_host == ''):
             # proxy auth headers
-            proxy_username = rconfig.proxy_username
-            proxy_password = rconfig.proxy_password
+            proxy_host = proxy_host.replace("https://", "").replace("http://", "")
+            proxy_port = mconfig.proxy_port
+            proxy_username = mconfig.proxy_username
+            proxy_password = mconfig.proxy_password
             proxy_auth_headers = None
 
-            
+            proxy = 'http://' + proxy_host + ':' + proxy_port
+
+            hash_candidates['proxy'] = proxy
+
             if (proxy_username and proxy_password):
                 proxy_auth_headers = make_headers(proxy_basic_auth=proxy_username + ':' + proxy_password)
+                hash_candidates['proxy_auth_headers'] = proxy_auth_headers
 
-            self.pool_manager = urllib3.ProxyManager(
-                num_pools=pools_size,
-                maxsize=maxsize,
-                cert_reqs=cert_reqs,
-                ca_certs=ca_certs,
-                cert_file=cert_file,
-                key_file=key_file,
-                key_password=key_password,
-                proxy_url=proxy,
-                proxy_headers=proxy_auth_headers
-            )
-        else:
-            self.pool_manager = urllib3.PoolManager(
-                num_pools=pools_size,
-                maxsize=maxsize,
-                cert_reqs=cert_reqs,
-                ca_certs=ca_certs,
-                cert_file=cert_file,
-                key_file=key_file,
-                key_password=key_password
-            )
-
+        self.pool_manager = self.__class__.get_pool_manager(hash_candidates)
 
     def request(self, method, url, query_params=None, headers=None,
                 body=None, post_params=None, _preload_content=True, _request_timeout=None):

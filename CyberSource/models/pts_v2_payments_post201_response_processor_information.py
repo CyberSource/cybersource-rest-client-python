@@ -74,7 +74,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'expiration_time_utc': 'str',
         'order_id': 'str',
         'order_status': 'str',
-        'merchant_risk_prediction': 'str'
+        'merchant_risk_prediction': 'str',
+        'network': 'Ptsv2paymentsProcessorInformationReversalNetwork'
     }
 
     attribute_map = {
@@ -122,10 +123,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'expiration_time_utc': 'expirationTimeUtc',
         'order_id': 'orderId',
         'order_status': 'orderStatus',
-        'merchant_risk_prediction': 'merchantRiskPrediction'
+        'merchant_risk_prediction': 'merchantRiskPrediction',
+        'network': 'network'
     }
 
-    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, settlement_date=None, sequence_number=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None, custom_url=None, scheme_assigned_id=None, device_url=None, disbursement_mode=None, update_time_utc=None, expiration_time_utc=None, order_id=None, order_status=None, merchant_risk_prediction=None):
+    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, settlement_date=None, sequence_number=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None, custom_url=None, scheme_assigned_id=None, device_url=None, disbursement_mode=None, update_time_utc=None, expiration_time_utc=None, order_id=None, order_status=None, merchant_risk_prediction=None, network=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -175,6 +177,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._order_id = None
         self._order_status = None
         self._merchant_risk_prediction = None
+        self._network = None
 
         if auth_indicator is not None:
           self.auth_indicator = auth_indicator
@@ -266,6 +269,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.order_status = order_status
         if merchant_risk_prediction is not None:
           self.merchant_risk_prediction = merchant_risk_prediction
+        if network is not None:
+          self.network = network
 
     @property
     def auth_indicator(self):
@@ -432,7 +437,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def response_details(self):
         """
         Gets the response_details of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        This field might contain information about a decline. This field is supported only for **CyberSource through VisaNet**. 
+        This field might contain information about a decline. 
 
         :return: The response_details of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -443,7 +448,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def response_details(self, response_details):
         """
         Sets the response_details of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        This field might contain information about a decline. This field is supported only for **CyberSource through VisaNet**. 
+        This field might contain information about a decline. 
 
         :param response_details: The response_details of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
@@ -1279,6 +1284,27 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         """
 
         self._merchant_risk_prediction = merchant_risk_prediction
+
+    @property
+    def network(self):
+        """
+        Gets the network of this PtsV2PaymentsPost201ResponseProcessorInformation.
+
+        :return: The network of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: Ptsv2paymentsProcessorInformationReversalNetwork
+        """
+        return self._network
+
+    @network.setter
+    def network(self, network):
+        """
+        Sets the network of this PtsV2PaymentsPost201ResponseProcessorInformation.
+
+        :param network: The network of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: Ptsv2paymentsProcessorInformationReversalNetwork
+        """
+
+        self._network = network
 
     def to_dict(self):
         """

@@ -51,7 +51,7 @@ class PtsV2PaymentsPost201Response1OrderInformationAmountDetails(object):
     def refund_balance(self):
         """
         Gets the refund_balance of this PtsV2PaymentsPost201Response1OrderInformationAmountDetails.
-        This field will carry the remaning amount which can be refunded. 
+        The remaining amount which can be refunded.
 
         :return: The refund_balance of this PtsV2PaymentsPost201Response1OrderInformationAmountDetails.
         :rtype: str
@@ -62,7 +62,7 @@ class PtsV2PaymentsPost201Response1OrderInformationAmountDetails(object):
     def refund_balance(self, refund_balance):
         """
         Sets the refund_balance of this PtsV2PaymentsPost201Response1OrderInformationAmountDetails.
-        This field will carry the remaning amount which can be refunded. 
+        The remaining amount which can be refunded.
 
         :param refund_balance: The refund_balance of this PtsV2PaymentsPost201Response1OrderInformationAmountDetails.
         :type: str

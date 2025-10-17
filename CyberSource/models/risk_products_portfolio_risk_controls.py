@@ -30,7 +30,7 @@ class RiskProductsPortfolioRiskControls(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'subscription_information': 'PaymentsProductsAlternativePaymentMethodsSubscriptionInformation',
+        'subscription_information': 'PaymentsProductsPayerAuthenticationSubscriptionInformation',
         'configuration_information': 'RiskProductsPortfolioRiskControlsConfigurationInformation'
     }
 
@@ -58,7 +58,7 @@ class RiskProductsPortfolioRiskControls(object):
         Gets the subscription_information of this RiskProductsPortfolioRiskControls.
 
         :return: The subscription_information of this RiskProductsPortfolioRiskControls.
-        :rtype: PaymentsProductsAlternativePaymentMethodsSubscriptionInformation
+        :rtype: PaymentsProductsPayerAuthenticationSubscriptionInformation
         """
         return self._subscription_information
 
@@ -68,7 +68,7 @@ class RiskProductsPortfolioRiskControls(object):
         Sets the subscription_information of this RiskProductsPortfolioRiskControls.
 
         :param subscription_information: The subscription_information of this RiskProductsPortfolioRiskControls.
-        :type: PaymentsProductsAlternativePaymentMethodsSubscriptionInformation
+        :type: PaymentsProductsPayerAuthenticationSubscriptionInformation
         """
 
         self._subscription_information = subscription_information

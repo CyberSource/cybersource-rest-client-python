@@ -36,13 +36,10 @@ class ReportDefinitionsApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -71,8 +68,7 @@ class ReportDefinitionsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_resource_info_by_report_definition` STARTED")
+        self.logger.info("CALL TO METHOD `get_resource_info_by_report_definition` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -121,8 +117,7 @@ class ReportDefinitionsApi(object):
         del params['kwargs']
         # verify the required parameter 'report_definition_name' is set
         if ('report_definition_name' not in params) or (params['report_definition_name'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `report_definition_name` when calling `get_resource_info_by_report_definition`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `report_definition_name` when calling `get_resource_info_by_report_definition`")
             raise ValueError("Missing the required parameter `report_definition_name` when calling `get_resource_info_by_report_definition`")
 
 
@@ -204,8 +199,7 @@ class ReportDefinitionsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_resource_v2_info` STARTED")
+        self.logger.info("CALL TO METHOD `get_resource_v2_info` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):

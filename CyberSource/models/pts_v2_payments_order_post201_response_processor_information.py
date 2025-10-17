@@ -131,7 +131,7 @@ class PtsV2PaymentsOrderPost201ResponseProcessorInformation(object):
     def response_details(self):
         """
         Gets the response_details of this PtsV2PaymentsOrderPost201ResponseProcessorInformation.
-        This field might contain information about a decline. This field is supported only for **CyberSource through VisaNet**. 
+        This field might contain information about a decline. 
 
         :return: The response_details of this PtsV2PaymentsOrderPost201ResponseProcessorInformation.
         :rtype: str
@@ -142,7 +142,7 @@ class PtsV2PaymentsOrderPost201ResponseProcessorInformation(object):
     def response_details(self, response_details):
         """
         Sets the response_details of this PtsV2PaymentsOrderPost201ResponseProcessorInformation.
-        This field might contain information about a decline. This field is supported only for **CyberSource through VisaNet**. 
+        This field might contain information about a decline. 
 
         :param response_details: The response_details of this PtsV2PaymentsOrderPost201ResponseProcessorInformation.
         :type: str

@@ -39,7 +39,7 @@ class Upv1capturecontextsCaptureMandate(object):
         'show_confirmation_step': 'bool',
         'request_save_card': 'bool',
         'combo_card': 'bool',
-        'cpf': 'bool'
+        'cpf': 'Upv1capturecontextsCaptureMandateCPF'
     }
 
     attribute_map = {
@@ -303,10 +303,9 @@ class Upv1capturecontextsCaptureMandate(object):
     def cpf(self):
         """
         Gets the cpf of this Upv1capturecontextsCaptureMandate.
-        Configure Unified Checkout to display and capture the CPF number (Cadastro de Pessoas Físicas).  The CPF number is a unique 11-digit identifier issued to Brazilian citizens and residents for tax purposes.  Possible values: - True - False<br><br>  This field is optional.   If set to true the field is required. If set to false the field is optional. If the field is not included in the capture context then it is not captured.<br><br>  **Important:**  - If PANENTRY is specified in the allowedPaymentTypes field, the CPF number will be displayed in Unified Checkout regardless of what card number is entered.  - If CLICKTOPAY is specified in the allowedPaymentTypes field, the CPF number will be displayed in Unified Checkout only when a Visa Click To Pay card is entered. 
 
         :return: The cpf of this Upv1capturecontextsCaptureMandate.
-        :rtype: bool
+        :rtype: Upv1capturecontextsCaptureMandateCPF
         """
         return self._cpf
 
@@ -314,10 +313,9 @@ class Upv1capturecontextsCaptureMandate(object):
     def cpf(self, cpf):
         """
         Sets the cpf of this Upv1capturecontextsCaptureMandate.
-        Configure Unified Checkout to display and capture the CPF number (Cadastro de Pessoas Físicas).  The CPF number is a unique 11-digit identifier issued to Brazilian citizens and residents for tax purposes.  Possible values: - True - False<br><br>  This field is optional.   If set to true the field is required. If set to false the field is optional. If the field is not included in the capture context then it is not captured.<br><br>  **Important:**  - If PANENTRY is specified in the allowedPaymentTypes field, the CPF number will be displayed in Unified Checkout regardless of what card number is entered.  - If CLICKTOPAY is specified in the allowedPaymentTypes field, the CPF number will be displayed in Unified Checkout only when a Visa Click To Pay card is entered. 
 
         :param cpf: The cpf of this Upv1capturecontextsCaptureMandate.
-        :type: bool
+        :type: Upv1capturecontextsCaptureMandateCPF
         """
 
         self._cpf = cpf

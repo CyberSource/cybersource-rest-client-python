@@ -35,7 +35,8 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
         'response_details': 'str',
         'response_code': 'str',
         'provider_response': 'str',
-        'update_time_utc': 'str'
+        'update_time_utc': 'str',
+        'network': 'Ptsv2paymentsProcessorInformationReversalNetwork'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
         'response_details': 'responseDetails',
         'response_code': 'responseCode',
         'provider_response': 'providerResponse',
-        'update_time_utc': 'updateTimeUtc'
+        'update_time_utc': 'updateTimeUtc',
+        'network': 'network'
     }
 
-    def __init__(self, transaction_id=None, network_transaction_id=None, response_details=None, response_code=None, provider_response=None, update_time_utc=None):
+    def __init__(self, transaction_id=None, network_transaction_id=None, response_details=None, response_code=None, provider_response=None, update_time_utc=None, network=None):
         """
         PtsV2PaymentsCapturesPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
         self._response_code = None
         self._provider_response = None
         self._update_time_utc = None
+        self._network = None
 
         if transaction_id is not None:
           self.transaction_id = transaction_id
@@ -71,6 +74,8 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
           self.provider_response = provider_response
         if update_time_utc is not None:
           self.update_time_utc = update_time_utc
+        if network is not None:
+          self.network = network
 
     @property
     def transaction_id(self):
@@ -209,6 +214,27 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
         """
 
         self._update_time_utc = update_time_utc
+
+    @property
+    def network(self):
+        """
+        Gets the network of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+
+        :return: The network of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        :rtype: Ptsv2paymentsProcessorInformationReversalNetwork
+        """
+        return self._network
+
+    @network.setter
+    def network(self, network):
+        """
+        Sets the network of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+
+        :param network: The network of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        :type: Ptsv2paymentsProcessorInformationReversalNetwork
+        """
+
+        self._network = network
 
     def to_dict(self):
         """

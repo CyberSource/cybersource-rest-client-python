@@ -36,13 +36,10 @@ class ReportsApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -69,8 +66,7 @@ class ReportsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `create_report` STARTED")
+        self.logger.info("CALL TO METHOD `create_report` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -117,8 +113,7 @@ class ReportsApi(object):
         del params['kwargs']
         # verify the required parameter 'create_adhoc_report_request' is set
         if ('create_adhoc_report_request' not in params) or (params['create_adhoc_report_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `create_adhoc_report_request` when calling `create_report`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `create_adhoc_report_request` when calling `create_report`")
             raise ValueError("Missing the required parameter `create_adhoc_report_request` when calling `create_report`")
 
 
@@ -192,8 +187,7 @@ class ReportsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_report_by_report_id` STARTED")
+        self.logger.info("CALL TO METHOD `get_report_by_report_id` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -240,8 +234,7 @@ class ReportsApi(object):
         del params['kwargs']
         # verify the required parameter 'report_id' is set
         if ('report_id' not in params) or (params['report_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `report_id` when calling `get_report_by_report_id`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `report_id` when calling `get_report_by_report_id`")
             raise ValueError("Missing the required parameter `report_id` when calling `get_report_by_report_id`")
 
 
@@ -326,8 +319,7 @@ class ReportsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `search_reports` STARTED")
+        self.logger.info("CALL TO METHOD `search_reports` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -381,18 +373,15 @@ class ReportsApi(object):
         del params['kwargs']
         # verify the required parameter 'start_time' is set
         if ('start_time' not in params) or (params['start_time'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `start_time` when calling `search_reports`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `start_time` when calling `search_reports`")
             raise ValueError("Missing the required parameter `start_time` when calling `search_reports`")
         # verify the required parameter 'end_time' is set
         if ('end_time' not in params) or (params['end_time'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `end_time` when calling `search_reports`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `end_time` when calling `search_reports`")
             raise ValueError("Missing the required parameter `end_time` when calling `search_reports`")
         # verify the required parameter 'time_query_type' is set
         if ('time_query_type' not in params) or (params['time_query_type'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `time_query_type` when calling `search_reports`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `time_query_type` when calling `search_reports`")
             raise ValueError("Missing the required parameter `time_query_type` when calling `search_reports`")
 
 

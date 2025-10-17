@@ -13,7 +13,6 @@ import CyberSource.logging.log_factory as LogFactory
 
 
 class MerchantConfiguration:
-
     def __init__(self):
         self.merchant_keyid = None
         self.merchant_secretkey = None
@@ -43,8 +42,11 @@ class MerchantConfiguration:
         self.response_code = None
         self.response_message = None
         self.v_c_correlation_id = None
+        self.use_proxy = None
         self.proxy_address = None
         self.proxy_port = None
+        self.proxy_username = None
+        self.proxy_password = None
         self.key_file_name = None
         self.solution_id = None
         self.log_config = None
@@ -57,6 +59,11 @@ class MerchantConfiguration:
         self.mleForRequestPublicCertPath = None
         self.p12KeyFilePath = None
         self.logger = LogFactory.setup_logger(self.__class__.__name__)
+        self.max_num_idle_connections = GlobalLabelParameters.DEFAULT_MAX_IDLE_CONNECTIONS
+        self.max_pool_size = GlobalLabelParameters.DEFAULT_MAX_POOL_SIZE
+        self.max_keep_alive_delay = GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_DELAY
+        self.max_keep_alive_idle_window = GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_IDLE_WINDOW
+        self.ssl_verify = None
 
 #region Getters and Setters
     def set_merchant_keyid(self, value):
@@ -121,6 +128,12 @@ class MerchantConfiguration:
             else:
                 self.request_host = self.run_environment
 
+    def set_use_proxy(self, value):
+        if not (value.get('use_proxy') is None):
+            self.use_proxy = value['use_proxy']
+        else:
+            self.use_proxy = False
+
     def set_proxy_address(self, value):
         if not (value.get('proxy_address') is None):
             self.proxy_address = value['proxy_address']
@@ -128,6 +141,14 @@ class MerchantConfiguration:
     def set_proxy_port(self, value):
         if not (value.get("proxy_port") is None):
             self.proxy_port = value['proxy_port']
+
+    def set_proxy_username(self, value):
+        if not (value.get('proxy_username') is None):
+            self.proxy_username = value['proxy_username']
+
+    def set_proxy_password(self, value):
+        if not (value.get("proxy_password") is None):
+            self.proxy_password = value['proxy_password']
 
     def set_key_file_name(self, value):
         if not (value.get('key_file_name') is None):
@@ -256,12 +277,45 @@ class MerchantConfiguration:
 
     def get_p12KeyFilePath(self):
         return self.p12KeyFilePath
+    
+    def get_MaxNumIdleConnections(self):
+        return self.max_num_idle_connections
+    
+    def set_MaxNumIdleConnections(self, value):
+        if value.get('maxNumIdleConnections') is not None:
+            self.max_num_idle_connections = value['maxNumIdleConnections']
+
+    def get_MaxPoolSize(self):
+        return self.max_pool_size
+    
+    def set_MaxPoolSize(self, value):
+        if value.get('maxPoolSize') is not None:
+            self.max_pool_size = value['maxPoolSize']
+
+    def get_MaxKeepAliveDelay(self):
+        return self.max_keep_alive_delay
+    
+    def set_MaxKeepAliveDelay(self, value):
+        if value.get('maxKeepAliveDelay') is not None:
+            self.max_keep_alive_delay = value['maxKeepAliveDelay']
+
+    def get_MaxKeepAliveIdleWindow(self):
+        return self.max_keep_alive_idle_window
+    
+    def set_MaxKeepAliveIdleWindow(self, value):
+        if value.get('maxKeepAliveIdleWindow') is not None:
+            self.max_keep_alive_idle_window = value['maxKeepAliveIdleWindow']
+
+    def set_SSL_verify(self, value):
+        if not (value.get('ssl_verify') is None):
+            self.ssl_verify = value['ssl_verify']
+        else:
+            self.ssl_verify = True
 
 #endregion
 
     # This method sets the Merchant Configuration Variables to its respective values after reading from cybs.properties
     def set_merchantconfig(self, val):
-
         self.set_key_password(val)
         self.set_key_alias(val)
         self.set_key_file_path(val)
@@ -277,8 +331,11 @@ class MerchantConfiguration:
         self.set_merchant_id(val)
         self.set_authentication_type(val)
         self.set_request_host(val)
+        self.set_use_proxy(val)
         self.set_proxy_address(val)
         self.set_proxy_port(val)
+        self.set_proxy_username(val)
+        self.set_proxy_password(val)
         self.set_enable_client_cert(val)
         self.set_client_cert_dir(val)
         self.set_ssl_client_cert(val)
@@ -296,6 +353,11 @@ class MerchantConfiguration:
         self.set_mapToControlMLEonAPI(val)
         self.set_mleForRequestPublicCertPath(val)
         self.set_mleKeyAlias(val)
+        self.set_MaxNumIdleConnections(val)
+        self.set_MaxPoolSize(val)
+        self.set_MaxKeepAliveDelay(val)
+        self.set_MaxKeepAliveIdleWindow(val)
+        self.set_SSL_verify(val)
 
     # Returns the time in format as defined by RFC7231
     def get_time(self):
@@ -308,9 +370,8 @@ class MerchantConfiguration:
     def validate_merchant_details(self, details, mconfig = None):
         # verify Mandatory Properties
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.log_config)
-        if self.log_config.enable_log is True:
-            self.logger.info("START> ======================================= ")
-
+        self.logger.info("START> ======================================= ")
+        
         if self.authentication_type is None or self.authentication_type == "":
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.AUTHENTICATION_REQ,
@@ -452,15 +513,31 @@ class MerchantConfiguration:
         log_items = GlobalLabelParameters.HIDE_MERCHANT_CONFIG_PROPS
         # This displays the logic for logging all cybs.json values
         details_copy = copy.deepcopy(details)
-        if self.log_config.enable_log is True:
-            for key, value in list(details_copy.items()):
-                if key in log_items:
-                    del details_copy[key]
+        for key, value in list(details_copy.items()):
+            if key in log_items:
+                del details_copy[key]
 
-                for keys, values in list(details_copy.items()):
-                    details_copy[keys] = str(values)
+            for keys, values in list(details_copy.items()):
+                details_copy[keys] = str(values)
 
-            self.logger.info("Mconfig >      " + str(ast.literal_eval(json.dumps(details_copy))))
+        self.logger.info("Mconfig >      " + str(ast.literal_eval(json.dumps(details_copy))))
+
+        import numbers
+        if not isinstance(self.max_num_idle_connections, numbers.Number):
+            self.max_num_idle_connections = GlobalLabelParameters.DEFAULT_MAX_IDLE_CONNECTIONS
+            self.logger.error(f"maxNumIdleConnections is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_IDLE_CONNECTIONS}")
+
+        if not isinstance(self.max_pool_size, numbers.Number):
+            self.max_pool_size = GlobalLabelParameters.DEFAULT_MAX_POOL_SIZE
+            self.logger.error(f"maxPoolSize is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_POOL_SIZE}")
+
+        if not isinstance(self.max_keep_alive_delay, numbers.Number):
+            self.max_keep_alive_delay = GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_DELAY
+            self.logger.error(f"maxKeepAliveDelay is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_DELAY}")
+
+        if not isinstance(self.max_keep_alive_idle_window, numbers.Number):
+            self.max_keep_alive_idle_window = GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_IDLE_WINDOW
+            self.logger.error(f"maxKeepAliveIdleWindow is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_IDLE_WINDOW}")
 
     def check_key_file(self):
         if not(self.key_file_name and self.key_file_name.strip()):

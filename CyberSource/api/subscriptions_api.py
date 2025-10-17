@@ -36,13 +36,10 @@ class SubscriptionsApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -69,8 +66,7 @@ class SubscriptionsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `activate_subscription` STARTED")
+        self.logger.info("CALL TO METHOD `activate_subscription` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -117,8 +113,7 @@ class SubscriptionsApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `activate_subscription`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `activate_subscription`")
             raise ValueError("Missing the required parameter `id` when calling `activate_subscription`")
 
 
@@ -195,8 +190,7 @@ class SubscriptionsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `cancel_subscription` STARTED")
+        self.logger.info("CALL TO METHOD `cancel_subscription` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -242,8 +236,7 @@ class SubscriptionsApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `cancel_subscription`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `cancel_subscription`")
             raise ValueError("Missing the required parameter `id` when calling `cancel_subscription`")
 
 
@@ -318,8 +311,7 @@ class SubscriptionsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `create_subscription` STARTED")
+        self.logger.info("CALL TO METHOD `create_subscription` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -365,8 +357,7 @@ class SubscriptionsApi(object):
         del params['kwargs']
         # verify the required parameter 'create_subscription_request' is set
         if ('create_subscription_request' not in params) or (params['create_subscription_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `create_subscription_request` when calling `create_subscription`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `create_subscription_request` when calling `create_subscription`")
             raise ValueError("Missing the required parameter `create_subscription_request` when calling `create_subscription`")
 
 
@@ -440,8 +431,7 @@ class SubscriptionsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_all_subscriptions` STARTED")
+        self.logger.info("CALL TO METHOD `get_all_subscriptions` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -566,8 +556,7 @@ class SubscriptionsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_subscription` STARTED")
+        self.logger.info("CALL TO METHOD `get_subscription` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -613,8 +602,7 @@ class SubscriptionsApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_subscription`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_subscription`")
             raise ValueError("Missing the required parameter `id` when calling `get_subscription`")
 
 
@@ -688,8 +676,7 @@ class SubscriptionsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_subscription_code` STARTED")
+        self.logger.info("CALL TO METHOD `get_subscription_code` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -801,8 +788,7 @@ class SubscriptionsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `suspend_subscription` STARTED")
+        self.logger.info("CALL TO METHOD `suspend_subscription` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -848,8 +834,7 @@ class SubscriptionsApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `suspend_subscription`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `suspend_subscription`")
             raise ValueError("Missing the required parameter `id` when calling `suspend_subscription`")
 
 
@@ -925,8 +910,7 @@ class SubscriptionsApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `update_subscription` STARTED")
+        self.logger.info("CALL TO METHOD `update_subscription` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -973,13 +957,11 @@ class SubscriptionsApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `update_subscription`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `update_subscription`")
             raise ValueError("Missing the required parameter `id` when calling `update_subscription`")
         # verify the required parameter 'update_subscription' is set
         if ('update_subscription' not in params) or (params['update_subscription'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `update_subscription` when calling `update_subscription`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `update_subscription` when calling `update_subscription`")
             raise ValueError("Missing the required parameter `update_subscription` when calling `update_subscription`")
 
 

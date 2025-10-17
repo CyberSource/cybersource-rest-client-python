@@ -36,13 +36,10 @@ class MicroformIntegrationApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -68,8 +65,7 @@ class MicroformIntegrationApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `generate_capture_context` STARTED")
+        self.logger.info("CALL TO METHOD `generate_capture_context` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -115,8 +111,7 @@ class MicroformIntegrationApi(object):
         del params['kwargs']
         # verify the required parameter 'generate_capture_context_request' is set
         if ('generate_capture_context_request' not in params) or (params['generate_capture_context_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `generate_capture_context_request` when calling `generate_capture_context`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `generate_capture_context_request` when calling `generate_capture_context`")
             raise ValueError("Missing the required parameter `generate_capture_context_request` when calling `generate_capture_context`")
 
 

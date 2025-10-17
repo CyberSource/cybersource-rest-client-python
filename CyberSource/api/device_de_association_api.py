@@ -36,13 +36,10 @@ class DeviceDeAssociationApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -68,8 +65,7 @@ class DeviceDeAssociationApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `delete_terminal_association` STARTED")
+        self.logger.info("CALL TO METHOD `delete_terminal_association` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -115,8 +111,7 @@ class DeviceDeAssociationApi(object):
         del params['kwargs']
         # verify the required parameter 'de_association_request_body' is set
         if ('de_association_request_body' not in params) or (params['de_association_request_body'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `de_association_request_body` when calling `delete_terminal_association`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `de_association_request_body` when calling `delete_terminal_association`")
             raise ValueError("Missing the required parameter `de_association_request_body` when calling `delete_terminal_association`")
 
 
@@ -182,13 +177,12 @@ class DeviceDeAssociationApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param list[DeviceDeAssociateV3Request] device_de_associate_v3_request: deviceId that has to be de-associated to the destination organizationId. (required)
-        :return: list[InlineResponse2007]
+        :return: list[InlineResponse2008]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `post_de_associate_v3_terminal` STARTED")
+        self.logger.info("CALL TO METHOD `post_de_associate_v3_terminal` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -212,7 +206,7 @@ class DeviceDeAssociationApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param list[DeviceDeAssociateV3Request] device_de_associate_v3_request: deviceId that has to be de-associated to the destination organizationId. (required)
-        :return: list[InlineResponse2007]
+        :return: list[InlineResponse2008]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -234,8 +228,7 @@ class DeviceDeAssociationApi(object):
         del params['kwargs']
         # verify the required parameter 'device_de_associate_v3_request' is set
         if ('device_de_associate_v3_request' not in params) or (params['device_de_associate_v3_request'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `device_de_associate_v3_request` when calling `post_de_associate_v3_terminal`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `device_de_associate_v3_request` when calling `post_de_associate_v3_terminal`")
             raise ValueError("Missing the required parameter `device_de_associate_v3_request` when calling `post_de_associate_v3_terminal`")
 
 
@@ -278,7 +271,7 @@ class DeviceDeAssociationApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='list[InlineResponse2007]',
+                                        response_type='list[InlineResponse2008]',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

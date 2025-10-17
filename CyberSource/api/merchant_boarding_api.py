@@ -36,13 +36,10 @@ class MerchantBoardingApi(object):
     """
 	
     def __init__(self, merchant_config, api_client=None):
-        config = Configuration()
         if api_client:
             self.api_client = api_client
         else:
-            if not config.api_client:
-                config.api_client = ApiClient()
-            self.api_client = config.api_client
+            self.api_client = ApiClient()
         self.api_client.set_configuration(merchant_config)
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
@@ -63,13 +60,12 @@ class MerchantBoardingApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str registration_id: Identifies the boarding registration to be updated (required)
-        :return: InlineResponse2002
+        :return: InlineResponse2003
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_registration` STARTED")
+        self.logger.info("CALL TO METHOD `get_registration` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -93,7 +89,7 @@ class MerchantBoardingApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str registration_id: Identifies the boarding registration to be updated (required)
-        :return: InlineResponse2002
+        :return: InlineResponse2003
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -115,8 +111,7 @@ class MerchantBoardingApi(object):
         del params['kwargs']
         # verify the required parameter 'registration_id' is set
         if ('registration_id' not in params) or (params['registration_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `registration_id` when calling `get_registration`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `registration_id` when calling `get_registration`")
             raise ValueError("Missing the required parameter `registration_id` when calling `get_registration`")
 
 
@@ -163,7 +158,7 @@ class MerchantBoardingApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2002',
+                                        response_type='InlineResponse2003',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -192,8 +187,7 @@ class MerchantBoardingApi(object):
                  returns the request thread.
         """
 
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `post_registration` STARTED")
+        self.logger.info("CALL TO METHOD `post_registration` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
@@ -240,8 +234,7 @@ class MerchantBoardingApi(object):
         del params['kwargs']
         # verify the required parameter 'post_registration_body' is set
         if ('post_registration_body' not in params) or (params['post_registration_body'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `post_registration_body` when calling `post_registration`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `post_registration_body` when calling `post_registration`")
             raise ValueError("Missing the required parameter `post_registration_body` when calling `post_registration`")
 
 
