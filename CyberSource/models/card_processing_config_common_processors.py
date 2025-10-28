@@ -35,6 +35,7 @@ class CardProcessingConfigCommonProcessors(object):
         'merchant_verification_value': 'str',
         'aba_number': 'str',
         'acquirer': 'CardProcessingConfigCommonAcquirer',
+        'acquirers': 'dict(str, CardProcessingConfigCommonAcquirers)',
         'merchant_id': 'str',
         'terminal_id': 'str',
         'payment_types': 'dict(str, CardProcessingConfigCommonPaymentTypes)',
@@ -85,6 +86,7 @@ class CardProcessingConfigCommonProcessors(object):
         'merchant_verification_value': 'merchantVerificationValue',
         'aba_number': 'abaNumber',
         'acquirer': 'acquirer',
+        'acquirers': 'acquirers',
         'merchant_id': 'merchantId',
         'terminal_id': 'terminalId',
         'payment_types': 'paymentTypes',
@@ -129,7 +131,7 @@ class CardProcessingConfigCommonProcessors(object):
         'merchant_tier': 'merchantTier'
     }
 
-    def __init__(self, batch_group=None, business_application_id=None, merchant_verification_value=None, aba_number=None, acquirer=None, merchant_id=None, terminal_id=None, payment_types=None, currencies=None, visa_aggregator_id=None, amex_aggregator_id=None, master_card_aggregator_id=None, sic_code=None, allow_multiple_bills=None, allow_merchant_descriptor_override=None, enhanced_data=None, fire_safety_indicator=None, quasi_cash=None, acquirer_merchant_id=None, avs_format=None, enable_long_trans_ref_no=None, enable_level2=None, enable_multiple_transaction_advice_addendum=None, amex_transaction_advice_addendum1=None, enable_multi_line_items=None, enable_transaction_reference_number=None, enable_auto_auth_reversal_after_void=None, enable_expresspay_pan_translation=None, enable_credit_auth=None, industry_code=None, send_amex_level2_data=None, soft_descriptor_type=None, vital_number=None, bank_number=None, chain_number=None, merchant_bin_number=None, merchant_location_number=None, store_id=None, travel_agency_code=None, travel_agency_name=None, settlement_currency=None, enable_least_cost_routing=None, enable_cvv_response_indicator=None, enable_multi_currency_processing=None, enable_pos_network_switching=None, enable_dynamic_currency_conversion=None, merchant_tier=None):
+    def __init__(self, batch_group=None, business_application_id=None, merchant_verification_value=None, aba_number=None, acquirer=None, acquirers=None, merchant_id=None, terminal_id=None, payment_types=None, currencies=None, visa_aggregator_id=None, amex_aggregator_id=None, master_card_aggregator_id=None, sic_code=None, allow_multiple_bills=None, allow_merchant_descriptor_override=None, enhanced_data=None, fire_safety_indicator=None, quasi_cash=None, acquirer_merchant_id=None, avs_format=None, enable_long_trans_ref_no=None, enable_level2=None, enable_multiple_transaction_advice_addendum=None, amex_transaction_advice_addendum1=None, enable_multi_line_items=None, enable_transaction_reference_number=None, enable_auto_auth_reversal_after_void=None, enable_expresspay_pan_translation=None, enable_credit_auth=None, industry_code=None, send_amex_level2_data=None, soft_descriptor_type=None, vital_number=None, bank_number=None, chain_number=None, merchant_bin_number=None, merchant_location_number=None, store_id=None, travel_agency_code=None, travel_agency_name=None, settlement_currency=None, enable_least_cost_routing=None, enable_cvv_response_indicator=None, enable_multi_currency_processing=None, enable_pos_network_switching=None, enable_dynamic_currency_conversion=None, merchant_tier=None):
         """
         CardProcessingConfigCommonProcessors - a model defined in Swagger
         """
@@ -139,6 +141,7 @@ class CardProcessingConfigCommonProcessors(object):
         self._merchant_verification_value = None
         self._aba_number = None
         self._acquirer = None
+        self._acquirers = None
         self._merchant_id = None
         self._terminal_id = None
         self._payment_types = None
@@ -192,6 +195,8 @@ class CardProcessingConfigCommonProcessors(object):
           self.aba_number = aba_number
         if acquirer is not None:
           self.acquirer = acquirer
+        if acquirers is not None:
+          self.acquirers = acquirers
         self.merchant_id = merchant_id
         if terminal_id is not None:
           self.terminal_id = terminal_id
@@ -388,6 +393,29 @@ class CardProcessingConfigCommonProcessors(object):
         """
 
         self._acquirer = acquirer
+
+    @property
+    def acquirers(self):
+        """
+        Gets the acquirers of this CardProcessingConfigCommonProcessors.
+        Identifies the financial institution acting as the acquirer of this customer transaction. The acquirer is the member or system user that signed the merchant.
+
+        :return: The acquirers of this CardProcessingConfigCommonProcessors.
+        :rtype: dict(str, CardProcessingConfigCommonAcquirers)
+        """
+        return self._acquirers
+
+    @acquirers.setter
+    def acquirers(self, acquirers):
+        """
+        Sets the acquirers of this CardProcessingConfigCommonProcessors.
+        Identifies the financial institution acting as the acquirer of this customer transaction. The acquirer is the member or system user that signed the merchant.
+
+        :param acquirers: The acquirers of this CardProcessingConfigCommonProcessors.
+        :type: dict(str, CardProcessingConfigCommonAcquirers)
+        """
+
+        self._acquirers = acquirers
 
     @property
     def merchant_id(self):

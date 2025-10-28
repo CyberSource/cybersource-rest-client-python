@@ -42,10 +42,14 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'card_verification': 'Riskv1decisionsProcessorInformationCardVerification',
         'ach_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationAchVerification',
         'electronic_verification_results': 'TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults',
+        'issuer_information': 'PtsV2PaymentsPost201Response1IssuerInformation',
         'event_status': 'str',
         'system_trace_audit_number': 'str',
         'response_code_source': 'str',
         'payment_account_reference_number': 'str',
+        'response_details': 'str',
+        'raw_response_local': 'str',
+        'raw_response': 'str',
         'routing': 'PtsV2PaymentsPost201ResponseProcessorInformationRouting'
     }
 
@@ -62,14 +66,18 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'card_verification': 'cardVerification',
         'ach_verification': 'achVerification',
         'electronic_verification_results': 'electronicVerificationResults',
+        'issuer_information': 'issuerInformation',
         'event_status': 'eventStatus',
         'system_trace_audit_number': 'systemTraceAuditNumber',
         'response_code_source': 'responseCodeSource',
         'payment_account_reference_number': 'paymentAccountReferenceNumber',
+        'response_details': 'responseDetails',
+        'raw_response_local': 'rawResponseLocal',
+        'raw_response': 'rawResponse',
         'routing': 'routing'
     }
 
-    def __init__(self, processor=None, multi_processor_routing=None, transaction_id=None, network_transaction_id=None, retrieval_reference_number=None, response_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, event_status=None, system_trace_audit_number=None, response_code_source=None, payment_account_reference_number=None, routing=None):
+    def __init__(self, processor=None, multi_processor_routing=None, transaction_id=None, network_transaction_id=None, retrieval_reference_number=None, response_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, issuer_information=None, event_status=None, system_trace_audit_number=None, response_code_source=None, payment_account_reference_number=None, response_details=None, raw_response_local=None, raw_response=None, routing=None):
         """
         TssV2TransactionsGet200ResponseProcessorInformation - a model defined in Swagger
         """
@@ -86,10 +94,14 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         self._card_verification = None
         self._ach_verification = None
         self._electronic_verification_results = None
+        self._issuer_information = None
         self._event_status = None
         self._system_trace_audit_number = None
         self._response_code_source = None
         self._payment_account_reference_number = None
+        self._response_details = None
+        self._raw_response_local = None
+        self._raw_response = None
         self._routing = None
 
         if processor is not None:
@@ -116,6 +128,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
           self.ach_verification = ach_verification
         if electronic_verification_results is not None:
           self.electronic_verification_results = electronic_verification_results
+        if issuer_information is not None:
+          self.issuer_information = issuer_information
         if event_status is not None:
           self.event_status = event_status
         if system_trace_audit_number is not None:
@@ -124,6 +138,12 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
           self.response_code_source = response_code_source
         if payment_account_reference_number is not None:
           self.payment_account_reference_number = payment_account_reference_number
+        if response_details is not None:
+          self.response_details = response_details
+        if raw_response_local is not None:
+          self.raw_response_local = raw_response_local
+        if raw_response is not None:
+          self.raw_response = raw_response
         if routing is not None:
           self.routing = routing
 
@@ -394,6 +414,27 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         self._electronic_verification_results = electronic_verification_results
 
     @property
+    def issuer_information(self):
+        """
+        Gets the issuer_information of this TssV2TransactionsGet200ResponseProcessorInformation.
+
+        :return: The issuer_information of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :rtype: PtsV2PaymentsPost201Response1IssuerInformation
+        """
+        return self._issuer_information
+
+    @issuer_information.setter
+    def issuer_information(self, issuer_information):
+        """
+        Sets the issuer_information of this TssV2TransactionsGet200ResponseProcessorInformation.
+
+        :param issuer_information: The issuer_information of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :type: PtsV2PaymentsPost201Response1IssuerInformation
+        """
+
+        self._issuer_information = issuer_information
+
+    @property
     def event_status(self):
         """
         Gets the event_status of this TssV2TransactionsGet200ResponseProcessorInformation.
@@ -484,6 +525,75 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         """
 
         self._payment_account_reference_number = payment_account_reference_number
+
+    @property
+    def response_details(self):
+        """
+        Gets the response_details of this TssV2TransactionsGet200ResponseProcessorInformation.
+        This field might contain information about a decline. 
+
+        :return: The response_details of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._response_details
+
+    @response_details.setter
+    def response_details(self, response_details):
+        """
+        Sets the response_details of this TssV2TransactionsGet200ResponseProcessorInformation.
+        This field might contain information about a decline. 
+
+        :param response_details: The response_details of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._response_details = response_details
+
+    @property
+    def raw_response_local(self):
+        """
+        Gets the raw_response_local of this TssV2TransactionsGet200ResponseProcessorInformation.
+        Failure reason returned by the processor in the local language of the processor.
+
+        :return: The raw_response_local of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._raw_response_local
+
+    @raw_response_local.setter
+    def raw_response_local(self, raw_response_local):
+        """
+        Sets the raw_response_local of this TssV2TransactionsGet200ResponseProcessorInformation.
+        Failure reason returned by the processor in the local language of the processor.
+
+        :param raw_response_local: The raw_response_local of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._raw_response_local = raw_response_local
+
+    @property
+    def raw_response(self):
+        """
+        Gets the raw_response of this TssV2TransactionsGet200ResponseProcessorInformation.
+        Failure reason returned by the processor.
+
+        :return: The raw_response of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._raw_response
+
+    @raw_response.setter
+    def raw_response(self, raw_response):
+        """
+        Sets the raw_response of this TssV2TransactionsGet200ResponseProcessorInformation.
+        Failure reason returned by the processor.
+
+        :param raw_response: The raw_response of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._raw_response = raw_response
 
     @property
     def routing(self):

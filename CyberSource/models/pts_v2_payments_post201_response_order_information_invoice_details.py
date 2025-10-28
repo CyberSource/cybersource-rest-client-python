@@ -30,7 +30,7 @@ class PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'level3_transmission_status': 'bool',
+        'level3_transmission_status': 'str',
         'sales_slip_number': 'int'
     }
 
@@ -56,10 +56,10 @@ class PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails(object):
     def level3_transmission_status(self):
         """
         Gets the level3_transmission_status of this PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails.
-        Indicates whether CyberSource sent the Level III information to the processor. The possible values are:  If your account is not enabled for Level III data or if you did not include the purchasing level field in your request, CyberSource does not include the Level III data in the request sent to the processor.  Possible values: - **true** - **false** 
+        Indicates whether CyberSource sent the Level III information to the processor. The possible values are:  If your account is not enabled for Level III data or if you did not include the purchasing level field in your request, CyberSource does not include the Level III data in the request sent to the processor.  Possible values: - **Y** for true - **N** for false 
 
         :return: The level3_transmission_status of this PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails.
-        :rtype: bool
+        :rtype: str
         """
         return self._level3_transmission_status
 
@@ -67,10 +67,10 @@ class PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails(object):
     def level3_transmission_status(self, level3_transmission_status):
         """
         Sets the level3_transmission_status of this PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails.
-        Indicates whether CyberSource sent the Level III information to the processor. The possible values are:  If your account is not enabled for Level III data or if you did not include the purchasing level field in your request, CyberSource does not include the Level III data in the request sent to the processor.  Possible values: - **true** - **false** 
+        Indicates whether CyberSource sent the Level III information to the processor. The possible values are:  If your account is not enabled for Level III data or if you did not include the purchasing level field in your request, CyberSource does not include the Level III data in the request sent to the processor.  Possible values: - **Y** for true - **N** for false 
 
         :param level3_transmission_status: The level3_transmission_status of this PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails.
-        :type: bool
+        :type: str
         """
 
         self._level3_transmission_status = level3_transmission_status

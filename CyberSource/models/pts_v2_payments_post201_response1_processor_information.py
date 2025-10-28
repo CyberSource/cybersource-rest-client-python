@@ -132,7 +132,7 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
     def raw_response(self):
         """
         Gets the raw_response of this PtsV2PaymentsPost201Response1ProcessorInformation.
-        This field is set to the value of failure reason returned by the processor. 
+        Failure reason returned by the processor.
 
         :return: The raw_response of this PtsV2PaymentsPost201Response1ProcessorInformation.
         :rtype: str
@@ -143,7 +143,7 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
     def raw_response(self, raw_response):
         """
         Sets the raw_response of this PtsV2PaymentsPost201Response1ProcessorInformation.
-        This field is set to the value of failure reason returned by the processor. 
+        Failure reason returned by the processor.
 
         :param raw_response: The raw_response of this PtsV2PaymentsPost201Response1ProcessorInformation.
         :type: str
@@ -155,7 +155,7 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
     def raw_response_local(self):
         """
         Gets the raw_response_local of this PtsV2PaymentsPost201Response1ProcessorInformation.
-        This field is set to the value of failure reason returned by the processor in the local language of the processor. 
+        Failure reason returned by the processor in the local language of the processor.
 
         :return: The raw_response_local of this PtsV2PaymentsPost201Response1ProcessorInformation.
         :rtype: str
@@ -166,7 +166,7 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
     def raw_response_local(self, raw_response_local):
         """
         Sets the raw_response_local of this PtsV2PaymentsPost201Response1ProcessorInformation.
-        This field is set to the value of failure reason returned by the processor in the local language of the processor. 
+        Failure reason returned by the processor in the local language of the processor.
 
         :param raw_response_local: The raw_response_local of this PtsV2PaymentsPost201Response1ProcessorInformation.
         :type: str

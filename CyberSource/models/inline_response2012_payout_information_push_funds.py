@@ -392,7 +392,7 @@ class InlineResponse2012PayoutInformationPushFunds(object):
     def domestic_participant(self):
         """
         Gets the domestic_participant of this InlineResponse2012PayoutInformationPushFunds.
-        This field indicates if domestic OCTs (push funds) are allowed. Note: Supported only in US for domestic transactions involving Push Payments Gateway Service(PPGS). Possible values:   - `true`   - `false` 
+        This field indicates if domestic OCTs (push funds) are allowed. Possible values:   - `true`   - `false` 
 
         :return: The domestic_participant of this InlineResponse2012PayoutInformationPushFunds.
         :rtype: str
@@ -403,7 +403,7 @@ class InlineResponse2012PayoutInformationPushFunds(object):
     def domestic_participant(self, domestic_participant):
         """
         Sets the domestic_participant of this InlineResponse2012PayoutInformationPushFunds.
-        This field indicates if domestic OCTs (push funds) are allowed. Note: Supported only in US for domestic transactions involving Push Payments Gateway Service(PPGS). Possible values:   - `true`   - `false` 
+        This field indicates if domestic OCTs (push funds) are allowed. Possible values:   - `true`   - `false` 
 
         :param domestic_participant: The domestic_participant of this InlineResponse2012PayoutInformationPushFunds.
         :type: str
@@ -415,7 +415,7 @@ class InlineResponse2012PayoutInformationPushFunds(object):
     def cross_border_participant(self):
         """
         Gets the cross_border_participant of this InlineResponse2012PayoutInformationPushFunds.
-        This field indicates if cross-border OCTs (push funds) are allowed. Note: Supported only in US for cross-border transactions involving Push Payments Gateway Service(PPGS). Possible values:   - `true`   - `false` 
+        This field indicates if cross-border OCTs (push funds) are allowed. Possible values:   - `true`   - `false` 
 
         :return: The cross_border_participant of this InlineResponse2012PayoutInformationPushFunds.
         :rtype: str
@@ -426,7 +426,7 @@ class InlineResponse2012PayoutInformationPushFunds(object):
     def cross_border_participant(self, cross_border_participant):
         """
         Sets the cross_border_participant of this InlineResponse2012PayoutInformationPushFunds.
-        This field indicates if cross-border OCTs (push funds) are allowed. Note: Supported only in US for cross-border transactions involving Push Payments Gateway Service(PPGS). Possible values:   - `true`   - `false` 
+        This field indicates if cross-border OCTs (push funds) are allowed. Possible values:   - `true`   - `false` 
 
         :param cross_border_participant: The cross_border_participant of this InlineResponse2012PayoutInformationPushFunds.
         :type: str

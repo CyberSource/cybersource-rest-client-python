@@ -30,26 +30,36 @@ class InlineResponse4042(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'submit_time_utc': 'datetime',
+        'status': 'str',
         'reason': 'str',
         'message': 'str',
-        'details': 'list[InlineResponse4042Details]'
+        'details': 'list[InlineResponse4007Details]'
     }
 
     attribute_map = {
+        'submit_time_utc': 'submitTimeUtc',
+        'status': 'status',
         'reason': 'reason',
         'message': 'message',
         'details': 'details'
     }
 
-    def __init__(self, reason=None, message=None, details=None):
+    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, details=None):
         """
         InlineResponse4042 - a model defined in Swagger
         """
 
+        self._submit_time_utc = None
+        self._status = None
         self._reason = None
         self._message = None
         self._details = None
 
+        if submit_time_utc is not None:
+          self.submit_time_utc = submit_time_utc
+        if status is not None:
+          self.status = status
         if reason is not None:
           self.reason = reason
         if message is not None:
@@ -58,9 +68,56 @@ class InlineResponse4042(object):
           self.details = details
 
     @property
+    def submit_time_utc(self):
+        """
+        Gets the submit_time_utc of this InlineResponse4042.
+        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :return: The submit_time_utc of this InlineResponse4042.
+        :rtype: datetime
+        """
+        return self._submit_time_utc
+
+    @submit_time_utc.setter
+    def submit_time_utc(self, submit_time_utc):
+        """
+        Sets the submit_time_utc of this InlineResponse4042.
+        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :param submit_time_utc: The submit_time_utc of this InlineResponse4042.
+        :type: datetime
+        """
+
+        self._submit_time_utc = submit_time_utc
+
+    @property
+    def status(self):
+        """
+        Gets the status of this InlineResponse4042.
+        The http status description of the submitted request.
+
+        :return: The status of this InlineResponse4042.
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this InlineResponse4042.
+        The http status description of the submitted request.
+
+        :param status: The status of this InlineResponse4042.
+        :type: str
+        """
+
+        self._status = status
+
+    @property
     def reason(self):
         """
         Gets the reason of this InlineResponse4042.
+        Documented reason codes. Client should be able to use the key for generating their own error message Possible Values:   - 'RESOURCE_NOT_FOUND' 
 
         :return: The reason of this InlineResponse4042.
         :rtype: str
@@ -71,6 +128,7 @@ class InlineResponse4042(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse4042.
+        Documented reason codes. Client should be able to use the key for generating their own error message Possible Values:   - 'RESOURCE_NOT_FOUND' 
 
         :param reason: The reason of this InlineResponse4042.
         :type: str
@@ -82,6 +140,7 @@ class InlineResponse4042(object):
     def message(self):
         """
         Gets the message of this InlineResponse4042.
+        Descriptive message for the error.
 
         :return: The message of this InlineResponse4042.
         :rtype: str
@@ -92,6 +151,7 @@ class InlineResponse4042(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse4042.
+        Descriptive message for the error.
 
         :param message: The message of this InlineResponse4042.
         :type: str
@@ -105,7 +165,7 @@ class InlineResponse4042(object):
         Gets the details of this InlineResponse4042.
 
         :return: The details of this InlineResponse4042.
-        :rtype: list[InlineResponse4042Details]
+        :rtype: list[InlineResponse4007Details]
         """
         return self._details
 
@@ -115,7 +175,7 @@ class InlineResponse4042(object):
         Sets the details of this InlineResponse4042.
 
         :param details: The details of this InlineResponse4042.
-        :type: list[InlineResponse4042Details]
+        :type: list[InlineResponse4007Details]
         """
 
         self._details = details

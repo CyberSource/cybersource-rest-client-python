@@ -30,7 +30,7 @@ class PaymentsProductsPayerAuthentication(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'subscription_information': 'PaymentsProductsAlternativePaymentMethodsSubscriptionInformation',
+        'subscription_information': 'PaymentsProductsPayerAuthenticationSubscriptionInformation',
         'configuration_information': 'PaymentsProductsPayerAuthenticationConfigurationInformation'
     }
 
@@ -58,7 +58,7 @@ class PaymentsProductsPayerAuthentication(object):
         Gets the subscription_information of this PaymentsProductsPayerAuthentication.
 
         :return: The subscription_information of this PaymentsProductsPayerAuthentication.
-        :rtype: PaymentsProductsAlternativePaymentMethodsSubscriptionInformation
+        :rtype: PaymentsProductsPayerAuthenticationSubscriptionInformation
         """
         return self._subscription_information
 
@@ -68,7 +68,7 @@ class PaymentsProductsPayerAuthentication(object):
         Sets the subscription_information of this PaymentsProductsPayerAuthentication.
 
         :param subscription_information: The subscription_information of this PaymentsProductsPayerAuthentication.
-        :type: PaymentsProductsAlternativePaymentMethodsSubscriptionInformation
+        :type: PaymentsProductsPayerAuthenticationSubscriptionInformation
         """
 
         self._subscription_information = subscription_information

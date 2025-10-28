@@ -35,6 +35,7 @@ class PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigura
         'redirect_success_url': 'str',
         'redirect_cancel_url': 'str',
         'redirect_failure_url': 'str',
+        'underwriting': 'UnderwritingConfiguration',
         'additional_configurations': 'list[PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsAdditionalConfigurations]'
     }
 
@@ -44,10 +45,11 @@ class PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigura
         'redirect_success_url': 'redirectSuccessUrl',
         'redirect_cancel_url': 'redirectCancelUrl',
         'redirect_failure_url': 'redirectFailureUrl',
+        'underwriting': 'underwriting',
         'additional_configurations': 'additionalConfigurations'
     }
 
-    def __init__(self, merchant_id=None, logo_url=None, redirect_success_url=None, redirect_cancel_url=None, redirect_failure_url=None, additional_configurations=None):
+    def __init__(self, merchant_id=None, logo_url=None, redirect_success_url=None, redirect_cancel_url=None, redirect_failure_url=None, underwriting=None, additional_configurations=None):
         """
         PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsPaymentMethods - a model defined in Swagger
         """
@@ -57,6 +59,7 @@ class PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigura
         self._redirect_success_url = None
         self._redirect_cancel_url = None
         self._redirect_failure_url = None
+        self._underwriting = None
         self._additional_configurations = None
 
         if merchant_id is not None:
@@ -69,6 +72,8 @@ class PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigura
           self.redirect_cancel_url = redirect_cancel_url
         if redirect_failure_url is not None:
           self.redirect_failure_url = redirect_failure_url
+        if underwriting is not None:
+          self.underwriting = underwriting
         if additional_configurations is not None:
           self.additional_configurations = additional_configurations
 
@@ -186,6 +191,27 @@ class PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigura
         """
 
         self._redirect_failure_url = redirect_failure_url
+
+    @property
+    def underwriting(self):
+        """
+        Gets the underwriting of this PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsPaymentMethods.
+
+        :return: The underwriting of this PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsPaymentMethods.
+        :rtype: UnderwritingConfiguration
+        """
+        return self._underwriting
+
+    @underwriting.setter
+    def underwriting(self, underwriting):
+        """
+        Sets the underwriting of this PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsPaymentMethods.
+
+        :param underwriting: The underwriting of this PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsPaymentMethods.
+        :type: UnderwritingConfiguration
+        """
+
+        self._underwriting = underwriting
 
     @property
     def additional_configurations(self):

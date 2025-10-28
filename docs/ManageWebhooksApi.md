@@ -109,7 +109,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_webhook_subscriptions_by_org**
-> list[InlineResponse2004] get_webhook_subscriptions_by_org(organization_id, product_id=product_id, event_type=event_type)
+> list[InlineResponse2005] get_webhook_subscriptions_by_org(organization_id, product_id=product_id, event_type=event_type)
 
 Get Details On All Created Webhooks
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[InlineResponse2004]**](InlineResponse2004.md)
+[**list[InlineResponse2005]**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -209,7 +209,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notification_subscriptions_v2_webhooks_webhook_id_patch**
-> InlineResponse2005 notification_subscriptions_v2_webhooks_webhook_id_patch(webhook_id, update_webhook=update_webhook)
+> InlineResponse2006 notification_subscriptions_v2_webhooks_webhook_id_patch(webhook_id, update_webhook=update_webhook)
 
 Update a Webhook Subscription
 
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 

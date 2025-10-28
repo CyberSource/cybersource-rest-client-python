@@ -135,7 +135,7 @@ class PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet(object):
     def user_name(self):
         """
         Gets the user_name of this PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet.
-        The Venmo user name chosen by the user, also know as a Venmo handle. 
+        The Venmo user name chosen by the user, also known as a Venmo handle. 
 
         :return: The user_name of this PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet.
         :rtype: str
@@ -146,7 +146,7 @@ class PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet(object):
     def user_name(self, user_name):
         """
         Sets the user_name of this PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet.
-        The Venmo user name chosen by the user, also know as a Venmo handle. 
+        The Venmo user name chosen by the user, also known as a Venmo handle. 
 
         :param user_name: The user_name of this PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet.
         :type: str

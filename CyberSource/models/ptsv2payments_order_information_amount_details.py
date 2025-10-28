@@ -30,6 +30,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'refund_balance': 'str',
         'gift_wrap_amount': 'str',
         'invoice_amount': 'str',
         'total_amount': 'str',
@@ -64,6 +65,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     }
 
     attribute_map = {
+        'refund_balance': 'refundBalance',
         'gift_wrap_amount': 'giftWrapAmount',
         'invoice_amount': 'invoiceAmount',
         'total_amount': 'totalAmount',
@@ -97,11 +99,12 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         'anticipated_amount': 'anticipatedAmount'
     }
 
-    def __init__(self, gift_wrap_amount=None, invoice_amount=None, total_amount=None, sub_total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, surcharge=None, settlement_amount=None, settlement_currency=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_amount=None, original_currency=None, cashback_amount=None, currency_conversion=None, oct_surcharge=None, order=None, anticipated_amount=None):
+    def __init__(self, refund_balance=None, gift_wrap_amount=None, invoice_amount=None, total_amount=None, sub_total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, surcharge=None, settlement_amount=None, settlement_currency=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_amount=None, original_currency=None, cashback_amount=None, currency_conversion=None, oct_surcharge=None, order=None, anticipated_amount=None):
         """
         Ptsv2paymentsOrderInformationAmountDetails - a model defined in Swagger
         """
 
+        self._refund_balance = None
         self._gift_wrap_amount = None
         self._invoice_amount = None
         self._total_amount = None
@@ -134,6 +137,8 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         self._order = None
         self._anticipated_amount = None
 
+        if refund_balance is not None:
+          self.refund_balance = refund_balance
         if gift_wrap_amount is not None:
           self.gift_wrap_amount = gift_wrap_amount
         if invoice_amount is not None:
@@ -196,6 +201,29 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
           self.order = order
         if anticipated_amount is not None:
           self.anticipated_amount = anticipated_amount
+
+    @property
+    def refund_balance(self):
+        """
+        Gets the refund_balance of this Ptsv2paymentsOrderInformationAmountDetails.
+        The remaining amount which can be refunded.
+
+        :return: The refund_balance of this Ptsv2paymentsOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._refund_balance
+
+    @refund_balance.setter
+    def refund_balance(self, refund_balance):
+        """
+        Sets the refund_balance of this Ptsv2paymentsOrderInformationAmountDetails.
+        The remaining amount which can be refunded.
+
+        :param refund_balance: The refund_balance of this Ptsv2paymentsOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._refund_balance = refund_balance
 
     @property
     def gift_wrap_amount(self):

@@ -25,6 +25,7 @@ from .invoice_settings_api import InvoiceSettingsApi
 from .invoices_api import InvoicesApi
 from .manage_webhooks_api import ManageWebhooksApi
 from .merchant_boarding_api import MerchantBoardingApi
+from .merchant_defined_fields_api import MerchantDefinedFieldsApi
 from .microform_integration_api import MicroformIntegrationApi
 from .net_fundings_api import NetFundingsApi
 from .notification_of_changes_api import NotificationOfChangesApi
@@ -55,9 +56,11 @@ from .unified_checkout_capture_context_api import UnifiedCheckoutCaptureContextA
 from .user_management_api import UserManagementApi
 from .user_management_search_api import UserManagementSearchApi
 from .verification_api import VerificationApi
+from .bank_account_validation_api import BankAccountValidationApi
 from .billing_agreements_api import BillingAgreementsApi
 from .capture_api import CaptureApi
 from .credit_api import CreditApi
+from .merchant_defined_fields_api import MerchantDefinedFieldsApi
 from .orders_api import OrdersApi
 from .payment_tokens_api import PaymentTokensApi
 from .payments_api import PaymentsApi

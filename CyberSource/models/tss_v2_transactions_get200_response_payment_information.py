@@ -31,6 +31,7 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
     """
     swagger_types = {
         'payment_type': 'TssV2TransactionsGet200ResponsePaymentInformationPaymentType',
+        'e_wallet': 'PtsV2PaymentsPost201Response1PaymentInformationEWallet',
         'customer': 'TssV2TransactionsGet200ResponsePaymentInformationCustomer',
         'card': 'TssV2TransactionsGet200ResponsePaymentInformationCard',
         'brands': 'list[TssV2TransactionsGet200ResponsePaymentInformationBrands]',
@@ -48,6 +49,7 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
 
     attribute_map = {
         'payment_type': 'paymentType',
+        'e_wallet': 'eWallet',
         'customer': 'customer',
         'card': 'card',
         'brands': 'brands',
@@ -63,12 +65,13 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         'fluid_data': 'fluidData'
     }
 
-    def __init__(self, payment_type=None, customer=None, card=None, brands=None, features=None, invoice=None, network=None, issuer_information=None, bank=None, account_features=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, fluid_data=None):
+    def __init__(self, payment_type=None, e_wallet=None, customer=None, card=None, brands=None, features=None, invoice=None, network=None, issuer_information=None, bank=None, account_features=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, fluid_data=None):
         """
         TssV2TransactionsGet200ResponsePaymentInformation - a model defined in Swagger
         """
 
         self._payment_type = None
+        self._e_wallet = None
         self._customer = None
         self._card = None
         self._brands = None
@@ -85,6 +88,8 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
 
         if payment_type is not None:
           self.payment_type = payment_type
+        if e_wallet is not None:
+          self.e_wallet = e_wallet
         if customer is not None:
           self.customer = customer
         if card is not None:
@@ -132,6 +137,27 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         """
 
         self._payment_type = payment_type
+
+    @property
+    def e_wallet(self):
+        """
+        Gets the e_wallet of this TssV2TransactionsGet200ResponsePaymentInformation.
+
+        :return: The e_wallet of this TssV2TransactionsGet200ResponsePaymentInformation.
+        :rtype: PtsV2PaymentsPost201Response1PaymentInformationEWallet
+        """
+        return self._e_wallet
+
+    @e_wallet.setter
+    def e_wallet(self, e_wallet):
+        """
+        Sets the e_wallet of this TssV2TransactionsGet200ResponsePaymentInformation.
+
+        :param e_wallet: The e_wallet of this TssV2TransactionsGet200ResponsePaymentInformation.
+        :type: PtsV2PaymentsPost201Response1PaymentInformationEWallet
+        """
+
+        self._e_wallet = e_wallet
 
     @property
     def customer(self):

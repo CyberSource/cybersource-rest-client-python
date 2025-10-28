@@ -31,26 +31,31 @@ class InvoicingV2InvoiceSettingsGet200Response(object):
     """
     swagger_types = {
         'submit_time_utc': 'str',
-        'invoice_settings_information': 'InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation'
+        'invoice_settings_information': 'InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation',
+        'merchant_information': 'InvoicingV2InvoiceSettingsGet200ResponseMerchantInformation'
     }
 
     attribute_map = {
         'submit_time_utc': 'submitTimeUtc',
-        'invoice_settings_information': 'invoiceSettingsInformation'
+        'invoice_settings_information': 'invoiceSettingsInformation',
+        'merchant_information': 'merchantInformation'
     }
 
-    def __init__(self, submit_time_utc=None, invoice_settings_information=None):
+    def __init__(self, submit_time_utc=None, invoice_settings_information=None, merchant_information=None):
         """
         InvoicingV2InvoiceSettingsGet200Response - a model defined in Swagger
         """
 
         self._submit_time_utc = None
         self._invoice_settings_information = None
+        self._merchant_information = None
 
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
         if invoice_settings_information is not None:
           self.invoice_settings_information = invoice_settings_information
+        if merchant_information is not None:
+          self.merchant_information = merchant_information
 
     @property
     def submit_time_utc(self):
@@ -95,6 +100,27 @@ class InvoicingV2InvoiceSettingsGet200Response(object):
         """
 
         self._invoice_settings_information = invoice_settings_information
+
+    @property
+    def merchant_information(self):
+        """
+        Gets the merchant_information of this InvoicingV2InvoiceSettingsGet200Response.
+
+        :return: The merchant_information of this InvoicingV2InvoiceSettingsGet200Response.
+        :rtype: InvoicingV2InvoiceSettingsGet200ResponseMerchantInformation
+        """
+        return self._merchant_information
+
+    @merchant_information.setter
+    def merchant_information(self, merchant_information):
+        """
+        Sets the merchant_information of this InvoicingV2InvoiceSettingsGet200Response.
+
+        :param merchant_information: The merchant_information of this InvoicingV2InvoiceSettingsGet200Response.
+        :type: InvoicingV2InvoiceSettingsGet200ResponseMerchantInformation
+        """
+
+        self._merchant_information = merchant_information
 
     def to_dict(self):
         """

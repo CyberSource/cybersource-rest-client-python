@@ -30,171 +30,58 @@ class InlineResponse2008(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'total_count': 'int',
-        'offset': 'int',
-        'limit': 'int',
-        'sort': 'str',
-        'count': 'int',
-        'devices': 'list[InlineResponse2008Devices]'
+        'status': 'str',
+        'devices': 'list[Dmsv3devicesdeassociateDevices]'
     }
 
     attribute_map = {
-        'total_count': 'totalCount',
-        'offset': 'offset',
-        'limit': 'limit',
-        'sort': 'sort',
-        'count': 'count',
+        'status': 'status',
         'devices': 'devices'
     }
 
-    def __init__(self, total_count=None, offset=None, limit=None, sort=None, count=None, devices=None):
+    def __init__(self, status=None, devices=None):
         """
         InlineResponse2008 - a model defined in Swagger
         """
 
-        self._total_count = None
-        self._offset = None
-        self._limit = None
-        self._sort = None
-        self._count = None
+        self._status = None
         self._devices = None
 
-        if total_count is not None:
-          self.total_count = total_count
-        if offset is not None:
-          self.offset = offset
-        if limit is not None:
-          self.limit = limit
-        if sort is not None:
-          self.sort = sort
-        if count is not None:
-          self.count = count
+        if status is not None:
+          self.status = status
         if devices is not None:
           self.devices = devices
 
     @property
-    def total_count(self):
+    def status(self):
         """
-        Gets the total_count of this InlineResponse2008.
-        Total number of results.
+        Gets the status of this InlineResponse2008.
+        Possible values: - OK
 
-        :return: The total_count of this InlineResponse2008.
-        :rtype: int
-        """
-        return self._total_count
-
-    @total_count.setter
-    def total_count(self, total_count):
-        """
-        Sets the total_count of this InlineResponse2008.
-        Total number of results.
-
-        :param total_count: The total_count of this InlineResponse2008.
-        :type: int
-        """
-
-        self._total_count = total_count
-
-    @property
-    def offset(self):
-        """
-        Gets the offset of this InlineResponse2008.
-        Controls the starting point within the collection of results, which defaults to 0. The first item in the collection is retrieved by setting a zero offset.  For example, if you have a collection of 15 items to be retrieved from a resource and you specify limit=5, you can retrieve the entire set of results in 3 successive requests by varying the offset value like this:  `offset=0` `offset=5` `offset=10`  **Note:** If an offset larger than the number of results is provided, this will result in no embedded object being returned. 
-
-        :return: The offset of this InlineResponse2008.
-        :rtype: int
-        """
-        return self._offset
-
-    @offset.setter
-    def offset(self, offset):
-        """
-        Sets the offset of this InlineResponse2008.
-        Controls the starting point within the collection of results, which defaults to 0. The first item in the collection is retrieved by setting a zero offset.  For example, if you have a collection of 15 items to be retrieved from a resource and you specify limit=5, you can retrieve the entire set of results in 3 successive requests by varying the offset value like this:  `offset=0` `offset=5` `offset=10`  **Note:** If an offset larger than the number of results is provided, this will result in no embedded object being returned. 
-
-        :param offset: The offset of this InlineResponse2008.
-        :type: int
-        """
-
-        self._offset = offset
-
-    @property
-    def limit(self):
-        """
-        Gets the limit of this InlineResponse2008.
-        Controls the maximum number of items that may be returned for a single request. The default is 20, the maximum is 2500. 
-
-        :return: The limit of this InlineResponse2008.
-        :rtype: int
-        """
-        return self._limit
-
-    @limit.setter
-    def limit(self, limit):
-        """
-        Sets the limit of this InlineResponse2008.
-        Controls the maximum number of items that may be returned for a single request. The default is 20, the maximum is 2500. 
-
-        :param limit: The limit of this InlineResponse2008.
-        :type: int
-        """
-
-        self._limit = limit
-
-    @property
-    def sort(self):
-        """
-        Gets the sort of this InlineResponse2008.
-        A comma separated list of the following form:  `terminalCreationDate:desc or serialNumber or terminalUpdationDate` 
-
-        :return: The sort of this InlineResponse2008.
+        :return: The status of this InlineResponse2008.
         :rtype: str
         """
-        return self._sort
+        return self._status
 
-    @sort.setter
-    def sort(self, sort):
+    @status.setter
+    def status(self, status):
         """
-        Sets the sort of this InlineResponse2008.
-        A comma separated list of the following form:  `terminalCreationDate:desc or serialNumber or terminalUpdationDate` 
+        Sets the status of this InlineResponse2008.
+        Possible values: - OK
 
-        :param sort: The sort of this InlineResponse2008.
+        :param status: The status of this InlineResponse2008.
         :type: str
         """
 
-        self._sort = sort
-
-    @property
-    def count(self):
-        """
-        Gets the count of this InlineResponse2008.
-        Results for this page, this could be below the limit.
-
-        :return: The count of this InlineResponse2008.
-        :rtype: int
-        """
-        return self._count
-
-    @count.setter
-    def count(self, count):
-        """
-        Sets the count of this InlineResponse2008.
-        Results for this page, this could be below the limit.
-
-        :param count: The count of this InlineResponse2008.
-        :type: int
-        """
-
-        self._count = count
+        self._status = status
 
     @property
     def devices(self):
         """
         Gets the devices of this InlineResponse2008.
-        A collection of devices
 
         :return: The devices of this InlineResponse2008.
-        :rtype: list[InlineResponse2008Devices]
+        :rtype: list[Dmsv3devicesdeassociateDevices]
         """
         return self._devices
 
@@ -202,10 +89,9 @@ class InlineResponse2008(object):
     def devices(self, devices):
         """
         Sets the devices of this InlineResponse2008.
-        A collection of devices
 
         :param devices: The devices of this InlineResponse2008.
-        :type: list[InlineResponse2008Devices]
+        :type: list[Dmsv3devicesdeassociateDevices]
         """
 
         self._devices = devices

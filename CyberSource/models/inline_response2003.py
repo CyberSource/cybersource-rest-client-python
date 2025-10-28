@@ -30,99 +30,199 @@ class InlineResponse2003(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'product_id': 'str',
-        'product_name': 'str',
-        'event_types': 'list[Notificationsubscriptionsv2productsorganizationIdEventTypes]'
+        'registration_information': 'Boardingv1registrationsRegistrationInformation',
+        'integration_information': 'InlineResponse2003IntegrationInformation',
+        'organization_information': 'Boardingv1registrationsOrganizationInformation',
+        'product_information': 'Boardingv1registrationsProductInformation',
+        'product_information_setups': 'list[InlineResponse2013ProductInformationSetups]',
+        'document_information': 'Boardingv1registrationsDocumentInformation',
+        'details': 'dict(str, list[object])'
     }
 
     attribute_map = {
-        'product_id': 'productId',
-        'product_name': 'productName',
-        'event_types': 'eventTypes'
+        'registration_information': 'registrationInformation',
+        'integration_information': 'integrationInformation',
+        'organization_information': 'organizationInformation',
+        'product_information': 'productInformation',
+        'product_information_setups': 'productInformationSetups',
+        'document_information': 'documentInformation',
+        'details': 'details'
     }
 
-    def __init__(self, product_id=None, product_name=None, event_types=None):
+    def __init__(self, registration_information=None, integration_information=None, organization_information=None, product_information=None, product_information_setups=None, document_information=None, details=None):
         """
         InlineResponse2003 - a model defined in Swagger
         """
 
-        self._product_id = None
-        self._product_name = None
-        self._event_types = None
+        self._registration_information = None
+        self._integration_information = None
+        self._organization_information = None
+        self._product_information = None
+        self._product_information_setups = None
+        self._document_information = None
+        self._details = None
 
-        if product_id is not None:
-          self.product_id = product_id
-        if product_name is not None:
-          self.product_name = product_name
-        if event_types is not None:
-          self.event_types = event_types
-
-    @property
-    def product_id(self):
-        """
-        Gets the product_id of this InlineResponse2003.
-        Product ID.
-
-        :return: The product_id of this InlineResponse2003.
-        :rtype: str
-        """
-        return self._product_id
-
-    @product_id.setter
-    def product_id(self, product_id):
-        """
-        Sets the product_id of this InlineResponse2003.
-        Product ID.
-
-        :param product_id: The product_id of this InlineResponse2003.
-        :type: str
-        """
-
-        self._product_id = product_id
+        if registration_information is not None:
+          self.registration_information = registration_information
+        if integration_information is not None:
+          self.integration_information = integration_information
+        if organization_information is not None:
+          self.organization_information = organization_information
+        if product_information is not None:
+          self.product_information = product_information
+        if product_information_setups is not None:
+          self.product_information_setups = product_information_setups
+        if document_information is not None:
+          self.document_information = document_information
+        if details is not None:
+          self.details = details
 
     @property
-    def product_name(self):
+    def registration_information(self):
         """
-        Gets the product_name of this InlineResponse2003.
-        Product Name.
+        Gets the registration_information of this InlineResponse2003.
 
-        :return: The product_name of this InlineResponse2003.
-        :rtype: str
+        :return: The registration_information of this InlineResponse2003.
+        :rtype: Boardingv1registrationsRegistrationInformation
         """
-        return self._product_name
+        return self._registration_information
 
-    @product_name.setter
-    def product_name(self, product_name):
+    @registration_information.setter
+    def registration_information(self, registration_information):
         """
-        Sets the product_name of this InlineResponse2003.
-        Product Name.
+        Sets the registration_information of this InlineResponse2003.
 
-        :param product_name: The product_name of this InlineResponse2003.
-        :type: str
+        :param registration_information: The registration_information of this InlineResponse2003.
+        :type: Boardingv1registrationsRegistrationInformation
         """
 
-        self._product_name = product_name
+        self._registration_information = registration_information
 
     @property
-    def event_types(self):
+    def integration_information(self):
         """
-        Gets the event_types of this InlineResponse2003.
+        Gets the integration_information of this InlineResponse2003.
 
-        :return: The event_types of this InlineResponse2003.
-        :rtype: list[Notificationsubscriptionsv2productsorganizationIdEventTypes]
+        :return: The integration_information of this InlineResponse2003.
+        :rtype: InlineResponse2003IntegrationInformation
         """
-        return self._event_types
+        return self._integration_information
 
-    @event_types.setter
-    def event_types(self, event_types):
+    @integration_information.setter
+    def integration_information(self, integration_information):
         """
-        Sets the event_types of this InlineResponse2003.
+        Sets the integration_information of this InlineResponse2003.
 
-        :param event_types: The event_types of this InlineResponse2003.
-        :type: list[Notificationsubscriptionsv2productsorganizationIdEventTypes]
+        :param integration_information: The integration_information of this InlineResponse2003.
+        :type: InlineResponse2003IntegrationInformation
         """
 
-        self._event_types = event_types
+        self._integration_information = integration_information
+
+    @property
+    def organization_information(self):
+        """
+        Gets the organization_information of this InlineResponse2003.
+
+        :return: The organization_information of this InlineResponse2003.
+        :rtype: Boardingv1registrationsOrganizationInformation
+        """
+        return self._organization_information
+
+    @organization_information.setter
+    def organization_information(self, organization_information):
+        """
+        Sets the organization_information of this InlineResponse2003.
+
+        :param organization_information: The organization_information of this InlineResponse2003.
+        :type: Boardingv1registrationsOrganizationInformation
+        """
+
+        self._organization_information = organization_information
+
+    @property
+    def product_information(self):
+        """
+        Gets the product_information of this InlineResponse2003.
+
+        :return: The product_information of this InlineResponse2003.
+        :rtype: Boardingv1registrationsProductInformation
+        """
+        return self._product_information
+
+    @product_information.setter
+    def product_information(self, product_information):
+        """
+        Sets the product_information of this InlineResponse2003.
+
+        :param product_information: The product_information of this InlineResponse2003.
+        :type: Boardingv1registrationsProductInformation
+        """
+
+        self._product_information = product_information
+
+    @property
+    def product_information_setups(self):
+        """
+        Gets the product_information_setups of this InlineResponse2003.
+
+        :return: The product_information_setups of this InlineResponse2003.
+        :rtype: list[InlineResponse2013ProductInformationSetups]
+        """
+        return self._product_information_setups
+
+    @product_information_setups.setter
+    def product_information_setups(self, product_information_setups):
+        """
+        Sets the product_information_setups of this InlineResponse2003.
+
+        :param product_information_setups: The product_information_setups of this InlineResponse2003.
+        :type: list[InlineResponse2013ProductInformationSetups]
+        """
+
+        self._product_information_setups = product_information_setups
+
+    @property
+    def document_information(self):
+        """
+        Gets the document_information of this InlineResponse2003.
+
+        :return: The document_information of this InlineResponse2003.
+        :rtype: Boardingv1registrationsDocumentInformation
+        """
+        return self._document_information
+
+    @document_information.setter
+    def document_information(self, document_information):
+        """
+        Sets the document_information of this InlineResponse2003.
+
+        :param document_information: The document_information of this InlineResponse2003.
+        :type: Boardingv1registrationsDocumentInformation
+        """
+
+        self._document_information = document_information
+
+    @property
+    def details(self):
+        """
+        Gets the details of this InlineResponse2003.
+
+        :return: The details of this InlineResponse2003.
+        :rtype: dict(str, list[object])
+        """
+        return self._details
+
+    @details.setter
+    def details(self, details):
+        """
+        Sets the details of this InlineResponse2003.
+
+        :param details: The details of this InlineResponse2003.
+        :type: dict(str, list[object])
+        """
+
+        self._details = details
 
     def to_dict(self):
         """
