@@ -30,11 +30,35 @@ class TestMerchantDefinedFieldsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_create_merchant_defined_field_definition(self):
+        """
+        Test case for create_merchant_defined_field_definition
+
+        Create merchant defined field for a given reference type
+        """
+        pass
+
+    def test_delete_merchant_defined_fields_definitions(self):
+        """
+        Test case for delete_merchant_defined_fields_definitions
+
+        Delete a MerchantDefinedField by ID
+        """
+        pass
+
     def test_get_merchant_defined_fields_definitions(self):
         """
         Test case for get_merchant_defined_fields_definitions
 
         Get all merchant defined fields for a given reference type
+        """
+        pass
+
+    def test_put_merchant_defined_fields_definitions(self):
+        """
+        Test case for put_merchant_defined_fields_definitions
+
+        Update a MerchantDefinedField by ID
         """
         pass
 

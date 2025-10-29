@@ -34,7 +34,8 @@ class PtsV2PayoutsPost201ResponseProcessorInformation(object):
         'response_code': 'str',
         'transaction_id': 'str',
         'system_trace_audit_number': 'str',
-        'response_code_source': 'str'
+        'response_code_source': 'str',
+        'merchant_advice': 'PtsV2PaymentsRefundPost201ResponseProcessorInformationMerchantAdvice'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class PtsV2PayoutsPost201ResponseProcessorInformation(object):
         'response_code': 'responseCode',
         'transaction_id': 'transactionId',
         'system_trace_audit_number': 'systemTraceAuditNumber',
-        'response_code_source': 'responseCodeSource'
+        'response_code_source': 'responseCodeSource',
+        'merchant_advice': 'merchantAdvice'
     }
 
-    def __init__(self, approval_code=None, response_code=None, transaction_id=None, system_trace_audit_number=None, response_code_source=None):
+    def __init__(self, approval_code=None, response_code=None, transaction_id=None, system_trace_audit_number=None, response_code_source=None, merchant_advice=None):
         """
         PtsV2PayoutsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class PtsV2PayoutsPost201ResponseProcessorInformation(object):
         self._transaction_id = None
         self._system_trace_audit_number = None
         self._response_code_source = None
+        self._merchant_advice = None
 
         if approval_code is not None:
           self.approval_code = approval_code
@@ -66,6 +69,8 @@ class PtsV2PayoutsPost201ResponseProcessorInformation(object):
           self.system_trace_audit_number = system_trace_audit_number
         if response_code_source is not None:
           self.response_code_source = response_code_source
+        if merchant_advice is not None:
+          self.merchant_advice = merchant_advice
 
     @property
     def approval_code(self):
@@ -181,6 +186,27 @@ class PtsV2PayoutsPost201ResponseProcessorInformation(object):
         """
 
         self._response_code_source = response_code_source
+
+    @property
+    def merchant_advice(self):
+        """
+        Gets the merchant_advice of this PtsV2PayoutsPost201ResponseProcessorInformation.
+
+        :return: The merchant_advice of this PtsV2PayoutsPost201ResponseProcessorInformation.
+        :rtype: PtsV2PaymentsRefundPost201ResponseProcessorInformationMerchantAdvice
+        """
+        return self._merchant_advice
+
+    @merchant_advice.setter
+    def merchant_advice(self, merchant_advice):
+        """
+        Sets the merchant_advice of this PtsV2PayoutsPost201ResponseProcessorInformation.
+
+        :param merchant_advice: The merchant_advice of this PtsV2PayoutsPost201ResponseProcessorInformation.
+        :type: PtsV2PaymentsRefundPost201ResponseProcessorInformationMerchantAdvice
+        """
+
+        self._merchant_advice = merchant_advice
 
     def to_dict(self):
         """

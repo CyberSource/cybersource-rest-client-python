@@ -8,6 +8,11 @@ Name | Type | Description | Notes
 **expiration_year** | **str** | Four-digit year in which the credit card expires.  Format: &#x60;YYYY&#x60;.  | [optional] 
 **type** | **str** | The type of card (Card Network). Possible Values: - 001: visa  | [optional] 
 **suffix** | **str** | The customer&#39;s latest payment card number suffix.  | [optional] 
+**issue_date** | **date** | Card issuance date. XML date format: YYYY-MM-DD. | [optional] 
+**activation_date** | **date** | Card activation date. XML date format: YYYY-MM-DD | [optional] 
+**expiration_printed** | **bool** | Indicates if the expiration date is printed on the card. | [optional] 
+**security_code_printed** | **bool** | Indicates if the Card Verification Number is printed on the card. | [optional] 
+**terms_and_conditions** | [**Tmsv2TokenizedCardCardTermsAndConditions**](Tmsv2TokenizedCardCardTermsAndConditions.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

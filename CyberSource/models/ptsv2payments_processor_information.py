@@ -33,17 +33,19 @@ class Ptsv2paymentsProcessorInformation(object):
         'pre_approval_token': 'str',
         'authorization_options': 'Ptsv2paymentsProcessorInformationAuthorizationOptions',
         'reversal': 'Ptsv2paymentsProcessorInformationReversal',
-        'network': 'Ptsv2paymentsProcessorInformationReversalNetwork'
+        'network': 'Ptsv2paymentsProcessorInformationReversalNetwork',
+        'response_source_code': 'str'
     }
 
     attribute_map = {
         'pre_approval_token': 'preApprovalToken',
         'authorization_options': 'authorizationOptions',
         'reversal': 'reversal',
-        'network': 'network'
+        'network': 'network',
+        'response_source_code': 'responseSourceCode'
     }
 
-    def __init__(self, pre_approval_token=None, authorization_options=None, reversal=None, network=None):
+    def __init__(self, pre_approval_token=None, authorization_options=None, reversal=None, network=None, response_source_code=None):
         """
         Ptsv2paymentsProcessorInformation - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class Ptsv2paymentsProcessorInformation(object):
         self._authorization_options = None
         self._reversal = None
         self._network = None
+        self._response_source_code = None
 
         if pre_approval_token is not None:
           self.pre_approval_token = pre_approval_token
@@ -61,6 +64,8 @@ class Ptsv2paymentsProcessorInformation(object):
           self.reversal = reversal
         if network is not None:
           self.network = network
+        if response_source_code is not None:
+          self.response_source_code = response_source_code
 
     @property
     def pre_approval_token(self):
@@ -147,6 +152,29 @@ class Ptsv2paymentsProcessorInformation(object):
         """
 
         self._network = network
+
+    @property
+    def response_source_code(self):
+        """
+        Gets the response_source_code of this Ptsv2paymentsProcessorInformation.
+        Field contains the response source code that identifies the source. 
+
+        :return: The response_source_code of this Ptsv2paymentsProcessorInformation.
+        :rtype: str
+        """
+        return self._response_source_code
+
+    @response_source_code.setter
+    def response_source_code(self, response_source_code):
+        """
+        Sets the response_source_code of this Ptsv2paymentsProcessorInformation.
+        Field contains the response source code that identifies the source. 
+
+        :param response_source_code: The response_source_code of this Ptsv2paymentsProcessorInformation.
+        :type: str
+        """
+
+        self._response_source_code = response_source_code
 
     def to_dict(self):
         """

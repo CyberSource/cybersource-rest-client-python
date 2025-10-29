@@ -44,7 +44,7 @@ class CapturePaymentRequest(object):
         'installment_information': 'Ptsv2paymentsidcapturesInstallmentInformation',
         'travel_information': 'Ptsv2paymentsTravelInformation',
         'promotion_information': 'Ptsv2paymentsPromotionInformation',
-        'processor_information': 'Ptsv2reversalsProcessorInformation'
+        'processor_information': 'Ptsv2paymentsidcapturesProcessorInformation'
     }
 
     attribute_map = {
@@ -419,7 +419,7 @@ class CapturePaymentRequest(object):
         Gets the processor_information of this CapturePaymentRequest.
 
         :return: The processor_information of this CapturePaymentRequest.
-        :rtype: Ptsv2reversalsProcessorInformation
+        :rtype: Ptsv2paymentsidcapturesProcessorInformation
         """
         return self._processor_information
 
@@ -429,7 +429,7 @@ class CapturePaymentRequest(object):
         Sets the processor_information of this CapturePaymentRequest.
 
         :param processor_information: The processor_information of this CapturePaymentRequest.
-        :type: Ptsv2reversalsProcessorInformation
+        :type: Ptsv2paymentsidcapturesProcessorInformation
         """
 
         self._processor_information = processor_information

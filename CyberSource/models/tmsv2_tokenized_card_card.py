@@ -34,7 +34,12 @@ class Tmsv2TokenizedCardCard(object):
         'expiration_month': 'str',
         'expiration_year': 'str',
         'type': 'str',
-        'suffix': 'str'
+        'suffix': 'str',
+        'issue_date': 'date',
+        'activation_date': 'date',
+        'expiration_printed': 'bool',
+        'security_code_printed': 'bool',
+        'terms_and_conditions': 'Tmsv2TokenizedCardCardTermsAndConditions'
     }
 
     attribute_map = {
@@ -42,10 +47,15 @@ class Tmsv2TokenizedCardCard(object):
         'expiration_month': 'expirationMonth',
         'expiration_year': 'expirationYear',
         'type': 'type',
-        'suffix': 'suffix'
+        'suffix': 'suffix',
+        'issue_date': 'issueDate',
+        'activation_date': 'activationDate',
+        'expiration_printed': 'expirationPrinted',
+        'security_code_printed': 'securityCodePrinted',
+        'terms_and_conditions': 'termsAndConditions'
     }
 
-    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, suffix=None):
+    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, suffix=None, issue_date=None, activation_date=None, expiration_printed=None, security_code_printed=None, terms_and_conditions=None):
         """
         Tmsv2TokenizedCardCard - a model defined in Swagger
         """
@@ -55,6 +65,11 @@ class Tmsv2TokenizedCardCard(object):
         self._expiration_year = None
         self._type = None
         self._suffix = None
+        self._issue_date = None
+        self._activation_date = None
+        self._expiration_printed = None
+        self._security_code_printed = None
+        self._terms_and_conditions = None
 
         if number is not None:
           self.number = number
@@ -66,6 +81,16 @@ class Tmsv2TokenizedCardCard(object):
           self.type = type
         if suffix is not None:
           self.suffix = suffix
+        if issue_date is not None:
+          self.issue_date = issue_date
+        if activation_date is not None:
+          self.activation_date = activation_date
+        if expiration_printed is not None:
+          self.expiration_printed = expiration_printed
+        if security_code_printed is not None:
+          self.security_code_printed = security_code_printed
+        if terms_and_conditions is not None:
+          self.terms_and_conditions = terms_and_conditions
 
     @property
     def number(self):
@@ -181,6 +206,119 @@ class Tmsv2TokenizedCardCard(object):
         """
 
         self._suffix = suffix
+
+    @property
+    def issue_date(self):
+        """
+        Gets the issue_date of this Tmsv2TokenizedCardCard.
+        Card issuance date. XML date format: YYYY-MM-DD.
+
+        :return: The issue_date of this Tmsv2TokenizedCardCard.
+        :rtype: date
+        """
+        return self._issue_date
+
+    @issue_date.setter
+    def issue_date(self, issue_date):
+        """
+        Sets the issue_date of this Tmsv2TokenizedCardCard.
+        Card issuance date. XML date format: YYYY-MM-DD.
+
+        :param issue_date: The issue_date of this Tmsv2TokenizedCardCard.
+        :type: date
+        """
+
+        self._issue_date = issue_date
+
+    @property
+    def activation_date(self):
+        """
+        Gets the activation_date of this Tmsv2TokenizedCardCard.
+        Card activation date. XML date format: YYYY-MM-DD
+
+        :return: The activation_date of this Tmsv2TokenizedCardCard.
+        :rtype: date
+        """
+        return self._activation_date
+
+    @activation_date.setter
+    def activation_date(self, activation_date):
+        """
+        Sets the activation_date of this Tmsv2TokenizedCardCard.
+        Card activation date. XML date format: YYYY-MM-DD
+
+        :param activation_date: The activation_date of this Tmsv2TokenizedCardCard.
+        :type: date
+        """
+
+        self._activation_date = activation_date
+
+    @property
+    def expiration_printed(self):
+        """
+        Gets the expiration_printed of this Tmsv2TokenizedCardCard.
+        Indicates if the expiration date is printed on the card.
+
+        :return: The expiration_printed of this Tmsv2TokenizedCardCard.
+        :rtype: bool
+        """
+        return self._expiration_printed
+
+    @expiration_printed.setter
+    def expiration_printed(self, expiration_printed):
+        """
+        Sets the expiration_printed of this Tmsv2TokenizedCardCard.
+        Indicates if the expiration date is printed on the card.
+
+        :param expiration_printed: The expiration_printed of this Tmsv2TokenizedCardCard.
+        :type: bool
+        """
+
+        self._expiration_printed = expiration_printed
+
+    @property
+    def security_code_printed(self):
+        """
+        Gets the security_code_printed of this Tmsv2TokenizedCardCard.
+        Indicates if the Card Verification Number is printed on the card.
+
+        :return: The security_code_printed of this Tmsv2TokenizedCardCard.
+        :rtype: bool
+        """
+        return self._security_code_printed
+
+    @security_code_printed.setter
+    def security_code_printed(self, security_code_printed):
+        """
+        Sets the security_code_printed of this Tmsv2TokenizedCardCard.
+        Indicates if the Card Verification Number is printed on the card.
+
+        :param security_code_printed: The security_code_printed of this Tmsv2TokenizedCardCard.
+        :type: bool
+        """
+
+        self._security_code_printed = security_code_printed
+
+    @property
+    def terms_and_conditions(self):
+        """
+        Gets the terms_and_conditions of this Tmsv2TokenizedCardCard.
+
+        :return: The terms_and_conditions of this Tmsv2TokenizedCardCard.
+        :rtype: Tmsv2TokenizedCardCardTermsAndConditions
+        """
+        return self._terms_and_conditions
+
+    @terms_and_conditions.setter
+    def terms_and_conditions(self, terms_and_conditions):
+        """
+        Sets the terms_and_conditions of this Tmsv2TokenizedCardCard.
+
+        :param terms_and_conditions: The terms_and_conditions of this Tmsv2TokenizedCardCard.
+        :type: Tmsv2TokenizedCardCardTermsAndConditions
+        """
+
+        self._terms_and_conditions = terms_and_conditions
 
     def to_dict(self):
         """
