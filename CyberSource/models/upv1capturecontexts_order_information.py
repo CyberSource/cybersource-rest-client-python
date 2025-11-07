@@ -31,8 +31,8 @@ class Upv1capturecontextsOrderInformation(object):
     """
     swagger_types = {
         'amount_details': 'Upv1capturecontextsOrderInformationAmountDetails',
-        'bill_to': 'Upv1capturecontextsOrderInformationBillTo',
-        'ship_to': 'Upv1capturecontextsOrderInformationShipTo'
+        'bill_to': 'Upv1capturecontextsDataOrderInformationBillTo',
+        'ship_to': 'Upv1capturecontextsDataOrderInformationShipTo'
     }
 
     attribute_map = {
@@ -84,7 +84,7 @@ class Upv1capturecontextsOrderInformation(object):
         Gets the bill_to of this Upv1capturecontextsOrderInformation.
 
         :return: The bill_to of this Upv1capturecontextsOrderInformation.
-        :rtype: Upv1capturecontextsOrderInformationBillTo
+        :rtype: Upv1capturecontextsDataOrderInformationBillTo
         """
         return self._bill_to
 
@@ -94,7 +94,7 @@ class Upv1capturecontextsOrderInformation(object):
         Sets the bill_to of this Upv1capturecontextsOrderInformation.
 
         :param bill_to: The bill_to of this Upv1capturecontextsOrderInformation.
-        :type: Upv1capturecontextsOrderInformationBillTo
+        :type: Upv1capturecontextsDataOrderInformationBillTo
         """
 
         self._bill_to = bill_to
@@ -105,7 +105,7 @@ class Upv1capturecontextsOrderInformation(object):
         Gets the ship_to of this Upv1capturecontextsOrderInformation.
 
         :return: The ship_to of this Upv1capturecontextsOrderInformation.
-        :rtype: Upv1capturecontextsOrderInformationShipTo
+        :rtype: Upv1capturecontextsDataOrderInformationShipTo
         """
         return self._ship_to
 
@@ -115,7 +115,7 @@ class Upv1capturecontextsOrderInformation(object):
         Sets the ship_to of this Upv1capturecontextsOrderInformation.
 
         :param ship_to: The ship_to of this Upv1capturecontextsOrderInformation.
-        :type: Upv1capturecontextsOrderInformationShipTo
+        :type: Upv1capturecontextsDataOrderInformationShipTo
         """
 
         self._ship_to = ship_to

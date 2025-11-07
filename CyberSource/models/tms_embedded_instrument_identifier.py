@@ -35,8 +35,10 @@ class TmsEmbeddedInstrumentIdentifier(object):
         'object': 'str',
         'state': 'str',
         'type': 'str',
+        'source': 'str',
         'token_provisioning_information': 'Ptsv2paymentsTokenInformationTokenProvisioningInformation',
         'card': 'TmsEmbeddedInstrumentIdentifierCard',
+        'point_of_sale_information': 'TmsEmbeddedInstrumentIdentifierPointOfSaleInformation',
         'bank_account': 'TmsEmbeddedInstrumentIdentifierBankAccount',
         'tokenized_card': 'Tmsv2TokenizedCard',
         'issuer': 'TmsEmbeddedInstrumentIdentifierIssuer',
@@ -52,8 +54,10 @@ class TmsEmbeddedInstrumentIdentifier(object):
         'object': 'object',
         'state': 'state',
         'type': 'type',
+        'source': 'source',
         'token_provisioning_information': 'tokenProvisioningInformation',
         'card': 'card',
+        'point_of_sale_information': 'pointOfSaleInformation',
         'bank_account': 'bankAccount',
         'tokenized_card': 'tokenizedCard',
         'issuer': 'issuer',
@@ -63,7 +67,7 @@ class TmsEmbeddedInstrumentIdentifier(object):
         'embedded': '_embedded'
     }
 
-    def __init__(self, links=None, id=None, object=None, state=None, type=None, token_provisioning_information=None, card=None, bank_account=None, tokenized_card=None, issuer=None, processing_information=None, bill_to=None, metadata=None, embedded=None):
+    def __init__(self, links=None, id=None, object=None, state=None, type=None, source=None, token_provisioning_information=None, card=None, point_of_sale_information=None, bank_account=None, tokenized_card=None, issuer=None, processing_information=None, bill_to=None, metadata=None, embedded=None):
         """
         TmsEmbeddedInstrumentIdentifier - a model defined in Swagger
         """
@@ -73,8 +77,10 @@ class TmsEmbeddedInstrumentIdentifier(object):
         self._object = None
         self._state = None
         self._type = None
+        self._source = None
         self._token_provisioning_information = None
         self._card = None
+        self._point_of_sale_information = None
         self._bank_account = None
         self._tokenized_card = None
         self._issuer = None
@@ -93,10 +99,14 @@ class TmsEmbeddedInstrumentIdentifier(object):
           self.state = state
         if type is not None:
           self.type = type
+        if source is not None:
+          self.source = source
         if token_provisioning_information is not None:
           self.token_provisioning_information = token_provisioning_information
         if card is not None:
           self.card = card
+        if point_of_sale_information is not None:
+          self.point_of_sale_information = point_of_sale_information
         if bank_account is not None:
           self.bank_account = bank_account
         if tokenized_card is not None:
@@ -226,6 +236,29 @@ class TmsEmbeddedInstrumentIdentifier(object):
         self._type = type
 
     @property
+    def source(self):
+        """
+        Gets the source of this TmsEmbeddedInstrumentIdentifier.
+        Source of the card details. Possible Values: - CONTACTLESS_TAP 
+
+        :return: The source of this TmsEmbeddedInstrumentIdentifier.
+        :rtype: str
+        """
+        return self._source
+
+    @source.setter
+    def source(self, source):
+        """
+        Sets the source of this TmsEmbeddedInstrumentIdentifier.
+        Source of the card details. Possible Values: - CONTACTLESS_TAP 
+
+        :param source: The source of this TmsEmbeddedInstrumentIdentifier.
+        :type: str
+        """
+
+        self._source = source
+
+    @property
     def token_provisioning_information(self):
         """
         Gets the token_provisioning_information of this TmsEmbeddedInstrumentIdentifier.
@@ -266,6 +299,27 @@ class TmsEmbeddedInstrumentIdentifier(object):
         """
 
         self._card = card
+
+    @property
+    def point_of_sale_information(self):
+        """
+        Gets the point_of_sale_information of this TmsEmbeddedInstrumentIdentifier.
+
+        :return: The point_of_sale_information of this TmsEmbeddedInstrumentIdentifier.
+        :rtype: TmsEmbeddedInstrumentIdentifierPointOfSaleInformation
+        """
+        return self._point_of_sale_information
+
+    @point_of_sale_information.setter
+    def point_of_sale_information(self, point_of_sale_information):
+        """
+        Sets the point_of_sale_information of this TmsEmbeddedInstrumentIdentifier.
+
+        :param point_of_sale_information: The point_of_sale_information of this TmsEmbeddedInstrumentIdentifier.
+        :type: TmsEmbeddedInstrumentIdentifierPointOfSaleInformation
+        """
+
+        self._point_of_sale_information = point_of_sale_information
 
     @property
     def bank_account(self):

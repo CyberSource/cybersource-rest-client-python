@@ -32,16 +32,22 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
     swagger_types = {
         'name': 'str',
         'short_description': 'str',
-        'long_description': 'str'
+        'long_description': 'str',
+        'email': 'str',
+        'phone_number': 'str',
+        'url': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'short_description': 'shortDescription',
-        'long_description': 'longDescription'
+        'long_description': 'longDescription',
+        'email': 'email',
+        'phone_number': 'phoneNumber',
+        'url': 'url'
     }
 
-    def __init__(self, name=None, short_description=None, long_description=None):
+    def __init__(self, name=None, short_description=None, long_description=None, email=None, phone_number=None, url=None):
         """
         Tmsv2TokenizedCardMetadataIssuer - a model defined in Swagger
         """
@@ -49,6 +55,9 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
         self._name = None
         self._short_description = None
         self._long_description = None
+        self._email = None
+        self._phone_number = None
+        self._url = None
 
         if name is not None:
           self.name = name
@@ -56,12 +65,18 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
           self.short_description = short_description
         if long_description is not None:
           self.long_description = long_description
+        if email is not None:
+          self.email = email
+        if phone_number is not None:
+          self.phone_number = phone_number
+        if url is not None:
+          self.url = url
 
     @property
     def name(self):
         """
         Gets the name of this Tmsv2TokenizedCardMetadataIssuer.
-        issuer name. 
+        Issuer name. 
 
         :return: The name of this Tmsv2TokenizedCardMetadataIssuer.
         :rtype: str
@@ -72,7 +87,7 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
     def name(self, name):
         """
         Sets the name of this Tmsv2TokenizedCardMetadataIssuer.
-        issuer name. 
+        Issuer name. 
 
         :param name: The name of this Tmsv2TokenizedCardMetadataIssuer.
         :type: str
@@ -84,7 +99,7 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
     def short_description(self):
         """
         Gets the short_description of this Tmsv2TokenizedCardMetadataIssuer.
-        issuer short description. 
+        Short description of the card. 
 
         :return: The short_description of this Tmsv2TokenizedCardMetadataIssuer.
         :rtype: str
@@ -95,7 +110,7 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
     def short_description(self, short_description):
         """
         Sets the short_description of this Tmsv2TokenizedCardMetadataIssuer.
-        issuer short description. 
+        Short description of the card. 
 
         :param short_description: The short_description of this Tmsv2TokenizedCardMetadataIssuer.
         :type: str
@@ -107,7 +122,7 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
     def long_description(self):
         """
         Gets the long_description of this Tmsv2TokenizedCardMetadataIssuer.
-        issuer long  description. 
+        Long description of the card. 
 
         :return: The long_description of this Tmsv2TokenizedCardMetadataIssuer.
         :rtype: str
@@ -118,13 +133,82 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
     def long_description(self, long_description):
         """
         Sets the long_description of this Tmsv2TokenizedCardMetadataIssuer.
-        issuer long  description. 
+        Long description of the card. 
 
         :param long_description: The long_description of this Tmsv2TokenizedCardMetadataIssuer.
         :type: str
         """
 
         self._long_description = long_description
+
+    @property
+    def email(self):
+        """
+        Gets the email of this Tmsv2TokenizedCardMetadataIssuer.
+        Issuer customer service email address.
+
+        :return: The email of this Tmsv2TokenizedCardMetadataIssuer.
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this Tmsv2TokenizedCardMetadataIssuer.
+        Issuer customer service email address.
+
+        :param email: The email of this Tmsv2TokenizedCardMetadataIssuer.
+        :type: str
+        """
+
+        self._email = email
+
+    @property
+    def phone_number(self):
+        """
+        Gets the phone_number of this Tmsv2TokenizedCardMetadataIssuer.
+        Issuer customer service phone number.
+
+        :return: The phone_number of this Tmsv2TokenizedCardMetadataIssuer.
+        :rtype: str
+        """
+        return self._phone_number
+
+    @phone_number.setter
+    def phone_number(self, phone_number):
+        """
+        Sets the phone_number of this Tmsv2TokenizedCardMetadataIssuer.
+        Issuer customer service phone number.
+
+        :param phone_number: The phone_number of this Tmsv2TokenizedCardMetadataIssuer.
+        :type: str
+        """
+
+        self._phone_number = phone_number
+
+    @property
+    def url(self):
+        """
+        Gets the url of this Tmsv2TokenizedCardMetadataIssuer.
+        Issuer customer service url.
+
+        :return: The url of this Tmsv2TokenizedCardMetadataIssuer.
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """
+        Sets the url of this Tmsv2TokenizedCardMetadataIssuer.
+        Issuer customer service url.
+
+        :param url: The url of this Tmsv2TokenizedCardMetadataIssuer.
+        :type: str
+        """
+
+        self._url = url
 
     def to_dict(self):
         """

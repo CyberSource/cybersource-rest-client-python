@@ -29,6 +29,7 @@ from .merchant_defined_fields_api import MerchantDefinedFieldsApi
 from .microform_integration_api import MicroformIntegrationApi
 from .net_fundings_api import NetFundingsApi
 from .notification_of_changes_api import NotificationOfChangesApi
+from .offers_api import OffersApi
 from .payer_authentication_api import PayerAuthenticationApi
 from .payment_batch_summaries_api import PaymentBatchSummariesApi
 from .payment_instrument_api import PaymentInstrumentApi
@@ -60,7 +61,6 @@ from .bank_account_validation_api import BankAccountValidationApi
 from .billing_agreements_api import BillingAgreementsApi
 from .capture_api import CaptureApi
 from .credit_api import CreditApi
-from .merchant_defined_fields_api import MerchantDefinedFieldsApi
 from .orders_api import OrdersApi
 from .payment_tokens_api import PaymentTokensApi
 from .payments_api import PaymentsApi

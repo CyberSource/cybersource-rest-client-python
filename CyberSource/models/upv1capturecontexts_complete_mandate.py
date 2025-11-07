@@ -31,27 +31,32 @@ class Upv1capturecontextsCompleteMandate(object):
     """
     swagger_types = {
         'type': 'str',
+        'tms': 'Upv1capturecontextsCompleteMandateTms',
         'decision_manager': 'bool',
         'consumer_authentication': 'bool'
     }
 
     attribute_map = {
         'type': 'type',
+        'tms': 'tms',
         'decision_manager': 'decisionManager',
         'consumer_authentication': 'consumerAuthentication'
     }
 
-    def __init__(self, type=None, decision_manager=None, consumer_authentication=None):
+    def __init__(self, type=None, tms=None, decision_manager=None, consumer_authentication=None):
         """
         Upv1capturecontextsCompleteMandate - a model defined in Swagger
         """
 
         self._type = None
+        self._tms = None
         self._decision_manager = None
         self._consumer_authentication = None
 
         if type is not None:
           self.type = type
+        if tms is not None:
+          self.tms = tms
         if decision_manager is not None:
           self.decision_manager = decision_manager
         if consumer_authentication is not None:
@@ -79,6 +84,27 @@ class Upv1capturecontextsCompleteMandate(object):
         """
 
         self._type = type
+
+    @property
+    def tms(self):
+        """
+        Gets the tms of this Upv1capturecontextsCompleteMandate.
+
+        :return: The tms of this Upv1capturecontextsCompleteMandate.
+        :rtype: Upv1capturecontextsCompleteMandateTms
+        """
+        return self._tms
+
+    @tms.setter
+    def tms(self, tms):
+        """
+        Sets the tms of this Upv1capturecontextsCompleteMandate.
+
+        :param tms: The tms of this Upv1capturecontextsCompleteMandate.
+        :type: Upv1capturecontextsCompleteMandateTms
+        """
+
+        self._tms = tms
 
     @property
     def decision_manager(self):

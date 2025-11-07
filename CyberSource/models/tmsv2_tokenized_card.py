@@ -297,7 +297,7 @@ class Tmsv2TokenizedCard(object):
     def source(self):
         """
         Gets the source of this Tmsv2TokenizedCard.
-        Source of the payment instrument. Possible Values: - ONFILE - TOKEN - ISSUER 
+        Source of the card details. Possible Values: - ONFILE - TOKEN - ISSUER 
 
         :return: The source of this Tmsv2TokenizedCard.
         :rtype: str
@@ -308,7 +308,7 @@ class Tmsv2TokenizedCard(object):
     def source(self, source):
         """
         Sets the source of this Tmsv2TokenizedCard.
-        Source of the payment instrument. Possible Values: - ONFILE - TOKEN - ISSUER 
+        Source of the card details. Possible Values: - ONFILE - TOKEN - ISSUER 
 
         :param source: The source of this Tmsv2TokenizedCard.
         :type: str
