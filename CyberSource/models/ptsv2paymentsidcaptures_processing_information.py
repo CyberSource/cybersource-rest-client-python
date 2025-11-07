@@ -42,7 +42,8 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         'capture_options': 'Ptsv2paymentsidcapturesProcessingInformationCaptureOptions',
         'loan_options': 'Ptsv2paymentsProcessingInformationLoanOptions',
         'pay_by_points_indicator': 'bool',
-        'action_list': 'list[str]'
+        'action_list': 'list[str]',
+        'japan_payment_options': 'Ptsv2paymentsidcapturesProcessingInformationJapanPaymentOptions'
     }
 
     attribute_map = {
@@ -58,10 +59,11 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         'capture_options': 'captureOptions',
         'loan_options': 'loanOptions',
         'pay_by_points_indicator': 'payByPointsIndicator',
-        'action_list': 'actionList'
+        'action_list': 'actionList',
+        'japan_payment_options': 'japanPaymentOptions'
     }
 
-    def __init__(self, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, issuer=None, authorization_options=None, capture_options=None, loan_options=None, pay_by_points_indicator=None, action_list=None):
+    def __init__(self, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, issuer=None, authorization_options=None, capture_options=None, loan_options=None, pay_by_points_indicator=None, action_list=None, japan_payment_options=None):
         """
         Ptsv2paymentsidcapturesProcessingInformation - a model defined in Swagger
         """
@@ -79,6 +81,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         self._loan_options = None
         self._pay_by_points_indicator = None
         self._action_list = None
+        self._japan_payment_options = None
 
         if payment_solution is not None:
           self.payment_solution = payment_solution
@@ -106,6 +109,8 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
           self.pay_by_points_indicator = pay_by_points_indicator
         if action_list is not None:
           self.action_list = action_list
+        if japan_payment_options is not None:
+          self.japan_payment_options = japan_payment_options
 
     @property
     def payment_solution(self):
@@ -397,6 +402,27 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         """
 
         self._action_list = action_list
+
+    @property
+    def japan_payment_options(self):
+        """
+        Gets the japan_payment_options of this Ptsv2paymentsidcapturesProcessingInformation.
+
+        :return: The japan_payment_options of this Ptsv2paymentsidcapturesProcessingInformation.
+        :rtype: Ptsv2paymentsidcapturesProcessingInformationJapanPaymentOptions
+        """
+        return self._japan_payment_options
+
+    @japan_payment_options.setter
+    def japan_payment_options(self, japan_payment_options):
+        """
+        Sets the japan_payment_options of this Ptsv2paymentsidcapturesProcessingInformation.
+
+        :param japan_payment_options: The japan_payment_options of this Ptsv2paymentsidcapturesProcessingInformation.
+        :type: Ptsv2paymentsidcapturesProcessingInformationJapanPaymentOptions
+        """
+
+        self._japan_payment_options = japan_payment_options
 
     def to_dict(self):
         """

@@ -169,7 +169,7 @@ class MerchantDefinedFieldsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def invoicing_v2_reference_type_merchant_defined_fields_id_delete(self, reference_type, id, **kwargs):
+    def delete_merchant_defined_fields_definitions(self, reference_type, id, **kwargs):
         """
         Delete a MerchantDefinedField by ID
         This method makes a synchronous HTTP request by default. To make an
@@ -178,7 +178,7 @@ class MerchantDefinedFieldsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.invoicing_v2_reference_type_merchant_defined_fields_id_delete(reference_type, id, callback=callback_function)
+        >>> thread = api.delete_merchant_defined_fields_definitions(reference_type, id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -189,16 +189,16 @@ class MerchantDefinedFieldsApi(object):
                  returns the request thread.
         """
 
-        self.logger.info("CALL TO METHOD `invoicing_v2_reference_type_merchant_defined_fields_id_delete` STARTED")
+        self.logger.info("CALL TO METHOD `delete_merchant_defined_fields_definitions` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.invoicing_v2_reference_type_merchant_defined_fields_id_delete_with_http_info(reference_type, id, **kwargs)
+            return self.delete_merchant_defined_fields_definitions_with_http_info(reference_type, id, **kwargs)
         else:
-            (data) = self.invoicing_v2_reference_type_merchant_defined_fields_id_delete_with_http_info(reference_type, id, **kwargs)
+            (data) = self.delete_merchant_defined_fields_definitions_with_http_info(reference_type, id, **kwargs)
             return data
 
-    def invoicing_v2_reference_type_merchant_defined_fields_id_delete_with_http_info(self, reference_type, id, **kwargs):
+    def delete_merchant_defined_fields_definitions_with_http_info(self, reference_type, id, **kwargs):
         """
         Delete a MerchantDefinedField by ID
         This method makes a synchronous HTTP request by default. To make an
@@ -207,7 +207,7 @@ class MerchantDefinedFieldsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.invoicing_v2_reference_type_merchant_defined_fields_id_delete_with_http_info(reference_type, id, callback=callback_function)
+        >>> thread = api.delete_merchant_defined_fields_definitions_with_http_info(reference_type, id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -229,18 +229,18 @@ class MerchantDefinedFieldsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method invoicing_v2_reference_type_merchant_defined_fields_id_delete" % key
+                    " to method delete_merchant_defined_fields_definitions" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'reference_type' is set
         if ('reference_type' not in params) or (params['reference_type'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `reference_type` when calling `invoicing_v2_reference_type_merchant_defined_fields_id_delete`")
-            raise ValueError("Missing the required parameter `reference_type` when calling `invoicing_v2_reference_type_merchant_defined_fields_id_delete`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `reference_type` when calling `delete_merchant_defined_fields_definitions`")
+            raise ValueError("Missing the required parameter `reference_type` when calling `delete_merchant_defined_fields_definitions`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `invoicing_v2_reference_type_merchant_defined_fields_id_delete`")
-            raise ValueError("Missing the required parameter `id` when calling `invoicing_v2_reference_type_merchant_defined_fields_id_delete`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `delete_merchant_defined_fields_definitions`")
+            raise ValueError("Missing the required parameter `id` when calling `delete_merchant_defined_fields_definitions`")
 
 
         collection_formats = {}
@@ -276,7 +276,7 @@ class MerchantDefinedFieldsApi(object):
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
         inbound_mle_status = "false"
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "invoicing_v2_reference_type_merchant_defined_fields_id_delete,invoicing_v2_reference_type_merchant_defined_fields_id_delete_with_http_info"):
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "delete_merchant_defined_fields_definitions,delete_merchant_defined_fields_definitions_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -297,7 +297,126 @@ class MerchantDefinedFieldsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def invoicing_v2_reference_type_merchant_defined_fields_id_put(self, reference_type, id, merchant_defined_field_core, **kwargs):
+    def get_merchant_defined_fields_definitions(self, reference_type, **kwargs):
+        """
+        Get all merchant defined fields for a given reference type
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_merchant_defined_fields_definitions(reference_type, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str reference_type: The reference type for which merchant defined fields are to be fetched. Available values are Invoice, Purchase, Donation (required)
+        :return: list[InlineResponse2002]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `get_merchant_defined_fields_definitions` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_merchant_defined_fields_definitions_with_http_info(reference_type, **kwargs)
+        else:
+            (data) = self.get_merchant_defined_fields_definitions_with_http_info(reference_type, **kwargs)
+            return data
+
+    def get_merchant_defined_fields_definitions_with_http_info(self, reference_type, **kwargs):
+        """
+        Get all merchant defined fields for a given reference type
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_merchant_defined_fields_definitions_with_http_info(reference_type, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str reference_type: The reference type for which merchant defined fields are to be fetched. Available values are Invoice, Purchase, Donation (required)
+        :return: list[InlineResponse2002]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['reference_type']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_merchant_defined_fields_definitions" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'reference_type' is set
+        if ('reference_type' not in params) or (params['reference_type'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `reference_type` when calling `get_merchant_defined_fields_definitions`")
+            raise ValueError("Missing the required parameter `reference_type` when calling `get_merchant_defined_fields_definitions`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'reference_type' in params:
+            path_params['referenceType'] = params['reference_type']
+            referenceType=reference_type
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json'])
+
+        body_params = None
+        if 'GET' in ('POST'):
+            body_params = '{}'
+        
+        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
+        if file_post_body_and_delimiter is not None:
+            body_params = file_post_body_and_delimiter[0]
+            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_merchant_defined_fields_definitions,get_merchant_defined_fields_definitions_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/invoicing/v2/{referenceType}/merchantDefinedFields', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='list[InlineResponse2002]',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def put_merchant_defined_fields_definitions(self, reference_type, id, merchant_defined_field_core, **kwargs):
         """
         Update a MerchantDefinedField by ID
         This method makes a synchronous HTTP request by default. To make an
@@ -306,7 +425,7 @@ class MerchantDefinedFieldsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.invoicing_v2_reference_type_merchant_defined_fields_id_put(reference_type, id, merchant_defined_field_core, callback=callback_function)
+        >>> thread = api.put_merchant_defined_fields_definitions(reference_type, id, merchant_defined_field_core, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -318,16 +437,16 @@ class MerchantDefinedFieldsApi(object):
                  returns the request thread.
         """
 
-        self.logger.info("CALL TO METHOD `invoicing_v2_reference_type_merchant_defined_fields_id_put` STARTED")
+        self.logger.info("CALL TO METHOD `put_merchant_defined_fields_definitions` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.invoicing_v2_reference_type_merchant_defined_fields_id_put_with_http_info(reference_type, id, merchant_defined_field_core, **kwargs)
+            return self.put_merchant_defined_fields_definitions_with_http_info(reference_type, id, merchant_defined_field_core, **kwargs)
         else:
-            (data) = self.invoicing_v2_reference_type_merchant_defined_fields_id_put_with_http_info(reference_type, id, merchant_defined_field_core, **kwargs)
+            (data) = self.put_merchant_defined_fields_definitions_with_http_info(reference_type, id, merchant_defined_field_core, **kwargs)
             return data
 
-    def invoicing_v2_reference_type_merchant_defined_fields_id_put_with_http_info(self, reference_type, id, merchant_defined_field_core, **kwargs):
+    def put_merchant_defined_fields_definitions_with_http_info(self, reference_type, id, merchant_defined_field_core, **kwargs):
         """
         Update a MerchantDefinedField by ID
         This method makes a synchronous HTTP request by default. To make an
@@ -336,7 +455,7 @@ class MerchantDefinedFieldsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.invoicing_v2_reference_type_merchant_defined_fields_id_put_with_http_info(reference_type, id, merchant_defined_field_core, callback=callback_function)
+        >>> thread = api.put_merchant_defined_fields_definitions_with_http_info(reference_type, id, merchant_defined_field_core, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -359,22 +478,22 @@ class MerchantDefinedFieldsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method invoicing_v2_reference_type_merchant_defined_fields_id_put" % key
+                    " to method put_merchant_defined_fields_definitions" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'reference_type' is set
         if ('reference_type' not in params) or (params['reference_type'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `reference_type` when calling `invoicing_v2_reference_type_merchant_defined_fields_id_put`")
-            raise ValueError("Missing the required parameter `reference_type` when calling `invoicing_v2_reference_type_merchant_defined_fields_id_put`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `reference_type` when calling `put_merchant_defined_fields_definitions`")
+            raise ValueError("Missing the required parameter `reference_type` when calling `put_merchant_defined_fields_definitions`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `invoicing_v2_reference_type_merchant_defined_fields_id_put`")
-            raise ValueError("Missing the required parameter `id` when calling `invoicing_v2_reference_type_merchant_defined_fields_id_put`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `put_merchant_defined_fields_definitions`")
+            raise ValueError("Missing the required parameter `id` when calling `put_merchant_defined_fields_definitions`")
         # verify the required parameter 'merchant_defined_field_core' is set
         if ('merchant_defined_field_core' not in params) or (params['merchant_defined_field_core'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `merchant_defined_field_core` when calling `invoicing_v2_reference_type_merchant_defined_fields_id_put`")
-            raise ValueError("Missing the required parameter `merchant_defined_field_core` when calling `invoicing_v2_reference_type_merchant_defined_fields_id_put`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `merchant_defined_field_core` when calling `put_merchant_defined_fields_definitions`")
+            raise ValueError("Missing the required parameter `merchant_defined_field_core` when calling `put_merchant_defined_fields_definitions`")
 
 
         collection_formats = {}
@@ -409,7 +528,7 @@ class MerchantDefinedFieldsApi(object):
             body_params = process_body(body_params)
 
         inbound_mle_status = "false"
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "invoicing_v2_reference_type_merchant_defined_fields_id_put,invoicing_v2_reference_type_merchant_defined_fields_id_put_with_http_info"):
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "put_merchant_defined_fields_definitions,put_merchant_defined_fields_definitions_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting

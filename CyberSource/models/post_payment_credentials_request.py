@@ -31,26 +31,51 @@ class PostPaymentCredentialsRequest(object):
     """
     swagger_types = {
         'payment_credential_type': 'str',
-        'transaction_type': 'str'
+        'transaction_type': 'str',
+        'client_correlation_id': 'str',
+        'order_information': 'Tmsv2tokenstokenIdpaymentcredentialsOrderInformation',
+        'merchant_information': 'Tmsv2tokenstokenIdpaymentcredentialsMerchantInformation',
+        'device_information': 'Tmsv2tokenstokenIdpaymentcredentialsDeviceInformation',
+        'authenticated_identities': 'list[Tmsv2tokenstokenIdpaymentcredentialsAuthenticatedIdentities]'
     }
 
     attribute_map = {
         'payment_credential_type': 'paymentCredentialType',
-        'transaction_type': 'transactionType'
+        'transaction_type': 'transactionType',
+        'client_correlation_id': 'clientCorrelationId',
+        'order_information': 'orderInformation',
+        'merchant_information': 'merchantInformation',
+        'device_information': 'deviceInformation',
+        'authenticated_identities': 'authenticatedIdentities'
     }
 
-    def __init__(self, payment_credential_type=None, transaction_type=None):
+    def __init__(self, payment_credential_type=None, transaction_type=None, client_correlation_id=None, order_information=None, merchant_information=None, device_information=None, authenticated_identities=None):
         """
         PostPaymentCredentialsRequest - a model defined in Swagger
         """
 
         self._payment_credential_type = None
         self._transaction_type = None
+        self._client_correlation_id = None
+        self._order_information = None
+        self._merchant_information = None
+        self._device_information = None
+        self._authenticated_identities = None
 
         if payment_credential_type is not None:
           self.payment_credential_type = payment_credential_type
         if transaction_type is not None:
           self.transaction_type = transaction_type
+        if client_correlation_id is not None:
+          self.client_correlation_id = client_correlation_id
+        if order_information is not None:
+          self.order_information = order_information
+        if merchant_information is not None:
+          self.merchant_information = merchant_information
+        if device_information is not None:
+          self.device_information = device_information
+        if authenticated_identities is not None:
+          self.authenticated_identities = authenticated_identities
 
     @property
     def payment_credential_type(self):
@@ -97,6 +122,113 @@ class PostPaymentCredentialsRequest(object):
         """
 
         self._transaction_type = transaction_type
+
+    @property
+    def client_correlation_id(self):
+        """
+        Gets the client_correlation_id of this PostPaymentCredentialsRequest.
+        Used to correlate authentication and payment credential requests. 
+
+        :return: The client_correlation_id of this PostPaymentCredentialsRequest.
+        :rtype: str
+        """
+        return self._client_correlation_id
+
+    @client_correlation_id.setter
+    def client_correlation_id(self, client_correlation_id):
+        """
+        Sets the client_correlation_id of this PostPaymentCredentialsRequest.
+        Used to correlate authentication and payment credential requests. 
+
+        :param client_correlation_id: The client_correlation_id of this PostPaymentCredentialsRequest.
+        :type: str
+        """
+
+        self._client_correlation_id = client_correlation_id
+
+    @property
+    def order_information(self):
+        """
+        Gets the order_information of this PostPaymentCredentialsRequest.
+
+        :return: The order_information of this PostPaymentCredentialsRequest.
+        :rtype: Tmsv2tokenstokenIdpaymentcredentialsOrderInformation
+        """
+        return self._order_information
+
+    @order_information.setter
+    def order_information(self, order_information):
+        """
+        Sets the order_information of this PostPaymentCredentialsRequest.
+
+        :param order_information: The order_information of this PostPaymentCredentialsRequest.
+        :type: Tmsv2tokenstokenIdpaymentcredentialsOrderInformation
+        """
+
+        self._order_information = order_information
+
+    @property
+    def merchant_information(self):
+        """
+        Gets the merchant_information of this PostPaymentCredentialsRequest.
+
+        :return: The merchant_information of this PostPaymentCredentialsRequest.
+        :rtype: Tmsv2tokenstokenIdpaymentcredentialsMerchantInformation
+        """
+        return self._merchant_information
+
+    @merchant_information.setter
+    def merchant_information(self, merchant_information):
+        """
+        Sets the merchant_information of this PostPaymentCredentialsRequest.
+
+        :param merchant_information: The merchant_information of this PostPaymentCredentialsRequest.
+        :type: Tmsv2tokenstokenIdpaymentcredentialsMerchantInformation
+        """
+
+        self._merchant_information = merchant_information
+
+    @property
+    def device_information(self):
+        """
+        Gets the device_information of this PostPaymentCredentialsRequest.
+
+        :return: The device_information of this PostPaymentCredentialsRequest.
+        :rtype: Tmsv2tokenstokenIdpaymentcredentialsDeviceInformation
+        """
+        return self._device_information
+
+    @device_information.setter
+    def device_information(self, device_information):
+        """
+        Sets the device_information of this PostPaymentCredentialsRequest.
+
+        :param device_information: The device_information of this PostPaymentCredentialsRequest.
+        :type: Tmsv2tokenstokenIdpaymentcredentialsDeviceInformation
+        """
+
+        self._device_information = device_information
+
+    @property
+    def authenticated_identities(self):
+        """
+        Gets the authenticated_identities of this PostPaymentCredentialsRequest.
+
+        :return: The authenticated_identities of this PostPaymentCredentialsRequest.
+        :rtype: list[Tmsv2tokenstokenIdpaymentcredentialsAuthenticatedIdentities]
+        """
+        return self._authenticated_identities
+
+    @authenticated_identities.setter
+    def authenticated_identities(self, authenticated_identities):
+        """
+        Sets the authenticated_identities of this PostPaymentCredentialsRequest.
+
+        :param authenticated_identities: The authenticated_identities of this PostPaymentCredentialsRequest.
+        :type: list[Tmsv2tokenstokenIdpaymentcredentialsAuthenticatedIdentities]
+        """
+
+        self._authenticated_identities = authenticated_identities
 
     def to_dict(self):
         """

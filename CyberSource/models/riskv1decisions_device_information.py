@@ -34,6 +34,7 @@ class Riskv1decisionsDeviceInformation(object):
         'ip_address': 'str',
         'host_name': 'str',
         'fingerprint_session_id': 'str',
+        'use_raw_fingerprint_session_id': 'bool',
         'http_browser_email': 'str',
         'user_agent': 'str',
         'raw_data': 'list[Ptsv2paymentsDeviceInformationRawData]',
@@ -54,6 +55,7 @@ class Riskv1decisionsDeviceInformation(object):
         'ip_address': 'ipAddress',
         'host_name': 'hostName',
         'fingerprint_session_id': 'fingerprintSessionId',
+        'use_raw_fingerprint_session_id': 'useRawFingerprintSessionId',
         'http_browser_email': 'httpBrowserEmail',
         'user_agent': 'userAgent',
         'raw_data': 'rawData',
@@ -69,7 +71,7 @@ class Riskv1decisionsDeviceInformation(object):
         'user_agent_browser_value': 'userAgentBrowserValue'
     }
 
-    def __init__(self, cookies_accepted=None, ip_address=None, host_name=None, fingerprint_session_id=None, http_browser_email=None, user_agent=None, raw_data=None, http_accept_browser_value=None, http_accept_content=None, http_browser_language=None, http_browser_java_enabled=None, http_browser_java_script_enabled=None, http_browser_color_depth=None, http_browser_screen_height=None, http_browser_screen_width=None, http_browser_time_difference=None, user_agent_browser_value=None):
+    def __init__(self, cookies_accepted=None, ip_address=None, host_name=None, fingerprint_session_id=None, use_raw_fingerprint_session_id=None, http_browser_email=None, user_agent=None, raw_data=None, http_accept_browser_value=None, http_accept_content=None, http_browser_language=None, http_browser_java_enabled=None, http_browser_java_script_enabled=None, http_browser_color_depth=None, http_browser_screen_height=None, http_browser_screen_width=None, http_browser_time_difference=None, user_agent_browser_value=None):
         """
         Riskv1decisionsDeviceInformation - a model defined in Swagger
         """
@@ -78,6 +80,7 @@ class Riskv1decisionsDeviceInformation(object):
         self._ip_address = None
         self._host_name = None
         self._fingerprint_session_id = None
+        self._use_raw_fingerprint_session_id = None
         self._http_browser_email = None
         self._user_agent = None
         self._raw_data = None
@@ -100,6 +103,8 @@ class Riskv1decisionsDeviceInformation(object):
           self.host_name = host_name
         if fingerprint_session_id is not None:
           self.fingerprint_session_id = fingerprint_session_id
+        if use_raw_fingerprint_session_id is not None:
+          self.use_raw_fingerprint_session_id = use_raw_fingerprint_session_id
         if http_browser_email is not None:
           self.http_browser_email = http_browser_email
         if user_agent is not None:
@@ -218,6 +223,29 @@ class Riskv1decisionsDeviceInformation(object):
         """
 
         self._fingerprint_session_id = fingerprint_session_id
+
+    @property
+    def use_raw_fingerprint_session_id(self):
+        """
+        Gets the use_raw_fingerprint_session_id of this Riskv1decisionsDeviceInformation.
+        Boolean that indicates whether request contains the device fingerprint information. Values: - `true`: Use raw fingerprintSessionId when looking up device details. - `false` (default): Use merchant id + fingerprintSessionId as the session id for Device detail collection. 
+
+        :return: The use_raw_fingerprint_session_id of this Riskv1decisionsDeviceInformation.
+        :rtype: bool
+        """
+        return self._use_raw_fingerprint_session_id
+
+    @use_raw_fingerprint_session_id.setter
+    def use_raw_fingerprint_session_id(self, use_raw_fingerprint_session_id):
+        """
+        Sets the use_raw_fingerprint_session_id of this Riskv1decisionsDeviceInformation.
+        Boolean that indicates whether request contains the device fingerprint information. Values: - `true`: Use raw fingerprintSessionId when looking up device details. - `false` (default): Use merchant id + fingerprintSessionId as the session id for Device detail collection. 
+
+        :param use_raw_fingerprint_session_id: The use_raw_fingerprint_session_id of this Riskv1decisionsDeviceInformation.
+        :type: bool
+        """
+
+        self._use_raw_fingerprint_session_id = use_raw_fingerprint_session_id
 
     @property
     def http_browser_email(self):
