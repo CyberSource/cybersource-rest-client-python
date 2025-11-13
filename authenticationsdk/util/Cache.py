@@ -39,6 +39,8 @@ class FileCache:
         self._p12_cache_lock = threading.RLock()
         self.mlecache = {}
         self._mle_cache_lock = threading.RLock()
+        self.public_key_cache = {}
+        self._public_key_cache_lock = threading.RLock()
 
     def fetch_cached_p12_certificate(self, merchant_config, p12_file_path, key_password):
         try:
@@ -167,3 +169,37 @@ class FileCache:
         )
         with self._mle_cache_lock:
             self.mlecache[cache_key] = cert_info
+
+    def add_public_key_to_cache(self, run_environment, key_id, public_key):
+        """
+        Add a public key to the cache for Flex V2 public keys.
+        
+        Args:
+            run_environment (str): The runtime environment (e.g., 'apitest.cybersource.com')
+            key_id (str): The key ID (kid) from the JWT header
+            public_key (dict): The RSA public key in JWK format
+        """
+        cache_key = f"{GlobalLabelParameters.PUBLIC_KEY_CACHE_IDENTIFIER}_{run_environment}_{key_id}"
+        with self._public_key_cache_lock:
+            self.public_key_cache[cache_key] = public_key
+
+    def get_public_key_from_cache(self, run_environment, key_id):
+        """
+        Retrieve a public key from the cache.
+        
+        Args:
+            run_environment (str): The runtime environment (e.g., 'apitest.cybersource.com')
+            key_id (str): The key ID (kid) from the JWT header
+            
+        Returns:
+            dict: The RSA public key in JWK format
+            
+        Raises:
+            KeyError: If the public key is not found in the cache
+        """
+        cache_key = f"{GlobalLabelParameters.PUBLIC_KEY_CACHE_IDENTIFIER}_{run_environment}_{key_id}"
+        
+        with self._public_key_cache_lock:
+            if cache_key not in self.public_key_cache:
+                raise KeyError(f"Public key not found in cache for [{run_environment}, {key_id}]")
+            return self.public_key_cache[cache_key]
