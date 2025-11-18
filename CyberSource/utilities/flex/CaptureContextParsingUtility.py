@@ -97,7 +97,7 @@ def parse_capture_context_response(jwt_value, merchant_config, verify_jwt_signat
     
     # If public key is not in cache or verification fails, fetch from API
     if not is_public_key_from_cache:
-        public_key = _fetch_public_key_and_verify(jwt_value, parsed_jwt, kid, run_environment, cache)
+        public_key = _fetch_public_key_and_verify(jwt_value, kid, run_environment, cache)
         return parsed_jwt['payload']
     
     # Try to verify with cached public key
@@ -106,11 +106,11 @@ def parse_capture_context_response(jwt_value, merchant_config, verify_jwt_signat
         return parsed_jwt['payload']
     except (JwtSignatureValidationException, InvalidJwkException):
         # If verification fails with cached key, fetch fresh key from API
-        public_key = _fetch_public_key_and_verify(jwt_value, parsed_jwt, kid, run_environment, cache)
+        public_key = _fetch_public_key_and_verify(jwt_value, kid, run_environment, cache)
         return parsed_jwt['payload']
 
 
-def _fetch_public_key_and_verify(jwt_value, parsed_jwt, kid, run_environment, cache):
+def _fetch_public_key_and_verify(jwt_value, kid, run_environment, cache):
     """
     Fetch public key from API and perform JWT verification.
     
@@ -119,7 +119,6 @@ def _fetch_public_key_and_verify(jwt_value, parsed_jwt, kid, run_environment, ca
     
     Args:
         jwt_value (str): The JWT token
-        parsed_jwt (dict): The parsed JWT object
         kid (str): The key ID
         run_environment (str): The runtime environment
         cache (FileCache): The cache instance
@@ -133,7 +132,16 @@ def _fetch_public_key_and_verify(jwt_value, parsed_jwt, kid, run_environment, ca
         Exception: For other errors during fetch or verification
     """
     try:
-        public_key = _fetch_public_key_from_api(kid, run_environment, cache)
+        # Fetch the public key from the Flex V2 API
+        public_key = fetch_public_key(kid, run_environment)
+        
+        # Add to cache (cache failure is not critical)
+        try:
+            cache.add_public_key_to_cache(run_environment, kid, public_key)
+        except Exception:
+            # Cache failure is not critical, continue with the public key
+            pass
+            
     except Exception as fetch_error:
         # Re-raise with appropriate error type
         if 'Invalid Runtime URL' in str(fetch_error):
@@ -151,38 +159,3 @@ def _fetch_public_key_and_verify(jwt_value, parsed_jwt, kid, run_environment, ca
         return public_key
     except (JwtSignatureValidationException, InvalidJwkException):
         raise JwtSignatureValidationException('JWT validation failed')
-
-
-def _fetch_public_key_from_api(kid, run_environment, cache):
-    """
-    Fetch public key from API and add it to cache.
-    
-    This is a private helper function that fetches the public key from the
-    Flex V2 API endpoint and stores it in the cache.
-    
-    Args:
-        kid (str): The key ID
-        run_environment (str): The runtime environment
-        cache (FileCache): The cache instance
-        
-    Returns:
-        dict: The public key in JWK format
-        
-    Raises:
-        Exception: If the fetch operation fails
-    """
-    try:
-        public_key = fetch_public_key(kid, run_environment)
-        
-        # Add to cache
-        try:
-            cache.add_public_key_to_cache(run_environment, kid, public_key)
-        except Exception:
-            # Cache failure is not critical, continue with the public key
-            pass
-        
-        return public_key
-        
-    except Exception as error:
-        # Re-raise the error
-        raise error
