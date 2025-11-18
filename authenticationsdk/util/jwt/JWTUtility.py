@@ -55,13 +55,9 @@ def _base64url_decode(input_str):
     Raises:
         Exception: If decoding fails
     """
-    # Add padding if needed
-    padding = 4 - (len(input_str) % 4)
-    if padding and padding != 4:
-        input_str += '=' * padding
-    
-    # Replace URL-safe characters with standard base64 characters
-    input_str = input_str.replace('-', '+').replace('_', '/')
+    # Add padding and replace URL-safe characters with standard base64 characters
+    # Adding '==' ensures proper padding (base64 decoder ignores excess padding)
+    input_str = (input_str + '==').replace('-', '+').replace('_', '/')
     
     return base64.b64decode(input_str)
 

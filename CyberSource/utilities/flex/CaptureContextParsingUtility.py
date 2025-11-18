@@ -41,13 +41,6 @@ def parse_capture_context_response(jwt_value, merchant_config, verify_jwt_signat
         JwtSignatureValidationException: If signature verification fails
         ValueError: If merchant_config is missing or invalid
         Exception: For other errors during parsing or verification
-        
-    Example:
-        >>> from authenticationsdk.core.MerchantConfiguration import MerchantConfiguration
-        >>> merchant_config = MerchantConfiguration()
-        >>> merchant_config.run_environment = "apitest.cybersource.com"
-        >>> payload = parse_capture_context_response(jwt_token, merchant_config, True)
-        >>> print(payload)
     """
     if not jwt_value:
         raise InvalidJwtException('JWT value is null or undefined')
