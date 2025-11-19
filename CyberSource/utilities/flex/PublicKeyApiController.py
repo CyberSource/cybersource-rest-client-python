@@ -9,8 +9,9 @@ from the CyberSource Flex V2 public keys API endpoint.
 from __future__ import absolute_import
 
 import json
-import urllib3
 import ssl
+import certifi
+import urllib3
 
 from authenticationsdk.util.jwt.JWTUtility import get_rsa_public_key_from_jwk
 from authenticationsdk.util.jwt.JWTExceptions import InvalidJwkException
@@ -29,7 +30,7 @@ def fetch_public_key(kid, run_environment):
         run_environment (str): The environment domain (e.g., 'apitest.cybersource.com')
         
     Returns:
-        dict: The RSA public key in JWK format
+        RSAPublicKey: The RSA public key object from cryptography library
         
     Raises:
         ValueError: If kid or run_environment is missing
@@ -55,10 +56,11 @@ def fetch_public_key(kid, run_environment):
         cert_reqs = ssl.CERT_REQUIRED
         ca_certs = configuration.ssl_ca_cert
     else:
-        cert_reqs = ssl.CERT_NONE
-        ca_certs = None
+        # Use certifi bundle as fallback (same as rest.py)
+        cert_reqs = ssl.CERT_REQUIRED  # ← Changed from CERT_NONE
+        ca_certs = certifi.where()     # ← Use certifi instead of None
     
-    # Create urllib3 PoolManager with SSL configuration
+    # Create urllib3 PoolManager with SSL configuration (matches rest.py pattern)
     http = urllib3.PoolManager(
         cert_reqs=cert_reqs,
         ca_certs=ca_certs
