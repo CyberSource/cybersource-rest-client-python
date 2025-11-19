@@ -39,6 +39,8 @@ class FileCache:
         self._p12_cache_lock = threading.RLock()
         self.mlecache = {}
         self._mle_cache_lock = threading.RLock()
+        self.p12_parsed_cache = {}
+        self._p12_parsed_cache_lock = threading.RLock()
 
     def fetch_cached_p12_certificate(self, merchant_config, p12_file_path, key_password):
         try:
@@ -231,4 +233,70 @@ class FileCache:
             if FileCache.logger:
                 FileCache.logger.error(f"Error getting Response MLE private key")
             raise ValueError(f"Error getting Response MLE private key: {str(e)}")
+    
+    def fetch_cached_p12_from_file(self, file_path, password, logger=None, cache_key=None):
+        """
+        Fetches a parsed P12 object from cache or parses and caches it.
+        
+        Args:
+            file_path (str): Path to the P12/PFX file
+            password (str): Password for the P12 file
+            logger: Logger instance for logging
+            cache_key (str): Optional custom cache key. Defaults to filePath + identifier
+            
+        Returns:
+            tuple: (private_key, certificates_list)
+            
+        Raises:
+            FileNotFoundError: If file doesn't exist
+            ValueError: If password is incorrect or parsing fails
+        """
+        from authenticationsdk.util.Utility import parse_p12_file
+        
+        # Use provided cache key or default
+        final_cache_key = cache_key or (file_path + GlobalLabelParameters.RESPONSE_MLE_P12_PFX_CACHE_IDENTIFIER)
+        
+        if logger:
+            logger.debug(f"Fetching P12/PFX from cache with key: {final_cache_key}")
+        
+        # Check if file exists
+        if not os.path.exists(file_path):
+            error_msg = f"File not found: {file_path}"
+            if logger:
+                logger.error(error_msg)
+            raise FileNotFoundError(error_msg)
+        
+        current_file_last_modified_time = os.path.getmtime(file_path)
+        
+        # Check if cache is valid (exists and file hasn't been modified)
+        with self._p12_parsed_cache_lock:
+            cached_entry = self.p12_parsed_cache.get(final_cache_key)
+            
+            if cached_entry and cached_entry['timestamp'] == current_file_last_modified_time:
+                if logger:
+                    logger.debug("P12/PFX found in cache and file not modified")
+                return cached_entry['p12_object']
+            
+            # Cache miss or file modified - parse and cache
+            if logger:
+                logger.debug(f"P12/PFX not in cache or file modified. Loading from file: {file_path}")
+            
+            try:
+                p12_object = parse_p12_file(file_path, password, logger)
+                
+                # Store in cache with file modification time
+                self.p12_parsed_cache[final_cache_key] = {
+                    'p12_object': p12_object,
+                    'timestamp': current_file_last_modified_time
+                }
+                
+                if logger:
+                    logger.debug("Successfully cached P12/PFX object")
+                return p12_object
+                
+            except Exception as e:
+                error_msg = f"Error parsing P12/PFX file: {str(e)}"
+                if logger:
+                    logger.error(error_msg)
+                raise ValueError(error_msg)
         

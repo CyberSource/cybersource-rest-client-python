@@ -100,3 +100,4 @@ class GlobalLabelParameters:
     MLE_CACHE_IDENTIFIER_FOR_CONFIG_CERT = "mleCertFromMerchantConfig"
     MLE_CACHE_IDENTIFIER_FOR_P12_CERT = "mleCertFromP12"
     MLE_CACHE_KEY_IDENTIFIER_FOR_RESPONSE_PRIVATE_KEY = "response_mle_private_key"
+    RESPONSE_MLE_P12_PFX_CACHE_IDENTIFIER = "_responseMleP12Pfx"
