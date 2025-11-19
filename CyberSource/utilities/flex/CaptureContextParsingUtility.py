@@ -140,11 +140,11 @@ def _fetch_public_key_and_verify(jwt_value, kid, run_environment, cache):
         if 'Invalid Runtime URL' in str(fetch_error):
             raise ValueError('Invalid Runtime URL in Merchant Config')
         elif 'No response received' in str(fetch_error) or 'Network error' in str(fetch_error):
-            raise Exception('Error while trying to retrieve public key from server')
+            raise Exception('Network Error: No response received while trying to retrieve public key from server', fetch_error)
         elif 'Failed to parse JWK' in str(fetch_error):
             raise InvalidJwkException('JWK received from server cannot be parsed correctly', fetch_error)
         else:
-            raise Exception('Error while trying to retrieve public key from server')
+            raise
     
     # Verify the JWT with the fetched public key
     try:

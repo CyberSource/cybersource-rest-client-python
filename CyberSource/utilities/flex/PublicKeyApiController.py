@@ -52,18 +52,14 @@ def fetch_public_key(kid, run_environment):
     
     # Use the same SSL configuration pattern as rest.py
     configuration = Configuration()
-    if configuration.ssl_ca_cert:
-        cert_reqs = ssl.CERT_REQUIRED
-        ca_certs = configuration.ssl_ca_cert
-    else:
-        # Use certifi bundle as fallback (same as rest.py)
-        cert_reqs = ssl.CERT_REQUIRED  # ← Changed from CERT_NONE
-        ca_certs = certifi.where()     # ← Use certifi instead of None
+    # Use certifi bundle as fallback (same as rest.py)
+    configuration.cert_reqs = ssl.CERT_REQUIRED
+    configuration.ca_certs = certifi.where()
     
     # Create urllib3 PoolManager with SSL configuration (matches rest.py pattern)
     http = urllib3.PoolManager(
-        cert_reqs=cert_reqs,
-        ca_certs=ca_certs
+        cert_reqs=configuration.cert_reqs,
+        ca_certs=configuration.ca_certs
     )
     
     try:
