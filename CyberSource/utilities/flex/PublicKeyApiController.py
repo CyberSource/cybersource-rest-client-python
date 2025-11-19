@@ -10,10 +10,11 @@ from __future__ import absolute_import
 
 import json
 import urllib3
-import certifi
+import ssl
 
 from authenticationsdk.util.jwt.JWTUtility import get_rsa_public_key_from_jwk
 from authenticationsdk.util.jwt.JWTExceptions import InvalidJwkException
+from CyberSource.configuration import Configuration
 
 
 def fetch_public_key(kid, run_environment):
@@ -48,10 +49,19 @@ def fetch_public_key(kid, run_environment):
         'Accept': 'application/json'
     }
     
-    # Create urllib3 PoolManager with SSL verification
+    # Use the same SSL configuration pattern as rest.py
+    configuration = Configuration()
+    if configuration.ssl_ca_cert:
+        cert_reqs = ssl.CERT_REQUIRED
+        ca_certs = configuration.ssl_ca_cert
+    else:
+        cert_reqs = ssl.CERT_NONE
+        ca_certs = None
+    
+    # Create urllib3 PoolManager with SSL configuration
     http = urllib3.PoolManager(
-        cert_reqs='CERT_REQUIRED',
-        ca_certs=certifi.where()
+        cert_reqs=cert_reqs,
+        ca_certs=ca_certs
     )
     
     try:
