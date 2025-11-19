@@ -28,16 +28,6 @@ SUPPORTED_ALGORITHMS = {
     'RS512': hashes.SHA512()
 }
 
-# Error messages constants
-ERROR_MESSAGES = {
-    'UNSUPPORTED_ALGORITHM': 'Unsupported JWT algorithm: {}. Supported algorithms: {}',
-    'MISSING_ALGORITHM': 'JWT header missing algorithm (alg) field',
-    'NO_PUBLIC_KEY': 'No public key found',
-    'INVALID_PUBLIC_KEY_FORMAT': 'Invalid public key format. Expected JWK object or JSON string.',
-    'INVALID_RSA_KEY': 'Public key must be an RSA key (kty: RSA)',
-    'MISSING_RSA_PARAMS': 'Invalid RSA JWK: missing required parameters (n, e)'
-}
-
 
 def _base64url_decode(input_str):
     """
@@ -109,13 +99,13 @@ def _validate_and_parse_jwk(public_key):
     elif isinstance(public_key, dict) and 'kty' in public_key:
         jwk_key = public_key
     else:
-        raise InvalidJwkException(ERROR_MESSAGES['INVALID_PUBLIC_KEY_FORMAT'])
+        raise InvalidJwkException('Invalid public key format. Expected JWK object or JSON string.')
     
     if jwk_key.get('kty') != 'RSA':
-        raise InvalidJwkException(ERROR_MESSAGES['INVALID_RSA_KEY'])
+        raise InvalidJwkException('Public key must be an RSA key (kty: RSA)')
     
     if not jwk_key.get('n') or not jwk_key.get('e'):
-        raise InvalidJwkException(ERROR_MESSAGES['MISSING_RSA_PARAMS'])
+        raise InvalidJwkException('Invalid RSA JWK: missing required parameters (n, e)')
     
     return jwk_key
 
@@ -184,7 +174,7 @@ def parse(jwt_token):
     
     # Validate that all parts are non-empty
     if not token_parts[0] or not token_parts[1] or not token_parts[2]:
-        raise InvalidJwtException('Invalid JWT token: one or more parts are empty')
+        raise InvalidJwtException('Malformed JWT : JWT provided does not conform to the proper structure for JWT')
     
     try:
         # Decode header and payload
@@ -224,7 +214,7 @@ def verify_jwt(jwt_token, public_key):
                                          if the algorithm is unsupported
     """
     if not public_key:
-        raise JwtSignatureValidationException(ERROR_MESSAGES['NO_PUBLIC_KEY'])
+        raise JwtSignatureValidationException('No public key provided')
     
     if not jwt_token:
         raise JwtSignatureValidationException('JWT token is null or undefined')
@@ -240,14 +230,14 @@ def verify_jwt(jwt_token, public_key):
     # Get the algorithm from header
     algorithm = header.get('alg')
     if not algorithm:
-        raise JwtSignatureValidationException(ERROR_MESSAGES['MISSING_ALGORITHM'])
+        raise JwtSignatureValidationException('JWT header missing algorithm (alg) field')
     
     # Check if algorithm is supported
     hash_algorithm = SUPPORTED_ALGORITHMS.get(algorithm)
     if not hash_algorithm:
         supported = ', '.join(SUPPORTED_ALGORITHMS.keys())
         raise JwtSignatureValidationException(
-            ERROR_MESSAGES['UNSUPPORTED_ALGORITHM'].format(algorithm, supported)
+            'Unsupported JWT algorithm: {}. Supported algorithms: {}'.format(algorithm, supported)
         )
     
     # Validate and parse the JWK public key

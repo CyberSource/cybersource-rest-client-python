@@ -8,8 +8,9 @@ from the CyberSource Flex V2 public keys API endpoint.
 
 from __future__ import absolute_import
 
-import requests
 import json
+import urllib3
+import certifi
 
 from authenticationsdk.util.jwt.JWTUtility import get_rsa_public_key_from_jwk
 from authenticationsdk.util.jwt.JWTExceptions import InvalidJwkException
@@ -31,7 +32,7 @@ def fetch_public_key(kid, run_environment):
         
     Raises:
         ValueError: If kid or run_environment is missing
-        requests.exceptions.RequestException: If the HTTP request fails
+        urllib3.exceptions.HTTPError: If the HTTP request fails
         InvalidJwkException: If the JWK cannot be parsed correctly
         Exception: For other errors during the fetch or parse process
     """
@@ -47,22 +48,32 @@ def fetch_public_key(kid, run_environment):
         'Accept': 'application/json'
     }
     
+    # Create urllib3 PoolManager with SSL verification
+    http = urllib3.PoolManager(
+        cert_reqs='CERT_REQUIRED',
+        ca_certs=certifi.where()
+    )
+    
     try:
-        response = requests.get(url, headers=headers)
+        # Make the HTTP GET request
+        response = http.request('GET', url, headers=headers)
         
         # Check if the request was successful
-        response.raise_for_status()
+        if response.status not in range(200, 300):
+            error = Exception(
+                f'HTTP {response.status}: {response.reason} - Failed to fetch public key for kid: {kid}'
+            )
+            error.status = response.status
+            raise error
         
-        if not response.text:
+        # Get response data as string
+        response_data = response.data.decode('utf-8')
+        
+        if not response_data:
             raise Exception('Empty response received from public key endpoint')
         
-        # Parse the response
-        try:
-            response_data = response.json()
-            jwk_json_string = json.dumps(response_data)
-        except json.JSONDecodeError:
-            # If it's already a string, use it directly
-            jwk_json_string = response.text
+        # Use response data directly as JSON string
+        jwk_json_string = response_data
         
         # Extract and validate the RSA public key from JWK
         try:
@@ -75,24 +86,19 @@ def fetch_public_key(kid, run_environment):
             error.original_error = parse_error
             raise error
             
-    except requests.exceptions.HTTPError as http_error:
-        status_code = http_error.response.status_code if http_error.response else 'Unknown'
-        status_text = http_error.response.reason if http_error.response else 'Unknown'
-        error = Exception(
-            f'HTTP {status_code}: {status_text} - Failed to fetch public key for kid: {kid}'
-        )
-        error.status = status_code
+    except urllib3.exceptions.HTTPError as http_error:
+        error = Exception(f'HTTP error - Failed to fetch public key for kid: {kid}')
         error.original_error = http_error
         raise error
         
-    except requests.exceptions.ConnectionError as conn_error:
+    except urllib3.exceptions.MaxRetryError as retry_error:
         error = Exception(f'No response received - Failed to fetch public key for kid: {kid}')
-        error.original_error = conn_error
+        error.original_error = retry_error
         raise error
         
-    except requests.exceptions.RequestException as req_error:
-        error = Exception(f'Request error: {str(req_error)}')
-        error.original_error = req_error
+    except urllib3.exceptions.SSLError as ssl_error:
+        error = Exception(f'SSL error - Failed to fetch public key for kid: {kid}')
+        error.original_error = ssl_error
         raise error
     
     except Exception as general_error:
