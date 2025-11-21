@@ -47,8 +47,8 @@ class SubscriptionsApi(object):
 
     def activate_subscription(self, id, **kwargs):
         """
-        Activate a Subscription
-        Activate a `SUSPENDED` Subscription 
+        Reactivating a Suspended Subscription
+        # Reactivating a Suspended Subscription  You can reactivate a suspended subscription for the next billing cycle. You cannot reactivate a canceled or completed subscription.  You can specify whether you want to process missed payments for the period during which the subscription was suspended using the `processMissedPayments` query parameter by setting it to true or false.  If no value is specified, the system will default to `true`.  **Important:** The \"processMissedPayments\" query parameter is only effective when the Ask each time before reactivating option is selected in the reactivation settings. If any other option is chosen, the value provided in the request will be ignored by the system. For more information, see the [Recurring Billing User Guide](https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/user/all/rest/recurring-billing-user/recurring-billing-user-about-guide.html).  You can check how many payments were missed and the total amount by retrieving the subscription details, where you will find the `reactivationInformation` object. See: [Retrieving a Subscription](https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev/recur-bill-subscriptions/recur-bill-getting-a-subscription.html). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -60,7 +60,7 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :param bool process_skipped_payments: Indicates if skipped payments should be processed from the period when the subscription was suspended. By default, this is set to true.
+        :param bool process_missed_payments: Indicates if missed payments should be processed from the period when the subscription was suspended. By default, this is set to true. When any option other than \"Ask each time before reactivating\" is selected in the reactivation settings, the value that you enter will be ignored. 
         :return: ActivateSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -77,8 +77,8 @@ class SubscriptionsApi(object):
 
     def activate_subscription_with_http_info(self, id, **kwargs):
         """
-        Activate a Subscription
-        Activate a `SUSPENDED` Subscription 
+        Reactivating a Suspended Subscription
+        # Reactivating a Suspended Subscription  You can reactivate a suspended subscription for the next billing cycle. You cannot reactivate a canceled or completed subscription.  You can specify whether you want to process missed payments for the period during which the subscription was suspended using the `processMissedPayments` query parameter by setting it to true or false.  If no value is specified, the system will default to `true`.  **Important:** The \"processMissedPayments\" query parameter is only effective when the Ask each time before reactivating option is selected in the reactivation settings. If any other option is chosen, the value provided in the request will be ignored by the system. For more information, see the [Recurring Billing User Guide](https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/user/all/rest/recurring-billing-user/recurring-billing-user-about-guide.html).  You can check how many payments were missed and the total amount by retrieving the subscription details, where you will find the `reactivationInformation` object. See: [Retrieving a Subscription](https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev/recur-bill-subscriptions/recur-bill-getting-a-subscription.html). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -90,13 +90,13 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :param bool process_skipped_payments: Indicates if skipped payments should be processed from the period when the subscription was suspended. By default, this is set to true.
+        :param bool process_missed_payments: Indicates if missed payments should be processed from the period when the subscription was suspended. By default, this is set to true. When any option other than \"Ask each time before reactivating\" is selected in the reactivation settings, the value that you enter will be ignored. 
         :return: ActivateSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'process_skipped_payments']
+        all_params = ['id', 'process_missed_payments']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -125,8 +125,8 @@ class SubscriptionsApi(object):
             id=id
 
         query_params = []
-        if 'process_skipped_payments' in params:
-            query_params.append(('processSkippedPayments', params['process_skipped_payments']))
+        if 'process_missed_payments' in params:
+            query_params.append(('processMissedPayments', params['process_missed_payments']))
 
         header_params = {}
 
@@ -771,7 +771,7 @@ class SubscriptionsApi(object):
     def suspend_subscription(self, id, **kwargs):
         """
         Suspend a Subscription
-        Suspend a Subscription
+        Suspend a Subscription 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -800,7 +800,7 @@ class SubscriptionsApi(object):
     def suspend_subscription_with_http_info(self, id, **kwargs):
         """
         Suspend a Subscription
-        Suspend a Subscription
+        Suspend a Subscription 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

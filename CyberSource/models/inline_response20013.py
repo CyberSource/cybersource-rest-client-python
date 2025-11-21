@@ -30,125 +30,287 @@ class InlineResponse20013(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Bavsv1accountvalidationsClientReferenceInformation',
-        'request_id': 'str',
-        'submit_time_utc': 'str',
-        'bank_account_validation': 'TssV2TransactionsGet200ResponseBankAccountValidation'
+        'version': 'str',
+        'report_created_date': 'str',
+        'batch_id': 'str',
+        'batch_source': 'str',
+        'batch_ca_endpoints': 'str',
+        'batch_created_date': 'str',
+        'merchant_reference': 'str',
+        'totals': 'InlineResponse20011EmbeddedTotals',
+        'billing': 'InlineResponse20012Billing',
+        'records': 'list[InlineResponse20013Records]'
     }
 
     attribute_map = {
-        'client_reference_information': 'clientReferenceInformation',
-        'request_id': 'requestId',
-        'submit_time_utc': 'submitTimeUtc',
-        'bank_account_validation': 'bankAccountValidation'
+        'version': 'version',
+        'report_created_date': 'reportCreatedDate',
+        'batch_id': 'batchId',
+        'batch_source': 'batchSource',
+        'batch_ca_endpoints': 'batchCaEndpoints',
+        'batch_created_date': 'batchCreatedDate',
+        'merchant_reference': 'merchantReference',
+        'totals': 'totals',
+        'billing': 'billing',
+        'records': 'records'
     }
 
-    def __init__(self, client_reference_information=None, request_id=None, submit_time_utc=None, bank_account_validation=None):
+    def __init__(self, version=None, report_created_date=None, batch_id=None, batch_source=None, batch_ca_endpoints=None, batch_created_date=None, merchant_reference=None, totals=None, billing=None, records=None):
         """
         InlineResponse20013 - a model defined in Swagger
         """
 
-        self._client_reference_information = None
-        self._request_id = None
-        self._submit_time_utc = None
-        self._bank_account_validation = None
+        self._version = None
+        self._report_created_date = None
+        self._batch_id = None
+        self._batch_source = None
+        self._batch_ca_endpoints = None
+        self._batch_created_date = None
+        self._merchant_reference = None
+        self._totals = None
+        self._billing = None
+        self._records = None
 
-        if client_reference_information is not None:
-          self.client_reference_information = client_reference_information
-        if request_id is not None:
-          self.request_id = request_id
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if bank_account_validation is not None:
-          self.bank_account_validation = bank_account_validation
-
-    @property
-    def client_reference_information(self):
-        """
-        Gets the client_reference_information of this InlineResponse20013.
-
-        :return: The client_reference_information of this InlineResponse20013.
-        :rtype: Bavsv1accountvalidationsClientReferenceInformation
-        """
-        return self._client_reference_information
-
-    @client_reference_information.setter
-    def client_reference_information(self, client_reference_information):
-        """
-        Sets the client_reference_information of this InlineResponse20013.
-
-        :param client_reference_information: The client_reference_information of this InlineResponse20013.
-        :type: Bavsv1accountvalidationsClientReferenceInformation
-        """
-
-        self._client_reference_information = client_reference_information
+        if version is not None:
+          self.version = version
+        if report_created_date is not None:
+          self.report_created_date = report_created_date
+        if batch_id is not None:
+          self.batch_id = batch_id
+        if batch_source is not None:
+          self.batch_source = batch_source
+        if batch_ca_endpoints is not None:
+          self.batch_ca_endpoints = batch_ca_endpoints
+        if batch_created_date is not None:
+          self.batch_created_date = batch_created_date
+        if merchant_reference is not None:
+          self.merchant_reference = merchant_reference
+        if totals is not None:
+          self.totals = totals
+        if billing is not None:
+          self.billing = billing
+        if records is not None:
+          self.records = records
 
     @property
-    def request_id(self):
+    def version(self):
         """
-        Gets the request_id of this InlineResponse20013.
-        Request Id sent as part of the request.
+        Gets the version of this InlineResponse20013.
 
-        :return: The request_id of this InlineResponse20013.
+        :return: The version of this InlineResponse20013.
         :rtype: str
         """
-        return self._request_id
+        return self._version
 
-    @request_id.setter
-    def request_id(self, request_id):
+    @version.setter
+    def version(self, version):
         """
-        Sets the request_id of this InlineResponse20013.
-        Request Id sent as part of the request.
+        Sets the version of this InlineResponse20013.
 
-        :param request_id: The request_id of this InlineResponse20013.
+        :param version: The version of this InlineResponse20013.
         :type: str
         """
 
-        self._request_id = request_id
+        self._version = version
 
     @property
-    def submit_time_utc(self):
+    def report_created_date(self):
         """
-        Gets the submit_time_utc of this InlineResponse20013.
-        Time of request in UTC.  Format: `YYYY-MM-DDThhmmssZ`, where: - `T`:  Separates the date and the time - `Z`:  Indicates Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT)  Example:  `2020-01-11T224757Z` equals January 11, 2020, at 22:47:57 (10:47:57 p.m.) 
+        Gets the report_created_date of this InlineResponse20013.
+        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
 
-        :return: The submit_time_utc of this InlineResponse20013.
+        :return: The report_created_date of this InlineResponse20013.
         :rtype: str
         """
-        return self._submit_time_utc
+        return self._report_created_date
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @report_created_date.setter
+    def report_created_date(self, report_created_date):
         """
-        Sets the submit_time_utc of this InlineResponse20013.
-        Time of request in UTC.  Format: `YYYY-MM-DDThhmmssZ`, where: - `T`:  Separates the date and the time - `Z`:  Indicates Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT)  Example:  `2020-01-11T224757Z` equals January 11, 2020, at 22:47:57 (10:47:57 p.m.) 
+        Sets the report_created_date of this InlineResponse20013.
+        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse20013.
+        :param report_created_date: The report_created_date of this InlineResponse20013.
         :type: str
         """
 
-        self._submit_time_utc = submit_time_utc
+        self._report_created_date = report_created_date
 
     @property
-    def bank_account_validation(self):
+    def batch_id(self):
         """
-        Gets the bank_account_validation of this InlineResponse20013.
+        Gets the batch_id of this InlineResponse20013.
+        Unique identification number assigned to the submitted request.
 
-        :return: The bank_account_validation of this InlineResponse20013.
-        :rtype: TssV2TransactionsGet200ResponseBankAccountValidation
+        :return: The batch_id of this InlineResponse20013.
+        :rtype: str
         """
-        return self._bank_account_validation
+        return self._batch_id
 
-    @bank_account_validation.setter
-    def bank_account_validation(self, bank_account_validation):
+    @batch_id.setter
+    def batch_id(self, batch_id):
         """
-        Sets the bank_account_validation of this InlineResponse20013.
+        Sets the batch_id of this InlineResponse20013.
+        Unique identification number assigned to the submitted request.
 
-        :param bank_account_validation: The bank_account_validation of this InlineResponse20013.
-        :type: TssV2TransactionsGet200ResponseBankAccountValidation
+        :param batch_id: The batch_id of this InlineResponse20013.
+        :type: str
         """
 
-        self._bank_account_validation = bank_account_validation
+        self._batch_id = batch_id
+
+    @property
+    def batch_source(self):
+        """
+        Gets the batch_source of this InlineResponse20013.
+        Valid Values:   * SCHEDULER   * TOKEN_API   * CREDIT_CARD_FILE_UPLOAD   * AMEX_REGSITRY   * AMEX_REGISTRY_API   * AMEX_MAINTENANCE 
+
+        :return: The batch_source of this InlineResponse20013.
+        :rtype: str
+        """
+        return self._batch_source
+
+    @batch_source.setter
+    def batch_source(self, batch_source):
+        """
+        Sets the batch_source of this InlineResponse20013.
+        Valid Values:   * SCHEDULER   * TOKEN_API   * CREDIT_CARD_FILE_UPLOAD   * AMEX_REGSITRY   * AMEX_REGISTRY_API   * AMEX_MAINTENANCE 
+
+        :param batch_source: The batch_source of this InlineResponse20013.
+        :type: str
+        """
+
+        self._batch_source = batch_source
+
+    @property
+    def batch_ca_endpoints(self):
+        """
+        Gets the batch_ca_endpoints of this InlineResponse20013.
+
+        :return: The batch_ca_endpoints of this InlineResponse20013.
+        :rtype: str
+        """
+        return self._batch_ca_endpoints
+
+    @batch_ca_endpoints.setter
+    def batch_ca_endpoints(self, batch_ca_endpoints):
+        """
+        Sets the batch_ca_endpoints of this InlineResponse20013.
+
+        :param batch_ca_endpoints: The batch_ca_endpoints of this InlineResponse20013.
+        :type: str
+        """
+
+        self._batch_ca_endpoints = batch_ca_endpoints
+
+    @property
+    def batch_created_date(self):
+        """
+        Gets the batch_created_date of this InlineResponse20013.
+        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
+
+        :return: The batch_created_date of this InlineResponse20013.
+        :rtype: str
+        """
+        return self._batch_created_date
+
+    @batch_created_date.setter
+    def batch_created_date(self, batch_created_date):
+        """
+        Sets the batch_created_date of this InlineResponse20013.
+        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
+
+        :param batch_created_date: The batch_created_date of this InlineResponse20013.
+        :type: str
+        """
+
+        self._batch_created_date = batch_created_date
+
+    @property
+    def merchant_reference(self):
+        """
+        Gets the merchant_reference of this InlineResponse20013.
+        Reference used by merchant to identify batch.
+
+        :return: The merchant_reference of this InlineResponse20013.
+        :rtype: str
+        """
+        return self._merchant_reference
+
+    @merchant_reference.setter
+    def merchant_reference(self, merchant_reference):
+        """
+        Sets the merchant_reference of this InlineResponse20013.
+        Reference used by merchant to identify batch.
+
+        :param merchant_reference: The merchant_reference of this InlineResponse20013.
+        :type: str
+        """
+
+        self._merchant_reference = merchant_reference
+
+    @property
+    def totals(self):
+        """
+        Gets the totals of this InlineResponse20013.
+
+        :return: The totals of this InlineResponse20013.
+        :rtype: InlineResponse20011EmbeddedTotals
+        """
+        return self._totals
+
+    @totals.setter
+    def totals(self, totals):
+        """
+        Sets the totals of this InlineResponse20013.
+
+        :param totals: The totals of this InlineResponse20013.
+        :type: InlineResponse20011EmbeddedTotals
+        """
+
+        self._totals = totals
+
+    @property
+    def billing(self):
+        """
+        Gets the billing of this InlineResponse20013.
+
+        :return: The billing of this InlineResponse20013.
+        :rtype: InlineResponse20012Billing
+        """
+        return self._billing
+
+    @billing.setter
+    def billing(self, billing):
+        """
+        Sets the billing of this InlineResponse20013.
+
+        :param billing: The billing of this InlineResponse20013.
+        :type: InlineResponse20012Billing
+        """
+
+        self._billing = billing
+
+    @property
+    def records(self):
+        """
+        Gets the records of this InlineResponse20013.
+
+        :return: The records of this InlineResponse20013.
+        :rtype: list[InlineResponse20013Records]
+        """
+        return self._records
+
+    @records.setter
+    def records(self, records):
+        """
+        Sets the records of this InlineResponse20013.
+
+        :param records: The records of this InlineResponse20013.
+        :type: list[InlineResponse20013Records]
+        """
+
+        self._records = records
 
     def to_dict(self):
         """

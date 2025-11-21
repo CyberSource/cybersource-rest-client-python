@@ -30,85 +30,46 @@ class InlineResponse2002(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
-        'field_type': 'str',
-        'label': 'str',
-        'customer_visible': 'bool',
-        'text_min_length': 'int',
-        'text_max_length': 'int',
-        'possible_values': 'str',
-        'text_default_value': 'str',
-        'merchant_id': 'str',
-        'reference_type': 'str',
-        'read_only': 'bool',
-        'merchant_defined_data_index': 'int'
+        'id': 'str',
+        'submit_time_utc': 'str',
+        'status': 'str',
+        'embedded': 'InlineResponse2002Embedded'
     }
 
     attribute_map = {
         'id': 'id',
-        'field_type': 'fieldType',
-        'label': 'label',
-        'customer_visible': 'customerVisible',
-        'text_min_length': 'textMinLength',
-        'text_max_length': 'textMaxLength',
-        'possible_values': 'possibleValues',
-        'text_default_value': 'textDefaultValue',
-        'merchant_id': 'merchantId',
-        'reference_type': 'referenceType',
-        'read_only': 'readOnly',
-        'merchant_defined_data_index': 'merchantDefinedDataIndex'
+        'submit_time_utc': 'submitTimeUtc',
+        'status': 'status',
+        'embedded': '_embedded'
     }
 
-    def __init__(self, id=None, field_type=None, label=None, customer_visible=None, text_min_length=None, text_max_length=None, possible_values=None, text_default_value=None, merchant_id=None, reference_type=None, read_only=None, merchant_defined_data_index=None):
+    def __init__(self, id=None, submit_time_utc=None, status=None, embedded=None):
         """
         InlineResponse2002 - a model defined in Swagger
         """
 
         self._id = None
-        self._field_type = None
-        self._label = None
-        self._customer_visible = None
-        self._text_min_length = None
-        self._text_max_length = None
-        self._possible_values = None
-        self._text_default_value = None
-        self._merchant_id = None
-        self._reference_type = None
-        self._read_only = None
-        self._merchant_defined_data_index = None
+        self._submit_time_utc = None
+        self._status = None
+        self._embedded = None
 
         if id is not None:
           self.id = id
-        if field_type is not None:
-          self.field_type = field_type
-        if label is not None:
-          self.label = label
-        if customer_visible is not None:
-          self.customer_visible = customer_visible
-        if text_min_length is not None:
-          self.text_min_length = text_min_length
-        if text_max_length is not None:
-          self.text_max_length = text_max_length
-        if possible_values is not None:
-          self.possible_values = possible_values
-        if text_default_value is not None:
-          self.text_default_value = text_default_value
-        if merchant_id is not None:
-          self.merchant_id = merchant_id
-        if reference_type is not None:
-          self.reference_type = reference_type
-        if read_only is not None:
-          self.read_only = read_only
-        if merchant_defined_data_index is not None:
-          self.merchant_defined_data_index = merchant_defined_data_index
+        if submit_time_utc is not None:
+          self.submit_time_utc = submit_time_utc
+        if status is not None:
+          self.status = status
+        if embedded is not None:
+          self.embedded = embedded
 
     @property
     def id(self):
         """
         Gets the id of this InlineResponse2002.
+        UUID uniquely generated for this comments. 
 
         :return: The id of this InlineResponse2002.
-        :rtype: int
+        :rtype: str
         """
         return self._id
 
@@ -116,243 +77,80 @@ class InlineResponse2002(object):
     def id(self, id):
         """
         Sets the id of this InlineResponse2002.
+        UUID uniquely generated for this comments. 
 
         :param id: The id of this InlineResponse2002.
-        :type: int
+        :type: str
         """
 
         self._id = id
 
     @property
-    def field_type(self):
+    def submit_time_utc(self):
         """
-        Gets the field_type of this InlineResponse2002.
+        Gets the submit_time_utc of this InlineResponse2002.
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
 
-        :return: The field_type of this InlineResponse2002.
+        :return: The submit_time_utc of this InlineResponse2002.
         :rtype: str
         """
-        return self._field_type
+        return self._submit_time_utc
 
-    @field_type.setter
-    def field_type(self, field_type):
+    @submit_time_utc.setter
+    def submit_time_utc(self, submit_time_utc):
         """
-        Sets the field_type of this InlineResponse2002.
+        Sets the submit_time_utc of this InlineResponse2002.
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
 
-        :param field_type: The field_type of this InlineResponse2002.
+        :param submit_time_utc: The submit_time_utc of this InlineResponse2002.
         :type: str
         """
 
-        self._field_type = field_type
+        self._submit_time_utc = submit_time_utc
 
     @property
-    def label(self):
+    def status(self):
         """
-        Gets the label of this InlineResponse2002.
+        Gets the status of this InlineResponse2002.
+        The status of the submitted transaction. Possible values are: - `ACCEPTED` - `REJECTED` 
 
-        :return: The label of this InlineResponse2002.
+        :return: The status of this InlineResponse2002.
         :rtype: str
         """
-        return self._label
+        return self._status
 
-    @label.setter
-    def label(self, label):
+    @status.setter
+    def status(self, status):
         """
-        Sets the label of this InlineResponse2002.
+        Sets the status of this InlineResponse2002.
+        The status of the submitted transaction. Possible values are: - `ACCEPTED` - `REJECTED` 
 
-        :param label: The label of this InlineResponse2002.
+        :param status: The status of this InlineResponse2002.
         :type: str
         """
 
-        self._label = label
+        self._status = status
 
     @property
-    def customer_visible(self):
+    def embedded(self):
         """
-        Gets the customer_visible of this InlineResponse2002.
+        Gets the embedded of this InlineResponse2002.
 
-        :return: The customer_visible of this InlineResponse2002.
-        :rtype: bool
+        :return: The embedded of this InlineResponse2002.
+        :rtype: InlineResponse2002Embedded
         """
-        return self._customer_visible
+        return self._embedded
 
-    @customer_visible.setter
-    def customer_visible(self, customer_visible):
+    @embedded.setter
+    def embedded(self, embedded):
         """
-        Sets the customer_visible of this InlineResponse2002.
+        Sets the embedded of this InlineResponse2002.
 
-        :param customer_visible: The customer_visible of this InlineResponse2002.
-        :type: bool
-        """
-
-        self._customer_visible = customer_visible
-
-    @property
-    def text_min_length(self):
-        """
-        Gets the text_min_length of this InlineResponse2002.
-
-        :return: The text_min_length of this InlineResponse2002.
-        :rtype: int
-        """
-        return self._text_min_length
-
-    @text_min_length.setter
-    def text_min_length(self, text_min_length):
-        """
-        Sets the text_min_length of this InlineResponse2002.
-
-        :param text_min_length: The text_min_length of this InlineResponse2002.
-        :type: int
+        :param embedded: The embedded of this InlineResponse2002.
+        :type: InlineResponse2002Embedded
         """
 
-        self._text_min_length = text_min_length
-
-    @property
-    def text_max_length(self):
-        """
-        Gets the text_max_length of this InlineResponse2002.
-
-        :return: The text_max_length of this InlineResponse2002.
-        :rtype: int
-        """
-        return self._text_max_length
-
-    @text_max_length.setter
-    def text_max_length(self, text_max_length):
-        """
-        Sets the text_max_length of this InlineResponse2002.
-
-        :param text_max_length: The text_max_length of this InlineResponse2002.
-        :type: int
-        """
-
-        self._text_max_length = text_max_length
-
-    @property
-    def possible_values(self):
-        """
-        Gets the possible_values of this InlineResponse2002.
-
-        :return: The possible_values of this InlineResponse2002.
-        :rtype: str
-        """
-        return self._possible_values
-
-    @possible_values.setter
-    def possible_values(self, possible_values):
-        """
-        Sets the possible_values of this InlineResponse2002.
-
-        :param possible_values: The possible_values of this InlineResponse2002.
-        :type: str
-        """
-
-        self._possible_values = possible_values
-
-    @property
-    def text_default_value(self):
-        """
-        Gets the text_default_value of this InlineResponse2002.
-
-        :return: The text_default_value of this InlineResponse2002.
-        :rtype: str
-        """
-        return self._text_default_value
-
-    @text_default_value.setter
-    def text_default_value(self, text_default_value):
-        """
-        Sets the text_default_value of this InlineResponse2002.
-
-        :param text_default_value: The text_default_value of this InlineResponse2002.
-        :type: str
-        """
-
-        self._text_default_value = text_default_value
-
-    @property
-    def merchant_id(self):
-        """
-        Gets the merchant_id of this InlineResponse2002.
-
-        :return: The merchant_id of this InlineResponse2002.
-        :rtype: str
-        """
-        return self._merchant_id
-
-    @merchant_id.setter
-    def merchant_id(self, merchant_id):
-        """
-        Sets the merchant_id of this InlineResponse2002.
-
-        :param merchant_id: The merchant_id of this InlineResponse2002.
-        :type: str
-        """
-
-        self._merchant_id = merchant_id
-
-    @property
-    def reference_type(self):
-        """
-        Gets the reference_type of this InlineResponse2002.
-
-        :return: The reference_type of this InlineResponse2002.
-        :rtype: str
-        """
-        return self._reference_type
-
-    @reference_type.setter
-    def reference_type(self, reference_type):
-        """
-        Sets the reference_type of this InlineResponse2002.
-
-        :param reference_type: The reference_type of this InlineResponse2002.
-        :type: str
-        """
-
-        self._reference_type = reference_type
-
-    @property
-    def read_only(self):
-        """
-        Gets the read_only of this InlineResponse2002.
-
-        :return: The read_only of this InlineResponse2002.
-        :rtype: bool
-        """
-        return self._read_only
-
-    @read_only.setter
-    def read_only(self, read_only):
-        """
-        Sets the read_only of this InlineResponse2002.
-
-        :param read_only: The read_only of this InlineResponse2002.
-        :type: bool
-        """
-
-        self._read_only = read_only
-
-    @property
-    def merchant_defined_data_index(self):
-        """
-        Gets the merchant_defined_data_index of this InlineResponse2002.
-
-        :return: The merchant_defined_data_index of this InlineResponse2002.
-        :rtype: int
-        """
-        return self._merchant_defined_data_index
-
-    @merchant_defined_data_index.setter
-    def merchant_defined_data_index(self, merchant_defined_data_index):
-        """
-        Sets the merchant_defined_data_index of this InlineResponse2002.
-
-        :param merchant_defined_data_index: The merchant_defined_data_index of this InlineResponse2002.
-        :type: int
-        """
-
-        self._merchant_defined_data_index = merchant_defined_data_index
+        self._embedded = embedded
 
     def to_dict(self):
         """

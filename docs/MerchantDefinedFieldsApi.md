@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **create_merchant_defined_field_definition**
-> list[InlineResponse2002] create_merchant_defined_field_definition(reference_type, merchant_defined_field_definition_request)
+> list[InlineResponse2003] create_merchant_defined_field_definition(reference_type, merchant_defined_field_definition_request)
 
 Create merchant defined field for a given reference type
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[InlineResponse2002]**](InlineResponse2002.md)
+[**list[InlineResponse2003]**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_merchant_defined_fields_definitions**
-> list[InlineResponse2002] get_merchant_defined_fields_definitions(reference_type)
+> list[InlineResponse2003] get_merchant_defined_fields_definitions(reference_type)
 
 Get all merchant defined fields for a given reference type
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[InlineResponse2002]**](InlineResponse2002.md)
+[**list[InlineResponse2003]**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_merchant_defined_fields_definitions**
-> list[InlineResponse2002] put_merchant_defined_fields_definitions(reference_type, id, merchant_defined_field_core)
+> list[InlineResponse2003] put_merchant_defined_fields_definitions(reference_type, id, merchant_defined_field_core)
 
 Update a MerchantDefinedField by ID
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[InlineResponse2002]**](InlineResponse2002.md)
+[**list[InlineResponse2003]**](InlineResponse2003.md)
 
 ### Authorization
 

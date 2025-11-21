@@ -30,7 +30,7 @@ class CreateSubscriptionRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Rbsv1subscriptionsClientReferenceInformation',
+        'client_reference_information': 'GetAllSubscriptionsResponseClientReferenceInformation',
         'processing_information': 'Rbsv1subscriptionsProcessingInformation',
         'plan_information': 'Rbsv1subscriptionsPlanInformation',
         'subscription_information': 'Rbsv1subscriptionsSubscriptionInformation',
@@ -78,7 +78,7 @@ class CreateSubscriptionRequest(object):
         Gets the client_reference_information of this CreateSubscriptionRequest.
 
         :return: The client_reference_information of this CreateSubscriptionRequest.
-        :rtype: Rbsv1subscriptionsClientReferenceInformation
+        :rtype: GetAllSubscriptionsResponseClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -88,7 +88,7 @@ class CreateSubscriptionRequest(object):
         Sets the client_reference_information of this CreateSubscriptionRequest.
 
         :param client_reference_information: The client_reference_information of this CreateSubscriptionRequest.
-        :type: Rbsv1subscriptionsClientReferenceInformation
+        :type: GetAllSubscriptionsResponseClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

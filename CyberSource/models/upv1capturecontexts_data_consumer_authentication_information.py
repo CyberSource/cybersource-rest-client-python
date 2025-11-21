@@ -31,31 +31,37 @@ class Upv1capturecontextsDataConsumerAuthenticationInformation(object):
     """
     swagger_types = {
         'challenge_code': 'str',
-        'message_category': 'str'
+        'message_category': 'str',
+        'acs_window_size': 'str'
     }
 
     attribute_map = {
         'challenge_code': 'challengeCode',
-        'message_category': 'messageCategory'
+        'message_category': 'messageCategory',
+        'acs_window_size': 'acsWindowSize'
     }
 
-    def __init__(self, challenge_code=None, message_category=None):
+    def __init__(self, challenge_code=None, message_category=None, acs_window_size=None):
         """
         Upv1capturecontextsDataConsumerAuthenticationInformation - a model defined in Swagger
         """
 
         self._challenge_code = None
         self._message_category = None
+        self._acs_window_size = None
 
         if challenge_code is not None:
           self.challenge_code = challenge_code
         if message_category is not None:
           self.message_category = message_category
+        if acs_window_size is not None:
+          self.acs_window_size = acs_window_size
 
     @property
     def challenge_code(self):
         """
         Gets the challenge_code of this Upv1capturecontextsDataConsumerAuthenticationInformation.
+        The challenge code 
 
         :return: The challenge_code of this Upv1capturecontextsDataConsumerAuthenticationInformation.
         :rtype: str
@@ -66,6 +72,7 @@ class Upv1capturecontextsDataConsumerAuthenticationInformation(object):
     def challenge_code(self, challenge_code):
         """
         Sets the challenge_code of this Upv1capturecontextsDataConsumerAuthenticationInformation.
+        The challenge code 
 
         :param challenge_code: The challenge_code of this Upv1capturecontextsDataConsumerAuthenticationInformation.
         :type: str
@@ -77,6 +84,7 @@ class Upv1capturecontextsDataConsumerAuthenticationInformation(object):
     def message_category(self):
         """
         Gets the message_category of this Upv1capturecontextsDataConsumerAuthenticationInformation.
+        The message category 
 
         :return: The message_category of this Upv1capturecontextsDataConsumerAuthenticationInformation.
         :rtype: str
@@ -87,12 +95,36 @@ class Upv1capturecontextsDataConsumerAuthenticationInformation(object):
     def message_category(self, message_category):
         """
         Sets the message_category of this Upv1capturecontextsDataConsumerAuthenticationInformation.
+        The message category 
 
         :param message_category: The message_category of this Upv1capturecontextsDataConsumerAuthenticationInformation.
         :type: str
         """
 
         self._message_category = message_category
+
+    @property
+    def acs_window_size(self):
+        """
+        Gets the acs_window_size of this Upv1capturecontextsDataConsumerAuthenticationInformation.
+        The acs window size 
+
+        :return: The acs_window_size of this Upv1capturecontextsDataConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._acs_window_size
+
+    @acs_window_size.setter
+    def acs_window_size(self, acs_window_size):
+        """
+        Sets the acs_window_size of this Upv1capturecontextsDataConsumerAuthenticationInformation.
+        The acs window size 
+
+        :param acs_window_size: The acs_window_size of this Upv1capturecontextsDataConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._acs_window_size = acs_window_size
 
     def to_dict(self):
         """

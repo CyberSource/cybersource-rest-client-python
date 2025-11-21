@@ -62,7 +62,7 @@ class TokenApi(object):
         :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
         :param str token_provider: The token provider. (required)
         :param str asset_type: The type of asset. (required)
-        :return: InlineResponse200
+        :return: InlineResponse2001
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -93,7 +93,7 @@ class TokenApi(object):
         :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
         :param str token_provider: The token provider. (required)
         :param str asset_type: The type of asset. (required)
-        :return: InlineResponse200
+        :return: InlineResponse2001
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -176,7 +176,7 @@ class TokenApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse200',
+                                        response_type='InlineResponse2001',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -292,7 +292,7 @@ class TokenApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_payment_credentials_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        inbound_mle_status = "false"
+        inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_token_payment_credentials,post_token_payment_credentials_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         

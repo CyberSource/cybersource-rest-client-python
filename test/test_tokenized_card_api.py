@@ -46,6 +46,14 @@ class TestTokenizedCardApi(unittest.TestCase):
         """
         pass
 
+    def test_post_issuer_life_cycle_simulation(self):
+        """
+        Test case for post_issuer_life_cycle_simulation
+
+        Simulate Issuer Life Cycle Management Events
+        """
+        pass
+
     def test_post_tokenized_card(self):
         """
         Test case for post_tokenized_card

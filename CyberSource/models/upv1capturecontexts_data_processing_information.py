@@ -56,6 +56,7 @@ class Upv1capturecontextsDataProcessingInformation(object):
     def reconciliation_id(self):
         """
         Gets the reconciliation_id of this Upv1capturecontextsDataProcessingInformation.
+        The reconciliation ID
 
         :return: The reconciliation_id of this Upv1capturecontextsDataProcessingInformation.
         :rtype: str
@@ -66,6 +67,7 @@ class Upv1capturecontextsDataProcessingInformation(object):
     def reconciliation_id(self, reconciliation_id):
         """
         Sets the reconciliation_id of this Upv1capturecontextsDataProcessingInformation.
+        The reconciliation ID
 
         :param reconciliation_id: The reconciliation_id of this Upv1capturecontextsDataProcessingInformation.
         :type: str

@@ -31,36 +31,62 @@ class Upv1capturecontextsDataProcessingInformationAuthorizationOptions(object):
     """
     swagger_types = {
         'aft_indicator': 'bool',
+        'auth_indicator': 'str',
+        'ignore_cv_result': 'bool',
+        'ignore_avs_result': 'bool',
         'initiator': 'Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiator',
-        'business_application_id': 'str'
+        'business_application_id': 'str',
+        'commerce_indicator': 'str',
+        'processing_instruction': 'str'
     }
 
     attribute_map = {
         'aft_indicator': 'aftIndicator',
+        'auth_indicator': 'authIndicator',
+        'ignore_cv_result': 'ignoreCvResult',
+        'ignore_avs_result': 'ignoreAvsResult',
         'initiator': 'initiator',
-        'business_application_id': 'businessApplicationId'
+        'business_application_id': 'businessApplicationId',
+        'commerce_indicator': 'commerceIndicator',
+        'processing_instruction': 'processingInstruction'
     }
 
-    def __init__(self, aft_indicator=None, initiator=None, business_application_id=None):
+    def __init__(self, aft_indicator=None, auth_indicator=None, ignore_cv_result=None, ignore_avs_result=None, initiator=None, business_application_id=None, commerce_indicator=None, processing_instruction=None):
         """
         Upv1capturecontextsDataProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
 
         self._aft_indicator = None
+        self._auth_indicator = None
+        self._ignore_cv_result = None
+        self._ignore_avs_result = None
         self._initiator = None
         self._business_application_id = None
+        self._commerce_indicator = None
+        self._processing_instruction = None
 
         if aft_indicator is not None:
           self.aft_indicator = aft_indicator
+        if auth_indicator is not None:
+          self.auth_indicator = auth_indicator
+        if ignore_cv_result is not None:
+          self.ignore_cv_result = ignore_cv_result
+        if ignore_avs_result is not None:
+          self.ignore_avs_result = ignore_avs_result
         if initiator is not None:
           self.initiator = initiator
         if business_application_id is not None:
           self.business_application_id = business_application_id
+        if commerce_indicator is not None:
+          self.commerce_indicator = commerce_indicator
+        if processing_instruction is not None:
+          self.processing_instruction = processing_instruction
 
     @property
     def aft_indicator(self):
         """
         Gets the aft_indicator of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        The AFT indicator
 
         :return: The aft_indicator of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
         :rtype: bool
@@ -71,12 +97,82 @@ class Upv1capturecontextsDataProcessingInformationAuthorizationOptions(object):
     def aft_indicator(self, aft_indicator):
         """
         Sets the aft_indicator of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        The AFT indicator
 
         :param aft_indicator: The aft_indicator of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
         :type: bool
         """
 
         self._aft_indicator = aft_indicator
+
+    @property
+    def auth_indicator(self):
+        """
+        Gets the auth_indicator of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        The authorization indicator
+
+        :return: The auth_indicator of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        :rtype: str
+        """
+        return self._auth_indicator
+
+    @auth_indicator.setter
+    def auth_indicator(self, auth_indicator):
+        """
+        Sets the auth_indicator of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        The authorization indicator
+
+        :param auth_indicator: The auth_indicator of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        :type: str
+        """
+
+        self._auth_indicator = auth_indicator
+
+    @property
+    def ignore_cv_result(self):
+        """
+        Gets the ignore_cv_result of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        Ignore the CV result
+
+        :return: The ignore_cv_result of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        :rtype: bool
+        """
+        return self._ignore_cv_result
+
+    @ignore_cv_result.setter
+    def ignore_cv_result(self, ignore_cv_result):
+        """
+        Sets the ignore_cv_result of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        Ignore the CV result
+
+        :param ignore_cv_result: The ignore_cv_result of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        :type: bool
+        """
+
+        self._ignore_cv_result = ignore_cv_result
+
+    @property
+    def ignore_avs_result(self):
+        """
+        Gets the ignore_avs_result of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        Ignore the AVS result
+
+        :return: The ignore_avs_result of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        :rtype: bool
+        """
+        return self._ignore_avs_result
+
+    @ignore_avs_result.setter
+    def ignore_avs_result(self, ignore_avs_result):
+        """
+        Sets the ignore_avs_result of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        Ignore the AVS result
+
+        :param ignore_avs_result: The ignore_avs_result of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        :type: bool
+        """
+
+        self._ignore_avs_result = ignore_avs_result
 
     @property
     def initiator(self):
@@ -103,6 +199,7 @@ class Upv1capturecontextsDataProcessingInformationAuthorizationOptions(object):
     def business_application_id(self):
         """
         Gets the business_application_id of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        The business application Id
 
         :return: The business_application_id of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
         :rtype: str
@@ -113,12 +210,59 @@ class Upv1capturecontextsDataProcessingInformationAuthorizationOptions(object):
     def business_application_id(self, business_application_id):
         """
         Sets the business_application_id of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        The business application Id
 
         :param business_application_id: The business_application_id of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
         :type: str
         """
 
         self._business_application_id = business_application_id
+
+    @property
+    def commerce_indicator(self):
+        """
+        Gets the commerce_indicator of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        The commerce indicator
+
+        :return: The commerce_indicator of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        :rtype: str
+        """
+        return self._commerce_indicator
+
+    @commerce_indicator.setter
+    def commerce_indicator(self, commerce_indicator):
+        """
+        Sets the commerce_indicator of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        The commerce indicator
+
+        :param commerce_indicator: The commerce_indicator of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        :type: str
+        """
+
+        self._commerce_indicator = commerce_indicator
+
+    @property
+    def processing_instruction(self):
+        """
+        Gets the processing_instruction of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        The processing instruction
+
+        :return: The processing_instruction of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        :rtype: str
+        """
+        return self._processing_instruction
+
+    @processing_instruction.setter
+    def processing_instruction(self, processing_instruction):
+        """
+        Sets the processing_instruction of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        The processing instruction
+
+        :param processing_instruction: The processing_instruction of this Upv1capturecontextsDataProcessingInformationAuthorizationOptions.
+        :type: str
+        """
+
+        self._processing_instruction = processing_instruction
 
     def to_dict(self):
         """

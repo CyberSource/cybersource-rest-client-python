@@ -37,7 +37,9 @@ class Upv1capturecontextsData(object):
         'merchant_information': 'Upv1capturecontextsDataMerchantInformation',
         'processing_information': 'Upv1capturecontextsDataProcessingInformation',
         'recipient_information': 'Upv1capturecontextsDataRecipientInformation',
-        'merchant_defined_information': 'Upv1capturecontextsDataMerchantDefinedInformation'
+        'merchant_defined_information': 'Upv1capturecontextsDataMerchantDefinedInformation',
+        'device_information': 'Upv1capturecontextsDataDeviceInformation',
+        'payment_information': 'Upv1capturecontextsDataPaymentInformation'
     }
 
     attribute_map = {
@@ -48,10 +50,12 @@ class Upv1capturecontextsData(object):
         'merchant_information': 'merchantInformation',
         'processing_information': 'processingInformation',
         'recipient_information': 'recipientInformation',
-        'merchant_defined_information': 'merchantDefinedInformation'
+        'merchant_defined_information': 'merchantDefinedInformation',
+        'device_information': 'deviceInformation',
+        'payment_information': 'paymentInformation'
     }
 
-    def __init__(self, order_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, merchant_information=None, processing_information=None, recipient_information=None, merchant_defined_information=None):
+    def __init__(self, order_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, merchant_information=None, processing_information=None, recipient_information=None, merchant_defined_information=None, device_information=None, payment_information=None):
         """
         Upv1capturecontextsData - a model defined in Swagger
         """
@@ -64,6 +68,8 @@ class Upv1capturecontextsData(object):
         self._processing_information = None
         self._recipient_information = None
         self._merchant_defined_information = None
+        self._device_information = None
+        self._payment_information = None
 
         if order_information is not None:
           self.order_information = order_information
@@ -81,6 +87,10 @@ class Upv1capturecontextsData(object):
           self.recipient_information = recipient_information
         if merchant_defined_information is not None:
           self.merchant_defined_information = merchant_defined_information
+        if device_information is not None:
+          self.device_information = device_information
+        if payment_information is not None:
+          self.payment_information = payment_information
 
     @property
     def order_information(self):
@@ -249,6 +259,48 @@ class Upv1capturecontextsData(object):
         """
 
         self._merchant_defined_information = merchant_defined_information
+
+    @property
+    def device_information(self):
+        """
+        Gets the device_information of this Upv1capturecontextsData.
+
+        :return: The device_information of this Upv1capturecontextsData.
+        :rtype: Upv1capturecontextsDataDeviceInformation
+        """
+        return self._device_information
+
+    @device_information.setter
+    def device_information(self, device_information):
+        """
+        Sets the device_information of this Upv1capturecontextsData.
+
+        :param device_information: The device_information of this Upv1capturecontextsData.
+        :type: Upv1capturecontextsDataDeviceInformation
+        """
+
+        self._device_information = device_information
+
+    @property
+    def payment_information(self):
+        """
+        Gets the payment_information of this Upv1capturecontextsData.
+
+        :return: The payment_information of this Upv1capturecontextsData.
+        :rtype: Upv1capturecontextsDataPaymentInformation
+        """
+        return self._payment_information
+
+    @payment_information.setter
+    def payment_information(self, payment_information):
+        """
+        Sets the payment_information of this Upv1capturecontextsData.
+
+        :param payment_information: The payment_information of this Upv1capturecontextsData.
+        :type: Upv1capturecontextsDataPaymentInformation
+        """
+
+        self._payment_information = payment_information
 
     def to_dict(self):
         """

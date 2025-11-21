@@ -36,6 +36,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         'allowed_payment_types': 'list[str]',
         'country': 'str',
         'locale': 'str',
+        'button_type': 'str',
         'capture_mandate': 'Upv1capturecontextsCaptureMandate',
         'complete_mandate': 'Upv1capturecontextsCompleteMandate',
         'transient_token_response_options': 'Microformv2sessionsTransientTokenResponseOptions',
@@ -50,6 +51,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         'allowed_payment_types': 'allowedPaymentTypes',
         'country': 'country',
         'locale': 'locale',
+        'button_type': 'buttonType',
         'capture_mandate': 'captureMandate',
         'complete_mandate': 'completeMandate',
         'transient_token_response_options': 'transientTokenResponseOptions',
@@ -57,7 +59,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         'order_information': 'orderInformation'
     }
 
-    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, allowed_payment_types=None, country=None, locale=None, capture_mandate=None, complete_mandate=None, transient_token_response_options=None, data=None, order_information=None):
+    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, allowed_payment_types=None, country=None, locale=None, button_type=None, capture_mandate=None, complete_mandate=None, transient_token_response_options=None, data=None, order_information=None):
         """
         GenerateUnifiedCheckoutCaptureContextRequest - a model defined in Swagger
         """
@@ -68,6 +70,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         self._allowed_payment_types = None
         self._country = None
         self._locale = None
+        self._button_type = None
         self._capture_mandate = None
         self._complete_mandate = None
         self._transient_token_response_options = None
@@ -86,6 +89,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
           self.country = country
         if locale is not None:
           self.locale = locale
+        if button_type is not None:
+          self.button_type = button_type
         if capture_mandate is not None:
           self.capture_mandate = capture_mandate
         if complete_mandate is not None:
@@ -170,7 +175,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def allowed_payment_types(self):
         """
         Gets the allowed_payment_types of this GenerateUnifiedCheckoutCaptureContextRequest.
-        The payment types that are allowed for the merchant.    Possible values when launching Unified Checkout:   - APPLEPAY   - CHECK   - CLICKTOPAY   - GOOGLEPAY   - PANENTRY                 - PAZE <br><br>  Unified Checkout supports the following Buy Now, Pay Later (BNPL) payment methods:   - AFTERPAY<br><br>  Unified Checkout supports the following Online Bank Transfer payment methods:   - Bancontact (BE)   - DragonPay (PH)   - iDEAL (NL)   - Multibanco (PT)   - MyBank (IT, BE, PT, ES)   - Przelewy24|P24 (PL)   - Tink Pay By Bank (GB)  Possible values when launching Click To Pay Drop-In UI: - CLICKTOPAY <br><br>  **Important:**    - CLICKTOPAY only available for Visa, Mastercard and AMEX for saved cards.   - Visa and Mastercard will look to tokenize using network tokenization for all Click to Pay requests.  Click to Pay uses Click to Pay token requester IDs and not the merchant's existing token requester.   - Apple Pay, Google Pay, Check, and Paze can be used independently without requiring PAN entry in the allowedPaymentTypes field.<br><br>  **Managing Google Pay Authentication Types** When you enable Google Pay on Unified Checkout you can specify optional parameters that define the types of card authentication you receive from Google Pay.<br><br>  **Managing Google Pay Authentication Types** Where Click to Pay is the payment type selected by the customer and the customer manually enters their card, the option to enroll their card in Click to Pay will be auto-checked if this field is set to \"true\".   This is only available where the merchant and cardholder are based in the following countries and the billing type is set to \"FULL\" or \"PARTIAL\".   - UAE   - Argentina   - Brazil   - Chile   - Colombia   - Kuwait   - Mexico   - Peru   - Qatar   - Saudi Arabia   - Ukraine   - South Africa<br><br>  If false, this is not present or not supported in the market.  Enrollment in Click to Pay is not checked for the customer when completing manual card entry. 
+        The payment types that are allowed for the merchant.    Possible values when launching Unified Checkout:   - APPLEPAY   - CHECK   - CLICKTOPAY   - GOOGLEPAY   - PANENTRY                 - PAZE <br><br>  Unified Checkout supports the following Buy Now, Pay Later (BNPL) payment methods:   - AFTERPAY<br><br>  Unified Checkout supports the following Online Bank Transfer payment methods:   - Bancontact (BE)   - DragonPay (PH)   - iDEAL (NL)   - Multibanco (PT)   - MyBank (IT, BE, PT, ES)   - Przelewy24|P24 (PL)   - Tink Pay By Bank (GB)<br><br>    Unified Checkout supports the following Post-Pay Reference payment methods:   - Konbini (JP)<br><br>  Possible values when launching Click To Pay Drop-In UI: - CLICKTOPAY <br><br>  **Important:**    - CLICKTOPAY only available for Visa, Mastercard and AMEX for saved cards.   - Visa and Mastercard will look to tokenize using network tokenization for all Click to Pay requests.  Click to Pay uses Click to Pay token requester IDs and not the merchant's existing token requester.   - Apple Pay, Google Pay, Check, and Paze can be used independently without requiring PAN entry in the allowedPaymentTypes field.<br><br>  **Managing Google Pay Authentication Types** When you enable Google Pay on Unified Checkout you can specify optional parameters that define the types of card authentication you receive from Google Pay.<br><br>  **Managing Google Pay Authentication Types** Where Click to Pay is the payment type selected by the customer and the customer manually enters their card, the option to enroll their card in Click to Pay will be auto-checked if this field is set to \"true\".   This is only available where the merchant and cardholder are based in the following countries and the billing type is set to \"FULL\" or \"PARTIAL\".   - UAE   - Argentina   - Brazil   - Chile   - Colombia   - Kuwait   - Mexico   - Peru   - Qatar   - Saudi Arabia   - Ukraine   - South Africa<br><br>  If false, this is not present or not supported in the market.  Enrollment in Click to Pay is not checked for the customer when completing manual card entry. 
 
         :return: The allowed_payment_types of this GenerateUnifiedCheckoutCaptureContextRequest.
         :rtype: list[str]
@@ -181,7 +186,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def allowed_payment_types(self, allowed_payment_types):
         """
         Sets the allowed_payment_types of this GenerateUnifiedCheckoutCaptureContextRequest.
-        The payment types that are allowed for the merchant.    Possible values when launching Unified Checkout:   - APPLEPAY   - CHECK   - CLICKTOPAY   - GOOGLEPAY   - PANENTRY                 - PAZE <br><br>  Unified Checkout supports the following Buy Now, Pay Later (BNPL) payment methods:   - AFTERPAY<br><br>  Unified Checkout supports the following Online Bank Transfer payment methods:   - Bancontact (BE)   - DragonPay (PH)   - iDEAL (NL)   - Multibanco (PT)   - MyBank (IT, BE, PT, ES)   - Przelewy24|P24 (PL)   - Tink Pay By Bank (GB)  Possible values when launching Click To Pay Drop-In UI: - CLICKTOPAY <br><br>  **Important:**    - CLICKTOPAY only available for Visa, Mastercard and AMEX for saved cards.   - Visa and Mastercard will look to tokenize using network tokenization for all Click to Pay requests.  Click to Pay uses Click to Pay token requester IDs and not the merchant's existing token requester.   - Apple Pay, Google Pay, Check, and Paze can be used independently without requiring PAN entry in the allowedPaymentTypes field.<br><br>  **Managing Google Pay Authentication Types** When you enable Google Pay on Unified Checkout you can specify optional parameters that define the types of card authentication you receive from Google Pay.<br><br>  **Managing Google Pay Authentication Types** Where Click to Pay is the payment type selected by the customer and the customer manually enters their card, the option to enroll their card in Click to Pay will be auto-checked if this field is set to \"true\".   This is only available where the merchant and cardholder are based in the following countries and the billing type is set to \"FULL\" or \"PARTIAL\".   - UAE   - Argentina   - Brazil   - Chile   - Colombia   - Kuwait   - Mexico   - Peru   - Qatar   - Saudi Arabia   - Ukraine   - South Africa<br><br>  If false, this is not present or not supported in the market.  Enrollment in Click to Pay is not checked for the customer when completing manual card entry. 
+        The payment types that are allowed for the merchant.    Possible values when launching Unified Checkout:   - APPLEPAY   - CHECK   - CLICKTOPAY   - GOOGLEPAY   - PANENTRY                 - PAZE <br><br>  Unified Checkout supports the following Buy Now, Pay Later (BNPL) payment methods:   - AFTERPAY<br><br>  Unified Checkout supports the following Online Bank Transfer payment methods:   - Bancontact (BE)   - DragonPay (PH)   - iDEAL (NL)   - Multibanco (PT)   - MyBank (IT, BE, PT, ES)   - Przelewy24|P24 (PL)   - Tink Pay By Bank (GB)<br><br>    Unified Checkout supports the following Post-Pay Reference payment methods:   - Konbini (JP)<br><br>  Possible values when launching Click To Pay Drop-In UI: - CLICKTOPAY <br><br>  **Important:**    - CLICKTOPAY only available for Visa, Mastercard and AMEX for saved cards.   - Visa and Mastercard will look to tokenize using network tokenization for all Click to Pay requests.  Click to Pay uses Click to Pay token requester IDs and not the merchant's existing token requester.   - Apple Pay, Google Pay, Check, and Paze can be used independently without requiring PAN entry in the allowedPaymentTypes field.<br><br>  **Managing Google Pay Authentication Types** When you enable Google Pay on Unified Checkout you can specify optional parameters that define the types of card authentication you receive from Google Pay.<br><br>  **Managing Google Pay Authentication Types** Where Click to Pay is the payment type selected by the customer and the customer manually enters their card, the option to enroll their card in Click to Pay will be auto-checked if this field is set to \"true\".   This is only available where the merchant and cardholder are based in the following countries and the billing type is set to \"FULL\" or \"PARTIAL\".   - UAE   - Argentina   - Brazil   - Chile   - Colombia   - Kuwait   - Mexico   - Peru   - Qatar   - Saudi Arabia   - Ukraine   - South Africa<br><br>  If false, this is not present or not supported in the market.  Enrollment in Click to Pay is not checked for the customer when completing manual card entry. 
 
         :param allowed_payment_types: The allowed_payment_types of this GenerateUnifiedCheckoutCaptureContextRequest.
         :type: list[str]
@@ -234,6 +239,29 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         """
 
         self._locale = locale
+
+    @property
+    def button_type(self):
+        """
+        Gets the button_type of this GenerateUnifiedCheckoutCaptureContextRequest.
+        Changes the label on the payment button within Unified Checkout .<br><br>  Possible values: - ADD_CARD - CARD_PAYMENT - CHECKOUT - CHECKOUT_AND_CONTINUE - DEBIT_CREDIT - DONATE - PAY - PAY_WITH_CARD - SAVE_CARD - SUBSCRIBE_WITH_CARD<br><br>  This is an optional field, 
+
+        :return: The button_type of this GenerateUnifiedCheckoutCaptureContextRequest.
+        :rtype: str
+        """
+        return self._button_type
+
+    @button_type.setter
+    def button_type(self, button_type):
+        """
+        Sets the button_type of this GenerateUnifiedCheckoutCaptureContextRequest.
+        Changes the label on the payment button within Unified Checkout .<br><br>  Possible values: - ADD_CARD - CARD_PAYMENT - CHECKOUT - CHECKOUT_AND_CONTINUE - DEBIT_CREDIT - DONATE - PAY - PAY_WITH_CARD - SAVE_CARD - SUBSCRIBE_WITH_CARD<br><br>  This is an optional field, 
+
+        :param button_type: The button_type of this GenerateUnifiedCheckoutCaptureContextRequest.
+        :type: str
+        """
+
+        self._button_type = button_type
 
     @property
     def capture_mandate(self):

@@ -31,7 +31,7 @@ class GetSubscriptionResponse1ShippingAddress(object):
     """
     swagger_types = {
         'id': 'str',
-        'ship_to': 'Tmsv2customersEmbeddedDefaultShippingAddressShipTo'
+        'ship_to': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddressShipTo'
     }
 
     attribute_map = {
@@ -81,7 +81,7 @@ class GetSubscriptionResponse1ShippingAddress(object):
         Gets the ship_to of this GetSubscriptionResponse1ShippingAddress.
 
         :return: The ship_to of this GetSubscriptionResponse1ShippingAddress.
-        :rtype: Tmsv2customersEmbeddedDefaultShippingAddressShipTo
+        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddressShipTo
         """
         return self._ship_to
 
@@ -91,7 +91,7 @@ class GetSubscriptionResponse1ShippingAddress(object):
         Sets the ship_to of this GetSubscriptionResponse1ShippingAddress.
 
         :param ship_to: The ship_to of this GetSubscriptionResponse1ShippingAddress.
-        :type: Tmsv2customersEmbeddedDefaultShippingAddressShipTo
+        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddressShipTo
         """
 
         self._ship_to = ship_to

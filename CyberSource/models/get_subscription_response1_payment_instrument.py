@@ -33,7 +33,7 @@ class GetSubscriptionResponse1PaymentInstrument(object):
         'id': 'str',
         'bank_account': 'GetSubscriptionResponse1PaymentInstrumentBankAccount',
         'card': 'GetSubscriptionResponse1PaymentInstrumentCard',
-        'bill_to': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo',
+        'bill_to': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBillTo',
         'buyer_information': 'GetSubscriptionResponse1PaymentInstrumentBuyerInformation'
     }
 
@@ -138,7 +138,7 @@ class GetSubscriptionResponse1PaymentInstrument(object):
         Gets the bill_to of this GetSubscriptionResponse1PaymentInstrument.
 
         :return: The bill_to of this GetSubscriptionResponse1PaymentInstrument.
-        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo
+        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBillTo
         """
         return self._bill_to
 
@@ -148,7 +148,7 @@ class GetSubscriptionResponse1PaymentInstrument(object):
         Sets the bill_to of this GetSubscriptionResponse1PaymentInstrument.
 
         :param bill_to: The bill_to of this GetSubscriptionResponse1PaymentInstrument.
-        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo
+        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBillTo
         """
 
         self._bill_to = bill_to

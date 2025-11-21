@@ -81,6 +81,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsTaxDetails(object):
     def type(self):
         """
         Gets the type of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
+        Type of tax
 
         :return: The type of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
         :rtype: str
@@ -91,6 +92,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsTaxDetails(object):
     def type(self, type):
         """
         Sets the type of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
+        Type of tax
 
         :param type: The type of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
         :type: str
@@ -102,6 +104,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsTaxDetails(object):
     def amount(self):
         """
         Gets the amount of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
+        Tax amount
 
         :return: The amount of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
         :rtype: str
@@ -112,6 +115,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsTaxDetails(object):
     def amount(self, amount):
         """
         Sets the amount of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
+        Tax amount
 
         :param amount: The amount of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
         :type: str
@@ -123,6 +127,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsTaxDetails(object):
     def rate(self):
         """
         Gets the rate of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
+        Tax rate
 
         :return: The rate of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
         :rtype: str
@@ -133,6 +138,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsTaxDetails(object):
     def rate(self, rate):
         """
         Sets the rate of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
+        Tax rate
 
         :param rate: The rate of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
         :type: str
@@ -144,6 +150,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsTaxDetails(object):
     def code(self):
         """
         Gets the code of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
+        Tax code
 
         :return: The code of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
         :rtype: str
@@ -154,6 +161,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsTaxDetails(object):
     def code(self, code):
         """
         Sets the code of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
+        Tax code
 
         :param code: The code of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
         :type: str
@@ -165,6 +173,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsTaxDetails(object):
     def tax_id(self):
         """
         Gets the tax_id of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
+        Tax Identifier
 
         :return: The tax_id of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
         :rtype: str
@@ -175,6 +184,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsTaxDetails(object):
     def tax_id(self, tax_id):
         """
         Sets the tax_id of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
+        Tax Identifier
 
         :param tax_id: The tax_id of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
         :type: str
@@ -186,6 +196,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsTaxDetails(object):
     def applied(self):
         """
         Gets the applied of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
+        Indicates if tax applied
 
         :return: The applied of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
         :rtype: bool
@@ -196,6 +207,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsTaxDetails(object):
     def applied(self, applied):
         """
         Sets the applied of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
+        Indicates if tax applied
 
         :param applied: The applied of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
         :type: bool
@@ -207,6 +219,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsTaxDetails(object):
     def exemption_code(self):
         """
         Gets the exemption_code of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
+        Tax exemption code
 
         :return: The exemption_code of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
         :rtype: str
@@ -217,6 +230,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsTaxDetails(object):
     def exemption_code(self, exemption_code):
         """
         Sets the exemption_code of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
+        Tax exemption code
 
         :param exemption_code: The exemption_code of this Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.
         :type: str

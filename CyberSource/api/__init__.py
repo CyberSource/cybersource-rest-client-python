@@ -49,6 +49,7 @@ from .secure_file_share_api import SecureFileShareApi
 from .subscriptions_api import SubscriptionsApi
 from .subscriptions_follow_ons_api import SubscriptionsFollowOnsApi
 from .token_api import TokenApi
+from .tokenize_api import TokenizeApi
 from .tokenized_card_api import TokenizedCardApi
 from .transaction_batches_api import TransactionBatchesApi
 from .transaction_details_api import TransactionDetailsApi

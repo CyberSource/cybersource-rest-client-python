@@ -48,7 +48,8 @@ class InlineResponse2013SetupsPayments(object):
         'pay_by_link': 'InlineResponse2013SetupsPaymentsDigitalPayments',
         'unified_checkout': 'InlineResponse2013SetupsPaymentsDigitalPayments',
         'receivables_manager': 'InlineResponse2013SetupsPaymentsDigitalPayments',
-        'service_fee': 'InlineResponse2013SetupsPaymentsCardProcessing'
+        'service_fee': 'InlineResponse2013SetupsPaymentsCardProcessing',
+        'batch_upload': 'InlineResponse2013SetupsPaymentsDigitalPayments'
     }
 
     attribute_map = {
@@ -70,10 +71,11 @@ class InlineResponse2013SetupsPayments(object):
         'pay_by_link': 'payByLink',
         'unified_checkout': 'unifiedCheckout',
         'receivables_manager': 'receivablesManager',
-        'service_fee': 'serviceFee'
+        'service_fee': 'serviceFee',
+        'batch_upload': 'batchUpload'
     }
 
-    def __init__(self, card_processing=None, alternative_payment_methods=None, card_present_connect=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, cybs_ready_terminal=None, payment_orchestration=None, payouts=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None):
+    def __init__(self, card_processing=None, alternative_payment_methods=None, card_present_connect=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, cybs_ready_terminal=None, payment_orchestration=None, payouts=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None, batch_upload=None):
         """
         InlineResponse2013SetupsPayments - a model defined in Swagger
         """
@@ -97,6 +99,7 @@ class InlineResponse2013SetupsPayments(object):
         self._unified_checkout = None
         self._receivables_manager = None
         self._service_fee = None
+        self._batch_upload = None
 
         if card_processing is not None:
           self.card_processing = card_processing
@@ -136,6 +139,8 @@ class InlineResponse2013SetupsPayments(object):
           self.receivables_manager = receivables_manager
         if service_fee is not None:
           self.service_fee = service_fee
+        if batch_upload is not None:
+          self.batch_upload = batch_upload
 
     @property
     def card_processing(self):
@@ -535,6 +540,27 @@ class InlineResponse2013SetupsPayments(object):
         """
 
         self._service_fee = service_fee
+
+    @property
+    def batch_upload(self):
+        """
+        Gets the batch_upload of this InlineResponse2013SetupsPayments.
+
+        :return: The batch_upload of this InlineResponse2013SetupsPayments.
+        :rtype: InlineResponse2013SetupsPaymentsDigitalPayments
+        """
+        return self._batch_upload
+
+    @batch_upload.setter
+    def batch_upload(self, batch_upload):
+        """
+        Sets the batch_upload of this InlineResponse2013SetupsPayments.
+
+        :param batch_upload: The batch_upload of this InlineResponse2013SetupsPayments.
+        :type: InlineResponse2013SetupsPaymentsDigitalPayments
+        """
+
+        self._batch_upload = batch_upload
 
     def to_dict(self):
         """

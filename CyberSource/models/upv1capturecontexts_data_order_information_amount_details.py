@@ -36,7 +36,8 @@ class Upv1capturecontextsDataOrderInformationAmountDetails(object):
         'discount_amount': 'str',
         'sub_total_amount': 'str',
         'service_fee_amount': 'str',
-        'tax_amount': 'str'
+        'tax_amount': 'str',
+        'tax_details': 'Upv1capturecontextsDataOrderInformationAmountDetailsTaxDetails'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class Upv1capturecontextsDataOrderInformationAmountDetails(object):
         'discount_amount': 'discountAmount',
         'sub_total_amount': 'subTotalAmount',
         'service_fee_amount': 'serviceFeeAmount',
-        'tax_amount': 'taxAmount'
+        'tax_amount': 'taxAmount',
+        'tax_details': 'taxDetails'
     }
 
-    def __init__(self, total_amount=None, currency=None, surcharge=None, discount_amount=None, sub_total_amount=None, service_fee_amount=None, tax_amount=None):
+    def __init__(self, total_amount=None, currency=None, surcharge=None, discount_amount=None, sub_total_amount=None, service_fee_amount=None, tax_amount=None, tax_details=None):
         """
         Upv1capturecontextsDataOrderInformationAmountDetails - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class Upv1capturecontextsDataOrderInformationAmountDetails(object):
         self._sub_total_amount = None
         self._service_fee_amount = None
         self._tax_amount = None
+        self._tax_details = None
 
         if total_amount is not None:
           self.total_amount = total_amount
@@ -76,6 +79,8 @@ class Upv1capturecontextsDataOrderInformationAmountDetails(object):
           self.service_fee_amount = service_fee_amount
         if tax_amount is not None:
           self.tax_amount = tax_amount
+        if tax_details is not None:
+          self.tax_details = tax_details
 
     @property
     def total_amount(self):
@@ -235,6 +240,27 @@ class Upv1capturecontextsDataOrderInformationAmountDetails(object):
         """
 
         self._tax_amount = tax_amount
+
+    @property
+    def tax_details(self):
+        """
+        Gets the tax_details of this Upv1capturecontextsDataOrderInformationAmountDetails.
+
+        :return: The tax_details of this Upv1capturecontextsDataOrderInformationAmountDetails.
+        :rtype: Upv1capturecontextsDataOrderInformationAmountDetailsTaxDetails
+        """
+        return self._tax_details
+
+    @tax_details.setter
+    def tax_details(self, tax_details):
+        """
+        Sets the tax_details of this Upv1capturecontextsDataOrderInformationAmountDetails.
+
+        :param tax_details: The tax_details of this Upv1capturecontextsDataOrderInformationAmountDetails.
+        :type: Upv1capturecontextsDataOrderInformationAmountDetailsTaxDetails
+        """
+
+        self._tax_details = tax_details
 
     def to_dict(self):
         """

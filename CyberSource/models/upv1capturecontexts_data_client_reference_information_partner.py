@@ -36,7 +36,7 @@ class Upv1capturecontextsDataClientReferenceInformationPartner(object):
 
     attribute_map = {
         'developer_id': 'developerId',
-        'solution_id': 'SolutionId'
+        'solution_id': 'solutionId'
     }
 
     def __init__(self, developer_id=None, solution_id=None):

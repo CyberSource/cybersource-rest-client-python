@@ -30,129 +30,43 @@ class InlineResponse200(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'type': 'str',
-        'provider': 'str',
-        'content': 'list[InlineResponse200Content]'
+        'responses': 'list[InlineResponse200Responses]'
     }
 
     attribute_map = {
-        'id': 'id',
-        'type': 'type',
-        'provider': 'provider',
-        'content': 'content'
+        'responses': 'responses'
     }
 
-    def __init__(self, id=None, type=None, provider=None, content=None):
+    def __init__(self, responses=None):
         """
         InlineResponse200 - a model defined in Swagger
         """
 
-        self._id = None
-        self._type = None
-        self._provider = None
-        self._content = None
+        self._responses = None
 
-        if id is not None:
-          self.id = id
-        if type is not None:
-          self.type = type
-        if provider is not None:
-          self.provider = provider
-        if content is not None:
-          self.content = content
+        if responses is not None:
+          self.responses = responses
 
     @property
-    def id(self):
+    def responses(self):
         """
-        Gets the id of this InlineResponse200.
-        Unique identifier for the Card Art Asset. 
+        Gets the responses of this InlineResponse200.
 
-        :return: The id of this InlineResponse200.
-        :rtype: str
+        :return: The responses of this InlineResponse200.
+        :rtype: list[InlineResponse200Responses]
         """
-        return self._id
+        return self._responses
 
-    @id.setter
-    def id(self, id):
+    @responses.setter
+    def responses(self, responses):
         """
-        Sets the id of this InlineResponse200.
-        Unique identifier for the Card Art Asset. 
+        Sets the responses of this InlineResponse200.
 
-        :param id: The id of this InlineResponse200.
-        :type: str
+        :param responses: The responses of this InlineResponse200.
+        :type: list[InlineResponse200Responses]
         """
 
-        self._id = id
-
-    @property
-    def type(self):
-        """
-        Gets the type of this InlineResponse200.
-        The type of Card Art Asset. 
-
-        :return: The type of this InlineResponse200.
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """
-        Sets the type of this InlineResponse200.
-        The type of Card Art Asset. 
-
-        :param type: The type of this InlineResponse200.
-        :type: str
-        """
-
-        self._type = type
-
-    @property
-    def provider(self):
-        """
-        Gets the provider of this InlineResponse200.
-        The provider of the Card Art Asset. 
-
-        :return: The provider of this InlineResponse200.
-        :rtype: str
-        """
-        return self._provider
-
-    @provider.setter
-    def provider(self, provider):
-        """
-        Sets the provider of this InlineResponse200.
-        The provider of the Card Art Asset. 
-
-        :param provider: The provider of this InlineResponse200.
-        :type: str
-        """
-
-        self._provider = provider
-
-    @property
-    def content(self):
-        """
-        Gets the content of this InlineResponse200.
-        Array of content objects representing the Card Art Asset. 
-
-        :return: The content of this InlineResponse200.
-        :rtype: list[InlineResponse200Content]
-        """
-        return self._content
-
-    @content.setter
-    def content(self, content):
-        """
-        Sets the content of this InlineResponse200.
-        Array of content objects representing the Card Art Asset. 
-
-        :param content: The content of this InlineResponse200.
-        :type: list[InlineResponse200Content]
-        """
-
-        self._content = content
+        self._responses = responses
 
     def to_dict(self):
         """

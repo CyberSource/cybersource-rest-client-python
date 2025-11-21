@@ -37,6 +37,7 @@ class GetSubscriptionResponse(object):
         'subscription_information': 'GetAllSubscriptionsResponseSubscriptionInformation',
         'payment_information': 'GetAllSubscriptionsResponsePaymentInformation',
         'order_information': 'GetAllSubscriptionsResponseOrderInformation',
+        'client_reference_information': 'GetAllSubscriptionsResponseClientReferenceInformation',
         'reactivation_information': 'GetSubscriptionResponseReactivationInformation'
     }
 
@@ -48,10 +49,11 @@ class GetSubscriptionResponse(object):
         'subscription_information': 'subscriptionInformation',
         'payment_information': 'paymentInformation',
         'order_information': 'orderInformation',
+        'client_reference_information': 'clientReferenceInformation',
         'reactivation_information': 'reactivationInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, plan_information=None, subscription_information=None, payment_information=None, order_information=None, reactivation_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, plan_information=None, subscription_information=None, payment_information=None, order_information=None, client_reference_information=None, reactivation_information=None):
         """
         GetSubscriptionResponse - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class GetSubscriptionResponse(object):
         self._subscription_information = None
         self._payment_information = None
         self._order_information = None
+        self._client_reference_information = None
         self._reactivation_information = None
 
         if links is not None:
@@ -79,6 +82,8 @@ class GetSubscriptionResponse(object):
           self.payment_information = payment_information
         if order_information is not None:
           self.order_information = order_information
+        if client_reference_information is not None:
+          self.client_reference_information = client_reference_information
         if reactivation_information is not None:
           self.reactivation_information = reactivation_information
 
@@ -232,6 +237,27 @@ class GetSubscriptionResponse(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def client_reference_information(self):
+        """
+        Gets the client_reference_information of this GetSubscriptionResponse.
+
+        :return: The client_reference_information of this GetSubscriptionResponse.
+        :rtype: GetAllSubscriptionsResponseClientReferenceInformation
+        """
+        return self._client_reference_information
+
+    @client_reference_information.setter
+    def client_reference_information(self, client_reference_information):
+        """
+        Sets the client_reference_information of this GetSubscriptionResponse.
+
+        :param client_reference_information: The client_reference_information of this GetSubscriptionResponse.
+        :type: GetAllSubscriptionsResponseClientReferenceInformation
+        """
+
+        self._client_reference_information = client_reference_information
 
     @property
     def reactivation_information(self):

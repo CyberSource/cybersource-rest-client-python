@@ -33,17 +33,19 @@ class Upv1capturecontextsDataOrderInformation(object):
         'amount_details': 'Upv1capturecontextsDataOrderInformationAmountDetails',
         'bill_to': 'Upv1capturecontextsDataOrderInformationBillTo',
         'ship_to': 'Upv1capturecontextsDataOrderInformationShipTo',
-        'line_items': 'Upv1capturecontextsDataOrderInformationLineItems'
+        'line_items': 'Upv1capturecontextsDataOrderInformationLineItems',
+        'invoice_details': 'Upv1capturecontextsDataOrderInformationInvoiceDetails'
     }
 
     attribute_map = {
         'amount_details': 'amountDetails',
         'bill_to': 'billTo',
         'ship_to': 'shipTo',
-        'line_items': 'lineItems'
+        'line_items': 'lineItems',
+        'invoice_details': 'invoiceDetails'
     }
 
-    def __init__(self, amount_details=None, bill_to=None, ship_to=None, line_items=None):
+    def __init__(self, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None):
         """
         Upv1capturecontextsDataOrderInformation - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class Upv1capturecontextsDataOrderInformation(object):
         self._bill_to = None
         self._ship_to = None
         self._line_items = None
+        self._invoice_details = None
 
         if amount_details is not None:
           self.amount_details = amount_details
@@ -61,6 +64,8 @@ class Upv1capturecontextsDataOrderInformation(object):
           self.ship_to = ship_to
         if line_items is not None:
           self.line_items = line_items
+        if invoice_details is not None:
+          self.invoice_details = invoice_details
 
     @property
     def amount_details(self):
@@ -145,6 +150,27 @@ class Upv1capturecontextsDataOrderInformation(object):
         """
 
         self._line_items = line_items
+
+    @property
+    def invoice_details(self):
+        """
+        Gets the invoice_details of this Upv1capturecontextsDataOrderInformation.
+
+        :return: The invoice_details of this Upv1capturecontextsDataOrderInformation.
+        :rtype: Upv1capturecontextsDataOrderInformationInvoiceDetails
+        """
+        return self._invoice_details
+
+    @invoice_details.setter
+    def invoice_details(self, invoice_details):
+        """
+        Sets the invoice_details of this Upv1capturecontextsDataOrderInformation.
+
+        :param invoice_details: The invoice_details of this Upv1capturecontextsDataOrderInformation.
+        :type: Upv1capturecontextsDataOrderInformationInvoiceDetails
+        """
+
+        self._invoice_details = invoice_details
 
     def to_dict(self):
         """

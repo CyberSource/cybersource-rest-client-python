@@ -51,6 +51,7 @@ class Upv1capturecontextsDataBuyerInformationPersonalIdentification(object):
     def cpf(self):
         """
         Gets the cpf of this Upv1capturecontextsDataBuyerInformationPersonalIdentification.
+        CPF Number (Brazil).  Must be 11 digits in length. 
 
         :return: The cpf of this Upv1capturecontextsDataBuyerInformationPersonalIdentification.
         :rtype: str
@@ -61,6 +62,7 @@ class Upv1capturecontextsDataBuyerInformationPersonalIdentification(object):
     def cpf(self, cpf):
         """
         Sets the cpf of this Upv1capturecontextsDataBuyerInformationPersonalIdentification.
+        CPF Number (Brazil).  Must be 11 digits in length. 
 
         :param cpf: The cpf of this Upv1capturecontextsDataBuyerInformationPersonalIdentification.
         :type: str

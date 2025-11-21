@@ -30,22 +30,57 @@ class Upv1capturecontextsDataMerchantInformationMerchantDescriptor(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str'
+        'name': 'str',
+        'alternate_name': 'str',
+        'locality': 'str',
+        'phone': 'str',
+        'country': 'str',
+        'postal_code': 'str',
+        'administrative_area': 'str',
+        'address1': 'str'
     }
 
     attribute_map = {
-        'name': 'name'
+        'name': 'name',
+        'alternate_name': 'alternateName',
+        'locality': 'locality',
+        'phone': 'phone',
+        'country': 'country',
+        'postal_code': 'postalCode',
+        'administrative_area': 'administrativeArea',
+        'address1': 'address1'
     }
 
-    def __init__(self, name=None):
+    def __init__(self, name=None, alternate_name=None, locality=None, phone=None, country=None, postal_code=None, administrative_area=None, address1=None):
         """
         Upv1capturecontextsDataMerchantInformationMerchantDescriptor - a model defined in Swagger
         """
 
         self._name = None
+        self._alternate_name = None
+        self._locality = None
+        self._phone = None
+        self._country = None
+        self._postal_code = None
+        self._administrative_area = None
+        self._address1 = None
 
         if name is not None:
           self.name = name
+        if alternate_name is not None:
+          self.alternate_name = alternate_name
+        if locality is not None:
+          self.locality = locality
+        if phone is not None:
+          self.phone = phone
+        if country is not None:
+          self.country = country
+        if postal_code is not None:
+          self.postal_code = postal_code
+        if administrative_area is not None:
+          self.administrative_area = administrative_area
+        if address1 is not None:
+          self.address1 = address1
 
     @property
     def name(self):
@@ -69,6 +104,167 @@ class Upv1capturecontextsDataMerchantInformationMerchantDescriptor(object):
         """
 
         self._name = name
+
+    @property
+    def alternate_name(self):
+        """
+        Gets the alternate_name of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        The alternate name of the merchant
+
+        :return: The alternate_name of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._alternate_name
+
+    @alternate_name.setter
+    def alternate_name(self, alternate_name):
+        """
+        Sets the alternate_name of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        The alternate name of the merchant
+
+        :param alternate_name: The alternate_name of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._alternate_name = alternate_name
+
+    @property
+    def locality(self):
+        """
+        Gets the locality of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        The locality of the merchant
+
+        :return: The locality of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._locality
+
+    @locality.setter
+    def locality(self, locality):
+        """
+        Sets the locality of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        The locality of the merchant
+
+        :param locality: The locality of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._locality = locality
+
+    @property
+    def phone(self):
+        """
+        Gets the phone of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        The phone number of the merchant
+
+        :return: The phone of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._phone
+
+    @phone.setter
+    def phone(self, phone):
+        """
+        Sets the phone of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        The phone number of the merchant
+
+        :param phone: The phone of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._phone = phone
+
+    @property
+    def country(self):
+        """
+        Gets the country of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        The country code of the merchant
+
+        :return: The country of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._country
+
+    @country.setter
+    def country(self, country):
+        """
+        Sets the country of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        The country code of the merchant
+
+        :param country: The country of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._country = country
+
+    @property
+    def postal_code(self):
+        """
+        Gets the postal_code of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        The postal code of the merchant
+
+        :return: The postal_code of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._postal_code
+
+    @postal_code.setter
+    def postal_code(self, postal_code):
+        """
+        Sets the postal_code of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        The postal code of the merchant
+
+        :param postal_code: The postal_code of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._postal_code = postal_code
+
+    @property
+    def administrative_area(self):
+        """
+        Gets the administrative_area of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        The administrative area of the merchant
+
+        :return: The administrative_area of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._administrative_area
+
+    @administrative_area.setter
+    def administrative_area(self, administrative_area):
+        """
+        Sets the administrative_area of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        The administrative area of the merchant
+
+        :param administrative_area: The administrative_area of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._administrative_area = administrative_area
+
+    @property
+    def address1(self):
+        """
+        Gets the address1 of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        The first line of the merchant's address
+
+        :return: The address1 of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._address1
+
+    @address1.setter
+    def address1(self, address1):
+        """
+        Sets the address1 of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        The first line of the merchant's address
+
+        :param address1: The address1 of this Upv1capturecontextsDataMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._address1 = address1
 
     def to_dict(self):
         """
