@@ -219,16 +219,20 @@ class FileCache:
         if not file_path:
             raise ValueError("Response MLE private key file path not provided")
         
-        # Check if key exists in cache
-        cert_info = self.mlecache.get(cache_key)
+        # Check if key exists in cache (thread-safe read)
+        with self._mle_cache_lock:
+            cert_info = self.mlecache.get(cache_key)
+        
         try:
-                file_timestamp = os.path.getmtime(file_path)
+            file_timestamp = os.path.getmtime(file_path)
             # If not in cache or file was modified, load it
-                if cert_info is None or cert_info.timestamp != file_timestamp:
-                    self.setup_mle_cache(merchant_config, cache_key, file_path)
+            if cert_info is None or cert_info.timestamp != file_timestamp:
+                self.setup_mle_cache(merchant_config, cache_key, file_path)
+                # Read from cache again after setup (thread-safe)
+                with self._mle_cache_lock:
                     cert_info = self.mlecache.get(cache_key)
-                
-                return cert_info.private_key if cert_info else None
+            
+            return cert_info.private_key if cert_info else None
         except Exception as e:
             if FileCache.logger:
                 FileCache.logger.error(f"Error getting Response MLE private key")
@@ -245,7 +249,7 @@ class FileCache:
             cache_key (str): Optional custom cache key. Defaults to filePath + identifier
             
         Returns:
-            tuple: (private_key, certificates_list)
+            list: List of certificates from the P12 file
             
         Raises:
             FileNotFoundError: If file doesn't exist

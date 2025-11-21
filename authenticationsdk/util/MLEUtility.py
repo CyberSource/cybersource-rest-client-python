@@ -257,7 +257,7 @@ class MLEUtility:
                 break
 
         if not serial_number:
-            error_msg = f"Serial number not found in MLE certificate for alias {merchant_config.requestMleKeyAlias} in {merchant_config.p12KeyFilePath}" //confirm
+            error_msg = f"Serial number not found in MLE certificate for alias {merchant_config.requestMleKeyAlias} in {merchant_config.p12KeyFilePath}"
             logger.error(error_msg)
             raise ValueError(error_msg)
 
@@ -289,7 +289,7 @@ class MLEUtility:
             
             # Get cached P12 object
             cache_obj = MLEUtility.get_cache()
-            _, certificates = cache_obj.fetch_cached_p12_from_file(file_path, password, logger)
+            certificates = cache_obj.fetch_cached_p12_from_file(file_path, password, logger)
             
             if not certificates:
                 error_msg = f"No certificates found in P12 file: {file_path}"
@@ -405,9 +405,10 @@ class MLEUtility:
         
         # Get manually configured responseMleKID
         configured_kid = None
-        if hasattr(merchant_config, 'responseMleKID') and merchant_config.responseMleKID:
-            if isinstance(merchant_config.responseMleKID, str) and merchant_config.responseMleKID.strip():
-                configured_kid = merchant_config.responseMleKID.strip()
+        if (hasattr(merchant_config, 'responseMleKID') and 
+            isinstance(merchant_config.responseMleKID, str) and 
+            merchant_config.responseMleKID.strip()):
+            configured_kid = merchant_config.responseMleKID.strip()
         
         # Determine which value to use
         if not cybs_kid and not configured_kid:
