@@ -14,6 +14,8 @@ from typing_extensions import deprecated
 from authenticationsdk.util.CertificateUtility import CertificateUtility
 from authenticationsdk.util.GlobalLabelParameters import *
 import CyberSource.logging.log_factory as LogFactory
+from authenticationsdk.util.Utility import parse_p12_file
+
 import os
 
 class CertInfo:
@@ -255,25 +257,30 @@ class FileCache:
             FileNotFoundError: If file doesn't exist
             ValueError: If password is incorrect or parsing fails
         """
-        from authenticationsdk.util.Utility import parse_p12_file
         
         # Use provided cache key or default
         final_cache_key = cache_key or (file_path + GlobalLabelParameters.RESPONSE_MLE_P12_PFX_CACHE_IDENTIFIER)
         
         if logger:
             logger.debug(f"Fetching P12/PFX from cache with key: {final_cache_key}")
-        
-        # Check if file exists
-        if not os.path.exists(file_path):
-            error_msg = f"File not found: {file_path}"
-            if logger:
-                logger.error(error_msg)
-            raise FileNotFoundError(error_msg)
-        
-        current_file_last_modified_time = os.path.getmtime(file_path)
-        
-        # Check if cache is valid (exists and file hasn't been modified)
+
+        # Thread-safe cache access with file operations
         with self._p12_parsed_cache_lock:
+            # Check if file exists
+            if not os.path.exists(file_path):
+                error_msg = f"File not found: {file_path}"
+                if logger:
+                    logger.error(error_msg)
+                raise FileNotFoundError(error_msg)
+            
+            try:
+                current_file_last_modified_time = os.path.getmtime(file_path)
+            except (OSError, IOError) as e:
+                error_msg = f"Error accessing file {file_path}"
+                if logger:
+                    logger.error(error_msg)
+                raise FileNotFoundError(error_msg)
+            
             cached_entry = self.p12_parsed_cache.get(final_cache_key)
             
             if cached_entry and cached_entry['timestamp'] == current_file_last_modified_time:
@@ -298,6 +305,12 @@ class FileCache:
                     logger.debug("Successfully cached P12/PFX object")
                 return p12_object
                 
+            except FileNotFoundError:
+                # File was deleted during parsing attempt
+                error_msg = f"File not found during parsing: {file_path}"
+                if logger:
+                    logger.error(error_msg)
+                raise
             except Exception as e:
                 error_msg = f"Error parsing P12/PFX file: {str(e)}"
                 if logger:

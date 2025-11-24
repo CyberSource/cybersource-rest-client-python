@@ -631,11 +631,17 @@ class MerchantConfiguration:
                         f"Invalid responseMlePrivateKeyFilePath: {self.responseMlePrivateKeyFilePath}",
                         self.log_config)
 
-        # Validate KID is provided
-            if self.responseMleKID is None or not self.responseMleKID.strip():
-                authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
-                    "Response MLE is enabled but responseMleKID is not provided.",
-                    self.log_config)
+        # Validate KID is provided (skip if using P12/PFX as it can be auto-extracted from CyberSource certs)
+            is_p12_or_pfx = False
+            if self.responseMlePrivateKeyFilePath and self.responseMlePrivateKeyFilePath.strip():
+                file_extension = os.path.splitext(self.responseMlePrivateKeyFilePath)[1].lower()
+                is_p12_or_pfx = file_extension in ('.p12', '.pfx')
+
+            if not is_p12_or_pfx:  # Only validate KID if NOT using P12/PFX
+                if self.responseMleKID is None or not self.responseMleKID.strip():
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                        "Response MLE is enabled but responseMleKID is not provided. For non Cybersource generated P12/PFX files, responseMleKID must be explicitly configured.",
+                        self.log_config)
             
     def is_valid_boolean_string(self, value):
         """
