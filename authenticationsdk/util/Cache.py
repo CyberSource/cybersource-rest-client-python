@@ -14,6 +14,8 @@ from typing_extensions import deprecated
 from authenticationsdk.util.CertificateUtility import CertificateUtility
 from authenticationsdk.util.GlobalLabelParameters import *
 import CyberSource.logging.log_factory as LogFactory
+from authenticationsdk.util.Utility import parse_p12_file
+
 import os
 
 class CertInfo:
@@ -39,6 +41,8 @@ class FileCache:
         self._p12_cache_lock = threading.RLock()
         self.mlecache = {}
         self._mle_cache_lock = threading.RLock()
+        self.p12_parsed_cache = {}
+        self._p12_parsed_cache_lock = threading.RLock()
 
     def fetch_cached_p12_certificate(self, merchant_config, p12_file_path, key_password):
         try:
@@ -217,18 +221,99 @@ class FileCache:
         if not file_path:
             raise ValueError("Response MLE private key file path not provided")
         
-        # Check if key exists in cache
-        cert_info = self.mlecache.get(cache_key)
+        # Check if key exists in cache (thread-safe read)
+        with self._mle_cache_lock:
+            cert_info = self.mlecache.get(cache_key)
+        
         try:
-                file_timestamp = os.path.getmtime(file_path)
+            file_timestamp = os.path.getmtime(file_path)
             # If not in cache or file was modified, load it
-                if cert_info is None or cert_info.timestamp != file_timestamp:
-                    self.setup_mle_cache(merchant_config, cache_key, file_path)
+            if cert_info is None or cert_info.timestamp != file_timestamp:
+                self.setup_mle_cache(merchant_config, cache_key, file_path)
+                # Read from cache again after setup (thread-safe)
+                with self._mle_cache_lock:
                     cert_info = self.mlecache.get(cache_key)
-                
-                return cert_info.private_key if cert_info else None
+            
+            return cert_info.private_key if cert_info else None
         except Exception as e:
             if FileCache.logger:
                 FileCache.logger.error(f"Error getting Response MLE private key")
             raise ValueError(f"Error getting Response MLE private key: {str(e)}")
+    
+    def fetch_cached_p12_from_file(self, file_path, password, logger=None, cache_key=None):
+        """
+        Fetches a parsed P12 object from cache or parses and caches it.
+        
+        Args:
+            file_path (str): Path to the P12/PFX file
+            password (str): Password for the P12 file
+            logger: Logger instance for logging
+            cache_key (str): Optional custom cache key. Defaults to filePath + identifier
+            
+        Returns:
+            list: List of certificates from the P12 file
+            
+        Raises:
+            FileNotFoundError: If file doesn't exist
+            ValueError: If password is incorrect or parsing fails
+        """
+        
+        # Use provided cache key or default
+        final_cache_key = cache_key or (file_path + GlobalLabelParameters.RESPONSE_MLE_P12_PFX_CACHE_IDENTIFIER)
+        
+        if logger:
+            logger.debug(f"Fetching P12/PFX from cache with key: {final_cache_key}")
+
+        # Thread-safe cache access with file operations
+        with self._p12_parsed_cache_lock:
+            # Check if file exists
+            if not os.path.exists(file_path):
+                error_msg = f"File not found: {file_path}"
+                if logger:
+                    logger.error(error_msg)
+                raise FileNotFoundError(error_msg)
+            
+            try:
+                current_file_last_modified_time = os.path.getmtime(file_path)
+            except (OSError, IOError) as e:
+                error_msg = f"Error accessing file {file_path}"
+                if logger:
+                    logger.error(error_msg)
+                raise FileNotFoundError(error_msg)
+            
+            cached_entry = self.p12_parsed_cache.get(final_cache_key)
+            
+            if cached_entry and cached_entry['timestamp'] == current_file_last_modified_time:
+                if logger:
+                    logger.debug("P12/PFX found in cache and file not modified")
+                return cached_entry['p12_object']
+            
+            # Cache miss or file modified - parse and cache
+            if logger:
+                logger.debug(f"P12/PFX not in cache or file modified. Loading from file: {file_path}")
+            
+            try:
+                p12_object = parse_p12_file(file_path, password, logger)
+                
+                # Store in cache with file modification time
+                self.p12_parsed_cache[final_cache_key] = {
+                    'p12_object': p12_object,
+                    'timestamp': current_file_last_modified_time
+                }
+                
+                if logger:
+                    logger.debug("Successfully cached P12/PFX object")
+                return p12_object
+                
+            except FileNotFoundError:
+                # File was deleted during parsing attempt
+                error_msg = f"File not found during parsing: {file_path}"
+                if logger:
+                    logger.error(error_msg)
+                raise
+            except Exception as e:
+                error_msg = f"Error parsing P12/PFX file: {str(e)}"
+                if logger:
+                    logger.error(error_msg)
+                raise ValueError(error_msg)
         

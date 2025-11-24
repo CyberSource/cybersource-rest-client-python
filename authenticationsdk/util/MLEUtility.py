@@ -257,12 +257,181 @@ class MLEUtility:
                 break
 
         if not serial_number:
-            logger.warning(f"Serial number not found in MLE certificate for alias {merchant_config.requestMleKeyAlias} in {merchant_config.p12KeyFilePath}")
-            # Use the hex serial number from the certificate as fallback
-            return format(certificate.serial_number, 'x')
+            error_msg = f"Serial number not found in MLE certificate for alias {merchant_config.requestMleKeyAlias} in {merchant_config.p12KeyFilePath}"
+            logger.error(error_msg)
+            raise ValueError(error_msg)
 
         return serial_number
 
     @staticmethod
     def create_json_object(jwe_token):
         return json.dumps({"encryptedRequest": jwe_token})
+    
+    @staticmethod
+    def extract_response_mle_kid(file_path, password, merchant_id, logger):
+        """
+        Extracts the serial number (KID) from a certificate's subject in a P12 file where CN matches the merchantId.
+        
+        Args:
+            file_path (str): Path to the P12 file
+            password (str): Password for the P12 file
+            merchant_id (str): The merchant ID to match against the CN in the certificate subject
+            logger: Logger instance for logging
+            
+        Returns:
+            str: The serial number extracted from the certificate's subject attributes
+            
+        Raises:
+            ValueError: If the certificate with matching CN is not found or serial number is missing
+        """
+        try:
+            logger.debug(f"Extracting MLE KID from P12 file: {file_path} for merchantId: {merchant_id}")
+            
+            # Get cached P12 object
+            cache_obj = MLEUtility.get_cache()
+            certificates = cache_obj.fetch_cached_p12_from_file(file_path, password, logger)
+            
+            if not certificates:
+                error_msg = f"No certificates found in P12 file: {file_path}"
+                logger.error(error_msg)
+                raise ValueError(error_msg)
+            
+            logger.debug(f"Found {len(certificates)} certificate(s) in P12 file")
+            
+            # Iterate through certificates to find one with matching CN
+            for i, cert in enumerate(certificates):
+                try:
+                    # Extract CN from certificate subject
+                    cn_attribute = cert.subject.get_attributes_for_oid(NameOID.COMMON_NAME)
+                    if not cn_attribute:
+                        logger.debug(f"Certificate {i + 1} has no CN in subject, skipping")
+                        continue
+                    
+                    cn = cn_attribute[0].value
+                    logger.debug(f"Certificate {i + 1} CN: {cn}")
+                    
+                    # Check if CN matches merchantId (case-insensitive)
+                    if cn.lower() == merchant_id.lower():
+                        logger.debug(f"Found certificate with matching CN: {cn}")
+                        
+                        # Extract serial number from subject attributes
+                        serial_number_attr = cert.subject.get_attributes_for_oid(NameOID.SERIAL_NUMBER)
+                        if not serial_number_attr:
+                            error_msg = f"Serial number not found in certificate subject for CN={cn}"
+                            logger.error(error_msg)
+                            raise ValueError(error_msg)
+                        
+                        serial_number = serial_number_attr[0].value
+                        logger.debug(f"Serial number (MLE KID) extracted: {serial_number}")
+                        
+                        return serial_number
+                except Exception as e:
+                    logger.debug(f"Error processing certificate {i + 1}: {str(e)}")
+                    continue
+            
+            # If we get here, no matching certificate was found
+            error_msg = f"No certificate with CN matching merchantId ({merchant_id}) found in P12 file: {file_path}"
+            logger.error(error_msg)
+            raise ValueError(error_msg)
+            
+        except Exception as e:
+            error_msg = f"Error extracting MLE KID from P12 file: {file_path}: {str(e)}"
+            logger.error(error_msg)
+            raise ValueError(error_msg)
+    
+    @staticmethod
+    def validate_and_auto_extract_response_mle_kid(merchant_config, logger):
+        """
+        Validates and auto-extracts responseMleKID if necessary.
+        
+        This function attempts to auto-extract the response MLE KID from CyberSource P12 files,
+        or uses the manually configured value if provided.
+        
+        Args:
+            merchant_config: Merchant configuration object
+            logger: Logger instance for logging
+            
+        Returns:
+            str: The validated or auto-extracted responseMleKID
+            
+        Raises:
+            ValueError: If responseMleKID is not available and cannot be auto-extracted
+        """
+        logger.debug("Validating responseMleKID for JWT token generation")
+        
+        # Variable to store auto-extracted KID
+        cybs_kid = None
+        
+        # First, try to auto-extract from CyberSource P12 certificate if applicable
+        has_valid_file_path = (
+            hasattr(merchant_config, 'responseMlePrivateKeyFilePath') and
+            isinstance(merchant_config.responseMlePrivateKeyFilePath, str) and
+            merchant_config.responseMlePrivateKeyFilePath.strip()
+        )
+        
+        if has_valid_file_path:
+            import os
+            file_extension = os.path.splitext(merchant_config.responseMlePrivateKeyFilePath)[1].lower()
+            is_p12_file = file_extension in ('.p12', '.pfx')
+            
+            if is_p12_file:
+                logger.debug("P12/PFX file detected, checking if it is a CyberSource certificate")
+                
+                from authenticationsdk.util.Utility import is_cybersource_p12
+                is_cybs_p12 = is_cybersource_p12(
+                    merchant_config.responseMlePrivateKeyFilePath,
+                    merchant_config.responseMlePrivateKeyFilePassword,
+                    logger
+                )
+                
+                if is_cybs_p12:
+                    logger.debug("Detected CyberSource P12 file, attempting to auto-extract responseMleKID")
+                    try:
+                        cybs_kid = MLEUtility.extract_response_mle_kid(
+                            merchant_config.responseMlePrivateKeyFilePath,
+                            merchant_config.responseMlePrivateKeyFilePassword,
+                            merchant_config.merchant_id,
+                            logger
+                        )
+                        logger.info("Successfully auto-extracted responseMleKID from CyberSource P12 certificate")
+                    except Exception as e:
+                        logger.warning(f"Failed to auto-extract responseMleKID from P12 file: {str(e)}. Will check for manually configured value.")
+                else:
+                    logger.debug("P12 file is not a CyberSource-generated certificate, skipping auto-extraction")
+            else:
+                logger.debug("Private key file is not a P12/PFX file, skipping auto-extraction")
+        else:
+            logger.debug("No valid private key file path provided, skipping auto-extraction")
+        
+        # Get manually configured responseMleKID
+        configured_kid = None
+        if (hasattr(merchant_config, 'responseMleKID') and 
+            isinstance(merchant_config.responseMleKID, str) and 
+            merchant_config.responseMleKID.strip()):
+            configured_kid = merchant_config.responseMleKID.strip()
+        
+        # Determine which value to use
+        if not cybs_kid and not configured_kid:
+            error_msg = (
+                "responseMleKID is required when response MLE is enabled. "
+                "Could not auto-extract from certificate and no manual configuration provided. "
+                "Please provide responseMleKID explicitly in your configuration."
+            )
+            logger.error(error_msg)
+            raise ValueError(error_msg)
+        
+        if cybs_kid and not configured_kid:
+            logger.debug("Using auto-extracted responseMleKID from CyberSource P12 certificate")
+            return cybs_kid
+        
+        if not cybs_kid and configured_kid:
+            logger.debug("Using manually configured responseMleKID")
+            return configured_kid
+        
+        # Both exist
+        if cybs_kid != configured_kid:
+            logger.warning("Auto-extracted responseMleKID does not match manually configured responseMleKID. Using configured value as preference.")
+        else:
+            logger.debug("Auto-extracted responseMleKID matches manually configured value")
+        
+        return configured_kid
