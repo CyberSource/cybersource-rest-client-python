@@ -19,18 +19,17 @@ from authenticationsdk.util.Cache import FileCache
 from CyberSource.utilities.flex.PublicKeyApiController import fetch_public_key
 
 
-def parse_capture_context_response(jwt_value, merchant_config, verify_jwt_signature=True):
+def parse_capture_context_response(jwt_value, merchant_config):
     """
-    Parse a capture context JWT response and optionally verify its signature.
+    Parse a capture context JWT response and mandatorily verify its signature.
     
-    This function parses a JWT token and optionally verifies its signature using
+    This function parses a JWT token and mandatorily verifies its signature using
     the public key fetched from the CyberSource Flex V2 API. Public keys are cached
     to improve performance on subsequent verifications.
     
     Args:
         jwt_value (str): The JWT token to parse
         merchant_config (object): The merchant configuration object containing run_environment
-        verify_jwt_signature (bool): Whether to verify the JWT signature (default: True)
         
     Returns:
         dict: The decoded JWT payload
@@ -42,6 +41,8 @@ def parse_capture_context_response(jwt_value, merchant_config, verify_jwt_signat
         ValueError: If merchant_config is missing or invalid
         Exception: For other errors during parsing or verification
     """
+
+    verify_jwt_signature=True
     if not jwt_value:
         raise InvalidJwtException('JWT value is null or undefined')
     
