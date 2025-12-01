@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **bank_account_validation_request**
-> InlineResponse20013 bank_account_validation_request(account_validations_request)
+> InlineResponse20014 bank_account_validation_request(account_validations_request)
 
 Visa Bank Account Validation Service
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 

@@ -33,7 +33,7 @@ class GetSubscriptionResponse1PaymentInstrumentBuyerInformation(object):
         'company_tax_id': 'str',
         'currency': 'str',
         'date_of_birth': 'date',
-        'personal_identification': 'list[Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIdentification]'
+        'personal_identification': 'list[Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIdentification]'
     }
 
     attribute_map = {
@@ -137,7 +137,7 @@ class GetSubscriptionResponse1PaymentInstrumentBuyerInformation(object):
         Gets the personal_identification of this GetSubscriptionResponse1PaymentInstrumentBuyerInformation.
 
         :return: The personal_identification of this GetSubscriptionResponse1PaymentInstrumentBuyerInformation.
-        :rtype: list[Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIdentification]
+        :rtype: list[Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIdentification]
         """
         return self._personal_identification
 
@@ -147,7 +147,7 @@ class GetSubscriptionResponse1PaymentInstrumentBuyerInformation(object):
         Sets the personal_identification of this GetSubscriptionResponse1PaymentInstrumentBuyerInformation.
 
         :param personal_identification: The personal_identification of this GetSubscriptionResponse1PaymentInstrumentBuyerInformation.
-        :type: list[Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIdentification]
+        :type: list[Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIdentification]
         """
 
         self._personal_identification = personal_identification

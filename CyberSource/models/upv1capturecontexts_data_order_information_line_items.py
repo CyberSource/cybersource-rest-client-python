@@ -206,6 +206,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def product_code(self):
         """
         Gets the product_code of this Upv1capturecontextsDataOrderInformationLineItems.
+        Code identifying the product.
 
         :return: The product_code of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -216,6 +217,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def product_code(self, product_code):
         """
         Sets the product_code of this Upv1capturecontextsDataOrderInformationLineItems.
+        Code identifying the product.
 
         :param product_code: The product_code of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -227,6 +229,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def product_name(self):
         """
         Gets the product_name of this Upv1capturecontextsDataOrderInformationLineItems.
+        Name of the product.
 
         :return: The product_name of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -237,6 +240,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def product_name(self, product_name):
         """
         Sets the product_name of this Upv1capturecontextsDataOrderInformationLineItems.
+        Name of the product.
 
         :param product_name: The product_name of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -248,6 +252,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def product_sku(self):
         """
         Gets the product_sku of this Upv1capturecontextsDataOrderInformationLineItems.
+        Stock Keeping Unit identifier
 
         :return: The product_sku of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -258,6 +263,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def product_sku(self, product_sku):
         """
         Sets the product_sku of this Upv1capturecontextsDataOrderInformationLineItems.
+        Stock Keeping Unit identifier
 
         :param product_sku: The product_sku of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -269,6 +275,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def quantity(self):
         """
         Gets the quantity of this Upv1capturecontextsDataOrderInformationLineItems.
+        Quantity of the product
 
         :return: The quantity of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: int
@@ -279,6 +286,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def quantity(self, quantity):
         """
         Sets the quantity of this Upv1capturecontextsDataOrderInformationLineItems.
+        Quantity of the product
 
         :param quantity: The quantity of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: int
@@ -290,6 +298,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def unit_price(self):
         """
         Gets the unit_price of this Upv1capturecontextsDataOrderInformationLineItems.
+        Price per unit
 
         :return: The unit_price of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -300,6 +309,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def unit_price(self, unit_price):
         """
         Sets the unit_price of this Upv1capturecontextsDataOrderInformationLineItems.
+        Price per unit
 
         :param unit_price: The unit_price of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -311,6 +321,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def unit_of_measure(self):
         """
         Gets the unit_of_measure of this Upv1capturecontextsDataOrderInformationLineItems.
+        Unit of measure (e.g. EA, KG, LB)
 
         :return: The unit_of_measure of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -321,6 +332,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def unit_of_measure(self, unit_of_measure):
         """
         Sets the unit_of_measure of this Upv1capturecontextsDataOrderInformationLineItems.
+        Unit of measure (e.g. EA, KG, LB)
 
         :param unit_of_measure: The unit_of_measure of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -332,6 +344,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def total_amount(self):
         """
         Gets the total_amount of this Upv1capturecontextsDataOrderInformationLineItems.
+        Total amount for the line item
 
         :return: The total_amount of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -342,6 +355,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def total_amount(self, total_amount):
         """
         Sets the total_amount of this Upv1capturecontextsDataOrderInformationLineItems.
+        Total amount for the line item
 
         :param total_amount: The total_amount of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -353,6 +367,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def tax_amount(self):
         """
         Gets the tax_amount of this Upv1capturecontextsDataOrderInformationLineItems.
+        Tax amount applied
 
         :return: The tax_amount of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -363,6 +378,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def tax_amount(self, tax_amount):
         """
         Sets the tax_amount of this Upv1capturecontextsDataOrderInformationLineItems.
+        Tax amount applied
 
         :param tax_amount: The tax_amount of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -374,6 +390,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def tax_rate(self):
         """
         Gets the tax_rate of this Upv1capturecontextsDataOrderInformationLineItems.
+        Tax rate applied
 
         :return: The tax_rate of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -384,6 +401,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def tax_rate(self, tax_rate):
         """
         Sets the tax_rate of this Upv1capturecontextsDataOrderInformationLineItems.
+        Tax rate applied
 
         :param tax_rate: The tax_rate of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -395,6 +413,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def tax_applied_after_discount(self):
         """
         Gets the tax_applied_after_discount of this Upv1capturecontextsDataOrderInformationLineItems.
+        Indicates if tax applied after discount
 
         :return: The tax_applied_after_discount of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -405,6 +424,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def tax_applied_after_discount(self, tax_applied_after_discount):
         """
         Sets the tax_applied_after_discount of this Upv1capturecontextsDataOrderInformationLineItems.
+        Indicates if tax applied after discount
 
         :param tax_applied_after_discount: The tax_applied_after_discount of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -416,6 +436,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def tax_status_indicator(self):
         """
         Gets the tax_status_indicator of this Upv1capturecontextsDataOrderInformationLineItems.
+        Tax status indicator
 
         :return: The tax_status_indicator of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -426,6 +447,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def tax_status_indicator(self, tax_status_indicator):
         """
         Sets the tax_status_indicator of this Upv1capturecontextsDataOrderInformationLineItems.
+        Tax status indicator
 
         :param tax_status_indicator: The tax_status_indicator of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -437,6 +459,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def tax_type_code(self):
         """
         Gets the tax_type_code of this Upv1capturecontextsDataOrderInformationLineItems.
+        Tax type code
 
         :return: The tax_type_code of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -447,6 +470,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def tax_type_code(self, tax_type_code):
         """
         Sets the tax_type_code of this Upv1capturecontextsDataOrderInformationLineItems.
+        Tax type code
 
         :param tax_type_code: The tax_type_code of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -458,6 +482,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def amount_includes_tax(self):
         """
         Gets the amount_includes_tax of this Upv1capturecontextsDataOrderInformationLineItems.
+        Indicates if amount includes tax
 
         :return: The amount_includes_tax of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: bool
@@ -468,6 +493,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def amount_includes_tax(self, amount_includes_tax):
         """
         Sets the amount_includes_tax of this Upv1capturecontextsDataOrderInformationLineItems.
+        Indicates if amount includes tax
 
         :param amount_includes_tax: The amount_includes_tax of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: bool
@@ -479,6 +505,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def type_of_supply(self):
         """
         Gets the type_of_supply of this Upv1capturecontextsDataOrderInformationLineItems.
+        Type of supply
 
         :return: The type_of_supply of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -489,6 +516,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def type_of_supply(self, type_of_supply):
         """
         Sets the type_of_supply of this Upv1capturecontextsDataOrderInformationLineItems.
+        Type of supply
 
         :param type_of_supply: The type_of_supply of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -500,6 +528,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def commodity_code(self):
         """
         Gets the commodity_code of this Upv1capturecontextsDataOrderInformationLineItems.
+        Commodity code
 
         :return: The commodity_code of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -510,6 +539,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def commodity_code(self, commodity_code):
         """
         Sets the commodity_code of this Upv1capturecontextsDataOrderInformationLineItems.
+        Commodity code
 
         :param commodity_code: The commodity_code of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -521,6 +551,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def discount_amount(self):
         """
         Gets the discount_amount of this Upv1capturecontextsDataOrderInformationLineItems.
+        Discount amount applied
 
         :return: The discount_amount of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -531,6 +562,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def discount_amount(self, discount_amount):
         """
         Sets the discount_amount of this Upv1capturecontextsDataOrderInformationLineItems.
+        Discount amount applied
 
         :param discount_amount: The discount_amount of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -542,6 +574,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def discount_applied(self):
         """
         Gets the discount_applied of this Upv1capturecontextsDataOrderInformationLineItems.
+        Indicates if discount applied
 
         :return: The discount_applied of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: bool
@@ -552,6 +585,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def discount_applied(self, discount_applied):
         """
         Sets the discount_applied of this Upv1capturecontextsDataOrderInformationLineItems.
+        Indicates if discount applied
 
         :param discount_applied: The discount_applied of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: bool
@@ -563,6 +597,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def discount_rate(self):
         """
         Gets the discount_rate of this Upv1capturecontextsDataOrderInformationLineItems.
+        Discount rate applied
 
         :return: The discount_rate of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -573,6 +608,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def discount_rate(self, discount_rate):
         """
         Sets the discount_rate of this Upv1capturecontextsDataOrderInformationLineItems.
+        Discount rate applied
 
         :param discount_rate: The discount_rate of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -584,6 +620,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def invoice_number(self):
         """
         Gets the invoice_number of this Upv1capturecontextsDataOrderInformationLineItems.
+        Invoice number for the line item
 
         :return: The invoice_number of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -594,6 +631,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def invoice_number(self, invoice_number):
         """
         Sets the invoice_number of this Upv1capturecontextsDataOrderInformationLineItems.
+        Invoice number for the line item
 
         :param invoice_number: The invoice_number of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -626,6 +664,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def fulfillment_type(self):
         """
         Gets the fulfillment_type of this Upv1capturecontextsDataOrderInformationLineItems.
+        Fulfillment type
 
         :return: The fulfillment_type of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -636,6 +675,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def fulfillment_type(self, fulfillment_type):
         """
         Sets the fulfillment_type of this Upv1capturecontextsDataOrderInformationLineItems.
+        Fulfillment type
 
         :param fulfillment_type: The fulfillment_type of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -647,6 +687,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def weight(self):
         """
         Gets the weight of this Upv1capturecontextsDataOrderInformationLineItems.
+        Weight of the product
 
         :return: The weight of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -657,6 +698,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def weight(self, weight):
         """
         Sets the weight of this Upv1capturecontextsDataOrderInformationLineItems.
+        Weight of the product
 
         :param weight: The weight of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -668,6 +710,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def weight_identifier(self):
         """
         Gets the weight_identifier of this Upv1capturecontextsDataOrderInformationLineItems.
+        Weight identifier
 
         :return: The weight_identifier of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -678,6 +721,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def weight_identifier(self, weight_identifier):
         """
         Sets the weight_identifier of this Upv1capturecontextsDataOrderInformationLineItems.
+        Weight identifier
 
         :param weight_identifier: The weight_identifier of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -689,6 +733,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def weight_unit(self):
         """
         Gets the weight_unit of this Upv1capturecontextsDataOrderInformationLineItems.
+        Unit of weight of the product
 
         :return: The weight_unit of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -699,6 +744,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def weight_unit(self, weight_unit):
         """
         Sets the weight_unit of this Upv1capturecontextsDataOrderInformationLineItems.
+        Unit of weight of the product
 
         :param weight_unit: The weight_unit of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -710,6 +756,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def reference_data_code(self):
         """
         Gets the reference_data_code of this Upv1capturecontextsDataOrderInformationLineItems.
+        Reference data code
 
         :return: The reference_data_code of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -720,6 +767,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def reference_data_code(self, reference_data_code):
         """
         Sets the reference_data_code of this Upv1capturecontextsDataOrderInformationLineItems.
+        Reference data code
 
         :param reference_data_code: The reference_data_code of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -731,6 +779,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def reference_data_number(self):
         """
         Gets the reference_data_number of this Upv1capturecontextsDataOrderInformationLineItems.
+        Reference data number
 
         :return: The reference_data_number of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -741,6 +790,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def reference_data_number(self, reference_data_number):
         """
         Sets the reference_data_number of this Upv1capturecontextsDataOrderInformationLineItems.
+        Reference data number
 
         :param reference_data_number: The reference_data_number of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -752,6 +802,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def unit_tax_amount(self):
         """
         Gets the unit_tax_amount of this Upv1capturecontextsDataOrderInformationLineItems.
+        Unit tax amount
 
         :return: The unit_tax_amount of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -762,6 +813,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def unit_tax_amount(self, unit_tax_amount):
         """
         Sets the unit_tax_amount of this Upv1capturecontextsDataOrderInformationLineItems.
+        Unit tax amount
 
         :param unit_tax_amount: The unit_tax_amount of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -773,6 +825,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def product_description(self):
         """
         Gets the product_description of this Upv1capturecontextsDataOrderInformationLineItems.
+        Description of the product
 
         :return: The product_description of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -783,6 +836,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def product_description(self, product_description):
         """
         Sets the product_description of this Upv1capturecontextsDataOrderInformationLineItems.
+        Description of the product
 
         :param product_description: The product_description of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -794,6 +848,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def gift_card_currency(self):
         """
         Gets the gift_card_currency of this Upv1capturecontextsDataOrderInformationLineItems.
+        Gift card currency
 
         :return: The gift_card_currency of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -804,6 +859,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def gift_card_currency(self, gift_card_currency):
         """
         Sets the gift_card_currency of this Upv1capturecontextsDataOrderInformationLineItems.
+        Gift card currency
 
         :param gift_card_currency: The gift_card_currency of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -815,6 +871,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def shipping_destination_types(self):
         """
         Gets the shipping_destination_types of this Upv1capturecontextsDataOrderInformationLineItems.
+        Shipping destination types
 
         :return: The shipping_destination_types of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: str
@@ -825,6 +882,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def shipping_destination_types(self, shipping_destination_types):
         """
         Sets the shipping_destination_types of this Upv1capturecontextsDataOrderInformationLineItems.
+        Shipping destination types
 
         :param shipping_destination_types: The shipping_destination_types of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: str
@@ -836,6 +894,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def gift(self):
         """
         Gets the gift of this Upv1capturecontextsDataOrderInformationLineItems.
+        Indicates if item is a gift
 
         :return: The gift of this Upv1capturecontextsDataOrderInformationLineItems.
         :rtype: bool
@@ -846,6 +905,7 @@ class Upv1capturecontextsDataOrderInformationLineItems(object):
     def gift(self, gift):
         """
         Sets the gift of this Upv1capturecontextsDataOrderInformationLineItems.
+        Indicates if item is a gift
 
         :param gift: The gift of this Upv1capturecontextsDataOrderInformationLineItems.
         :type: bool

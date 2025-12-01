@@ -34,7 +34,7 @@ class TestSubscriptionsApi(unittest.TestCase):
         """
         Test case for activate_subscription
 
-        Activate a Subscription
+        Reactivating a Suspended Subscription
         """
         pass
 

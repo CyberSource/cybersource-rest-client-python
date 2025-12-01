@@ -415,7 +415,7 @@ class PaymentInstrumentApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'patch_payment_instrument_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        inbound_mle_status = "false"
+        inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "patch_payment_instrument,patch_payment_instrument_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
@@ -540,7 +540,7 @@ class PaymentInstrumentApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_payment_instrument_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        inbound_mle_status = "false"
+        inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_payment_instrument,post_payment_instrument_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         

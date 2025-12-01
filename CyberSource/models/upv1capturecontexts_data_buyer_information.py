@@ -32,16 +32,20 @@ class Upv1capturecontextsDataBuyerInformation(object):
     swagger_types = {
         'personal_identification': 'Upv1capturecontextsDataBuyerInformationPersonalIdentification',
         'merchant_customer_id': 'str',
-        'company_tax_id': 'str'
+        'company_tax_id': 'str',
+        'date_of_birth': 'str',
+        'language': 'str'
     }
 
     attribute_map = {
         'personal_identification': 'personalIdentification',
         'merchant_customer_id': 'merchantCustomerId',
-        'company_tax_id': 'companyTaxId'
+        'company_tax_id': 'companyTaxId',
+        'date_of_birth': 'dateOfBirth',
+        'language': 'language'
     }
 
-    def __init__(self, personal_identification=None, merchant_customer_id=None, company_tax_id=None):
+    def __init__(self, personal_identification=None, merchant_customer_id=None, company_tax_id=None, date_of_birth=None, language=None):
         """
         Upv1capturecontextsDataBuyerInformation - a model defined in Swagger
         """
@@ -49,6 +53,8 @@ class Upv1capturecontextsDataBuyerInformation(object):
         self._personal_identification = None
         self._merchant_customer_id = None
         self._company_tax_id = None
+        self._date_of_birth = None
+        self._language = None
 
         if personal_identification is not None:
           self.personal_identification = personal_identification
@@ -56,6 +62,10 @@ class Upv1capturecontextsDataBuyerInformation(object):
           self.merchant_customer_id = merchant_customer_id
         if company_tax_id is not None:
           self.company_tax_id = company_tax_id
+        if date_of_birth is not None:
+          self.date_of_birth = date_of_birth
+        if language is not None:
+          self.language = language
 
     @property
     def personal_identification(self):
@@ -82,6 +92,7 @@ class Upv1capturecontextsDataBuyerInformation(object):
     def merchant_customer_id(self):
         """
         Gets the merchant_customer_id of this Upv1capturecontextsDataBuyerInformation.
+        The Merchant Customer ID 
 
         :return: The merchant_customer_id of this Upv1capturecontextsDataBuyerInformation.
         :rtype: str
@@ -92,6 +103,7 @@ class Upv1capturecontextsDataBuyerInformation(object):
     def merchant_customer_id(self, merchant_customer_id):
         """
         Sets the merchant_customer_id of this Upv1capturecontextsDataBuyerInformation.
+        The Merchant Customer ID 
 
         :param merchant_customer_id: The merchant_customer_id of this Upv1capturecontextsDataBuyerInformation.
         :type: str
@@ -103,6 +115,7 @@ class Upv1capturecontextsDataBuyerInformation(object):
     def company_tax_id(self):
         """
         Gets the company_tax_id of this Upv1capturecontextsDataBuyerInformation.
+        The Company Tax ID 
 
         :return: The company_tax_id of this Upv1capturecontextsDataBuyerInformation.
         :rtype: str
@@ -113,12 +126,59 @@ class Upv1capturecontextsDataBuyerInformation(object):
     def company_tax_id(self, company_tax_id):
         """
         Sets the company_tax_id of this Upv1capturecontextsDataBuyerInformation.
+        The Company Tax ID 
 
         :param company_tax_id: The company_tax_id of this Upv1capturecontextsDataBuyerInformation.
         :type: str
         """
 
         self._company_tax_id = company_tax_id
+
+    @property
+    def date_of_birth(self):
+        """
+        Gets the date_of_birth of this Upv1capturecontextsDataBuyerInformation.
+        The date of birth 
+
+        :return: The date_of_birth of this Upv1capturecontextsDataBuyerInformation.
+        :rtype: str
+        """
+        return self._date_of_birth
+
+    @date_of_birth.setter
+    def date_of_birth(self, date_of_birth):
+        """
+        Sets the date_of_birth of this Upv1capturecontextsDataBuyerInformation.
+        The date of birth 
+
+        :param date_of_birth: The date_of_birth of this Upv1capturecontextsDataBuyerInformation.
+        :type: str
+        """
+
+        self._date_of_birth = date_of_birth
+
+    @property
+    def language(self):
+        """
+        Gets the language of this Upv1capturecontextsDataBuyerInformation.
+        The preferred language 
+
+        :return: The language of this Upv1capturecontextsDataBuyerInformation.
+        :rtype: str
+        """
+        return self._language
+
+    @language.setter
+    def language(self, language):
+        """
+        Sets the language of this Upv1capturecontextsDataBuyerInformation.
+        The preferred language 
+
+        :param language: The language of this Upv1capturecontextsDataBuyerInformation.
+        :type: str
+        """
+
+        self._language = language
 
     def to_dict(self):
         """

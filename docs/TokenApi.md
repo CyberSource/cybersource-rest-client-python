@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_card_art_asset**
-> InlineResponse200 get_card_art_asset(instrument_identifier_id, token_provider, asset_type)
+> InlineResponse2001 get_card_art_asset(instrument_identifier_id, token_provider, asset_type)
 
 Retrieve Card Art
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 

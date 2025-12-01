@@ -56,6 +56,7 @@ class Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiator(
     def credential_stored_on_file(self):
         """
         Gets the credential_stored_on_file of this Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiator.
+        Store the credential on file
 
         :return: The credential_stored_on_file of this Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiator.
         :rtype: bool
@@ -66,6 +67,7 @@ class Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiator(
     def credential_stored_on_file(self, credential_stored_on_file):
         """
         Sets the credential_stored_on_file of this Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiator.
+        Store the credential on file
 
         :param credential_stored_on_file: The credential_stored_on_file of this Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiator.
         :type: bool

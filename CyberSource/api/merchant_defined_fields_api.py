@@ -60,7 +60,7 @@ class MerchantDefinedFieldsApi(object):
             for asynchronous request. (optional)
         :param str reference_type: The reference type for which merchant defined fields are to be fetched. Available values are Invoice, Purchase, Donation (required)
         :param MerchantDefinedFieldDefinitionRequest merchant_defined_field_definition_request: (required)
-        :return: list[InlineResponse2002]
+        :return: list[InlineResponse2003]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -89,7 +89,7 @@ class MerchantDefinedFieldsApi(object):
             for asynchronous request. (optional)
         :param str reference_type: The reference type for which merchant defined fields are to be fetched. Available values are Invoice, Purchase, Donation (required)
         :param MerchantDefinedFieldDefinitionRequest merchant_defined_field_definition_request: (required)
-        :return: list[InlineResponse2002]
+        :return: list[InlineResponse2003]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -161,7 +161,7 @@ class MerchantDefinedFieldsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='list[InlineResponse2002]',
+                                        response_type='list[InlineResponse2003]',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -311,7 +311,7 @@ class MerchantDefinedFieldsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str reference_type: The reference type for which merchant defined fields are to be fetched. Available values are Invoice, Purchase, Donation (required)
-        :return: list[InlineResponse2002]
+        :return: list[InlineResponse2003]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -339,7 +339,7 @@ class MerchantDefinedFieldsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str reference_type: The reference type for which merchant defined fields are to be fetched. Available values are Invoice, Purchase, Donation (required)
-        :return: list[InlineResponse2002]
+        :return: list[InlineResponse2003]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -408,7 +408,7 @@ class MerchantDefinedFieldsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='list[InlineResponse2002]',
+                                        response_type='list[InlineResponse2003]',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -432,7 +432,7 @@ class MerchantDefinedFieldsApi(object):
         :param str reference_type: (required)
         :param int id: (required)
         :param MerchantDefinedFieldCore merchant_defined_field_core: (required)
-        :return: list[InlineResponse2002]
+        :return: list[InlineResponse2003]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -462,7 +462,7 @@ class MerchantDefinedFieldsApi(object):
         :param str reference_type: (required)
         :param int id: (required)
         :param MerchantDefinedFieldCore merchant_defined_field_core: (required)
-        :return: list[InlineResponse2002]
+        :return: list[InlineResponse2003]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -541,7 +541,7 @@ class MerchantDefinedFieldsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='list[InlineResponse2002]',
+                                        response_type='list[InlineResponse2003]',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

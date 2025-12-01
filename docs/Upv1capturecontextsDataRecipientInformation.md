@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **account_id** | **str** | The account ID of the recipient | [optional] 
 **administrative_area** | **str** | The administrative area of the recipient | [optional] 
 **account_type** | **str** | The account type of the recipient | [optional] 
+**date_of_birth** | **str** | The date of birth of the recipient | [optional] 
+**postal_code** | **str** | The postal code of the recipient | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

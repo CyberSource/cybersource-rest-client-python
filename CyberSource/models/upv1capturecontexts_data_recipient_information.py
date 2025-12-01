@@ -36,7 +36,9 @@ class Upv1capturecontextsDataRecipientInformation(object):
         'country': 'str',
         'account_id': 'str',
         'administrative_area': 'str',
-        'account_type': 'str'
+        'account_type': 'str',
+        'date_of_birth': 'str',
+        'postal_code': 'str'
     }
 
     attribute_map = {
@@ -46,10 +48,12 @@ class Upv1capturecontextsDataRecipientInformation(object):
         'country': 'country',
         'account_id': 'accountId',
         'administrative_area': 'administrativeArea',
-        'account_type': 'accountType'
+        'account_type': 'accountType',
+        'date_of_birth': 'dateOfBirth',
+        'postal_code': 'postalCode'
     }
 
-    def __init__(self, first_name=None, middle_name=None, last_name=None, country=None, account_id=None, administrative_area=None, account_type=None):
+    def __init__(self, first_name=None, middle_name=None, last_name=None, country=None, account_id=None, administrative_area=None, account_type=None, date_of_birth=None, postal_code=None):
         """
         Upv1capturecontextsDataRecipientInformation - a model defined in Swagger
         """
@@ -61,6 +65,8 @@ class Upv1capturecontextsDataRecipientInformation(object):
         self._account_id = None
         self._administrative_area = None
         self._account_type = None
+        self._date_of_birth = None
+        self._postal_code = None
 
         if first_name is not None:
           self.first_name = first_name
@@ -76,6 +82,10 @@ class Upv1capturecontextsDataRecipientInformation(object):
           self.administrative_area = administrative_area
         if account_type is not None:
           self.account_type = account_type
+        if date_of_birth is not None:
+          self.date_of_birth = date_of_birth
+        if postal_code is not None:
+          self.postal_code = postal_code
 
     @property
     def first_name(self):
@@ -231,6 +241,52 @@ class Upv1capturecontextsDataRecipientInformation(object):
         """
 
         self._account_type = account_type
+
+    @property
+    def date_of_birth(self):
+        """
+        Gets the date_of_birth of this Upv1capturecontextsDataRecipientInformation.
+        The date of birth of the recipient
+
+        :return: The date_of_birth of this Upv1capturecontextsDataRecipientInformation.
+        :rtype: str
+        """
+        return self._date_of_birth
+
+    @date_of_birth.setter
+    def date_of_birth(self, date_of_birth):
+        """
+        Sets the date_of_birth of this Upv1capturecontextsDataRecipientInformation.
+        The date of birth of the recipient
+
+        :param date_of_birth: The date_of_birth of this Upv1capturecontextsDataRecipientInformation.
+        :type: str
+        """
+
+        self._date_of_birth = date_of_birth
+
+    @property
+    def postal_code(self):
+        """
+        Gets the postal_code of this Upv1capturecontextsDataRecipientInformation.
+        The postal code of the recipient
+
+        :return: The postal_code of this Upv1capturecontextsDataRecipientInformation.
+        :rtype: str
+        """
+        return self._postal_code
+
+    @postal_code.setter
+    def postal_code(self, postal_code):
+        """
+        Sets the postal_code of this Upv1capturecontextsDataRecipientInformation.
+        The postal code of the recipient
+
+        :param postal_code: The postal_code of this Upv1capturecontextsDataRecipientInformation.
+        :type: str
+        """
+
+        self._postal_code = postal_code
 
     def to_dict(self):
         """

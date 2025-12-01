@@ -49,7 +49,8 @@ class PaymentsProducts(object):
         'pay_by_link': 'PaymentsProductsTax',
         'unified_checkout': 'PaymentsProductsUnifiedCheckout',
         'receivables_manager': 'PaymentsProductsTax',
-        'service_fee': 'PaymentsProductsServiceFee'
+        'service_fee': 'PaymentsProductsServiceFee',
+        'batch_upload': 'PaymentsProductsTax'
     }
 
     attribute_map = {
@@ -72,10 +73,11 @@ class PaymentsProducts(object):
         'pay_by_link': 'payByLink',
         'unified_checkout': 'unifiedCheckout',
         'receivables_manager': 'receivablesManager',
-        'service_fee': 'serviceFee'
+        'service_fee': 'serviceFee',
+        'batch_upload': 'batchUpload'
     }
 
-    def __init__(self, card_processing=None, alternative_payment_methods=None, card_present_connect=None, cybs_ready_terminal=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, payment_orchestration=None, payouts=None, differential_fee=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None):
+    def __init__(self, card_processing=None, alternative_payment_methods=None, card_present_connect=None, cybs_ready_terminal=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, payment_orchestration=None, payouts=None, differential_fee=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None, batch_upload=None):
         """
         PaymentsProducts - a model defined in Swagger
         """
@@ -100,6 +102,7 @@ class PaymentsProducts(object):
         self._unified_checkout = None
         self._receivables_manager = None
         self._service_fee = None
+        self._batch_upload = None
 
         if card_processing is not None:
           self.card_processing = card_processing
@@ -141,6 +144,8 @@ class PaymentsProducts(object):
           self.receivables_manager = receivables_manager
         if service_fee is not None:
           self.service_fee = service_fee
+        if batch_upload is not None:
+          self.batch_upload = batch_upload
 
     @property
     def card_processing(self):
@@ -561,6 +566,27 @@ class PaymentsProducts(object):
         """
 
         self._service_fee = service_fee
+
+    @property
+    def batch_upload(self):
+        """
+        Gets the batch_upload of this PaymentsProducts.
+
+        :return: The batch_upload of this PaymentsProducts.
+        :rtype: PaymentsProductsTax
+        """
+        return self._batch_upload
+
+    @batch_upload.setter
+    def batch_upload(self, batch_upload):
+        """
+        Sets the batch_upload of this PaymentsProducts.
+
+        :param batch_upload: The batch_upload of this PaymentsProducts.
+        :type: PaymentsProductsTax
+        """
+
+        self._batch_upload = batch_upload
 
     def to_dict(self):
         """

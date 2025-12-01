@@ -37,7 +37,8 @@ class Ptsv2paymentsAggregatorInformation(object):
         'city': 'str',
         'state': 'str',
         'postal_code': 'str',
-        'country': 'str'
+        'country': 'str',
+        'service_providername': 'str'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class Ptsv2paymentsAggregatorInformation(object):
         'city': 'city',
         'state': 'state',
         'postal_code': 'postalCode',
-        'country': 'country'
+        'country': 'country',
+        'service_providername': 'serviceProvidername'
     }
 
-    def __init__(self, aggregator_id=None, name=None, sub_merchant=None, street_address=None, city=None, state=None, postal_code=None, country=None):
+    def __init__(self, aggregator_id=None, name=None, sub_merchant=None, street_address=None, city=None, state=None, postal_code=None, country=None, service_providername=None):
         """
         Ptsv2paymentsAggregatorInformation - a model defined in Swagger
         """
@@ -64,6 +66,7 @@ class Ptsv2paymentsAggregatorInformation(object):
         self._state = None
         self._postal_code = None
         self._country = None
+        self._service_providername = None
 
         if aggregator_id is not None:
           self.aggregator_id = aggregator_id
@@ -81,6 +84,8 @@ class Ptsv2paymentsAggregatorInformation(object):
           self.postal_code = postal_code
         if country is not None:
           self.country = country
+        if service_providername is not None:
+          self.service_providername = service_providername
 
     @property
     def aggregator_id(self):
@@ -263,6 +268,29 @@ class Ptsv2paymentsAggregatorInformation(object):
         """
 
         self._country = country
+
+    @property
+    def service_providername(self):
+        """
+        Gets the service_providername of this Ptsv2paymentsAggregatorInformation.
+        Contains transfer service provider name.
+
+        :return: The service_providername of this Ptsv2paymentsAggregatorInformation.
+        :rtype: str
+        """
+        return self._service_providername
+
+    @service_providername.setter
+    def service_providername(self, service_providername):
+        """
+        Sets the service_providername of this Ptsv2paymentsAggregatorInformation.
+        Contains transfer service provider name.
+
+        :param service_providername: The service_providername of this Ptsv2paymentsAggregatorInformation.
+        :type: str
+        """
+
+        self._service_providername = service_providername
 
     def to_dict(self):
         """

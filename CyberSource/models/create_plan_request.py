@@ -30,53 +30,27 @@ class CreatePlanRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Rbsv1plansClientReferenceInformation',
         'plan_information': 'Rbsv1plansPlanInformation',
         'order_information': 'Rbsv1plansOrderInformation'
     }
 
     attribute_map = {
-        'client_reference_information': 'clientReferenceInformation',
         'plan_information': 'planInformation',
         'order_information': 'orderInformation'
     }
 
-    def __init__(self, client_reference_information=None, plan_information=None, order_information=None):
+    def __init__(self, plan_information=None, order_information=None):
         """
         CreatePlanRequest - a model defined in Swagger
         """
 
-        self._client_reference_information = None
         self._plan_information = None
         self._order_information = None
 
-        if client_reference_information is not None:
-          self.client_reference_information = client_reference_information
         if plan_information is not None:
           self.plan_information = plan_information
         if order_information is not None:
           self.order_information = order_information
-
-    @property
-    def client_reference_information(self):
-        """
-        Gets the client_reference_information of this CreatePlanRequest.
-
-        :return: The client_reference_information of this CreatePlanRequest.
-        :rtype: Rbsv1plansClientReferenceInformation
-        """
-        return self._client_reference_information
-
-    @client_reference_information.setter
-    def client_reference_information(self, client_reference_information):
-        """
-        Sets the client_reference_information of this CreatePlanRequest.
-
-        :param client_reference_information: The client_reference_information of this CreatePlanRequest.
-        :type: Rbsv1plansClientReferenceInformation
-        """
-
-        self._client_reference_information = client_reference_information
 
     @property
     def plan_information(self):

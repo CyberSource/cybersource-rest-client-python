@@ -30,16 +30,16 @@ class PatchCustomerRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'Tmsv2customersLinks',
+        'links': 'Tmsv2tokenizeTokenInformationCustomerLinks',
         'id': 'str',
-        'object_information': 'Tmsv2customersObjectInformation',
-        'buyer_information': 'Tmsv2customersBuyerInformation',
-        'client_reference_information': 'Tmsv2customersClientReferenceInformation',
-        'merchant_defined_information': 'list[Tmsv2customersMerchantDefinedInformation]',
-        'default_payment_instrument': 'Tmsv2customersDefaultPaymentInstrument',
-        'default_shipping_address': 'Tmsv2customersDefaultShippingAddress',
-        'metadata': 'Tmsv2customersMetadata',
-        'embedded': 'Tmsv2customersEmbedded'
+        'object_information': 'Tmsv2tokenizeTokenInformationCustomerObjectInformation',
+        'buyer_information': 'Tmsv2tokenizeTokenInformationCustomerBuyerInformation',
+        'client_reference_information': 'Tmsv2tokenizeTokenInformationCustomerClientReferenceInformation',
+        'merchant_defined_information': 'list[Tmsv2tokenizeTokenInformationCustomerMerchantDefinedInformation]',
+        'default_payment_instrument': 'Tmsv2tokenizeTokenInformationCustomerDefaultPaymentInstrument',
+        'default_shipping_address': 'Tmsv2tokenizeTokenInformationCustomerDefaultShippingAddress',
+        'metadata': 'Tmsv2tokenizeTokenInformationCustomerMetadata',
+        'embedded': 'Tmsv2tokenizeTokenInformationCustomerEmbedded'
     }
 
     attribute_map = {
@@ -98,7 +98,7 @@ class PatchCustomerRequest(object):
         Gets the links of this PatchCustomerRequest.
 
         :return: The links of this PatchCustomerRequest.
-        :rtype: Tmsv2customersLinks
+        :rtype: Tmsv2tokenizeTokenInformationCustomerLinks
         """
         return self._links
 
@@ -108,7 +108,7 @@ class PatchCustomerRequest(object):
         Sets the links of this PatchCustomerRequest.
 
         :param links: The links of this PatchCustomerRequest.
-        :type: Tmsv2customersLinks
+        :type: Tmsv2tokenizeTokenInformationCustomerLinks
         """
 
         self._links = links
@@ -142,7 +142,7 @@ class PatchCustomerRequest(object):
         Gets the object_information of this PatchCustomerRequest.
 
         :return: The object_information of this PatchCustomerRequest.
-        :rtype: Tmsv2customersObjectInformation
+        :rtype: Tmsv2tokenizeTokenInformationCustomerObjectInformation
         """
         return self._object_information
 
@@ -152,7 +152,7 @@ class PatchCustomerRequest(object):
         Sets the object_information of this PatchCustomerRequest.
 
         :param object_information: The object_information of this PatchCustomerRequest.
-        :type: Tmsv2customersObjectInformation
+        :type: Tmsv2tokenizeTokenInformationCustomerObjectInformation
         """
 
         self._object_information = object_information
@@ -163,7 +163,7 @@ class PatchCustomerRequest(object):
         Gets the buyer_information of this PatchCustomerRequest.
 
         :return: The buyer_information of this PatchCustomerRequest.
-        :rtype: Tmsv2customersBuyerInformation
+        :rtype: Tmsv2tokenizeTokenInformationCustomerBuyerInformation
         """
         return self._buyer_information
 
@@ -173,7 +173,7 @@ class PatchCustomerRequest(object):
         Sets the buyer_information of this PatchCustomerRequest.
 
         :param buyer_information: The buyer_information of this PatchCustomerRequest.
-        :type: Tmsv2customersBuyerInformation
+        :type: Tmsv2tokenizeTokenInformationCustomerBuyerInformation
         """
 
         self._buyer_information = buyer_information
@@ -184,7 +184,7 @@ class PatchCustomerRequest(object):
         Gets the client_reference_information of this PatchCustomerRequest.
 
         :return: The client_reference_information of this PatchCustomerRequest.
-        :rtype: Tmsv2customersClientReferenceInformation
+        :rtype: Tmsv2tokenizeTokenInformationCustomerClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -194,7 +194,7 @@ class PatchCustomerRequest(object):
         Sets the client_reference_information of this PatchCustomerRequest.
 
         :param client_reference_information: The client_reference_information of this PatchCustomerRequest.
-        :type: Tmsv2customersClientReferenceInformation
+        :type: Tmsv2tokenizeTokenInformationCustomerClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information
@@ -206,7 +206,7 @@ class PatchCustomerRequest(object):
         Object containing the custom data that the merchant defines. 
 
         :return: The merchant_defined_information of this PatchCustomerRequest.
-        :rtype: list[Tmsv2customersMerchantDefinedInformation]
+        :rtype: list[Tmsv2tokenizeTokenInformationCustomerMerchantDefinedInformation]
         """
         return self._merchant_defined_information
 
@@ -217,7 +217,7 @@ class PatchCustomerRequest(object):
         Object containing the custom data that the merchant defines. 
 
         :param merchant_defined_information: The merchant_defined_information of this PatchCustomerRequest.
-        :type: list[Tmsv2customersMerchantDefinedInformation]
+        :type: list[Tmsv2tokenizeTokenInformationCustomerMerchantDefinedInformation]
         """
 
         self._merchant_defined_information = merchant_defined_information
@@ -228,7 +228,7 @@ class PatchCustomerRequest(object):
         Gets the default_payment_instrument of this PatchCustomerRequest.
 
         :return: The default_payment_instrument of this PatchCustomerRequest.
-        :rtype: Tmsv2customersDefaultPaymentInstrument
+        :rtype: Tmsv2tokenizeTokenInformationCustomerDefaultPaymentInstrument
         """
         return self._default_payment_instrument
 
@@ -238,7 +238,7 @@ class PatchCustomerRequest(object):
         Sets the default_payment_instrument of this PatchCustomerRequest.
 
         :param default_payment_instrument: The default_payment_instrument of this PatchCustomerRequest.
-        :type: Tmsv2customersDefaultPaymentInstrument
+        :type: Tmsv2tokenizeTokenInformationCustomerDefaultPaymentInstrument
         """
 
         self._default_payment_instrument = default_payment_instrument
@@ -249,7 +249,7 @@ class PatchCustomerRequest(object):
         Gets the default_shipping_address of this PatchCustomerRequest.
 
         :return: The default_shipping_address of this PatchCustomerRequest.
-        :rtype: Tmsv2customersDefaultShippingAddress
+        :rtype: Tmsv2tokenizeTokenInformationCustomerDefaultShippingAddress
         """
         return self._default_shipping_address
 
@@ -259,7 +259,7 @@ class PatchCustomerRequest(object):
         Sets the default_shipping_address of this PatchCustomerRequest.
 
         :param default_shipping_address: The default_shipping_address of this PatchCustomerRequest.
-        :type: Tmsv2customersDefaultShippingAddress
+        :type: Tmsv2tokenizeTokenInformationCustomerDefaultShippingAddress
         """
 
         self._default_shipping_address = default_shipping_address
@@ -270,7 +270,7 @@ class PatchCustomerRequest(object):
         Gets the metadata of this PatchCustomerRequest.
 
         :return: The metadata of this PatchCustomerRequest.
-        :rtype: Tmsv2customersMetadata
+        :rtype: Tmsv2tokenizeTokenInformationCustomerMetadata
         """
         return self._metadata
 
@@ -280,7 +280,7 @@ class PatchCustomerRequest(object):
         Sets the metadata of this PatchCustomerRequest.
 
         :param metadata: The metadata of this PatchCustomerRequest.
-        :type: Tmsv2customersMetadata
+        :type: Tmsv2tokenizeTokenInformationCustomerMetadata
         """
 
         self._metadata = metadata
@@ -291,7 +291,7 @@ class PatchCustomerRequest(object):
         Gets the embedded of this PatchCustomerRequest.
 
         :return: The embedded of this PatchCustomerRequest.
-        :rtype: Tmsv2customersEmbedded
+        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbedded
         """
         return self._embedded
 
@@ -301,7 +301,7 @@ class PatchCustomerRequest(object):
         Sets the embedded of this PatchCustomerRequest.
 
         :param embedded: The embedded of this PatchCustomerRequest.
-        :type: Tmsv2customersEmbedded
+        :type: Tmsv2tokenizeTokenInformationCustomerEmbedded
         """
 
         self._embedded = embedded

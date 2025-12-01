@@ -30,73 +30,73 @@ class GetSubscriptionResponseReactivationInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'skipped_payments_count': 'str',
-        'skipped_payments_total_amount': 'str'
+        'missed_payments_count': 'str',
+        'missed_payments_total_amount': 'str'
     }
 
     attribute_map = {
-        'skipped_payments_count': 'skippedPaymentsCount',
-        'skipped_payments_total_amount': 'skippedPaymentsTotalAmount'
+        'missed_payments_count': 'missedPaymentsCount',
+        'missed_payments_total_amount': 'missedPaymentsTotalAmount'
     }
 
-    def __init__(self, skipped_payments_count=None, skipped_payments_total_amount=None):
+    def __init__(self, missed_payments_count=None, missed_payments_total_amount=None):
         """
         GetSubscriptionResponseReactivationInformation - a model defined in Swagger
         """
 
-        self._skipped_payments_count = None
-        self._skipped_payments_total_amount = None
+        self._missed_payments_count = None
+        self._missed_payments_total_amount = None
 
-        if skipped_payments_count is not None:
-          self.skipped_payments_count = skipped_payments_count
-        if skipped_payments_total_amount is not None:
-          self.skipped_payments_total_amount = skipped_payments_total_amount
+        if missed_payments_count is not None:
+          self.missed_payments_count = missed_payments_count
+        if missed_payments_total_amount is not None:
+          self.missed_payments_total_amount = missed_payments_total_amount
 
     @property
-    def skipped_payments_count(self):
+    def missed_payments_count(self):
         """
-        Gets the skipped_payments_count of this GetSubscriptionResponseReactivationInformation.
+        Gets the missed_payments_count of this GetSubscriptionResponseReactivationInformation.
         Number of payments that should have occurred while the subscription was in a suspended status. 
 
-        :return: The skipped_payments_count of this GetSubscriptionResponseReactivationInformation.
+        :return: The missed_payments_count of this GetSubscriptionResponseReactivationInformation.
         :rtype: str
         """
-        return self._skipped_payments_count
+        return self._missed_payments_count
 
-    @skipped_payments_count.setter
-    def skipped_payments_count(self, skipped_payments_count):
+    @missed_payments_count.setter
+    def missed_payments_count(self, missed_payments_count):
         """
-        Sets the skipped_payments_count of this GetSubscriptionResponseReactivationInformation.
+        Sets the missed_payments_count of this GetSubscriptionResponseReactivationInformation.
         Number of payments that should have occurred while the subscription was in a suspended status. 
 
-        :param skipped_payments_count: The skipped_payments_count of this GetSubscriptionResponseReactivationInformation.
+        :param missed_payments_count: The missed_payments_count of this GetSubscriptionResponseReactivationInformation.
         :type: str
         """
 
-        self._skipped_payments_count = skipped_payments_count
+        self._missed_payments_count = missed_payments_count
 
     @property
-    def skipped_payments_total_amount(self):
+    def missed_payments_total_amount(self):
         """
-        Gets the skipped_payments_total_amount of this GetSubscriptionResponseReactivationInformation.
-        Total amount that will be charged upon reactivation if `processSkippedPayments` is set to `true`. 
+        Gets the missed_payments_total_amount of this GetSubscriptionResponseReactivationInformation.
+        Total amount that will be charged upon reactivation if `processMissedPayments` is set to `true`. 
 
-        :return: The skipped_payments_total_amount of this GetSubscriptionResponseReactivationInformation.
+        :return: The missed_payments_total_amount of this GetSubscriptionResponseReactivationInformation.
         :rtype: str
         """
-        return self._skipped_payments_total_amount
+        return self._missed_payments_total_amount
 
-    @skipped_payments_total_amount.setter
-    def skipped_payments_total_amount(self, skipped_payments_total_amount):
+    @missed_payments_total_amount.setter
+    def missed_payments_total_amount(self, missed_payments_total_amount):
         """
-        Sets the skipped_payments_total_amount of this GetSubscriptionResponseReactivationInformation.
-        Total amount that will be charged upon reactivation if `processSkippedPayments` is set to `true`. 
+        Sets the missed_payments_total_amount of this GetSubscriptionResponseReactivationInformation.
+        Total amount that will be charged upon reactivation if `processMissedPayments` is set to `true`. 
 
-        :param skipped_payments_total_amount: The skipped_payments_total_amount of this GetSubscriptionResponseReactivationInformation.
+        :param missed_payments_total_amount: The missed_payments_total_amount of this GetSubscriptionResponseReactivationInformation.
         :type: str
         """
 
-        self._skipped_payments_total_amount = skipped_payments_total_amount
+        self._missed_payments_total_amount = missed_payments_total_amount
 
     def to_dict(self):
         """

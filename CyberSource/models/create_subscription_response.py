@@ -34,7 +34,8 @@ class CreateSubscriptionResponse(object):
         'id': 'str',
         'submit_time_utc': 'str',
         'status': 'str',
-        'subscription_information': 'CreateSubscriptionResponseSubscriptionInformation'
+        'subscription_information': 'CreateSubscriptionResponseSubscriptionInformation',
+        'client_reference_information': 'GetAllSubscriptionsResponseClientReferenceInformation'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class CreateSubscriptionResponse(object):
         'id': 'id',
         'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
-        'subscription_information': 'subscriptionInformation'
+        'subscription_information': 'subscriptionInformation',
+        'client_reference_information': 'clientReferenceInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, subscription_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, subscription_information=None, client_reference_information=None):
         """
         CreateSubscriptionResponse - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class CreateSubscriptionResponse(object):
         self._submit_time_utc = None
         self._status = None
         self._subscription_information = None
+        self._client_reference_information = None
 
         if links is not None:
           self.links = links
@@ -66,6 +69,8 @@ class CreateSubscriptionResponse(object):
           self.status = status
         if subscription_information is not None:
           self.subscription_information = subscription_information
+        if client_reference_information is not None:
+          self.client_reference_information = client_reference_information
 
     @property
     def links(self):
@@ -177,6 +182,27 @@ class CreateSubscriptionResponse(object):
         """
 
         self._subscription_information = subscription_information
+
+    @property
+    def client_reference_information(self):
+        """
+        Gets the client_reference_information of this CreateSubscriptionResponse.
+
+        :return: The client_reference_information of this CreateSubscriptionResponse.
+        :rtype: GetAllSubscriptionsResponseClientReferenceInformation
+        """
+        return self._client_reference_information
+
+    @client_reference_information.setter
+    def client_reference_information(self, client_reference_information):
+        """
+        Sets the client_reference_information of this CreateSubscriptionResponse.
+
+        :param client_reference_information: The client_reference_information of this CreateSubscriptionResponse.
+        :type: GetAllSubscriptionsResponseClientReferenceInformation
+        """
+
+        self._client_reference_information = client_reference_information
 
     def to_dict(self):
         """

@@ -4,7 +4,7 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**activate_subscription**](SubscriptionsApi.md#activate_subscription) | **POST** /rbs/v1/subscriptions/{id}/activate | Activate a Subscription
+[**activate_subscription**](SubscriptionsApi.md#activate_subscription) | **POST** /rbs/v1/subscriptions/{id}/activate | Reactivating a Suspended Subscription
 [**cancel_subscription**](SubscriptionsApi.md#cancel_subscription) | **POST** /rbs/v1/subscriptions/{id}/cancel | Cancel a Subscription
 [**create_subscription**](SubscriptionsApi.md#create_subscription) | **POST** /rbs/v1/subscriptions | Create a Subscription
 [**get_all_subscriptions**](SubscriptionsApi.md#get_all_subscriptions) | **GET** /rbs/v1/subscriptions | Get a List of Subscriptions
@@ -15,11 +15,11 @@ Method | HTTP request | Description
 
 
 # **activate_subscription**
-> ActivateSubscriptionResponse activate_subscription(id, process_skipped_payments=process_skipped_payments)
+> ActivateSubscriptionResponse activate_subscription(id, process_missed_payments=process_missed_payments)
 
-Activate a Subscription
+Reactivating a Suspended Subscription
 
-Activate a `SUSPENDED` Subscription 
+# Reactivating a Suspended Subscription  You can reactivate a suspended subscription for the next billing cycle. You cannot reactivate a canceled or completed subscription.  You can specify whether you want to process missed payments for the period during which the subscription was suspended using the `processMissedPayments` query parameter by setting it to true or false.  If no value is specified, the system will default to `true`.  **Important:** The \"processMissedPayments\" query parameter is only effective when the Ask each time before reactivating option is selected in the reactivation settings. If any other option is chosen, the value provided in the request will be ignored by the system. For more information, see the [Recurring Billing User Guide](https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/user/all/rest/recurring-billing-user/recurring-billing-user-about-guide.html).  You can check how many payments were missed and the total amount by retrieving the subscription details, where you will find the `reactivationInformation` object. See: [Retrieving a Subscription](https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev/recur-bill-subscriptions/recur-bill-getting-a-subscription.html). 
 
 ### Example 
 ```python
@@ -32,11 +32,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.SubscriptionsApi()
 id = 'id_example' # str | Subscription Id
-process_skipped_payments = true # bool | Indicates if skipped payments should be processed from the period when the subscription was suspended. By default, this is set to true. (optional) (default to true)
+process_missed_payments = true # bool | Indicates if missed payments should be processed from the period when the subscription was suspended. By default, this is set to true. When any option other than \"Ask each time before reactivating\" is selected in the reactivation settings, the value that you enter will be ignored.  (optional) (default to true)
 
 try: 
-    # Activate a Subscription
-    api_response = api_instance.activate_subscription(id, process_skipped_payments=process_skipped_payments)
+    # Reactivating a Suspended Subscription
+    api_response = api_instance.activate_subscription(id, process_missed_payments=process_missed_payments)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->activate_subscription: %s\n" % e)
@@ -47,7 +47,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| Subscription Id | 
- **process_skipped_payments** | **bool**| Indicates if skipped payments should be processed from the period when the subscription was suspended. By default, this is set to true. | [optional] [default to true]
+ **process_missed_payments** | **bool**| Indicates if missed payments should be processed from the period when the subscription was suspended. By default, this is set to true. When any option other than \&quot;Ask each time before reactivating\&quot; is selected in the reactivation settings, the value that you enter will be ignored.  | [optional] [default to true]
 
 ### Return type
 
@@ -311,7 +311,7 @@ No authorization required
 
 Suspend a Subscription
 
-Suspend a Subscription
+Suspend a Subscription 
 
 ### Example 
 ```python

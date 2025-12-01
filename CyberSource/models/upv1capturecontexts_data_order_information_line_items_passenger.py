@@ -86,6 +86,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def type(self):
         """
         Gets the type of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger type
 
         :return: The type of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :rtype: str
@@ -96,6 +97,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def type(self, type):
         """
         Sets the type of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger type
 
         :param type: The type of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :type: str
@@ -107,6 +109,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def status(self):
         """
         Gets the status of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger status
 
         :return: The status of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :rtype: str
@@ -117,6 +120,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def status(self, status):
         """
         Sets the status of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger status
 
         :param status: The status of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :type: str
@@ -128,6 +132,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def phone(self):
         """
         Gets the phone of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger phone number
 
         :return: The phone of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :rtype: str
@@ -138,6 +143,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def phone(self, phone):
         """
         Sets the phone of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger phone number
 
         :param phone: The phone of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :type: str
@@ -149,6 +155,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def first_name(self):
         """
         Gets the first_name of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger first name
 
         :return: The first_name of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :rtype: str
@@ -159,6 +166,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def first_name(self, first_name):
         """
         Sets the first_name of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger first name
 
         :param first_name: The first_name of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :type: str
@@ -170,6 +178,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def last_name(self):
         """
         Gets the last_name of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger last name
 
         :return: The last_name of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :rtype: str
@@ -180,6 +189,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def last_name(self, last_name):
         """
         Sets the last_name of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger last name
 
         :param last_name: The last_name of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :type: str
@@ -191,6 +201,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def id(self):
         """
         Gets the id of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger ID
 
         :return: The id of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :rtype: str
@@ -201,6 +212,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def id(self, id):
         """
         Sets the id of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger ID
 
         :param id: The id of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :type: str
@@ -212,6 +224,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def email(self):
         """
         Gets the email of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger email
 
         :return: The email of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :rtype: str
@@ -222,6 +235,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def email(self, email):
         """
         Sets the email of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger email
 
         :param email: The email of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :type: str
@@ -233,6 +247,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def nationality(self):
         """
         Gets the nationality of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger nationality
 
         :return: The nationality of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :rtype: str
@@ -243,6 +258,7 @@ class Upv1capturecontextsDataOrderInformationLineItemsPassenger(object):
     def nationality(self, nationality):
         """
         Sets the nationality of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
+        Passenger nationality
 
         :param nationality: The nationality of this Upv1capturecontextsDataOrderInformationLineItemsPassenger.
         :type: str

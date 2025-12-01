@@ -3,13 +3,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**registration_information** | [**Boardingv1registrationsRegistrationInformation**](Boardingv1registrationsRegistrationInformation.md) |  | [optional] 
-**integration_information** | [**InlineResponse2003IntegrationInformation**](InlineResponse2003IntegrationInformation.md) |  | [optional] 
-**organization_information** | [**Boardingv1registrationsOrganizationInformation**](Boardingv1registrationsOrganizationInformation.md) |  | [optional] 
-**product_information** | [**Boardingv1registrationsProductInformation**](Boardingv1registrationsProductInformation.md) |  | [optional] 
-**product_information_setups** | [**list[InlineResponse2013ProductInformationSetups]**](InlineResponse2013ProductInformationSetups.md) |  | [optional] 
-**document_information** | [**Boardingv1registrationsDocumentInformation**](Boardingv1registrationsDocumentInformation.md) |  | [optional] 
-**details** | **dict(str, list[object])** |  | [optional] 
+**id** | **int** |  | [optional] 
+**field_type** | **str** |  | [optional] 
+**label** | **str** |  | [optional] 
+**customer_visible** | **bool** |  | [optional] 
+**text_min_length** | **int** |  | [optional] 
+**text_max_length** | **int** |  | [optional] 
+**possible_values** | **str** |  | [optional] 
+**text_default_value** | **str** |  | [optional] 
+**merchant_id** | **str** |  | [optional] 
+**reference_type** | **str** |  | [optional] 
+**read_only** | **bool** |  | [optional] 
+**merchant_defined_data_index** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

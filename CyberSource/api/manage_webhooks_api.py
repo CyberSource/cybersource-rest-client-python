@@ -304,7 +304,7 @@ class ManageWebhooksApi(object):
         :param str organization_id: The Organization Identifier. (required)
         :param str product_id: The Product Identifier.
         :param str event_type: The Event Type.
-        :return: list[InlineResponse2005]
+        :return: list[InlineResponse2006]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -335,7 +335,7 @@ class ManageWebhooksApi(object):
         :param str organization_id: The Organization Identifier. (required)
         :param str product_id: The Product Identifier.
         :param str event_type: The Event Type.
-        :return: list[InlineResponse2005]
+        :return: list[InlineResponse2006]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -407,7 +407,7 @@ class ManageWebhooksApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='list[InlineResponse2005]',
+                                        response_type='list[InlineResponse2006]',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -552,7 +552,7 @@ class ManageWebhooksApi(object):
             for asynchronous request. (optional)
         :param str webhook_id: The Webhook Identifier. (required)
         :param UpdateWebhook update_webhook: The webhook payload or changes to apply.
-        :return: InlineResponse2006
+        :return: InlineResponse2007
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -582,7 +582,7 @@ class ManageWebhooksApi(object):
             for asynchronous request. (optional)
         :param str webhook_id: The Webhook Identifier. (required)
         :param UpdateWebhook update_webhook: The webhook payload or changes to apply.
-        :return: InlineResponse2006
+        :return: InlineResponse2007
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -650,7 +650,7 @@ class ManageWebhooksApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2006',
+                                        response_type='InlineResponse2007',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
