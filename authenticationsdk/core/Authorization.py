@@ -13,7 +13,7 @@ class Authorization:
         self.logger = None
 
     # This method generates and return a encrypted signature based on the Authentication type
-    def get_token(self, mconfig, date_time, request_type_method, request_target=None, request_json_path_data=None, logger=None):
+    def get_token(self, mconfig, date_time, request_type_method, request_target=None, request_json_path_data=None, logger=None, isResponseMLEforApi=False):
         authentication_type = mconfig.authentication_type
         self.validate_request_type_method(request_type_method)
         # Initializing the logger object
@@ -45,7 +45,7 @@ class Authorization:
             # JWT-Call
             elif authentication_type.upper() == GlobalLabelParameters.JWT.upper():
                 jwt_sig_token = JwtSignatureToken()
-                jwt_sig_token.jwt_signature_token(mconfig, date_time, request_type_method, request_json_path_data)
+                jwt_sig_token.jwt_signature_token(mconfig, date_time, request_type_method, request_json_path_data, isResponseMLEforApi)
                 sig_token_jwt = jwt_sig_token.get_token()
 
                 # Logging the parameters Content-Type,Merchant id,Date ,Host to the log file

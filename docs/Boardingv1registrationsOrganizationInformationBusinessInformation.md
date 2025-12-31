@@ -4,6 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | 
+**locale** | **str** |  | [optional] 
+**localized_names** | [**Boardingv1registrationsOrganizationInformationBusinessInformationLocalizedNames**](Boardingv1registrationsOrganizationInformationBusinessInformationLocalizedNames.md) |  | [optional] 
 **doing_business_as** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **start_date** | **date** | &#x60;Format: YYYY-MM-DD&#x60; Example 2016-08-11 equals August 11, 2016  | [optional] 

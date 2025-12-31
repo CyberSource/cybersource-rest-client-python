@@ -34,7 +34,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation(object):
         'passenger_name': 'str',
         'connected_ticket_number': 'str',
         'credit_reason_indicator': 'str',
-        'service': 'list[Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService]'
+        'service': 'list[Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService]',
+        'fee_description': 'str'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation(object):
         'passenger_name': 'passengerName',
         'connected_ticket_number': 'connectedTicketNumber',
         'credit_reason_indicator': 'creditReasonIndicator',
-        'service': 'service'
+        'service': 'service',
+        'fee_description': 'feeDescription'
     }
 
-    def __init__(self, ticket_number=None, passenger_name=None, connected_ticket_number=None, credit_reason_indicator=None, service=None):
+    def __init__(self, ticket_number=None, passenger_name=None, connected_ticket_number=None, credit_reason_indicator=None, service=None, fee_description=None):
         """
         Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation(object):
         self._connected_ticket_number = None
         self._credit_reason_indicator = None
         self._service = None
+        self._fee_description = None
 
         if ticket_number is not None:
           self.ticket_number = ticket_number
@@ -66,6 +69,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation(object):
           self.credit_reason_indicator = credit_reason_indicator
         if service is not None:
           self.service = service
+        if fee_description is not None:
+          self.fee_description = fee_description
 
     @property
     def ticket_number(self):
@@ -179,6 +184,29 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation(object):
         """
 
         self._service = service
+
+    @property
+    def fee_description(self):
+        """
+        Gets the fee_description of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation.
+        This field contains the fee description for the airline ancillary service provided. Format: Alphanumeric, 100 characters maximum. Optional field for ancillary services. 
+
+        :return: The fee_description of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation.
+        :rtype: str
+        """
+        return self._fee_description
+
+    @fee_description.setter
+    def fee_description(self, fee_description):
+        """
+        Sets the fee_description of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation.
+        This field contains the fee description for the airline ancillary service provided. Format: Alphanumeric, 100 characters maximum. Optional field for ancillary services. 
+
+        :param fee_description: The fee_description of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation.
+        :type: str
+        """
+
+        self._fee_description = fee_description
 
     def to_dict(self):
         """

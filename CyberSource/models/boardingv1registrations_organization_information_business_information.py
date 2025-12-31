@@ -31,6 +31,8 @@ class Boardingv1registrationsOrganizationInformationBusinessInformation(object):
     """
     swagger_types = {
         'name': 'str',
+        'locale': 'str',
+        'localized_names': 'Boardingv1registrationsOrganizationInformationBusinessInformationLocalizedNames',
         'doing_business_as': 'str',
         'description': 'str',
         'start_date': 'date',
@@ -48,6 +50,8 @@ class Boardingv1registrationsOrganizationInformationBusinessInformation(object):
 
     attribute_map = {
         'name': 'name',
+        'locale': 'locale',
+        'localized_names': 'localizedNames',
         'doing_business_as': 'doingBusinessAs',
         'description': 'description',
         'start_date': 'startDate',
@@ -63,12 +67,14 @@ class Boardingv1registrationsOrganizationInformationBusinessInformation(object):
         'merchant_category_code': 'merchantCategoryCode'
     }
 
-    def __init__(self, name=None, doing_business_as=None, description=None, start_date=None, address=None, time_zone=None, website_url=None, type=None, tax_id=None, phone_number=None, business_contact=None, technical_contact=None, emergency_contact=None, merchant_category_code=None):
+    def __init__(self, name=None, locale=None, localized_names=None, doing_business_as=None, description=None, start_date=None, address=None, time_zone=None, website_url=None, type=None, tax_id=None, phone_number=None, business_contact=None, technical_contact=None, emergency_contact=None, merchant_category_code=None):
         """
         Boardingv1registrationsOrganizationInformationBusinessInformation - a model defined in Swagger
         """
 
         self._name = None
+        self._locale = None
+        self._localized_names = None
         self._doing_business_as = None
         self._description = None
         self._start_date = None
@@ -84,6 +90,10 @@ class Boardingv1registrationsOrganizationInformationBusinessInformation(object):
         self._merchant_category_code = None
 
         self.name = name
+        if locale is not None:
+          self.locale = locale
+        if localized_names is not None:
+          self.localized_names = localized_names
         if doing_business_as is not None:
           self.doing_business_as = doing_business_as
         if description is not None:
@@ -131,6 +141,48 @@ class Boardingv1registrationsOrganizationInformationBusinessInformation(object):
         """
 
         self._name = name
+
+    @property
+    def locale(self):
+        """
+        Gets the locale of this Boardingv1registrationsOrganizationInformationBusinessInformation.
+
+        :return: The locale of this Boardingv1registrationsOrganizationInformationBusinessInformation.
+        :rtype: str
+        """
+        return self._locale
+
+    @locale.setter
+    def locale(self, locale):
+        """
+        Sets the locale of this Boardingv1registrationsOrganizationInformationBusinessInformation.
+
+        :param locale: The locale of this Boardingv1registrationsOrganizationInformationBusinessInformation.
+        :type: str
+        """
+
+        self._locale = locale
+
+    @property
+    def localized_names(self):
+        """
+        Gets the localized_names of this Boardingv1registrationsOrganizationInformationBusinessInformation.
+
+        :return: The localized_names of this Boardingv1registrationsOrganizationInformationBusinessInformation.
+        :rtype: Boardingv1registrationsOrganizationInformationBusinessInformationLocalizedNames
+        """
+        return self._localized_names
+
+    @localized_names.setter
+    def localized_names(self, localized_names):
+        """
+        Sets the localized_names of this Boardingv1registrationsOrganizationInformationBusinessInformation.
+
+        :param localized_names: The localized_names of this Boardingv1registrationsOrganizationInformationBusinessInformation.
+        :type: Boardingv1registrationsOrganizationInformationBusinessInformationLocalizedNames
+        """
+
+        self._localized_names = localized_names
 
     @property
     def doing_business_as(self):

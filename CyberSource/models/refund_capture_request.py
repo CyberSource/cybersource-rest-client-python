@@ -40,7 +40,7 @@ class RefundCaptureRequest(object):
         'aggregator_information': 'Ptsv2paymentsidcapturesAggregatorInformation',
         'point_of_sale_information': 'Ptsv2paymentsidrefundsPointOfSaleInformation',
         'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
-        'travel_information': 'Ptsv2paymentsTravelInformation',
+        'travel_information': 'Ptsv2paymentsidrefundsTravelInformation',
         'promotion_information': 'Ptsv2paymentsPromotionInformation',
         'processor_information': 'Ptsv2reversalsProcessorInformation'
     }
@@ -325,7 +325,7 @@ class RefundCaptureRequest(object):
         Gets the travel_information of this RefundCaptureRequest.
 
         :return: The travel_information of this RefundCaptureRequest.
-        :rtype: Ptsv2paymentsTravelInformation
+        :rtype: Ptsv2paymentsidrefundsTravelInformation
         """
         return self._travel_information
 
@@ -335,7 +335,7 @@ class RefundCaptureRequest(object):
         Sets the travel_information of this RefundCaptureRequest.
 
         :param travel_information: The travel_information of this RefundCaptureRequest.
-        :type: Ptsv2paymentsTravelInformation
+        :type: Ptsv2paymentsidrefundsTravelInformation
         """
 
         self._travel_information = travel_information
