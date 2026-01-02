@@ -152,6 +152,8 @@ class TokenizedCardApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "delete_tokenized_card,delete_tokenized_card_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "delete_tokenized_card,delete_tokenized_card_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -168,7 +170,8 @@ class TokenizedCardApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def get_tokenized_card(self, tokenized_card_id, **kwargs):
         """
@@ -277,6 +280,8 @@ class TokenizedCardApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_tokenized_card,get_tokenized_card_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_tokenized_card,get_tokenized_card_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -293,7 +298,8 @@ class TokenizedCardApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def post_issuer_life_cycle_simulation(self, profile_id, tokenized_card_id, post_issuer_life_cycle_simulation_request, **kwargs):
         """
@@ -411,6 +417,8 @@ class TokenizedCardApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_issuer_life_cycle_simulation,post_issuer_life_cycle_simulation_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_issuer_life_cycle_simulation,post_issuer_life_cycle_simulation_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -427,7 +435,8 @@ class TokenizedCardApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
 
     def post_tokenized_card(self, tokenizedcard_request, **kwargs):
         """
@@ -532,6 +541,8 @@ class TokenizedCardApi(object):
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_tokenized_card,post_tokenized_card_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_tokenized_card,post_tokenized_card_with_http_info")
+
         # Authentication setting
         auth_settings = []
 
@@ -548,4 +559,5 @@ class TokenizedCardApi(object):
                                         _return_http_data_only=params.get('_return_http_data_only'),
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)

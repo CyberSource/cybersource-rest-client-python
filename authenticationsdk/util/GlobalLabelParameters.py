@@ -43,8 +43,8 @@ class GlobalLabelParameters:
     KEY_ID = "keyid=\""
     LOG_FILE_NAME_DEFAULT = "cybs"
     OLD_RUN_ENVIRONMENT_CONSTANTS = ["CYBERSOURCE.ENVIRONMENT.SANDBOX", "CYBERSOURCE.ENVIRONMENT.PRODUCTION", "CYBERSOURCE.IN.ENVIRONMENT.SANDBOX", "CYBERSOURCE.IN.ENVIRONMENT.PRODUCTION"]
-    HIDE_MERCHANT_CONFIG_PROPS = "merchantid,merchant_secretkey,merchant_keyid,key_alias,key_password"
     PROXY_PREFIX = "https"
+    HIDE_MERCHANT_CONFIG_PROPS = "merchantid,merchant_secretkey,merchant_keyid,key_alias,key_password,responseMlePrivateKeyFilePath,responseMlePrivateKeyFilePassword,responseMlePrivateKey"
     FILE_NOT_FOUND = "File not found. Check path/filename entered. Entered path/filename : "
     SYSTEM_ERROR = "System error encountered while accessing file : "
     AUTH_ERROR = "Check Authentication Type (HTTP_Signature/JWT) in cybs.json."
@@ -97,6 +97,8 @@ class GlobalLabelParameters:
     CERTIFICATE_EXPIRY_DATE_WARNING_DAYS = 90
     MESSAGE_BEFORE_MLE_REQUEST = "Request before MLE: "
     MESSAGE_AFTER_MLE_REQUEST = "Request after MLE: "
+    LOG_NETWORK_RESPONSE_BEFORE_MLE_DECRYPTION = "LOG_NETWORK_RESPONSE_BEFORE_MLE_DECRYPTION: "
+    LOG_NETWORK_RESPONSE_AFTER_MLE_DECRYPTION = "LOG_NETWORK_RESPONSE_AFTER_MLE_DECRYPTION: "
     MLE_CACHE_IDENTIFIER_FOR_CONFIG_CERT = "mleCertFromMerchantConfig"
     MLE_CACHE_IDENTIFIER_FOR_P12_CERT = "mleCertFromP12"
     PUBLIC_KEY_CACHE_IDENTIFIER = "FlexV2PublicKeys"
@@ -104,3 +106,5 @@ class GlobalLabelParameters:
     DEFAULT_MAX_POOL_SIZE = 10
     DEFAULT_MAX_KEEP_ALIVE_DELAY = 300 # in seconds
     DEFAULT_MAX_KEEP_ALIVE_IDLE_WINDOW = 60 # in seconds
+    MLE_CACHE_KEY_IDENTIFIER_FOR_RESPONSE_PRIVATE_KEY = "response_mle_private_key"
+    RESPONSE_MLE_P12_PFX_CACHE_IDENTIFIER = "_responseMleP12Pfx"

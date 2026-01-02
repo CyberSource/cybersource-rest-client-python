@@ -31,26 +31,36 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService(ob
     """
     swagger_types = {
         'category_code': 'str',
-        'sub_category_code': 'str'
+        'sub_category_code': 'str',
+        'fee_amount': 'str',
+        'fee_code': 'str'
     }
 
     attribute_map = {
         'category_code': 'categoryCode',
-        'sub_category_code': 'subCategoryCode'
+        'sub_category_code': 'subCategoryCode',
+        'fee_amount': 'feeAmount',
+        'fee_code': 'feeCode'
     }
 
-    def __init__(self, category_code=None, sub_category_code=None):
+    def __init__(self, category_code=None, sub_category_code=None, fee_amount=None, fee_code=None):
         """
         Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService - a model defined in Swagger
         """
 
         self._category_code = None
         self._sub_category_code = None
+        self._fee_amount = None
+        self._fee_code = None
 
         if category_code is not None:
           self.category_code = category_code
         if sub_category_code is not None:
           self.sub_category_code = sub_category_code
+        if fee_amount is not None:
+          self.fee_amount = fee_amount
+        if fee_code is not None:
+          self.fee_code = fee_code
 
     @property
     def category_code(self):
@@ -97,6 +107,52 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService(ob
         """
 
         self._sub_category_code = sub_category_code
+
+    @property
+    def fee_amount(self):
+        """
+        Gets the fee_amount of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
+        This field contains the fee amount. This value cannot be negative.  You can include a decimal point (.), but no other special characters. Format: String, 15 characters maximum. Optional field for ancillary services. 
+
+        :return: The fee_amount of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
+        :rtype: str
+        """
+        return self._fee_amount
+
+    @fee_amount.setter
+    def fee_amount(self, fee_amount):
+        """
+        Sets the fee_amount of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
+        This field contains the fee amount. This value cannot be negative.  You can include a decimal point (.), but no other special characters. Format: String, 15 characters maximum. Optional field for ancillary services. 
+
+        :param fee_amount: The fee_amount of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
+        :type: str
+        """
+
+        self._fee_amount = fee_amount
+
+    @property
+    def fee_code(self):
+        """
+        Gets the fee_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
+        This field contains the ancillary fee code. Format: Alphanumeric, 4 characters maximum. Optional field for ancillary services. 
+
+        :return: The fee_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
+        :rtype: str
+        """
+        return self._fee_code
+
+    @fee_code.setter
+    def fee_code(self, fee_code):
+        """
+        Sets the fee_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
+        This field contains the ancillary fee code. Format: Alphanumeric, 4 characters maximum. Optional field for ancillary services. 
+
+        :param fee_code: The fee_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
+        :type: str
+        """
+
+        self._fee_code = fee_code
 
     def to_dict(self):
         """

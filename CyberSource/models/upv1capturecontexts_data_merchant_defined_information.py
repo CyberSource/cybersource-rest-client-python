@@ -56,7 +56,7 @@ class Upv1capturecontextsDataMerchantDefinedInformation(object):
     def key(self):
         """
         Gets the key of this Upv1capturecontextsDataMerchantDefinedInformation.
-        The key or identifier for the merchant-defined data field
+        The key or identifier for the merchant-defined data field.  Valid values are 1 to 100.
 
         :return: The key of this Upv1capturecontextsDataMerchantDefinedInformation.
         :rtype: str
@@ -67,7 +67,7 @@ class Upv1capturecontextsDataMerchantDefinedInformation(object):
     def key(self, key):
         """
         Sets the key of this Upv1capturecontextsDataMerchantDefinedInformation.
-        The key or identifier for the merchant-defined data field
+        The key or identifier for the merchant-defined data field.  Valid values are 1 to 100.
 
         :param key: The key of this Upv1capturecontextsDataMerchantDefinedInformation.
         :type: str
@@ -79,7 +79,7 @@ class Upv1capturecontextsDataMerchantDefinedInformation(object):
     def value(self):
         """
         Gets the value of this Upv1capturecontextsDataMerchantDefinedInformation.
-        The value associated with the merchant-defined data field
+        The value you assign for your merchant-defined data field.
 
         :return: The value of this Upv1capturecontextsDataMerchantDefinedInformation.
         :rtype: str
@@ -90,7 +90,7 @@ class Upv1capturecontextsDataMerchantDefinedInformation(object):
     def value(self, value):
         """
         Sets the value of this Upv1capturecontextsDataMerchantDefinedInformation.
-        The value associated with the merchant-defined data field
+        The value you assign for your merchant-defined data field.
 
         :param value: The value of this Upv1capturecontextsDataMerchantDefinedInformation.
         :type: str

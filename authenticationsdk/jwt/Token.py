@@ -2,6 +2,8 @@ import jwt
 from authenticationsdk.payloaddigest.PayLoadDigest import *
 from authenticationsdk.core.TokenGeneration import *
 from authenticationsdk.util.Cache import *
+from authenticationsdk.util.MLEUtility import MLEUtility
+import CyberSource.logging.log_factory as LogFactory
 
 
 class JwtSignatureToken(TokenGeneration):
@@ -11,12 +13,14 @@ class JwtSignatureToken(TokenGeneration):
         self.jwt_method = None
         self.date = None
         self.request_json_path_data = None
+        self.isResponseMLEforApi =False
 
-    def jwt_signature_token(self, mconfig, date_time, request_type_method, request_json_path_data=None):
+    def jwt_signature_token(self, mconfig, date_time, request_type_method, request_json_path_data=None, isResponseMLEforApi=False):
         self.merchant_config = mconfig
         self.jwt_method = request_type_method
         self.date = date_time
         self.request_json_path_data = request_json_path_data
+        self.isResponseMLEforApi = isResponseMLEforApi
 
     def get_token(self):
         return self.set_token()
@@ -36,6 +40,12 @@ class JwtSignatureToken(TokenGeneration):
     def token_for_get_and_delete(self):
         # Setting the jwt body for JWT-get
         jwt_body = {GlobalLabelParameters.JWT_TIME: self.date}
+        
+        if self.isResponseMLEforApi:
+            logger = LogFactory.setup_logger(__name__, self.merchant_config.log_config)
+            response_mle_kid = MLEUtility.validate_and_auto_extract_response_mle_kid(self.merchant_config, logger)
+            jwt_body['v-c-response-mle-kid'] = response_mle_kid
+
         # reading the p12 file from cache memory
         cache_obj = FileCache()
         cache_memory = cache_obj.fetch_cached_p12_certificate(self.merchant_config, self.merchant_config.p12KeyFilePath, self.merchant_config.key_password)
@@ -61,6 +71,12 @@ class JwtSignatureToken(TokenGeneration):
         # Setting the jwt body for JWT-post
 
         jwt_body = {GlobalLabelParameters.JWT_DIGEST: digest.decode("utf-8"), GlobalLabelParameters.JWT_ALGORITHM: "SHA-256", GlobalLabelParameters.JWT_TIME: self.date}
+        
+        if self.isResponseMLEforApi:
+            logger = LogFactory.setup_logger(__name__, self.merchant_config.log_config)
+            response_mle_kid = MLEUtility.validate_and_auto_extract_response_mle_kid(self.merchant_config, logger)
+            jwt_body['v-c-response-mle-kid'] = response_mle_kid
+        
         # reading the p12 file from cache memory
         cache_obj = FileCache()
         cache_memory = cache_obj.fetch_cached_p12_certificate(self.merchant_config, self.merchant_config.p12KeyFilePath, self.merchant_config.key_password)

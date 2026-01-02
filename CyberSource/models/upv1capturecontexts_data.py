@@ -37,7 +37,7 @@ class Upv1capturecontextsData(object):
         'merchant_information': 'Upv1capturecontextsDataMerchantInformation',
         'processing_information': 'Upv1capturecontextsDataProcessingInformation',
         'recipient_information': 'Upv1capturecontextsDataRecipientInformation',
-        'merchant_defined_information': 'Upv1capturecontextsDataMerchantDefinedInformation',
+        'merchant_defined_information': 'list[Upv1capturecontextsDataMerchantDefinedInformation]',
         'device_information': 'Upv1capturecontextsDataDeviceInformation',
         'payment_information': 'Upv1capturecontextsDataPaymentInformation'
     }
@@ -245,7 +245,7 @@ class Upv1capturecontextsData(object):
         Gets the merchant_defined_information of this Upv1capturecontextsData.
 
         :return: The merchant_defined_information of this Upv1capturecontextsData.
-        :rtype: Upv1capturecontextsDataMerchantDefinedInformation
+        :rtype: list[Upv1capturecontextsDataMerchantDefinedInformation]
         """
         return self._merchant_defined_information
 
@@ -255,7 +255,7 @@ class Upv1capturecontextsData(object):
         Sets the merchant_defined_information of this Upv1capturecontextsData.
 
         :param merchant_defined_information: The merchant_defined_information of this Upv1capturecontextsData.
-        :type: Upv1capturecontextsDataMerchantDefinedInformation
+        :type: list[Upv1capturecontextsDataMerchantDefinedInformation]
         """
 
         self._merchant_defined_information = merchant_defined_information

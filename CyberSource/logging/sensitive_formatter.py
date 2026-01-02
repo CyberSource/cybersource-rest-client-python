@@ -20,7 +20,8 @@ class SensitiveFormatter(logging.Formatter):
         "token",
         "signature",
         "keyid",
-        "encryptedRequest"
+        "encryptedRequest",
+        "encryptedResponse"
     ]
 
     """Formatter that removes sensitive information in urls."""
@@ -34,7 +35,7 @@ class SensitiveFormatter(logging.Formatter):
 
     @staticmethod
     def _filter(s):
-        if isinstance(s, str) and (s.startswith(GlobalLabelParameters.MESSAGE_BEFORE_MLE_REQUEST) or s.startswith(GlobalLabelParameters.MESSAGE_AFTER_MLE_REQUEST)):
+        if isinstance(s, str) and (s.startswith(GlobalLabelParameters.MESSAGE_BEFORE_MLE_REQUEST) or s.startswith(GlobalLabelParameters.MESSAGE_AFTER_MLE_REQUEST) or s.startswith(GlobalLabelParameters.LOG_NETWORK_RESPONSE_BEFORE_MLE_DECRYPTION) or s.startswith(GlobalLabelParameters.LOG_NETWORK_RESPONSE_AFTER_MLE_DECRYPTION)):
             splits = s.split(": ", 1)
             new_log_message = splits[0] + ": " + SensitiveFormatter._filter(splits[1])
             return new_log_message

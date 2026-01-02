@@ -18,7 +18,9 @@ from .device_search_api import DeviceSearchApi
 from .download_dtd_api import DownloadDTDApi
 from .download_xsd_api import DownloadXSDApi
 from .emv_tag_details_api import EMVTagDetailsApi
+from .enrollment_api import EnrollmentApi
 from .flex_api_api import FlexAPIApi
+from .instructions_api import InstructionsApi
 from .instrument_identifier_api import InstrumentIdentifierApi
 from .interchange_clearing_level_details_api import InterchangeClearingLevelDetailsApi
 from .invoice_settings_api import InvoiceSettingsApi
