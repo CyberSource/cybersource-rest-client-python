@@ -52,6 +52,7 @@ class PtsV2PaymentsPost201Response(object):
         'risk_information': 'PtsV2PaymentsPost201ResponseRiskInformation',
         'consumer_authentication_information': 'PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation',
         'merchant_information': 'PtsV2PaymentsPost201ResponseMerchantInformation',
+        'clearing_information': 'PtsV2PaymentsPost201ResponseClearingInformation',
         'embedded_actions': 'PtsV2PaymentsPost201ResponseEmbeddedActions',
         'watchlist_screening_information': 'PtsV2PaymentsPost201ResponseWatchlistScreeningInformation'
     }
@@ -79,11 +80,12 @@ class PtsV2PaymentsPost201Response(object):
         'risk_information': 'riskInformation',
         'consumer_authentication_information': 'consumerAuthenticationInformation',
         'merchant_information': 'merchantInformation',
+        'clearing_information': 'clearingInformation',
         'embedded_actions': 'embeddedActions',
         'watchlist_screening_information': 'watchlistScreeningInformation'
     }
 
-    def __init__(self, links=None, id=None, message=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, payment_insights_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, buyer_information=None, risk_information=None, consumer_authentication_information=None, merchant_information=None, embedded_actions=None, watchlist_screening_information=None):
+    def __init__(self, links=None, id=None, message=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, payment_insights_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, buyer_information=None, risk_information=None, consumer_authentication_information=None, merchant_information=None, clearing_information=None, embedded_actions=None, watchlist_screening_information=None):
         """
         PtsV2PaymentsPost201Response - a model defined in Swagger
         """
@@ -110,6 +112,7 @@ class PtsV2PaymentsPost201Response(object):
         self._risk_information = None
         self._consumer_authentication_information = None
         self._merchant_information = None
+        self._clearing_information = None
         self._embedded_actions = None
         self._watchlist_screening_information = None
 
@@ -157,6 +160,8 @@ class PtsV2PaymentsPost201Response(object):
           self.consumer_authentication_information = consumer_authentication_information
         if merchant_information is not None:
           self.merchant_information = merchant_information
+        if clearing_information is not None:
+          self.clearing_information = clearing_information
         if embedded_actions is not None:
           self.embedded_actions = embedded_actions
         if watchlist_screening_information is not None:
@@ -633,6 +638,27 @@ class PtsV2PaymentsPost201Response(object):
         """
 
         self._merchant_information = merchant_information
+
+    @property
+    def clearing_information(self):
+        """
+        Gets the clearing_information of this PtsV2PaymentsPost201Response.
+
+        :return: The clearing_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseClearingInformation
+        """
+        return self._clearing_information
+
+    @clearing_information.setter
+    def clearing_information(self, clearing_information):
+        """
+        Sets the clearing_information of this PtsV2PaymentsPost201Response.
+
+        :param clearing_information: The clearing_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseClearingInformation
+        """
+
+        self._clearing_information = clearing_information
 
     @property
     def embedded_actions(self):

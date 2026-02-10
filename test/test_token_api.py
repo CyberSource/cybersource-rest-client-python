@@ -42,7 +42,15 @@ class TestTokenApi(unittest.TestCase):
         """
         Test case for post_token_payment_credentials
 
-        Generate Payment Credentials for a TMS Token
+        Generate Payment Credentials v2
+        """
+        pass
+
+    def test_post_token_payment_credentials_v3(self):
+        """
+        Test case for post_token_payment_credentials_v3
+
+        Generate Payment Credentials Latest Version v3
         """
         pass
 

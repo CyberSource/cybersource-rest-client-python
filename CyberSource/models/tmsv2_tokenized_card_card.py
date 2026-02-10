@@ -96,7 +96,7 @@ class Tmsv2TokenizedCardCard(object):
     def number(self):
         """
         Gets the number of this Tmsv2TokenizedCardCard.
-        The customer's payment card number, also known as the Primary Account Number (PAN). 
+        The latest customer's payment card number associated to the network token. 
 
         :return: The number of this Tmsv2TokenizedCardCard.
         :rtype: str
@@ -107,7 +107,7 @@ class Tmsv2TokenizedCardCard(object):
     def number(self, number):
         """
         Sets the number of this Tmsv2TokenizedCardCard.
-        The customer's payment card number, also known as the Primary Account Number (PAN). 
+        The latest customer's payment card number associated to the network token. 
 
         :param number: The number of this Tmsv2TokenizedCardCard.
         :type: str

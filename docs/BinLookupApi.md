@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_account_info**
-> InlineResponse2012 get_account_info(create_bin_lookup_request)
+> InlineResponse2013 get_account_info(create_bin_lookup_request)
 
 BIN Lookup API
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2012**](InlineResponse2012.md)
+[**InlineResponse2013**](InlineResponse2013.md)
 
 ### Authorization
 

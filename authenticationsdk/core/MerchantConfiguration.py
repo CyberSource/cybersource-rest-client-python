@@ -51,7 +51,8 @@ class MerchantConfiguration:
         self.solution_id = None
         self.log_config = None
         self.__jwePEMFileDirectory = None
-        self.useMLEGlobally = None
+        # Older flag "useMLEGlobally" is deprecated and will be used as alias/another name for enableRequestMLEForOptionalApisGlobally.
+        # self.useMLEGlobally = None
         self.enableRequestMLEForOptionalApisGlobally = None
         self.disableRequestMLEForMandatoryApisGlobally = None
         self.mapToControlMLEonAPI = None
@@ -219,20 +220,15 @@ class MerchantConfiguration:
     def get_jwePEMFileDirectory(self):
         return self.__jwePEMFileDirectory
 
-    def set_useMLEGlobally(self, value):
-        if not (value.get('useMLEGlobally') is None):
-            self.useMLEGlobally = value['useMLEGlobally']
-
-    def get_useMLEGlobally(self):
-        return self.useMLEGlobally
-    
     def set_enableRequestMLEForOptionalApisGlobally(self, value):
         enable_mle = value.get('enableRequestMLEForOptionalApisGlobally')
         use_mle = value.get('useMLEGlobally')
 
+        # Validate that both flags have the same value if both are set
         if enable_mle is not None and use_mle is not None and enable_mle != use_mle:
             raise ValueError("useMLEGlobally and enableRequestMLEForOptionalApisGlobally must have the same value.")
 
+        # Set the value - prefer enableRequestMLEForOptionalApisGlobally, fall back to useMLEGlobally
         self.enableRequestMLEForOptionalApisGlobally = (
             enable_mle if enable_mle is not None else (use_mle if use_mle is not None else False)
         )
@@ -421,7 +417,6 @@ class MerchantConfiguration:
         self.set_refresh_token(val)
         self.set_log_configuration(val)
         self.set_jwePEMFileDirectory(val)
-        self.set_useMLEGlobally(val)
         self.set_enableRequestMLEForOptionalApisGlobally(val)
         self.set_disableRequestMLEForMandatoryApisGlobally(val)
         self.set_mapToControlMLEonAPI(val)
@@ -502,6 +497,7 @@ class MerchantConfiguration:
                                                                                        GlobalLabelParameters.MERCHANT_SECRET_KEY_REQ,
                                                                                        self.log_config)
 
+
             elif self.authentication_type.lower() == GlobalLabelParameters.JWT.lower():
                 if self.merchant_id is None or self.merchant_id == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
@@ -566,12 +562,6 @@ class MerchantConfiguration:
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.AUTH_ERROR,
                                                                                self.log_config)
-            
-        use_mle = self.useMLEGlobally
-        enable_mle = self.enableRequestMLEForOptionalApisGlobally
-
-        if use_mle is not None and enable_mle is not None and use_mle != enable_mle:
-            raise ValueError("useMLEGlobally and enableRequestMLEForOptionalApisGlobally must have the same value.")
         
         # useMLEGlobally check for auth Type
         if self.enableRequestMLEForOptionalApisGlobally is True or self.mapToControlMLEonAPI is not None:
@@ -588,7 +578,10 @@ class MerchantConfiguration:
                                                                                self.log_config)
 
         self.validate_MLE_configuration()
-        self.p12KeyFilePath = os.path.join(self.key_file_path, self.key_file_name) + GlobalLabelParameters.P12_PREFIX
+        
+        # Construct P12 key file path only if both components are available
+        if self.key_file_path and self.key_file_name:
+            self.p12KeyFilePath = os.path.join(self.key_file_path, self.key_file_name) + GlobalLabelParameters.P12_PREFIX
 
         log_items = GlobalLabelParameters.HIDE_MERCHANT_CONFIG_PROPS
         # To prevent pickling error from deep copying

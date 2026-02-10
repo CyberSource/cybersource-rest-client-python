@@ -44,7 +44,8 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         'phone_number': 'bool',
         'email': 'bool',
         'enable_merchant_email_notifications': 'bool',
-        'custom_labels': 'list[InvoicingV2InvoicesPost201ResponseInvoiceInformationCustomLabels]'
+        'custom_labels': 'list[InvoicingV2InvoicesPost201ResponseInvoiceInformationCustomLabels]',
+        'custom_redirect_urls': 'InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationCustomRedirectUrls'
     }
 
     attribute_map = {
@@ -62,10 +63,11 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         'phone_number': 'phoneNumber',
         'email': 'email',
         'enable_merchant_email_notifications': 'enableMerchantEmailNotifications',
-        'custom_labels': 'customLabels'
+        'custom_labels': 'customLabels',
+        'custom_redirect_urls': 'customRedirectUrls'
     }
 
-    def __init__(self, merchant_logo=None, merchant_display_name=None, custom_email_message=None, enable_reminders=None, header_style=None, delivery_language=None, default_currency_code=None, payer_authentication_in_invoicing=None, show_vat_number=False, vat_registration_number=None, ship_to=False, phone_number=False, email=False, enable_merchant_email_notifications=False, custom_labels=None):
+    def __init__(self, merchant_logo=None, merchant_display_name=None, custom_email_message=None, enable_reminders=None, header_style=None, delivery_language=None, default_currency_code=None, payer_authentication_in_invoicing=None, show_vat_number=False, vat_registration_number=None, ship_to=False, phone_number=False, email=False, enable_merchant_email_notifications=False, custom_labels=None, custom_redirect_urls=None):
         """
         Invoicingv2invoiceSettingsInvoiceSettingsInformation - a model defined in Swagger
         """
@@ -85,6 +87,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         self._email = None
         self._enable_merchant_email_notifications = None
         self._custom_labels = None
+        self._custom_redirect_urls = None
 
         if merchant_logo is not None:
           self.merchant_logo = merchant_logo
@@ -116,6 +119,8 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
           self.enable_merchant_email_notifications = enable_merchant_email_notifications
         if custom_labels is not None:
           self.custom_labels = custom_labels
+        if custom_redirect_urls is not None:
+          self.custom_redirect_urls = custom_redirect_urls
 
     @property
     def merchant_logo(self):
@@ -459,6 +464,27 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         """
 
         self._custom_labels = custom_labels
+
+    @property
+    def custom_redirect_urls(self):
+        """
+        Gets the custom_redirect_urls of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
+
+        :return: The custom_redirect_urls of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
+        :rtype: InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationCustomRedirectUrls
+        """
+        return self._custom_redirect_urls
+
+    @custom_redirect_urls.setter
+    def custom_redirect_urls(self, custom_redirect_urls):
+        """
+        Sets the custom_redirect_urls of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
+
+        :param custom_redirect_urls: The custom_redirect_urls of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
+        :type: InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationCustomRedirectUrls
+        """
+
+        self._custom_redirect_urls = custom_redirect_urls
 
     def to_dict(self):
         """

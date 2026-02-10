@@ -161,7 +161,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_subscriptions**
-> GetAllSubscriptionsResponse get_all_subscriptions(offset=offset, limit=limit, code=code, status=status)
+> GetAllSubscriptionsResponse get_all_subscriptions(offset=offset, limit=limit, code=code, status=status, customer_id=customer_id)
 
 Get a List of Subscriptions
 
@@ -181,10 +181,11 @@ offset = 56 # int | Page offset number. (optional)
 limit = 56 # int | Number of items to be returned. Default - `20`, Max - `100`  (optional)
 code = 'code_example' # str | Filter by Subscription Code (optional)
 status = 'status_example' # str | Filter by Subscription Status (optional)
+customer_id = 'customer_id_example' # str | Filter by Customer Id (optional)
 
 try: 
     # Get a List of Subscriptions
-    api_response = api_instance.get_all_subscriptions(offset=offset, limit=limit, code=code, status=status)
+    api_response = api_instance.get_all_subscriptions(offset=offset, limit=limit, code=code, status=status, customer_id=customer_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->get_all_subscriptions: %s\n" % e)
@@ -198,6 +199,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| Number of items to be returned. Default - &#x60;20&#x60;, Max - &#x60;100&#x60;  | [optional] 
  **code** | **str**| Filter by Subscription Code | [optional] 
  **status** | **str**| Filter by Subscription Status | [optional] 
+ **customer_id** | **str**| Filter by Customer Id | [optional] 
 
 ### Return type
 

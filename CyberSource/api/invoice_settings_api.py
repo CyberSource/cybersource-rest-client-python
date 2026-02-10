@@ -59,6 +59,7 @@ class InvoiceSettingsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str product_type: Allows you to choose which product type settings you want to update.
         :return: InvoicingV2InvoiceSettingsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -87,12 +88,13 @@ class InvoiceSettingsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str product_type: Allows you to choose which product type settings you want to update.
         :return: InvoicingV2InvoiceSettingsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []
+        all_params = ['product_type']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -108,11 +110,14 @@ class InvoiceSettingsApi(object):
             params[key] = val
         del params['kwargs']
 
+
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
+        if 'product_type' in params:
+            query_params.append(('productType', params['product_type']))
 
         header_params = {}
 
@@ -174,6 +179,7 @@ class InvoiceSettingsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param InvoiceSettingsRequest invoice_settings_request: (required)
+        :param str product_type: Allows you to choose which product type settings you want to update.
         :return: InvoicingV2InvoiceSettingsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -203,12 +209,13 @@ class InvoiceSettingsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param InvoiceSettingsRequest invoice_settings_request: (required)
+        :param str product_type: Allows you to choose which product type settings you want to update.
         :return: InvoicingV2InvoiceSettingsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['invoice_settings_request']
+        all_params = ['invoice_settings_request', 'product_type']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -234,6 +241,8 @@ class InvoiceSettingsApi(object):
         path_params = {}
 
         query_params = []
+        if 'product_type' in params:
+            query_params.append(('productType', params['product_type']))
 
         header_params = {}
 

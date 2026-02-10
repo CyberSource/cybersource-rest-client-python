@@ -60,7 +60,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse20013
+        :return: InlineResponse20014
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -89,7 +89,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse20013
+        :return: InlineResponse20014
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -160,7 +160,7 @@ class BatchesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20013',
+                                        response_type='InlineResponse20014',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -184,7 +184,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -213,7 +213,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -284,7 +284,7 @@ class BatchesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20012',
+                                        response_type='InlineResponse20013',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -311,7 +311,7 @@ class BatchesApi(object):
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset.
         :param str from_date: ISO-8601 format: yyyyMMddTHHmmssZ
         :param str to_date: ISO-8601 format: yyyyMMddTHHmmssZ
-        :return: InlineResponse20011
+        :return: InlineResponse20012
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -343,7 +343,7 @@ class BatchesApi(object):
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset.
         :param str from_date: ISO-8601 format: yyyyMMddTHHmmssZ
         :param str to_date: ISO-8601 format: yyyyMMddTHHmmssZ
-        :return: InlineResponse20011
+        :return: InlineResponse20012
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -415,7 +415,7 @@ class BatchesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20011',
+                                        response_type='InlineResponse20012',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

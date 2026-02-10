@@ -45,166 +45,6 @@ class OffersApi(object):
 
 
 
-    def create_offer(self, content_type, x_requestid, v_c_merchant_id, v_c_correlation_id, v_c_organization_id, offer_request, **kwargs):
-        """
-        Create an Offer
-        Creates an offer record on the provider system. 
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.create_offer(content_type, x_requestid, v_c_merchant_id, v_c_correlation_id, v_c_organization_id, offer_request, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str content_type: (required)
-        :param str x_requestid: (required)
-        :param str v_c_merchant_id: (required)
-        :param str v_c_correlation_id: (required)
-        :param str v_c_organization_id: (required)
-        :param OfferRequest offer_request: (required)
-        :return: InlineResponse2018
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        self.logger.info("CALL TO METHOD `create_offer` STARTED")
-
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.create_offer_with_http_info(content_type, x_requestid, v_c_merchant_id, v_c_correlation_id, v_c_organization_id, offer_request, **kwargs)
-        else:
-            (data) = self.create_offer_with_http_info(content_type, x_requestid, v_c_merchant_id, v_c_correlation_id, v_c_organization_id, offer_request, **kwargs)
-            return data
-
-    def create_offer_with_http_info(self, content_type, x_requestid, v_c_merchant_id, v_c_correlation_id, v_c_organization_id, offer_request, **kwargs):
-        """
-        Create an Offer
-        Creates an offer record on the provider system. 
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.create_offer_with_http_info(content_type, x_requestid, v_c_merchant_id, v_c_correlation_id, v_c_organization_id, offer_request, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str content_type: (required)
-        :param str x_requestid: (required)
-        :param str v_c_merchant_id: (required)
-        :param str v_c_correlation_id: (required)
-        :param str v_c_organization_id: (required)
-        :param OfferRequest offer_request: (required)
-        :return: InlineResponse2018
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['content_type', 'x_requestid', 'v_c_merchant_id', 'v_c_correlation_id', 'v_c_organization_id', 'offer_request']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method create_offer" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'content_type' is set
-        if ('content_type' not in params) or (params['content_type'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `content_type` when calling `create_offer`")
-            raise ValueError("Missing the required parameter `content_type` when calling `create_offer`")
-        # verify the required parameter 'x_requestid' is set
-        if ('x_requestid' not in params) or (params['x_requestid'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `x_requestid` when calling `create_offer`")
-            raise ValueError("Missing the required parameter `x_requestid` when calling `create_offer`")
-        # verify the required parameter 'v_c_merchant_id' is set
-        if ('v_c_merchant_id' not in params) or (params['v_c_merchant_id'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_merchant_id` when calling `create_offer`")
-            raise ValueError("Missing the required parameter `v_c_merchant_id` when calling `create_offer`")
-        # verify the required parameter 'v_c_correlation_id' is set
-        if ('v_c_correlation_id' not in params) or (params['v_c_correlation_id'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_correlation_id` when calling `create_offer`")
-            raise ValueError("Missing the required parameter `v_c_correlation_id` when calling `create_offer`")
-        # verify the required parameter 'v_c_organization_id' is set
-        if ('v_c_organization_id' not in params) or (params['v_c_organization_id'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_organization_id` when calling `create_offer`")
-            raise ValueError("Missing the required parameter `v_c_organization_id` when calling `create_offer`")
-        # verify the required parameter 'offer_request' is set
-        if ('offer_request' not in params) or (params['offer_request'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `offer_request` when calling `create_offer`")
-            raise ValueError("Missing the required parameter `offer_request` when calling `create_offer`")
-
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-
-        header_params = {}
-        if 'content_type' in params:
-            header_params['Content-Type'] = params['content_type']
-        if 'x_requestid' in params:
-            header_params['x-requestid'] = params['x_requestid']
-        if 'v_c_merchant_id' in params:
-            header_params['v-c-merchant-id'] = params['v_c_merchant_id']
-        if 'v_c_correlation_id' in params:
-            header_params['v-c-correlation-id'] = params['v_c_correlation_id']
-        if 'v_c_organization_id' in params:
-            header_params['v-c-organization-id'] = params['v_c_organization_id']
-
-        form_params = []
-        local_var_files = {}
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
-
-        body_params = None
-        if 'offer_request' in params:
-            body_params = params['offer_request']
-        
-            sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'offer_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
-            body_params = process_body(body_params)
-
-        inbound_mle_status = "false"
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_offer,create_offer_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
-        
-        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_offer,create_offer_with_http_info")
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(f'/vas/v1/currencyconversion', 'POST',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='InlineResponse2018',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats,
-                                        isResponseMLEforApi=isResponseMLEforApi)
-
     def get_offer(self, content_type, x_requestid, v_c_merchant_id, v_c_correlation_id, v_c_organization_id, id, **kwargs):
         """
         Retrieve an Offer
@@ -225,7 +65,7 @@ class OffersApi(object):
         :param str v_c_correlation_id: (required)
         :param str v_c_organization_id: (required)
         :param str id: Request ID generated by Cybersource. This was sent in the header on the request. Echo value from v-c-request-id (required)
-        :return: InlineResponse20015
+        :return: InlineResponse20016
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -259,7 +99,7 @@ class OffersApi(object):
         :param str v_c_correlation_id: (required)
         :param str v_c_organization_id: (required)
         :param str id: Request ID generated by Cybersource. This was sent in the header on the request. Echo value from v-c-request-id (required)
-        :return: InlineResponse20015
+        :return: InlineResponse20016
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -360,7 +200,7 @@ class OffersApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20015',
+                                        response_type='InlineResponse20016',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

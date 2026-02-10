@@ -32,28 +32,33 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon(object
     swagger_types = {
         'payment_types': 'list[str]',
         'business_application_id': 'list[str]',
+        'default_business_application_id': 'str',
         'aggregator': 'PaymentsProductsPayoutsConfigurationInformationConfigurationsCommonAggregator'
     }
 
     attribute_map = {
         'payment_types': 'paymentTypes',
         'business_application_id': 'businessApplicationId',
+        'default_business_application_id': 'defaultBusinessApplicationId',
         'aggregator': 'aggregator'
     }
 
-    def __init__(self, payment_types=None, business_application_id=None, aggregator=None):
+    def __init__(self, payment_types=None, business_application_id=None, default_business_application_id=None, aggregator=None):
         """
         PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon - a model defined in Swagger
         """
 
         self._payment_types = None
         self._business_application_id = None
+        self._default_business_application_id = None
         self._aggregator = None
 
         if payment_types is not None:
           self.payment_types = payment_types
         if business_application_id is not None:
           self.business_application_id = business_application_id
+        if default_business_application_id is not None:
+          self.default_business_application_id = default_business_application_id
         if aggregator is not None:
           self.aggregator = aggregator
 
@@ -102,6 +107,29 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon(object
         """
 
         self._business_application_id = business_application_id
+
+    @property
+    def default_business_application_id(self):
+        """
+        Gets the default_business_application_id of this PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon.
+        Default Business Application Indicator. Must match one of the values in businessApplicationId array.   Possible values: - AA - BB - BI - BP - CB - CD - CI - CO - CP - FD - FT - GD - GP - LA - LO - MD - MI - MP - OG - PD - PG - PP - PS - RP - TU - WT
+
+        :return: The default_business_application_id of this PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon.
+        :rtype: str
+        """
+        return self._default_business_application_id
+
+    @default_business_application_id.setter
+    def default_business_application_id(self, default_business_application_id):
+        """
+        Sets the default_business_application_id of this PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon.
+        Default Business Application Indicator. Must match one of the values in businessApplicationId array.   Possible values: - AA - BB - BI - BP - CB - CD - CI - CO - CP - FD - FT - GD - GP - LA - LO - MD - MI - MP - OG - PD - PG - PP - PS - RP - TU - WT
+
+        :param default_business_application_id: The default_business_application_id of this PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon.
+        :type: str
+        """
+
+        self._default_business_application_id = default_business_application_id
 
     @property
     def aggregator(self):

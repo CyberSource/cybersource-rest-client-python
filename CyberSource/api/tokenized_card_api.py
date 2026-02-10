@@ -189,7 +189,7 @@ class TokenizedCardApi(object):
             for asynchronous request. (optional)
         :param str tokenized_card_id: The Id of a tokenized card. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: TokenizedcardRequest
+        :return: InlineResponse2001
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -219,7 +219,7 @@ class TokenizedCardApi(object):
             for asynchronous request. (optional)
         :param str tokenized_card_id: The Id of a tokenized card. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: TokenizedcardRequest
+        :return: InlineResponse2001
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -292,7 +292,7 @@ class TokenizedCardApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='TokenizedcardRequest',
+                                        response_type='InlineResponse2001',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -438,7 +438,7 @@ class TokenizedCardApi(object):
                                         collection_formats=collection_formats,
                                         isResponseMLEforApi=isResponseMLEforApi)
 
-    def post_tokenized_card(self, tokenizedcard_request, **kwargs):
+    def post_tokenized_card(self, post_tokenized_card_request, **kwargs):
         """
         Create a Tokenized Card
         |  |  |  | | --- | --- | --- | |**Tokenized cards**<br>A Tokenized card represents a network token. Network tokens perform better than regular card numbers and they are not necessarily invalidated when a cardholder loses their card, or it expires. 
@@ -448,13 +448,13 @@ class TokenizedCardApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.post_tokenized_card(tokenizedcard_request, callback=callback_function)
+        >>> thread = api.post_tokenized_card(post_tokenized_card_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param TokenizedcardRequest tokenizedcard_request: (required)
+        :param PostTokenizedCardRequest post_tokenized_card_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: TokenizedcardRequest
+        :return: InlineResponse2001
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -463,12 +463,12 @@ class TokenizedCardApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.post_tokenized_card_with_http_info(tokenizedcard_request, **kwargs)
+            return self.post_tokenized_card_with_http_info(post_tokenized_card_request, **kwargs)
         else:
-            (data) = self.post_tokenized_card_with_http_info(tokenizedcard_request, **kwargs)
+            (data) = self.post_tokenized_card_with_http_info(post_tokenized_card_request, **kwargs)
             return data
 
-    def post_tokenized_card_with_http_info(self, tokenizedcard_request, **kwargs):
+    def post_tokenized_card_with_http_info(self, post_tokenized_card_request, **kwargs):
         """
         Create a Tokenized Card
         |  |  |  | | --- | --- | --- | |**Tokenized cards**<br>A Tokenized card represents a network token. Network tokens perform better than regular card numbers and they are not necessarily invalidated when a cardholder loses their card, or it expires. 
@@ -478,18 +478,18 @@ class TokenizedCardApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.post_tokenized_card_with_http_info(tokenizedcard_request, callback=callback_function)
+        >>> thread = api.post_tokenized_card_with_http_info(post_tokenized_card_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param TokenizedcardRequest tokenizedcard_request: (required)
+        :param PostTokenizedCardRequest post_tokenized_card_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: TokenizedcardRequest
+        :return: InlineResponse2001
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['tokenizedcard_request', 'profile_id']
+        all_params = ['post_tokenized_card_request', 'profile_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -504,10 +504,10 @@ class TokenizedCardApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'tokenizedcard_request' is set
-        if ('tokenizedcard_request' not in params) or (params['tokenizedcard_request'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `tokenizedcard_request` when calling `post_tokenized_card`")
-            raise ValueError("Missing the required parameter `tokenizedcard_request` when calling `post_tokenized_card`")
+        # verify the required parameter 'post_tokenized_card_request' is set
+        if ('post_tokenized_card_request' not in params) or (params['post_tokenized_card_request'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `post_tokenized_card_request` when calling `post_tokenized_card`")
+            raise ValueError("Missing the required parameter `post_tokenized_card_request` when calling `post_tokenized_card`")
 
 
         collection_formats = {}
@@ -530,11 +530,11 @@ class TokenizedCardApi(object):
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
 
         body_params = None
-        if 'tokenizedcard_request' in params:
-            body_params = params['tokenizedcard_request']
+        if 'post_tokenized_card_request' in params:
+            body_params = params['post_tokenized_card_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'tokenizedcard_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_tokenized_card_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
         inbound_mle_status = "optional"
@@ -553,7 +553,7 @@ class TokenizedCardApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='TokenizedcardRequest',
+                                        response_type='InlineResponse2001',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

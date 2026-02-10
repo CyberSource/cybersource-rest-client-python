@@ -53,7 +53,8 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         'product_id_subtype': 'str',
         'three_ds_support': 'bool',
         'si_eligible': 'bool',
-        'emi_eligible': 'bool'
+        'emi_eligible': 'bool',
+        'fleet_card': 'bool'
     }
 
     attribute_map = {
@@ -80,10 +81,11 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         'product_id_subtype': 'productIdSubtype',
         'three_ds_support': 'threeDSSupport',
         'si_eligible': 'siEligible',
-        'emi_eligible': 'emiEligible'
+        'emi_eligible': 'emiEligible',
+        'fleet_card': 'fleetCard'
     }
 
-    def __init__(self, account_funding_source=None, account_funding_source_sub_type=None, card_product=None, message_type=None, acceptance_level=None, card_platform=None, combo_card=None, corporate_purchase=None, health_card=None, shared_bin=None, pos_domestic_only=None, gambling_allowed=None, commercial_card_level2=None, commercial_card_level3=None, exempt_bin=None, account_level_management=None, online_gambling_block=None, auto_substantiation=None, flex_credential=None, product_id=None, product_id_subtype=None, three_ds_support=None, si_eligible=None, emi_eligible=None):
+    def __init__(self, account_funding_source=None, account_funding_source_sub_type=None, card_product=None, message_type=None, acceptance_level=None, card_platform=None, combo_card=None, corporate_purchase=None, health_card=None, shared_bin=None, pos_domestic_only=None, gambling_allowed=None, commercial_card_level2=None, commercial_card_level3=None, exempt_bin=None, account_level_management=None, online_gambling_block=None, auto_substantiation=None, flex_credential=None, product_id=None, product_id_subtype=None, three_ds_support=None, si_eligible=None, emi_eligible=None, fleet_card=None):
         """
         TmsBinLookupPaymentAccountInformationFeatures - a model defined in Swagger
         """
@@ -112,6 +114,7 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         self._three_ds_support = None
         self._si_eligible = None
         self._emi_eligible = None
+        self._fleet_card = None
 
         if account_funding_source is not None:
           self.account_funding_source = account_funding_source
@@ -161,6 +164,8 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
           self.si_eligible = si_eligible
         if emi_eligible is not None:
           self.emi_eligible = emi_eligible
+        if fleet_card is not None:
+          self.fleet_card = fleet_card
 
     @property
     def account_funding_source(self):
@@ -713,6 +718,29 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         """
 
         self._emi_eligible = emi_eligible
+
+    @property
+    def fleet_card(self):
+        """
+        Gets the fleet_card of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the BIN is designated for fuel/fleet usage. These specialized BINs support additional Level2/Level 3 transaction data. Possible values:     - `true`     - `false` 
+
+        :return: The fleet_card of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._fleet_card
+
+    @fleet_card.setter
+    def fleet_card(self, fleet_card):
+        """
+        Sets the fleet_card of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the BIN is designated for fuel/fleet usage. These specialized BINs support additional Level2/Level 3 transaction data. Possible values:     - `true`     - `false` 
+
+        :param fleet_card: The fleet_card of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._fleet_card = fleet_card
 
     def to_dict(self):
         """

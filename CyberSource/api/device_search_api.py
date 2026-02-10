@@ -60,7 +60,7 @@ class DeviceSearchApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostDeviceSearchRequest post_device_search_request: (required)
-        :return: InlineResponse2008
+        :return: InlineResponse2009
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -89,7 +89,7 @@ class DeviceSearchApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostDeviceSearchRequest post_device_search_request: (required)
-        :return: InlineResponse2008
+        :return: InlineResponse2009
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -156,7 +156,7 @@ class DeviceSearchApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2008',
+                                        response_type='InlineResponse2009',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -180,7 +180,7 @@ class DeviceSearchApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostDeviceSearchRequestV3 post_device_search_request_v3: (required)
-        :return: InlineResponse20010
+        :return: InlineResponse20011
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -209,7 +209,7 @@ class DeviceSearchApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostDeviceSearchRequestV3 post_device_search_request_v3: (required)
-        :return: InlineResponse20010
+        :return: InlineResponse20011
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -276,7 +276,7 @@ class DeviceSearchApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20010',
+                                        response_type='InlineResponse20011',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
