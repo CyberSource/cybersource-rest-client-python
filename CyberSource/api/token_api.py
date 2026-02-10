@@ -62,7 +62,7 @@ class TokenApi(object):
         :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
         :param str token_provider: The token provider. (required)
         :param str asset_type: The type of asset. (required)
-        :return: InlineResponse2001
+        :return: InlineResponse2002
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -93,7 +93,7 @@ class TokenApi(object):
         :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
         :param str token_provider: The token provider. (required)
         :param str asset_type: The type of asset. (required)
-        :return: InlineResponse2001
+        :return: InlineResponse2002
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -178,7 +178,7 @@ class TokenApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2001',
+                                        response_type='InlineResponse2002',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -189,8 +189,8 @@ class TokenApi(object):
 
     def post_token_payment_credentials(self, token_id, post_payment_credentials_request, **kwargs):
         """
-        Generate Payment Credentials for a TMS Token
-        |  |  |  |     | --- | --- | --- |     |**Token**<br>A Token can represent your tokenized Customer, Payment Instrument, Instrument Identifier or Tokenized Card information.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Payment Credentials**<br>Contains payment information such as the network token, generated cryptogram for Visa & MasterCard or dynamic CVV for Amex in a JSON Web Encryption (JWE) response.<br>Your system can use this API to retrieve the Payment Credentials for an existing Customer, Payment Instrument, Instrument Identifier or Tokenized Card.<br>Optionally, **authenticated identities** information from Passkey authentication can be provided to potentially achieve liability shift, which may result in the return of an e-commerce indicator of 5 if successful. 
+        Generate Payment Credentials v2
+        **Note**: This resource will be replace by [payment credentials version 3](#/paths/~1tms~1v3~1tokens~1{tokenId}~1payment-credentials/post). The SDK will remain available for now; however, it will no longer be documented or maintain in the Developer Centre.<br> **Token**<br>A Token can represent your tokenized Customer, Payment Instrument, Instrument Identifier or Tokenized Card information.<br> **Payment Credentials**<br>Contains payment information such as the network token, generated cryptogram for Visa & MasterCard or dynamic CVV for Amex in a JSON Web Encryption (JWE) response.<br>Your system can use this API to retrieve the Payment Credentials for an existing Customer, Payment Instrument, Instrument Identifier or Tokenized Card.<br>Optionally, **authenticated identities** information from Passkey authentication can be provided to potentially achieve liability shift, which may result in the return of an e-commerce indicator of 5 if successful. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -202,7 +202,7 @@ class TokenApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str token_id: The Id of a token representing a Customer, Payment Instrument or Instrument Identifier. (required)
-        :param PostPaymentCredentialsRequest post_payment_credentials_request: (required)
+        :param PostPaymentCredentialsRequest1 post_payment_credentials_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: str
                  If the method is called asynchronously,
@@ -220,8 +220,8 @@ class TokenApi(object):
 
     def post_token_payment_credentials_with_http_info(self, token_id, post_payment_credentials_request, **kwargs):
         """
-        Generate Payment Credentials for a TMS Token
-        |  |  |  |     | --- | --- | --- |     |**Token**<br>A Token can represent your tokenized Customer, Payment Instrument, Instrument Identifier or Tokenized Card information.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Payment Credentials**<br>Contains payment information such as the network token, generated cryptogram for Visa & MasterCard or dynamic CVV for Amex in a JSON Web Encryption (JWE) response.<br>Your system can use this API to retrieve the Payment Credentials for an existing Customer, Payment Instrument, Instrument Identifier or Tokenized Card.<br>Optionally, **authenticated identities** information from Passkey authentication can be provided to potentially achieve liability shift, which may result in the return of an e-commerce indicator of 5 if successful. 
+        Generate Payment Credentials v2
+        **Note**: This resource will be replace by [payment credentials version 3](#/paths/~1tms~1v3~1tokens~1{tokenId}~1payment-credentials/post). The SDK will remain available for now; however, it will no longer be documented or maintain in the Developer Centre.<br> **Token**<br>A Token can represent your tokenized Customer, Payment Instrument, Instrument Identifier or Tokenized Card information.<br> **Payment Credentials**<br>Contains payment information such as the network token, generated cryptogram for Visa & MasterCard or dynamic CVV for Amex in a JSON Web Encryption (JWE) response.<br>Your system can use this API to retrieve the Payment Credentials for an existing Customer, Payment Instrument, Instrument Identifier or Tokenized Card.<br>Optionally, **authenticated identities** information from Passkey authentication can be provided to potentially achieve liability shift, which may result in the return of an e-commerce indicator of 5 if successful. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -233,7 +233,7 @@ class TokenApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str token_id: The Id of a token representing a Customer, Payment Instrument or Instrument Identifier. (required)
-        :param PostPaymentCredentialsRequest post_payment_credentials_request: (required)
+        :param PostPaymentCredentialsRequest1 post_payment_credentials_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: str
                  If the method is called asynchronously,
@@ -312,6 +312,139 @@ class TokenApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='str',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
+    def post_token_payment_credentials_v3(self, token_id, post_payment_credentials_request, **kwargs):
+        """
+        Generate Payment Credentials Latest Version v3
+        **Payment Credentials**<br>Contains payment information such as the network token, generated TAVV cryptogram for Visa & MasterCard, dynamic CVV for Amex, or DTVV cryptogram for VISA. This latest version (v3) returns the Primary Account Number details, if the network token is not present. The response is provided in JSON Web Encryption (JWE) format. <br>Your system can use this API to retrieve the Payment Credentials for an existing Customer, Payment Instrument, Instrument Identifier or Tokenized Card.<br>Optionally, **authenticated identities** information from Passkey authentication can be provided to potentially achieve liability shift, which may result in the return of an e-commerce indicator of 5 if successful. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_token_payment_credentials_v3(token_id, post_payment_credentials_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str token_id: The Id of a token representing a Customer, Payment Instrument or Instrument Identifier. (required)
+        :param PostPaymentCredentialsRequest post_payment_credentials_request: (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :return: InlineResponse2011
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `post_token_payment_credentials_v3` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_token_payment_credentials_v3_with_http_info(token_id, post_payment_credentials_request, **kwargs)
+        else:
+            (data) = self.post_token_payment_credentials_v3_with_http_info(token_id, post_payment_credentials_request, **kwargs)
+            return data
+
+    def post_token_payment_credentials_v3_with_http_info(self, token_id, post_payment_credentials_request, **kwargs):
+        """
+        Generate Payment Credentials Latest Version v3
+        **Payment Credentials**<br>Contains payment information such as the network token, generated TAVV cryptogram for Visa & MasterCard, dynamic CVV for Amex, or DTVV cryptogram for VISA. This latest version (v3) returns the Primary Account Number details, if the network token is not present. The response is provided in JSON Web Encryption (JWE) format. <br>Your system can use this API to retrieve the Payment Credentials for an existing Customer, Payment Instrument, Instrument Identifier or Tokenized Card.<br>Optionally, **authenticated identities** information from Passkey authentication can be provided to potentially achieve liability shift, which may result in the return of an e-commerce indicator of 5 if successful. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_token_payment_credentials_v3_with_http_info(token_id, post_payment_credentials_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str token_id: The Id of a token representing a Customer, Payment Instrument or Instrument Identifier. (required)
+        :param PostPaymentCredentialsRequest post_payment_credentials_request: (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :return: InlineResponse2011
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['token_id', 'post_payment_credentials_request', 'profile_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_token_payment_credentials_v3" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'token_id' is set
+        if ('token_id' not in params) or (params['token_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `token_id` when calling `post_token_payment_credentials_v3`")
+            raise ValueError("Missing the required parameter `token_id` when calling `post_token_payment_credentials_v3`")
+        # verify the required parameter 'post_payment_credentials_request' is set
+        if ('post_payment_credentials_request' not in params) or (params['post_payment_credentials_request'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `post_payment_credentials_request` when calling `post_token_payment_credentials_v3`")
+            raise ValueError("Missing the required parameter `post_payment_credentials_request` when calling `post_token_payment_credentials_v3`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'token_id' in params:
+            path_params['tokenId'] = params['token_id']
+            tokenId=token_id
+
+        query_params = []
+
+        header_params = {}
+        if 'profile_id' in params:
+            header_params['profile-id'] = params['profile_id']
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/jose;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        body_params = None
+        if 'post_payment_credentials_request' in params:
+            body_params = params['post_payment_credentials_request']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_payment_credentials_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = process_body(body_params)
+
+        inbound_mle_status = "optional"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_token_payment_credentials_v3,post_token_payment_credentials_v3_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_token_payment_credentials_v3,post_token_payment_credentials_v3_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/tms/v3/tokens/{tokenId}/payment-credentials', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='InlineResponse2011',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

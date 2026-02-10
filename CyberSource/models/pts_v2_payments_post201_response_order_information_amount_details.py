@@ -32,6 +32,7 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
     swagger_types = {
         'total_amount': 'str',
         'authorized_amount': 'str',
+        'cashback_amount': 'str',
         'currency': 'str',
         'settlement_amount': 'str',
         'settlement_currency': 'str',
@@ -47,6 +48,7 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
     attribute_map = {
         'total_amount': 'totalAmount',
         'authorized_amount': 'authorizedAmount',
+        'cashback_amount': 'cashbackAmount',
         'currency': 'currency',
         'settlement_amount': 'settlementAmount',
         'settlement_currency': 'settlementCurrency',
@@ -59,13 +61,14 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         'discount_amount': 'discountAmount'
     }
 
-    def __init__(self, total_amount=None, authorized_amount=None, currency=None, settlement_amount=None, settlement_currency=None, original_amount=None, original_currency=None, processor_transaction_fee=None, exchange_rate=None, foreign_currency=None, foreign_amount=None, discount_amount=None):
+    def __init__(self, total_amount=None, authorized_amount=None, cashback_amount=None, currency=None, settlement_amount=None, settlement_currency=None, original_amount=None, original_currency=None, processor_transaction_fee=None, exchange_rate=None, foreign_currency=None, foreign_amount=None, discount_amount=None):
         """
         PtsV2PaymentsPost201ResponseOrderInformationAmountDetails - a model defined in Swagger
         """
 
         self._total_amount = None
         self._authorized_amount = None
+        self._cashback_amount = None
         self._currency = None
         self._settlement_amount = None
         self._settlement_currency = None
@@ -81,6 +84,8 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
           self.total_amount = total_amount
         if authorized_amount is not None:
           self.authorized_amount = authorized_amount
+        if cashback_amount is not None:
+          self.cashback_amount = cashback_amount
         if currency is not None:
           self.currency = currency
         if settlement_amount is not None:
@@ -147,6 +152,29 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         """
 
         self._authorized_amount = authorized_amount
+
+    @property
+    def cashback_amount(self):
+        """
+        Gets the cashback_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        This field contains the purchase cashback amount expressed in the acquirer transaction currency.  Use this field only for clearing with your acquirer. 
+
+        :return: The cashback_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._cashback_amount
+
+    @cashback_amount.setter
+    def cashback_amount(self, cashback_amount):
+        """
+        Sets the cashback_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        This field contains the purchase cashback amount expressed in the acquirer transaction currency.  Use this field only for clearing with your acquirer. 
+
+        :param cashback_amount: The cashback_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._cashback_amount = cashback_amount
 
     @property
     def currency(self):

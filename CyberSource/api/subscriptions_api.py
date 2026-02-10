@@ -435,6 +435,7 @@ class SubscriptionsApi(object):
         :param int limit: Number of items to be returned. Default - `20`, Max - `100` 
         :param str code: Filter by Subscription Code
         :param str status: Filter by Subscription Status
+        :param str customer_id: Filter by Customer Id
         :return: GetAllSubscriptionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -467,12 +468,13 @@ class SubscriptionsApi(object):
         :param int limit: Number of items to be returned. Default - `20`, Max - `100` 
         :param str code: Filter by Subscription Code
         :param str status: Filter by Subscription Status
+        :param str customer_id: Filter by Customer Id
         :return: GetAllSubscriptionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['offset', 'limit', 'code', 'status']
+        all_params = ['offset', 'limit', 'code', 'status', 'customer_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -502,6 +504,8 @@ class SubscriptionsApi(object):
             query_params.append(('code', params['code']))
         if 'status' in params:
             query_params.append(('status', params['status']))
+        if 'customer_id' in params:
+            query_params.append(('customerId', params['customer_id']))
 
         header_params = {}
 

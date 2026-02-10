@@ -30,104 +30,83 @@ class Tmsv2TokenizedCard(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'Tmsv2TokenizedCardLinks',
         'id': 'str',
         'object': 'str',
-        'account_reference_id': 'str',
-        'consumer_id': 'str',
-        'create_instrument_identifier': 'bool',
         'source': 'str',
         'state': 'str',
-        'reason': 'str',
+        'enrollment_id': 'str',
+        'token_reference_id': 'str',
         'number': 'str',
         'expiration_month': 'str',
         'expiration_year': 'str',
         'type': 'str',
+        'reason': 'str',
         'cryptogram': 'str',
         'security_code': 'str',
         'eci': 'str',
         'requestor_id': 'str',
-        'enrollment_id': 'str',
-        'token_reference_id': 'str',
         'payment_account_reference': 'str',
         'card': 'Tmsv2TokenizedCardCard',
-        'passcode': 'Tmsv2TokenizedCardPasscode',
         'metadata': 'Tmsv2TokenizedCardMetadata'
     }
 
     attribute_map = {
-        'links': '_links',
         'id': 'id',
         'object': 'object',
-        'account_reference_id': 'accountReferenceId',
-        'consumer_id': 'consumerId',
-        'create_instrument_identifier': 'createInstrumentIdentifier',
         'source': 'source',
         'state': 'state',
-        'reason': 'reason',
+        'enrollment_id': 'enrollmentId',
+        'token_reference_id': 'tokenReferenceId',
         'number': 'number',
         'expiration_month': 'expirationMonth',
         'expiration_year': 'expirationYear',
         'type': 'type',
+        'reason': 'reason',
         'cryptogram': 'cryptogram',
         'security_code': 'securityCode',
         'eci': 'eci',
         'requestor_id': 'requestorId',
-        'enrollment_id': 'enrollmentId',
-        'token_reference_id': 'tokenReferenceId',
         'payment_account_reference': 'paymentAccountReference',
         'card': 'card',
-        'passcode': 'passcode',
         'metadata': 'metadata'
     }
 
-    def __init__(self, links=None, id=None, object=None, account_reference_id=None, consumer_id=None, create_instrument_identifier=None, source=None, state=None, reason=None, number=None, expiration_month=None, expiration_year=None, type=None, cryptogram=None, security_code=None, eci=None, requestor_id=None, enrollment_id=None, token_reference_id=None, payment_account_reference=None, card=None, passcode=None, metadata=None):
+    def __init__(self, id=None, object=None, source=None, state=None, enrollment_id=None, token_reference_id=None, number=None, expiration_month=None, expiration_year=None, type=None, reason=None, cryptogram=None, security_code=None, eci=None, requestor_id=None, payment_account_reference=None, card=None, metadata=None):
         """
         Tmsv2TokenizedCard - a model defined in Swagger
         """
 
-        self._links = None
         self._id = None
         self._object = None
-        self._account_reference_id = None
-        self._consumer_id = None
-        self._create_instrument_identifier = None
         self._source = None
         self._state = None
-        self._reason = None
+        self._enrollment_id = None
+        self._token_reference_id = None
         self._number = None
         self._expiration_month = None
         self._expiration_year = None
         self._type = None
+        self._reason = None
         self._cryptogram = None
         self._security_code = None
         self._eci = None
         self._requestor_id = None
-        self._enrollment_id = None
-        self._token_reference_id = None
         self._payment_account_reference = None
         self._card = None
-        self._passcode = None
         self._metadata = None
 
-        if links is not None:
-          self.links = links
         if id is not None:
           self.id = id
         if object is not None:
           self.object = object
-        if account_reference_id is not None:
-          self.account_reference_id = account_reference_id
-        if consumer_id is not None:
-          self.consumer_id = consumer_id
-        if create_instrument_identifier is not None:
-          self.create_instrument_identifier = create_instrument_identifier
         if source is not None:
           self.source = source
         if state is not None:
           self.state = state
-        if reason is not None:
-          self.reason = reason
+        if enrollment_id is not None:
+          self.enrollment_id = enrollment_id
+        if token_reference_id is not None:
+          self.token_reference_id = token_reference_id
         if number is not None:
           self.number = number
         if expiration_month is not None:
@@ -136,6 +115,8 @@ class Tmsv2TokenizedCard(object):
           self.expiration_year = expiration_year
         if type is not None:
           self.type = type
+        if reason is not None:
+          self.reason = reason
         if cryptogram is not None:
           self.cryptogram = cryptogram
         if security_code is not None:
@@ -144,39 +125,12 @@ class Tmsv2TokenizedCard(object):
           self.eci = eci
         if requestor_id is not None:
           self.requestor_id = requestor_id
-        if enrollment_id is not None:
-          self.enrollment_id = enrollment_id
-        if token_reference_id is not None:
-          self.token_reference_id = token_reference_id
         if payment_account_reference is not None:
           self.payment_account_reference = payment_account_reference
         if card is not None:
           self.card = card
-        if passcode is not None:
-          self.passcode = passcode
         if metadata is not None:
           self.metadata = metadata
-
-    @property
-    def links(self):
-        """
-        Gets the links of this Tmsv2TokenizedCard.
-
-        :return: The links of this Tmsv2TokenizedCard.
-        :rtype: Tmsv2TokenizedCardLinks
-        """
-        return self._links
-
-    @links.setter
-    def links(self, links):
-        """
-        Sets the links of this Tmsv2TokenizedCard.
-
-        :param links: The links of this Tmsv2TokenizedCard.
-        :type: Tmsv2TokenizedCardLinks
-        """
-
-        self._links = links
 
     @property
     def id(self):
@@ -225,75 +179,6 @@ class Tmsv2TokenizedCard(object):
         self._object = object
 
     @property
-    def account_reference_id(self):
-        """
-        Gets the account_reference_id of this Tmsv2TokenizedCard.
-        An identifier provided by the issuer for the account. 
-
-        :return: The account_reference_id of this Tmsv2TokenizedCard.
-        :rtype: str
-        """
-        return self._account_reference_id
-
-    @account_reference_id.setter
-    def account_reference_id(self, account_reference_id):
-        """
-        Sets the account_reference_id of this Tmsv2TokenizedCard.
-        An identifier provided by the issuer for the account. 
-
-        :param account_reference_id: The account_reference_id of this Tmsv2TokenizedCard.
-        :type: str
-        """
-
-        self._account_reference_id = account_reference_id
-
-    @property
-    def consumer_id(self):
-        """
-        Gets the consumer_id of this Tmsv2TokenizedCard.
-        Identifier of the consumer within the wallet. Maximum 24 characters for VTS.
-
-        :return: The consumer_id of this Tmsv2TokenizedCard.
-        :rtype: str
-        """
-        return self._consumer_id
-
-    @consumer_id.setter
-    def consumer_id(self, consumer_id):
-        """
-        Sets the consumer_id of this Tmsv2TokenizedCard.
-        Identifier of the consumer within the wallet. Maximum 24 characters for VTS.
-
-        :param consumer_id: The consumer_id of this Tmsv2TokenizedCard.
-        :type: str
-        """
-
-        self._consumer_id = consumer_id
-
-    @property
-    def create_instrument_identifier(self):
-        """
-        Gets the create_instrument_identifier of this Tmsv2TokenizedCard.
-        Specifies whether the InstrumentId should be created (true) or not (false). Possible Values: - `true`: The InstrumentId should be created. - `false`: The InstrumentId should be created. 
-
-        :return: The create_instrument_identifier of this Tmsv2TokenizedCard.
-        :rtype: bool
-        """
-        return self._create_instrument_identifier
-
-    @create_instrument_identifier.setter
-    def create_instrument_identifier(self, create_instrument_identifier):
-        """
-        Sets the create_instrument_identifier of this Tmsv2TokenizedCard.
-        Specifies whether the InstrumentId should be created (true) or not (false). Possible Values: - `true`: The InstrumentId should be created. - `false`: The InstrumentId should be created. 
-
-        :param create_instrument_identifier: The create_instrument_identifier of this Tmsv2TokenizedCard.
-        :type: bool
-        """
-
-        self._create_instrument_identifier = create_instrument_identifier
-
-    @property
     def source(self):
         """
         Gets the source of this Tmsv2TokenizedCard.
@@ -340,27 +225,50 @@ class Tmsv2TokenizedCard(object):
         self._state = state
 
     @property
-    def reason(self):
+    def enrollment_id(self):
         """
-        Gets the reason of this Tmsv2TokenizedCard.
-        Issuers state for the network token Possible Values: - INVALID_REQUEST : The network token provision request contained invalid data. - CARD_VERIFICATION_FAILED : The network token provision request contained data that could not be verified. - CARD_NOT_ELIGIBLE : Card can currently not be used with issuer for tokenization. - CARD_NOT_ALLOWED : Card can currently not be used with card association for tokenization. - DECLINED : Card can currently not be used with issuer for tokenization. - SERVICE_UNAVAILABLE : The network token service was unavailable or timed out. - SYSTEM_ERROR : An unexpected error occurred with network token service, check configuration. 
+        Gets the enrollment_id of this Tmsv2TokenizedCard.
+        Unique id to identify this PAN/ enrollment. 
 
-        :return: The reason of this Tmsv2TokenizedCard.
+        :return: The enrollment_id of this Tmsv2TokenizedCard.
         :rtype: str
         """
-        return self._reason
+        return self._enrollment_id
 
-    @reason.setter
-    def reason(self, reason):
+    @enrollment_id.setter
+    def enrollment_id(self, enrollment_id):
         """
-        Sets the reason of this Tmsv2TokenizedCard.
-        Issuers state for the network token Possible Values: - INVALID_REQUEST : The network token provision request contained invalid data. - CARD_VERIFICATION_FAILED : The network token provision request contained data that could not be verified. - CARD_NOT_ELIGIBLE : Card can currently not be used with issuer for tokenization. - CARD_NOT_ALLOWED : Card can currently not be used with card association for tokenization. - DECLINED : Card can currently not be used with issuer for tokenization. - SERVICE_UNAVAILABLE : The network token service was unavailable or timed out. - SYSTEM_ERROR : An unexpected error occurred with network token service, check configuration. 
+        Sets the enrollment_id of this Tmsv2TokenizedCard.
+        Unique id to identify this PAN/ enrollment. 
 
-        :param reason: The reason of this Tmsv2TokenizedCard.
+        :param enrollment_id: The enrollment_id of this Tmsv2TokenizedCard.
         :type: str
         """
 
-        self._reason = reason
+        self._enrollment_id = enrollment_id
+
+    @property
+    def token_reference_id(self):
+        """
+        Gets the token_reference_id of this Tmsv2TokenizedCard.
+        Unique ID for netwrok token. 
+
+        :return: The token_reference_id of this Tmsv2TokenizedCard.
+        :rtype: str
+        """
+        return self._token_reference_id
+
+    @token_reference_id.setter
+    def token_reference_id(self, token_reference_id):
+        """
+        Sets the token_reference_id of this Tmsv2TokenizedCard.
+        Unique ID for netwrok token. 
+
+        :param token_reference_id: The token_reference_id of this Tmsv2TokenizedCard.
+        :type: str
+        """
+
+        self._token_reference_id = token_reference_id
 
     @property
     def number(self):
@@ -455,10 +363,33 @@ class Tmsv2TokenizedCard(object):
         self._type = type
 
     @property
+    def reason(self):
+        """
+        Gets the reason of this Tmsv2TokenizedCard.
+        Indicates the reason why the network token provision request failed. Possible Values: - INVALID_REQUEST : The network token provision request contained invalid data. - CARD_VERIFICATION_FAILED : The network token provision request contained data that could not be verified. - CARD_NOT_ELIGIBLE : Card can currently not be used with issuer for tokenization. - CARD_NOT_ALLOWED : Card can currently not be used with card association for tokenization. - DECLINED : Card can currently not be used with issuer for tokenization. - SERVICE_UNAVAILABLE : The network token service was unavailable or timed out. - SYSTEM_ERROR : An unexpected error occurred with network token service, check configuration. 
+
+        :return: The reason of this Tmsv2TokenizedCard.
+        :rtype: str
+        """
+        return self._reason
+
+    @reason.setter
+    def reason(self, reason):
+        """
+        Sets the reason of this Tmsv2TokenizedCard.
+        Indicates the reason why the network token provision request failed. Possible Values: - INVALID_REQUEST : The network token provision request contained invalid data. - CARD_VERIFICATION_FAILED : The network token provision request contained data that could not be verified. - CARD_NOT_ELIGIBLE : Card can currently not be used with issuer for tokenization. - CARD_NOT_ALLOWED : Card can currently not be used with card association for tokenization. - DECLINED : Card can currently not be used with issuer for tokenization. - SERVICE_UNAVAILABLE : The network token service was unavailable or timed out. - SYSTEM_ERROR : An unexpected error occurred with network token service, check configuration. 
+
+        :param reason: The reason of this Tmsv2TokenizedCard.
+        :type: str
+        """
+
+        self._reason = reason
+
+    @property
     def cryptogram(self):
         """
         Gets the cryptogram of this Tmsv2TokenizedCard.
-        Value generated by the card association to be used alongside the network token for processing a payment. 
+        Value generated by the card association to be used alongside the network token for processing a payment. This field is returned by default for Visa and Mastercard network tokens. It can also be explicitly requested using paymentCredentialType: CRYPTOGRAM. 
 
         :return: The cryptogram of this Tmsv2TokenizedCard.
         :rtype: str
@@ -469,7 +400,7 @@ class Tmsv2TokenizedCard(object):
     def cryptogram(self, cryptogram):
         """
         Sets the cryptogram of this Tmsv2TokenizedCard.
-        Value generated by the card association to be used alongside the network token for processing a payment. 
+        Value generated by the card association to be used alongside the network token for processing a payment. This field is returned by default for Visa and Mastercard network tokens. It can also be explicitly requested using paymentCredentialType: CRYPTOGRAM. 
 
         :param cryptogram: The cryptogram of this Tmsv2TokenizedCard.
         :type: str
@@ -481,7 +412,7 @@ class Tmsv2TokenizedCard(object):
     def security_code(self):
         """
         Gets the security_code of this Tmsv2TokenizedCard.
-        4-digit number generated by the card association to be used alogside the network token for processing a payment. Only supported for Amex and SCOF. 
+        Dynamic number generated by the card association to be used alongside the network token for processing a payment. - For American Express: Dynamic Card Secure Code (DCSC) returned by default. - For Visa: DTVV cryptogram when explicitly requested using paymentCredentialType: SECURITY_CODE. It can also be explicitly requested using paymentCredentialType: SECURITY_CODE. 
 
         :return: The security_code of this Tmsv2TokenizedCard.
         :rtype: str
@@ -492,7 +423,7 @@ class Tmsv2TokenizedCard(object):
     def security_code(self, security_code):
         """
         Sets the security_code of this Tmsv2TokenizedCard.
-        4-digit number generated by the card association to be used alogside the network token for processing a payment. Only supported for Amex and SCOF. 
+        Dynamic number generated by the card association to be used alongside the network token for processing a payment. - For American Express: Dynamic Card Secure Code (DCSC) returned by default. - For Visa: DTVV cryptogram when explicitly requested using paymentCredentialType: SECURITY_CODE. It can also be explicitly requested using paymentCredentialType: SECURITY_CODE. 
 
         :param security_code: The security_code of this Tmsv2TokenizedCard.
         :type: str
@@ -547,52 +478,6 @@ class Tmsv2TokenizedCard(object):
         self._requestor_id = requestor_id
 
     @property
-    def enrollment_id(self):
-        """
-        Gets the enrollment_id of this Tmsv2TokenizedCard.
-        Unique id to identify this PAN/ enrollment. 
-
-        :return: The enrollment_id of this Tmsv2TokenizedCard.
-        :rtype: str
-        """
-        return self._enrollment_id
-
-    @enrollment_id.setter
-    def enrollment_id(self, enrollment_id):
-        """
-        Sets the enrollment_id of this Tmsv2TokenizedCard.
-        Unique id to identify this PAN/ enrollment. 
-
-        :param enrollment_id: The enrollment_id of this Tmsv2TokenizedCard.
-        :type: str
-        """
-
-        self._enrollment_id = enrollment_id
-
-    @property
-    def token_reference_id(self):
-        """
-        Gets the token_reference_id of this Tmsv2TokenizedCard.
-        Unique ID for netwrok token. 
-
-        :return: The token_reference_id of this Tmsv2TokenizedCard.
-        :rtype: str
-        """
-        return self._token_reference_id
-
-    @token_reference_id.setter
-    def token_reference_id(self, token_reference_id):
-        """
-        Sets the token_reference_id of this Tmsv2TokenizedCard.
-        Unique ID for netwrok token. 
-
-        :param token_reference_id: The token_reference_id of this Tmsv2TokenizedCard.
-        :type: str
-        """
-
-        self._token_reference_id = token_reference_id
-
-    @property
     def payment_account_reference(self):
         """
         Gets the payment_account_reference of this Tmsv2TokenizedCard.
@@ -635,27 +520,6 @@ class Tmsv2TokenizedCard(object):
         """
 
         self._card = card
-
-    @property
-    def passcode(self):
-        """
-        Gets the passcode of this Tmsv2TokenizedCard.
-
-        :return: The passcode of this Tmsv2TokenizedCard.
-        :rtype: Tmsv2TokenizedCardPasscode
-        """
-        return self._passcode
-
-    @passcode.setter
-    def passcode(self, passcode):
-        """
-        Sets the passcode of this Tmsv2TokenizedCard.
-
-        :param passcode: The passcode of this Tmsv2TokenizedCard.
-        :type: Tmsv2TokenizedCardPasscode
-        """
-
-        self._passcode = passcode
 
     @property
     def metadata(self):

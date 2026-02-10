@@ -30,129 +30,69 @@ class InlineResponse2001(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'type': 'str',
-        'provider': 'str',
-        'content': 'list[InlineResponse2001Content]'
+        'links': 'InlineResponse2001Links',
+        'tokenized_card': 'Tmsv2TokenizedCard'
     }
 
     attribute_map = {
-        'id': 'id',
-        'type': 'type',
-        'provider': 'provider',
-        'content': 'content'
+        'links': '_links',
+        'tokenized_card': 'tokenizedCard'
     }
 
-    def __init__(self, id=None, type=None, provider=None, content=None):
+    def __init__(self, links=None, tokenized_card=None):
         """
         InlineResponse2001 - a model defined in Swagger
         """
 
-        self._id = None
-        self._type = None
-        self._provider = None
-        self._content = None
+        self._links = None
+        self._tokenized_card = None
 
-        if id is not None:
-          self.id = id
-        if type is not None:
-          self.type = type
-        if provider is not None:
-          self.provider = provider
-        if content is not None:
-          self.content = content
+        if links is not None:
+          self.links = links
+        if tokenized_card is not None:
+          self.tokenized_card = tokenized_card
 
     @property
-    def id(self):
+    def links(self):
         """
-        Gets the id of this InlineResponse2001.
-        Unique identifier for the Card Art Asset. 
+        Gets the links of this InlineResponse2001.
 
-        :return: The id of this InlineResponse2001.
-        :rtype: str
+        :return: The links of this InlineResponse2001.
+        :rtype: InlineResponse2001Links
         """
-        return self._id
+        return self._links
 
-    @id.setter
-    def id(self, id):
+    @links.setter
+    def links(self, links):
         """
-        Sets the id of this InlineResponse2001.
-        Unique identifier for the Card Art Asset. 
+        Sets the links of this InlineResponse2001.
 
-        :param id: The id of this InlineResponse2001.
-        :type: str
+        :param links: The links of this InlineResponse2001.
+        :type: InlineResponse2001Links
         """
 
-        self._id = id
+        self._links = links
 
     @property
-    def type(self):
+    def tokenized_card(self):
         """
-        Gets the type of this InlineResponse2001.
-        The type of Card Art Asset. 
+        Gets the tokenized_card of this InlineResponse2001.
 
-        :return: The type of this InlineResponse2001.
-        :rtype: str
+        :return: The tokenized_card of this InlineResponse2001.
+        :rtype: Tmsv2TokenizedCard
         """
-        return self._type
+        return self._tokenized_card
 
-    @type.setter
-    def type(self, type):
+    @tokenized_card.setter
+    def tokenized_card(self, tokenized_card):
         """
-        Sets the type of this InlineResponse2001.
-        The type of Card Art Asset. 
+        Sets the tokenized_card of this InlineResponse2001.
 
-        :param type: The type of this InlineResponse2001.
-        :type: str
+        :param tokenized_card: The tokenized_card of this InlineResponse2001.
+        :type: Tmsv2TokenizedCard
         """
 
-        self._type = type
-
-    @property
-    def provider(self):
-        """
-        Gets the provider of this InlineResponse2001.
-        The provider of the Card Art Asset. 
-
-        :return: The provider of this InlineResponse2001.
-        :rtype: str
-        """
-        return self._provider
-
-    @provider.setter
-    def provider(self, provider):
-        """
-        Sets the provider of this InlineResponse2001.
-        The provider of the Card Art Asset. 
-
-        :param provider: The provider of this InlineResponse2001.
-        :type: str
-        """
-
-        self._provider = provider
-
-    @property
-    def content(self):
-        """
-        Gets the content of this InlineResponse2001.
-        Array of content objects representing the Card Art Asset. 
-
-        :return: The content of this InlineResponse2001.
-        :rtype: list[InlineResponse2001Content]
-        """
-        return self._content
-
-    @content.setter
-    def content(self, content):
-        """
-        Sets the content of this InlineResponse2001.
-        Array of content objects representing the Card Art Asset. 
-
-        :param content: The content of this InlineResponse2001.
-        :type: list[InlineResponse2001Content]
-        """
-
-        self._content = content
+        self._tokenized_card = tokenized_card
 
     def to_dict(self):
         """

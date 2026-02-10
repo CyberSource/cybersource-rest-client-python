@@ -60,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tokenized_card**
-> TokenizedcardRequest get_tokenized_card(tokenized_card_id, profile_id=profile_id)
+> InlineResponse2001 get_tokenized_card(tokenized_card_id, profile_id=profile_id)
 
 Retrieve a Tokenized Card
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TokenizedcardRequest**](TokenizedcardRequest.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -161,7 +161,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_tokenized_card**
-> TokenizedcardRequest post_tokenized_card(tokenizedcard_request, profile_id=profile_id)
+> InlineResponse2001 post_tokenized_card(post_tokenized_card_request, profile_id=profile_id)
 
 Create a Tokenized Card
 
@@ -177,12 +177,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.TokenizedCardApi()
-tokenizedcard_request = CyberSource.TokenizedcardRequest() # TokenizedcardRequest | 
+post_tokenized_card_request = CyberSource.PostTokenizedCardRequest() # PostTokenizedCardRequest | 
 profile_id = 'profile_id_example' # str | The Id of a profile containing user specific TMS configuration. (optional)
 
 try: 
     # Create a Tokenized Card
-    api_response = api_instance.post_tokenized_card(tokenizedcard_request, profile_id=profile_id)
+    api_response = api_instance.post_tokenized_card(post_tokenized_card_request, profile_id=profile_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TokenizedCardApi->post_tokenized_card: %s\n" % e)
@@ -192,12 +192,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tokenizedcard_request** | [**TokenizedcardRequest**](TokenizedcardRequest.md)|  | 
+ **post_tokenized_card_request** | [**PostTokenizedCardRequest**](PostTokenizedCardRequest.md)|  | 
  **profile_id** | **str**| The Id of a profile containing user specific TMS configuration. | [optional] 
 
 ### Return type
 
-[**TokenizedcardRequest**](TokenizedcardRequest.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 

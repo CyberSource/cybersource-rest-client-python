@@ -39,6 +39,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'response_code_source': 'str',
         'response_details': 'str',
         'response_category_code': 'str',
+        'response_source_code': 'str',
         'forwarded_acquirer_code': 'str',
         'settlement_date': 'str',
         'sequence_number': 'str',
@@ -88,6 +89,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'response_code_source': 'responseCodeSource',
         'response_details': 'responseDetails',
         'response_category_code': 'responseCategoryCode',
+        'response_source_code': 'responseSourceCode',
         'forwarded_acquirer_code': 'forwardedAcquirerCode',
         'settlement_date': 'settlementDate',
         'sequence_number': 'sequenceNumber',
@@ -127,7 +129,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'network': 'network'
     }
 
-    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, settlement_date=None, sequence_number=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None, custom_url=None, scheme_assigned_id=None, device_url=None, disbursement_mode=None, update_time_utc=None, expiration_time_utc=None, order_id=None, order_status=None, merchant_risk_prediction=None, network=None):
+    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, response_source_code=None, forwarded_acquirer_code=None, settlement_date=None, sequence_number=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None, custom_url=None, scheme_assigned_id=None, device_url=None, disbursement_mode=None, update_time_utc=None, expiration_time_utc=None, order_id=None, order_status=None, merchant_risk_prediction=None, network=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -141,6 +143,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._response_code_source = None
         self._response_details = None
         self._response_category_code = None
+        self._response_source_code = None
         self._forwarded_acquirer_code = None
         self._settlement_date = None
         self._sequence_number = None
@@ -197,6 +200,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.response_details = response_details
         if response_category_code is not None:
           self.response_category_code = response_category_code
+        if response_source_code is not None:
+          self.response_source_code = response_source_code
         if forwarded_acquirer_code is not None:
           self.forwarded_acquirer_code = forwarded_acquirer_code
         if settlement_date is not None:
@@ -478,6 +483,29 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         """
 
         self._response_category_code = response_category_code
+
+    @property
+    def response_source_code(self):
+        """
+        Gets the response_source_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        This field is used by Visa only and contains the response source/reason code that identifies the source of the response decision. Use this field only for clearing with your acquirer. 
+
+        :return: The response_source_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._response_source_code
+
+    @response_source_code.setter
+    def response_source_code(self, response_source_code):
+        """
+        Sets the response_source_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        This field is used by Visa only and contains the response source/reason code that identifies the source of the response decision. Use this field only for clearing with your acquirer. 
+
+        :param response_source_code: The response_source_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._response_source_code = response_source_code
 
     @property
     def forwarded_acquirer_code(self):

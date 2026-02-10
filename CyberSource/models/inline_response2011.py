@@ -30,101 +30,95 @@ class InlineResponse2011(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'submit_time_utc': 'str',
-        'status': 'str'
+        'links': 'InlineResponse2011Links',
+        'card': 'InlineResponse2011Card',
+        'tokenized_card': 'InlineResponse2011TokenizedCard'
     }
 
     attribute_map = {
-        'id': 'id',
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status'
+        'links': '_links',
+        'card': 'card',
+        'tokenized_card': 'tokenizedCard'
     }
 
-    def __init__(self, id=None, submit_time_utc=None, status=None):
+    def __init__(self, links=None, card=None, tokenized_card=None):
         """
         InlineResponse2011 - a model defined in Swagger
         """
 
-        self._id = None
-        self._submit_time_utc = None
-        self._status = None
+        self._links = None
+        self._card = None
+        self._tokenized_card = None
 
-        if id is not None:
-          self.id = id
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
-
-    @property
-    def id(self):
-        """
-        Gets the id of this InlineResponse2011.
-        UUID uniquely generated for this comments. 
-
-        :return: The id of this InlineResponse2011.
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """
-        Sets the id of this InlineResponse2011.
-        UUID uniquely generated for this comments. 
-
-        :param id: The id of this InlineResponse2011.
-        :type: str
-        """
-
-        self._id = id
+        if links is not None:
+          self.links = links
+        if card is not None:
+          self.card = card
+        if tokenized_card is not None:
+          self.tokenized_card = tokenized_card
 
     @property
-    def submit_time_utc(self):
+    def links(self):
         """
-        Gets the submit_time_utc of this InlineResponse2011.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Gets the links of this InlineResponse2011.
 
-        :return: The submit_time_utc of this InlineResponse2011.
-        :rtype: str
+        :return: The links of this InlineResponse2011.
+        :rtype: InlineResponse2011Links
         """
-        return self._submit_time_utc
+        return self._links
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @links.setter
+    def links(self, links):
         """
-        Sets the submit_time_utc of this InlineResponse2011.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Sets the links of this InlineResponse2011.
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse2011.
-        :type: str
+        :param links: The links of this InlineResponse2011.
+        :type: InlineResponse2011Links
         """
 
-        self._submit_time_utc = submit_time_utc
+        self._links = links
 
     @property
-    def status(self):
+    def card(self):
         """
-        Gets the status of this InlineResponse2011.
-        Status of the comment creation. Possible values are: - `COMPLETED` 
+        Gets the card of this InlineResponse2011.
 
-        :return: The status of this InlineResponse2011.
-        :rtype: str
+        :return: The card of this InlineResponse2011.
+        :rtype: InlineResponse2011Card
         """
-        return self._status
+        return self._card
 
-    @status.setter
-    def status(self, status):
+    @card.setter
+    def card(self, card):
         """
-        Sets the status of this InlineResponse2011.
-        Status of the comment creation. Possible values are: - `COMPLETED` 
+        Sets the card of this InlineResponse2011.
 
-        :param status: The status of this InlineResponse2011.
-        :type: str
+        :param card: The card of this InlineResponse2011.
+        :type: InlineResponse2011Card
         """
 
-        self._status = status
+        self._card = card
+
+    @property
+    def tokenized_card(self):
+        """
+        Gets the tokenized_card of this InlineResponse2011.
+
+        :return: The tokenized_card of this InlineResponse2011.
+        :rtype: InlineResponse2011TokenizedCard
+        """
+        return self._tokenized_card
+
+    @tokenized_card.setter
+    def tokenized_card(self, tokenized_card):
+        """
+        Sets the tokenized_card of this InlineResponse2011.
+
+        :param tokenized_card: The tokenized_card of this InlineResponse2011.
+        :type: InlineResponse2011TokenizedCard
+        """
+
+        self._tokenized_card = tokenized_card
 
     def to_dict(self):
         """

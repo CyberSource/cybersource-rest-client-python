@@ -30,6 +30,7 @@ class Ptsv2creditsProcessingInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'action_list': 'list[str]',
         'commerce_indicator': 'str',
         'processor_id': 'str',
         'payment_solution': 'str',
@@ -52,6 +53,7 @@ class Ptsv2creditsProcessingInformation(object):
     }
 
     attribute_map = {
+        'action_list': 'actionList',
         'commerce_indicator': 'commerceIndicator',
         'processor_id': 'processorId',
         'payment_solution': 'paymentSolution',
@@ -73,11 +75,12 @@ class Ptsv2creditsProcessingInformation(object):
         'refund_options': 'refundOptions'
     }
 
-    def __init__(self, commerce_indicator=None, processor_id=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, wallet_type=None, national_net_domestic_data=None, network_routing_order=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, japan_payment_options=None, refund_options=None):
+    def __init__(self, action_list=None, commerce_indicator=None, processor_id=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, wallet_type=None, national_net_domestic_data=None, network_routing_order=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, japan_payment_options=None, refund_options=None):
         """
         Ptsv2creditsProcessingInformation - a model defined in Swagger
         """
 
+        self._action_list = None
         self._commerce_indicator = None
         self._processor_id = None
         self._payment_solution = None
@@ -98,6 +101,8 @@ class Ptsv2creditsProcessingInformation(object):
         self._japan_payment_options = None
         self._refund_options = None
 
+        if action_list is not None:
+          self.action_list = action_list
         if commerce_indicator is not None:
           self.commerce_indicator = commerce_indicator
         if processor_id is not None:
@@ -136,6 +141,29 @@ class Ptsv2creditsProcessingInformation(object):
           self.japan_payment_options = japan_payment_options
         if refund_options is not None:
           self.refund_options = refund_options
+
+    @property
+    def action_list(self):
+        """
+        Gets the action_list of this Ptsv2creditsProcessingInformation.
+        Array of actions (one or more) to be included in the payment to invoke bundled services along with Standalone Credit.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s). 
+
+        :return: The action_list of this Ptsv2creditsProcessingInformation.
+        :rtype: list[str]
+        """
+        return self._action_list
+
+    @action_list.setter
+    def action_list(self, action_list):
+        """
+        Sets the action_list of this Ptsv2creditsProcessingInformation.
+        Array of actions (one or more) to be included in the payment to invoke bundled services along with Standalone Credit.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s). 
+
+        :param action_list: The action_list of this Ptsv2creditsProcessingInformation.
+        :type: list[str]
+        """
+
+        self._action_list = action_list
 
     @property
     def commerce_indicator(self):

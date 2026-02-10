@@ -31,26 +31,31 @@ class TmsEmbeddedInstrumentIdentifierLinks(object):
     """
     swagger_types = {
         '_self': 'TmsEmbeddedInstrumentIdentifierLinksSelf',
-        'payment_instruments': 'TmsEmbeddedInstrumentIdentifierLinksPaymentInstruments'
+        'payment_instruments': 'TmsEmbeddedInstrumentIdentifierLinksPaymentInstruments',
+        'tokenized_cards': 'TmsEmbeddedInstrumentIdentifierLinksTokenizedcards'
     }
 
     attribute_map = {
         '_self': 'self',
-        'payment_instruments': 'paymentInstruments'
+        'payment_instruments': 'paymentInstruments',
+        'tokenized_cards': 'tokenized-cards'
     }
 
-    def __init__(self, _self=None, payment_instruments=None):
+    def __init__(self, _self=None, payment_instruments=None, tokenized_cards=None):
         """
         TmsEmbeddedInstrumentIdentifierLinks - a model defined in Swagger
         """
 
         self.__self = None
         self._payment_instruments = None
+        self._tokenized_cards = None
 
         if _self is not None:
           self._self = _self
         if payment_instruments is not None:
           self.payment_instruments = payment_instruments
+        if tokenized_cards is not None:
+          self.tokenized_cards = tokenized_cards
 
     @property
     def _self(self):
@@ -93,6 +98,27 @@ class TmsEmbeddedInstrumentIdentifierLinks(object):
         """
 
         self._payment_instruments = payment_instruments
+
+    @property
+    def tokenized_cards(self):
+        """
+        Gets the tokenized_cards of this TmsEmbeddedInstrumentIdentifierLinks.
+
+        :return: The tokenized_cards of this TmsEmbeddedInstrumentIdentifierLinks.
+        :rtype: TmsEmbeddedInstrumentIdentifierLinksTokenizedcards
+        """
+        return self._tokenized_cards
+
+    @tokenized_cards.setter
+    def tokenized_cards(self, tokenized_cards):
+        """
+        Sets the tokenized_cards of this TmsEmbeddedInstrumentIdentifierLinks.
+
+        :param tokenized_cards: The tokenized_cards of this TmsEmbeddedInstrumentIdentifierLinks.
+        :type: TmsEmbeddedInstrumentIdentifierLinksTokenizedcards
+        """
+
+        self._tokenized_cards = tokenized_cards
 
     def to_dict(self):
         """

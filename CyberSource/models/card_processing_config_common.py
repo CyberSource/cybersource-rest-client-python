@@ -51,6 +51,7 @@ class CardProcessingConfigCommon(object):
         'sub_merchant_business_name': 'str',
         'prefer_cobadged_secondary_brand': 'bool',
         'merchant_descriptor_information': 'CardProcessingConfigCommonMerchantDescriptorInformation',
+        'acquirer_agreement': 'CardProcessingConfigCommonAcquirerAgreement',
         'government_controlled': 'bool',
         'drop_billing_info': 'bool'
     }
@@ -77,11 +78,12 @@ class CardProcessingConfigCommon(object):
         'sub_merchant_business_name': 'subMerchantBusinessName',
         'prefer_cobadged_secondary_brand': 'preferCobadgedSecondaryBrand',
         'merchant_descriptor_information': 'merchantDescriptorInformation',
+        'acquirer_agreement': 'acquirerAgreement',
         'government_controlled': 'governmentControlled',
         'drop_billing_info': 'dropBillingInfo'
     }
 
-    def __init__(self, processors=None, amex_vendor_code=None, default_auth_type_code=None, master_card_assigned_id=None, enable_partial_auth=None, merchant_category_code=None, sic_code=None, food_and_consumer_service_id=None, enable_split_shipment=None, enable_interchange_optimization=None, visa_delegated_authentication_id=None, credit_card_refund_limit_percent=None, business_center_credit_card_refund_limit_percent=None, allow_captures_greater_than_authorizations=None, enable_duplicate_merchant_reference_number_blocking=None, domestic_merchant_id=None, process_level3_data=None, sub_merchant_id=None, sub_merchant_business_name=None, prefer_cobadged_secondary_brand=None, merchant_descriptor_information=None, government_controlled=None, drop_billing_info=None):
+    def __init__(self, processors=None, amex_vendor_code=None, default_auth_type_code=None, master_card_assigned_id=None, enable_partial_auth=None, merchant_category_code=None, sic_code=None, food_and_consumer_service_id=None, enable_split_shipment=None, enable_interchange_optimization=None, visa_delegated_authentication_id=None, credit_card_refund_limit_percent=None, business_center_credit_card_refund_limit_percent=None, allow_captures_greater_than_authorizations=None, enable_duplicate_merchant_reference_number_blocking=None, domestic_merchant_id=None, process_level3_data=None, sub_merchant_id=None, sub_merchant_business_name=None, prefer_cobadged_secondary_brand=None, merchant_descriptor_information=None, acquirer_agreement=None, government_controlled=None, drop_billing_info=None):
         """
         CardProcessingConfigCommon - a model defined in Swagger
         """
@@ -107,6 +109,7 @@ class CardProcessingConfigCommon(object):
         self._sub_merchant_business_name = None
         self._prefer_cobadged_secondary_brand = None
         self._merchant_descriptor_information = None
+        self._acquirer_agreement = None
         self._government_controlled = None
         self._drop_billing_info = None
 
@@ -152,6 +155,8 @@ class CardProcessingConfigCommon(object):
           self.prefer_cobadged_secondary_brand = prefer_cobadged_secondary_brand
         if merchant_descriptor_information is not None:
           self.merchant_descriptor_information = merchant_descriptor_information
+        if acquirer_agreement is not None:
+          self.acquirer_agreement = acquirer_agreement
         if government_controlled is not None:
           self.government_controlled = government_controlled
         if drop_billing_info is not None:
@@ -637,6 +642,27 @@ class CardProcessingConfigCommon(object):
         """
 
         self._merchant_descriptor_information = merchant_descriptor_information
+
+    @property
+    def acquirer_agreement(self):
+        """
+        Gets the acquirer_agreement of this CardProcessingConfigCommon.
+
+        :return: The acquirer_agreement of this CardProcessingConfigCommon.
+        :rtype: CardProcessingConfigCommonAcquirerAgreement
+        """
+        return self._acquirer_agreement
+
+    @acquirer_agreement.setter
+    def acquirer_agreement(self, acquirer_agreement):
+        """
+        Sets the acquirer_agreement of this CardProcessingConfigCommon.
+
+        :param acquirer_agreement: The acquirer_agreement of this CardProcessingConfigCommon.
+        :type: CardProcessingConfigCommonAcquirerAgreement
+        """
+
+        self._acquirer_agreement = acquirer_agreement
 
     @property
     def government_controlled(self):

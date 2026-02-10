@@ -30,14 +30,6 @@ class TestOffersApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_offer(self):
-        """
-        Test case for create_offer
-
-        Create an Offer
-        """
-        pass
-
     def test_get_offer(self):
         """
         Test case for get_offer

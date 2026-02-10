@@ -32,28 +32,33 @@ class PtsV2PaymentsPost201ResponseMerchantInformation(object):
     swagger_types = {
         'merchant_name': 'str',
         'merchant_descriptor': 'PtsV2PaymentsPost201ResponseMerchantInformationMerchantDescriptor',
+        'category_code': 'str',
         'return_url': 'str'
     }
 
     attribute_map = {
         'merchant_name': 'merchantName',
         'merchant_descriptor': 'merchantDescriptor',
+        'category_code': 'categoryCode',
         'return_url': 'returnUrl'
     }
 
-    def __init__(self, merchant_name=None, merchant_descriptor=None, return_url=None):
+    def __init__(self, merchant_name=None, merchant_descriptor=None, category_code=None, return_url=None):
         """
         PtsV2PaymentsPost201ResponseMerchantInformation - a model defined in Swagger
         """
 
         self._merchant_name = None
         self._merchant_descriptor = None
+        self._category_code = None
         self._return_url = None
 
         if merchant_name is not None:
           self.merchant_name = merchant_name
         if merchant_descriptor is not None:
           self.merchant_descriptor = merchant_descriptor
+        if category_code is not None:
+          self.category_code = category_code
         if return_url is not None:
           self.return_url = return_url
 
@@ -100,6 +105,29 @@ class PtsV2PaymentsPost201ResponseMerchantInformation(object):
         """
 
         self._merchant_descriptor = merchant_descriptor
+
+    @property
+    def category_code(self):
+        """
+        Gets the category_code of this PtsV2PaymentsPost201ResponseMerchantInformation.
+        The value for this field is a four-digit number that the payment card industry uses to classify merchants into market segments. A payment card company assigned one or more of these values to your business when you started accepting the payment card company's cards. When you do not include this field in your request, Cybersource uses the value in your Cybersource account. Use this field only for clearing with your acquirer. 
+
+        :return: The category_code of this PtsV2PaymentsPost201ResponseMerchantInformation.
+        :rtype: str
+        """
+        return self._category_code
+
+    @category_code.setter
+    def category_code(self, category_code):
+        """
+        Sets the category_code of this PtsV2PaymentsPost201ResponseMerchantInformation.
+        The value for this field is a four-digit number that the payment card industry uses to classify merchants into market segments. A payment card company assigned one or more of these values to your business when you started accepting the payment card company's cards. When you do not include this field in your request, Cybersource uses the value in your Cybersource account. Use this field only for clearing with your acquirer. 
+
+        :param category_code: The category_code of this PtsV2PaymentsPost201ResponseMerchantInformation.
+        :type: str
+        """
+
+        self._category_code = category_code
 
     @property
     def return_url(self):

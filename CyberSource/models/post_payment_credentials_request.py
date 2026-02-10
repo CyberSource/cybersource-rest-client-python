@@ -33,10 +33,10 @@ class PostPaymentCredentialsRequest(object):
         'payment_credential_type': 'str',
         'transaction_type': 'str',
         'client_correlation_id': 'str',
-        'order_information': 'Tmsv2tokenstokenIdpaymentcredentialsOrderInformation',
-        'merchant_information': 'Tmsv2tokenstokenIdpaymentcredentialsMerchantInformation',
-        'device_information': 'Tmsv2tokenstokenIdpaymentcredentialsDeviceInformation',
-        'authenticated_identities': 'list[Tmsv2tokenstokenIdpaymentcredentialsAuthenticatedIdentities]'
+        'order_information': 'Tmsv3tokenstokenIdpaymentcredentialsOrderInformation',
+        'merchant_information': 'Tmsv3tokenstokenIdpaymentcredentialsMerchantInformation',
+        'device_information': 'Tmsv3tokenstokenIdpaymentcredentialsDeviceInformation',
+        'authenticated_identities': 'list[Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities]'
     }
 
     attribute_map = {
@@ -152,7 +152,7 @@ class PostPaymentCredentialsRequest(object):
         Gets the order_information of this PostPaymentCredentialsRequest.
 
         :return: The order_information of this PostPaymentCredentialsRequest.
-        :rtype: Tmsv2tokenstokenIdpaymentcredentialsOrderInformation
+        :rtype: Tmsv3tokenstokenIdpaymentcredentialsOrderInformation
         """
         return self._order_information
 
@@ -162,7 +162,7 @@ class PostPaymentCredentialsRequest(object):
         Sets the order_information of this PostPaymentCredentialsRequest.
 
         :param order_information: The order_information of this PostPaymentCredentialsRequest.
-        :type: Tmsv2tokenstokenIdpaymentcredentialsOrderInformation
+        :type: Tmsv3tokenstokenIdpaymentcredentialsOrderInformation
         """
 
         self._order_information = order_information
@@ -173,7 +173,7 @@ class PostPaymentCredentialsRequest(object):
         Gets the merchant_information of this PostPaymentCredentialsRequest.
 
         :return: The merchant_information of this PostPaymentCredentialsRequest.
-        :rtype: Tmsv2tokenstokenIdpaymentcredentialsMerchantInformation
+        :rtype: Tmsv3tokenstokenIdpaymentcredentialsMerchantInformation
         """
         return self._merchant_information
 
@@ -183,7 +183,7 @@ class PostPaymentCredentialsRequest(object):
         Sets the merchant_information of this PostPaymentCredentialsRequest.
 
         :param merchant_information: The merchant_information of this PostPaymentCredentialsRequest.
-        :type: Tmsv2tokenstokenIdpaymentcredentialsMerchantInformation
+        :type: Tmsv3tokenstokenIdpaymentcredentialsMerchantInformation
         """
 
         self._merchant_information = merchant_information
@@ -194,7 +194,7 @@ class PostPaymentCredentialsRequest(object):
         Gets the device_information of this PostPaymentCredentialsRequest.
 
         :return: The device_information of this PostPaymentCredentialsRequest.
-        :rtype: Tmsv2tokenstokenIdpaymentcredentialsDeviceInformation
+        :rtype: Tmsv3tokenstokenIdpaymentcredentialsDeviceInformation
         """
         return self._device_information
 
@@ -204,7 +204,7 @@ class PostPaymentCredentialsRequest(object):
         Sets the device_information of this PostPaymentCredentialsRequest.
 
         :param device_information: The device_information of this PostPaymentCredentialsRequest.
-        :type: Tmsv2tokenstokenIdpaymentcredentialsDeviceInformation
+        :type: Tmsv3tokenstokenIdpaymentcredentialsDeviceInformation
         """
 
         self._device_information = device_information
@@ -215,7 +215,7 @@ class PostPaymentCredentialsRequest(object):
         Gets the authenticated_identities of this PostPaymentCredentialsRequest.
 
         :return: The authenticated_identities of this PostPaymentCredentialsRequest.
-        :rtype: list[Tmsv2tokenstokenIdpaymentcredentialsAuthenticatedIdentities]
+        :rtype: list[Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities]
         """
         return self._authenticated_identities
 
@@ -225,7 +225,7 @@ class PostPaymentCredentialsRequest(object):
         Sets the authenticated_identities of this PostPaymentCredentialsRequest.
 
         :param authenticated_identities: The authenticated_identities of this PostPaymentCredentialsRequest.
-        :type: list[Tmsv2tokenstokenIdpaymentcredentialsAuthenticatedIdentities]
+        :type: list[Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities]
         """
 
         self._authenticated_identities = authenticated_identities
