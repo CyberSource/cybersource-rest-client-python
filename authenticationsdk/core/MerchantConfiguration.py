@@ -607,7 +607,14 @@ class MerchantConfiguration:
             for keys, values in list(details_copy.items()):
                 details_copy[keys] = str(values)
 
-        self.logger.info("Mconfig >      " + str(ast.literal_eval(json.dumps(details_copy))))
+        try:
+            _sanitized = {
+                k: v if isinstance(v, (str, int, float, bool, type(None))) else str(v)
+                for k, v in details_copy.items()
+            }
+            self.logger.info("Mconfig >      " + str(json.loads(json.dumps(_sanitized))))
+        except (TypeError, ValueError) as e:
+            self.logger.debug("Mconfig (log serialize skipped): %s", e)
 
         import numbers
         if not isinstance(self.max_num_idle_connections, numbers.Number):
