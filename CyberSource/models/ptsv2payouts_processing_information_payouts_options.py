@@ -140,7 +140,7 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
     def account_funding_reference_id(self):
         """
         Gets the account_funding_reference_id of this Ptsv2payoutsProcessingInformationPayoutsOptions.
-        Visa-generated transaction identifier (TID) that is unique for each original authorization and financial request. * Applicable only for CTV for Payouts. 
+        Visa (maxLength of 15) or MasterCard (maxLength of 40) generated transaction identifier (TID) that is unique for each original authorization and financial request. * Applicable only for CTV for Payouts. 
 
         :return: The account_funding_reference_id of this Ptsv2payoutsProcessingInformationPayoutsOptions.
         :rtype: str
@@ -151,7 +151,7 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
     def account_funding_reference_id(self, account_funding_reference_id):
         """
         Sets the account_funding_reference_id of this Ptsv2payoutsProcessingInformationPayoutsOptions.
-        Visa-generated transaction identifier (TID) that is unique for each original authorization and financial request. * Applicable only for CTV for Payouts. 
+        Visa (maxLength of 15) or MasterCard (maxLength of 40) generated transaction identifier (TID) that is unique for each original authorization and financial request. * Applicable only for CTV for Payouts. 
 
         :param account_funding_reference_id: The account_funding_reference_id of this Ptsv2payoutsProcessingInformationPayoutsOptions.
         :type: str

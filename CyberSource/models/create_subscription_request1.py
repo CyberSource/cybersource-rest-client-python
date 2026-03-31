@@ -34,7 +34,7 @@ class CreateSubscriptionRequest1(object):
         'processing_information': 'Rbsv1subscriptionsProcessingInformation',
         'plan_information': 'Rbsv1subscriptionsPlanInformation',
         'subscription_information': 'Rbsv1subscriptionsSubscriptionInformation',
-        'order_information': 'GetAllPlansResponseOrderInformation'
+        'order_information': 'Rbsv1subscriptionsOrderInformation'
     }
 
     attribute_map = {
@@ -157,7 +157,7 @@ class CreateSubscriptionRequest1(object):
         Gets the order_information of this CreateSubscriptionRequest1.
 
         :return: The order_information of this CreateSubscriptionRequest1.
-        :rtype: GetAllPlansResponseOrderInformation
+        :rtype: Rbsv1subscriptionsOrderInformation
         """
         return self._order_information
 
@@ -167,7 +167,7 @@ class CreateSubscriptionRequest1(object):
         Sets the order_information of this CreateSubscriptionRequest1.
 
         :param order_information: The order_information of this CreateSubscriptionRequest1.
-        :type: GetAllPlansResponseOrderInformation
+        :type: Rbsv1subscriptionsOrderInformation
         """
 
         self._order_information = order_information

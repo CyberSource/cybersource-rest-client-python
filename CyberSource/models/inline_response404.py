@@ -30,73 +30,43 @@ class InlineResponse404(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
-        'status': 'str'
+        'errors': 'list[InlineResponse404Errors]'
     }
 
     attribute_map = {
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status'
+        'errors': 'errors'
     }
 
-    def __init__(self, submit_time_utc=None, status=None):
+    def __init__(self, errors=None):
         """
         InlineResponse404 - a model defined in Swagger
         """
 
-        self._submit_time_utc = None
-        self._status = None
+        self._errors = None
 
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
+        if errors is not None:
+          self.errors = errors
 
     @property
-    def submit_time_utc(self):
+    def errors(self):
         """
-        Gets the submit_time_utc of this InlineResponse404.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Gets the errors of this InlineResponse404.
 
-        :return: The submit_time_utc of this InlineResponse404.
-        :rtype: str
+        :return: The errors of this InlineResponse404.
+        :rtype: list[InlineResponse404Errors]
         """
-        return self._submit_time_utc
+        return self._errors
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @errors.setter
+    def errors(self, errors):
         """
-        Sets the submit_time_utc of this InlineResponse404.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Sets the errors of this InlineResponse404.
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse404.
-        :type: str
+        :param errors: The errors of this InlineResponse404.
+        :type: list[InlineResponse404Errors]
         """
 
-        self._submit_time_utc = submit_time_utc
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse404.
-        The status of the submitted transaction.  Possible values:  - NOT_FOUND 
-
-        :return: The status of this InlineResponse404.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse404.
-        The status of the submitted transaction.  Possible values:  - NOT_FOUND 
-
-        :param status: The status of this InlineResponse404.
-        :type: str
-        """
-
-        self._status = status
+        self._errors = errors
 
     def to_dict(self):
         """

@@ -36,8 +36,8 @@ class Upv1capturecontextsDataOrderInformationBillToCompany(object):
         'address3': 'str',
         'address4': 'str',
         'administrative_area': 'str',
-        'building_number': 'str',
         'country': 'str',
+        'building_number': 'str',
         'district': 'str',
         'locality': 'str',
         'postal_code': 'str'
@@ -50,14 +50,14 @@ class Upv1capturecontextsDataOrderInformationBillToCompany(object):
         'address3': 'address3',
         'address4': 'address4',
         'administrative_area': 'administrativeArea',
-        'building_number': 'buildingNumber',
         'country': 'country',
+        'building_number': 'buildingNumber',
         'district': 'district',
         'locality': 'locality',
         'postal_code': 'postalCode'
     }
 
-    def __init__(self, name=None, address1=None, address2=None, address3=None, address4=None, administrative_area=None, building_number=None, country=None, district=None, locality=None, postal_code=None):
+    def __init__(self, name=None, address1=None, address2=None, address3=None, address4=None, administrative_area=None, country=None, building_number=None, district=None, locality=None, postal_code=None):
         """
         Upv1capturecontextsDataOrderInformationBillToCompany - a model defined in Swagger
         """
@@ -68,8 +68,8 @@ class Upv1capturecontextsDataOrderInformationBillToCompany(object):
         self._address3 = None
         self._address4 = None
         self._administrative_area = None
-        self._building_number = None
         self._country = None
+        self._building_number = None
         self._district = None
         self._locality = None
         self._postal_code = None
@@ -86,10 +86,10 @@ class Upv1capturecontextsDataOrderInformationBillToCompany(object):
           self.address4 = address4
         if administrative_area is not None:
           self.administrative_area = administrative_area
-        if building_number is not None:
-          self.building_number = building_number
         if country is not None:
           self.country = country
+        if building_number is not None:
+          self.building_number = building_number
         if district is not None:
           self.district = district
         if locality is not None:
@@ -170,7 +170,7 @@ class Upv1capturecontextsDataOrderInformationBillToCompany(object):
     def address3(self):
         """
         Gets the address3 of this Upv1capturecontextsDataOrderInformationBillToCompany.
-        Additional address information (third line of the billing address)
+        Additional address information (third line of the billing address) Optional field. 
 
         :return: The address3 of this Upv1capturecontextsDataOrderInformationBillToCompany.
         :rtype: str
@@ -181,7 +181,7 @@ class Upv1capturecontextsDataOrderInformationBillToCompany(object):
     def address3(self, address3):
         """
         Sets the address3 of this Upv1capturecontextsDataOrderInformationBillToCompany.
-        Additional address information (third line of the billing address)
+        Additional address information (third line of the billing address) Optional field. 
 
         :param address3: The address3 of this Upv1capturecontextsDataOrderInformationBillToCompany.
         :type: str
@@ -193,7 +193,7 @@ class Upv1capturecontextsDataOrderInformationBillToCompany(object):
     def address4(self):
         """
         Gets the address4 of this Upv1capturecontextsDataOrderInformationBillToCompany.
-        Additional address information (fourth line of the billing address) 
+        Additional address information (fourth line of the billing address) Optional field 
 
         :return: The address4 of this Upv1capturecontextsDataOrderInformationBillToCompany.
         :rtype: str
@@ -204,7 +204,7 @@ class Upv1capturecontextsDataOrderInformationBillToCompany(object):
     def address4(self, address4):
         """
         Sets the address4 of this Upv1capturecontextsDataOrderInformationBillToCompany.
-        Additional address information (fourth line of the billing address) 
+        Additional address information (fourth line of the billing address) Optional field 
 
         :param address4: The address4 of this Upv1capturecontextsDataOrderInformationBillToCompany.
         :type: str
@@ -236,29 +236,6 @@ class Upv1capturecontextsDataOrderInformationBillToCompany(object):
         self._administrative_area = administrative_area
 
     @property
-    def building_number(self):
-        """
-        Gets the building_number of this Upv1capturecontextsDataOrderInformationBillToCompany.
-        Building number in the street address. 
-
-        :return: The building_number of this Upv1capturecontextsDataOrderInformationBillToCompany.
-        :rtype: str
-        """
-        return self._building_number
-
-    @building_number.setter
-    def building_number(self, building_number):
-        """
-        Sets the building_number of this Upv1capturecontextsDataOrderInformationBillToCompany.
-        Building number in the street address. 
-
-        :param building_number: The building_number of this Upv1capturecontextsDataOrderInformationBillToCompany.
-        :type: str
-        """
-
-        self._building_number = building_number
-
-    @property
     def country(self):
         """
         Gets the country of this Upv1capturecontextsDataOrderInformationBillToCompany.
@@ -280,6 +257,29 @@ class Upv1capturecontextsDataOrderInformationBillToCompany(object):
         """
 
         self._country = country
+
+    @property
+    def building_number(self):
+        """
+        Gets the building_number of this Upv1capturecontextsDataOrderInformationBillToCompany.
+        Building number in the street address. 
+
+        :return: The building_number of this Upv1capturecontextsDataOrderInformationBillToCompany.
+        :rtype: str
+        """
+        return self._building_number
+
+    @building_number.setter
+    def building_number(self, building_number):
+        """
+        Sets the building_number of this Upv1capturecontextsDataOrderInformationBillToCompany.
+        Building number in the street address. 
+
+        :param building_number: The building_number of this Upv1capturecontextsDataOrderInformationBillToCompany.
+        :type: str
+        """
+
+        self._building_number = building_number
 
     @property
     def district(self):

@@ -163,7 +163,7 @@ class Ptsv1pushfundstransferProcessingInformationPayoutsOptions(object):
     def account_funding_reference_id(self):
         """
         Gets the account_funding_reference_id of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
-        Visa-generated transaction identifier (TID) that is unique for each original authorization and financial request. 
+        Visa (maxLength of 15) or MasterCard (maxLength of 40) generated transaction identifier (TID) that is unique for each original authorization and financial request. 
 
         :return: The account_funding_reference_id of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
         :rtype: str
@@ -174,7 +174,7 @@ class Ptsv1pushfundstransferProcessingInformationPayoutsOptions(object):
     def account_funding_reference_id(self, account_funding_reference_id):
         """
         Sets the account_funding_reference_id of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
-        Visa-generated transaction identifier (TID) that is unique for each original authorization and financial request. 
+        Visa (maxLength of 15) or MasterCard (maxLength of 40) generated transaction identifier (TID) that is unique for each original authorization and financial request. 
 
         :param account_funding_reference_id: The account_funding_reference_id of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
         :type: str

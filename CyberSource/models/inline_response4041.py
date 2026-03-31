@@ -31,47 +31,32 @@ class InlineResponse4041(object):
     """
     swagger_types = {
         'submit_time_utc': 'str',
-        'status': 'int',
-        'reason': 'str',
-        'message': 'str',
-        'details': 'list[InlineResponse4041Details]'
+        'status': 'str'
     }
 
     attribute_map = {
         'submit_time_utc': 'submitTimeUtc',
-        'status': 'status',
-        'reason': 'reason',
-        'message': 'message',
-        'details': 'details'
+        'status': 'status'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, details=None):
+    def __init__(self, submit_time_utc=None, status=None):
         """
         InlineResponse4041 - a model defined in Swagger
         """
 
         self._submit_time_utc = None
         self._status = None
-        self._reason = None
-        self._message = None
-        self._details = None
 
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
         if status is not None:
           self.status = status
-        if reason is not None:
-          self.reason = reason
-        if message is not None:
-          self.message = message
-        if details is not None:
-          self.details = details
 
     @property
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this InlineResponse4041.
-        The time the response was submitted
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
 
         :return: The submit_time_utc of this InlineResponse4041.
         :rtype: str
@@ -82,7 +67,7 @@ class InlineResponse4041(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this InlineResponse4041.
-        The time the response was submitted
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
 
         :param submit_time_utc: The submit_time_utc of this InlineResponse4041.
         :type: str
@@ -94,10 +79,10 @@ class InlineResponse4041(object):
     def status(self):
         """
         Gets the status of this InlineResponse4041.
-        The status code of the response
+        The status of the submitted transaction.  Possible values:  - NOT_FOUND 
 
         :return: The status of this InlineResponse4041.
-        :rtype: int
+        :rtype: str
         """
         return self._status
 
@@ -105,82 +90,13 @@ class InlineResponse4041(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse4041.
-        The status code of the response
+        The status of the submitted transaction.  Possible values:  - NOT_FOUND 
 
         :param status: The status of this InlineResponse4041.
-        :type: int
+        :type: str
         """
 
         self._status = status
-
-    @property
-    def reason(self):
-        """
-        Gets the reason of this InlineResponse4041.
-        The reason for the response
-
-        :return: The reason of this InlineResponse4041.
-        :rtype: str
-        """
-        return self._reason
-
-    @reason.setter
-    def reason(self, reason):
-        """
-        Sets the reason of this InlineResponse4041.
-        The reason for the response
-
-        :param reason: The reason of this InlineResponse4041.
-        :type: str
-        """
-
-        self._reason = reason
-
-    @property
-    def message(self):
-        """
-        Gets the message of this InlineResponse4041.
-        The message of the response
-
-        :return: The message of this InlineResponse4041.
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """
-        Sets the message of this InlineResponse4041.
-        The message of the response
-
-        :param message: The message of this InlineResponse4041.
-        :type: str
-        """
-
-        self._message = message
-
-    @property
-    def details(self):
-        """
-        Gets the details of this InlineResponse4041.
-        The details of the validation error
-
-        :return: The details of this InlineResponse4041.
-        :rtype: list[InlineResponse4041Details]
-        """
-        return self._details
-
-    @details.setter
-    def details(self, details):
-        """
-        Sets the details of this InlineResponse4041.
-        The details of the validation error
-
-        :param details: The details of this InlineResponse4041.
-        :type: list[InlineResponse4041Details]
-        """
-
-        self._details = details
 
     def to_dict(self):
         """

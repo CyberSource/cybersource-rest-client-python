@@ -104,7 +104,7 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
     def network_transaction_id(self):
         """
         Gets the network_transaction_id of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
-        Network Transaction Identifier Applicable for online capture transactions only. 
+        Same value as `processorInformation.transactionId`
 
         :return: The network_transaction_id of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
         :rtype: str
@@ -115,7 +115,7 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
     def network_transaction_id(self, network_transaction_id):
         """
         Sets the network_transaction_id of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
-        Network Transaction Identifier Applicable for online capture transactions only. 
+        Same value as `processorInformation.transactionId`
 
         :param network_transaction_id: The network_transaction_id of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
         :type: str

@@ -109,7 +109,7 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard(object):
     def security_code(self):
         """
         Gets the security_code of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
-        3-digit value that indicates the cardCvv2Value. Values can be 0-9. 
+        4-digit value that indicates the cardCvv2Value. Values can be 0-9. 
 
         :return: The security_code of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
         :rtype: str
@@ -120,7 +120,7 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard(object):
     def security_code(self, security_code):
         """
         Sets the security_code of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
-        3-digit value that indicates the cardCvv2Value. Values can be 0-9. 
+        4-digit value that indicates the cardCvv2Value. Values can be 0-9. 
 
         :param security_code: The security_code of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
         :type: str

@@ -57,6 +57,7 @@ class Ptsv2paymentsProcessingInformation(object):
         'loan_options': 'Ptsv2paymentsProcessingInformationLoanOptions',
         'wallet_type': 'str',
         'national_net_domestic_data': 'str',
+        'merchant_verification_value': 'str',
         'japan_payment_options': 'Ptsv2paymentsProcessingInformationJapanPaymentOptions',
         'mobile_remote_payment_type': 'str',
         'extended_credit_total_count': 'str',
@@ -102,6 +103,7 @@ class Ptsv2paymentsProcessingInformation(object):
         'loan_options': 'loanOptions',
         'wallet_type': 'walletType',
         'national_net_domestic_data': 'nationalNetDomesticData',
+        'merchant_verification_value': 'merchantVerificationValue',
         'japan_payment_options': 'japanPaymentOptions',
         'mobile_remote_payment_type': 'mobileRemotePaymentType',
         'extended_credit_total_count': 'extendedCreditTotalCount',
@@ -119,7 +121,7 @@ class Ptsv2paymentsProcessingInformation(object):
         'original_payment_id': 'originalPaymentId'
     }
 
-    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, timeout=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None, enabler_id=None, processing_instruction=None, transaction_type_indicator=None, purpose_of_payment=None, language_code=None, original_payment_id=None):
+    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, merchant_verification_value=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, timeout=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None, enabler_id=None, processing_instruction=None, transaction_type_indicator=None, purpose_of_payment=None, language_code=None, original_payment_id=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
@@ -151,6 +153,7 @@ class Ptsv2paymentsProcessingInformation(object):
         self._loan_options = None
         self._wallet_type = None
         self._national_net_domestic_data = None
+        self._merchant_verification_value = None
         self._japan_payment_options = None
         self._mobile_remote_payment_type = None
         self._extended_credit_total_count = None
@@ -221,6 +224,8 @@ class Ptsv2paymentsProcessingInformation(object):
           self.wallet_type = wallet_type
         if national_net_domestic_data is not None:
           self.national_net_domestic_data = national_net_domestic_data
+        if merchant_verification_value is not None:
+          self.merchant_verification_value = merchant_verification_value
         if japan_payment_options is not None:
           self.japan_payment_options = japan_payment_options
         if mobile_remote_payment_type is not None:
@@ -858,6 +863,29 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._national_net_domestic_data = national_net_domestic_data
+
+    @property
+    def merchant_verification_value(self):
+        """
+        Gets the merchant_verification_value of this Ptsv2paymentsProcessingInformation.
+        The override value of the Merchant Verification Value (MVV) received by various card brands. MVV refers to the value assigned by the card brand/network to identify participation in select merchant programs.  Sample value for Visa: `101010` 
+
+        :return: The merchant_verification_value of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._merchant_verification_value
+
+    @merchant_verification_value.setter
+    def merchant_verification_value(self, merchant_verification_value):
+        """
+        Sets the merchant_verification_value of this Ptsv2paymentsProcessingInformation.
+        The override value of the Merchant Verification Value (MVV) received by various card brands. MVV refers to the value assigned by the card brand/network to identify participation in select merchant programs.  Sample value for Visa: `101010` 
+
+        :param merchant_verification_value: The merchant_verification_value of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._merchant_verification_value = merchant_verification_value
 
     @property
     def japan_payment_options(self):

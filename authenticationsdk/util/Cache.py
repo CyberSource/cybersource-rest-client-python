@@ -19,10 +19,11 @@ from authenticationsdk.util.Utility import parse_p12_file
 import os
 
 class CertInfo:
-    def __init__(self, certificate, timestamp, private_key):
+    def __init__(self, certificate, timestamp, private_key, x509Certificate=None):
         self.certificate = certificate
         self.timestamp = timestamp
         self.private_key = private_key
+        self.x509_certificate = x509Certificate
 
 class FileCache:
     _instance = None
@@ -65,11 +66,11 @@ class FileCache:
         jwt_certificate_pem = jwt_certificate.public_bytes(serialization.Encoding.PEM)
         jwt_certificate_pem_unicode_str = jwt_certificate_pem.decode('utf-8')
         jwt_certificate_der_format = base64.b64encode(ssl.PEM_cert_to_DER_cert(jwt_certificate_pem_unicode_str))
-
         certificate_information = CertInfo(
             jwt_certificate_der_format,
             file_last_modified_time,
-            private_key
+            private_key,
+            jwt_certificate
         )
 
         with self._p12_cache_lock:

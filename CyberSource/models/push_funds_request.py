@@ -37,6 +37,7 @@ class PushFundsRequest(object):
         'recipient_information': 'Ptsv1pushfundstransferRecipientInformation',
         'sender_information': 'Ptsv1pushfundstransferSenderInformation',
         'merchant_information': 'Ptsv1pushfundstransferMerchantInformation',
+        'payment_information': 'Ptsv1pushfundstransferPaymentInformation',
         'point_of_service_information': 'Ptsv1pushfundstransferPointOfServiceInformation'
     }
 
@@ -48,10 +49,11 @@ class PushFundsRequest(object):
         'recipient_information': 'recipientInformation',
         'sender_information': 'senderInformation',
         'merchant_information': 'merchantInformation',
+        'payment_information': 'paymentInformation',
         'point_of_service_information': 'pointOfServiceInformation'
     }
 
-    def __init__(self, aggregator_information=None, client_reference_information=None, order_information=None, processing_information=None, recipient_information=None, sender_information=None, merchant_information=None, point_of_service_information=None):
+    def __init__(self, aggregator_information=None, client_reference_information=None, order_information=None, processing_information=None, recipient_information=None, sender_information=None, merchant_information=None, payment_information=None, point_of_service_information=None):
         """
         PushFundsRequest - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class PushFundsRequest(object):
         self._recipient_information = None
         self._sender_information = None
         self._merchant_information = None
+        self._payment_information = None
         self._point_of_service_information = None
 
         if aggregator_information is not None:
@@ -78,6 +81,8 @@ class PushFundsRequest(object):
           self.sender_information = sender_information
         if merchant_information is not None:
           self.merchant_information = merchant_information
+        if payment_information is not None:
+          self.payment_information = payment_information
         if point_of_service_information is not None:
           self.point_of_service_information = point_of_service_information
 
@@ -227,6 +232,27 @@ class PushFundsRequest(object):
         """
 
         self._merchant_information = merchant_information
+
+    @property
+    def payment_information(self):
+        """
+        Gets the payment_information of this PushFundsRequest.
+
+        :return: The payment_information of this PushFundsRequest.
+        :rtype: Ptsv1pushfundstransferPaymentInformation
+        """
+        return self._payment_information
+
+    @payment_information.setter
+    def payment_information(self, payment_information):
+        """
+        Sets the payment_information of this PushFundsRequest.
+
+        :param payment_information: The payment_information of this PushFundsRequest.
+        :type: Ptsv1pushfundstransferPaymentInformation
+        """
+
+        self._payment_information = payment_information
 
     @property
     def point_of_service_information(self):

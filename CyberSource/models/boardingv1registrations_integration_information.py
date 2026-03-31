@@ -31,26 +31,31 @@ class Boardingv1registrationsIntegrationInformation(object):
     """
     swagger_types = {
         'oauth2': 'list[Boardingv1registrationsIntegrationInformationOauth2]',
-        'tenant_configurations': 'list[Boardingv1registrationsIntegrationInformationTenantConfigurations]'
+        'tenant_configurations': 'list[Boardingv1registrationsIntegrationInformationTenantConfigurations]',
+        'msd': 'Boardingv1registrationsIntegrationInformationMsd'
     }
 
     attribute_map = {
         'oauth2': 'oauth2',
-        'tenant_configurations': 'tenantConfigurations'
+        'tenant_configurations': 'tenantConfigurations',
+        'msd': 'msd'
     }
 
-    def __init__(self, oauth2=None, tenant_configurations=None):
+    def __init__(self, oauth2=None, tenant_configurations=None, msd=None):
         """
         Boardingv1registrationsIntegrationInformation - a model defined in Swagger
         """
 
         self._oauth2 = None
         self._tenant_configurations = None
+        self._msd = None
 
         if oauth2 is not None:
           self.oauth2 = oauth2
         if tenant_configurations is not None:
           self.tenant_configurations = tenant_configurations
+        if msd is not None:
+          self.msd = msd
 
     @property
     def oauth2(self):
@@ -95,6 +100,27 @@ class Boardingv1registrationsIntegrationInformation(object):
         """
 
         self._tenant_configurations = tenant_configurations
+
+    @property
+    def msd(self):
+        """
+        Gets the msd of this Boardingv1registrationsIntegrationInformation.
+
+        :return: The msd of this Boardingv1registrationsIntegrationInformation.
+        :rtype: Boardingv1registrationsIntegrationInformationMsd
+        """
+        return self._msd
+
+    @msd.setter
+    def msd(self, msd):
+        """
+        Sets the msd of this Boardingv1registrationsIntegrationInformation.
+
+        :param msd: The msd of this Boardingv1registrationsIntegrationInformation.
+        :type: Boardingv1registrationsIntegrationInformationMsd
+        """
+
+        self._msd = msd
 
     def to_dict(self):
         """

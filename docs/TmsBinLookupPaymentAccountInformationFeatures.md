@@ -26,8 +26,11 @@ Name | Type | Description | Notes
 **product_id_subtype** | **str** | This field contains the Visa-assigned product subtype identifier associated with the BIN. This field is only supported for Visa BINs. Example values:   - BB   - EX   - L2   - C2  | [optional] 
 **three_ds_support** | **bool** | This field indicates if the payment instrument supports 3D Secure authentication. Possible values:     - &#x60;true&#x60;     - &#x60;false&#x60;  | [optional] 
 **si_eligible** | **bool** | This field indicates if the payment instrument is eligible for Standing Instructions (recurring payments). Possible values:     - &#x60;true&#x60;     - &#x60;false&#x60;  | [optional] 
-**emi_eligible** | **bool** | This field indicates if the card is eligible for Equated Monthly Installments (EMI). Possible values:     - &#x60;true&#x60;     - &#x60;false&#x60;  | [optional] 
+**emi_eligible** | **bool** | This field indicates if the payment instrument is eligible for Equated Monthly Installments (EMI). Possible values:     - &#x60;true&#x60;     - &#x60;false&#x60;  | [optional] 
 **fleet_card** | **bool** | This field indicates if the BIN is designated for fuel/fleet usage. These specialized BINs support additional Level2/Level 3 transaction data. Possible values:     - &#x60;true&#x60;     - &#x60;false&#x60;  | [optional] 
+**atm_enabled** | **bool** | This field indicates if the payment instrument is enabled for ATM usage. Possible values:     - &#x60;true&#x60;     - &#x60;false&#x60;  | [optional] 
+**pos_enabled** | **bool** | This field indicates if the payment instrument is enabled for POS usage. Possible values:     - &#x60;true&#x60;     - &#x60;false&#x60;  | [optional] 
+**ecom_enabled** | **bool** | This field indicates if the payment instrument is enabled for ECOM usage. Possible values:     - &#x60;true&#x60;     - &#x60;false&#x60;  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

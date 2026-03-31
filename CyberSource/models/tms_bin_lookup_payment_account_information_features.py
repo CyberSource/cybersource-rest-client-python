@@ -54,7 +54,10 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         'three_ds_support': 'bool',
         'si_eligible': 'bool',
         'emi_eligible': 'bool',
-        'fleet_card': 'bool'
+        'fleet_card': 'bool',
+        'atm_enabled': 'bool',
+        'pos_enabled': 'bool',
+        'ecom_enabled': 'bool'
     }
 
     attribute_map = {
@@ -82,10 +85,13 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         'three_ds_support': 'threeDSSupport',
         'si_eligible': 'siEligible',
         'emi_eligible': 'emiEligible',
-        'fleet_card': 'fleetCard'
+        'fleet_card': 'fleetCard',
+        'atm_enabled': 'atmEnabled',
+        'pos_enabled': 'posEnabled',
+        'ecom_enabled': 'ecomEnabled'
     }
 
-    def __init__(self, account_funding_source=None, account_funding_source_sub_type=None, card_product=None, message_type=None, acceptance_level=None, card_platform=None, combo_card=None, corporate_purchase=None, health_card=None, shared_bin=None, pos_domestic_only=None, gambling_allowed=None, commercial_card_level2=None, commercial_card_level3=None, exempt_bin=None, account_level_management=None, online_gambling_block=None, auto_substantiation=None, flex_credential=None, product_id=None, product_id_subtype=None, three_ds_support=None, si_eligible=None, emi_eligible=None, fleet_card=None):
+    def __init__(self, account_funding_source=None, account_funding_source_sub_type=None, card_product=None, message_type=None, acceptance_level=None, card_platform=None, combo_card=None, corporate_purchase=None, health_card=None, shared_bin=None, pos_domestic_only=None, gambling_allowed=None, commercial_card_level2=None, commercial_card_level3=None, exempt_bin=None, account_level_management=None, online_gambling_block=None, auto_substantiation=None, flex_credential=None, product_id=None, product_id_subtype=None, three_ds_support=None, si_eligible=None, emi_eligible=None, fleet_card=None, atm_enabled=None, pos_enabled=None, ecom_enabled=None):
         """
         TmsBinLookupPaymentAccountInformationFeatures - a model defined in Swagger
         """
@@ -115,6 +121,9 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         self._si_eligible = None
         self._emi_eligible = None
         self._fleet_card = None
+        self._atm_enabled = None
+        self._pos_enabled = None
+        self._ecom_enabled = None
 
         if account_funding_source is not None:
           self.account_funding_source = account_funding_source
@@ -166,6 +175,12 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
           self.emi_eligible = emi_eligible
         if fleet_card is not None:
           self.fleet_card = fleet_card
+        if atm_enabled is not None:
+          self.atm_enabled = atm_enabled
+        if pos_enabled is not None:
+          self.pos_enabled = pos_enabled
+        if ecom_enabled is not None:
+          self.ecom_enabled = ecom_enabled
 
     @property
     def account_funding_source(self):
@@ -700,7 +715,7 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
     def emi_eligible(self):
         """
         Gets the emi_eligible of this TmsBinLookupPaymentAccountInformationFeatures.
-        This field indicates if the card is eligible for Equated Monthly Installments (EMI). Possible values:     - `true`     - `false` 
+        This field indicates if the payment instrument is eligible for Equated Monthly Installments (EMI). Possible values:     - `true`     - `false` 
 
         :return: The emi_eligible of this TmsBinLookupPaymentAccountInformationFeatures.
         :rtype: bool
@@ -711,7 +726,7 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
     def emi_eligible(self, emi_eligible):
         """
         Sets the emi_eligible of this TmsBinLookupPaymentAccountInformationFeatures.
-        This field indicates if the card is eligible for Equated Monthly Installments (EMI). Possible values:     - `true`     - `false` 
+        This field indicates if the payment instrument is eligible for Equated Monthly Installments (EMI). Possible values:     - `true`     - `false` 
 
         :param emi_eligible: The emi_eligible of this TmsBinLookupPaymentAccountInformationFeatures.
         :type: bool
@@ -741,6 +756,75 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         """
 
         self._fleet_card = fleet_card
+
+    @property
+    def atm_enabled(self):
+        """
+        Gets the atm_enabled of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the payment instrument is enabled for ATM usage. Possible values:     - `true`     - `false` 
+
+        :return: The atm_enabled of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._atm_enabled
+
+    @atm_enabled.setter
+    def atm_enabled(self, atm_enabled):
+        """
+        Sets the atm_enabled of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the payment instrument is enabled for ATM usage. Possible values:     - `true`     - `false` 
+
+        :param atm_enabled: The atm_enabled of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._atm_enabled = atm_enabled
+
+    @property
+    def pos_enabled(self):
+        """
+        Gets the pos_enabled of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the payment instrument is enabled for POS usage. Possible values:     - `true`     - `false` 
+
+        :return: The pos_enabled of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._pos_enabled
+
+    @pos_enabled.setter
+    def pos_enabled(self, pos_enabled):
+        """
+        Sets the pos_enabled of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the payment instrument is enabled for POS usage. Possible values:     - `true`     - `false` 
+
+        :param pos_enabled: The pos_enabled of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._pos_enabled = pos_enabled
+
+    @property
+    def ecom_enabled(self):
+        """
+        Gets the ecom_enabled of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the payment instrument is enabled for ECOM usage. Possible values:     - `true`     - `false` 
+
+        :return: The ecom_enabled of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._ecom_enabled
+
+    @ecom_enabled.setter
+    def ecom_enabled(self, ecom_enabled):
+        """
+        Sets the ecom_enabled of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the payment instrument is enabled for ECOM usage. Possible values:     - `true`     - `false` 
+
+        :param ecom_enabled: The ecom_enabled of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._ecom_enabled = ecom_enabled
 
     def to_dict(self):
         """

@@ -38,6 +38,7 @@ from .payment_instrument_api import PaymentInstrumentApi
 from .payment_links_api import PaymentLinksApi
 from .payouts_api import PayoutsApi
 from .plans_api import PlansApi
+from .pull_funds_api import PullFundsApi
 from .purchase_and_refund_details_api import PurchaseAndRefundDetailsApi
 from .push_funds_api import PushFundsApi
 from .report_definitions_api import ReportDefinitionsApi
@@ -55,8 +56,9 @@ from .tokenize_api import TokenizeApi
 from .tokenized_card_api import TokenizedCardApi
 from .transaction_batches_api import TransactionBatchesApi
 from .transaction_details_api import TransactionDetailsApi
-from .transient_token_data_api import TransientTokenDataApi
+from .transient_token_data_v2_api import TransientTokenDataV2Api
 from .unified_checkout_capture_context_api import UnifiedCheckoutCaptureContextApi
+from .unified_checkout_v1_capture_context_api import UnifiedCheckoutV1CaptureContextApi
 from .user_management_api import UserManagementApi
 from .user_management_search_api import UserManagementSearchApi
 from .verification_api import VerificationApi

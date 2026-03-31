@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **billing_amount** | **str** | Billing amount for the billing period.  | [optional] 
 **setup_fee** | **str** | Subscription setup fee  | [optional] 
+**surcharge** | [**GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge**](GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

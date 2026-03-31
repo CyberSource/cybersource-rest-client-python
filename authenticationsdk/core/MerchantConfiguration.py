@@ -509,10 +509,16 @@ class MerchantConfiguration:
                     authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
                                                                                  GlobalLabelParameters.KEY_ALIAS_NULL_EMPTY,
                                                                                  self.log_config)
-                if not (self.key_alias == self.merchant_id):
+                if ((not self.use_metakey) and (self.key_alias != self.merchant_id)):
                     self.key_alias = self.merchant_id
                     authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
                                                                                  GlobalLabelParameters.INVALID_KEY_ALIAS,
+                                                                                 self.log_config)
+                    
+                if(( self.use_metakey) and (self.key_alias != self.portfolio_id)):
+                    self.key_alias = self.portfolio_id
+                    authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
+                                                                                 GlobalLabelParameters.INCORRECT_KEY_ALIAS_FOR_METAKEY,
                                                                                  self.log_config)
 
                 if self.key_password is None or self.key_password == "":
