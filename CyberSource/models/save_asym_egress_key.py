@@ -30,7 +30,7 @@ class SaveAsymEgressKey(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Kmsegressv2keysasymClientReferenceInformation',
+        'client_reference_information': 'Kmsegressv2keyssymClientReferenceInformation',
         'client_request_action': 'str',
         'key_information': 'Kmsegressv2keysasymKeyInformation'
     }
@@ -63,7 +63,7 @@ class SaveAsymEgressKey(object):
         Gets the client_reference_information of this SaveAsymEgressKey.
 
         :return: The client_reference_information of this SaveAsymEgressKey.
-        :rtype: Kmsegressv2keysasymClientReferenceInformation
+        :rtype: Kmsegressv2keyssymClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -73,7 +73,7 @@ class SaveAsymEgressKey(object):
         Sets the client_reference_information of this SaveAsymEgressKey.
 
         :param client_reference_information: The client_reference_information of this SaveAsymEgressKey.
-        :type: Kmsegressv2keysasymClientReferenceInformation
+        :type: Kmsegressv2keyssymClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

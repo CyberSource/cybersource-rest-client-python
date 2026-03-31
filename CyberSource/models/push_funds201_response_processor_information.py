@@ -39,7 +39,8 @@ class PushFunds201ResponseProcessorInformation(object):
         'fee_program_indicator': 'str',
         'name': 'str',
         'routing': 'PushFunds201ResponseProcessorInformationRouting',
-        'settlement': 'PushFunds201ResponseProcessorInformationSettlement'
+        'settlement': 'PushFunds201ResponseProcessorInformationSettlement',
+        'merchant_advice': 'PushFunds201ResponseProcessorInformationMerchantAdvice'
     }
 
     attribute_map = {
@@ -52,10 +53,11 @@ class PushFunds201ResponseProcessorInformation(object):
         'fee_program_indicator': 'feeProgramIndicator',
         'name': 'name',
         'routing': 'routing',
-        'settlement': 'settlement'
+        'settlement': 'settlement',
+        'merchant_advice': 'merchantAdvice'
     }
 
-    def __init__(self, transaction_id=None, response_code=None, system_trace_audit_number=None, retrieval_reference_number=None, action_code=None, approval_code=None, fee_program_indicator=None, name=None, routing=None, settlement=None):
+    def __init__(self, transaction_id=None, response_code=None, system_trace_audit_number=None, retrieval_reference_number=None, action_code=None, approval_code=None, fee_program_indicator=None, name=None, routing=None, settlement=None, merchant_advice=None):
         """
         PushFunds201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -70,6 +72,7 @@ class PushFunds201ResponseProcessorInformation(object):
         self._name = None
         self._routing = None
         self._settlement = None
+        self._merchant_advice = None
 
         if transaction_id is not None:
           self.transaction_id = transaction_id
@@ -91,6 +94,8 @@ class PushFunds201ResponseProcessorInformation(object):
           self.routing = routing
         if settlement is not None:
           self.settlement = settlement
+        if merchant_advice is not None:
+          self.merchant_advice = merchant_advice
 
     @property
     def transaction_id(self):
@@ -317,6 +322,27 @@ class PushFunds201ResponseProcessorInformation(object):
         """
 
         self._settlement = settlement
+
+    @property
+    def merchant_advice(self):
+        """
+        Gets the merchant_advice of this PushFunds201ResponseProcessorInformation.
+
+        :return: The merchant_advice of this PushFunds201ResponseProcessorInformation.
+        :rtype: PushFunds201ResponseProcessorInformationMerchantAdvice
+        """
+        return self._merchant_advice
+
+    @merchant_advice.setter
+    def merchant_advice(self, merchant_advice):
+        """
+        Sets the merchant_advice of this PushFunds201ResponseProcessorInformation.
+
+        :param merchant_advice: The merchant_advice of this PushFunds201ResponseProcessorInformation.
+        :type: PushFunds201ResponseProcessorInformationMerchantAdvice
+        """
+
+        self._merchant_advice = merchant_advice
 
     def to_dict(self):
         """

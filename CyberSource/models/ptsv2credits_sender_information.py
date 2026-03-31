@@ -35,6 +35,7 @@ class Ptsv2creditsSenderInformation(object):
         'address1': 'str',
         'locality': 'str',
         'country_code': 'str',
+        'administrative_area': 'str',
         'account': 'Ptsv2creditsSenderInformationAccount'
     }
 
@@ -44,10 +45,11 @@ class Ptsv2creditsSenderInformation(object):
         'address1': 'address1',
         'locality': 'locality',
         'country_code': 'countryCode',
+        'administrative_area': 'administrativeArea',
         'account': 'account'
     }
 
-    def __init__(self, first_name=None, last_name=None, address1=None, locality=None, country_code=None, account=None):
+    def __init__(self, first_name=None, last_name=None, address1=None, locality=None, country_code=None, administrative_area=None, account=None):
         """
         Ptsv2creditsSenderInformation - a model defined in Swagger
         """
@@ -57,6 +59,7 @@ class Ptsv2creditsSenderInformation(object):
         self._address1 = None
         self._locality = None
         self._country_code = None
+        self._administrative_area = None
         self._account = None
 
         if first_name is not None:
@@ -69,6 +72,8 @@ class Ptsv2creditsSenderInformation(object):
           self.locality = locality
         if country_code is not None:
           self.country_code = country_code
+        if administrative_area is not None:
+          self.administrative_area = administrative_area
         if account is not None:
           self.account = account
 
@@ -186,6 +191,29 @@ class Ptsv2creditsSenderInformation(object):
         """
 
         self._country_code = country_code
+
+    @property
+    def administrative_area(self):
+        """
+        Gets the administrative_area of this Ptsv2creditsSenderInformation.
+        The state or province of the sender. This field is applicable for AFT transactions when the sender country is US or CA. Else it is optional.  Must be a two character value 
+
+        :return: The administrative_area of this Ptsv2creditsSenderInformation.
+        :rtype: str
+        """
+        return self._administrative_area
+
+    @administrative_area.setter
+    def administrative_area(self, administrative_area):
+        """
+        Sets the administrative_area of this Ptsv2creditsSenderInformation.
+        The state or province of the sender. This field is applicable for AFT transactions when the sender country is US or CA. Else it is optional.  Must be a two character value 
+
+        :param administrative_area: The administrative_area of this Ptsv2creditsSenderInformation.
+        :type: str
+        """
+
+        self._administrative_area = administrative_area
 
     @property
     def account(self):

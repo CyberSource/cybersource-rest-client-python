@@ -45,7 +45,7 @@ class Authorization:
             # JWT-Call
             elif authentication_type.upper() == GlobalLabelParameters.JWT.upper():
                 jwt_sig_token = JwtSignatureToken()
-                jwt_sig_token.jwt_signature_token(mconfig, date_time, request_type_method, request_json_path_data, isResponseMLEforApi)
+                jwt_sig_token.jwt_signature_token(mconfig, date_time, request_type_method, request_target, request_json_path_data, isResponseMLEforApi)
                 sig_token_jwt = jwt_sig_token.get_token()
 
                 # Logging the parameters Content-Type,Merchant id,Date ,Host to the log file

@@ -30,22 +30,27 @@ class Ptsv1pushfundstransferMerchantInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'category_code': 'str'
+        'category_code': 'int',
+        'merchant_descriptor': 'Ptsv1pushfundstransferMerchantInformationMerchantDescriptor'
     }
 
     attribute_map = {
-        'category_code': 'categoryCode'
+        'category_code': 'categoryCode',
+        'merchant_descriptor': 'merchantDescriptor'
     }
 
-    def __init__(self, category_code=None):
+    def __init__(self, category_code=None, merchant_descriptor=None):
         """
         Ptsv1pushfundstransferMerchantInformation - a model defined in Swagger
         """
 
         self._category_code = None
+        self._merchant_descriptor = None
 
         if category_code is not None:
           self.category_code = category_code
+        if merchant_descriptor is not None:
+          self.merchant_descriptor = merchant_descriptor
 
     @property
     def category_code(self):
@@ -54,7 +59,7 @@ class Ptsv1pushfundstransferMerchantInformation(object):
         The value for this field is a four-digit number that the payment card industry uses to  classify merchants into market segments. A payment card company assigned one or more of  these values to your business when you started accepting the payment card company's cards.  When you do not include this field in your request, CyberSource uses the value in your CyberSource account. 
 
         :return: The category_code of this Ptsv1pushfundstransferMerchantInformation.
-        :rtype: str
+        :rtype: int
         """
         return self._category_code
 
@@ -65,10 +70,31 @@ class Ptsv1pushfundstransferMerchantInformation(object):
         The value for this field is a four-digit number that the payment card industry uses to  classify merchants into market segments. A payment card company assigned one or more of  these values to your business when you started accepting the payment card company's cards.  When you do not include this field in your request, CyberSource uses the value in your CyberSource account. 
 
         :param category_code: The category_code of this Ptsv1pushfundstransferMerchantInformation.
-        :type: str
+        :type: int
         """
 
         self._category_code = category_code
+
+    @property
+    def merchant_descriptor(self):
+        """
+        Gets the merchant_descriptor of this Ptsv1pushfundstransferMerchantInformation.
+
+        :return: The merchant_descriptor of this Ptsv1pushfundstransferMerchantInformation.
+        :rtype: Ptsv1pushfundstransferMerchantInformationMerchantDescriptor
+        """
+        return self._merchant_descriptor
+
+    @merchant_descriptor.setter
+    def merchant_descriptor(self, merchant_descriptor):
+        """
+        Sets the merchant_descriptor of this Ptsv1pushfundstransferMerchantInformation.
+
+        :param merchant_descriptor: The merchant_descriptor of this Ptsv1pushfundstransferMerchantInformation.
+        :type: Ptsv1pushfundstransferMerchantInformationMerchantDescriptor
+        """
+
+        self._merchant_descriptor = merchant_descriptor
 
     def to_dict(self):
         """

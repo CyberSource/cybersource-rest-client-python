@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **name** | **str** | Name of the processor.  | [optional] 
 **routing** | [**PushFunds201ResponseProcessorInformationRouting**](PushFunds201ResponseProcessorInformationRouting.md) |  | [optional] 
 **settlement** | [**PushFunds201ResponseProcessorInformationSettlement**](PushFunds201ResponseProcessorInformationSettlement.md) |  | [optional] 
+**merchant_advice** | [**PushFunds201ResponseProcessorInformationMerchantAdvice**](PushFunds201ResponseProcessorInformationMerchantAdvice.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

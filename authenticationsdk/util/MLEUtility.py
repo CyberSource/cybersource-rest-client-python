@@ -11,6 +11,7 @@ from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
 import CyberSource.logging.log_factory as LogFactory
 from CyberSource.utilities.JWEResponse.JWEUtility import JWEUtility
 from authenticationsdk.util.Utility import to_jwk_private_key
+from authenticationsdk.util.CertificateUtility import CertificateUtility
 
 class MLEUtility:
     logger = None
@@ -245,16 +246,7 @@ class MLEUtility:
             MLEUtility.logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
         logger = MLEUtility.logger
 
-        if certificate is None:
-            raise ValueError("MLE certificate is null")
-
-        # Get subject and look for 'serialNumber'
-        subject = certificate.subject
-        serial_number = None
-        for attribute in subject:
-            if attribute.oid == NameOID.SERIAL_NUMBER:
-                serial_number = attribute.value
-                break
+        serial_number = CertificateUtility.extract_serial_number_helper(certificate)
 
         if not serial_number:
             error_msg = f"Serial number not found in MLE certificate for alias {merchant_config.requestMleKeyAlias} in {merchant_config.p12KeyFilePath}"

@@ -53,7 +53,8 @@ class Riskv1decisionsClientReferenceInformation(object):
         self._comments = None
         self._partner = None
 
-        self.code = code
+        if code is not None:
+          self.code = code
         if paused_request_id is not None:
           self.paused_request_id = paused_request_id
         if comments is not None:

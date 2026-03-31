@@ -200,7 +200,7 @@ class InlineResponse2011TokenizedCard(object):
     def state(self):
         """
         Gets the state of this InlineResponse2011TokenizedCard.
-        State of the network token or network token provision. Possible Values:   ACTIVE : Network token is active.   SUSPENDED : Network token is suspended. This state can change back to ACTIVE.   DELETED : This is a final state for a network token instance.   UNPROVISIONED : A previous network token. 
+        State of the network token or network token provision. Possible Values:   - ACTIVE : Network token is active.   - SUSPENDED : Network token is suspended. This state can change back to ACTIVE.   - DELETED : This is a final state for a network token instance.   - UNPROVISIONED : A previous network token. 
 
         :return: The state of this InlineResponse2011TokenizedCard.
         :rtype: str
@@ -211,7 +211,7 @@ class InlineResponse2011TokenizedCard(object):
     def state(self, state):
         """
         Sets the state of this InlineResponse2011TokenizedCard.
-        State of the network token or network token provision. Possible Values:   ACTIVE : Network token is active.   SUSPENDED : Network token is suspended. This state can change back to ACTIVE.   DELETED : This is a final state for a network token instance.   UNPROVISIONED : A previous network token. 
+        State of the network token or network token provision. Possible Values:   - ACTIVE : Network token is active.   - SUSPENDED : Network token is suspended. This state can change back to ACTIVE.   - DELETED : This is a final state for a network token instance.   - UNPROVISIONED : A previous network token. 
 
         :param state: The state of this InlineResponse2011TokenizedCard.
         :type: str

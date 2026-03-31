@@ -149,7 +149,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
     def unit_price(self):
         """
         Gets the unit_price of this Riskv1decisionsOrderInformationLineItems.
-        Per-item price of the product. This value for this field cannot be negative.  You must include either this field or the request-level field `orderInformation.amountDetails.totalAmount` in your request.  You can include a decimal point (.), but you cannot include any other special characters. The value is truncated to the correct number of decimal places.  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either the 1st line item in the order and this field, or the request-level field `orderInformation.amountDetails.totalAmount` in your request.  #### Tax Calculation Required field for U.S., Canadian, international and value added taxes.  #### Zero Amount Authorizations If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen.  #### Maximum Field Lengths For GPN and JCN Gateway: Decimal (10) All other processors: Decimal (15) 
+        Per-item price of the product. If line items are present in the request, the unit price is a mandatory field. 
 
         :return: The unit_price of this Riskv1decisionsOrderInformationLineItems.
         :rtype: str
@@ -160,7 +160,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
     def unit_price(self, unit_price):
         """
         Sets the unit_price of this Riskv1decisionsOrderInformationLineItems.
-        Per-item price of the product. This value for this field cannot be negative.  You must include either this field or the request-level field `orderInformation.amountDetails.totalAmount` in your request.  You can include a decimal point (.), but you cannot include any other special characters. The value is truncated to the correct number of decimal places.  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either the 1st line item in the order and this field, or the request-level field `orderInformation.amountDetails.totalAmount` in your request.  #### Tax Calculation Required field for U.S., Canadian, international and value added taxes.  #### Zero Amount Authorizations If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen.  #### Maximum Field Lengths For GPN and JCN Gateway: Decimal (10) All other processors: Decimal (15) 
+        Per-item price of the product. If line items are present in the request, the unit price is a mandatory field. 
 
         :param unit_price: The unit_price of this Riskv1decisionsOrderInformationLineItems.
         :type: str

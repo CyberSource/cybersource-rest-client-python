@@ -149,3 +149,25 @@ class CertificateUtility:
             raise
         except Exception:
             raise ValueError(f"Failed to load private key from {pem_file_path}")
+        
+    @staticmethod
+    def extract_serial_number_helper(certificate):
+        if certificate is None:
+            raise ValueError("Provided Certificate for serialNumber extraction is null")
+
+        # Get subject and look for 'serialNumber'
+        subject = certificate.subject
+        serial_number = None
+        for attribute in subject:
+            if attribute.oid == NameOID.SERIAL_NUMBER:
+                serial_number = attribute.value
+                break
+        return serial_number    
+    
+    @staticmethod
+    def extract_serial_number_from_certificate(certificate):
+
+        serial_number = CertificateUtility.extract_serial_number_helper(certificate)
+        if not serial_number:
+            raise ValueError("Serial number not found in certificate")
+        return serial_number

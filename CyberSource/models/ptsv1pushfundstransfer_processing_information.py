@@ -36,7 +36,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         'network_partner_id': 'str',
         'processing_code': 'str',
         'sharing_group_code': 'str',
-        'purpose_of_payment': 'str'
+        'purpose_of_payment': 'str',
+        'reconciliation_id': 'str'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         'network_partner_id': 'networkPartnerId',
         'processing_code': 'processingCode',
         'sharing_group_code': 'sharingGroupCode',
-        'purpose_of_payment': 'purposeOfPayment'
+        'purpose_of_payment': 'purposeOfPayment',
+        'reconciliation_id': 'reconciliationId'
     }
 
-    def __init__(self, business_application_id=None, payouts_options=None, fee_program_id=None, network_partner_id=None, processing_code=None, sharing_group_code=None, purpose_of_payment=None):
+    def __init__(self, business_application_id=None, payouts_options=None, fee_program_id=None, network_partner_id=None, processing_code=None, sharing_group_code=None, purpose_of_payment=None, reconciliation_id=None):
         """
         Ptsv1pushfundstransferProcessingInformation - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         self._processing_code = None
         self._sharing_group_code = None
         self._purpose_of_payment = None
+        self._reconciliation_id = None
 
         if business_application_id is not None:
           self.business_application_id = business_application_id
@@ -76,6 +79,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
           self.sharing_group_code = sharing_group_code
         if purpose_of_payment is not None:
           self.purpose_of_payment = purpose_of_payment
+        if reconciliation_id is not None:
+          self.reconciliation_id = reconciliation_id
 
     @property
     def business_application_id(self):
@@ -235,6 +240,29 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         """
 
         self._purpose_of_payment = purpose_of_payment
+
+    @property
+    def reconciliation_id(self):
+        """
+        Gets the reconciliation_id of this Ptsv1pushfundstransferProcessingInformation.
+        Transaction's reference number.
+
+        :return: The reconciliation_id of this Ptsv1pushfundstransferProcessingInformation.
+        :rtype: str
+        """
+        return self._reconciliation_id
+
+    @reconciliation_id.setter
+    def reconciliation_id(self, reconciliation_id):
+        """
+        Sets the reconciliation_id of this Ptsv1pushfundstransferProcessingInformation.
+        Transaction's reference number.
+
+        :param reconciliation_id: The reconciliation_id of this Ptsv1pushfundstransferProcessingInformation.
+        :type: str
+        """
+
+        self._reconciliation_id = reconciliation_id
 
     def to_dict(self):
         """

@@ -41,7 +41,8 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         'industry_data_type': 'str',
         'payment_type': 'str',
         'refund_options': 'Ptsv2paymentsidrefundsProcessingInformationRefundOptions',
-        'transaction_type_indicator': 'str'
+        'transaction_type_indicator': 'str',
+        'merchant_verification_value': 'str'
     }
 
     attribute_map = {
@@ -56,10 +57,11 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         'industry_data_type': 'industryDataType',
         'payment_type': 'paymentType',
         'refund_options': 'refundOptions',
-        'transaction_type_indicator': 'transactionTypeIndicator'
+        'transaction_type_indicator': 'transactionTypeIndicator',
+        'merchant_verification_value': 'merchantVerificationValue'
     }
 
-    def __init__(self, action_list=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, recurring_options=None, industry_data_type=None, payment_type=None, refund_options=None, transaction_type_indicator=None):
+    def __init__(self, action_list=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, recurring_options=None, industry_data_type=None, payment_type=None, refund_options=None, transaction_type_indicator=None, merchant_verification_value=None):
         """
         Ptsv2paymentsidrefundsProcessingInformation - a model defined in Swagger
         """
@@ -76,6 +78,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         self._payment_type = None
         self._refund_options = None
         self._transaction_type_indicator = None
+        self._merchant_verification_value = None
 
         if action_list is not None:
           self.action_list = action_list
@@ -101,6 +104,8 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
           self.refund_options = refund_options
         if transaction_type_indicator is not None:
           self.transaction_type_indicator = transaction_type_indicator
+        if merchant_verification_value is not None:
+          self.merchant_verification_value = merchant_verification_value
 
     @property
     def action_list(self):
@@ -373,6 +378,29 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         """
 
         self._transaction_type_indicator = transaction_type_indicator
+
+    @property
+    def merchant_verification_value(self):
+        """
+        Gets the merchant_verification_value of this Ptsv2paymentsidrefundsProcessingInformation.
+        The override value of the Merchant Verification Value (MVV) received by various card brands. MVV refers to the value assigned by the card brand/network to identify participation in select merchant programs.  Sample value for Visa: `101010` 
+
+        :return: The merchant_verification_value of this Ptsv2paymentsidrefundsProcessingInformation.
+        :rtype: str
+        """
+        return self._merchant_verification_value
+
+    @merchant_verification_value.setter
+    def merchant_verification_value(self, merchant_verification_value):
+        """
+        Sets the merchant_verification_value of this Ptsv2paymentsidrefundsProcessingInformation.
+        The override value of the Merchant Verification Value (MVV) received by various card brands. MVV refers to the value assigned by the card brand/network to identify participation in select merchant programs.  Sample value for Visa: `101010` 
+
+        :param merchant_verification_value: The merchant_verification_value of this Ptsv2paymentsidrefundsProcessingInformation.
+        :type: str
+        """
+
+        self._merchant_verification_value = merchant_verification_value
 
     def to_dict(self):
         """

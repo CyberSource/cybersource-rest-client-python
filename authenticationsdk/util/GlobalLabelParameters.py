@@ -37,6 +37,7 @@ class GlobalLabelParameters:
     HEADERS_PARAM = ", headers=\""
     MASKING_VALUE = "XXXXX"
     JWT_TIME = "iat"
+    JWT_EXP = "exp"
     JWT_ALGORITHM = "digestAlgorithm"
     JWT_DIGEST = "digest"
     CYBS_FILE_NAME = 'config_params'
@@ -50,6 +51,7 @@ class GlobalLabelParameters:
     AUTH_ERROR = "Check Authentication Type (HTTP_Signature/JWT) in cybs.json."
     KEY_ALIAS_NULL_EMPTY = "KeyAlias Empty/None. Assigining merchantID value"
     INVALID_KEY_ALIAS = "KeyAlias Invalid. Assigining merchantID value"
+    INCORRECT_KEY_ALIAS_FOR_METAKEY = "The Entered key_alias is Incorrect for MetaKey, Assigining portfolioID value"
     REQUEST_JSON_ERROR = "Request Json File missing. File Path :: "
     KEY_FILE_EMPTY = "KeyFileName is empty, Assigining merchantID value"
     REFER_LOG = "Please refer Log for details"

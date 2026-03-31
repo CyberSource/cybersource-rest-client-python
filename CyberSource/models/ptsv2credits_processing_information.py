@@ -49,7 +49,8 @@ class Ptsv2creditsProcessingInformation(object):
         'electronic_benefits_transfer': 'Ptsv2creditsProcessingInformationElectronicBenefitsTransfer',
         'loan_options': 'Ptsv2paymentsProcessingInformationLoanOptions',
         'japan_payment_options': 'Ptsv2creditsProcessingInformationJapanPaymentOptions',
-        'refund_options': 'Ptsv2creditsProcessingInformationRefundOptions'
+        'refund_options': 'Ptsv2creditsProcessingInformationRefundOptions',
+        'merchant_verification_value': 'str'
     }
 
     attribute_map = {
@@ -72,10 +73,11 @@ class Ptsv2creditsProcessingInformation(object):
         'electronic_benefits_transfer': 'electronicBenefitsTransfer',
         'loan_options': 'loanOptions',
         'japan_payment_options': 'japanPaymentOptions',
-        'refund_options': 'refundOptions'
+        'refund_options': 'refundOptions',
+        'merchant_verification_value': 'merchantVerificationValue'
     }
 
-    def __init__(self, action_list=None, commerce_indicator=None, processor_id=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, wallet_type=None, national_net_domestic_data=None, network_routing_order=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, japan_payment_options=None, refund_options=None):
+    def __init__(self, action_list=None, commerce_indicator=None, processor_id=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, wallet_type=None, national_net_domestic_data=None, network_routing_order=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, japan_payment_options=None, refund_options=None, merchant_verification_value=None):
         """
         Ptsv2creditsProcessingInformation - a model defined in Swagger
         """
@@ -100,6 +102,7 @@ class Ptsv2creditsProcessingInformation(object):
         self._loan_options = None
         self._japan_payment_options = None
         self._refund_options = None
+        self._merchant_verification_value = None
 
         if action_list is not None:
           self.action_list = action_list
@@ -141,6 +144,8 @@ class Ptsv2creditsProcessingInformation(object):
           self.japan_payment_options = japan_payment_options
         if refund_options is not None:
           self.refund_options = refund_options
+        if merchant_verification_value is not None:
+          self.merchant_verification_value = merchant_verification_value
 
     @property
     def action_list(self):
@@ -587,6 +592,29 @@ class Ptsv2creditsProcessingInformation(object):
         """
 
         self._refund_options = refund_options
+
+    @property
+    def merchant_verification_value(self):
+        """
+        Gets the merchant_verification_value of this Ptsv2creditsProcessingInformation.
+        The override value of the Merchant Verification Value (MVV) received by various card brands. MVV refers to the value assigned by the card brand/network to identify participation in select merchant programs.  Sample value for Visa: `101010` 
+
+        :return: The merchant_verification_value of this Ptsv2creditsProcessingInformation.
+        :rtype: str
+        """
+        return self._merchant_verification_value
+
+    @merchant_verification_value.setter
+    def merchant_verification_value(self, merchant_verification_value):
+        """
+        Sets the merchant_verification_value of this Ptsv2creditsProcessingInformation.
+        The override value of the Merchant Verification Value (MVV) received by various card brands. MVV refers to the value assigned by the card brand/network to identify participation in select merchant programs.  Sample value for Visa: `101010` 
+
+        :param merchant_verification_value: The merchant_verification_value of this Ptsv2creditsProcessingInformation.
+        :type: str
+        """
+
+        self._merchant_verification_value = merchant_verification_value
 
     def to_dict(self):
         """

@@ -56,7 +56,7 @@ class Tmsv2tokenizeProcessingInformation(object):
     def action_list(self):
         """
         Gets the action_list of this Tmsv2tokenizeProcessingInformation.
-        Array of actions (one or more) to be included in the tokenize request.  Possible Values:   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your tokenize request. 
+        Array of actions (one or more) to be included in the tokenize request.  Possible Values:  - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your tokenize request. 
 
         :return: The action_list of this Tmsv2tokenizeProcessingInformation.
         :rtype: list[str]
@@ -67,7 +67,7 @@ class Tmsv2tokenizeProcessingInformation(object):
     def action_list(self, action_list):
         """
         Sets the action_list of this Tmsv2tokenizeProcessingInformation.
-        Array of actions (one or more) to be included in the tokenize request.  Possible Values:   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your tokenize request. 
+        Array of actions (one or more) to be included in the tokenize request.  Possible Values:  - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your tokenize request. 
 
         :param action_list: The action_list of this Tmsv2tokenizeProcessingInformation.
         :type: list[str]

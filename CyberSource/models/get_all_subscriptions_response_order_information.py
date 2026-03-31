@@ -30,7 +30,7 @@ class GetAllSubscriptionsResponseOrderInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'amount_details': 'GetAllPlansResponseOrderInformationAmountDetails',
+        'amount_details': 'GetAllSubscriptionsResponseOrderInformationAmountDetails',
         'bill_to': 'GetAllSubscriptionsResponseOrderInformationBillTo'
     }
 
@@ -58,7 +58,7 @@ class GetAllSubscriptionsResponseOrderInformation(object):
         Gets the amount_details of this GetAllSubscriptionsResponseOrderInformation.
 
         :return: The amount_details of this GetAllSubscriptionsResponseOrderInformation.
-        :rtype: GetAllPlansResponseOrderInformationAmountDetails
+        :rtype: GetAllSubscriptionsResponseOrderInformationAmountDetails
         """
         return self._amount_details
 
@@ -68,7 +68,7 @@ class GetAllSubscriptionsResponseOrderInformation(object):
         Sets the amount_details of this GetAllSubscriptionsResponseOrderInformation.
 
         :param amount_details: The amount_details of this GetAllSubscriptionsResponseOrderInformation.
-        :type: GetAllPlansResponseOrderInformationAmountDetails
+        :type: GetAllSubscriptionsResponseOrderInformationAmountDetails
         """
 
         self._amount_details = amount_details

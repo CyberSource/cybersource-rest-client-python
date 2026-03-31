@@ -34,8 +34,8 @@ class InlineResponse20016(object):
         'id': 'str',
         'submit_time_utc': 'str',
         'status': 'str',
-        'error_information': 'InlineResponse20016ErrorInformation',
-        'order_information': 'InlineResponse20016OrderInformation'
+        'error_information': 'InlineResponse2019ErrorInformation',
+        'order_information': 'InlineResponse2019OrderInformation'
     }
 
     attribute_map = {
@@ -165,7 +165,7 @@ class InlineResponse20016(object):
         Gets the error_information of this InlineResponse20016.
 
         :return: The error_information of this InlineResponse20016.
-        :rtype: InlineResponse20016ErrorInformation
+        :rtype: InlineResponse2019ErrorInformation
         """
         return self._error_information
 
@@ -175,7 +175,7 @@ class InlineResponse20016(object):
         Sets the error_information of this InlineResponse20016.
 
         :param error_information: The error_information of this InlineResponse20016.
-        :type: InlineResponse20016ErrorInformation
+        :type: InlineResponse2019ErrorInformation
         """
 
         self._error_information = error_information
@@ -186,7 +186,7 @@ class InlineResponse20016(object):
         Gets the order_information of this InlineResponse20016.
 
         :return: The order_information of this InlineResponse20016.
-        :rtype: InlineResponse20016OrderInformation
+        :rtype: InlineResponse2019OrderInformation
         """
         return self._order_information
 
@@ -196,7 +196,7 @@ class InlineResponse20016(object):
         Sets the order_information of this InlineResponse20016.
 
         :param order_information: The order_information of this InlineResponse20016.
-        :type: InlineResponse20016OrderInformation
+        :type: InlineResponse2019OrderInformation
         """
 
         self._order_information = order_information
