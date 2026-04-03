@@ -63,7 +63,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_customer_payment_instrument**
-> Tmsv2customersEmbeddedDefaultPaymentInstrument get_customer_payment_instrument(customer_id, payment_instrument_id, profile_id=profile_id)
+> PostCustomerPaymentInstrumentRequest get_customer_payment_instrument(customer_id, payment_instrument_id, profile_id=profile_id)
 
 Retrieve a Customer Payment Instrument
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Tmsv2customersEmbeddedDefaultPaymentInstrument**](Tmsv2customersEmbeddedDefaultPaymentInstrument.md)
+[**PostCustomerPaymentInstrumentRequest**](PostCustomerPaymentInstrumentRequest.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_customers_payment_instrument**
-> Tmsv2customersEmbeddedDefaultPaymentInstrument patch_customers_payment_instrument(customer_id, payment_instrument_id, patch_customer_payment_instrument_request, profile_id=profile_id, if_match=if_match)
+> PatchCustomerPaymentInstrumentRequest patch_customers_payment_instrument(customer_id, payment_instrument_id, patch_customer_payment_instrument_request, profile_id=profile_id, if_match=if_match)
 
 Update a Customer Payment Instrument
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Tmsv2customersEmbeddedDefaultPaymentInstrument**](Tmsv2customersEmbeddedDefaultPaymentInstrument.md)
+[**PatchCustomerPaymentInstrumentRequest**](PatchCustomerPaymentInstrumentRequest.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_customer_payment_instrument**
-> Tmsv2customersEmbeddedDefaultPaymentInstrument post_customer_payment_instrument(customer_id, post_customer_payment_instrument_request, profile_id=profile_id)
+> PostCustomerPaymentInstrumentRequest post_customer_payment_instrument(customer_id, post_customer_payment_instrument_request, profile_id=profile_id)
 
 Create a Customer Payment Instrument
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Tmsv2customersEmbeddedDefaultPaymentInstrument**](Tmsv2customersEmbeddedDefaultPaymentInstrument.md)
+[**PostCustomerPaymentInstrumentRequest**](PostCustomerPaymentInstrumentRequest.md)
 
 ### Authorization
 

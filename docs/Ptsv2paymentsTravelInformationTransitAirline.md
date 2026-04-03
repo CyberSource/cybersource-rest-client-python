@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**is_domestic** | **str** | Specifies if the flight is: Domestic (01) International (02) If Y then 01 else 02  | [optional] 
 **booking_reference_number** | **str** | Reference number for the airline booking. Required if ticket numbers are not issued.  | [optional] 
 **carrier_name** | **str** | Airline that generated the ticket. Format: English characters only. Optional request field.  | [optional] 
 **ticket_issuer** | [**Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer**](Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.md) |  | [optional] 
@@ -25,7 +26,7 @@ Name | Type | Description | Notes
 **total_clearing_amount** | **str** | Total clearing amount for all transactions in the clearing count set. This value cannot exceed &#x60;99999999999999999999&#x60; (twenty 9s). Format: English characters only. If this field is not set and if the total amount from the original authorization is not NULL, the total clearing amount is set to the total amount from the original authorization.  | [optional] 
 **number_of_passengers** | **int** | Number of passengers for whom the ticket was issued. Format: English characters only. Optional request field.  | [optional] 
 **reservation_system_code** | **str** | Code that specifies the computerized reservation system used to make the reservation and purchase the ticket. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field.  | [optional] 
-**process_identifier** | **str** | Airline process identifier. This value is the airline’s three-digit IATA1 code which is used to process extended payment airline tickets.  | [optional] 
+**process_identifier** | **str** | Airline process identifier. This value is the airline&#39;s three-digit IATA1 code which is used to process extended payment airline tickets.  | [optional] 
 **ticket_issue_date** | **str** | Date on which the transaction occurred. Format: &#x60;YYYYMMDD&#x60; Format: English characters only. Optional request field.  | [optional] 
 **electronic_ticket_indicator** | **bool** | Flag that indicates whether an electronic ticket was issued. Possible values: - &#x60;true&#x60; - &#x60;false&#x60; Optional request field.  | [optional] 
 **original_ticket_number** | **str** | Original ticket number when the transaction is for a replacement ticket.  | [optional] 
@@ -41,6 +42,12 @@ Name | Type | Description | Notes
 **boarding_fee_amount** | **str** | Boarding fee.  | [optional] 
 **legs** | [**list[Ptsv2paymentsTravelInformationTransitAirlineLegs]**](Ptsv2paymentsTravelInformationTransitAirlineLegs.md) |  | [optional] 
 **ancillary_information** | [**Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation**](Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation.md) |  | [optional] 
+**flight_type** | **str** | Specifies the type of flight. One way (0) Return (1) Transit (2) Transit &amp; Return (3) Multi-City (4)  | [optional] 
+**insurance_amount** | **str** | The total cost of the flight insurance. Example: 10000.00  | [optional] 
+**frequent_flyer_number** | **str** | The consumer&#39;s frequent flyer number. Leave 0 if there is no frequent flyer number  | [optional] 
+**third_party_status** | **str** | Specifies if the travel agent joins the flight (0) or not (1)  | [optional] 
+**passenger_type** | **str** | List of passenger types in a booking code: A (Adult) C (Child) Comma separated values for total number of passenger  | [optional] 
+**total_insurance_amount** | **str** | Total insurance amount. We have per leg and not total  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

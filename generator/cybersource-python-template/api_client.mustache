@@ -23,7 +23,10 @@ from authenticationsdk.core.Authorization import *
 from authenticationsdk.core.MerchantConfiguration import *
 from authenticationsdk.util.PropertiesUtil import *
 from authenticationsdk.util.GlobalLabelParameters import *
+from authenticationsdk.util.MLEUtility import MLEUtility
 from six.moves.urllib.parse import urlencode
+import logging
+import CyberSource.logging.log_factory as LogFactory 
 
 
 class ApiClient(object):
@@ -63,7 +66,6 @@ class ApiClient(object):
         """
         Constructor of the class.
         """
-        self.rest_client = RESTClientObject()
         self.default_headers = {}
         if header_name is not None:
             self.default_headers[header_name] = header_value
@@ -140,17 +142,8 @@ class ApiClient(object):
     def set_configuration(self,config):
         self.mconfig = MerchantConfiguration()
         self.mconfig.set_merchantconfig(config)
-        rconfig = Configuration()
 
-        # To reinitialize with logging config
-        self.rest_client = RESTClientObject(log_config=self.mconfig.log_config)
-
-        set_client_cert = rconfig.set_merchantclientcert(config)
-        set_proxy = rconfig.set_merchantproxyconfig(config)
-
-        # The below two lines are to set proxy details, client cert details and if present reinitialize the REST object as a proxy manager
-        if set_client_cert or set_proxy:
-            self.rest_client = RESTClientObject(rconfig, log_config=self.mconfig.log_config) # Reinitialising REST object as a proxy manager instead of pool manager
+        self.rest_client = RESTClientObject(mconfig=self.mconfig)
 
         # This implements the fall back logic for JWT parameters key alias,key password,json file path
         self.mconfig.validate_merchant_details(config)
@@ -161,16 +154,9 @@ class ApiClient(object):
             self.host = self.mconfig.request_host
 
     # Calling the authentication header
-    def call_authentication_header(self, method, header_params, body):
+    def call_authentication_header(self, method, header_params, body, request_target=None, isResponseMLEforApi=False):
         
         time = self.mconfig.get_time()
-
-        self.mconfig.request_type_method = method
-        
-
-        
-        if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
-            self.mconfig.request_json_path_data = body
 
         header_params['v-c-client-id'] = self.client_id
 
@@ -178,7 +164,7 @@ class ApiClient(object):
             # header_params['v-c-solution-id'] = self.mconfig.solution_id
 
         auth = Authorization()
-        token = auth.get_token(self.mconfig, self.mconfig.get_time())
+        token = auth.get_token(self.mconfig, time, method, request_target, body, isResponseMLEforApi=isResponseMLEforApi)
         if self.mconfig.authentication_type.upper() == GlobalLabelParameters.HTTP.upper():
             header_params['Accept-Encoding'] = '*'
             header_params['v-c-merchant-id'] = self.mconfig.merchant_id
@@ -218,14 +204,38 @@ class ApiClient(object):
         if query_param:
             path += '?' + urlencode(query_param)
 
-        return path  
+        return path
+
+    def _decrypt_mle_response(self, response_data_or_body):
+        """
+        Decrypt MLE encrypted response if MLE is configured and response is encrypted.
+        
+        :param response_data_or_body: Either response data string or response body string
+        :return: Decrypted data if encrypted, otherwise original data
+        :raises ApiException: If decryption fails
+        """
+        if not hasattr(self, 'mconfig'):
+            return response_data_or_body
+            
+        try:
+            if MLEUtility.check_is_mle_encrypted_response(response_data_or_body):
+                decrypted_data = MLEUtility.decrypt_mle_response_payload(self.mconfig, response_data_or_body)
+                return decrypted_data
+        except Exception as e:
+            if (hasattr(self, "logger") and
+                hasattr(self.mconfig, "log_config") and
+                self.mconfig.log_config.enable_log):
+                self.logger.error(f"[MLE] Response decryption unsuccessful: {e}")
+            raise ApiException(status=0, reason=f"MLE Response decryption unsuccessful: {e}")
+        
+        return response_data_or_body
 
     def __call_api(self, resource_path, method,
                    path_params=None, query_params=None, header_params=None,
                    body=None, post_params=None, files=None,
                    response_type=None, auth_settings=None, callback=None,
                    _return_http_data_only=None, collection_formats=None, _preload_content=True,
-                   _request_timeout=None):
+                   _request_timeout=None, isResponseMLEforApi=False):
 
         config = Configuration()
 
@@ -263,8 +273,8 @@ class ApiClient(object):
 
         # post parameters
         if post_params or files:
-            post_params = self.remove_first_underscore(post_params)
-            post_params = self.prepare_post_parameters(post_params, files)
+            # post_params = self.remove_first_underscore(post_params)
+            # post_params = self.prepare_post_parameters(post_params, files)
             post_params = self.sanitize_for_serialization(post_params)
             post_params = self.parameters_to_tuples(post_params,
                                                     collection_formats)
@@ -302,12 +312,21 @@ class ApiClient(object):
                 header_params['Authorization']=authVal
 
         # perform request and return response
-        response_data = self.request(method, url,
-                                     query_params=query_params,
-                                     headers=header_params,
-                                     post_params=post_params, body=body,
-                                     _preload_content=_preload_content,
-                                     _request_timeout=_request_timeout)
+        try:
+            response_data = self.request(method, url,
+                                         query_params=query_params,
+                                         headers=header_params,
+                                         post_params=post_params, body=body,
+                                         _preload_content=_preload_content,
+                                         _request_timeout=_request_timeout)
+        except Exception as api_exception:
+            # Handle MLE decryption for error responses (non-2xx status codes)
+            if hasattr(api_exception, 'body'):
+                api_exception.body = self._decrypt_mle_response(api_exception.body)
+            raise
+
+        # Handle MLE decryption for successful responses (2xx status codes)
+        response_data.data = self._decrypt_mle_response(response_data.data)
 
         if self.download_file_path is None:
             self.last_response = response_data
@@ -421,12 +440,12 @@ class ApiClient(object):
 
         if type(klass) == str:
             if klass.startswith('list['):
-                sub_kls = re.match('list\[(.*)\]', klass).group(1)
+                sub_kls = re.match(r'list\[(.*)\]', klass).group(1)
                 return [self.__deserialize(sub_data, sub_kls)
                         for sub_data in data]
 
             if klass.startswith('dict('):
-                sub_kls = re.match('dict\(([^,]*), (.*)\)', klass).group(2)
+                sub_kls = re.match(r'dict\(([^,]*), (.*)\)', klass).group(2)
                 return {k: self.__deserialize(v, sub_kls)
                         for k, v in iteritems(data)}
 
@@ -452,26 +471,16 @@ class ApiClient(object):
                  body=None, post_params=None, files=None,
                  response_type=None, auth_settings=None, callback=None,
                  _return_http_data_only=None, collection_formats=None, _preload_content=True,
-                 _request_timeout=None):
+                 _request_timeout=None, isResponseMLEforApi=False):
         
         if header_params['Content-Type'] == 'application/x-www-form-urlencoded':
             post_params = body
         
-        if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
-            temp_body = body.replace("\"_", "\"")
-            request_body = self.replace_underscore(json.loads(temp_body))
-            body = json.dumps(request_body)
-            body = body.replace("companyTaxId", "companyTaxID")
-            body = body.replace("productSku", "productSKU")
-            body = body.replace("secCode", "SECCode")
         query_param_path = self.set_query_params(resource_path, query_params)
-        if query_param_path:
-            self.mconfig.request_target = query_param_path
-        else:
-            self.mconfig.request_target = resource_path
+        request_target = query_param_path if query_param_path else resource_path
         
         if self.mconfig.authentication_type.upper() != GlobalLabelParameters.MUTUAL_AUTH.upper():
-            self.call_authentication_header(method, header_params, body)
+            self.call_authentication_header(method, header_params, body, request_target, isResponseMLEforApi=isResponseMLEforApi)
         
         """
         Makes the HTTP request (synchronous) and return the deserialized data.
@@ -512,7 +521,8 @@ class ApiClient(object):
                                    path_params, query_params, header_params,
                                    body, post_params, files,
                                    response_type, auth_settings, callback,
-                                   _return_http_data_only, collection_formats, _preload_content, _request_timeout)
+                                   _return_http_data_only, collection_formats, _preload_content, _request_timeout,
+                                   isResponseMLEforApi=isResponseMLEforApi)
         else:
             thread = threading.Thread(target=self.__call_api,
                                       args=(resource_path, method,
@@ -521,7 +531,7 @@ class ApiClient(object):
                                             post_params, files,
                                             response_type, auth_settings,
                                             callback, _return_http_data_only,
-                                            collection_formats, _preload_content, _request_timeout))
+                                            collection_formats, _preload_content, _request_timeout, isResponseMLEforApi))
             thread.start()
             return thread
 

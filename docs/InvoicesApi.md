@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**get_all_invoices**](InvoicesApi.md#get_all_invoices) | **GET** /invoicing/v2/invoices | Get a List of Invoices
 [**get_invoice**](InvoicesApi.md#get_invoice) | **GET** /invoicing/v2/invoices/{id} | Get Invoice Details
 [**perform_cancel_action**](InvoicesApi.md#perform_cancel_action) | **POST** /invoicing/v2/invoices/{id}/cancelation | Cancel an Invoice
+[**perform_publish_action**](InvoicesApi.md#perform_publish_action) | **POST** /invoicing/v2/invoices/{id}/publication | Publish an Invoice
 [**perform_send_action**](InvoicesApi.md#perform_send_action) | **POST** /invoicing/v2/invoices/{id}/delivery | Send an Invoice
 [**update_invoice**](InvoicesApi.md#update_invoice) | **PUT** /invoicing/v2/invoices/{id} | Update an Invoice
 
@@ -17,7 +18,7 @@ Method | HTTP request | Description
 
 Create a New Invoice
 
-Create a new invoice.
+The invoicing product enables you to bill any customer with an email address and accept digital payments securely from any connected device. You can either use the system generated email or use the invoice payment link in your own communication. You can add discounts and taxes for the entire invoice or for each line item. To customize the invoice to match your brand see [Invoice Settings](https://developer.cybersource.com/api-reference-assets/index.html#invoicing_invoice-settings_update-invoice-settings). The invoice payment page uses Unified Checkout to process the payments. The availability of API features for a merchant can depend on the portfolio configuration and may need to be enabled at the portfolio level before they can be added to merchant accounts.
 
 ### Example 
 ```python
@@ -65,7 +66,7 @@ No authorization required
 
 Get a List of Invoices
 
-Get a list of invoices.
+Provides a (filtered) list of invoices that have been created in your account. You can filter the list based on Invoice Status by setting the status query parameter to one of DRAFT, CREATED, SENT, PARTIAL, PAID or CANCELED.
 
 ### Example 
 ```python
@@ -117,7 +118,7 @@ No authorization required
 
 Get Invoice Details
 
-Get the details of a specific invoice.
+You can retrieve details of a specific invoice. This can be used to check the Invoice status and get a list of invoice payments in the invoice history section of the response. For each payment transaction you can use the Transaction Details API to get more details on the payment transaction.
 
 ### Example 
 ```python
@@ -161,11 +162,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **perform_cancel_action**
-> InvoicingV2InvoicesPost201Response perform_cancel_action(id)
+> InvoicingV2InvoicesCancel200Response perform_cancel_action(id)
 
 Cancel an Invoice
 
-Cancel an invoice.
+You can cancel an invoice if no payment is made to it. You cannot cancel partially or fully paid invoices.
 
 ### Example 
 ```python
@@ -195,7 +196,55 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InvoicingV2InvoicesPost201Response**](InvoicingV2InvoicesPost201Response.md)
+[**InvoicingV2InvoicesCancel200Response**](InvoicingV2InvoicesCancel200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json, application/hal+json, application/json;charset=utf-8, application/hal+json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **perform_publish_action**
+> InvoicingV2InvoicesPublish200Response perform_publish_action(id)
+
+Publish an Invoice
+
+You can publish an invoice in DRAFT status. After invoking this method, the invoice status is changed to CREATED.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.InvoicesApi()
+id = 'id_example' # str | The invoice number.
+
+try: 
+    # Publish an Invoice
+    api_response = api_instance.perform_publish_action(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling InvoicesApi->perform_publish_action: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The invoice number. | 
+
+### Return type
+
+[**InvoicingV2InvoicesPublish200Response**](InvoicingV2InvoicesPublish200Response.md)
 
 ### Authorization
 
@@ -209,11 +258,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **perform_send_action**
-> InvoicingV2InvoicesPost201Response perform_send_action(id)
+> InvoicingV2InvoicesSend200Response perform_send_action(id)
 
 Send an Invoice
 
-Send an invoice.
+You can send an invoice in draft or created state or resend a sent or partially paid invoice. Fully paid or canceled invoices cannot be resent.
 
 ### Example 
 ```python
@@ -243,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InvoicingV2InvoicesPost201Response**](InvoicingV2InvoicesPost201Response.md)
+[**InvoicingV2InvoicesSend200Response**](InvoicingV2InvoicesSend200Response.md)
 
 ### Authorization
 
@@ -257,11 +306,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_invoice**
-> InvoicingV2InvoicesPost201Response update_invoice(id, update_invoice_request)
+> InvoicingV2InvoicesPut200Response update_invoice(id, update_invoice_request)
 
 Update an Invoice
 
-Update an invoice.
+You can update all information except the invoice number till any payment is received for an invoice. Invoices that are partially or fully paid or cancelled cannot be updated.
 
 ### Example 
 ```python
@@ -293,7 +342,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InvoicingV2InvoicesPost201Response**](InvoicingV2InvoicesPost201Response.md)
+[**InvoicingV2InvoicesPut200Response**](InvoicingV2InvoicesPut200Response.md)
 
 ### Authorization
 

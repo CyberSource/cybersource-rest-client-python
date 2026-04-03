@@ -52,11 +52,11 @@ class LogConfiguration:
     def set_enable_masking(self, value):
         if value is not None and (type(value) == bool or (value.lower() == 'true' or value.lower() == 'false')):
             if type(value) == bool:
-                self.enable_masking = value
+                self.enable_masking = True
             elif value.lower() == 'true':
                 self.enable_masking = True
             else:
-                self.enable_masking = False
+                self.enable_masking = True
         else:
             self.enable_masking = True
 

@@ -1,4 +1,6 @@
+import copy
 from CyberSource.logging.log_configuration import LogConfiguration
+from authenticationsdk.util.CertificateUtility import CertificateUtility
 from authenticationsdk.util.GlobalLabelParameters import *
 from wsgiref.handlers import format_date_time
 from datetime import datetime
@@ -11,7 +13,6 @@ import CyberSource.logging.log_factory as LogFactory
 
 
 class MerchantConfiguration:
-
     def __init__(self):
         self.merchant_keyid = None
         self.merchant_secretkey = None
@@ -21,12 +22,11 @@ class MerchantConfiguration:
         self.host_name = None
         self.url = None
         self.request_host = None
-        self.request_type_method = None
-        self.request_target = None
         self.authentication_type = None
         self.key_file_path = None
         self.run_environment = None
         self.IntermediateHost = None
+        self.defaultDeveloperId = None
         self.default_headers = None
         self.key_alias = None
         self.key_password = None
@@ -42,15 +42,41 @@ class MerchantConfiguration:
         self.response_code = None
         self.response_message = None
         self.v_c_correlation_id = None
+        self.use_proxy = None
         self.proxy_address = None
         self.proxy_port = None
+        self.proxy_username = None
+        self.proxy_password = None
         self.key_file_name = None
-        self.request_json_path_data = None
         self.solution_id = None
         self.log_config = None
         self.__jwePEMFileDirectory = None
+        # Older flag "useMLEGlobally" is deprecated and will be used as alias/another name for enableRequestMLEForOptionalApisGlobally.
+        # self.useMLEGlobally = None
+        self.enableRequestMLEForOptionalApisGlobally = None
+        self.disableRequestMLEForMandatoryApisGlobally = None
+        self.mapToControlMLEonAPI = None
+        # Optional parameter. User can pass a custom requestMleKeyAlias to fetch from the certificate.
+        # Older flag "mleKeyAlias" is deprecated and will be used as alias/another name for requestMleKeyAlias.
+        # self.mleKeyAlias = None
+        self.requestMleKeyAlias = None
+        self.mleForRequestPublicCertPath = None
+        self.p12KeyFilePath = None
+        self.internalMapToControlRequestMLEonAPI = None
+        self.internalMapToControlResponseMLEonAPI = None
+        self.enableResponseMleGlobally = None
+        self.responseMleKID = None
+        self.responseMlePrivateKeyFilePath = None
+        self.responseMlePrivateKeyFilePassword = None
+        self.responseMlePrivateKey = None
         self.logger = LogFactory.setup_logger(self.__class__.__name__)
+        self.max_num_idle_connections = GlobalLabelParameters.DEFAULT_MAX_IDLE_CONNECTIONS
+        self.max_pool_size = GlobalLabelParameters.DEFAULT_MAX_POOL_SIZE
+        self.max_keep_alive_delay = GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_DELAY
+        self.max_keep_alive_idle_window = GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_IDLE_WINDOW
+        self.ssl_verify = None
 
+#region Getters and Setters
     def set_merchant_keyid(self, value):
         if not (value.get('merchant_keyid') is None):
             self.merchant_keyid = value['merchant_keyid']
@@ -84,7 +110,7 @@ class MerchantConfiguration:
             self.use_metakey = value['use_metakey']
         else:
             self.use_metakey = False
-    
+
     def set_portfolio_id(self, value):
         if not (value.get('portfolio_id') is None):
             self.portfolio_id = value['portfolio_id']
@@ -92,6 +118,10 @@ class MerchantConfiguration:
     def set_IntermediateHost(self, value):
         if not (value.get('IntermediateHost') is None):
             self.IntermediateHost = value['IntermediateHost']
+
+    def set_defaultDeveloperId(self, value):
+        if not (value.get('defaultDeveloperId') is None):
+            self.defaultDeveloperId = value['defaultDeveloperId']
 
     def set_default_headers(self, value):
         if not (value.get('default_headers') is None):
@@ -109,6 +139,12 @@ class MerchantConfiguration:
             else:
                 self.request_host = self.run_environment
 
+    def set_use_proxy(self, value):
+        if not (value.get('use_proxy') is None):
+            self.use_proxy = value['use_proxy']
+        else:
+            self.use_proxy = False
+
     def set_proxy_address(self, value):
         if not (value.get('proxy_address') is None):
             self.proxy_address = value['proxy_address']
@@ -116,6 +152,14 @@ class MerchantConfiguration:
     def set_proxy_port(self, value):
         if not (value.get("proxy_port") is None):
             self.proxy_port = value['proxy_port']
+
+    def set_proxy_username(self, value):
+        if not (value.get('proxy_username') is None):
+            self.proxy_username = value['proxy_username']
+
+    def set_proxy_password(self, value):
+        if not (value.get("proxy_password") is None):
+            self.proxy_password = value['proxy_password']
 
     def set_key_file_name(self, value):
         if not (value.get('key_file_name') is None):
@@ -130,7 +174,7 @@ class MerchantConfiguration:
             self.enable_client_cert = value['enable_client_cert']
         else:
             self.enable_client_cert = False
-    
+
     def set_client_cert_dir(self, value):
         if not (value.get('client_cert_dir') is None):
             self.client_cert_dir = value['client_cert_dir']
@@ -176,9 +220,172 @@ class MerchantConfiguration:
     def get_jwePEMFileDirectory(self):
         return self.__jwePEMFileDirectory
 
+    def set_enableRequestMLEForOptionalApisGlobally(self, value):
+        enable_mle = value.get('enableRequestMLEForOptionalApisGlobally')
+        use_mle = value.get('useMLEGlobally')
+
+        # Validate that both flags have the same value if both are set
+        if enable_mle is not None and use_mle is not None and enable_mle != use_mle:
+            raise ValueError("useMLEGlobally and enableRequestMLEForOptionalApisGlobally must have the same value.")
+
+        # Set the value - prefer enableRequestMLEForOptionalApisGlobally, fall back to useMLEGlobally
+        self.enableRequestMLEForOptionalApisGlobally = (
+            enable_mle if enable_mle is not None else (use_mle if use_mle is not None else False)
+        )
+
+    def get_enableRequestMLEForOptionalApisGlobally(self):
+        return self.enableRequestMLEForOptionalApisGlobally
+    
+
+    def set_disableRequestMLEForMandatoryApisGlobally(self, value):
+        self.disableRequestMLEForMandatoryApisGlobally = (
+            value.get('disableRequestMLEForMandatoryApisGlobally')
+            or False
+        )
+
+    def get_disableRequestMLEForMandatoryApisGlobally(self):
+        return self.disableRequestMLEForMandatoryApisGlobally
+
+    def get_mapToControlMLEonAPI(self):
+        return self.mapToControlMLEonAPI
+
+    def set_mleForRequestPublicCertPath(self, value):
+        if value.get('mleForRequestPublicCertPath') is not None and value.get('mleForRequestPublicCertPath').strip():
+            self.mleForRequestPublicCertPath = value['mleForRequestPublicCertPath'].strip()
+        else:
+            self.mleForRequestPublicCertPath = None
+
+    def get_mleForRequestPublicCertPath(self):
+        return self.mleForRequestPublicCertPath
+
+    def set_p12KeyFilePath(self, value):
+        if value.get('p12KeyFilePath') is not None and value.get('p12KeyFilePath').strip():
+            self.p12KeyFilePath = value['p12KeyFilePath'].strip()
+        else:
+            self.p12KeyFilePath = None
+
+    def get_p12KeyFilePath(self):
+        return self.p12KeyFilePath
+    
+    def get_MaxNumIdleConnections(self):
+        return self.max_num_idle_connections
+    
+    def set_MaxNumIdleConnections(self, value):
+        if value.get('maxNumIdleConnections') is not None:
+            self.max_num_idle_connections = value['maxNumIdleConnections']
+
+    def get_MaxPoolSize(self):
+        return self.max_pool_size
+    
+    def set_MaxPoolSize(self, value):
+        if value.get('maxPoolSize') is not None:
+            self.max_pool_size = value['maxPoolSize']
+
+    def get_MaxKeepAliveDelay(self):
+        return self.max_keep_alive_delay
+    
+    def set_MaxKeepAliveDelay(self, value):
+        if value.get('maxKeepAliveDelay') is not None:
+            self.max_keep_alive_delay = value['maxKeepAliveDelay']
+
+    def get_MaxKeepAliveIdleWindow(self):
+        return self.max_keep_alive_idle_window
+    
+    def set_MaxKeepAliveIdleWindow(self, value):
+        if value.get('maxKeepAliveIdleWindow') is not None:
+            self.max_keep_alive_idle_window = value['maxKeepAliveIdleWindow']
+
+    def set_SSL_verify(self, value):
+        if not (value.get('ssl_verify') is None):
+            self.ssl_verify = value['ssl_verify']
+        else:
+            self.ssl_verify = True
+    
+    def set_enableResponseMleGlobally(self, value):
+        if not (value.get('enableResponseMleGlobally') is None):
+            self.enableResponseMleGlobally = value['enableResponseMleGlobally']
+        else:
+            self.enableResponseMleGlobally = False
+
+    def set_responseMleKID(self, value):
+        if not (value.get('responseMleKID') is None):
+            self.responseMleKID = value['responseMleKID']
+
+    def set_responseMlePrivateKeyFilePath(self, value):
+        if not (value.get('responseMlePrivateKeyFilePath') is None):
+            self.responseMlePrivateKeyFilePath = value['responseMlePrivateKeyFilePath']
+
+    def set_responseMlePrivateKeyFilePassword(self, value):
+        if not (value.get('responseMlePrivateKeyFilePassword') is None):
+            self.responseMlePrivateKeyFilePassword = value['responseMlePrivateKeyFilePassword']
+
+    def set_responseMlePrivateKey(self, value):
+        if not (value.get('responseMlePrivateKey') is None):
+            self.responseMlePrivateKey = value['responseMlePrivateKey']
+
+    def set_requestMleKeyAlias(self, value):
+        if not (value.get('requestMleKeyAlias') is None) and value.get('requestMleKeyAlias').strip():
+            self.requestMleKeyAlias = value['requestMleKeyAlias'].strip()
+        elif not (value.get('mleKeyAlias') is None) and value.get('mleKeyAlias').strip():
+            self.requestMleKeyAlias = value['mleKeyAlias'].strip()
+        else:
+            self.requestMleKeyAlias = GlobalLabelParameters.DEFAULT_MLE_ALIAS_FOR_CERT
+            
+    def get_requestMleKeyAlias(self):
+        return self.requestMleKeyAlias
+
+    def set_internalMapToControlMLEonAPI(self):
+        if self.mapToControlMLEonAPI is not None:
+            # Initialize internal maps
+            self.internalMapToControlRequestMLEonAPI = {}
+            self.internalMapToControlResponseMLEonAPI = {}
+
+            for api_name, value in self.mapToControlMLEonAPI.items():
+                if isinstance(value, bool):
+                    # If value is boolean, it only applies to request MLE
+                    self.internalMapToControlRequestMLEonAPI[api_name] = value
+                elif isinstance(value, str) and '::' in value:
+                    # Format: "requestMLE::responseMLE"
+                    parts = value.split('::', 1)  # Split at first occurrence of '::'
+                    request_mle = parts[0].strip()
+                    response_mle = parts[1].strip() if len(parts) > 1 else ""
+
+                    # Set request MLE value if provided
+                    if request_mle:
+                        self.internalMapToControlRequestMLEonAPI[api_name] = request_mle.lower() == 'true'
+
+                    # Set response MLE value if provided
+                    if response_mle:
+                        self.internalMapToControlResponseMLEonAPI[api_name] = response_mle.lower() == 'true'
+                elif isinstance(value, str):
+                    # Format: "true" or "false" - applies to request MLE only
+                    self.internalMapToControlRequestMLEonAPI[api_name] = value.lower() == 'true'
+
+    def get_enableResponseMleGlobally(self):
+        return self.enableResponseMleGlobally
+
+    def get_responseMleKID(self):
+        return self.responseMleKID
+
+    def get_responseMlePrivateKeyFilePath(self):
+        return self.responseMlePrivateKeyFilePath
+
+    def get_responseMlePrivateKeyFilePassword(self):
+        return self.responseMlePrivateKeyFilePassword
+
+    def get_responseMlePrivateKey(self):
+        return self.responseMlePrivateKey
+
+    def get_internalMapToControlRequestMLEonAPI(self):
+        return self.internalMapToControlRequestMLEonAPI
+
+    def get_internalMapToControlResponseMLEonAPI(self):
+        return self.internalMapToControlResponseMLEonAPI
+
+#endregion
+
     # This method sets the Merchant Configuration Variables to its respective values after reading from cybs.properties
     def set_merchantconfig(self, val):
-
         self.set_key_password(val)
         self.set_key_alias(val)
         self.set_key_file_path(val)
@@ -189,12 +396,16 @@ class MerchantConfiguration:
         self.set_portfolio_id(val)
         self.set_run_environment(val)
         self.set_IntermediateHost(val)
+        self.set_defaultDeveloperId(val)
         self.set_default_headers(val)
         self.set_merchant_id(val)
         self.set_authentication_type(val)
         self.set_request_host(val)
+        self.set_use_proxy(val)
         self.set_proxy_address(val)
         self.set_proxy_port(val)
+        self.set_proxy_username(val)
+        self.set_proxy_password(val)
         self.set_enable_client_cert(val)
         self.set_client_cert_dir(val)
         self.set_ssl_client_cert(val)
@@ -206,6 +417,22 @@ class MerchantConfiguration:
         self.set_refresh_token(val)
         self.set_log_configuration(val)
         self.set_jwePEMFileDirectory(val)
+        self.set_enableRequestMLEForOptionalApisGlobally(val)
+        self.set_disableRequestMLEForMandatoryApisGlobally(val)
+        self.set_mapToControlMLEonAPI(val)
+        self.set_mleForRequestPublicCertPath(val)
+        self.set_requestMleKeyAlias(val)
+        self.set_MaxNumIdleConnections(val)
+        self.set_MaxPoolSize(val)
+        self.set_MaxKeepAliveDelay(val)
+        self.set_MaxKeepAliveIdleWindow(val)
+        self.set_SSL_verify(val)
+        self.set_enableResponseMleGlobally(val)
+        self.set_responseMleKID(val)
+        self.set_responseMlePrivateKeyFilePath(val)
+        self.set_responseMlePrivateKeyFilePassword(val)
+        self.set_responseMlePrivateKey(val)
+        self.set_internalMapToControlMLEonAPI()
 
     # Returns the time in format as defined by RFC7231
     def get_time(self):
@@ -218,9 +445,8 @@ class MerchantConfiguration:
     def validate_merchant_details(self, details, mconfig = None):
         # verify Mandatory Properties
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.log_config)
-        if self.log_config.enable_log is True:
-            self.logger.info("START> ======================================= ")
-
+        self.logger.info("START> ======================================= ")
+        
         if self.authentication_type is None or self.authentication_type == "":
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.AUTHENTICATION_REQ,
@@ -239,12 +465,12 @@ class MerchantConfiguration:
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.CLIENT_CERT_DIR_EMPTY,
                                                                                self.log_config)
-            
+
             if self.ssl_client_cert is None or self.ssl_client_cert == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.SSL_CLIENT_CERT_EMPTY,
                                                                                self.log_config)
-            
+
             if self.private_key is None or self.private_key == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.PRIVATE_KEY_EMPTY,
@@ -260,7 +486,7 @@ class MerchantConfiguration:
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.MERCHANTID_REQ,
                                                                                self.log_config)
-                
+
                 if self.merchant_keyid is None or self.merchant_keyid == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                        GlobalLabelParameters.MERCHANT_KEY_ID_REQ,
@@ -271,21 +497,28 @@ class MerchantConfiguration:
                                                                                        GlobalLabelParameters.MERCHANT_SECRET_KEY_REQ,
                                                                                        self.log_config)
 
+
             elif self.authentication_type.lower() == GlobalLabelParameters.JWT.lower():
                 if self.merchant_id is None or self.merchant_id == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.MERCHANTID_REQ,
                                                                                self.log_config)
-                
+
                 if self.key_alias is None or self.key_alias == "":
                     self.key_alias = self.merchant_id
                     authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
                                                                                  GlobalLabelParameters.KEY_ALIAS_NULL_EMPTY,
                                                                                  self.log_config)
-                if not (self.key_alias == self.merchant_id):
+                if ((not self.use_metakey) and (self.key_alias != self.merchant_id)):
                     self.key_alias = self.merchant_id
                     authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
                                                                                  GlobalLabelParameters.INVALID_KEY_ALIAS,
+                                                                                 self.log_config)
+                    
+                if(( self.use_metakey) and (self.key_alias != self.portfolio_id)):
+                    self.key_alias = self.portfolio_id
+                    authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
+                                                                                 GlobalLabelParameters.INCORRECT_KEY_ALIAS_FOR_METAKEY,
                                                                                  self.log_config)
 
                 if self.key_password is None or self.key_password == "":
@@ -307,23 +540,26 @@ class MerchantConfiguration:
                                                                                  GlobalLabelParameters.KEY_FILE_EMPTY,
                                                                                  self.log_config)
 
-            elif self.authentication_type.lower() == GlobalLabelParameters.OAUTH.lower():                
+                if not self.check_key_file():
+                    authenticationsdk.util.ExceptionAuth.log_exception(self.logger, f"Error finding or accessing the Key Directory or Key File. Please review the values in the merchant configuration.", self.log_config)
+
+            elif self.authentication_type.lower() == GlobalLabelParameters.OAUTH.lower():
                 if self.access_token is None or self.access_token == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.ACCESS_TOKEN_EMPTY,
                                                                                self.log_config)
-            
+
                 if self.ssl_client_cert is None or self.ssl_client_cert == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.REFRESH_TOKEN_EMPTY,
                                                                                self.log_config)
-            
-            elif self.authentication_type.lower() == GlobalLabelParameters.MUTUAL_AUTH.lower():                
+
+            elif self.authentication_type.lower() == GlobalLabelParameters.MUTUAL_AUTH.lower():
                 if self.client_id is None or self.client_id == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.CLIENT_ID_EMPTY,
                                                                                self.log_config)
-            
+
                 if self.client_secret is None or self.client_secret == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.CLIENT_SECRET_EMPTY,
@@ -332,15 +568,280 @@ class MerchantConfiguration:
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.AUTH_ERROR,
                                                                                self.log_config)
+        
+        # useMLEGlobally check for auth Type
+        if self.enableRequestMLEForOptionalApisGlobally is True or self.mapToControlMLEonAPI is not None:
+            if self.enableRequestMLEForOptionalApisGlobally is True and self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
+                 authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                                                                               GlobalLabelParameters.MLE_AUTH_ERROR,
+                                                                               self.log_config)
+            
+            if self.mapToControlMLEonAPI is not None and len(self.mapToControlMLEonAPI) != 0:
+                has_true_value = any(value is True for value in self.mapToControlMLEonAPI.values())
+                if has_true_value and self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
+                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                                                                               GlobalLabelParameters.MLE_AUTH_ERROR,
+                                                                               self.log_config)
+
+        self.validate_MLE_configuration()
+        
+        # Construct P12 key file path only if both components are available
+        if self.key_file_path and self.key_file_name:
+            self.p12KeyFilePath = os.path.join(self.key_file_path, self.key_file_name) + GlobalLabelParameters.P12_PREFIX
 
         log_items = GlobalLabelParameters.HIDE_MERCHANT_CONFIG_PROPS
+        # To prevent pickling error from deep copying
+        _no_deepcopy_keys = {
+            "responseMlePrivateKeyFilePath",
+            "responseMlePrivateKeyFilePassword",
+            "responseMlePrivateKey"
+        }
+        _temp_details = {}
+        for _k, _v in details.items():
+            if _k in _no_deepcopy_keys:
+                # Do not deepcopy; mask instead
+                _temp_details[_k] = "***"
+            else:
+                _temp_details[_k] = _v
         # This displays the logic for logging all cybs.json values
+        details_copy = copy.deepcopy(_temp_details)
         if self.log_config.enable_log is True:
-            for key, value in list(details.items()):
+            for key, value in list(details_copy.items()):
                 if key in log_items:
-                    del details[key]
+                    del details_copy[key]
 
-                for keys, values in list(details.items()):
-                    details[keys] = str(values)
+            for keys, values in list(details_copy.items()):
+                details_copy[keys] = str(values)
 
-            self.logger.info("Mconfig >      " + str(ast.literal_eval(json.dumps(details))))
+        self.logger.info("Mconfig >      " + str(ast.literal_eval(json.dumps(details_copy))))
+
+        import numbers
+        if not isinstance(self.max_num_idle_connections, numbers.Number):
+            self.max_num_idle_connections = GlobalLabelParameters.DEFAULT_MAX_IDLE_CONNECTIONS
+            self.logger.error(f"maxNumIdleConnections is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_IDLE_CONNECTIONS}")
+
+        if not isinstance(self.max_pool_size, numbers.Number):
+            self.max_pool_size = GlobalLabelParameters.DEFAULT_MAX_POOL_SIZE
+            self.logger.error(f"maxPoolSize is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_POOL_SIZE}")
+
+        if not isinstance(self.max_keep_alive_delay, numbers.Number):
+            self.max_keep_alive_delay = GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_DELAY
+            self.logger.error(f"maxKeepAliveDelay is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_DELAY}")
+
+        if not isinstance(self.max_keep_alive_idle_window, numbers.Number):
+            self.max_keep_alive_idle_window = GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_IDLE_WINDOW
+            self.logger.error(f"maxKeepAliveIdleWindow is not a number. Using Default Value : {GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_IDLE_WINDOW}")
+
+    def check_key_file(self):
+        if not(self.key_file_name and self.key_file_name.strip()):
+            self.logger.error("Key Filename not provided. Assigning the value of Merchant ID")
+            if self.merchant_id and self.merchant_id.strip():
+                self.key_file_name = self.merchant_id
+
+        if not(self.key_file_path and self.key_file_path.strip()):
+            self.key_file_path = GlobalLabelParameters.DEFAULT_KEY_FILE_PATH
+            self.logger.error(f"Keys Directory not provided. Using Default Path: {self.key_file_path}")
+
+        # Directory exists?
+        if not os.path.isdir(self.key_file_path):
+            self.logger.error(f"Keys Directory not found. Entered directory : {self.key_file_path}")
+            return False
+
+        keyFilePath = os.path.join(self.key_file_path, self.key_file_name) + GlobalLabelParameters.P12_PREFIX
+
+        # File exists?
+        if not os.path.isfile(keyFilePath):
+            self.logger.error(f"Key File not found. Check path/filename entered. Entered path/filename : {keyFilePath}")
+            return False
+
+        self.logger.info(f"Entered value for Key File Path : {keyFilePath}")
+
+        # Can file be opened for reading?
+        try:
+            with open(keyFilePath, 'rb'):
+                return True
+        except Exception:
+            self.logger.info(f"File cannot be accessed. Permission denied : {keyFilePath}")
+            return False
+
+    def validate_MLE_configuration(self):
+        if self.mleForRequestPublicCertPath and self.mleForRequestPublicCertPath.strip():
+            try:
+                CertificateUtility.validate_path_and_file(self.mleForRequestPublicCertPath, "mleForRequestPublicCertPath", self.log_config)
+            except Exception as err:
+                self.logger.error("Error validating mleForRequestPublicCertPath.")
+                raise err
+
+        # Validate Response MLE configuration
+        response_mle_configured = self.enableResponseMleGlobally
+
+        # Check if any API has response MLE enabled in the control map
+        if self.internalMapToControlResponseMLEonAPI is not None:
+            for api_name, enabled in self.internalMapToControlResponseMLEonAPI.items():
+                if enabled:
+                    response_mle_configured = True
+                    break
+
+        if response_mle_configured:
+        # Validate auth type - Response MLE only supported with JWT
+            if self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
+                authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                    "Response MLE is only supported for JWT auth type",
+                    self.log_config)
+
+        # Check for private key (either path or object)
+            if self.responseMlePrivateKey is None and (self.responseMlePrivateKeyFilePath is None or not self.responseMlePrivateKeyFilePath.strip()):
+                authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                    "Response MLE is enabled but no private key provided. Either provide responseMlePrivateKey object or responseMlePrivateKeyFilePath.",
+                    self.log_config)
+
+        # Don't allow both private key object and file path
+            if self.responseMlePrivateKey is not None and self.responseMlePrivateKeyFilePath is not None and self.responseMlePrivateKeyFilePath.strip():
+                authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                    "Both responseMlePrivateKey object and responseMlePrivateKeyFilePath are provided. Please provide only one of them for response MLE private key.",
+                    self.log_config)
+
+        # Validate private key file path exists if provided
+            if self.responseMlePrivateKeyFilePath is not None and self.responseMlePrivateKeyFilePath.strip():
+                if not os.path.isfile(self.responseMlePrivateKeyFilePath):
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                        f"Invalid responseMlePrivateKeyFilePath: {self.responseMlePrivateKeyFilePath}",
+                        self.log_config)
+
+        # Validate KID is provided (skip if using P12/PFX as it can be auto-extracted from CyberSource certs)
+            is_p12_or_pfx = False
+            if self.responseMlePrivateKeyFilePath and self.responseMlePrivateKeyFilePath.strip():
+                file_extension = os.path.splitext(self.responseMlePrivateKeyFilePath)[1].lower()
+                is_p12_or_pfx = file_extension in ('.p12', '.pfx')
+
+            if not is_p12_or_pfx:  # Only validate KID if NOT using P12/PFX
+                if self.responseMleKID is None or not self.responseMleKID.strip():
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                        "Response MLE is enabled but responseMleKID is not provided. For non Cybersource generated P12/PFX files, responseMleKID must be explicitly configured.",
+                        self.log_config)
+            
+    def is_valid_boolean_string(self, value):
+        """
+        Check if a string represents a valid boolean value.
+    
+        Args:
+            value (str): The string to check
+            
+        Returns:
+            bool: True if the value is 'true' or 'false' (case-insensitive)
+        """
+        if isinstance(value, str):
+            return value.strip().lower() in ("true", "false")
+        return False
+
+        # Expected value (in config / cybs.json):
+        # "mapToControlMLEonAPI": {
+        #   "apiFunctionName1": "true::true",   # request MLE = true,  response MLE = true
+        #   "apiFunctionName2": "false::false", # request MLE = false, response MLE = false
+        #   "apiFunctionName3": "true::false",  # request MLE = true,  response MLE = false
+        #   "apiFunctionName4": "false::true",  # request MLE = false, response MLE = true
+        #   "apiFunctionName5": "true",         # request MLE = true,  response uses global flag
+        #   "apiFunctionName6": "false",        # request MLE = false, response uses global flag
+        #   "apiFunctionName7": "::true",       # response MLE = true, request uses global flag
+        #   "apiFunctionName8": "true::",       # request MLE = true,  response uses global flag
+        # }
+        # IMPORTANT:
+        #   Use STRING values when you need to control both request & response (use '::' separator).
+        #   A bare boolean True/False (or "true"/"false") only applies to request MLE.
+
+    def validate_map_to_control_mle_on_api_values(self, map_to_control_mle_on_api):
+        """validate_map_to_control_mle_on_api_values
+        Validates the map values for MLE control API configuration.
+        Allowed formats (case‑insensitive):
+          "true::true"   - request MLE true,  response MLE true
+          "false::false" - request MLE false, response MLE false
+          "true::false"  - request MLE true,  response MLE false
+          "false::true"  - request MLE false, response MLE true
+          "true"         - request MLE true,  response uses global flag
+          "false"        - request MLE false, response uses global flag
+          "::true"       - response MLE true, request uses global flag
+          "true::"       - request MLE true,  response uses global flag
+
+        Invalid:
+          "::"                (both empty)
+          "true::true::false" (multiple separators)
+          ""                  (empty string)
+          "invalid::true" / "true::invalid"
+
+        Notes:
+          - A Python boolean (True / False) is treated the same as "true"/"false" (request only).
+          - Missing side around '::' -> that side falls back to global enable/disable flags.
+                
+        Args:
+            map_to_control_mle_on_api (dict): The map to validate
+            
+        Raises:
+            ValueError: If any value in the map has invalid format
+        """
+        for key, value in map_to_control_mle_on_api.items():
+            if value is None or (isinstance(value, str) and not value.strip()):
+                error_msg = f"Invalid MLE control map value for key '{key}'. Value cannot be None or empty."
+                authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger, error_msg, self.log_config)
+            
+            value = str(value).strip().lower()
+
+            # Check if value contains "::" separator
+            if "::" in value:
+                parts = value.split("::", -1)  # -1 to include empty strings
+
+
+                if len(parts) != 2:
+                    error_msg = f"Invalid MLE control map value format for key '{key}'. Expected format: true/false for 'requestMLE::responseMLE' but got: '{value}'"
+                    if self.logger:
+                        self.logger.error(error_msg)
+                    raise ValueError(error_msg)
+
+
+                request_mle = parts[0]
+                response_mle = parts[1]
+
+
+                # Validate first part (request MLE) - can be empty, "true", or "false"
+                if request_mle and not self.is_valid_boolean_string(request_mle):
+                    error_msg = f"Invalid request MLE value for key '{key}'. Expected 'true', 'false', or empty but got: '{request_mle}'"
+                    if self.logger:
+                        self.logger.error(error_msg)
+                    raise ValueError(error_msg)
+
+
+                # Validate second part (response MLE) - can be empty, "true", or "false"
+                if response_mle and not self.is_valid_boolean_string(response_mle):
+                    error_msg = f"Invalid response MLE value for key '{key}'. Expected 'true', 'false', or empty but got: '{response_mle}'"
+                    if self.logger:
+                        self.logger.error(error_msg)
+                    raise ValueError(error_msg)
+            else:
+                # Value without "::" separator - should be "true" or "false"
+                if not self.is_valid_boolean_string(value):
+                    error_msg = f"Invalid MLE control map value for key '{key}'. Expected 'true' or 'false' for requestMLE but got: '{value}'"
+                    if self.logger:
+                        self.logger.error(error_msg)
+                    raise ValueError(error_msg)
+
+    def set_mapToControlMLEonAPI(self, value):
+        map_to_control_mle_on_api = value.get('mapToControlMLEonAPI')
+        if map_to_control_mle_on_api is not None:
+            try:
+                # First, validate the input is a dictionary with appropriate types
+                if not isinstance(map_to_control_mle_on_api, dict):
+                    raise ValueError("mapToControlMLEonAPI must be a dictionary")
+
+                # Check map value types - must be string or boolean
+                for key, val in map_to_control_mle_on_api.items():
+                    if not isinstance(val, (str, bool)):
+                        raise ValueError(f"mapToControlMLEonAPI values must be string or boolean.")
+
+                # Validate the map values
+                self.validate_map_to_control_mle_on_api_values(map_to_control_mle_on_api)
+
+                # Set the map
+                self.mapToControlMLEonAPI = map_to_control_mle_on_api
+            except Exception as e:
+                if self.logger:
+                    self.logger.error(f"Unable to initialize MLE control Map from config")
+                raise ValueError(f"Unable to initialize MLE control Map from config: {str(e)}")

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **legacy_token** | [**Ptsv2paymentsPaymentInformationLegacyToken**](Ptsv2paymentsPaymentInformationLegacyToken.md) |  | [optional] 
 **payment_type** | [**Ptsv2paymentsidrefundsPaymentInformationPaymentType**](Ptsv2paymentsidrefundsPaymentInformationPaymentType.md) |  | [optional] 
 **e_wallet** | [**Ptsv2paymentsidrefundsPaymentInformationEWallet**](Ptsv2paymentsidrefundsPaymentInformationEWallet.md) |  | [optional] 
+**payment_account_reference** | [**Ptsv2paymentsPaymentInformationPaymentAccountReference**](Ptsv2paymentsPaymentInformationPaymentAccountReference.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

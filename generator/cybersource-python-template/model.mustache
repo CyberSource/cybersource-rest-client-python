@@ -85,10 +85,6 @@ class {{classname}}(object):
         :param {{name}}: The {{name}} of this {{classname}}.
         :type: {{datatype}}
         """
-{{#required}}
-        if {{name}} is None:
-            raise ValueError("Invalid value for `{{name}}`, must not be `None`")
-{{/required}}
 {{#isEnum}}
 {{#isContainer}}
         allowed_values = [{{#allowableValues}}{{#values}}{{#items.isString}}"{{/items.isString}}{{{this}}}{{#items.isString}}"{{/items.isString}}{{^-last}}, {{/-last}}{{/values}}{{/allowableValues}}]
@@ -119,12 +115,6 @@ class {{classname}}(object):
 {{/isContainer}}
 {{/isEnum}}
 {{^isEnum}}
-{{#hasValidation}}
-{{#pattern}}
-        if {{name}} is not None and not re.search('{{{vendorExtensions.x-regex}}}', {{name}}{{#vendorExtensions.x-modifiers}}{{#-first}}, flags={{/-first}}re.{{.}}{{^-last}} | {{/-last}}{{/vendorExtensions.x-modifiers}}):
-            raise ValueError("Invalid value for `{{name}}`, must be a follow pattern or equal to `{{{pattern}}}`")
-{{/pattern}}
-{{/hasValidation}}
 {{/isEnum}}
 
         self._{{name}} = {{name}}
