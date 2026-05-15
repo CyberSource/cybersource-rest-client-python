@@ -33,6 +33,11 @@ class PtsV2CreateBillingAgreementPost201ResponseAgreementInformation(object):
         'id': 'str',
         'date_signed': 'str',
         'date_created': 'str',
+        'type': 'str',
+        'frequency': 'str',
+        'occurrences_per_period': 'int',
+        'start_date': 'str',
+        'end_date': 'str',
         'encoded_html': 'str',
         'encoded_html_popup': 'str',
         'url': 'str'
@@ -42,12 +47,17 @@ class PtsV2CreateBillingAgreementPost201ResponseAgreementInformation(object):
         'id': 'id',
         'date_signed': 'dateSigned',
         'date_created': 'dateCreated',
+        'type': 'type',
+        'frequency': 'frequency',
+        'occurrences_per_period': 'occurrencesPerPeriod',
+        'start_date': 'startDate',
+        'end_date': 'endDate',
         'encoded_html': 'encodedHtml',
         'encoded_html_popup': 'encodedHtmlPopup',
         'url': 'url'
     }
 
-    def __init__(self, id=None, date_signed=None, date_created=None, encoded_html=None, encoded_html_popup=None, url=None):
+    def __init__(self, id=None, date_signed=None, date_created=None, type=None, frequency=None, occurrences_per_period=None, start_date=None, end_date=None, encoded_html=None, encoded_html_popup=None, url=None):
         """
         PtsV2CreateBillingAgreementPost201ResponseAgreementInformation - a model defined in Swagger
         """
@@ -55,6 +65,11 @@ class PtsV2CreateBillingAgreementPost201ResponseAgreementInformation(object):
         self._id = None
         self._date_signed = None
         self._date_created = None
+        self._type = None
+        self._frequency = None
+        self._occurrences_per_period = None
+        self._start_date = None
+        self._end_date = None
         self._encoded_html = None
         self._encoded_html_popup = None
         self._url = None
@@ -65,6 +80,16 @@ class PtsV2CreateBillingAgreementPost201ResponseAgreementInformation(object):
           self.date_signed = date_signed
         if date_created is not None:
           self.date_created = date_created
+        if type is not None:
+          self.type = type
+        if frequency is not None:
+          self.frequency = frequency
+        if occurrences_per_period is not None:
+          self.occurrences_per_period = occurrences_per_period
+        if start_date is not None:
+          self.start_date = start_date
+        if end_date is not None:
+          self.end_date = end_date
         if encoded_html is not None:
           self.encoded_html = encoded_html
         if encoded_html_popup is not None:
@@ -140,6 +165,121 @@ class PtsV2CreateBillingAgreementPost201ResponseAgreementInformation(object):
         """
 
         self._date_created = date_created
+
+    @property
+    def type(self):
+        """
+        Gets the type of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        Identifies the type of schedule as either recurring, one-off, split or usage.  Possible values: - recurring - oneoff - split - usage
+
+        :return: The type of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        Identifies the type of schedule as either recurring, one-off, split or usage.  Possible values: - recurring - oneoff - split - usage
+
+        :param type: The type of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        :type: str
+        """
+
+        self._type = type
+
+    @property
+    def frequency(self):
+        """
+        Gets the frequency of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        Regularity with which the event occurs.  Possible values: - annual - monthly - quarterly - semiannual - weekly - daily - adhoc - intraday - fortnightly
+
+        :return: The frequency of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        :rtype: str
+        """
+        return self._frequency
+
+    @frequency.setter
+    def frequency(self, frequency):
+        """
+        Sets the frequency of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        Regularity with which the event occurs.  Possible values: - annual - monthly - quarterly - semiannual - weekly - daily - adhoc - intraday - fortnightly
+
+        :param frequency: The frequency of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        :type: str
+        """
+
+        self._frequency = frequency
+
+    @property
+    def occurrences_per_period(self):
+        """
+        Gets the occurrences_per_period of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        Number of occurrences during the specified period.
+
+        :return: The occurrences_per_period of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        :rtype: int
+        """
+        return self._occurrences_per_period
+
+    @occurrences_per_period.setter
+    def occurrences_per_period(self, occurrences_per_period):
+        """
+        Sets the occurrences_per_period of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        Number of occurrences during the specified period.
+
+        :param occurrences_per_period: The occurrences_per_period of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        :type: int
+        """
+
+        self._occurrences_per_period = occurrences_per_period
+
+    @property
+    def start_date(self):
+        """
+        Gets the start_date of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        Start date of the schedule.  Format YYYYMMdd
+
+        :return: The start_date of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        :rtype: str
+        """
+        return self._start_date
+
+    @start_date.setter
+    def start_date(self, start_date):
+        """
+        Sets the start_date of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        Start date of the schedule.  Format YYYYMMdd
+
+        :param start_date: The start_date of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        :type: str
+        """
+
+        self._start_date = start_date
+
+    @property
+    def end_date(self):
+        """
+        Gets the end_date of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        End date of the schedule.  Format YYYYMMdd
+
+        :return: The end_date of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        :rtype: str
+        """
+        return self._end_date
+
+    @end_date.setter
+    def end_date(self, end_date):
+        """
+        Sets the end_date of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        End date of the schedule.  Format YYYYMMdd
+
+        :param end_date: The end_date of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
+        :type: str
+        """
+
+        self._end_date = end_date
 
     @property
     def encoded_html(self):

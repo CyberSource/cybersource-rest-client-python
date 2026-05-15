@@ -33,8 +33,9 @@ class Ucv1sessionsDataOrderInformation(object):
         'amount_details': 'Ucv1sessionsDataOrderInformationAmountDetails',
         'bill_to': 'Ucv1sessionsDataOrderInformationBillTo',
         'ship_to': 'Upv1capturecontextsDataOrderInformationShipTo',
-        'line_items': 'list[Upv1capturecontextsDataOrderInformationLineItems]',
-        'invoice_details': 'Upv1capturecontextsDataOrderInformationInvoiceDetails'
+        'line_items': 'list[Ucv1sessionsDataOrderInformationLineItems]',
+        'invoice_details': 'Ucv1sessionsDataOrderInformationInvoiceDetails',
+        'shipping_details': 'Ucv1sessionsDataOrderInformationShippingDetails'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class Ucv1sessionsDataOrderInformation(object):
         'bill_to': 'billTo',
         'ship_to': 'shipTo',
         'line_items': 'lineItems',
-        'invoice_details': 'invoiceDetails'
+        'invoice_details': 'invoiceDetails',
+        'shipping_details': 'shippingDetails'
     }
 
-    def __init__(self, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None):
+    def __init__(self, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None, shipping_details=None):
         """
         Ucv1sessionsDataOrderInformation - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class Ucv1sessionsDataOrderInformation(object):
         self._ship_to = None
         self._line_items = None
         self._invoice_details = None
+        self._shipping_details = None
 
         if amount_details is not None:
           self.amount_details = amount_details
@@ -66,6 +69,8 @@ class Ucv1sessionsDataOrderInformation(object):
           self.line_items = line_items
         if invoice_details is not None:
           self.invoice_details = invoice_details
+        if shipping_details is not None:
+          self.shipping_details = shipping_details
 
     @property
     def amount_details(self):
@@ -136,7 +141,7 @@ class Ucv1sessionsDataOrderInformation(object):
         Gets the line_items of this Ucv1sessionsDataOrderInformation.
 
         :return: The line_items of this Ucv1sessionsDataOrderInformation.
-        :rtype: list[Upv1capturecontextsDataOrderInformationLineItems]
+        :rtype: list[Ucv1sessionsDataOrderInformationLineItems]
         """
         return self._line_items
 
@@ -146,7 +151,7 @@ class Ucv1sessionsDataOrderInformation(object):
         Sets the line_items of this Ucv1sessionsDataOrderInformation.
 
         :param line_items: The line_items of this Ucv1sessionsDataOrderInformation.
-        :type: list[Upv1capturecontextsDataOrderInformationLineItems]
+        :type: list[Ucv1sessionsDataOrderInformationLineItems]
         """
 
         self._line_items = line_items
@@ -157,7 +162,7 @@ class Ucv1sessionsDataOrderInformation(object):
         Gets the invoice_details of this Ucv1sessionsDataOrderInformation.
 
         :return: The invoice_details of this Ucv1sessionsDataOrderInformation.
-        :rtype: Upv1capturecontextsDataOrderInformationInvoiceDetails
+        :rtype: Ucv1sessionsDataOrderInformationInvoiceDetails
         """
         return self._invoice_details
 
@@ -167,10 +172,31 @@ class Ucv1sessionsDataOrderInformation(object):
         Sets the invoice_details of this Ucv1sessionsDataOrderInformation.
 
         :param invoice_details: The invoice_details of this Ucv1sessionsDataOrderInformation.
-        :type: Upv1capturecontextsDataOrderInformationInvoiceDetails
+        :type: Ucv1sessionsDataOrderInformationInvoiceDetails
         """
 
         self._invoice_details = invoice_details
+
+    @property
+    def shipping_details(self):
+        """
+        Gets the shipping_details of this Ucv1sessionsDataOrderInformation.
+
+        :return: The shipping_details of this Ucv1sessionsDataOrderInformation.
+        :rtype: Ucv1sessionsDataOrderInformationShippingDetails
+        """
+        return self._shipping_details
+
+    @shipping_details.setter
+    def shipping_details(self, shipping_details):
+        """
+        Sets the shipping_details of this Ucv1sessionsDataOrderInformation.
+
+        :param shipping_details: The shipping_details of this Ucv1sessionsDataOrderInformation.
+        :type: Ucv1sessionsDataOrderInformationShippingDetails
+        """
+
+        self._shipping_details = shipping_details
 
     def to_dict(self):
         """

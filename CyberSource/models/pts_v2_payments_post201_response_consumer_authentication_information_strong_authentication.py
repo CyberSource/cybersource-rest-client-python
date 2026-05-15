@@ -30,22 +30,27 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
                             and the value is json key in definition.
     """
     swagger_types = {
-        'issuer_information': 'PaymentsStrongAuthIssuerInformation'
+        'issuer_information': 'PaymentsStrongAuthIssuerInformation',
+        'outage_exemption_indicator': 'str'
     }
 
     attribute_map = {
-        'issuer_information': 'issuerInformation'
+        'issuer_information': 'issuerInformation',
+        'outage_exemption_indicator': 'outageExemptionIndicator'
     }
 
-    def __init__(self, issuer_information=None):
+    def __init__(self, issuer_information=None, outage_exemption_indicator=None):
         """
         PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthentication - a model defined in Swagger
         """
 
         self._issuer_information = None
+        self._outage_exemption_indicator = None
 
         if issuer_information is not None:
           self.issuer_information = issuer_information
+        if outage_exemption_indicator is not None:
+          self.outage_exemption_indicator = outage_exemption_indicator
 
     @property
     def issuer_information(self):
@@ -67,6 +72,29 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
         """
 
         self._issuer_information = issuer_information
+
+    @property
+    def outage_exemption_indicator(self):
+        """
+        Gets the outage_exemption_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthentication.
+        This field will contain the outage exemption indicator with one of the following values: Possible values: - `0`  (Outage Authentication exemption does not apply to the transaction) - `1` (Outage exempt from SCA as authentication could not be done due to outage) 
+
+        :return: The outage_exemption_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthentication.
+        :rtype: str
+        """
+        return self._outage_exemption_indicator
+
+    @outage_exemption_indicator.setter
+    def outage_exemption_indicator(self, outage_exemption_indicator):
+        """
+        Sets the outage_exemption_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthentication.
+        This field will contain the outage exemption indicator with one of the following values: Possible values: - `0`  (Outage Authentication exemption does not apply to the transaction) - `1` (Outage exempt from SCA as authentication could not be done due to outage) 
+
+        :param outage_exemption_indicator: The outage_exemption_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthentication.
+        :type: str
+        """
+
+        self._outage_exemption_indicator = outage_exemption_indicator
 
     def to_dict(self):
         """

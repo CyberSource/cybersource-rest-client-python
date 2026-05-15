@@ -69,12 +69,14 @@ class MerchantConfiguration:
         self.responseMlePrivateKeyFilePath = None
         self.responseMlePrivateKeyFilePassword = None
         self.responseMlePrivateKey = None
+        self.jwt_key_type = None
         self.logger = LogFactory.setup_logger(self.__class__.__name__)
         self.max_num_idle_connections = GlobalLabelParameters.DEFAULT_MAX_IDLE_CONNECTIONS
         self.max_pool_size = GlobalLabelParameters.DEFAULT_MAX_POOL_SIZE
         self.max_keep_alive_delay = GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_DELAY
         self.max_keep_alive_idle_window = GlobalLabelParameters.DEFAULT_MAX_KEEP_ALIVE_IDLE_WINDOW
         self.ssl_verify = None
+        self.isSDK = False
 
 #region Getters and Setters
     def set_merchant_keyid(self, value):
@@ -382,6 +384,58 @@ class MerchantConfiguration:
     def get_internalMapToControlResponseMLEonAPI(self):
         return self.internalMapToControlResponseMLEonAPI
 
+    def set_jwt_key_type(self, value):
+        if value.get('jwt_key_type') is not None:
+            self.jwt_key_type = value['jwt_key_type']
+        else:
+            # Default to P12 for backward compatibility
+            self.jwt_key_type = GlobalLabelParameters.JWT_KEY_TYPE_P12
+
+    def get_jwt_key_type(self):
+        return self.jwt_key_type
+
+    def set_isSDK(self, value):
+        raw = value.get('isSDK')
+        if raw is not None:
+            if isinstance(raw, bool):
+                self.isSDK = raw
+            elif isinstance(raw, str) and raw.strip().lower() == 'true':
+                self.isSDK = True
+            else:
+                self.isSDK = False
+        else:
+            self.isSDK = False
+
+    def get_isSDK(self):
+        return self.isSDK
+
+    def is_shared_secret_key_type(self):
+        """
+        Returns True if the JWT key type is SHARED_SECRET (symmetric / HS256).
+        
+        Returns:
+            bool: True for shared secret, False for P12 (or default)
+        """
+        return self.jwt_key_type is not None and self.jwt_key_type.upper() == GlobalLabelParameters.JWT_KEY_TYPE_SHARED_SECRET
+
+    def validate_jwt_key_type(self):
+        """
+        Validates the jwtKeyType value. Must be P12 or SHARED_SECRET.
+        
+        Raises:
+            Exception: if jwtKeyType is invalid
+        """
+        if self.jwt_key_type is None:
+            return
+            
+        jwt_key_type_upper = self.jwt_key_type.upper()
+        if jwt_key_type_upper not in (GlobalLabelParameters.JWT_KEY_TYPE_P12, 
+                                       GlobalLabelParameters.JWT_KEY_TYPE_SHARED_SECRET):
+            error_msg = f"{GlobalLabelParameters.INVALID_JWT_KEY_TYPE} Provided: {self.jwt_key_type}"
+            self.logger.error(error_msg)
+            authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(
+                self.logger, error_msg, self.log_config)
+
 #endregion
 
     # This method sets the Merchant Configuration Variables to its respective values after reading from cybs.properties
@@ -400,6 +454,7 @@ class MerchantConfiguration:
         self.set_default_headers(val)
         self.set_merchant_id(val)
         self.set_authentication_type(val)
+        self.set_jwt_key_type(val)
         self.set_request_host(val)
         self.set_use_proxy(val)
         self.set_proxy_address(val)
@@ -433,6 +488,7 @@ class MerchantConfiguration:
         self.set_responseMlePrivateKeyFilePassword(val)
         self.set_responseMlePrivateKey(val)
         self.set_internalMapToControlMLEonAPI()
+        self.set_isSDK(val)
 
     # Returns the time in format as defined by RFC7231
     def get_time(self):
@@ -504,44 +560,60 @@ class MerchantConfiguration:
                                                                                GlobalLabelParameters.MERCHANTID_REQ,
                                                                                self.log_config)
 
-                if self.key_alias is None or self.key_alias == "":
-                    self.key_alias = self.merchant_id
-                    authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
-                                                                                 GlobalLabelParameters.KEY_ALIAS_NULL_EMPTY,
-                                                                                 self.log_config)
-                if ((not self.use_metakey) and (self.key_alias != self.merchant_id)):
-                    self.key_alias = self.merchant_id
-                    authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
-                                                                                 GlobalLabelParameters.INVALID_KEY_ALIAS,
-                                                                                 self.log_config)
-                    
-                if(( self.use_metakey) and (self.key_alias != self.portfolio_id)):
-                    self.key_alias = self.portfolio_id
-                    authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
-                                                                                 GlobalLabelParameters.INCORRECT_KEY_ALIAS_FOR_METAKEY,
-                                                                                 self.log_config)
+                # Validate jwtKeyType
+                self.validate_jwt_key_type()
 
-                if self.key_password is None or self.key_password == "":
-                    self.key_password = self.merchant_id
-                    authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
-                                                                                 GlobalLabelParameters.KEY_PASSWORD_EMPTY,
-                                                                                 self.log_config)
+                if self.is_shared_secret_key_type():
+                    # JWT with SHARED_SECRET — validate symmetric key fields
+                    if not self.merchant_keyid:
+                        authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                                                                                           GlobalLabelParameters.MERCHANT_KEY_ID_REQ,
+                                                                                           self.log_config)
 
-                if self.key_file_path is None or self.key_file_path == "":
-                    self.key_file_path = GlobalLabelParameters.DEFAULT_KEY_FILE_PATH
-                    authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
-                                                                                 GlobalLabelParameters.KEY_DIRECTORY_EMPTY + self.key_file_path,
-                                                                                 self.log_config)
+                    if not self.merchant_secretkey:
+                        authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                                                                                           GlobalLabelParameters.MERCHANT_SECRET_KEY_REQ,
+                                                                                           self.log_config)
+                else:
+                    # JWT with P12 (default) — validate certificate fields
+                    if not self.key_alias:
+                        self.key_alias = self.merchant_id
+                        authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
+                                                                                     GlobalLabelParameters.KEY_ALIAS_NULL_EMPTY,
+                                                                                     self.log_config)
+                    if ((not self.use_metakey) and (self.key_alias != self.merchant_id)):
+                        self.key_alias = self.merchant_id
+                        authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
+                                                                                     GlobalLabelParameters.INVALID_KEY_ALIAS,
+                                                                                     self.log_config)
+                        
+                    if(( self.use_metakey) and (self.key_alias != self.portfolio_id)):
+                        self.key_alias = self.portfolio_id
+                        authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
+                                                                                     GlobalLabelParameters.INCORRECT_KEY_ALIAS_FOR_METAKEY,
+                                                                                     self.log_config)
 
-                if self.key_file_name is None or self.key_file_name == "":
-                    self.key_file_name = self.merchant_id
+                    if not self.key_password:
+                        self.key_password = self.merchant_id
+                        authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
+                                                                                     GlobalLabelParameters.KEY_PASSWORD_EMPTY,
+                                                                                     self.log_config)
 
-                    authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
-                                                                                 GlobalLabelParameters.KEY_FILE_EMPTY,
-                                                                                 self.log_config)
+                    if not self.key_file_path:
+                        self.key_file_path = GlobalLabelParameters.DEFAULT_KEY_FILE_PATH
+                        authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
+                                                                                     GlobalLabelParameters.KEY_DIRECTORY_EMPTY + self.key_file_path,
+                                                                                     self.log_config)
 
-                if not self.check_key_file():
-                    authenticationsdk.util.ExceptionAuth.log_exception(self.logger, f"Error finding or accessing the Key Directory or Key File. Please review the values in the merchant configuration.", self.log_config)
+                    if not self.key_file_name:
+                        self.key_file_name = self.merchant_id
+
+                        authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
+                                                                                     GlobalLabelParameters.KEY_FILE_EMPTY,
+                                                                                     self.log_config)
+
+                    if not self.check_key_file():
+                        authenticationsdk.util.ExceptionAuth.log_exception(self.logger, f"Error finding or accessing the Key Directory or Key File. Please review the values in the merchant configuration.", self.log_config)
 
             elif self.authentication_type.lower() == GlobalLabelParameters.OAUTH.lower():
                 if self.access_token is None or self.access_token == "":

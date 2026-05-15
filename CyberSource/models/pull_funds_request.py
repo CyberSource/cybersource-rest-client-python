@@ -35,6 +35,7 @@ class PullFundsRequest(object):
         'processing_information': 'Ptsv1pullfundstransferProcessingInformation',
         'recipient_information': 'Ptsv1pullfundstransferRecipientInformation',
         'sender_information': 'Ptsv1pullfundstransferSenderInformation',
+        'buyer_information': 'Ptsv1pullfundstransferBuyerInformation',
         'aggregator_information': 'Ptsv1pullfundstransferAggregatorInformation',
         'merchant_information': 'Ptsv1pullfundstransferMerchantInformation'
     }
@@ -45,11 +46,12 @@ class PullFundsRequest(object):
         'processing_information': 'processingInformation',
         'recipient_information': 'recipientInformation',
         'sender_information': 'senderInformation',
+        'buyer_information': 'buyerInformation',
         'aggregator_information': 'aggregatorInformation',
         'merchant_information': 'merchantInformation'
     }
 
-    def __init__(self, client_reference_information=None, order_information=None, processing_information=None, recipient_information=None, sender_information=None, aggregator_information=None, merchant_information=None):
+    def __init__(self, client_reference_information=None, order_information=None, processing_information=None, recipient_information=None, sender_information=None, buyer_information=None, aggregator_information=None, merchant_information=None):
         """
         PullFundsRequest - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class PullFundsRequest(object):
         self._processing_information = None
         self._recipient_information = None
         self._sender_information = None
+        self._buyer_information = None
         self._aggregator_information = None
         self._merchant_information = None
 
@@ -72,6 +75,8 @@ class PullFundsRequest(object):
           self.recipient_information = recipient_information
         if sender_information is not None:
           self.sender_information = sender_information
+        if buyer_information is not None:
+          self.buyer_information = buyer_information
         if aggregator_information is not None:
           self.aggregator_information = aggregator_information
         if merchant_information is not None:
@@ -181,6 +186,27 @@ class PullFundsRequest(object):
         """
 
         self._sender_information = sender_information
+
+    @property
+    def buyer_information(self):
+        """
+        Gets the buyer_information of this PullFundsRequest.
+
+        :return: The buyer_information of this PullFundsRequest.
+        :rtype: Ptsv1pullfundstransferBuyerInformation
+        """
+        return self._buyer_information
+
+    @buyer_information.setter
+    def buyer_information(self, buyer_information):
+        """
+        Sets the buyer_information of this PullFundsRequest.
+
+        :param buyer_information: The buyer_information of this PullFundsRequest.
+        :type: Ptsv1pullfundstransferBuyerInformation
+        """
+
+        self._buyer_information = buyer_information
 
     @property
     def aggregator_information(self):

@@ -392,7 +392,7 @@ class SubscriptionsApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_subscription_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        inbound_mle_status = "false"
+        inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_subscription,create_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
@@ -436,6 +436,7 @@ class SubscriptionsApi(object):
         :param str code: Filter by Subscription Code
         :param str status: Filter by Subscription Status
         :param str customer_id: Filter by Customer Id
+        :param str client_reference_information_code: Filter by Client Reference Information Code / Merchant Reference Number
         :return: GetAllSubscriptionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -469,12 +470,13 @@ class SubscriptionsApi(object):
         :param str code: Filter by Subscription Code
         :param str status: Filter by Subscription Status
         :param str customer_id: Filter by Customer Id
+        :param str client_reference_information_code: Filter by Client Reference Information Code / Merchant Reference Number
         :return: GetAllSubscriptionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['offset', 'limit', 'code', 'status', 'customer_id']
+        all_params = ['offset', 'limit', 'code', 'status', 'customer_id', 'client_reference_information_code']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -506,6 +508,8 @@ class SubscriptionsApi(object):
             query_params.append(('status', params['status']))
         if 'customer_id' in params:
             query_params.append(('customerId', params['customer_id']))
+        if 'client_reference_information_code' in params:
+            query_params.append(('clientReferenceInformationCode', params['client_reference_information_code']))
 
         header_params = {}
 
@@ -782,6 +786,271 @@ class SubscriptionsApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='GetSubscriptionCodeResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
+    def subscriptions_id_payments_get(self, id, **kwargs):
+        """
+        Get Payments for a Subscription
+        Retrieve a list of payments for a specific subscription by its ID. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.subscriptions_id_payments_get(id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str id: Subscription Id (required)
+        :param int offset: Page offset number.
+        :param int limit: Number of items to be returned. Default - `20`, Max - `100` 
+        :param int scheduled_payments_count: Number of existing scheduled payments to be returned. Default - `5`, Max - `9999` 
+        :return: GetSubscriptionsPaymentsResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `subscriptions_id_payments_get` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.subscriptions_id_payments_get_with_http_info(id, **kwargs)
+        else:
+            (data) = self.subscriptions_id_payments_get_with_http_info(id, **kwargs)
+            return data
+
+    def subscriptions_id_payments_get_with_http_info(self, id, **kwargs):
+        """
+        Get Payments for a Subscription
+        Retrieve a list of payments for a specific subscription by its ID. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.subscriptions_id_payments_get_with_http_info(id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str id: Subscription Id (required)
+        :param int offset: Page offset number.
+        :param int limit: Number of items to be returned. Default - `20`, Max - `100` 
+        :param int scheduled_payments_count: Number of existing scheduled payments to be returned. Default - `5`, Max - `9999` 
+        :return: GetSubscriptionsPaymentsResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'offset', 'limit', 'scheduled_payments_count']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method subscriptions_id_payments_get" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params) or (params['id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `subscriptions_id_payments_get`")
+            raise ValueError("Missing the required parameter `id` when calling `subscriptions_id_payments_get`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']
+            id=id
+
+        query_params = []
+        if 'offset' in params:
+            query_params.append(('offset', params['offset']))
+        if 'limit' in params:
+            query_params.append(('limit', params['limit']))
+        if 'scheduled_payments_count' in params:
+            query_params.append(('scheduledPaymentsCount', params['scheduled_payments_count']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json'])
+
+        body_params = None
+        if 'GET' in ('POST'):
+            body_params = '{}'
+        
+        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
+        if file_post_body_and_delimiter is not None:
+            body_params = file_post_body_and_delimiter[0]
+            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "subscriptions_id_payments_get,subscriptions_id_payments_get_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "subscriptions_id_payments_get,subscriptions_id_payments_get_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/rbs/v1/subscriptions/{id}/payments', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='GetSubscriptionsPaymentsResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
+    def subscriptions_id_payments_put(self, id, update_payments, **kwargs):
+        """
+        Update Payments for a subscription
+        Modifies the state of a subscription's payments. Currently, the only possible modifications are \"skipping\" and \"restoring\" payments.  Marking a payment as \"skipped\" means it will not be processed when its scheduled time arrives. \"Restoring\" a payment removes it from the list of payments to be skipped. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.subscriptions_id_payments_put(id, update_payments, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str id: Subscription Id (required)
+        :param UpdatePayments update_payments: Modify payments of a subscription (required)
+        :return: GetSubscriptionsPaymentsResponse1
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `subscriptions_id_payments_put` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.subscriptions_id_payments_put_with_http_info(id, update_payments, **kwargs)
+        else:
+            (data) = self.subscriptions_id_payments_put_with_http_info(id, update_payments, **kwargs)
+            return data
+
+    def subscriptions_id_payments_put_with_http_info(self, id, update_payments, **kwargs):
+        """
+        Update Payments for a subscription
+        Modifies the state of a subscription's payments. Currently, the only possible modifications are \"skipping\" and \"restoring\" payments.  Marking a payment as \"skipped\" means it will not be processed when its scheduled time arrives. \"Restoring\" a payment removes it from the list of payments to be skipped. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.subscriptions_id_payments_put_with_http_info(id, update_payments, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str id: Subscription Id (required)
+        :param UpdatePayments update_payments: Modify payments of a subscription (required)
+        :return: GetSubscriptionsPaymentsResponse1
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'update_payments']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method subscriptions_id_payments_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params) or (params['id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `subscriptions_id_payments_put`")
+            raise ValueError("Missing the required parameter `id` when calling `subscriptions_id_payments_put`")
+        # verify the required parameter 'update_payments' is set
+        if ('update_payments' not in params) or (params['update_payments'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `update_payments` when calling `subscriptions_id_payments_put`")
+            raise ValueError("Missing the required parameter `update_payments` when calling `subscriptions_id_payments_put`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']
+            id=id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json'])
+
+        body_params = None
+        if 'update_payments' in params:
+            body_params = params['update_payments']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'update_payments', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = process_body(body_params)
+
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "subscriptions_id_payments_put,subscriptions_id_payments_put_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "subscriptions_id_payments_put,subscriptions_id_payments_put_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/rbs/v1/subscriptions/{id}/payments', 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='GetSubscriptionsPaymentsResponse1',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

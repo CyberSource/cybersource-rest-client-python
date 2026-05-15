@@ -40,7 +40,8 @@ class Ptsv2paymentsSenderInformation(object):
         'alias_name': 'str',
         'reference_number': 'str',
         'account': 'Ptsv2paymentsSenderInformationAccount',
-        'postal_code': 'str'
+        'postal_code': 'str',
+        'tax_id_number': 'float'
     }
 
     attribute_map = {
@@ -54,10 +55,11 @@ class Ptsv2paymentsSenderInformation(object):
         'alias_name': 'aliasName',
         'reference_number': 'referenceNumber',
         'account': 'account',
-        'postal_code': 'postalCode'
+        'postal_code': 'postalCode',
+        'tax_id_number': 'taxIdNumber'
     }
 
-    def __init__(self, first_name=None, middle_name=None, last_name=None, address1=None, locality=None, administrative_area=None, country_code=None, alias_name=None, reference_number=None, account=None, postal_code=None):
+    def __init__(self, first_name=None, middle_name=None, last_name=None, address1=None, locality=None, administrative_area=None, country_code=None, alias_name=None, reference_number=None, account=None, postal_code=None, tax_id_number=None):
         """
         Ptsv2paymentsSenderInformation - a model defined in Swagger
         """
@@ -73,6 +75,7 @@ class Ptsv2paymentsSenderInformation(object):
         self._reference_number = None
         self._account = None
         self._postal_code = None
+        self._tax_id_number = None
 
         if first_name is not None:
           self.first_name = first_name
@@ -96,6 +99,8 @@ class Ptsv2paymentsSenderInformation(object):
           self.account = account
         if postal_code is not None:
           self.postal_code = postal_code
+        if tax_id_number is not None:
+          self.tax_id_number = tax_id_number
 
     @property
     def first_name(self):
@@ -347,6 +352,29 @@ class Ptsv2paymentsSenderInformation(object):
         """
 
         self._postal_code = postal_code
+
+    @property
+    def tax_id_number(self):
+        """
+        Gets the tax_id_number of this Ptsv2paymentsSenderInformation.
+        CPF or CNPJ of the cash-in recipient. \"Cadastro de Pessoas Físicas\", which translates to the \"Natural Persons Register.\" It is the individual taxpayer registry identification number in Brazil, similar to a Social Security Number (SSN) in the United States or a National Insurance Number in the UK. 
+
+        :return: The tax_id_number of this Ptsv2paymentsSenderInformation.
+        :rtype: float
+        """
+        return self._tax_id_number
+
+    @tax_id_number.setter
+    def tax_id_number(self, tax_id_number):
+        """
+        Sets the tax_id_number of this Ptsv2paymentsSenderInformation.
+        CPF or CNPJ of the cash-in recipient. \"Cadastro de Pessoas Físicas\", which translates to the \"Natural Persons Register.\" It is the individual taxpayer registry identification number in Brazil, similar to a Social Security Number (SSN) in the United States or a National Insurance Number in the UK. 
+
+        :param tax_id_number: The tax_id_number of this Ptsv2paymentsSenderInformation.
+        :type: float
+        """
+
+        self._tax_id_number = tax_id_number
 
     def to_dict(self):
         """

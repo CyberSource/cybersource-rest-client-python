@@ -31,9 +31,13 @@ class Ucv1sessionsDataOrderInformationAmountDetails(object):
     """
     swagger_types = {
         'total_amount': 'str',
+        'freight_amount': 'str',
+        'duty_amount': 'str',
+        'discount_amount': 'str',
+        'tax_applied_after_discount': 'str',
+        'tax_applied_level': 'str',
         'currency': 'str',
         'surcharge': 'Upv1capturecontextsDataOrderInformationAmountDetailsSurcharge',
-        'discount_amount': 'str',
         'sub_total_amount': 'str',
         'service_fee_amount': 'str',
         'tax_amount': 'str',
@@ -42,24 +46,32 @@ class Ucv1sessionsDataOrderInformationAmountDetails(object):
 
     attribute_map = {
         'total_amount': 'totalAmount',
+        'freight_amount': 'freightAmount',
+        'duty_amount': 'dutyAmount',
+        'discount_amount': 'discountAmount',
+        'tax_applied_after_discount': 'taxAppliedAfterDiscount',
+        'tax_applied_level': 'taxAppliedLevel',
         'currency': 'currency',
         'surcharge': 'surcharge',
-        'discount_amount': 'discountAmount',
         'sub_total_amount': 'subTotalAmount',
         'service_fee_amount': 'serviceFeeAmount',
         'tax_amount': 'taxAmount',
         'tax_details': 'taxDetails'
     }
 
-    def __init__(self, total_amount=None, currency=None, surcharge=None, discount_amount=None, sub_total_amount=None, service_fee_amount=None, tax_amount=None, tax_details=None):
+    def __init__(self, total_amount=None, freight_amount=None, duty_amount=None, discount_amount=None, tax_applied_after_discount=None, tax_applied_level=None, currency=None, surcharge=None, sub_total_amount=None, service_fee_amount=None, tax_amount=None, tax_details=None):
         """
         Ucv1sessionsDataOrderInformationAmountDetails - a model defined in Swagger
         """
 
         self._total_amount = None
+        self._freight_amount = None
+        self._duty_amount = None
+        self._discount_amount = None
+        self._tax_applied_after_discount = None
+        self._tax_applied_level = None
         self._currency = None
         self._surcharge = None
-        self._discount_amount = None
         self._sub_total_amount = None
         self._service_fee_amount = None
         self._tax_amount = None
@@ -67,12 +79,20 @@ class Ucv1sessionsDataOrderInformationAmountDetails(object):
 
         if total_amount is not None:
           self.total_amount = total_amount
+        if freight_amount is not None:
+          self.freight_amount = freight_amount
+        if duty_amount is not None:
+          self.duty_amount = duty_amount
+        if discount_amount is not None:
+          self.discount_amount = discount_amount
+        if tax_applied_after_discount is not None:
+          self.tax_applied_after_discount = tax_applied_after_discount
+        if tax_applied_level is not None:
+          self.tax_applied_level = tax_applied_level
         if currency is not None:
           self.currency = currency
         if surcharge is not None:
           self.surcharge = surcharge
-        if discount_amount is not None:
-          self.discount_amount = discount_amount
         if sub_total_amount is not None:
           self.sub_total_amount = sub_total_amount
         if service_fee_amount is not None:
@@ -104,6 +124,121 @@ class Ucv1sessionsDataOrderInformationAmountDetails(object):
         """
 
         self._total_amount = total_amount
+
+    @property
+    def freight_amount(self):
+        """
+        Gets the freight_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        Total freight or shipping and handling charges for the order.  When you include this field in your request, you must also include the **totalAmount** field. 
+
+        :return: The freight_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._freight_amount
+
+    @freight_amount.setter
+    def freight_amount(self, freight_amount):
+        """
+        Sets the freight_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        Total freight or shipping and handling charges for the order.  When you include this field in your request, you must also include the **totalAmount** field. 
+
+        :param freight_amount: The freight_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._freight_amount = freight_amount
+
+    @property
+    def duty_amount(self):
+        """
+        Gets the duty_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        Total charges for any import or export duties included in the order. 
+
+        :return: The duty_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._duty_amount
+
+    @duty_amount.setter
+    def duty_amount(self, duty_amount):
+        """
+        Sets the duty_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        Total charges for any import or export duties included in the order. 
+
+        :param duty_amount: The duty_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._duty_amount = duty_amount
+
+    @property
+    def discount_amount(self):
+        """
+        Gets the discount_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        Total discount amount applied to the order. 
+
+        :return: The discount_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._discount_amount
+
+    @discount_amount.setter
+    def discount_amount(self, discount_amount):
+        """
+        Sets the discount_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        Total discount amount applied to the order. 
+
+        :param discount_amount: The discount_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._discount_amount = discount_amount
+
+    @property
+    def tax_applied_after_discount(self):
+        """
+        Gets the tax_applied_after_discount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        Flag that indicates how the merchant manages discounts.  Possible values:   - **0**: no invoice level discount included  - **1**: tax calculated on the postdiscount invoice total  - **2**: tax calculated on the prediscount invoice total 
+
+        :return: The tax_applied_after_discount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._tax_applied_after_discount
+
+    @tax_applied_after_discount.setter
+    def tax_applied_after_discount(self, tax_applied_after_discount):
+        """
+        Sets the tax_applied_after_discount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        Flag that indicates how the merchant manages discounts.  Possible values:   - **0**: no invoice level discount included  - **1**: tax calculated on the postdiscount invoice total  - **2**: tax calculated on the prediscount invoice total 
+
+        :param tax_applied_after_discount: The tax_applied_after_discount of this Ucv1sessionsDataOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._tax_applied_after_discount = tax_applied_after_discount
+
+    @property
+    def tax_applied_level(self):
+        """
+        Gets the tax_applied_level of this Ucv1sessionsDataOrderInformationAmountDetails.
+        Flag that indicates how you calculate tax.  Possible values:   - **0**: net prices with tax calculated at line item level  - **1**: net prices with tax calculated at invoice level  - **2**: gross prices with tax provided at line item level  - **3**: gross prices with tax provided at invoice level  - **4**: no tax applies on the invoice for the transaction 
+
+        :return: The tax_applied_level of this Ucv1sessionsDataOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._tax_applied_level
+
+    @tax_applied_level.setter
+    def tax_applied_level(self, tax_applied_level):
+        """
+        Sets the tax_applied_level of this Ucv1sessionsDataOrderInformationAmountDetails.
+        Flag that indicates how you calculate tax.  Possible values:   - **0**: net prices with tax calculated at line item level  - **1**: net prices with tax calculated at invoice level  - **2**: gross prices with tax provided at line item level  - **3**: gross prices with tax provided at invoice level  - **4**: no tax applies on the invoice for the transaction 
+
+        :param tax_applied_level: The tax_applied_level of this Ucv1sessionsDataOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._tax_applied_level = tax_applied_level
 
     @property
     def currency(self):
@@ -148,29 +283,6 @@ class Ucv1sessionsDataOrderInformationAmountDetails(object):
         """
 
         self._surcharge = surcharge
-
-    @property
-    def discount_amount(self):
-        """
-        Gets the discount_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
-        This field defines the discount amount applicable to the order. 
-
-        :return: The discount_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
-        :rtype: str
-        """
-        return self._discount_amount
-
-    @discount_amount.setter
-    def discount_amount(self, discount_amount):
-        """
-        Sets the discount_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
-        This field defines the discount amount applicable to the order. 
-
-        :param discount_amount: The discount_amount of this Ucv1sessionsDataOrderInformationAmountDetails.
-        :type: str
-        """
-
-        self._discount_amount = discount_amount
 
     @property
     def sub_total_amount(self):

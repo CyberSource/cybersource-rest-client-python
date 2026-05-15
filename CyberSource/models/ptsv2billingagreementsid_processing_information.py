@@ -31,24 +31,29 @@ class Ptsv2billingagreementsidProcessingInformation(object):
     """
     swagger_types = {
         'commerce_indicator': 'str',
+        'payment_completion_timeout': 'str',
         'action_list': 'list[str]'
     }
 
     attribute_map = {
         'commerce_indicator': 'commerceIndicator',
+        'payment_completion_timeout': 'paymentCompletionTimeout',
         'action_list': 'actionList'
     }
 
-    def __init__(self, commerce_indicator=None, action_list=None):
+    def __init__(self, commerce_indicator=None, payment_completion_timeout=None, action_list=None):
         """
         Ptsv2billingagreementsidProcessingInformation - a model defined in Swagger
         """
 
         self._commerce_indicator = None
+        self._payment_completion_timeout = None
         self._action_list = None
 
         if commerce_indicator is not None:
           self.commerce_indicator = commerce_indicator
+        if payment_completion_timeout is not None:
+          self.payment_completion_timeout = payment_completion_timeout
         if action_list is not None:
           self.action_list = action_list
 
@@ -74,6 +79,29 @@ class Ptsv2billingagreementsidProcessingInformation(object):
         """
 
         self._commerce_indicator = commerce_indicator
+
+    @property
+    def payment_completion_timeout(self):
+        """
+        Gets the payment_completion_timeout of this Ptsv2billingagreementsidProcessingInformation.
+        Period after which an authorization request to the consumer expires due to inactivity. Value in seconds (e.g., 86400 for one day). 
+
+        :return: The payment_completion_timeout of this Ptsv2billingagreementsidProcessingInformation.
+        :rtype: str
+        """
+        return self._payment_completion_timeout
+
+    @payment_completion_timeout.setter
+    def payment_completion_timeout(self, payment_completion_timeout):
+        """
+        Sets the payment_completion_timeout of this Ptsv2billingagreementsidProcessingInformation.
+        Period after which an authorization request to the consumer expires due to inactivity. Value in seconds (e.g., 86400 for one day). 
+
+        :param payment_completion_timeout: The payment_completion_timeout of this Ptsv2billingagreementsidProcessingInformation.
+        :type: str
+        """
+
+        self._payment_completion_timeout = payment_completion_timeout
 
     @property
     def action_list(self):

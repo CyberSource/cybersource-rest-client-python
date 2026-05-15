@@ -32,16 +32,20 @@ class ValueAddedServicesProducts(object):
     swagger_types = {
         'reporting': 'PaymentsProductsTax',
         'transaction_search': 'PaymentsProductsTax',
-        'bank_account_validation': 'PaymentsProductsTax'
+        'bank_account_validation': 'PaymentsProductsTax',
+        'flexapi': 'PaymentsProductsTax',
+        'webhooks': 'PaymentsProductsTax'
     }
 
     attribute_map = {
         'reporting': 'reporting',
         'transaction_search': 'transactionSearch',
-        'bank_account_validation': 'bankAccountValidation'
+        'bank_account_validation': 'bankAccountValidation',
+        'flexapi': 'flexapi',
+        'webhooks': 'webhooks'
     }
 
-    def __init__(self, reporting=None, transaction_search=None, bank_account_validation=None):
+    def __init__(self, reporting=None, transaction_search=None, bank_account_validation=None, flexapi=None, webhooks=None):
         """
         ValueAddedServicesProducts - a model defined in Swagger
         """
@@ -49,6 +53,8 @@ class ValueAddedServicesProducts(object):
         self._reporting = None
         self._transaction_search = None
         self._bank_account_validation = None
+        self._flexapi = None
+        self._webhooks = None
 
         if reporting is not None:
           self.reporting = reporting
@@ -56,6 +62,10 @@ class ValueAddedServicesProducts(object):
           self.transaction_search = transaction_search
         if bank_account_validation is not None:
           self.bank_account_validation = bank_account_validation
+        if flexapi is not None:
+          self.flexapi = flexapi
+        if webhooks is not None:
+          self.webhooks = webhooks
 
     @property
     def reporting(self):
@@ -119,6 +129,48 @@ class ValueAddedServicesProducts(object):
         """
 
         self._bank_account_validation = bank_account_validation
+
+    @property
+    def flexapi(self):
+        """
+        Gets the flexapi of this ValueAddedServicesProducts.
+
+        :return: The flexapi of this ValueAddedServicesProducts.
+        :rtype: PaymentsProductsTax
+        """
+        return self._flexapi
+
+    @flexapi.setter
+    def flexapi(self, flexapi):
+        """
+        Sets the flexapi of this ValueAddedServicesProducts.
+
+        :param flexapi: The flexapi of this ValueAddedServicesProducts.
+        :type: PaymentsProductsTax
+        """
+
+        self._flexapi = flexapi
+
+    @property
+    def webhooks(self):
+        """
+        Gets the webhooks of this ValueAddedServicesProducts.
+
+        :return: The webhooks of this ValueAddedServicesProducts.
+        :rtype: PaymentsProductsTax
+        """
+        return self._webhooks
+
+    @webhooks.setter
+    def webhooks(self, webhooks):
+        """
+        Sets the webhooks of this ValueAddedServicesProducts.
+
+        :param webhooks: The webhooks of this ValueAddedServicesProducts.
+        :type: PaymentsProductsTax
+        """
+
+        self._webhooks = webhooks
 
     def to_dict(self):
         """

@@ -34,7 +34,11 @@ class Iplv2paymentlinksOrderInformationLineItems(object):
         'product_name': 'str',
         'quantity': 'int',
         'unit_price': 'str',
-        'product_description': 'str'
+        'product_description': 'str',
+        'discount_amount': 'str',
+        'discount_percent': 'str',
+        'tax_amount': 'str',
+        'tax_rate': 'str'
     }
 
     attribute_map = {
@@ -42,10 +46,14 @@ class Iplv2paymentlinksOrderInformationLineItems(object):
         'product_name': 'productName',
         'quantity': 'quantity',
         'unit_price': 'unitPrice',
-        'product_description': 'productDescription'
+        'product_description': 'productDescription',
+        'discount_amount': 'discountAmount',
+        'discount_percent': 'discountPercent',
+        'tax_amount': 'taxAmount',
+        'tax_rate': 'taxRate'
     }
 
-    def __init__(self, product_sku=None, product_name=None, quantity=None, unit_price=None, product_description=None):
+    def __init__(self, product_sku=None, product_name=None, quantity=None, unit_price=None, product_description=None, discount_amount=None, discount_percent=None, tax_amount=None, tax_rate=None):
         """
         Iplv2paymentlinksOrderInformationLineItems - a model defined in Swagger
         """
@@ -55,6 +63,10 @@ class Iplv2paymentlinksOrderInformationLineItems(object):
         self._quantity = None
         self._unit_price = None
         self._product_description = None
+        self._discount_amount = None
+        self._discount_percent = None
+        self._tax_amount = None
+        self._tax_rate = None
 
         if product_sku is not None:
           self.product_sku = product_sku
@@ -65,6 +77,14 @@ class Iplv2paymentlinksOrderInformationLineItems(object):
           self.unit_price = unit_price
         if product_description is not None:
           self.product_description = product_description
+        if discount_amount is not None:
+          self.discount_amount = discount_amount
+        if discount_percent is not None:
+          self.discount_percent = discount_percent
+        if tax_amount is not None:
+          self.tax_amount = tax_amount
+        if tax_rate is not None:
+          self.tax_rate = tax_rate
 
     @property
     def product_sku(self):
@@ -180,6 +200,98 @@ class Iplv2paymentlinksOrderInformationLineItems(object):
         """
 
         self._product_description = product_description
+
+    @property
+    def discount_amount(self):
+        """
+        Gets the discount_amount of this Iplv2paymentlinksOrderInformationLineItems.
+        Discount amount applied to the item. Maximum of 2 decimal places. You may provide either discountAmount or discountPercent (not both). If both are present, their values must be consistent. Otherwise, a validation error will be returned. 
+
+        :return: The discount_amount of this Iplv2paymentlinksOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._discount_amount
+
+    @discount_amount.setter
+    def discount_amount(self, discount_amount):
+        """
+        Sets the discount_amount of this Iplv2paymentlinksOrderInformationLineItems.
+        Discount amount applied to the item. Maximum of 2 decimal places. You may provide either discountAmount or discountPercent (not both). If both are present, their values must be consistent. Otherwise, a validation error will be returned. 
+
+        :param discount_amount: The discount_amount of this Iplv2paymentlinksOrderInformationLineItems.
+        :type: str
+        """
+
+        self._discount_amount = discount_amount
+
+    @property
+    def discount_percent(self):
+        """
+        Gets the discount_percent of this Iplv2paymentlinksOrderInformationLineItems.
+        Discount rate applied to the item. Maximum of 3 decimal places. You may provide either discountAmount or discountPercent (not both). If both are present, their values must be consistent; otherwise, a validation error will be returned. Example: 5.25 (=5.25%) 
+
+        :return: The discount_percent of this Iplv2paymentlinksOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._discount_percent
+
+    @discount_percent.setter
+    def discount_percent(self, discount_percent):
+        """
+        Sets the discount_percent of this Iplv2paymentlinksOrderInformationLineItems.
+        Discount rate applied to the item. Maximum of 3 decimal places. You may provide either discountAmount or discountPercent (not both). If both are present, their values must be consistent; otherwise, a validation error will be returned. Example: 5.25 (=5.25%) 
+
+        :param discount_percent: The discount_percent of this Iplv2paymentlinksOrderInformationLineItems.
+        :type: str
+        """
+
+        self._discount_percent = discount_percent
+
+    @property
+    def tax_amount(self):
+        """
+        Gets the tax_amount of this Iplv2paymentlinksOrderInformationLineItems.
+        Tax amount applied to the item. This value cannot be negative. Maximum of 2 decimal places. The tax amount and the offer amount must be in the same currency. The tax amount field is additive. If taxAmount is provided but taxRate is not, the taxRate will be calculated. 
+
+        :return: The tax_amount of this Iplv2paymentlinksOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._tax_amount
+
+    @tax_amount.setter
+    def tax_amount(self, tax_amount):
+        """
+        Sets the tax_amount of this Iplv2paymentlinksOrderInformationLineItems.
+        Tax amount applied to the item. This value cannot be negative. Maximum of 2 decimal places. The tax amount and the offer amount must be in the same currency. The tax amount field is additive. If taxAmount is provided but taxRate is not, the taxRate will be calculated. 
+
+        :param tax_amount: The tax_amount of this Iplv2paymentlinksOrderInformationLineItems.
+        :type: str
+        """
+
+        self._tax_amount = tax_amount
+
+    @property
+    def tax_rate(self):
+        """
+        Gets the tax_rate of this Iplv2paymentlinksOrderInformationLineItems.
+        Tax rate applied to the item. Valid range: 1.001% to 99.999%. Maximum of 3 decimal places. If a taxRate is provided but taxAmount is missing or incorrect, the taxAmount based on the given taxRate will be overwritten. Example: 21.00 (=21.00%) 
+
+        :return: The tax_rate of this Iplv2paymentlinksOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._tax_rate
+
+    @tax_rate.setter
+    def tax_rate(self, tax_rate):
+        """
+        Sets the tax_rate of this Iplv2paymentlinksOrderInformationLineItems.
+        Tax rate applied to the item. Valid range: 1.001% to 99.999%. Maximum of 3 decimal places. If a taxRate is provided but taxAmount is missing or incorrect, the taxAmount based on the given taxRate will be overwritten. Example: 21.00 (=21.00%) 
+
+        :param tax_rate: The tax_rate of this Iplv2paymentlinksOrderInformationLineItems.
+        :type: str
+        """
+
+        self._tax_rate = tax_rate
 
     def to_dict(self):
         """

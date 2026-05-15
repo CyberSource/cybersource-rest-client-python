@@ -34,7 +34,8 @@ class PtsV2CreditsPost201ResponsePaymentInformation(object):
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
         'payment_instrument': 'Ptsv2paymentsPaymentInformationPaymentInstrument',
         'instrument_identifier': 'PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier',
-        'shipping_address': 'Ptsv2paymentsPaymentInformationShippingAddress'
+        'shipping_address': 'Ptsv2paymentsPaymentInformationShippingAddress',
+        'account_features': 'PtsV2CreditsPost201ResponsePaymentInformationAccountFeatures'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class PtsV2CreditsPost201ResponsePaymentInformation(object):
         'customer': 'customer',
         'payment_instrument': 'paymentInstrument',
         'instrument_identifier': 'instrumentIdentifier',
-        'shipping_address': 'shippingAddress'
+        'shipping_address': 'shippingAddress',
+        'account_features': 'accountFeatures'
     }
 
-    def __init__(self, bank=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None):
+    def __init__(self, bank=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, account_features=None):
         """
         PtsV2CreditsPost201ResponsePaymentInformation - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class PtsV2CreditsPost201ResponsePaymentInformation(object):
         self._payment_instrument = None
         self._instrument_identifier = None
         self._shipping_address = None
+        self._account_features = None
 
         if bank is not None:
           self.bank = bank
@@ -66,6 +69,8 @@ class PtsV2CreditsPost201ResponsePaymentInformation(object):
           self.instrument_identifier = instrument_identifier
         if shipping_address is not None:
           self.shipping_address = shipping_address
+        if account_features is not None:
+          self.account_features = account_features
 
     @property
     def bank(self):
@@ -171,6 +176,27 @@ class PtsV2CreditsPost201ResponsePaymentInformation(object):
         """
 
         self._shipping_address = shipping_address
+
+    @property
+    def account_features(self):
+        """
+        Gets the account_features of this PtsV2CreditsPost201ResponsePaymentInformation.
+
+        :return: The account_features of this PtsV2CreditsPost201ResponsePaymentInformation.
+        :rtype: PtsV2CreditsPost201ResponsePaymentInformationAccountFeatures
+        """
+        return self._account_features
+
+    @account_features.setter
+    def account_features(self, account_features):
+        """
+        Sets the account_features of this PtsV2CreditsPost201ResponsePaymentInformation.
+
+        :param account_features: The account_features of this PtsV2CreditsPost201ResponsePaymentInformation.
+        :type: PtsV2CreditsPost201ResponsePaymentInformationAccountFeatures
+        """
+
+        self._account_features = account_features
 
     def to_dict(self):
         """

@@ -31,26 +31,41 @@ class Ptsv2billingagreementsidAgreementInformation(object):
     """
     swagger_types = {
         'id': 'str',
-        'e_sign_indicator': 'str'
+        'e_sign_indicator': 'str',
+        'type': 'str',
+        'frequency': 'str',
+        'date_revoked': 'str'
     }
 
     attribute_map = {
         'id': 'id',
-        'e_sign_indicator': 'eSignIndicator'
+        'e_sign_indicator': 'eSignIndicator',
+        'type': 'type',
+        'frequency': 'frequency',
+        'date_revoked': 'dateRevoked'
     }
 
-    def __init__(self, id=None, e_sign_indicator=None):
+    def __init__(self, id=None, e_sign_indicator=None, type=None, frequency=None, date_revoked=None):
         """
         Ptsv2billingagreementsidAgreementInformation - a model defined in Swagger
         """
 
         self._id = None
         self._e_sign_indicator = None
+        self._type = None
+        self._frequency = None
+        self._date_revoked = None
 
         if id is not None:
           self.id = id
         if e_sign_indicator is not None:
           self.e_sign_indicator = e_sign_indicator
+        if type is not None:
+          self.type = type
+        if frequency is not None:
+          self.frequency = frequency
+        if date_revoked is not None:
+          self.date_revoked = date_revoked
 
     @property
     def id(self):
@@ -95,6 +110,75 @@ class Ptsv2billingagreementsidAgreementInformation(object):
         """
 
         self._e_sign_indicator = e_sign_indicator
+
+    @property
+    def type(self):
+        """
+        Gets the type of this Ptsv2billingagreementsidAgreementInformation.
+        Identifies the type of schedule as either recurring, one-off, split or usage.  Possible values: - recurring - oneoff - split - usage
+
+        :return: The type of this Ptsv2billingagreementsidAgreementInformation.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this Ptsv2billingagreementsidAgreementInformation.
+        Identifies the type of schedule as either recurring, one-off, split or usage.  Possible values: - recurring - oneoff - split - usage
+
+        :param type: The type of this Ptsv2billingagreementsidAgreementInformation.
+        :type: str
+        """
+
+        self._type = type
+
+    @property
+    def frequency(self):
+        """
+        Gets the frequency of this Ptsv2billingagreementsidAgreementInformation.
+        Regularity with which the event occurs.  Possible values: - annual - monthly - quarterly - semiannual - weekly - daily - adhoc - intraday - fortnightly
+
+        :return: The frequency of this Ptsv2billingagreementsidAgreementInformation.
+        :rtype: str
+        """
+        return self._frequency
+
+    @frequency.setter
+    def frequency(self, frequency):
+        """
+        Sets the frequency of this Ptsv2billingagreementsidAgreementInformation.
+        Regularity with which the event occurs.  Possible values: - annual - monthly - quarterly - semiannual - weekly - daily - adhoc - intraday - fortnightly
+
+        :param frequency: The frequency of this Ptsv2billingagreementsidAgreementInformation.
+        :type: str
+        """
+
+        self._frequency = frequency
+
+    @property
+    def date_revoked(self):
+        """
+        Gets the date_revoked of this Ptsv2billingagreementsidAgreementInformation.
+        Date the agreement was revoked (YYYYMMDD) 
+
+        :return: The date_revoked of this Ptsv2billingagreementsidAgreementInformation.
+        :rtype: str
+        """
+        return self._date_revoked
+
+    @date_revoked.setter
+    def date_revoked(self, date_revoked):
+        """
+        Sets the date_revoked of this Ptsv2billingagreementsidAgreementInformation.
+        Date the agreement was revoked (YYYYMMDD) 
+
+        :param date_revoked: The date_revoked of this Ptsv2billingagreementsidAgreementInformation.
+        :type: str
+        """
+
+        self._date_revoked = date_revoked
 
     def to_dict(self):
         """

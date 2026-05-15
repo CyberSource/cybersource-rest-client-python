@@ -31,7 +31,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsOrderInformation(object):
     """
     swagger_types = {
         'amount_details': 'Tmsv3tokenstokenIdpaymentcredentialsOrderInformationAmountDetails',
-        'bill_to': 'Tmsv3tokenstokenIdpaymentcredentialsOrderInformationBillTo'
+        'bill_to': 'Tmsv2tokenizedcardsBillTo'
     }
 
     attribute_map = {
@@ -79,7 +79,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsOrderInformation(object):
         Gets the bill_to of this Tmsv3tokenstokenIdpaymentcredentialsOrderInformation.
 
         :return: The bill_to of this Tmsv3tokenstokenIdpaymentcredentialsOrderInformation.
-        :rtype: Tmsv3tokenstokenIdpaymentcredentialsOrderInformationBillTo
+        :rtype: Tmsv2tokenizedcardsBillTo
         """
         return self._bill_to
 
@@ -89,7 +89,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsOrderInformation(object):
         Sets the bill_to of this Tmsv3tokenstokenIdpaymentcredentialsOrderInformation.
 
         :param bill_to: The bill_to of this Tmsv3tokenstokenIdpaymentcredentialsOrderInformation.
-        :type: Tmsv3tokenstokenIdpaymentcredentialsOrderInformationBillTo
+        :type: Tmsv2tokenizedcardsBillTo
         """
 
         self._bill_to = bill_to

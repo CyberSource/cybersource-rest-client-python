@@ -39,7 +39,7 @@ class PatchCustomerRequest(object):
         'default_payment_instrument': 'Tmsv2tokenizeTokenInformationCustomerDefaultPaymentInstrument',
         'default_shipping_address': 'Tmsv2tokenizeTokenInformationCustomerDefaultShippingAddress',
         'metadata': 'Tmsv2tokenizeTokenInformationCustomerMetadata',
-        'embedded': 'Tmsv2tokenizeTokenInformationCustomerEmbedded'
+        'embedded': 'Tmsv2customersEmbedded'
     }
 
     attribute_map = {
@@ -291,7 +291,7 @@ class PatchCustomerRequest(object):
         Gets the embedded of this PatchCustomerRequest.
 
         :return: The embedded of this PatchCustomerRequest.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbedded
+        :rtype: Tmsv2customersEmbedded
         """
         return self._embedded
 
@@ -301,7 +301,7 @@ class PatchCustomerRequest(object):
         Sets the embedded of this PatchCustomerRequest.
 
         :param embedded: The embedded of this PatchCustomerRequest.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbedded
+        :type: Tmsv2customersEmbedded
         """
 
         self._embedded = embedded

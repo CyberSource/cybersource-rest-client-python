@@ -32,16 +32,18 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
     swagger_types = {
         'gift_wrap': 'bool',
         'shipping_method': 'str',
-        'ship_from_postal_code': 'str'
+        'ship_from_postal_code': 'str',
+        'shipping_carrier': 'str'
     }
 
     attribute_map = {
         'gift_wrap': 'giftWrap',
         'shipping_method': 'shippingMethod',
-        'ship_from_postal_code': 'shipFromPostalCode'
+        'ship_from_postal_code': 'shipFromPostalCode',
+        'shipping_carrier': 'shippingCarrier'
     }
 
-    def __init__(self, gift_wrap=None, shipping_method=None, ship_from_postal_code=None):
+    def __init__(self, gift_wrap=None, shipping_method=None, ship_from_postal_code=None, shipping_carrier=None):
         """
         Ptsv2paymentsOrderInformationShippingDetails - a model defined in Swagger
         """
@@ -49,6 +51,7 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
         self._gift_wrap = None
         self._shipping_method = None
         self._ship_from_postal_code = None
+        self._shipping_carrier = None
 
         if gift_wrap is not None:
           self.gift_wrap = gift_wrap
@@ -56,6 +59,8 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
           self.shipping_method = shipping_method
         if ship_from_postal_code is not None:
           self.ship_from_postal_code = ship_from_postal_code
+        if shipping_carrier is not None:
+          self.shipping_carrier = shipping_carrier
 
     @property
     def gift_wrap(self):
@@ -84,7 +89,7 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
     def shipping_method(self):
         """
         Gets the shipping_method of this Ptsv2paymentsOrderInformationShippingDetails.
-        Shipping method for the product. Possible values:   - `lowcost`: Lowest-cost service  - `sameday`: Courier or same-day service  - `oneday`: Next-day or overnight service  - `twoday`: Two-day service  - `threeday`: Three-day service  - `pickup`: Store pick-up  - `other`: Other shipping method  - `none`: No shipping method because product is a service or subscription 
+        Shipping method for the product. Possible values:   - `lowcost`: Lowest-cost service  - `sameday`: Courier or same-day service  - `oneday`: Next-day or overnight service  - `twoday`: Two-day service  - `threeday`: Three-day service  - `pickup`: Store pick-up  - `other`: Other shipping method  - `none`: No shipping method because product is a service or subscription  Klarna Advantage Plus additional values:  - `TO_DOOR`: Delivery to door  - `TO_CURB`: Delivery to curb  - `TO_MAILBOX`: Delivery to mailbox  - `PICKUP_BOX`: Pickup from box  - `PICKUP_POINT`: Pickup from point  - `PICKUP_STORE`: Pickup from store  - `PICKUP_WAREHOUSE`: Pickup from warehouse  - `DIGITAL_EMAIL`: Digital delivery via email  - `DIGITAL_DOWNLOAD`: Digital download  - `DIGITAL_OTHER`: Other digital delivery  - `PHYSICAL_OTHER`: Other physical delivery 
 
         :return: The shipping_method of this Ptsv2paymentsOrderInformationShippingDetails.
         :rtype: str
@@ -95,7 +100,7 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
     def shipping_method(self, shipping_method):
         """
         Sets the shipping_method of this Ptsv2paymentsOrderInformationShippingDetails.
-        Shipping method for the product. Possible values:   - `lowcost`: Lowest-cost service  - `sameday`: Courier or same-day service  - `oneday`: Next-day or overnight service  - `twoday`: Two-day service  - `threeday`: Three-day service  - `pickup`: Store pick-up  - `other`: Other shipping method  - `none`: No shipping method because product is a service or subscription 
+        Shipping method for the product. Possible values:   - `lowcost`: Lowest-cost service  - `sameday`: Courier or same-day service  - `oneday`: Next-day or overnight service  - `twoday`: Two-day service  - `threeday`: Three-day service  - `pickup`: Store pick-up  - `other`: Other shipping method  - `none`: No shipping method because product is a service or subscription  Klarna Advantage Plus additional values:  - `TO_DOOR`: Delivery to door  - `TO_CURB`: Delivery to curb  - `TO_MAILBOX`: Delivery to mailbox  - `PICKUP_BOX`: Pickup from box  - `PICKUP_POINT`: Pickup from point  - `PICKUP_STORE`: Pickup from store  - `PICKUP_WAREHOUSE`: Pickup from warehouse  - `DIGITAL_EMAIL`: Digital delivery via email  - `DIGITAL_DOWNLOAD`: Digital download  - `DIGITAL_OTHER`: Other digital delivery  - `PHYSICAL_OTHER`: Other physical delivery 
 
         :param shipping_method: The shipping_method of this Ptsv2paymentsOrderInformationShippingDetails.
         :type: str
@@ -125,6 +130,29 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
         """
 
         self._ship_from_postal_code = ship_from_postal_code
+
+    @property
+    def shipping_carrier(self):
+        """
+        Gets the shipping_carrier of this Ptsv2paymentsOrderInformationShippingDetails.
+        Name of the shipping carrier/company handling the delivery. 
+
+        :return: The shipping_carrier of this Ptsv2paymentsOrderInformationShippingDetails.
+        :rtype: str
+        """
+        return self._shipping_carrier
+
+    @shipping_carrier.setter
+    def shipping_carrier(self, shipping_carrier):
+        """
+        Sets the shipping_carrier of this Ptsv2paymentsOrderInformationShippingDetails.
+        Name of the shipping carrier/company handling the delivery. 
+
+        :param shipping_carrier: The shipping_carrier of this Ptsv2paymentsOrderInformationShippingDetails.
+        :type: str
+        """
+
+        self._shipping_carrier = shipping_carrier
 
     def to_dict(self):
         """

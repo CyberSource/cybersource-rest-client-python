@@ -35,7 +35,8 @@ class Ptsv2paymentsidrefundsOrderInformation(object):
         'ship_to': 'Ptsv2paymentsidcapturesOrderInformationShipTo',
         'line_items': 'list[Ptsv2paymentsidrefundsOrderInformationLineItems]',
         'invoice_details': 'Ptsv2paymentsidcapturesOrderInformationInvoiceDetails',
-        'shipping_details': 'Ptsv2paymentsidcapturesOrderInformationShippingDetails'
+        'shipping_details': 'Ptsv2paymentsidrefundsOrderInformationShippingDetails',
+        'digital_currency': 'Ptsv2paymentsOrderInformationDigitalCurrency'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class Ptsv2paymentsidrefundsOrderInformation(object):
         'ship_to': 'shipTo',
         'line_items': 'lineItems',
         'invoice_details': 'invoiceDetails',
-        'shipping_details': 'shippingDetails'
+        'shipping_details': 'shippingDetails',
+        'digital_currency': 'digitalCurrency'
     }
 
-    def __init__(self, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None, shipping_details=None):
+    def __init__(self, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None, shipping_details=None, digital_currency=None):
         """
         Ptsv2paymentsidrefundsOrderInformation - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class Ptsv2paymentsidrefundsOrderInformation(object):
         self._line_items = None
         self._invoice_details = None
         self._shipping_details = None
+        self._digital_currency = None
 
         if amount_details is not None:
           self.amount_details = amount_details
@@ -71,6 +74,8 @@ class Ptsv2paymentsidrefundsOrderInformation(object):
           self.invoice_details = invoice_details
         if shipping_details is not None:
           self.shipping_details = shipping_details
+        if digital_currency is not None:
+          self.digital_currency = digital_currency
 
     @property
     def amount_details(self):
@@ -183,7 +188,7 @@ class Ptsv2paymentsidrefundsOrderInformation(object):
         Gets the shipping_details of this Ptsv2paymentsidrefundsOrderInformation.
 
         :return: The shipping_details of this Ptsv2paymentsidrefundsOrderInformation.
-        :rtype: Ptsv2paymentsidcapturesOrderInformationShippingDetails
+        :rtype: Ptsv2paymentsidrefundsOrderInformationShippingDetails
         """
         return self._shipping_details
 
@@ -193,10 +198,31 @@ class Ptsv2paymentsidrefundsOrderInformation(object):
         Sets the shipping_details of this Ptsv2paymentsidrefundsOrderInformation.
 
         :param shipping_details: The shipping_details of this Ptsv2paymentsidrefundsOrderInformation.
-        :type: Ptsv2paymentsidcapturesOrderInformationShippingDetails
+        :type: Ptsv2paymentsidrefundsOrderInformationShippingDetails
         """
 
         self._shipping_details = shipping_details
+
+    @property
+    def digital_currency(self):
+        """
+        Gets the digital_currency of this Ptsv2paymentsidrefundsOrderInformation.
+
+        :return: The digital_currency of this Ptsv2paymentsidrefundsOrderInformation.
+        :rtype: Ptsv2paymentsOrderInformationDigitalCurrency
+        """
+        return self._digital_currency
+
+    @digital_currency.setter
+    def digital_currency(self, digital_currency):
+        """
+        Sets the digital_currency of this Ptsv2paymentsidrefundsOrderInformation.
+
+        :param digital_currency: The digital_currency of this Ptsv2paymentsidrefundsOrderInformation.
+        :type: Ptsv2paymentsOrderInformationDigitalCurrency
+        """
+
+        self._digital_currency = digital_currency
 
     def to_dict(self):
         """

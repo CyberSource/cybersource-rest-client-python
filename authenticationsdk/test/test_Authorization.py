@@ -4,7 +4,7 @@ from authenticationsdk.core.Authorization import *
 import CyberSource.logging.log_factory as LogFactory
 import authenticationsdk.util.PropertiesUtil
 import logging
-from authenticationsdk.core.MockData import *
+from authenticationsdk.test.MockData import *
 
 
 class TestBasicFunction(unittest.TestCase):

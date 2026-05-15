@@ -30,7 +30,7 @@ class PaymentInstrumentList1Embedded(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'payment_instruments': 'list[PaymentInstrumentList1EmbeddedPaymentInstruments]'
+        'payment_instruments': 'list[PatchPaymentInstrumentRequest]'
     }
 
     attribute_map = {
@@ -53,7 +53,7 @@ class PaymentInstrumentList1Embedded(object):
         Gets the payment_instruments of this PaymentInstrumentList1Embedded.
 
         :return: The payment_instruments of this PaymentInstrumentList1Embedded.
-        :rtype: list[PaymentInstrumentList1EmbeddedPaymentInstruments]
+        :rtype: list[PatchPaymentInstrumentRequest]
         """
         return self._payment_instruments
 
@@ -63,7 +63,7 @@ class PaymentInstrumentList1Embedded(object):
         Sets the payment_instruments of this PaymentInstrumentList1Embedded.
 
         :param payment_instruments: The payment_instruments of this PaymentInstrumentList1Embedded.
-        :type: list[PaymentInstrumentList1EmbeddedPaymentInstruments]
+        :type: list[PatchPaymentInstrumentRequest]
         """
 
         self._payment_instruments = payment_instruments

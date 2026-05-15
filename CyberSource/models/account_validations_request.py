@@ -32,16 +32,18 @@ class AccountValidationsRequest(object):
     swagger_types = {
         'client_reference_information': 'Bavsv1accountvalidationsClientReferenceInformation',
         'processing_information': 'Bavsv1accountvalidationsProcessingInformation',
-        'payment_information': 'Bavsv1accountvalidationsPaymentInformation'
+        'payment_information': 'Bavsv1accountvalidationsPaymentInformation',
+        'token_information': 'Bavsv1accountvalidationsTokenInformation'
     }
 
     attribute_map = {
         'client_reference_information': 'clientReferenceInformation',
         'processing_information': 'processingInformation',
-        'payment_information': 'paymentInformation'
+        'payment_information': 'paymentInformation',
+        'token_information': 'tokenInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, token_information=None):
         """
         AccountValidationsRequest - a model defined in Swagger
         """
@@ -49,11 +51,14 @@ class AccountValidationsRequest(object):
         self._client_reference_information = None
         self._processing_information = None
         self._payment_information = None
+        self._token_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
         self.processing_information = processing_information
         self.payment_information = payment_information
+        if token_information is not None:
+          self.token_information = token_information
 
     @property
     def client_reference_information(self):
@@ -117,6 +122,27 @@ class AccountValidationsRequest(object):
         """
 
         self._payment_information = payment_information
+
+    @property
+    def token_information(self):
+        """
+        Gets the token_information of this AccountValidationsRequest.
+
+        :return: The token_information of this AccountValidationsRequest.
+        :rtype: Bavsv1accountvalidationsTokenInformation
+        """
+        return self._token_information
+
+    @token_information.setter
+    def token_information(self, token_information):
+        """
+        Sets the token_information of this AccountValidationsRequest.
+
+        :param token_information: The token_information of this AccountValidationsRequest.
+        :type: Bavsv1accountvalidationsTokenInformation
+        """
+
+        self._token_information = token_information
 
     def to_dict(self):
         """

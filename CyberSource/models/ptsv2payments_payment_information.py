@@ -46,7 +46,9 @@ class Ptsv2paymentsPaymentInformation(object):
         'initiation_channel': 'str',
         'sepa': 'Ptsv2paymentsPaymentInformationSepa',
         'e_wallet': 'Ptsv2paymentsPaymentInformationEWallet',
-        'payment_account_reference': 'Ptsv2paymentsPaymentInformationPaymentAccountReference'
+        'payment_account_reference': 'Ptsv2paymentsPaymentInformationPaymentAccountReference',
+        'third_party_token': 'Ptsv2paymentsPaymentInformationThirdPartyToken',
+        'merchant_limited_acceptance_indicator': 'str'
     }
 
     attribute_map = {
@@ -66,10 +68,12 @@ class Ptsv2paymentsPaymentInformation(object):
         'initiation_channel': 'initiationChannel',
         'sepa': 'sepa',
         'e_wallet': 'eWallet',
-        'payment_account_reference': 'paymentAccountReference'
+        'payment_account_reference': 'paymentAccountReference',
+        'third_party_token': 'thirdPartyToken',
+        'merchant_limited_acceptance_indicator': 'merchantLimitedAcceptanceIndicator'
     }
 
-    def __init__(self, card=None, tokenized_card=None, tokenized_payment_method=None, direct_debit=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, options=None, payment_type=None, initiation_channel=None, sepa=None, e_wallet=None, payment_account_reference=None):
+    def __init__(self, card=None, tokenized_card=None, tokenized_payment_method=None, direct_debit=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, options=None, payment_type=None, initiation_channel=None, sepa=None, e_wallet=None, payment_account_reference=None, third_party_token=None, merchant_limited_acceptance_indicator=None):
         """
         Ptsv2paymentsPaymentInformation - a model defined in Swagger
         """
@@ -91,6 +95,8 @@ class Ptsv2paymentsPaymentInformation(object):
         self._sepa = None
         self._e_wallet = None
         self._payment_account_reference = None
+        self._third_party_token = None
+        self._merchant_limited_acceptance_indicator = None
 
         if card is not None:
           self.card = card
@@ -126,6 +132,10 @@ class Ptsv2paymentsPaymentInformation(object):
           self.e_wallet = e_wallet
         if payment_account_reference is not None:
           self.payment_account_reference = payment_account_reference
+        if third_party_token is not None:
+          self.third_party_token = third_party_token
+        if merchant_limited_acceptance_indicator is not None:
+          self.merchant_limited_acceptance_indicator = merchant_limited_acceptance_indicator
 
     @property
     def card(self):
@@ -485,6 +495,50 @@ class Ptsv2paymentsPaymentInformation(object):
         """
 
         self._payment_account_reference = payment_account_reference
+
+    @property
+    def third_party_token(self):
+        """
+        Gets the third_party_token of this Ptsv2paymentsPaymentInformation.
+
+        :return: The third_party_token of this Ptsv2paymentsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationThirdPartyToken
+        """
+        return self._third_party_token
+
+    @third_party_token.setter
+    def third_party_token(self, third_party_token):
+        """
+        Sets the third_party_token of this Ptsv2paymentsPaymentInformation.
+
+        :param third_party_token: The third_party_token of this Ptsv2paymentsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationThirdPartyToken
+        """
+
+        self._third_party_token = third_party_token
+
+    @property
+    def merchant_limited_acceptance_indicator(self):
+        """
+        Gets the merchant_limited_acceptance_indicator of this Ptsv2paymentsPaymentInformation.
+        Mastercard One Credential merchant limited acceptance indicator. Mastercard One Credential connects multiple Mastercard payment methods and allows cardhollers to access various options and set payment preferences.  This field indicates which Mastercard One Credential funding PAN acceptance brands should NOT be assigned for this transaction.  This field flows in ISO field 34, DSID 02 tag DB, mapped to Mastercard Data Element (DE) 48, Sub element 02, Subfield 01.  Possible values: - `C`: Do not assign a Mastercard One Credential funding PAN containing the Mastercard Credit Acceptance Brand for this transaction - `D`: Do not assign a Mastercard One Credential funding PAN containing the Debit Mastercard Acceptance Brand for this transaction - `M`: Do not assign a Mastercard One Credential funding PAN containing the Maestro Acceptance Brand for this transaction  This field is supported for all flavors of Authorization request only. Will not be received in response.  #### Used by **Authorization Request** Optional field. 
+
+        :return: The merchant_limited_acceptance_indicator of this Ptsv2paymentsPaymentInformation.
+        :rtype: str
+        """
+        return self._merchant_limited_acceptance_indicator
+
+    @merchant_limited_acceptance_indicator.setter
+    def merchant_limited_acceptance_indicator(self, merchant_limited_acceptance_indicator):
+        """
+        Sets the merchant_limited_acceptance_indicator of this Ptsv2paymentsPaymentInformation.
+        Mastercard One Credential merchant limited acceptance indicator. Mastercard One Credential connects multiple Mastercard payment methods and allows cardhollers to access various options and set payment preferences.  This field indicates which Mastercard One Credential funding PAN acceptance brands should NOT be assigned for this transaction.  This field flows in ISO field 34, DSID 02 tag DB, mapped to Mastercard Data Element (DE) 48, Sub element 02, Subfield 01.  Possible values: - `C`: Do not assign a Mastercard One Credential funding PAN containing the Mastercard Credit Acceptance Brand for this transaction - `D`: Do not assign a Mastercard One Credential funding PAN containing the Debit Mastercard Acceptance Brand for this transaction - `M`: Do not assign a Mastercard One Credential funding PAN containing the Maestro Acceptance Brand for this transaction  This field is supported for all flavors of Authorization request only. Will not be received in response.  #### Used by **Authorization Request** Optional field. 
+
+        :param merchant_limited_acceptance_indicator: The merchant_limited_acceptance_indicator of this Ptsv2paymentsPaymentInformation.
+        :type: str
+        """
+
+        self._merchant_limited_acceptance_indicator = merchant_limited_acceptance_indicator
 
     def to_dict(self):
         """

@@ -46,7 +46,9 @@ class Tmsv2TokenizedCard(object):
         'eci': 'str',
         'requestor_id': 'str',
         'payment_account_reference': 'str',
+        'application_transaction_counter': 'str',
         'card': 'Tmsv2TokenizedCardCard',
+        'verification_results': 'Tmsv2TokenizedCardVerificationResults',
         'metadata': 'Tmsv2TokenizedCardMetadata'
     }
 
@@ -67,11 +69,13 @@ class Tmsv2TokenizedCard(object):
         'eci': 'eci',
         'requestor_id': 'requestorId',
         'payment_account_reference': 'paymentAccountReference',
+        'application_transaction_counter': 'applicationTransactionCounter',
         'card': 'card',
+        'verification_results': 'verificationResults',
         'metadata': 'metadata'
     }
 
-    def __init__(self, id=None, object=None, source=None, state=None, enrollment_id=None, token_reference_id=None, number=None, expiration_month=None, expiration_year=None, type=None, reason=None, cryptogram=None, security_code=None, eci=None, requestor_id=None, payment_account_reference=None, card=None, metadata=None):
+    def __init__(self, id=None, object=None, source=None, state=None, enrollment_id=None, token_reference_id=None, number=None, expiration_month=None, expiration_year=None, type=None, reason=None, cryptogram=None, security_code=None, eci=None, requestor_id=None, payment_account_reference=None, application_transaction_counter=None, card=None, verification_results=None, metadata=None):
         """
         Tmsv2TokenizedCard - a model defined in Swagger
         """
@@ -92,7 +96,9 @@ class Tmsv2TokenizedCard(object):
         self._eci = None
         self._requestor_id = None
         self._payment_account_reference = None
+        self._application_transaction_counter = None
         self._card = None
+        self._verification_results = None
         self._metadata = None
 
         if id is not None:
@@ -127,8 +133,12 @@ class Tmsv2TokenizedCard(object):
           self.requestor_id = requestor_id
         if payment_account_reference is not None:
           self.payment_account_reference = payment_account_reference
+        if application_transaction_counter is not None:
+          self.application_transaction_counter = application_transaction_counter
         if card is not None:
           self.card = card
+        if verification_results is not None:
+          self.verification_results = verification_results
         if metadata is not None:
           self.metadata = metadata
 
@@ -501,6 +511,29 @@ class Tmsv2TokenizedCard(object):
         self._payment_account_reference = payment_account_reference
 
     @property
+    def application_transaction_counter(self):
+        """
+        Gets the application_transaction_counter of this Tmsv2TokenizedCard.
+        A sequence counter used as part of the input to the TAVV cryptogram and it is incremented for each cryptogram generation. This field is only returned for Visa network tokens. 
+
+        :return: The application_transaction_counter of this Tmsv2TokenizedCard.
+        :rtype: str
+        """
+        return self._application_transaction_counter
+
+    @application_transaction_counter.setter
+    def application_transaction_counter(self, application_transaction_counter):
+        """
+        Sets the application_transaction_counter of this Tmsv2TokenizedCard.
+        A sequence counter used as part of the input to the TAVV cryptogram and it is incremented for each cryptogram generation. This field is only returned for Visa network tokens. 
+
+        :param application_transaction_counter: The application_transaction_counter of this Tmsv2TokenizedCard.
+        :type: str
+        """
+
+        self._application_transaction_counter = application_transaction_counter
+
+    @property
     def card(self):
         """
         Gets the card of this Tmsv2TokenizedCard.
@@ -520,6 +553,27 @@ class Tmsv2TokenizedCard(object):
         """
 
         self._card = card
+
+    @property
+    def verification_results(self):
+        """
+        Gets the verification_results of this Tmsv2TokenizedCard.
+
+        :return: The verification_results of this Tmsv2TokenizedCard.
+        :rtype: Tmsv2TokenizedCardVerificationResults
+        """
+        return self._verification_results
+
+    @verification_results.setter
+    def verification_results(self, verification_results):
+        """
+        Sets the verification_results of this Tmsv2TokenizedCard.
+
+        :param verification_results: The verification_results of this Tmsv2TokenizedCard.
+        :type: Tmsv2TokenizedCardVerificationResults
+        """
+
+        self._verification_results = verification_results
 
     @property
     def metadata(self):

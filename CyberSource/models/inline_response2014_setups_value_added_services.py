@@ -32,16 +32,20 @@ class InlineResponse2014SetupsValueAddedServices(object):
     swagger_types = {
         'reporting': 'InlineResponse2014SetupsPaymentsDigitalPayments',
         'transaction_search': 'InlineResponse2014SetupsPaymentsDigitalPayments',
-        'bank_account_validation': 'InlineResponse2014SetupsPaymentsDigitalPayments'
+        'bank_account_validation': 'InlineResponse2014SetupsPaymentsDigitalPayments',
+        'flexapi': 'InlineResponse2014SetupsPaymentsDigitalPayments',
+        'webhooks': 'InlineResponse2014SetupsPaymentsDigitalPayments'
     }
 
     attribute_map = {
         'reporting': 'reporting',
         'transaction_search': 'transactionSearch',
-        'bank_account_validation': 'bankAccountValidation'
+        'bank_account_validation': 'bankAccountValidation',
+        'flexapi': 'flexapi',
+        'webhooks': 'webhooks'
     }
 
-    def __init__(self, reporting=None, transaction_search=None, bank_account_validation=None):
+    def __init__(self, reporting=None, transaction_search=None, bank_account_validation=None, flexapi=None, webhooks=None):
         """
         InlineResponse2014SetupsValueAddedServices - a model defined in Swagger
         """
@@ -49,6 +53,8 @@ class InlineResponse2014SetupsValueAddedServices(object):
         self._reporting = None
         self._transaction_search = None
         self._bank_account_validation = None
+        self._flexapi = None
+        self._webhooks = None
 
         if reporting is not None:
           self.reporting = reporting
@@ -56,6 +62,10 @@ class InlineResponse2014SetupsValueAddedServices(object):
           self.transaction_search = transaction_search
         if bank_account_validation is not None:
           self.bank_account_validation = bank_account_validation
+        if flexapi is not None:
+          self.flexapi = flexapi
+        if webhooks is not None:
+          self.webhooks = webhooks
 
     @property
     def reporting(self):
@@ -119,6 +129,48 @@ class InlineResponse2014SetupsValueAddedServices(object):
         """
 
         self._bank_account_validation = bank_account_validation
+
+    @property
+    def flexapi(self):
+        """
+        Gets the flexapi of this InlineResponse2014SetupsValueAddedServices.
+
+        :return: The flexapi of this InlineResponse2014SetupsValueAddedServices.
+        :rtype: InlineResponse2014SetupsPaymentsDigitalPayments
+        """
+        return self._flexapi
+
+    @flexapi.setter
+    def flexapi(self, flexapi):
+        """
+        Sets the flexapi of this InlineResponse2014SetupsValueAddedServices.
+
+        :param flexapi: The flexapi of this InlineResponse2014SetupsValueAddedServices.
+        :type: InlineResponse2014SetupsPaymentsDigitalPayments
+        """
+
+        self._flexapi = flexapi
+
+    @property
+    def webhooks(self):
+        """
+        Gets the webhooks of this InlineResponse2014SetupsValueAddedServices.
+
+        :return: The webhooks of this InlineResponse2014SetupsValueAddedServices.
+        :rtype: InlineResponse2014SetupsPaymentsDigitalPayments
+        """
+        return self._webhooks
+
+    @webhooks.setter
+    def webhooks(self, webhooks):
+        """
+        Sets the webhooks of this InlineResponse2014SetupsValueAddedServices.
+
+        :param webhooks: The webhooks of this InlineResponse2014SetupsValueAddedServices.
+        :type: InlineResponse2014SetupsPaymentsDigitalPayments
+        """
+
+        self._webhooks = webhooks
 
     def to_dict(self):
         """

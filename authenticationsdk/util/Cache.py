@@ -114,7 +114,7 @@ class FileCache:
             certificate_file_path = merchant_config.mleForRequestPublicCertPath
         # Priority #2: If mle_for_request_public_cert_path not provided, get mlecert from p12 if provided and jwt auth type
         elif (GlobalLabelParameters.JWT.lower() == merchant_config.authentication_type.lower() and 
-              merchant_config.p12KeyFilePath):
+              merchant_config.p12KeyFilePath and not merchant_config.is_shared_secret_key_type()):
             certificate_identifier = GlobalLabelParameters.MLE_CACHE_IDENTIFIER_FOR_P12_CERT
             certificate_file_path = merchant_config.p12KeyFilePath
         # Priority #3: Get mlecert from default cert in SDK as per CAS or PROD env.

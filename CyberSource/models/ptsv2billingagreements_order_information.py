@@ -30,25 +30,30 @@ class Ptsv2billingagreementsOrderInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'amount_details': 'Ptsv2paymentsidreversalsReversalInformationAmountDetails',
+        'amount_details': 'Ptsv2billingagreementsOrderInformationAmountDetails',
+        'invoice_details': 'Ptsv2billingagreementsOrderInformationInvoiceDetails',
         'bill_to': 'Ptsv2billingagreementsOrderInformationBillTo'
     }
 
     attribute_map = {
         'amount_details': 'amountDetails',
+        'invoice_details': 'invoiceDetails',
         'bill_to': 'billTo'
     }
 
-    def __init__(self, amount_details=None, bill_to=None):
+    def __init__(self, amount_details=None, invoice_details=None, bill_to=None):
         """
         Ptsv2billingagreementsOrderInformation - a model defined in Swagger
         """
 
         self._amount_details = None
+        self._invoice_details = None
         self._bill_to = None
 
         if amount_details is not None:
           self.amount_details = amount_details
+        if invoice_details is not None:
+          self.invoice_details = invoice_details
         if bill_to is not None:
           self.bill_to = bill_to
 
@@ -58,7 +63,7 @@ class Ptsv2billingagreementsOrderInformation(object):
         Gets the amount_details of this Ptsv2billingagreementsOrderInformation.
 
         :return: The amount_details of this Ptsv2billingagreementsOrderInformation.
-        :rtype: Ptsv2paymentsidreversalsReversalInformationAmountDetails
+        :rtype: Ptsv2billingagreementsOrderInformationAmountDetails
         """
         return self._amount_details
 
@@ -68,10 +73,31 @@ class Ptsv2billingagreementsOrderInformation(object):
         Sets the amount_details of this Ptsv2billingagreementsOrderInformation.
 
         :param amount_details: The amount_details of this Ptsv2billingagreementsOrderInformation.
-        :type: Ptsv2paymentsidreversalsReversalInformationAmountDetails
+        :type: Ptsv2billingagreementsOrderInformationAmountDetails
         """
 
         self._amount_details = amount_details
+
+    @property
+    def invoice_details(self):
+        """
+        Gets the invoice_details of this Ptsv2billingagreementsOrderInformation.
+
+        :return: The invoice_details of this Ptsv2billingagreementsOrderInformation.
+        :rtype: Ptsv2billingagreementsOrderInformationInvoiceDetails
+        """
+        return self._invoice_details
+
+    @invoice_details.setter
+    def invoice_details(self, invoice_details):
+        """
+        Sets the invoice_details of this Ptsv2billingagreementsOrderInformation.
+
+        :param invoice_details: The invoice_details of this Ptsv2billingagreementsOrderInformation.
+        :type: Ptsv2billingagreementsOrderInformationInvoiceDetails
+        """
+
+        self._invoice_details = invoice_details
 
     @property
     def bill_to(self):

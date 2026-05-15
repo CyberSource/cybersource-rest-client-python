@@ -32,13 +32,28 @@ class JwtSignatureToken(TokenGeneration):
 
     
     def set_token(self):
+        """
+        Generates and returns a signed JWT token.
+        Branches on jwtKeyType to use either P12 (RS256) or SHARED_SECRET (HS256) signing.
+        """
+        if self.merchant_config.is_shared_secret_key_type():
+            # JWT with SHARED_SECRET — sign with HMAC-SHA256 (symmetric)
+            return self.set_token_with_hmac()
+        else:
+            # JWT with P12 (default) — sign with RS256 (asymmetric)
+            return self.set_token_with_p12()
+
+    def set_token_with_p12(self):
+        """
+        Signs JWT using RS256 with P12 certificate (existing behavior).
+        """
         payload_claim_set = self.get_payload_claim_set()
 
         cache_obj = FileCache()
         cache_memory = cache_obj.fetch_cached_p12_certificate(self.merchant_config, self.merchant_config.p12KeyFilePath, self.merchant_config.key_password)
         
         x509cert = cache_memory.x509_certificate
-        header_claim_set = self.get_header_claim_set(x509cert)
+        header_claim_set = self.get_rs256_header(x509cert)
         
         token = jwt.JWT(claims = payload_claim_set, header=header_claim_set)
 
@@ -52,6 +67,28 @@ class JwtSignatureToken(TokenGeneration):
         key = jwk.JWK.from_pem(private_key_pem)
         token.make_signed_token(key)
 
+        serialized_jwt = token.serialize()
+        return serialized_jwt
+
+    def set_token_with_hmac(self):
+        """
+        Signs JWT using HS256 with shared secret key (new behavior).
+        """
+        payload_claim_set = self.get_payload_claim_set()
+        
+        # Get the header for HMAC signing
+        header_claim_set = self.get_hs256_header()
+        
+        # Decode the base64-encoded merchant secret key
+        secret_key_bytes = base64.b64decode(self.merchant_config.merchant_secretkey)
+        
+        # Create JWK from the raw bytes for HS256
+        key = jwk.JWK(kty="oct", k=base64.urlsafe_b64encode(secret_key_bytes).decode('utf-8').rstrip('='))
+        
+        # Create and sign the JWT token
+        token = jwt.JWT(claims=payload_claim_set, header=header_claim_set)
+        token.make_signed_token(key)
+        
         serialized_jwt = token.serialize()
         return serialized_jwt
 
@@ -95,8 +132,11 @@ class JwtSignatureToken(TokenGeneration):
 
         return jwt_payload
 
-    def get_header_claim_set(self, certificate):
-        
+    def get_rs256_header(self, certificate):
+        """
+        Creates JWT header for RS256 signing (P12 certificate).
+        Uses certificate serial number as kid.
+        """
         serial_number = CertificateUtility.extract_serial_number_from_certificate(certificate)
         jwt_headers = {
             "kid": str(serial_number),
@@ -105,6 +145,19 @@ class JwtSignatureToken(TokenGeneration):
         }
 
         # Add any other future parameters to the header claim set here
+        return jwt_headers
+
+    def get_hs256_header(self):
+        """
+        Creates JWT header for HS256 signing (shared secret).
+        Uses merchantKeyId as kid.
+        """
+        jwt_headers = {
+            "kid": str(self.merchant_config.merchant_keyid),
+            "alg": "HS256",
+            "typ": "JWT"
+        }
+
         return jwt_headers
 
 

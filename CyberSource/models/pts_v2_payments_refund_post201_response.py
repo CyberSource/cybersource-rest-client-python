@@ -173,7 +173,7 @@ class PtsV2PaymentsRefundPost201Response(object):
     def status(self):
         """
         Gets the status of this PtsV2PaymentsRefundPost201Response.
-        The status of the submitted transaction.  Possible values:  - PENDING 
+        The status of the submitted transaction.  Possible values:  - PENDING  - DECLINED  - INVALID_REQUEST 
 
         :return: The status of this PtsV2PaymentsRefundPost201Response.
         :rtype: str
@@ -184,7 +184,7 @@ class PtsV2PaymentsRefundPost201Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2PaymentsRefundPost201Response.
-        The status of the submitted transaction.  Possible values:  - PENDING 
+        The status of the submitted transaction.  Possible values:  - PENDING  - DECLINED  - INVALID_REQUEST 
 
         :param status: The status of this PtsV2PaymentsRefundPost201Response.
         :type: str

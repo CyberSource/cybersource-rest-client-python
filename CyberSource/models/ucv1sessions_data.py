@@ -30,6 +30,7 @@ class Ucv1sessionsData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'aggregator_information': 'Ucv1sessionsDataAggregatorInformation',
         'order_information': 'Ucv1sessionsDataOrderInformation',
         'buyer_information': 'Ucv1sessionsDataBuyerInformation',
         'client_reference_information': 'Upv1capturecontextsDataClientReferenceInformation',
@@ -37,12 +38,15 @@ class Ucv1sessionsData(object):
         'merchant_information': 'Ucv1sessionsDataMerchantInformation',
         'processing_information': 'Ucv1sessionsDataProcessingInformation',
         'recipient_information': 'Ucv1sessionsDataRecipientInformation',
-        'merchant_defined_information': 'list[Ucv1sessionsDataMerchantDefinedInformation]',
+        'sender_information': 'Ucv1sessionsDataSenderInformation',
         'device_information': 'Ucv1sessionsDataDeviceInformation',
-        'payment_information': 'Ucv1sessionsDataPaymentInformation'
+        'payment_information': 'Ucv1sessionsDataPaymentInformation',
+        'installment_information': 'Ucv1sessionsDataInstallmentInformation',
+        'merchant_defined_information': 'list[Ucv1sessionsDataMerchantDefinedInformation]'
     }
 
     attribute_map = {
+        'aggregator_information': 'aggregatorInformation',
         'order_information': 'orderInformation',
         'buyer_information': 'buyerInformation',
         'client_reference_information': 'clientReferenceInformation',
@@ -50,16 +54,19 @@ class Ucv1sessionsData(object):
         'merchant_information': 'merchantInformation',
         'processing_information': 'processingInformation',
         'recipient_information': 'recipientInformation',
-        'merchant_defined_information': 'merchantDefinedInformation',
+        'sender_information': 'senderInformation',
         'device_information': 'deviceInformation',
-        'payment_information': 'paymentInformation'
+        'payment_information': 'paymentInformation',
+        'installment_information': 'installmentInformation',
+        'merchant_defined_information': 'merchantDefinedInformation'
     }
 
-    def __init__(self, order_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, merchant_information=None, processing_information=None, recipient_information=None, merchant_defined_information=None, device_information=None, payment_information=None):
+    def __init__(self, aggregator_information=None, order_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, merchant_information=None, processing_information=None, recipient_information=None, sender_information=None, device_information=None, payment_information=None, installment_information=None, merchant_defined_information=None):
         """
         Ucv1sessionsData - a model defined in Swagger
         """
 
+        self._aggregator_information = None
         self._order_information = None
         self._buyer_information = None
         self._client_reference_information = None
@@ -67,10 +74,14 @@ class Ucv1sessionsData(object):
         self._merchant_information = None
         self._processing_information = None
         self._recipient_information = None
-        self._merchant_defined_information = None
+        self._sender_information = None
         self._device_information = None
         self._payment_information = None
+        self._installment_information = None
+        self._merchant_defined_information = None
 
+        if aggregator_information is not None:
+          self.aggregator_information = aggregator_information
         if order_information is not None:
           self.order_information = order_information
         if buyer_information is not None:
@@ -85,12 +96,37 @@ class Ucv1sessionsData(object):
           self.processing_information = processing_information
         if recipient_information is not None:
           self.recipient_information = recipient_information
-        if merchant_defined_information is not None:
-          self.merchant_defined_information = merchant_defined_information
+        if sender_information is not None:
+          self.sender_information = sender_information
         if device_information is not None:
           self.device_information = device_information
         if payment_information is not None:
           self.payment_information = payment_information
+        if installment_information is not None:
+          self.installment_information = installment_information
+        if merchant_defined_information is not None:
+          self.merchant_defined_information = merchant_defined_information
+
+    @property
+    def aggregator_information(self):
+        """
+        Gets the aggregator_information of this Ucv1sessionsData.
+
+        :return: The aggregator_information of this Ucv1sessionsData.
+        :rtype: Ucv1sessionsDataAggregatorInformation
+        """
+        return self._aggregator_information
+
+    @aggregator_information.setter
+    def aggregator_information(self, aggregator_information):
+        """
+        Sets the aggregator_information of this Ucv1sessionsData.
+
+        :param aggregator_information: The aggregator_information of this Ucv1sessionsData.
+        :type: Ucv1sessionsDataAggregatorInformation
+        """
+
+        self._aggregator_information = aggregator_information
 
     @property
     def order_information(self):
@@ -240,25 +276,25 @@ class Ucv1sessionsData(object):
         self._recipient_information = recipient_information
 
     @property
-    def merchant_defined_information(self):
+    def sender_information(self):
         """
-        Gets the merchant_defined_information of this Ucv1sessionsData.
+        Gets the sender_information of this Ucv1sessionsData.
 
-        :return: The merchant_defined_information of this Ucv1sessionsData.
-        :rtype: list[Ucv1sessionsDataMerchantDefinedInformation]
+        :return: The sender_information of this Ucv1sessionsData.
+        :rtype: Ucv1sessionsDataSenderInformation
         """
-        return self._merchant_defined_information
+        return self._sender_information
 
-    @merchant_defined_information.setter
-    def merchant_defined_information(self, merchant_defined_information):
+    @sender_information.setter
+    def sender_information(self, sender_information):
         """
-        Sets the merchant_defined_information of this Ucv1sessionsData.
+        Sets the sender_information of this Ucv1sessionsData.
 
-        :param merchant_defined_information: The merchant_defined_information of this Ucv1sessionsData.
-        :type: list[Ucv1sessionsDataMerchantDefinedInformation]
+        :param sender_information: The sender_information of this Ucv1sessionsData.
+        :type: Ucv1sessionsDataSenderInformation
         """
 
-        self._merchant_defined_information = merchant_defined_information
+        self._sender_information = sender_information
 
     @property
     def device_information(self):
@@ -301,6 +337,48 @@ class Ucv1sessionsData(object):
         """
 
         self._payment_information = payment_information
+
+    @property
+    def installment_information(self):
+        """
+        Gets the installment_information of this Ucv1sessionsData.
+
+        :return: The installment_information of this Ucv1sessionsData.
+        :rtype: Ucv1sessionsDataInstallmentInformation
+        """
+        return self._installment_information
+
+    @installment_information.setter
+    def installment_information(self, installment_information):
+        """
+        Sets the installment_information of this Ucv1sessionsData.
+
+        :param installment_information: The installment_information of this Ucv1sessionsData.
+        :type: Ucv1sessionsDataInstallmentInformation
+        """
+
+        self._installment_information = installment_information
+
+    @property
+    def merchant_defined_information(self):
+        """
+        Gets the merchant_defined_information of this Ucv1sessionsData.
+
+        :return: The merchant_defined_information of this Ucv1sessionsData.
+        :rtype: list[Ucv1sessionsDataMerchantDefinedInformation]
+        """
+        return self._merchant_defined_information
+
+    @merchant_defined_information.setter
+    def merchant_defined_information(self, merchant_defined_information):
+        """
+        Sets the merchant_defined_information of this Ucv1sessionsData.
+
+        :param merchant_defined_information: The merchant_defined_information of this Ucv1sessionsData.
+        :type: list[Ucv1sessionsDataMerchantDefinedInformation]
+        """
+
+        self._merchant_defined_information = merchant_defined_information
 
     def to_dict(self):
         """

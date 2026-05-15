@@ -37,6 +37,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         'visa_checkout_id': 'str',
         'purchase_level': 'str',
         'industry_data_type': 'str',
+        'digital_service_indicator': 'str',
         'issuer': 'Ptsv2paymentsIssuerInformation',
         'authorization_options': 'Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions',
         'capture_options': 'Ptsv2paymentsidcapturesProcessingInformationCaptureOptions',
@@ -54,6 +55,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         'visa_checkout_id': 'visaCheckoutId',
         'purchase_level': 'purchaseLevel',
         'industry_data_type': 'industryDataType',
+        'digital_service_indicator': 'digitalServiceIndicator',
         'issuer': 'issuer',
         'authorization_options': 'authorizationOptions',
         'capture_options': 'captureOptions',
@@ -63,7 +65,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         'japan_payment_options': 'japanPaymentOptions'
     }
 
-    def __init__(self, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, issuer=None, authorization_options=None, capture_options=None, loan_options=None, pay_by_points_indicator=None, action_list=None, japan_payment_options=None):
+    def __init__(self, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, digital_service_indicator=None, issuer=None, authorization_options=None, capture_options=None, loan_options=None, pay_by_points_indicator=None, action_list=None, japan_payment_options=None):
         """
         Ptsv2paymentsidcapturesProcessingInformation - a model defined in Swagger
         """
@@ -75,6 +77,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         self._visa_checkout_id = None
         self._purchase_level = None
         self._industry_data_type = None
+        self._digital_service_indicator = None
         self._issuer = None
         self._authorization_options = None
         self._capture_options = None
@@ -97,6 +100,8 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
           self.purchase_level = purchase_level
         if industry_data_type is not None:
           self.industry_data_type = industry_data_type
+        if digital_service_indicator is not None:
+          self.digital_service_indicator = digital_service_indicator
         if issuer is not None:
           self.issuer = issuer
         if authorization_options is not None:
@@ -272,6 +277,29 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         """
 
         self._industry_data_type = industry_data_type
+
+    @property
+    def digital_service_indicator(self):
+        """
+        Gets the digital_service_indicator of this Ptsv2paymentsidcapturesProcessingInformation.
+        Mastercard Digital Enablement Service (MDES) digital service indicators for force capture scenarios.   This field is used when the client is doing authorization with a different gateway and capture with CyberSource.   This field is in ANS, EBCDIC format and flows in Field 34, DSID 04 Tag DF1F, mapped to Mastercard Data Element DE119, Sub-element 004.  #### Used by **Capture Request** Request field for force capture support when auth is done with a different gateway. 
+
+        :return: The digital_service_indicator of this Ptsv2paymentsidcapturesProcessingInformation.
+        :rtype: str
+        """
+        return self._digital_service_indicator
+
+    @digital_service_indicator.setter
+    def digital_service_indicator(self, digital_service_indicator):
+        """
+        Sets the digital_service_indicator of this Ptsv2paymentsidcapturesProcessingInformation.
+        Mastercard Digital Enablement Service (MDES) digital service indicators for force capture scenarios.   This field is used when the client is doing authorization with a different gateway and capture with CyberSource.   This field is in ANS, EBCDIC format and flows in Field 34, DSID 04 Tag DF1F, mapped to Mastercard Data Element DE119, Sub-element 004.  #### Used by **Capture Request** Request field for force capture support when auth is done with a different gateway. 
+
+        :param digital_service_indicator: The digital_service_indicator of this Ptsv2paymentsidcapturesProcessingInformation.
+        :type: str
+        """
+
+        self._digital_service_indicator = digital_service_indicator
 
     @property
     def issuer(self):

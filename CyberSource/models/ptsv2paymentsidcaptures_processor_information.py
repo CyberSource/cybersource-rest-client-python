@@ -31,26 +31,36 @@ class Ptsv2paymentsidcapturesProcessorInformation(object):
     """
     swagger_types = {
         'network': 'Ptsv2paymentsProcessorInformationReversalNetwork',
-        'response_source_code': 'str'
+        'response_source_code': 'str',
+        'supplementary_transaction_data': 'str',
+        'cedp_verified_indicator': 'str'
     }
 
     attribute_map = {
         'network': 'network',
-        'response_source_code': 'responseSourceCode'
+        'response_source_code': 'responseSourceCode',
+        'supplementary_transaction_data': 'supplementaryTransactionData',
+        'cedp_verified_indicator': 'cedpVerifiedIndicator'
     }
 
-    def __init__(self, network=None, response_source_code=None):
+    def __init__(self, network=None, response_source_code=None, supplementary_transaction_data=None, cedp_verified_indicator=None):
         """
         Ptsv2paymentsidcapturesProcessorInformation - a model defined in Swagger
         """
 
         self._network = None
         self._response_source_code = None
+        self._supplementary_transaction_data = None
+        self._cedp_verified_indicator = None
 
         if network is not None:
           self.network = network
         if response_source_code is not None:
           self.response_source_code = response_source_code
+        if supplementary_transaction_data is not None:
+          self.supplementary_transaction_data = supplementary_transaction_data
+        if cedp_verified_indicator is not None:
+          self.cedp_verified_indicator = cedp_verified_indicator
 
     @property
     def network(self):
@@ -95,6 +105,52 @@ class Ptsv2paymentsidcapturesProcessorInformation(object):
         """
 
         self._response_source_code = response_source_code
+
+    @property
+    def supplementary_transaction_data(self):
+        """
+        Gets the supplementary_transaction_data of this Ptsv2paymentsidcapturesProcessorInformation.
+        Supplementary transaction data for Klarna Advantage Plus. Fields to capture Interoperability Data from Merchant and transfer to Klarna for Authorization/Sale/Re-Auth/Capture APIs. 
+
+        :return: The supplementary_transaction_data of this Ptsv2paymentsidcapturesProcessorInformation.
+        :rtype: str
+        """
+        return self._supplementary_transaction_data
+
+    @supplementary_transaction_data.setter
+    def supplementary_transaction_data(self, supplementary_transaction_data):
+        """
+        Sets the supplementary_transaction_data of this Ptsv2paymentsidcapturesProcessorInformation.
+        Supplementary transaction data for Klarna Advantage Plus. Fields to capture Interoperability Data from Merchant and transfer to Klarna for Authorization/Sale/Re-Auth/Capture APIs. 
+
+        :param supplementary_transaction_data: The supplementary_transaction_data of this Ptsv2paymentsidcapturesProcessorInformation.
+        :type: str
+        """
+
+        self._supplementary_transaction_data = supplementary_transaction_data
+
+    @property
+    def cedp_verified_indicator(self):
+        """
+        Gets the cedp_verified_indicator of this Ptsv2paymentsidcapturesProcessorInformation.
+        Merchant Commercial Enhanced Data Program (CEDP) verified indicator for capture/bill requests.  This field is used when the client is doing authorization with a different gateway and capture/settlement with CyberSource.  This field flows in ISO field 34, DSID 02 tag DA, in AN, EBCDIC format.  Possible values: - `Y`: Merchant CEDP verified  #### Used by **Capture Request** Request field for force capture/bill support when auth is done with a different gateway. 
+
+        :return: The cedp_verified_indicator of this Ptsv2paymentsidcapturesProcessorInformation.
+        :rtype: str
+        """
+        return self._cedp_verified_indicator
+
+    @cedp_verified_indicator.setter
+    def cedp_verified_indicator(self, cedp_verified_indicator):
+        """
+        Sets the cedp_verified_indicator of this Ptsv2paymentsidcapturesProcessorInformation.
+        Merchant Commercial Enhanced Data Program (CEDP) verified indicator for capture/bill requests.  This field is used when the client is doing authorization with a different gateway and capture/settlement with CyberSource.  This field flows in ISO field 34, DSID 02 tag DA, in AN, EBCDIC format.  Possible values: - `Y`: Merchant CEDP verified  #### Used by **Capture Request** Request field for force capture/bill support when auth is done with a different gateway. 
+
+        :param cedp_verified_indicator: The cedp_verified_indicator of this Ptsv2paymentsidcapturesProcessorInformation.
+        :type: str
+        """
+
+        self._cedp_verified_indicator = cedp_verified_indicator
 
     def to_dict(self):
         """

@@ -41,7 +41,9 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         'legacy_token': 'Ptsv2paymentsPaymentInformationLegacyToken',
         'payment_type': 'Ptsv2paymentsidrefundsPaymentInformationPaymentType',
         'e_wallet': 'Ptsv2paymentsidrefundsPaymentInformationEWallet',
-        'payment_account_reference': 'Ptsv2paymentsPaymentInformationPaymentAccountReference'
+        'payment_account_reference': 'Ptsv2paymentsPaymentInformationPaymentAccountReference',
+        'third_party_token': 'Ptsv2paymentsPaymentInformationThirdPartyToken',
+        'initiation_channel': 'str'
     }
 
     attribute_map = {
@@ -56,10 +58,12 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         'legacy_token': 'legacyToken',
         'payment_type': 'paymentType',
         'e_wallet': 'eWallet',
-        'payment_account_reference': 'paymentAccountReference'
+        'payment_account_reference': 'paymentAccountReference',
+        'third_party_token': 'thirdPartyToken',
+        'initiation_channel': 'initiationChannel'
     }
 
-    def __init__(self, card=None, bank=None, tokenized_card=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, payment_type=None, e_wallet=None, payment_account_reference=None):
+    def __init__(self, card=None, bank=None, tokenized_card=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, payment_type=None, e_wallet=None, payment_account_reference=None, third_party_token=None, initiation_channel=None):
         """
         Ptsv2paymentsidrefundsPaymentInformation - a model defined in Swagger
         """
@@ -76,6 +80,8 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         self._payment_type = None
         self._e_wallet = None
         self._payment_account_reference = None
+        self._third_party_token = None
+        self._initiation_channel = None
 
         if card is not None:
           self.card = card
@@ -101,6 +107,10 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
           self.e_wallet = e_wallet
         if payment_account_reference is not None:
           self.payment_account_reference = payment_account_reference
+        if third_party_token is not None:
+          self.third_party_token = third_party_token
+        if initiation_channel is not None:
+          self.initiation_channel = initiation_channel
 
     @property
     def card(self):
@@ -353,6 +363,50 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         """
 
         self._payment_account_reference = payment_account_reference
+
+    @property
+    def third_party_token(self):
+        """
+        Gets the third_party_token of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :return: The third_party_token of this Ptsv2paymentsidrefundsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationThirdPartyToken
+        """
+        return self._third_party_token
+
+    @third_party_token.setter
+    def third_party_token(self, third_party_token):
+        """
+        Sets the third_party_token of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :param third_party_token: The third_party_token of this Ptsv2paymentsidrefundsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationThirdPartyToken
+        """
+
+        self._third_party_token = third_party_token
+
+    @property
+    def initiation_channel(self):
+        """
+        Gets the initiation_channel of this Ptsv2paymentsidrefundsPaymentInformation.
+        Mastercard-defined code that indicates how the account information was obtained for credit authorization transactions.  Possible values: - `00`: Card (default) - `01`: Mobile network operator (MNO) controlled removable secure element (SIM or UICC) personalized for use with a mobile phone or smartphone - `02`: Key fob - `03`: Watch - `04`: Mobile tag - `05`: Wristband - `06`: Mobile phone case or sleeve - `07`: Mobile phone or smartphone with fixed (nonremovable) secure element controlled by the MNO (for example, code division multiple access (CDMA)) - `08`: Removable secure element not controlled by the MNO (for example, memory card personalized for use with a mobile phone or smartphone) - `09`: Mobile phone or smartphone with a fixed (nonremovable) secure element not controlled by the MNO - `10`: MNO-controlled removable secure element (SIM or UICC) personalized for use with a tablet or e-book - `11`: Tablet or e-book with a fixed (nonremovable) secure element controlled by the MNO - `12`: Removable secure element not controlled by the MNO (for example, memory card personalized for use with a tablet or e-book) - `13`: Tablet or e-book with fixed (nonremovable) secure element not controlled by the MNO - `14` - `99`: Reserved for future use  This field flows in ISO Field 104 DSID 65 Tag 04.  This field is supported for Mastercard credit authorization transactions.  #### Used by **Credit Authorization (Standalone)** Optional field. 
+
+        :return: The initiation_channel of this Ptsv2paymentsidrefundsPaymentInformation.
+        :rtype: str
+        """
+        return self._initiation_channel
+
+    @initiation_channel.setter
+    def initiation_channel(self, initiation_channel):
+        """
+        Sets the initiation_channel of this Ptsv2paymentsidrefundsPaymentInformation.
+        Mastercard-defined code that indicates how the account information was obtained for credit authorization transactions.  Possible values: - `00`: Card (default) - `01`: Mobile network operator (MNO) controlled removable secure element (SIM or UICC) personalized for use with a mobile phone or smartphone - `02`: Key fob - `03`: Watch - `04`: Mobile tag - `05`: Wristband - `06`: Mobile phone case or sleeve - `07`: Mobile phone or smartphone with fixed (nonremovable) secure element controlled by the MNO (for example, code division multiple access (CDMA)) - `08`: Removable secure element not controlled by the MNO (for example, memory card personalized for use with a mobile phone or smartphone) - `09`: Mobile phone or smartphone with a fixed (nonremovable) secure element not controlled by the MNO - `10`: MNO-controlled removable secure element (SIM or UICC) personalized for use with a tablet or e-book - `11`: Tablet or e-book with a fixed (nonremovable) secure element controlled by the MNO - `12`: Removable secure element not controlled by the MNO (for example, memory card personalized for use with a tablet or e-book) - `13`: Tablet or e-book with fixed (nonremovable) secure element not controlled by the MNO - `14` - `99`: Reserved for future use  This field flows in ISO Field 104 DSID 65 Tag 04.  This field is supported for Mastercard credit authorization transactions.  #### Used by **Credit Authorization (Standalone)** Optional field. 
+
+        :param initiation_channel: The initiation_channel of this Ptsv2paymentsidrefundsPaymentInformation.
+        :type: str
+        """
+
+        self._initiation_channel = initiation_channel
 
     def to_dict(self):
         """

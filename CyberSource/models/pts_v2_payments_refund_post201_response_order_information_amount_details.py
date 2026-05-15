@@ -30,6 +30,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'cashback_amount': 'str',
         'settlement_amount': 'str',
         'settlement_currency': 'str',
         'exchange_rate': 'str',
@@ -38,6 +39,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails(object):
     }
 
     attribute_map = {
+        'cashback_amount': 'cashbackAmount',
         'settlement_amount': 'settlementAmount',
         'settlement_currency': 'settlementCurrency',
         'exchange_rate': 'exchangeRate',
@@ -45,17 +47,20 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails(object):
         'foreign_currency': 'foreignCurrency'
     }
 
-    def __init__(self, settlement_amount=None, settlement_currency=None, exchange_rate=None, foreign_amount=None, foreign_currency=None):
+    def __init__(self, cashback_amount=None, settlement_amount=None, settlement_currency=None, exchange_rate=None, foreign_amount=None, foreign_currency=None):
         """
         PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails - a model defined in Swagger
         """
 
+        self._cashback_amount = None
         self._settlement_amount = None
         self._settlement_currency = None
         self._exchange_rate = None
         self._foreign_amount = None
         self._foreign_currency = None
 
+        if cashback_amount is not None:
+          self.cashback_amount = cashback_amount
         if settlement_amount is not None:
           self.settlement_amount = settlement_amount
         if settlement_currency is not None:
@@ -66,6 +71,29 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails(object):
           self.foreign_amount = foreign_amount
         if foreign_currency is not None:
           self.foreign_currency = foreign_currency
+
+    @property
+    def cashback_amount(self):
+        """
+        Gets the cashback_amount of this PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails.
+        This field contains the purchase cashback amount expressed in the acquirer transaction currency.  Use this field only for clearing with your acquirer. 
+
+        :return: The cashback_amount of this PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._cashback_amount
+
+    @cashback_amount.setter
+    def cashback_amount(self, cashback_amount):
+        """
+        Sets the cashback_amount of this PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails.
+        This field contains the purchase cashback amount expressed in the acquirer transaction currency.  Use this field only for clearing with your acquirer. 
+
+        :param cashback_amount: The cashback_amount of this PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._cashback_amount = cashback_amount
 
     @property
     def settlement_amount(self):

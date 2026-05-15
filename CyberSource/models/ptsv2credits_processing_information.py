@@ -31,6 +31,7 @@ class Ptsv2creditsProcessingInformation(object):
     """
     swagger_types = {
         'action_list': 'list[str]',
+        'action_token_types': 'list[str]',
         'commerce_indicator': 'str',
         'processor_id': 'str',
         'payment_solution': 'str',
@@ -50,11 +51,13 @@ class Ptsv2creditsProcessingInformation(object):
         'loan_options': 'Ptsv2paymentsProcessingInformationLoanOptions',
         'japan_payment_options': 'Ptsv2creditsProcessingInformationJapanPaymentOptions',
         'refund_options': 'Ptsv2creditsProcessingInformationRefundOptions',
-        'merchant_verification_value': 'str'
+        'merchant_verification_value': 'str',
+        'transaction_type_indicator': 'str'
     }
 
     attribute_map = {
         'action_list': 'actionList',
+        'action_token_types': 'actionTokenTypes',
         'commerce_indicator': 'commerceIndicator',
         'processor_id': 'processorId',
         'payment_solution': 'paymentSolution',
@@ -74,15 +77,17 @@ class Ptsv2creditsProcessingInformation(object):
         'loan_options': 'loanOptions',
         'japan_payment_options': 'japanPaymentOptions',
         'refund_options': 'refundOptions',
-        'merchant_verification_value': 'merchantVerificationValue'
+        'merchant_verification_value': 'merchantVerificationValue',
+        'transaction_type_indicator': 'transactionTypeIndicator'
     }
 
-    def __init__(self, action_list=None, commerce_indicator=None, processor_id=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, wallet_type=None, national_net_domestic_data=None, network_routing_order=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, japan_payment_options=None, refund_options=None, merchant_verification_value=None):
+    def __init__(self, action_list=None, action_token_types=None, commerce_indicator=None, processor_id=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, wallet_type=None, national_net_domestic_data=None, network_routing_order=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, japan_payment_options=None, refund_options=None, merchant_verification_value=None, transaction_type_indicator=None):
         """
         Ptsv2creditsProcessingInformation - a model defined in Swagger
         """
 
         self._action_list = None
+        self._action_token_types = None
         self._commerce_indicator = None
         self._processor_id = None
         self._payment_solution = None
@@ -103,9 +108,12 @@ class Ptsv2creditsProcessingInformation(object):
         self._japan_payment_options = None
         self._refund_options = None
         self._merchant_verification_value = None
+        self._transaction_type_indicator = None
 
         if action_list is not None:
           self.action_list = action_list
+        if action_token_types is not None:
+          self.action_token_types = action_token_types
         if commerce_indicator is not None:
           self.commerce_indicator = commerce_indicator
         if processor_id is not None:
@@ -146,6 +154,8 @@ class Ptsv2creditsProcessingInformation(object):
           self.refund_options = refund_options
         if merchant_verification_value is not None:
           self.merchant_verification_value = merchant_verification_value
+        if transaction_type_indicator is not None:
+          self.transaction_type_indicator = transaction_type_indicator
 
     @property
     def action_list(self):
@@ -169,6 +179,29 @@ class Ptsv2creditsProcessingInformation(object):
         """
 
         self._action_list = action_list
+
+    @property
+    def action_token_types(self):
+        """
+        Gets the action_token_types of this Ptsv2creditsProcessingInformation.
+        CyberSource tokens types you are performing a create on. If not supplied the default token type for the merchants token vault will be used.  Valid values: - customer - paymentInstrument - instrumentIdentifier - shippingAddress 
+
+        :return: The action_token_types of this Ptsv2creditsProcessingInformation.
+        :rtype: list[str]
+        """
+        return self._action_token_types
+
+    @action_token_types.setter
+    def action_token_types(self, action_token_types):
+        """
+        Sets the action_token_types of this Ptsv2creditsProcessingInformation.
+        CyberSource tokens types you are performing a create on. If not supplied the default token type for the merchants token vault will be used.  Valid values: - customer - paymentInstrument - instrumentIdentifier - shippingAddress 
+
+        :param action_token_types: The action_token_types of this Ptsv2creditsProcessingInformation.
+        :type: list[str]
+        """
+
+        self._action_token_types = action_token_types
 
     @property
     def commerce_indicator(self):
@@ -615,6 +648,29 @@ class Ptsv2creditsProcessingInformation(object):
         """
 
         self._merchant_verification_value = merchant_verification_value
+
+    @property
+    def transaction_type_indicator(self):
+        """
+        Gets the transaction_type_indicator of this Ptsv2creditsProcessingInformation.
+        This field is used identify the type of payment transaction taking place. This field is applicable for MasterCard transactions only. Possible values: - 201- Mastercard Rebate - 202- rePower Load Value - 203- Gaming Re-pay - 204- General Person-to-Person - 205- General Transfer to Own Account - 206- Agent Cash Out - 207- Payment of Own Credit Card Bill - 208- Business Disbursement - 209- Government/Non-Profit Disbursement - 210- Rapid Merchant Settlement - 211- Cash in at ATM (Usage limited to specific countries) - 212- Cash in at Point of Sale (Usage limited to specific countries) - 213- General Business to Business Transfer - 214- Mastercard Merchant Presented QR - 215- Mastercard Merchant Presented QR Refund Payment - 216- Utility Payments (for Brazil domestic use only) - 217- Government Services (for Brazil domestic use only) - 218- Mobile phone top-ups (for Brazil domestic use only) - 219- Coupon booklet payments (for Brazil domestic use only) - 220- General Person-to-Person Transfer - 221- Person-to-Person Transfer to Card Account - 222- General Transfer to Own Account - 223- Agent Cash Out - 224- Payment of Own Credit Card Bill - 225- Business Disbursement - 226- Transfer to Own Staged Digital Wallet Account - 227- Transfer to Own Debit or Prepaid Account - 228- General Business-to-Business Transfer - 229- Installment-based repayment - 230- Mastercard ATM Cash Pick-Up Transaction - 231- Cryptocurrency - 232- High-risk Securities 
+
+        :return: The transaction_type_indicator of this Ptsv2creditsProcessingInformation.
+        :rtype: str
+        """
+        return self._transaction_type_indicator
+
+    @transaction_type_indicator.setter
+    def transaction_type_indicator(self, transaction_type_indicator):
+        """
+        Sets the transaction_type_indicator of this Ptsv2creditsProcessingInformation.
+        This field is used identify the type of payment transaction taking place. This field is applicable for MasterCard transactions only. Possible values: - 201- Mastercard Rebate - 202- rePower Load Value - 203- Gaming Re-pay - 204- General Person-to-Person - 205- General Transfer to Own Account - 206- Agent Cash Out - 207- Payment of Own Credit Card Bill - 208- Business Disbursement - 209- Government/Non-Profit Disbursement - 210- Rapid Merchant Settlement - 211- Cash in at ATM (Usage limited to specific countries) - 212- Cash in at Point of Sale (Usage limited to specific countries) - 213- General Business to Business Transfer - 214- Mastercard Merchant Presented QR - 215- Mastercard Merchant Presented QR Refund Payment - 216- Utility Payments (for Brazil domestic use only) - 217- Government Services (for Brazil domestic use only) - 218- Mobile phone top-ups (for Brazil domestic use only) - 219- Coupon booklet payments (for Brazil domestic use only) - 220- General Person-to-Person Transfer - 221- Person-to-Person Transfer to Card Account - 222- General Transfer to Own Account - 223- Agent Cash Out - 224- Payment of Own Credit Card Bill - 225- Business Disbursement - 226- Transfer to Own Staged Digital Wallet Account - 227- Transfer to Own Debit or Prepaid Account - 228- General Business-to-Business Transfer - 229- Installment-based repayment - 230- Mastercard ATM Cash Pick-Up Transaction - 231- Cryptocurrency - 232- High-risk Securities 
+
+        :param transaction_type_indicator: The transaction_type_indicator of this Ptsv2creditsProcessingInformation.
+        :type: str
+        """
+
+        self._transaction_type_indicator = transaction_type_indicator
 
     def to_dict(self):
         """

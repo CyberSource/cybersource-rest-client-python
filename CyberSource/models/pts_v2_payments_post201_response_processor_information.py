@@ -76,7 +76,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'order_id': 'str',
         'order_status': 'str',
         'merchant_risk_prediction': 'str',
-        'network': 'Ptsv2paymentsProcessorInformationReversalNetwork'
+        'network': 'Ptsv2paymentsProcessorInformationReversalNetwork',
+        'cedp_verified_indicator': 'str'
     }
 
     attribute_map = {
@@ -126,10 +127,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'order_id': 'orderId',
         'order_status': 'orderStatus',
         'merchant_risk_prediction': 'merchantRiskPrediction',
-        'network': 'network'
+        'network': 'network',
+        'cedp_verified_indicator': 'cedpVerifiedIndicator'
     }
 
-    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, response_source_code=None, forwarded_acquirer_code=None, settlement_date=None, sequence_number=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None, custom_url=None, scheme_assigned_id=None, device_url=None, disbursement_mode=None, update_time_utc=None, expiration_time_utc=None, order_id=None, order_status=None, merchant_risk_prediction=None, network=None):
+    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, response_source_code=None, forwarded_acquirer_code=None, settlement_date=None, sequence_number=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None, custom_url=None, scheme_assigned_id=None, device_url=None, disbursement_mode=None, update_time_utc=None, expiration_time_utc=None, order_id=None, order_status=None, merchant_risk_prediction=None, network=None, cedp_verified_indicator=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -181,6 +183,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._order_status = None
         self._merchant_risk_prediction = None
         self._network = None
+        self._cedp_verified_indicator = None
 
         if auth_indicator is not None:
           self.auth_indicator = auth_indicator
@@ -276,6 +279,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.merchant_risk_prediction = merchant_risk_prediction
         if network is not None:
           self.network = network
+        if cedp_verified_indicator is not None:
+          self.cedp_verified_indicator = cedp_verified_indicator
 
     @property
     def auth_indicator(self):
@@ -1271,7 +1276,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def order_status(self):
         """
         Gets the order_status of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        The order status.  Possible values: - `CREATED` - `VOIDED` - `COMPLETED` - `PAYER_ACTION_REQUIRED` 
+        The order status.  Possible values: - `CREATED` - `VOIDED` - `COMPLETED` - `PAYER_ACTION_REQUIRED` - `STEP_UP_REQUIRED` 
 
         :return: The order_status of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -1282,7 +1287,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def order_status(self, order_status):
         """
         Sets the order_status of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        The order status.  Possible values: - `CREATED` - `VOIDED` - `COMPLETED` - `PAYER_ACTION_REQUIRED` 
+        The order status.  Possible values: - `CREATED` - `VOIDED` - `COMPLETED` - `PAYER_ACTION_REQUIRED` - `STEP_UP_REQUIRED` 
 
         :param order_status: The order_status of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
@@ -1333,6 +1338,29 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         """
 
         self._network = network
+
+    @property
+    def cedp_verified_indicator(self):
+        """
+        Gets the cedp_verified_indicator of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Merchant Commercial Enhanced Data Program (CEDP) verified indicator received in authorization response messages for U.S. domestic transactions containing a credential for the commercial credit products.  This field flows in ISO field 34, DSID 02 tag DA, in AN, EBCDIC format.  Possible values: - `Y`: Merchant CEDP verified  This field is for internal processing only (TC33A usage) and is not sent back to the merchant.  #### Used by **Authorization Response** Response field only. 
+
+        :return: The cedp_verified_indicator of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._cedp_verified_indicator
+
+    @cedp_verified_indicator.setter
+    def cedp_verified_indicator(self, cedp_verified_indicator):
+        """
+        Sets the cedp_verified_indicator of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Merchant Commercial Enhanced Data Program (CEDP) verified indicator received in authorization response messages for U.S. domestic transactions containing a credential for the commercial credit products.  This field flows in ISO field 34, DSID 02 tag DA, in AN, EBCDIC format.  Possible values: - `Y`: Merchant CEDP verified  This field is for internal processing only (TC33A usage) and is not sent back to the merchant.  #### Used by **Authorization Response** Response field only. 
+
+        :param cedp_verified_indicator: The cedp_verified_indicator of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._cedp_verified_indicator = cedp_verified_indicator
 
     def to_dict(self):
         """

@@ -273,7 +273,7 @@ class SubscriptionsFollowOnsApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        inbound_mle_status = "false"
+        inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_follow_on_subscription,get_follow_on_subscription_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         

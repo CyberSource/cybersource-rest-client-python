@@ -9,6 +9,7 @@ from .chargeback_details_api import ChargebackDetailsApi
 from .chargeback_summaries_api import ChargebackSummariesApi
 from .conversion_details_api import ConversionDetailsApi
 from .create_new_webhooks_api import CreateNewWebhooksApi
+from .credentials_api import CredentialsApi
 from .customer_api import CustomerApi
 from .customer_payment_instrument_api import CustomerPaymentInstrumentApi
 from .customer_shipping_address_api import CustomerShippingAddressApi
@@ -30,6 +31,7 @@ from .merchant_boarding_api import MerchantBoardingApi
 from .merchant_defined_fields_api import MerchantDefinedFieldsApi
 from .microform_integration_api import MicroformIntegrationApi
 from .net_fundings_api import NetFundingsApi
+from .network_tokens_api import NetworkTokensApi
 from .notification_of_changes_api import NotificationOfChangesApi
 from .offers_api import OffersApi
 from .payer_authentication_api import PayerAuthenticationApi
@@ -51,9 +53,7 @@ from .search_transactions_api import SearchTransactionsApi
 from .secure_file_share_api import SecureFileShareApi
 from .subscriptions_api import SubscriptionsApi
 from .subscriptions_follow_ons_api import SubscriptionsFollowOnsApi
-from .token_api import TokenApi
 from .tokenize_api import TokenizeApi
-from .tokenized_card_api import TokenizedCardApi
 from .transaction_batches_api import TransactionBatchesApi
 from .transaction_details_api import TransactionDetailsApi
 from .transient_token_data_v2_api import TransientTokenDataV2Api

@@ -30,12 +30,14 @@ class Ptsv2paymentsOrderInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'extension_days': 'str',
         'amount_details': 'Ptsv2paymentsOrderInformationAmountDetails',
         'bill_to': 'Ptsv2paymentsOrderInformationBillTo',
         'ship_to': 'Ptsv2paymentsOrderInformationShipTo',
         'line_items': 'list[Ptsv2paymentsOrderInformationLineItems]',
         'invoice_details': 'Ptsv2paymentsOrderInformationInvoiceDetails',
         'shipping_details': 'Ptsv2paymentsOrderInformationShippingDetails',
+        'digital_currency': 'Ptsv2paymentsOrderInformationDigitalCurrency',
         'returns_accepted': 'bool',
         'is_cryptocurrency_purchase': 'str',
         'cutoff_date_time': 'str',
@@ -46,12 +48,14 @@ class Ptsv2paymentsOrderInformation(object):
     }
 
     attribute_map = {
+        'extension_days': 'extensionDays',
         'amount_details': 'amountDetails',
         'bill_to': 'billTo',
         'ship_to': 'shipTo',
         'line_items': 'lineItems',
         'invoice_details': 'invoiceDetails',
         'shipping_details': 'shippingDetails',
+        'digital_currency': 'digitalCurrency',
         'returns_accepted': 'returnsAccepted',
         'is_cryptocurrency_purchase': 'isCryptocurrencyPurchase',
         'cutoff_date_time': 'cutoffDateTime',
@@ -61,17 +65,19 @@ class Ptsv2paymentsOrderInformation(object):
         'total_offers_count': 'totalOffersCount'
     }
 
-    def __init__(self, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None, shipping_details=None, returns_accepted=None, is_cryptocurrency_purchase=None, cutoff_date_time=None, pre_order=None, pre_order_date=None, reordered=None, total_offers_count=None):
+    def __init__(self, extension_days=None, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None, shipping_details=None, digital_currency=None, returns_accepted=None, is_cryptocurrency_purchase=None, cutoff_date_time=None, pre_order=None, pre_order_date=None, reordered=None, total_offers_count=None):
         """
         Ptsv2paymentsOrderInformation - a model defined in Swagger
         """
 
+        self._extension_days = None
         self._amount_details = None
         self._bill_to = None
         self._ship_to = None
         self._line_items = None
         self._invoice_details = None
         self._shipping_details = None
+        self._digital_currency = None
         self._returns_accepted = None
         self._is_cryptocurrency_purchase = None
         self._cutoff_date_time = None
@@ -80,6 +86,8 @@ class Ptsv2paymentsOrderInformation(object):
         self._reordered = None
         self._total_offers_count = None
 
+        if extension_days is not None:
+          self.extension_days = extension_days
         if amount_details is not None:
           self.amount_details = amount_details
         if bill_to is not None:
@@ -92,6 +100,8 @@ class Ptsv2paymentsOrderInformation(object):
           self.invoice_details = invoice_details
         if shipping_details is not None:
           self.shipping_details = shipping_details
+        if digital_currency is not None:
+          self.digital_currency = digital_currency
         if returns_accepted is not None:
           self.returns_accepted = returns_accepted
         if is_cryptocurrency_purchase is not None:
@@ -106,6 +116,29 @@ class Ptsv2paymentsOrderInformation(object):
           self.reordered = reordered
         if total_offers_count is not None:
           self.total_offers_count = total_offers_count
+
+    @property
+    def extension_days(self):
+        """
+        Gets the extension_days of this Ptsv2paymentsOrderInformation.
+        Request field for merchant to increase the AUTH expiry days for Klarna Advantage Plus. Applicable for Re-Authorization (AP_REAUTH) service. 
+
+        :return: The extension_days of this Ptsv2paymentsOrderInformation.
+        :rtype: str
+        """
+        return self._extension_days
+
+    @extension_days.setter
+    def extension_days(self, extension_days):
+        """
+        Sets the extension_days of this Ptsv2paymentsOrderInformation.
+        Request field for merchant to increase the AUTH expiry days for Klarna Advantage Plus. Applicable for Re-Authorization (AP_REAUTH) service. 
+
+        :param extension_days: The extension_days of this Ptsv2paymentsOrderInformation.
+        :type: str
+        """
+
+        self._extension_days = extension_days
 
     @property
     def amount_details(self):
@@ -232,6 +265,27 @@ class Ptsv2paymentsOrderInformation(object):
         """
 
         self._shipping_details = shipping_details
+
+    @property
+    def digital_currency(self):
+        """
+        Gets the digital_currency of this Ptsv2paymentsOrderInformation.
+
+        :return: The digital_currency of this Ptsv2paymentsOrderInformation.
+        :rtype: Ptsv2paymentsOrderInformationDigitalCurrency
+        """
+        return self._digital_currency
+
+    @digital_currency.setter
+    def digital_currency(self, digital_currency):
+        """
+        Sets the digital_currency of this Ptsv2paymentsOrderInformation.
+
+        :param digital_currency: The digital_currency of this Ptsv2paymentsOrderInformation.
+        :type: Ptsv2paymentsOrderInformationDigitalCurrency
+        """
+
+        self._digital_currency = digital_currency
 
     @property
     def returns_accepted(self):

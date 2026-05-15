@@ -53,6 +53,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'pin_block_encoding_format': 'int',
         'encrypted_pin': 'str',
         'encrypted_key_serial_number': 'str',
+        'encrypted_key_id': 'str',
         'partner_sdk_version': 'str',
         'emv_application_identifier_and_dedicated_file_name': 'str',
         'terminal_compliance': 'str',
@@ -86,6 +87,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'pin_block_encoding_format': 'pinBlockEncodingFormat',
         'encrypted_pin': 'encryptedPin',
         'encrypted_key_serial_number': 'encryptedKeySerialNumber',
+        'encrypted_key_id': 'encryptedKeyId',
         'partner_sdk_version': 'partnerSdkVersion',
         'emv_application_identifier_and_dedicated_file_name': 'emvApplicationIdentifierAndDedicatedFileName',
         'terminal_compliance': 'terminalCompliance',
@@ -95,7 +97,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'service_code': 'serviceCode'
     }
 
-    def __init__(self, terminal_id=None, terminal_serial_number=None, cardholder_verification_method_used=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_category=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, pin_entry_solution=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, partner_sdk_version=None, emv_application_identifier_and_dedicated_file_name=None, terminal_compliance=None, is_dedicated_hardware_terminal=None, terminal_model=None, terminal_make=None, service_code=None):
+    def __init__(self, terminal_id=None, terminal_serial_number=None, cardholder_verification_method_used=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_category=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, pin_entry_solution=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, encrypted_key_id=None, partner_sdk_version=None, emv_application_identifier_and_dedicated_file_name=None, terminal_compliance=None, is_dedicated_hardware_terminal=None, terminal_model=None, terminal_make=None, service_code=None):
         """
         Ptsv2paymentsPointOfSaleInformation - a model defined in Swagger
         """
@@ -123,6 +125,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         self._pin_block_encoding_format = None
         self._encrypted_pin = None
         self._encrypted_key_serial_number = None
+        self._encrypted_key_id = None
         self._partner_sdk_version = None
         self._emv_application_identifier_and_dedicated_file_name = None
         self._terminal_compliance = None
@@ -177,6 +180,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
           self.encrypted_pin = encrypted_pin
         if encrypted_key_serial_number is not None:
           self.encrypted_key_serial_number = encrypted_key_serial_number
+        if encrypted_key_id is not None:
+          self.encrypted_key_id = encrypted_key_id
         if partner_sdk_version is not None:
           self.partner_sdk_version = partner_sdk_version
         if emv_application_identifier_and_dedicated_file_name is not None:
@@ -718,6 +723,29 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         """
 
         self._encrypted_key_serial_number = encrypted_key_serial_number
+
+    @property
+    def encrypted_key_id(self):
+        """
+        Gets the encrypted_key_id of this Ptsv2paymentsPointOfSaleInformation.
+        Identifies the Zone PIN Key (ZPK) used for Online PIN processing by providing the 10‑digit Key Set Identifier (KSI). This value indicates that the PIN block is encrypted under a ZPK and enables the Payment Security Service (PSS) to perform  the correct ZPK→ZPK PIN translation during card‑present EMV PIN transactions. 
+
+        :return: The encrypted_key_id of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._encrypted_key_id
+
+    @encrypted_key_id.setter
+    def encrypted_key_id(self, encrypted_key_id):
+        """
+        Sets the encrypted_key_id of this Ptsv2paymentsPointOfSaleInformation.
+        Identifies the Zone PIN Key (ZPK) used for Online PIN processing by providing the 10‑digit Key Set Identifier (KSI). This value indicates that the PIN block is encrypted under a ZPK and enables the Payment Security Service (PSS) to perform  the correct ZPK→ZPK PIN translation during card‑present EMV PIN transactions. 
+
+        :param encrypted_key_id: The encrypted_key_id of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+
+        self._encrypted_key_id = encrypted_key_id
 
     @property
     def partner_sdk_version(self):

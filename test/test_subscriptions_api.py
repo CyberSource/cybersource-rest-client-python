@@ -78,6 +78,22 @@ class TestSubscriptionsApi(unittest.TestCase):
         """
         pass
 
+    def test_subscriptions_id_payments_get(self):
+        """
+        Test case for subscriptions_id_payments_get
+
+        Get Payments for a Subscription
+        """
+        pass
+
+    def test_subscriptions_id_payments_put(self):
+        """
+        Test case for subscriptions_id_payments_put
+
+        Update Payments for a subscription
+        """
+        pass
+
     def test_suspend_subscription(self):
         """
         Test case for suspend_subscription

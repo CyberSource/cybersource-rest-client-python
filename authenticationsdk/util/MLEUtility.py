@@ -94,6 +94,15 @@ class MLEUtility:
             logger.debug("The certificate to use for MLE for requests is not provided in the merchant configuration. Please ensure that the certificate path is provided.")
             logger.debug("Currently, MLE for requests using HTTP Signature as authentication is not supported by Cybersource. By default, the SDK will fall back to non-encrypted requests.")
             return request_body
+        
+        # Special case: MLE Certificate not found when using SHARED_SECRET
+        if (mle_certificate is None and merchant_config.authentication_type.lower() == GlobalLabelParameters.JWT.lower() 
+            and merchant_config.is_shared_secret_key_type()):
+            error_msg = ("No certificate found for MLE Request. "
+                        "Please provide the Request MLE certificate file path via 'mleForRequestPublicCertPath' in merchant configuration. "
+                        "This is required when using jwtKeyType=SHARED_SECRET or when the P12 file does not contain the MLE certificate.")
+            logger.error(error_msg)
+            raise ValueError(error_msg)
 
         serial_number = MLEUtility.get_serial_number_from_certificate(mle_certificate, merchant_config)
         payload_bytes = payload.encode('utf-8')
@@ -277,7 +286,7 @@ class MLEUtility:
             ValueError: If the certificate with matching CN is not found or serial number is missing
         """
         try:
-            logger.debug(f"Extracting MLE KID from P12 file: {file_path} for merchantId: {merchant_id}")
+            logger.debug(f"Extracting MLE KID from P12 file: {file_path} for merchant key alias: {merchant_id}")
             
             # Get cached P12 object
             cache_obj = MLEUtility.get_cache()
@@ -379,10 +388,13 @@ class MLEUtility:
                 if is_cybs_p12:
                     logger.debug("Detected CyberSource P12 file, attempting to auto-extract responseMleKID")
                     try:
+                        use_metakey = getattr(merchant_config, 'use_metakey', False)
+                        response_mle_key_alias = merchant_config.portfolio_id if use_metakey else merchant_config.merchant_id
+
                         cybs_kid = MLEUtility.extract_response_mle_kid(
                             merchant_config.responseMlePrivateKeyFilePath,
                             merchant_config.responseMlePrivateKeyFilePassword,
-                            merchant_config.merchant_id,
+                            response_mle_key_alias,
                             logger
                         )
                         logger.info("Successfully auto-extracted responseMleKID from CyberSource P12 certificate")

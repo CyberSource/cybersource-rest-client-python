@@ -38,7 +38,8 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         'country': 'str',
         'email': 'str',
         'phone_number': 'str',
-        'id': 'str'
+        'id': 'str',
+        'merchant_category_code': 'float'
     }
 
     attribute_map = {
@@ -50,10 +51,11 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         'country': 'country',
         'email': 'email',
         'phone_number': 'phoneNumber',
-        'id': 'id'
+        'id': 'id',
+        'merchant_category_code': 'merchantCategoryCode'
     }
 
-    def __init__(self, name=None, address1=None, locality=None, administrative_area=None, postal_code=None, country=None, email=None, phone_number=None, id=None):
+    def __init__(self, name=None, address1=None, locality=None, administrative_area=None, postal_code=None, country=None, email=None, phone_number=None, id=None, merchant_category_code=None):
         """
         Ptsv2paymentsidcapturesAggregatorInformationSubMerchant - a model defined in Swagger
         """
@@ -67,6 +69,7 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         self._email = None
         self._phone_number = None
         self._id = None
+        self._merchant_category_code = None
 
         if name is not None:
           self.name = name
@@ -86,6 +89,8 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
           self.phone_number = phone_number
         if id is not None:
           self.id = id
+        if merchant_category_code is not None:
+          self.merchant_category_code = merchant_category_code
 
     @property
     def name(self):
@@ -293,6 +298,27 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         """
 
         self._id = id
+
+    @property
+    def merchant_category_code(self):
+        """
+        Gets the merchant_category_code of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
+
+        :return: The merchant_category_code of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
+        :rtype: float
+        """
+        return self._merchant_category_code
+
+    @merchant_category_code.setter
+    def merchant_category_code(self, merchant_category_code):
+        """
+        Sets the merchant_category_code of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
+
+        :param merchant_category_code: The merchant_category_code of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
+        :type: float
+        """
+
+        self._merchant_category_code = merchant_category_code
 
     def to_dict(self):
         """

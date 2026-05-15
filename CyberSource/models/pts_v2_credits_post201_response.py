@@ -41,7 +41,11 @@ class PtsV2CreditsPost201Response(object):
         'processor_information': 'PtsV2PaymentsRefundPost201ResponseProcessorInformation',
         'payment_information': 'PtsV2CreditsPost201ResponsePaymentInformation',
         'order_information': 'PtsV2PaymentsRefundPost201ResponseOrderInformation',
+        'merchant_information': 'PtsV2CreditsPost201ResponseMerchantInformation',
+        'clearing_information': 'PtsV2PaymentsPost201ResponseClearingInformation',
         'point_of_sale_information': 'PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation',
+        'token_information': 'PtsV2CreditsPost201ResponseTokenInformation',
+        'payment_account_information': 'PtsV2CreditsPost201ResponsePaymentAccountInformation',
         'error_information': 'PtsV2PaymentsRefundPost201ResponseErrorInformation'
     }
 
@@ -57,11 +61,15 @@ class PtsV2CreditsPost201Response(object):
         'processor_information': 'processorInformation',
         'payment_information': 'paymentInformation',
         'order_information': 'orderInformation',
+        'merchant_information': 'merchantInformation',
+        'clearing_information': 'clearingInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
+        'token_information': 'tokenInformation',
+        'payment_account_information': 'paymentAccountInformation',
         'error_information': 'errorInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, credit_amount_details=None, processing_information=None, processor_information=None, payment_information=None, order_information=None, point_of_sale_information=None, error_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, credit_amount_details=None, processing_information=None, processor_information=None, payment_information=None, order_information=None, merchant_information=None, clearing_information=None, point_of_sale_information=None, token_information=None, payment_account_information=None, error_information=None):
         """
         PtsV2CreditsPost201Response - a model defined in Swagger
         """
@@ -77,7 +85,11 @@ class PtsV2CreditsPost201Response(object):
         self._processor_information = None
         self._payment_information = None
         self._order_information = None
+        self._merchant_information = None
+        self._clearing_information = None
         self._point_of_sale_information = None
+        self._token_information = None
+        self._payment_account_information = None
         self._error_information = None
 
         if links is not None:
@@ -102,8 +114,16 @@ class PtsV2CreditsPost201Response(object):
           self.payment_information = payment_information
         if order_information is not None:
           self.order_information = order_information
+        if merchant_information is not None:
+          self.merchant_information = merchant_information
+        if clearing_information is not None:
+          self.clearing_information = clearing_information
         if point_of_sale_information is not None:
           self.point_of_sale_information = point_of_sale_information
+        if token_information is not None:
+          self.token_information = token_information
+        if payment_account_information is not None:
+          self.payment_account_information = payment_account_information
         if error_information is not None:
           self.error_information = error_information
 
@@ -347,6 +367,48 @@ class PtsV2CreditsPost201Response(object):
         self._order_information = order_information
 
     @property
+    def merchant_information(self):
+        """
+        Gets the merchant_information of this PtsV2CreditsPost201Response.
+
+        :return: The merchant_information of this PtsV2CreditsPost201Response.
+        :rtype: PtsV2CreditsPost201ResponseMerchantInformation
+        """
+        return self._merchant_information
+
+    @merchant_information.setter
+    def merchant_information(self, merchant_information):
+        """
+        Sets the merchant_information of this PtsV2CreditsPost201Response.
+
+        :param merchant_information: The merchant_information of this PtsV2CreditsPost201Response.
+        :type: PtsV2CreditsPost201ResponseMerchantInformation
+        """
+
+        self._merchant_information = merchant_information
+
+    @property
+    def clearing_information(self):
+        """
+        Gets the clearing_information of this PtsV2CreditsPost201Response.
+
+        :return: The clearing_information of this PtsV2CreditsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseClearingInformation
+        """
+        return self._clearing_information
+
+    @clearing_information.setter
+    def clearing_information(self, clearing_information):
+        """
+        Sets the clearing_information of this PtsV2CreditsPost201Response.
+
+        :param clearing_information: The clearing_information of this PtsV2CreditsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseClearingInformation
+        """
+
+        self._clearing_information = clearing_information
+
+    @property
     def point_of_sale_information(self):
         """
         Gets the point_of_sale_information of this PtsV2CreditsPost201Response.
@@ -366,6 +428,48 @@ class PtsV2CreditsPost201Response(object):
         """
 
         self._point_of_sale_information = point_of_sale_information
+
+    @property
+    def token_information(self):
+        """
+        Gets the token_information of this PtsV2CreditsPost201Response.
+
+        :return: The token_information of this PtsV2CreditsPost201Response.
+        :rtype: PtsV2CreditsPost201ResponseTokenInformation
+        """
+        return self._token_information
+
+    @token_information.setter
+    def token_information(self, token_information):
+        """
+        Sets the token_information of this PtsV2CreditsPost201Response.
+
+        :param token_information: The token_information of this PtsV2CreditsPost201Response.
+        :type: PtsV2CreditsPost201ResponseTokenInformation
+        """
+
+        self._token_information = token_information
+
+    @property
+    def payment_account_information(self):
+        """
+        Gets the payment_account_information of this PtsV2CreditsPost201Response.
+
+        :return: The payment_account_information of this PtsV2CreditsPost201Response.
+        :rtype: PtsV2CreditsPost201ResponsePaymentAccountInformation
+        """
+        return self._payment_account_information
+
+    @payment_account_information.setter
+    def payment_account_information(self, payment_account_information):
+        """
+        Sets the payment_account_information of this PtsV2CreditsPost201Response.
+
+        :param payment_account_information: The payment_account_information of this PtsV2CreditsPost201Response.
+        :type: PtsV2CreditsPost201ResponsePaymentAccountInformation
+        """
+
+        self._payment_account_information = payment_account_information
 
     @property
     def error_information(self):

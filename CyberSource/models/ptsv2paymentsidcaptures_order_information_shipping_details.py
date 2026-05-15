@@ -30,22 +30,47 @@ class Ptsv2paymentsidcapturesOrderInformationShippingDetails(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'ship_from_postal_code': 'str'
+        'ship_from_postal_code': 'str',
+        'tracking_number': 'str',
+        'tracking_url': 'str',
+        'shipping_carrier': 'str',
+        'estimated_delivery_date': 'str',
+        'shipping_method': 'str'
     }
 
     attribute_map = {
-        'ship_from_postal_code': 'shipFromPostalCode'
+        'ship_from_postal_code': 'shipFromPostalCode',
+        'tracking_number': 'trackingNumber',
+        'tracking_url': 'trackingUrl',
+        'shipping_carrier': 'shippingCarrier',
+        'estimated_delivery_date': 'estimatedDeliveryDate',
+        'shipping_method': 'shippingMethod'
     }
 
-    def __init__(self, ship_from_postal_code=None):
+    def __init__(self, ship_from_postal_code=None, tracking_number=None, tracking_url=None, shipping_carrier=None, estimated_delivery_date=None, shipping_method=None):
         """
         Ptsv2paymentsidcapturesOrderInformationShippingDetails - a model defined in Swagger
         """
 
         self._ship_from_postal_code = None
+        self._tracking_number = None
+        self._tracking_url = None
+        self._shipping_carrier = None
+        self._estimated_delivery_date = None
+        self._shipping_method = None
 
         if ship_from_postal_code is not None:
           self.ship_from_postal_code = ship_from_postal_code
+        if tracking_number is not None:
+          self.tracking_number = tracking_number
+        if tracking_url is not None:
+          self.tracking_url = tracking_url
+        if shipping_carrier is not None:
+          self.shipping_carrier = shipping_carrier
+        if estimated_delivery_date is not None:
+          self.estimated_delivery_date = estimated_delivery_date
+        if shipping_method is not None:
+          self.shipping_method = shipping_method
 
     @property
     def ship_from_postal_code(self):
@@ -69,6 +94,121 @@ class Ptsv2paymentsidcapturesOrderInformationShippingDetails(object):
         """
 
         self._ship_from_postal_code = ship_from_postal_code
+
+    @property
+    def tracking_number(self):
+        """
+        Gets the tracking_number of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        Shipment tracking number provided by the merchant. Used to track the shipment of goods to the customer. 
+
+        :return: The tracking_number of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        :rtype: str
+        """
+        return self._tracking_number
+
+    @tracking_number.setter
+    def tracking_number(self, tracking_number):
+        """
+        Sets the tracking_number of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        Shipment tracking number provided by the merchant. Used to track the shipment of goods to the customer. 
+
+        :param tracking_number: The tracking_number of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        :type: str
+        """
+
+        self._tracking_number = tracking_number
+
+    @property
+    def tracking_url(self):
+        """
+        Gets the tracking_url of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        URL where the customer can track their shipment. Provides real-time tracking information for the delivery. 
+
+        :return: The tracking_url of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        :rtype: str
+        """
+        return self._tracking_url
+
+    @tracking_url.setter
+    def tracking_url(self, tracking_url):
+        """
+        Sets the tracking_url of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        URL where the customer can track their shipment. Provides real-time tracking information for the delivery. 
+
+        :param tracking_url: The tracking_url of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        :type: str
+        """
+
+        self._tracking_url = tracking_url
+
+    @property
+    def shipping_carrier(self):
+        """
+        Gets the shipping_carrier of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        Name of the shipping carrier/company handling the delivery. 
+
+        :return: The shipping_carrier of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        :rtype: str
+        """
+        return self._shipping_carrier
+
+    @shipping_carrier.setter
+    def shipping_carrier(self, shipping_carrier):
+        """
+        Sets the shipping_carrier of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        Name of the shipping carrier/company handling the delivery. 
+
+        :param shipping_carrier: The shipping_carrier of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        :type: str
+        """
+
+        self._shipping_carrier = shipping_carrier
+
+    @property
+    def estimated_delivery_date(self):
+        """
+        Gets the estimated_delivery_date of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        Estimated delivery date for the shipment provided by Merchant. Format: YYYYMMDD (e.g., 20251115 for November 15, 2025) 
+
+        :return: The estimated_delivery_date of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        :rtype: str
+        """
+        return self._estimated_delivery_date
+
+    @estimated_delivery_date.setter
+    def estimated_delivery_date(self, estimated_delivery_date):
+        """
+        Sets the estimated_delivery_date of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        Estimated delivery date for the shipment provided by Merchant. Format: YYYYMMDD (e.g., 20251115 for November 15, 2025) 
+
+        :param estimated_delivery_date: The estimated_delivery_date of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        :type: str
+        """
+
+        self._estimated_delivery_date = estimated_delivery_date
+
+    @property
+    def shipping_method(self):
+        """
+        Gets the shipping_method of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        Shipping method for the product. Possible values:   - `lowcost`: Lowest-cost service  - `sameday`: Courier or same-day service  - `oneday`: Next-day or overnight service  - `twoday`: Two-day service  - `threeday`: Three-day service  - `pickup`: Store pick-up  - `other`: Other shipping method  - `none`: No shipping method because product is a service or subscription  Klarna Advantage Plus additional values:  - `TO_DOOR`: Delivery to door  - `TO_CURB`: Delivery to curb  - `TO_MAILBOX`: Delivery to mailbox  - `PICKUP_BOX`: Pickup from box  - `PICKUP_POINT`: Pickup from point  - `PICKUP_STORE`: Pickup from store  - `PICKUP_WAREHOUSE`: Pickup from warehouse  - `DIGITAL_EMAIL`: Digital delivery via email  - `DIGITAL_DOWNLOAD`: Digital download  - `DIGITAL_OTHER`: Other digital delivery  - `PHYSICAL_OTHER`: Other physical delivery 
+
+        :return: The shipping_method of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        :rtype: str
+        """
+        return self._shipping_method
+
+    @shipping_method.setter
+    def shipping_method(self, shipping_method):
+        """
+        Sets the shipping_method of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        Shipping method for the product. Possible values:   - `lowcost`: Lowest-cost service  - `sameday`: Courier or same-day service  - `oneday`: Next-day or overnight service  - `twoday`: Two-day service  - `threeday`: Three-day service  - `pickup`: Store pick-up  - `other`: Other shipping method  - `none`: No shipping method because product is a service or subscription  Klarna Advantage Plus additional values:  - `TO_DOOR`: Delivery to door  - `TO_CURB`: Delivery to curb  - `TO_MAILBOX`: Delivery to mailbox  - `PICKUP_BOX`: Pickup from box  - `PICKUP_POINT`: Pickup from point  - `PICKUP_STORE`: Pickup from store  - `PICKUP_WAREHOUSE`: Pickup from warehouse  - `DIGITAL_EMAIL`: Digital delivery via email  - `DIGITAL_DOWNLOAD`: Digital download  - `DIGITAL_OTHER`: Other digital delivery  - `PHYSICAL_OTHER`: Other physical delivery 
+
+        :param shipping_method: The shipping_method of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
+        :type: str
+        """
+
+        self._shipping_method = shipping_method
 
     def to_dict(self):
         """

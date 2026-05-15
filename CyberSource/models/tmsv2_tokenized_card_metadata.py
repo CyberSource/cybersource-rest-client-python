@@ -31,26 +31,31 @@ class Tmsv2TokenizedCardMetadata(object):
     """
     swagger_types = {
         'card_art': 'TmsCardArt',
-        'issuer': 'Tmsv2TokenizedCardMetadataIssuer'
+        'issuer': 'Tmsv2TokenizedCardMetadataIssuer',
+        'creator': 'str'
     }
 
     attribute_map = {
         'card_art': 'cardArt',
-        'issuer': 'issuer'
+        'issuer': 'issuer',
+        'creator': 'creator'
     }
 
-    def __init__(self, card_art=None, issuer=None):
+    def __init__(self, card_art=None, issuer=None, creator=None):
         """
         Tmsv2TokenizedCardMetadata - a model defined in Swagger
         """
 
         self._card_art = None
         self._issuer = None
+        self._creator = None
 
         if card_art is not None:
           self.card_art = card_art
         if issuer is not None:
           self.issuer = issuer
+        if creator is not None:
+          self.creator = creator
 
     @property
     def card_art(self):
@@ -93,6 +98,29 @@ class Tmsv2TokenizedCardMetadata(object):
         """
 
         self._issuer = issuer
+
+    @property
+    def creator(self):
+        """
+        Gets the creator of this Tmsv2TokenizedCardMetadata.
+        The creator of the Tokenized Card.
+
+        :return: The creator of this Tmsv2TokenizedCardMetadata.
+        :rtype: str
+        """
+        return self._creator
+
+    @creator.setter
+    def creator(self, creator):
+        """
+        Sets the creator of this Tmsv2TokenizedCardMetadata.
+        The creator of the Tokenized Card.
+
+        :param creator: The creator of this Tmsv2TokenizedCardMetadata.
+        :type: str
+        """
+
+        self._creator = creator
 
     def to_dict(self):
         """

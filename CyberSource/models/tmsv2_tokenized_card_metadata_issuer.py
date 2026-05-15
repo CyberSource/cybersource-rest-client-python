@@ -35,7 +35,10 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
         'long_description': 'str',
         'email': 'str',
         'phone_number': 'str',
-        'url': 'str'
+        'url': 'str',
+        'privacy_policy_url': 'str',
+        'capabilities': 'Tmsv2TokenizedCardMetadataIssuerCapabilities',
+        'bank_applications': 'list[Tmsv2TokenizedCardMetadataIssuerBankApplications]'
     }
 
     attribute_map = {
@@ -44,10 +47,13 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
         'long_description': 'longDescription',
         'email': 'email',
         'phone_number': 'phoneNumber',
-        'url': 'url'
+        'url': 'url',
+        'privacy_policy_url': 'privacyPolicyUrl',
+        'capabilities': 'capabilities',
+        'bank_applications': 'bankApplications'
     }
 
-    def __init__(self, name=None, short_description=None, long_description=None, email=None, phone_number=None, url=None):
+    def __init__(self, name=None, short_description=None, long_description=None, email=None, phone_number=None, url=None, privacy_policy_url=None, capabilities=None, bank_applications=None):
         """
         Tmsv2TokenizedCardMetadataIssuer - a model defined in Swagger
         """
@@ -58,6 +64,9 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
         self._email = None
         self._phone_number = None
         self._url = None
+        self._privacy_policy_url = None
+        self._capabilities = None
+        self._bank_applications = None
 
         if name is not None:
           self.name = name
@@ -71,6 +80,12 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
           self.phone_number = phone_number
         if url is not None:
           self.url = url
+        if privacy_policy_url is not None:
+          self.privacy_policy_url = privacy_policy_url
+        if capabilities is not None:
+          self.capabilities = capabilities
+        if bank_applications is not None:
+          self.bank_applications = bank_applications
 
     @property
     def name(self):
@@ -145,7 +160,7 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
     def email(self):
         """
         Gets the email of this Tmsv2TokenizedCardMetadataIssuer.
-        Issuer customer service email address.
+        Issuer customer service email address. 
 
         :return: The email of this Tmsv2TokenizedCardMetadataIssuer.
         :rtype: str
@@ -156,7 +171,7 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
     def email(self, email):
         """
         Sets the email of this Tmsv2TokenizedCardMetadataIssuer.
-        Issuer customer service email address.
+        Issuer customer service email address. 
 
         :param email: The email of this Tmsv2TokenizedCardMetadataIssuer.
         :type: str
@@ -168,7 +183,7 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
     def phone_number(self):
         """
         Gets the phone_number of this Tmsv2TokenizedCardMetadataIssuer.
-        Issuer customer service phone number.
+        Issuer customer service phone number. 
 
         :return: The phone_number of this Tmsv2TokenizedCardMetadataIssuer.
         :rtype: str
@@ -179,7 +194,7 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this Tmsv2TokenizedCardMetadataIssuer.
-        Issuer customer service phone number.
+        Issuer customer service phone number. 
 
         :param phone_number: The phone_number of this Tmsv2TokenizedCardMetadataIssuer.
         :type: str
@@ -191,7 +206,7 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
     def url(self):
         """
         Gets the url of this Tmsv2TokenizedCardMetadataIssuer.
-        Issuer customer service url.
+        Issuer customer service url. 
 
         :return: The url of this Tmsv2TokenizedCardMetadataIssuer.
         :rtype: str
@@ -202,13 +217,78 @@ class Tmsv2TokenizedCardMetadataIssuer(object):
     def url(self, url):
         """
         Sets the url of this Tmsv2TokenizedCardMetadataIssuer.
-        Issuer customer service url.
+        Issuer customer service url. 
 
         :param url: The url of this Tmsv2TokenizedCardMetadataIssuer.
         :type: str
         """
 
         self._url = url
+
+    @property
+    def privacy_policy_url(self):
+        """
+        Gets the privacy_policy_url of this Tmsv2TokenizedCardMetadataIssuer.
+        Issuer privacy policy url. 
+
+        :return: The privacy_policy_url of this Tmsv2TokenizedCardMetadataIssuer.
+        :rtype: str
+        """
+        return self._privacy_policy_url
+
+    @privacy_policy_url.setter
+    def privacy_policy_url(self, privacy_policy_url):
+        """
+        Sets the privacy_policy_url of this Tmsv2TokenizedCardMetadataIssuer.
+        Issuer privacy policy url. 
+
+        :param privacy_policy_url: The privacy_policy_url of this Tmsv2TokenizedCardMetadataIssuer.
+        :type: str
+        """
+
+        self._privacy_policy_url = privacy_policy_url
+
+    @property
+    def capabilities(self):
+        """
+        Gets the capabilities of this Tmsv2TokenizedCardMetadataIssuer.
+
+        :return: The capabilities of this Tmsv2TokenizedCardMetadataIssuer.
+        :rtype: Tmsv2TokenizedCardMetadataIssuerCapabilities
+        """
+        return self._capabilities
+
+    @capabilities.setter
+    def capabilities(self, capabilities):
+        """
+        Sets the capabilities of this Tmsv2TokenizedCardMetadataIssuer.
+
+        :param capabilities: The capabilities of this Tmsv2TokenizedCardMetadataIssuer.
+        :type: Tmsv2TokenizedCardMetadataIssuerCapabilities
+        """
+
+        self._capabilities = capabilities
+
+    @property
+    def bank_applications(self):
+        """
+        Gets the bank_applications of this Tmsv2TokenizedCardMetadataIssuer.
+
+        :return: The bank_applications of this Tmsv2TokenizedCardMetadataIssuer.
+        :rtype: list[Tmsv2TokenizedCardMetadataIssuerBankApplications]
+        """
+        return self._bank_applications
+
+    @bank_applications.setter
+    def bank_applications(self, bank_applications):
+        """
+        Sets the bank_applications of this Tmsv2TokenizedCardMetadataIssuer.
+
+        :param bank_applications: The bank_applications of this Tmsv2TokenizedCardMetadataIssuer.
+        :type: list[Tmsv2TokenizedCardMetadataIssuerBankApplications]
+        """
+
+        self._bank_applications = bank_applications
 
     def to_dict(self):
         """

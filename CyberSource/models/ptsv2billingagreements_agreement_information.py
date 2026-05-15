@@ -31,26 +31,51 @@ class Ptsv2billingagreementsAgreementInformation(object):
     """
     swagger_types = {
         'id': 'str',
-        'date_signed': 'str'
+        'date_signed': 'str',
+        'type': 'str',
+        'frequency': 'str',
+        'occurrences_per_period': 'int',
+        'start_date': 'str',
+        'end_date': 'str'
     }
 
     attribute_map = {
         'id': 'id',
-        'date_signed': 'dateSigned'
+        'date_signed': 'dateSigned',
+        'type': 'type',
+        'frequency': 'frequency',
+        'occurrences_per_period': 'occurrencesPerPeriod',
+        'start_date': 'startDate',
+        'end_date': 'endDate'
     }
 
-    def __init__(self, id=None, date_signed=None):
+    def __init__(self, id=None, date_signed=None, type=None, frequency=None, occurrences_per_period=None, start_date=None, end_date=None):
         """
         Ptsv2billingagreementsAgreementInformation - a model defined in Swagger
         """
 
         self._id = None
         self._date_signed = None
+        self._type = None
+        self._frequency = None
+        self._occurrences_per_period = None
+        self._start_date = None
+        self._end_date = None
 
         if id is not None:
           self.id = id
         if date_signed is not None:
           self.date_signed = date_signed
+        if type is not None:
+          self.type = type
+        if frequency is not None:
+          self.frequency = frequency
+        if occurrences_per_period is not None:
+          self.occurrences_per_period = occurrences_per_period
+        if start_date is not None:
+          self.start_date = start_date
+        if end_date is not None:
+          self.end_date = end_date
 
     @property
     def id(self):
@@ -97,6 +122,121 @@ class Ptsv2billingagreementsAgreementInformation(object):
         """
 
         self._date_signed = date_signed
+
+    @property
+    def type(self):
+        """
+        Gets the type of this Ptsv2billingagreementsAgreementInformation.
+        Identifies the type of schedule as either recurring, one-off, split or usage.  Possible values: - recurring - oneoff - split - usage
+
+        :return: The type of this Ptsv2billingagreementsAgreementInformation.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this Ptsv2billingagreementsAgreementInformation.
+        Identifies the type of schedule as either recurring, one-off, split or usage.  Possible values: - recurring - oneoff - split - usage
+
+        :param type: The type of this Ptsv2billingagreementsAgreementInformation.
+        :type: str
+        """
+
+        self._type = type
+
+    @property
+    def frequency(self):
+        """
+        Gets the frequency of this Ptsv2billingagreementsAgreementInformation.
+        Regularity with which the event occurs.  Possible values: - annual - monthly - quarterly - semiannual - weekly - daily - adhoc - intraday - fortnightly
+
+        :return: The frequency of this Ptsv2billingagreementsAgreementInformation.
+        :rtype: str
+        """
+        return self._frequency
+
+    @frequency.setter
+    def frequency(self, frequency):
+        """
+        Sets the frequency of this Ptsv2billingagreementsAgreementInformation.
+        Regularity with which the event occurs.  Possible values: - annual - monthly - quarterly - semiannual - weekly - daily - adhoc - intraday - fortnightly
+
+        :param frequency: The frequency of this Ptsv2billingagreementsAgreementInformation.
+        :type: str
+        """
+
+        self._frequency = frequency
+
+    @property
+    def occurrences_per_period(self):
+        """
+        Gets the occurrences_per_period of this Ptsv2billingagreementsAgreementInformation.
+        Number of occurrences during the specified period.
+
+        :return: The occurrences_per_period of this Ptsv2billingagreementsAgreementInformation.
+        :rtype: int
+        """
+        return self._occurrences_per_period
+
+    @occurrences_per_period.setter
+    def occurrences_per_period(self, occurrences_per_period):
+        """
+        Sets the occurrences_per_period of this Ptsv2billingagreementsAgreementInformation.
+        Number of occurrences during the specified period.
+
+        :param occurrences_per_period: The occurrences_per_period of this Ptsv2billingagreementsAgreementInformation.
+        :type: int
+        """
+
+        self._occurrences_per_period = occurrences_per_period
+
+    @property
+    def start_date(self):
+        """
+        Gets the start_date of this Ptsv2billingagreementsAgreementInformation.
+        Start date of the schedule.  Format YYYYMMdd
+
+        :return: The start_date of this Ptsv2billingagreementsAgreementInformation.
+        :rtype: str
+        """
+        return self._start_date
+
+    @start_date.setter
+    def start_date(self, start_date):
+        """
+        Sets the start_date of this Ptsv2billingagreementsAgreementInformation.
+        Start date of the schedule.  Format YYYYMMdd
+
+        :param start_date: The start_date of this Ptsv2billingagreementsAgreementInformation.
+        :type: str
+        """
+
+        self._start_date = start_date
+
+    @property
+    def end_date(self):
+        """
+        Gets the end_date of this Ptsv2billingagreementsAgreementInformation.
+        End date of the schedule.  Format YYYYMMdd
+
+        :return: The end_date of this Ptsv2billingagreementsAgreementInformation.
+        :rtype: str
+        """
+        return self._end_date
+
+    @end_date.setter
+    def end_date(self, end_date):
+        """
+        Sets the end_date of this Ptsv2billingagreementsAgreementInformation.
+        End date of the schedule.  Format YYYYMMdd
+
+        :param end_date: The end_date of this Ptsv2billingagreementsAgreementInformation.
+        :type: str
+        """
+
+        self._end_date = end_date
 
     def to_dict(self):
         """

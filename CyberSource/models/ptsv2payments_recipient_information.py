@@ -48,7 +48,8 @@ class Ptsv2paymentsRecipientInformation(object):
         'country_of_birth': 'str',
         'occupation': 'str',
         'email': 'str',
-        'locality': 'str'
+        'locality': 'str',
+        'tax_id_number': 'float'
     }
 
     attribute_map = {
@@ -70,10 +71,11 @@ class Ptsv2paymentsRecipientInformation(object):
         'country_of_birth': 'countryOfBirth',
         'occupation': 'occupation',
         'email': 'email',
-        'locality': 'locality'
+        'locality': 'locality',
+        'tax_id_number': 'taxIdNumber'
     }
 
-    def __init__(self, account_id=None, account_type=None, first_name=None, middle_name=None, last_name=None, address1=None, administrative_area=None, postal_code=None, country=None, date_of_birth=None, beneficiary_id=None, beneficiary_name=None, beneficiary_address=None, alias_name=None, nationality=None, country_of_birth=None, occupation=None, email=None, locality=None):
+    def __init__(self, account_id=None, account_type=None, first_name=None, middle_name=None, last_name=None, address1=None, administrative_area=None, postal_code=None, country=None, date_of_birth=None, beneficiary_id=None, beneficiary_name=None, beneficiary_address=None, alias_name=None, nationality=None, country_of_birth=None, occupation=None, email=None, locality=None, tax_id_number=None):
         """
         Ptsv2paymentsRecipientInformation - a model defined in Swagger
         """
@@ -97,6 +99,7 @@ class Ptsv2paymentsRecipientInformation(object):
         self._occupation = None
         self._email = None
         self._locality = None
+        self._tax_id_number = None
 
         if account_id is not None:
           self.account_id = account_id
@@ -136,6 +139,8 @@ class Ptsv2paymentsRecipientInformation(object):
           self.email = email
         if locality is not None:
           self.locality = locality
+        if tax_id_number is not None:
+          self.tax_id_number = tax_id_number
 
     @property
     def account_id(self):
@@ -573,6 +578,29 @@ class Ptsv2paymentsRecipientInformation(object):
         """
 
         self._locality = locality
+
+    @property
+    def tax_id_number(self):
+        """
+        Gets the tax_id_number of this Ptsv2paymentsRecipientInformation.
+        CPF or CNPJ of the cash-in recipient. \"Cadastro de Pessoas Físicas\", which translates to the \"Natural Persons Register.\" It is the individual taxpayer registry identification number in Brazil, similar to a Social Security Number (SSN) in the United States or a National Insurance Number in the UK. 
+
+        :return: The tax_id_number of this Ptsv2paymentsRecipientInformation.
+        :rtype: float
+        """
+        return self._tax_id_number
+
+    @tax_id_number.setter
+    def tax_id_number(self, tax_id_number):
+        """
+        Sets the tax_id_number of this Ptsv2paymentsRecipientInformation.
+        CPF or CNPJ of the cash-in recipient. \"Cadastro de Pessoas Físicas\", which translates to the \"Natural Persons Register.\" It is the individual taxpayer registry identification number in Brazil, similar to a Social Security Number (SSN) in the United States or a National Insurance Number in the UK. 
+
+        :param tax_id_number: The tax_id_number of this Ptsv2paymentsRecipientInformation.
+        :type: float
+        """
+
+        self._tax_id_number = tax_id_number
 
     def to_dict(self):
         """

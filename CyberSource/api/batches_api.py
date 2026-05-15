@@ -385,7 +385,7 @@ class BatchesApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
