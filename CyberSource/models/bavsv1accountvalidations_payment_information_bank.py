@@ -54,7 +54,7 @@ class Bavsv1accountvalidationsPaymentInformationBank(object):
     def routing_number(self):
         """
         Gets the routing_number of this Bavsv1accountvalidationsPaymentInformationBank.
-        Bank routing number. This is also called the transit number.  Non-Negative Integer 
+        Bank routing number. This is also called the transit number.  Non-Negative String, containing only digits. 
 
         :return: The routing_number of this Bavsv1accountvalidationsPaymentInformationBank.
         :rtype: str
@@ -65,7 +65,7 @@ class Bavsv1accountvalidationsPaymentInformationBank(object):
     def routing_number(self, routing_number):
         """
         Sets the routing_number of this Bavsv1accountvalidationsPaymentInformationBank.
-        Bank routing number. This is also called the transit number.  Non-Negative Integer 
+        Bank routing number. This is also called the transit number.  Non-Negative String, containing only digits. 
 
         :param routing_number: The routing_number of this Bavsv1accountvalidationsPaymentInformationBank.
         :type: str

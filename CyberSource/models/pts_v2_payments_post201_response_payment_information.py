@@ -31,7 +31,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
     """
     swagger_types = {
         'card': 'PtsV2PaymentsPost201ResponsePaymentAccountInformationCard',
-        'tokenized_card': 'PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard',
+        'tokenized_card': 'PtsV2PaymentsPost201ResponsePaymentAccountInformationTokenizedCard',
         'tokenized_payment_method': 'PtsV2PaymentsPost201ResponsePaymentInformationTokenizedPaymentMethod',
         'account_features': 'PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures',
         'bank': 'PtsV2PaymentsPost201ResponsePaymentInformationBank',
@@ -144,7 +144,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         Gets the tokenized_card of this PtsV2PaymentsPost201ResponsePaymentInformation.
 
         :return: The tokenized_card of this PtsV2PaymentsPost201ResponsePaymentInformation.
-        :rtype: PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard
+        :rtype: PtsV2PaymentsPost201ResponsePaymentAccountInformationTokenizedCard
         """
         return self._tokenized_card
 
@@ -154,7 +154,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         Sets the tokenized_card of this PtsV2PaymentsPost201ResponsePaymentInformation.
 
         :param tokenized_card: The tokenized_card of this PtsV2PaymentsPost201ResponsePaymentInformation.
-        :type: PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard
+        :type: PtsV2PaymentsPost201ResponsePaymentAccountInformationTokenizedCard
         """
 
         self._tokenized_card = tokenized_card

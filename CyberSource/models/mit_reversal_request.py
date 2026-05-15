@@ -35,6 +35,7 @@ class MitReversalRequest(object):
         'processing_information': 'Ptsv2paymentsidreversalsProcessingInformation',
         'order_information': 'Ptsv2paymentsidreversalsOrderInformation',
         'point_of_sale_information': 'Ptsv2paymentsidreversalsPointOfSaleInformation',
+        'device_information': 'Ptsv2paymentsidreversalsDeviceInformation',
         'processor_information': 'Ptsv2reversalsProcessorInformation'
     }
 
@@ -44,10 +45,11 @@ class MitReversalRequest(object):
         'processing_information': 'processingInformation',
         'order_information': 'orderInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
+        'device_information': 'deviceInformation',
         'processor_information': 'processorInformation'
     }
 
-    def __init__(self, client_reference_information=None, reversal_information=None, processing_information=None, order_information=None, point_of_sale_information=None, processor_information=None):
+    def __init__(self, client_reference_information=None, reversal_information=None, processing_information=None, order_information=None, point_of_sale_information=None, device_information=None, processor_information=None):
         """
         MitReversalRequest - a model defined in Swagger
         """
@@ -57,6 +59,7 @@ class MitReversalRequest(object):
         self._processing_information = None
         self._order_information = None
         self._point_of_sale_information = None
+        self._device_information = None
         self._processor_information = None
 
         if client_reference_information is not None:
@@ -69,6 +72,8 @@ class MitReversalRequest(object):
           self.order_information = order_information
         if point_of_sale_information is not None:
           self.point_of_sale_information = point_of_sale_information
+        if device_information is not None:
+          self.device_information = device_information
         if processor_information is not None:
           self.processor_information = processor_information
 
@@ -176,6 +181,27 @@ class MitReversalRequest(object):
         """
 
         self._point_of_sale_information = point_of_sale_information
+
+    @property
+    def device_information(self):
+        """
+        Gets the device_information of this MitReversalRequest.
+
+        :return: The device_information of this MitReversalRequest.
+        :rtype: Ptsv2paymentsidreversalsDeviceInformation
+        """
+        return self._device_information
+
+    @device_information.setter
+    def device_information(self, device_information):
+        """
+        Sets the device_information of this MitReversalRequest.
+
+        :param device_information: The device_information of this MitReversalRequest.
+        :type: Ptsv2paymentsidreversalsDeviceInformation
+        """
+
+        self._device_information = device_information
 
     @property
     def processor_information(self):

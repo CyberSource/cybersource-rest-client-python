@@ -33,17 +33,19 @@ class Ptsv2billingagreementsPaymentInformationBank(object):
         'account': 'Ptsv2billingagreementsPaymentInformationBankAccount',
         'iban': 'str',
         'swift_code': 'str',
-        'scheme': 'str'
+        'scheme': 'str',
+        'account_alias': 'Ptsv2billingagreementsPaymentInformationBankAccountAlias'
     }
 
     attribute_map = {
         'account': 'account',
         'iban': 'iban',
         'swift_code': 'swiftCode',
-        'scheme': 'scheme'
+        'scheme': 'scheme',
+        'account_alias': 'accountAlias'
     }
 
-    def __init__(self, account=None, iban=None, swift_code=None, scheme=None):
+    def __init__(self, account=None, iban=None, swift_code=None, scheme=None, account_alias=None):
         """
         Ptsv2billingagreementsPaymentInformationBank - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class Ptsv2billingagreementsPaymentInformationBank(object):
         self._iban = None
         self._swift_code = None
         self._scheme = None
+        self._account_alias = None
 
         if account is not None:
           self.account = account
@@ -61,6 +64,8 @@ class Ptsv2billingagreementsPaymentInformationBank(object):
           self.swift_code = swift_code
         if scheme is not None:
           self.scheme = scheme
+        if account_alias is not None:
+          self.account_alias = account_alias
 
     @property
     def account(self):
@@ -151,6 +156,27 @@ class Ptsv2billingagreementsPaymentInformationBank(object):
         """
 
         self._scheme = scheme
+
+    @property
+    def account_alias(self):
+        """
+        Gets the account_alias of this Ptsv2billingagreementsPaymentInformationBank.
+
+        :return: The account_alias of this Ptsv2billingagreementsPaymentInformationBank.
+        :rtype: Ptsv2billingagreementsPaymentInformationBankAccountAlias
+        """
+        return self._account_alias
+
+    @account_alias.setter
+    def account_alias(self, account_alias):
+        """
+        Sets the account_alias of this Ptsv2billingagreementsPaymentInformationBank.
+
+        :param account_alias: The account_alias of this Ptsv2billingagreementsPaymentInformationBank.
+        :type: Ptsv2billingagreementsPaymentInformationBankAccountAlias
+        """
+
+        self._account_alias = account_alias
 
     def to_dict(self):
         """

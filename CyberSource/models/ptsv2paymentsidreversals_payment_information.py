@@ -30,22 +30,27 @@ class Ptsv2paymentsidreversalsPaymentInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'payment_type': 'Ptsv2paymentsidreversalsPaymentInformationPaymentType'
+        'payment_type': 'Ptsv2paymentsidreversalsPaymentInformationPaymentType',
+        'merchant_limited_acceptance_indicator': 'str'
     }
 
     attribute_map = {
-        'payment_type': 'paymentType'
+        'payment_type': 'paymentType',
+        'merchant_limited_acceptance_indicator': 'merchantLimitedAcceptanceIndicator'
     }
 
-    def __init__(self, payment_type=None):
+    def __init__(self, payment_type=None, merchant_limited_acceptance_indicator=None):
         """
         Ptsv2paymentsidreversalsPaymentInformation - a model defined in Swagger
         """
 
         self._payment_type = None
+        self._merchant_limited_acceptance_indicator = None
 
         if payment_type is not None:
           self.payment_type = payment_type
+        if merchant_limited_acceptance_indicator is not None:
+          self.merchant_limited_acceptance_indicator = merchant_limited_acceptance_indicator
 
     @property
     def payment_type(self):
@@ -67,6 +72,29 @@ class Ptsv2paymentsidreversalsPaymentInformation(object):
         """
 
         self._payment_type = payment_type
+
+    @property
+    def merchant_limited_acceptance_indicator(self):
+        """
+        Gets the merchant_limited_acceptance_indicator of this Ptsv2paymentsidreversalsPaymentInformation.
+        Mastercard One Credential merchant limited acceptance indicator. Mastercard One Credential connects multiple Mastercard payment methods and allows cardhollers to access various options and set payment preferences.  This field indicates which Mastercard One Credential funding PAN acceptance brands should NOT be assigned for this transaction.  This field flows in ISO field 34, DSID 02 tag DB, mapped to Mastercard Data Element (DE) 48, Sub element 02, Subfield 01.  Possible values: - `C`: Do not assign a Mastercard One Credential funding PAN containing the Mastercard Credit Acceptance Brand for this transaction - `D`: Do not assign a Mastercard One Credential funding PAN containing the Debit Mastercard Acceptance Brand for this transaction - `M`: Do not assign a Mastercard One Credential funding PAN containing the Maestro Acceptance Brand for this transaction  This field is supported for Authorization reversal request.  #### Used by **Authorization Reversal Request** Optional field. 
+
+        :return: The merchant_limited_acceptance_indicator of this Ptsv2paymentsidreversalsPaymentInformation.
+        :rtype: str
+        """
+        return self._merchant_limited_acceptance_indicator
+
+    @merchant_limited_acceptance_indicator.setter
+    def merchant_limited_acceptance_indicator(self, merchant_limited_acceptance_indicator):
+        """
+        Sets the merchant_limited_acceptance_indicator of this Ptsv2paymentsidreversalsPaymentInformation.
+        Mastercard One Credential merchant limited acceptance indicator. Mastercard One Credential connects multiple Mastercard payment methods and allows cardhollers to access various options and set payment preferences.  This field indicates which Mastercard One Credential funding PAN acceptance brands should NOT be assigned for this transaction.  This field flows in ISO field 34, DSID 02 tag DB, mapped to Mastercard Data Element (DE) 48, Sub element 02, Subfield 01.  Possible values: - `C`: Do not assign a Mastercard One Credential funding PAN containing the Mastercard Credit Acceptance Brand for this transaction - `D`: Do not assign a Mastercard One Credential funding PAN containing the Debit Mastercard Acceptance Brand for this transaction - `M`: Do not assign a Mastercard One Credential funding PAN containing the Maestro Acceptance Brand for this transaction  This field is supported for Authorization reversal request.  #### Used by **Authorization Reversal Request** Optional field. 
+
+        :param merchant_limited_acceptance_indicator: The merchant_limited_acceptance_indicator of this Ptsv2paymentsidreversalsPaymentInformation.
+        :type: str
+        """
+
+        self._merchant_limited_acceptance_indicator = merchant_limited_acceptance_indicator
 
     def to_dict(self):
         """

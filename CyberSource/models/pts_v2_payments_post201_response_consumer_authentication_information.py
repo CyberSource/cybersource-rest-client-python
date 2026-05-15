@@ -72,7 +72,14 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         'authentication_status_msg': 'str',
         'indicator': 'str',
         'interaction_counter': 'str',
-        'white_list_status': 'str'
+        'white_list_status': 'str',
+        'token': 'str',
+        'acs_reference_number': 'str',
+        'acs_operator_id': 'str',
+        'idci_score': 'int',
+        'idci_decision': 'str',
+        'idci_reason_code1': 'str',
+        'idci_reason_code2': 'str'
     }
 
     attribute_map = {
@@ -118,10 +125,17 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         'authentication_status_msg': 'authenticationStatusMsg',
         'indicator': 'indicator',
         'interaction_counter': 'interactionCounter',
-        'white_list_status': 'whiteListStatus'
+        'white_list_status': 'whiteListStatus',
+        'token': 'token',
+        'acs_reference_number': 'acsReferenceNumber',
+        'acs_operator_id': 'acsOperatorID',
+        'idci_score': 'idciScore',
+        'idci_decision': 'idciDecision',
+        'idci_reason_code1': 'idciReasonCode1',
+        'idci_reason_code2': 'idciReasonCode2'
     }
 
-    def __init__(self, access_token=None, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_transaction_id=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, ivr=None, strong_authentication=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None, data_quality_indicator=None, authentication_result=None, authentication_status_msg=None, indicator=None, interaction_counter=None, white_list_status=None):
+    def __init__(self, access_token=None, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_transaction_id=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, ivr=None, strong_authentication=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None, data_quality_indicator=None, authentication_result=None, authentication_status_msg=None, indicator=None, interaction_counter=None, white_list_status=None, token=None, acs_reference_number=None, acs_operator_id=None, idci_score=None, idci_decision=None, idci_reason_code1=None, idci_reason_code2=None):
         """
         PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -169,6 +183,13 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         self._indicator = None
         self._interaction_counter = None
         self._white_list_status = None
+        self._token = None
+        self._acs_reference_number = None
+        self._acs_operator_id = None
+        self._idci_score = None
+        self._idci_decision = None
+        self._idci_reason_code1 = None
+        self._idci_reason_code2 = None
 
         if access_token is not None:
           self.access_token = access_token
@@ -256,6 +277,20 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
           self.interaction_counter = interaction_counter
         if white_list_status is not None:
           self.white_list_status = white_list_status
+        if token is not None:
+          self.token = token
+        if acs_reference_number is not None:
+          self.acs_reference_number = acs_reference_number
+        if acs_operator_id is not None:
+          self.acs_operator_id = acs_operator_id
+        if idci_score is not None:
+          self.idci_score = idci_score
+        if idci_decision is not None:
+          self.idci_decision = idci_decision
+        if idci_reason_code1 is not None:
+          self.idci_reason_code1 = idci_reason_code1
+        if idci_reason_code2 is not None:
+          self.idci_reason_code2 = idci_reason_code2
 
     @property
     def access_token(self):
@@ -1241,6 +1276,167 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         """
 
         self._white_list_status = white_list_status
+
+    @property
+    def token(self):
+        """
+        Gets the token of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        
+
+        :return: The token of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._token
+
+    @token.setter
+    def token(self, token):
+        """
+        Sets the token of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        
+
+        :param token: The token of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._token = token
+
+    @property
+    def acs_reference_number(self):
+        """
+        Gets the acs_reference_number of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        Unique identifier assigned by the EMVCo Secretariat upon Testing and Approval.
+
+        :return: The acs_reference_number of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._acs_reference_number
+
+    @acs_reference_number.setter
+    def acs_reference_number(self, acs_reference_number):
+        """
+        Sets the acs_reference_number of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        Unique identifier assigned by the EMVCo Secretariat upon Testing and Approval.
+
+        :param acs_reference_number: The acs_reference_number of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._acs_reference_number = acs_reference_number
+
+    @property
+    def acs_operator_id(self):
+        """
+        Gets the acs_operator_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        Directory Server assigned ACS identifier.
+
+        :return: The acs_operator_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._acs_operator_id
+
+    @acs_operator_id.setter
+    def acs_operator_id(self, acs_operator_id):
+        """
+        Sets the acs_operator_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        Directory Server assigned ACS identifier.
+
+        :param acs_operator_id: The acs_operator_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._acs_operator_id = acs_operator_id
+
+    @property
+    def idci_score(self):
+        """
+        Gets the idci_score of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        Risk Assessment from Mastercard
+
+        :return: The idci_score of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: int
+        """
+        return self._idci_score
+
+    @idci_score.setter
+    def idci_score(self, idci_score):
+        """
+        Sets the idci_score of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        Risk Assessment from Mastercard
+
+        :param idci_score: The idci_score of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :type: int
+        """
+
+        self._idci_score = idci_score
+
+    @property
+    def idci_decision(self):
+        """
+        Gets the idci_decision of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        Decision on the Risk Assessment from Mastercard.
+
+        :return: The idci_decision of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._idci_decision
+
+    @idci_decision.setter
+    def idci_decision(self, idci_decision):
+        """
+        Sets the idci_decision of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        Decision on the Risk Assessment from Mastercard.
+
+        :param idci_decision: The idci_decision of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._idci_decision = idci_decision
+
+    @property
+    def idci_reason_code1(self):
+        """
+        Gets the idci_reason_code1 of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        ReasonCode from Mastercard
+
+        :return: The idci_reason_code1 of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._idci_reason_code1
+
+    @idci_reason_code1.setter
+    def idci_reason_code1(self, idci_reason_code1):
+        """
+        Sets the idci_reason_code1 of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        ReasonCode from Mastercard
+
+        :param idci_reason_code1: The idci_reason_code1 of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._idci_reason_code1 = idci_reason_code1
+
+    @property
+    def idci_reason_code2(self):
+        """
+        Gets the idci_reason_code2 of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        ReasonCode from Mastercard
+
+        :return: The idci_reason_code2 of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._idci_reason_code2
+
+    @idci_reason_code2.setter
+    def idci_reason_code2(self, idci_reason_code2):
+        """
+        Sets the idci_reason_code2 of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        ReasonCode from Mastercard
+
+        :param idci_reason_code2: The idci_reason_code2 of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._idci_reason_code2 = idci_reason_code2
 
     def to_dict(self):
         """

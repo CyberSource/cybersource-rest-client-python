@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **number** | **str** | The latest customer&#39;s payment card number associated to the network token.  | [optional] 
 **expiration_month** | **str** | Two-digit month in which the payment card expires.  Format: &#x60;MM&#x60;.  Possible Values: &#x60;01&#x60; through &#x60;12&#x60;.  | [optional] 
 **expiration_year** | **str** | Four-digit year in which the credit card expires.  Format: &#x60;YYYY&#x60;.  | [optional] 
-**type** | **str** | The type of card (Card Network). Possible Values: - 001: visa  | [optional] 
+**type** | **str** | The type of card (Card Network). Possible Values: - 001: visa - 002: mastercard - 003: american express - 007: jcb  | [optional] 
 **suffix** | **str** | The customer&#39;s latest payment card number suffix.  | [optional] 
 **issue_date** | **date** | Card issuance date. XML date format: YYYY-MM-DD. | [optional] 
 **activation_date** | **date** | Card activation date. XML date format: YYYY-MM-DD | [optional] 

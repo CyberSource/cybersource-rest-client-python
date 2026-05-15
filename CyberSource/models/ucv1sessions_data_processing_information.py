@@ -31,7 +31,10 @@ class Ucv1sessionsDataProcessingInformation(object):
     """
     swagger_types = {
         'reconciliation_id': 'str',
+        'purpose_of_payment': 'str',
         'authorization_options': 'Ucv1sessionsDataProcessingInformationAuthorizationOptions',
+        'recurring_options': 'Ucv1sessionsDataProcessingInformationRecurringOptions',
+        'bank_transfer_options': 'Ucv1sessionsDataProcessingInformationBankTransferOptions',
         'business_application_id': 'str',
         'commerce_indicator': 'str',
         'processing_instruction': 'str'
@@ -39,27 +42,39 @@ class Ucv1sessionsDataProcessingInformation(object):
 
     attribute_map = {
         'reconciliation_id': 'reconciliationId',
+        'purpose_of_payment': 'purposeOfPayment',
         'authorization_options': 'authorizationOptions',
+        'recurring_options': 'recurringOptions',
+        'bank_transfer_options': 'bankTransferOptions',
         'business_application_id': 'businessApplicationId',
         'commerce_indicator': 'commerceIndicator',
         'processing_instruction': 'processingInstruction'
     }
 
-    def __init__(self, reconciliation_id=None, authorization_options=None, business_application_id=None, commerce_indicator=None, processing_instruction=None):
+    def __init__(self, reconciliation_id=None, purpose_of_payment=None, authorization_options=None, recurring_options=None, bank_transfer_options=None, business_application_id=None, commerce_indicator=None, processing_instruction=None):
         """
         Ucv1sessionsDataProcessingInformation - a model defined in Swagger
         """
 
         self._reconciliation_id = None
+        self._purpose_of_payment = None
         self._authorization_options = None
+        self._recurring_options = None
+        self._bank_transfer_options = None
         self._business_application_id = None
         self._commerce_indicator = None
         self._processing_instruction = None
 
         if reconciliation_id is not None:
           self.reconciliation_id = reconciliation_id
+        if purpose_of_payment is not None:
+          self.purpose_of_payment = purpose_of_payment
         if authorization_options is not None:
           self.authorization_options = authorization_options
+        if recurring_options is not None:
+          self.recurring_options = recurring_options
+        if bank_transfer_options is not None:
+          self.bank_transfer_options = bank_transfer_options
         if business_application_id is not None:
           self.business_application_id = business_application_id
         if commerce_indicator is not None:
@@ -91,6 +106,29 @@ class Ucv1sessionsDataProcessingInformation(object):
         self._reconciliation_id = reconciliation_id
 
     @property
+    def purpose_of_payment(self):
+        """
+        Gets the purpose_of_payment of this Ucv1sessionsDataProcessingInformation.
+        This field is applicable for AFT and OCT transactions.  For list of supported values, please refer to Developer Guide. 
+
+        :return: The purpose_of_payment of this Ucv1sessionsDataProcessingInformation.
+        :rtype: str
+        """
+        return self._purpose_of_payment
+
+    @purpose_of_payment.setter
+    def purpose_of_payment(self, purpose_of_payment):
+        """
+        Sets the purpose_of_payment of this Ucv1sessionsDataProcessingInformation.
+        This field is applicable for AFT and OCT transactions.  For list of supported values, please refer to Developer Guide. 
+
+        :param purpose_of_payment: The purpose_of_payment of this Ucv1sessionsDataProcessingInformation.
+        :type: str
+        """
+
+        self._purpose_of_payment = purpose_of_payment
+
+    @property
     def authorization_options(self):
         """
         Gets the authorization_options of this Ucv1sessionsDataProcessingInformation.
@@ -110,6 +148,48 @@ class Ucv1sessionsDataProcessingInformation(object):
         """
 
         self._authorization_options = authorization_options
+
+    @property
+    def recurring_options(self):
+        """
+        Gets the recurring_options of this Ucv1sessionsDataProcessingInformation.
+
+        :return: The recurring_options of this Ucv1sessionsDataProcessingInformation.
+        :rtype: Ucv1sessionsDataProcessingInformationRecurringOptions
+        """
+        return self._recurring_options
+
+    @recurring_options.setter
+    def recurring_options(self, recurring_options):
+        """
+        Sets the recurring_options of this Ucv1sessionsDataProcessingInformation.
+
+        :param recurring_options: The recurring_options of this Ucv1sessionsDataProcessingInformation.
+        :type: Ucv1sessionsDataProcessingInformationRecurringOptions
+        """
+
+        self._recurring_options = recurring_options
+
+    @property
+    def bank_transfer_options(self):
+        """
+        Gets the bank_transfer_options of this Ucv1sessionsDataProcessingInformation.
+
+        :return: The bank_transfer_options of this Ucv1sessionsDataProcessingInformation.
+        :rtype: Ucv1sessionsDataProcessingInformationBankTransferOptions
+        """
+        return self._bank_transfer_options
+
+    @bank_transfer_options.setter
+    def bank_transfer_options(self, bank_transfer_options):
+        """
+        Sets the bank_transfer_options of this Ucv1sessionsDataProcessingInformation.
+
+        :param bank_transfer_options: The bank_transfer_options of this Ucv1sessionsDataProcessingInformation.
+        :type: Ucv1sessionsDataProcessingInformationBankTransferOptions
+        """
+
+        self._bank_transfer_options = bank_transfer_options
 
     @property
     def business_application_id(self):

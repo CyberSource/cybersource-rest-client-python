@@ -13,6 +13,19 @@ MLE supports both **Request Encryption** (encrypting outgoing request payloads) 
 
 <br/>
 
+### MLE with JWT Key Types
+
+MLE works with both JWT key types:
+
+| JWT Key Type | MLE Support | Request MLE Certificate Source |
+|---|---|---|
+| `P12` (default) | Supported | Auto-extracted from the P12 file (using `requestMleKeyAlias`), or from a separate file via `mleForRequestPublicCertPath` |
+| `SHARED_SECRET` | Supported | **Must** be provided via `mleForRequestPublicCertPath` (since there is no P12 file to extract from) |
+
+> **Important:** When using `jwt_key_type='SHARED_SECRET'` with MLE, the `mleForRequestPublicCertPath` property is **required** for request MLE. The SDK cannot auto-extract the MLE certificate from a P12 file because shared secret authentication does not use one. The request MLE public certificate can be downloaded from the CyberSource Business Center ([Test](https://businesscentertest.cybersource.com/ebc2) | [Production](https://businesscenter.cybersource.com/ebc2)).
+
+<br/>
+
 ## Configuration
 
 ## 1. Request MLE Configuration
@@ -402,6 +415,98 @@ class Configuration:
         self.requestMleKeyAlias = "New_Alias"
         self.mleKeyAlias = "Old_Alias"  # This will be ignored
 ```
+
+### (ix) Request MLE with Shared Secret (JWT Symmetric Key) Authentication
+
+```python
+# MLE with JWT SHARED_SECRET authentication — requires mleForRequestPublicCertPath
+configuration_dictionary = {
+    # JWT authentication with SHARED_SECRET key type
+    "authentication_type": "JWT",
+    "merchantid": "your_merchant_id",
+    "run_environment": "apitest.cybersource.com",
+    "jwt_key_type": "SHARED_SECRET",
+    "merchant_keyid": "your_key_id",
+    "merchant_secretkey": "your_base64_encoded_shared_secret",
+    
+    # Request MLE settings
+    "enableRequestMLEForOptionalApisGlobally": True,
+    # mleForRequestPublicCertPath is REQUIRED for SHARED_SECRET since there is no P12 file
+    "mleForRequestPublicCertPath": "/path/to/mle/public/cert.pem",
+    "requestMleKeyAlias": "CyberSource_SJC_US"  # Optional, defaults to CyberSource_SJC_US
+}
+
+# OR
+
+class Configuration:
+    def __init__(self):
+        # JWT authentication with SHARED_SECRET key type
+        self.authentication_type = "JWT"
+        self.merchantid = "your_merchant_id"
+        self.run_environment = "apitest.cybersource.com"
+        self.jwt_key_type = "SHARED_SECRET"
+        self.merchant_keyid = "your_key_id"
+        self.merchant_secretkey = "your_base64_encoded_shared_secret"
+        
+        # Request MLE settings
+        self.enableRequestMLEForOptionalApisGlobally = True
+        # mleForRequestPublicCertPath is REQUIRED for SHARED_SECRET since there is no P12 file
+        self.mleForRequestPublicCertPath = "/path/to/mle/public/cert.pem"
+        self.requestMleKeyAlias = "CyberSource_SJC_US"  # Optional, defaults to CyberSource_SJC_US
+```
+
+> **Note:** When using `jwt_key_type='SHARED_SECRET'`, the MLE certificate cannot be auto-extracted from a P12 file. You **must** provide the certificate via `mleForRequestPublicCertPath`. The request MLE public certificate can be downloaded from the CyberSource Business Center ([Test](https://businesscentertest.cybersource.com/ebc2) | [Production](https://businesscenter.cybersource.com/ebc2)).
+
+### (x) Response MLE with MetaKey
+
+When using MetaKey (`use_metakey=True`) with Response MLE, the response MLE private key and KID must belong to the **portfolio (parent account)**, not the transacting merchant.
+
+```python
+# MetaKey + Response MLE — portfolio's response MLE key is required
+configuration_dictionary = {
+    # JWT authentication with MetaKey
+    "authentication_type": "JWT",
+    "jwt_key_type": "SHARED_SECRET",
+    "merchantid": "your_transacting_merchant_id",
+    "merchant_keyid": "your_metakey_portfolio_KeyId",
+    "merchant_secretkey": "your_metakey_portfolio_shared_secret_key",
+    "portfolio_id": "your_portfolio_id",
+    "use_metakey": True,
+    "run_environment": "apitest.cybersource.com",
+    
+    # Response MLE — use the portfolio's response MLE key, not the transacting merchant's
+    "enableResponseMleGlobally": True,
+    "responseMlePrivateKeyFilePath": "/path/to/portfolio/response/mle/private/key.p12",
+    "responseMlePrivateKeyFilePassword": "portfolio_private_key_password"
+    # responseMleKID is optional when using a CyberSource-generated P12 file (auto-fetched from P12)
+    # Required when using PEM files or responseMlePrivateKey object
+    # "responseMleKID": "your_portfolio_response_mle_kid"
+}
+
+# OR
+
+class Configuration:
+    def __init__(self):
+        # JWT authentication with MetaKey
+        self.authentication_type = "JWT"
+        self.jwt_key_type = "SHARED_SECRET"
+        self.merchantid = "your_transacting_merchant_id"
+        self.merchant_keyid = "your_metakey_portfolio_KeyId"
+        self.merchant_secretkey = "your_metakey_portfolio_shared_secret_key"
+        self.portfolio_id = "your_portfolio_id"
+        self.use_metakey = True
+        self.run_environment = "apitest.cybersource.com"
+        
+        # Response MLE — use the portfolio's response MLE key, not the transacting merchant's
+        self.enableResponseMleGlobally = True
+        self.responseMlePrivateKeyFilePath = "/path/to/portfolio/response/mle/private/key.p12"
+        self.responseMlePrivateKeyFilePassword = "portfolio_private_key_password"
+        # responseMleKID is optional when using a CyberSource-generated P12 file (auto-fetched from P12)
+        # Required when using PEM files or responseMlePrivateKey object
+        # self.responseMleKID = "your_portfolio_response_mle_kid"
+```
+
+> **Important:** In MetaKey mode, the portfolio is the transaction submitter. The response is encrypted using the portfolio's MLE certificate, so the decryption key must also be the portfolio's.
 
 <br/>
 

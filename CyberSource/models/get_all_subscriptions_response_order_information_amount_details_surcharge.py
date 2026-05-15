@@ -30,22 +30,27 @@ class GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'amount': 'str'
+        'amount': 'str',
+        'description': 'str'
     }
 
     attribute_map = {
-        'amount': 'amount'
+        'amount': 'amount',
+        'description': 'description'
     }
 
-    def __init__(self, amount=None):
+    def __init__(self, amount=None, description=None):
         """
         GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge - a model defined in Swagger
         """
 
         self._amount = None
+        self._description = None
 
         if amount is not None:
           self.amount = amount
+        if description is not None:
+          self.description = description
 
     @property
     def amount(self):
@@ -69,6 +74,29 @@ class GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge(object):
         """
 
         self._amount = amount
+
+    @property
+    def description(self):
+        """
+        Gets the description of this GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge.
+        Description of the surcharge. 
+
+        :return: The description of this GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge.
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """
+        Sets the description of this GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge.
+        Description of the surcharge. 
+
+        :param description: The description of this GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge.
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """

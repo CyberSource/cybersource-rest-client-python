@@ -31,26 +31,31 @@ class InlineResponse2014SetupsRisk(object):
     """
     swagger_types = {
         'fraud_management_essentials': 'InlineResponse2014SetupsPaymentsCardProcessing',
-        'decision_manager': 'InlineResponse2014SetupsPaymentsCardProcessing'
+        'decision_manager': 'InlineResponse2014SetupsPaymentsCardProcessing',
+        'enhanced_authentication': 'InlineResponse2014SetupsPaymentsCardProcessing'
     }
 
     attribute_map = {
         'fraud_management_essentials': 'fraudManagementEssentials',
-        'decision_manager': 'decisionManager'
+        'decision_manager': 'decisionManager',
+        'enhanced_authentication': 'enhancedAuthentication'
     }
 
-    def __init__(self, fraud_management_essentials=None, decision_manager=None):
+    def __init__(self, fraud_management_essentials=None, decision_manager=None, enhanced_authentication=None):
         """
         InlineResponse2014SetupsRisk - a model defined in Swagger
         """
 
         self._fraud_management_essentials = None
         self._decision_manager = None
+        self._enhanced_authentication = None
 
         if fraud_management_essentials is not None:
           self.fraud_management_essentials = fraud_management_essentials
         if decision_manager is not None:
           self.decision_manager = decision_manager
+        if enhanced_authentication is not None:
+          self.enhanced_authentication = enhanced_authentication
 
     @property
     def fraud_management_essentials(self):
@@ -93,6 +98,27 @@ class InlineResponse2014SetupsRisk(object):
         """
 
         self._decision_manager = decision_manager
+
+    @property
+    def enhanced_authentication(self):
+        """
+        Gets the enhanced_authentication of this InlineResponse2014SetupsRisk.
+
+        :return: The enhanced_authentication of this InlineResponse2014SetupsRisk.
+        :rtype: InlineResponse2014SetupsPaymentsCardProcessing
+        """
+        return self._enhanced_authentication
+
+    @enhanced_authentication.setter
+    def enhanced_authentication(self, enhanced_authentication):
+        """
+        Sets the enhanced_authentication of this InlineResponse2014SetupsRisk.
+
+        :param enhanced_authentication: The enhanced_authentication of this InlineResponse2014SetupsRisk.
+        :type: InlineResponse2014SetupsPaymentsCardProcessing
+        """
+
+        self._enhanced_authentication = enhanced_authentication
 
     def to_dict(self):
         """

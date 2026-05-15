@@ -130,7 +130,7 @@ class ManageWebhooksApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -254,7 +254,7 @@ class ManageWebhooksApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -385,7 +385,7 @@ class ManageWebhooksApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -509,7 +509,7 @@ class ManageWebhooksApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -635,7 +635,7 @@ class ManageWebhooksApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -760,7 +760,7 @@ class ManageWebhooksApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -798,7 +798,7 @@ class ManageWebhooksApi(object):
                                         collection_formats=collection_formats,
                                         isResponseMLEforApi=isResponseMLEforApi)
 
-    def save_asym_egress_key(self, v_c_sender_organization_id, v_c_permissions, save_asym_egress_key, **kwargs):
+    def save_asym_egress_key(self, save_asym_egress_key, **kwargs):
         """
         Message Level Encryption
         Store and manage certificates that will be used to preform Message Level Encryption (MLE). Each new webhook will need its own unique asymmetric certificate. You can either use a digital certificate issued/signed by a CA or self-sign your own using the documentation available on the Developer Guide. 
@@ -808,14 +808,14 @@ class ManageWebhooksApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.save_asym_egress_key(v_c_sender_organization_id, v_c_permissions, save_asym_egress_key, callback=callback_function)
+        >>> thread = api.save_asym_egress_key(save_asym_egress_key, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str v_c_sender_organization_id: Sender organization id (required)
-        :param str v_c_permissions: Encoded user permissions returned by the CGK, for the entity user who initiated the boarding (required)
         :param SaveAsymEgressKey save_asym_egress_key: Provide egress Asymmetric key information to save (create or store) (required)
         :param str v_c_correlation_id: A globally unique id associated with your request
+        :param str v_c_sender_organization_id: Sender organization id
+        :param str v_c_permissions: Encoded user permissions returned by the CGK, for the entity user who initiated the boarding
         :return: InlineResponse2018
                  If the method is called asynchronously,
                  returns the request thread.
@@ -825,12 +825,12 @@ class ManageWebhooksApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.save_asym_egress_key_with_http_info(v_c_sender_organization_id, v_c_permissions, save_asym_egress_key, **kwargs)
+            return self.save_asym_egress_key_with_http_info(save_asym_egress_key, **kwargs)
         else:
-            (data) = self.save_asym_egress_key_with_http_info(v_c_sender_organization_id, v_c_permissions, save_asym_egress_key, **kwargs)
+            (data) = self.save_asym_egress_key_with_http_info(save_asym_egress_key, **kwargs)
             return data
 
-    def save_asym_egress_key_with_http_info(self, v_c_sender_organization_id, v_c_permissions, save_asym_egress_key, **kwargs):
+    def save_asym_egress_key_with_http_info(self, save_asym_egress_key, **kwargs):
         """
         Message Level Encryption
         Store and manage certificates that will be used to preform Message Level Encryption (MLE). Each new webhook will need its own unique asymmetric certificate. You can either use a digital certificate issued/signed by a CA or self-sign your own using the documentation available on the Developer Guide. 
@@ -840,20 +840,20 @@ class ManageWebhooksApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.save_asym_egress_key_with_http_info(v_c_sender_organization_id, v_c_permissions, save_asym_egress_key, callback=callback_function)
+        >>> thread = api.save_asym_egress_key_with_http_info(save_asym_egress_key, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str v_c_sender_organization_id: Sender organization id (required)
-        :param str v_c_permissions: Encoded user permissions returned by the CGK, for the entity user who initiated the boarding (required)
         :param SaveAsymEgressKey save_asym_egress_key: Provide egress Asymmetric key information to save (create or store) (required)
         :param str v_c_correlation_id: A globally unique id associated with your request
+        :param str v_c_sender_organization_id: Sender organization id
+        :param str v_c_permissions: Encoded user permissions returned by the CGK, for the entity user who initiated the boarding
         :return: InlineResponse2018
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['v_c_sender_organization_id', 'v_c_permissions', 'save_asym_egress_key', 'v_c_correlation_id']
+        all_params = ['save_asym_egress_key', 'v_c_correlation_id', 'v_c_sender_organization_id', 'v_c_permissions']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -868,14 +868,6 @@ class ManageWebhooksApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'v_c_sender_organization_id' is set
-        if ('v_c_sender_organization_id' not in params) or (params['v_c_sender_organization_id'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_sender_organization_id` when calling `save_asym_egress_key`")
-            raise ValueError("Missing the required parameter `v_c_sender_organization_id` when calling `save_asym_egress_key`")
-        # verify the required parameter 'v_c_permissions' is set
-        if ('v_c_permissions' not in params) or (params['v_c_permissions'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_permissions` when calling `save_asym_egress_key`")
-            raise ValueError("Missing the required parameter `v_c_permissions` when calling `save_asym_egress_key`")
         # verify the required parameter 'save_asym_egress_key' is set
         if ('save_asym_egress_key' not in params) or (params['save_asym_egress_key'] is None):
             self.logger.error("InvalidArgumentException : Missing the required parameter `save_asym_egress_key` when calling `save_asym_egress_key`")
@@ -900,7 +892,7 @@ class ManageWebhooksApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])

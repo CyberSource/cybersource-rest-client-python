@@ -35,7 +35,9 @@ class Ptsv2paymentsTokenInformation(object):
         'payment_instrument': 'Ptsv2paymentsTokenInformationPaymentInstrument',
         'shipping_address': 'Ptsv2paymentsTokenInformationShippingAddress',
         'network_token_option': 'str',
-        'token_provisioning_information': 'Ptsv2paymentsTokenInformationTokenProvisioningInformation'
+        'token_provisioning_information': 'Ptsv2paymentsTokenInformationTokenProvisioningInformation',
+        'client_correlation_id': 'str',
+        'token_authentication_information': 'Ptsv2paymentsTokenInformationTokenAuthenticationInformation'
     }
 
     attribute_map = {
@@ -44,10 +46,12 @@ class Ptsv2paymentsTokenInformation(object):
         'payment_instrument': 'paymentInstrument',
         'shipping_address': 'shippingAddress',
         'network_token_option': 'networkTokenOption',
-        'token_provisioning_information': 'tokenProvisioningInformation'
+        'token_provisioning_information': 'tokenProvisioningInformation',
+        'client_correlation_id': 'clientCorrelationId',
+        'token_authentication_information': 'tokenAuthenticationInformation'
     }
 
-    def __init__(self, jti=None, transient_token_jwt=None, payment_instrument=None, shipping_address=None, network_token_option=None, token_provisioning_information=None):
+    def __init__(self, jti=None, transient_token_jwt=None, payment_instrument=None, shipping_address=None, network_token_option=None, token_provisioning_information=None, client_correlation_id=None, token_authentication_information=None):
         """
         Ptsv2paymentsTokenInformation - a model defined in Swagger
         """
@@ -58,6 +62,8 @@ class Ptsv2paymentsTokenInformation(object):
         self._shipping_address = None
         self._network_token_option = None
         self._token_provisioning_information = None
+        self._client_correlation_id = None
+        self._token_authentication_information = None
 
         if jti is not None:
           self.jti = jti
@@ -71,6 +77,10 @@ class Ptsv2paymentsTokenInformation(object):
           self.network_token_option = network_token_option
         if token_provisioning_information is not None:
           self.token_provisioning_information = token_provisioning_information
+        if client_correlation_id is not None:
+          self.client_correlation_id = client_correlation_id
+        if token_authentication_information is not None:
+          self.token_authentication_information = token_authentication_information
 
     @property
     def jti(self):
@@ -203,6 +213,50 @@ class Ptsv2paymentsTokenInformation(object):
         """
 
         self._token_provisioning_information = token_provisioning_information
+
+    @property
+    def client_correlation_id(self):
+        """
+        Gets the client_correlation_id of this Ptsv2paymentsTokenInformation.
+        Client-generated unique identifier for correlating token operations across API calls. This value helps track and associate token-related transactions. 
+
+        :return: The client_correlation_id of this Ptsv2paymentsTokenInformation.
+        :rtype: str
+        """
+        return self._client_correlation_id
+
+    @client_correlation_id.setter
+    def client_correlation_id(self, client_correlation_id):
+        """
+        Sets the client_correlation_id of this Ptsv2paymentsTokenInformation.
+        Client-generated unique identifier for correlating token operations across API calls. This value helps track and associate token-related transactions. 
+
+        :param client_correlation_id: The client_correlation_id of this Ptsv2paymentsTokenInformation.
+        :type: str
+        """
+
+        self._client_correlation_id = client_correlation_id
+
+    @property
+    def token_authentication_information(self):
+        """
+        Gets the token_authentication_information of this Ptsv2paymentsTokenInformation.
+
+        :return: The token_authentication_information of this Ptsv2paymentsTokenInformation.
+        :rtype: Ptsv2paymentsTokenInformationTokenAuthenticationInformation
+        """
+        return self._token_authentication_information
+
+    @token_authentication_information.setter
+    def token_authentication_information(self, token_authentication_information):
+        """
+        Sets the token_authentication_information of this Ptsv2paymentsTokenInformation.
+
+        :param token_authentication_information: The token_authentication_information of this Ptsv2paymentsTokenInformation.
+        :type: Ptsv2paymentsTokenInformationTokenAuthenticationInformation
+        """
+
+        self._token_authentication_information = token_authentication_information
 
     def to_dict(self):
         """

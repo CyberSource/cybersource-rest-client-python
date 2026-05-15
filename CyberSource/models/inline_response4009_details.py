@@ -56,7 +56,7 @@ class InlineResponse4009Details(object):
     def field(self):
         """
         Gets the field of this InlineResponse4009Details.
-        This is the flattened JSON object field name/path that is either missing or invalid. 
+        This is the flattened JSON object field name/path that is either missing or invalid.
 
         :return: The field of this InlineResponse4009Details.
         :rtype: str
@@ -67,7 +67,7 @@ class InlineResponse4009Details(object):
     def field(self, field):
         """
         Sets the field of this InlineResponse4009Details.
-        This is the flattened JSON object field name/path that is either missing or invalid. 
+        This is the flattened JSON object field name/path that is either missing or invalid.
 
         :param field: The field of this InlineResponse4009Details.
         :type: str
@@ -79,7 +79,7 @@ class InlineResponse4009Details(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse4009Details.
-        Possible reasons for the error.  Possible values:   - `MISSING_FIELD`   - `INVALID_DATA` 
+        Possible reasons for the error.
 
         :return: The reason of this InlineResponse4009Details.
         :rtype: str
@@ -90,7 +90,7 @@ class InlineResponse4009Details(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse4009Details.
-        Possible reasons for the error.  Possible values:   - `MISSING_FIELD`   - `INVALID_DATA` 
+        Possible reasons for the error.
 
         :param reason: The reason of this InlineResponse4009Details.
         :type: str

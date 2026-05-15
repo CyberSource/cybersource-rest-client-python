@@ -43,7 +43,9 @@ class Riskv1decisionsOrderInformationShipTo(object):
         'phone_number': 'str',
         'postal_code': 'str',
         'destination_code': 'int',
-        'method': 'str'
+        'method': 'str',
+        'email': 'str',
+        'company': 'str'
     }
 
     attribute_map = {
@@ -60,10 +62,12 @@ class Riskv1decisionsOrderInformationShipTo(object):
         'phone_number': 'phoneNumber',
         'postal_code': 'postalCode',
         'destination_code': 'destinationCode',
-        'method': 'method'
+        'method': 'method',
+        'email': 'email',
+        'company': 'company'
     }
 
-    def __init__(self, address1=None, address2=None, address3=None, administrative_area=None, country=None, destination_types=None, locality=None, first_name=None, last_name=None, middle_name=None, phone_number=None, postal_code=None, destination_code=None, method=None):
+    def __init__(self, address1=None, address2=None, address3=None, administrative_area=None, country=None, destination_types=None, locality=None, first_name=None, last_name=None, middle_name=None, phone_number=None, postal_code=None, destination_code=None, method=None, email=None, company=None):
         """
         Riskv1decisionsOrderInformationShipTo - a model defined in Swagger
         """
@@ -82,6 +86,8 @@ class Riskv1decisionsOrderInformationShipTo(object):
         self._postal_code = None
         self._destination_code = None
         self._method = None
+        self._email = None
+        self._company = None
 
         if address1 is not None:
           self.address1 = address1
@@ -111,6 +117,10 @@ class Riskv1decisionsOrderInformationShipTo(object):
           self.destination_code = destination_code
         if method is not None:
           self.method = method
+        if email is not None:
+          self.email = email
+        if company is not None:
+          self.company = company
 
     @property
     def address1(self):
@@ -433,6 +443,52 @@ class Riskv1decisionsOrderInformationShipTo(object):
         """
 
         self._method = method
+
+    @property
+    def email(self):
+        """
+        Gets the email of this Riskv1decisionsOrderInformationShipTo.
+        Email of the recipient. 
+
+        :return: The email of this Riskv1decisionsOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this Riskv1decisionsOrderInformationShipTo.
+        Email of the recipient. 
+
+        :param email: The email of this Riskv1decisionsOrderInformationShipTo.
+        :type: str
+        """
+
+        self._email = email
+
+    @property
+    def company(self):
+        """
+        Gets the company of this Riskv1decisionsOrderInformationShipTo.
+        Name of the customer's company. 
+
+        :return: The company of this Riskv1decisionsOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._company
+
+    @company.setter
+    def company(self, company):
+        """
+        Sets the company of this Riskv1decisionsOrderInformationShipTo.
+        Name of the customer's company. 
+
+        :param company: The company of this Riskv1decisionsOrderInformationShipTo.
+        :type: str
+        """
+
+        self._company = company
 
     def to_dict(self):
         """

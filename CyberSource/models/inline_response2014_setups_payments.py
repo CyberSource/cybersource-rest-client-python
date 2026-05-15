@@ -49,7 +49,9 @@ class InlineResponse2014SetupsPayments(object):
         'unified_checkout': 'InlineResponse2014SetupsPaymentsDigitalPayments',
         'receivables_manager': 'InlineResponse2014SetupsPaymentsDigitalPayments',
         'service_fee': 'InlineResponse2014SetupsPaymentsCardProcessing',
-        'batch_upload': 'InlineResponse2014SetupsPaymentsDigitalPayments'
+        'batch_upload': 'InlineResponse2014SetupsPaymentsDigitalPayments',
+        'transact_guard': 'InlineResponse2014SetupsPaymentsDigitalPayments',
+        'microform': 'InlineResponse2014SetupsPaymentsCardProcessing'
     }
 
     attribute_map = {
@@ -72,10 +74,12 @@ class InlineResponse2014SetupsPayments(object):
         'unified_checkout': 'unifiedCheckout',
         'receivables_manager': 'receivablesManager',
         'service_fee': 'serviceFee',
-        'batch_upload': 'batchUpload'
+        'batch_upload': 'batchUpload',
+        'transact_guard': 'transactGuard',
+        'microform': 'microform'
     }
 
-    def __init__(self, card_processing=None, alternative_payment_methods=None, card_present_connect=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, cybs_ready_terminal=None, payment_orchestration=None, payouts=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None, batch_upload=None):
+    def __init__(self, card_processing=None, alternative_payment_methods=None, card_present_connect=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, cybs_ready_terminal=None, payment_orchestration=None, payouts=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None, batch_upload=None, transact_guard=None, microform=None):
         """
         InlineResponse2014SetupsPayments - a model defined in Swagger
         """
@@ -100,6 +104,8 @@ class InlineResponse2014SetupsPayments(object):
         self._receivables_manager = None
         self._service_fee = None
         self._batch_upload = None
+        self._transact_guard = None
+        self._microform = None
 
         if card_processing is not None:
           self.card_processing = card_processing
@@ -141,6 +147,10 @@ class InlineResponse2014SetupsPayments(object):
           self.service_fee = service_fee
         if batch_upload is not None:
           self.batch_upload = batch_upload
+        if transact_guard is not None:
+          self.transact_guard = transact_guard
+        if microform is not None:
+          self.microform = microform
 
     @property
     def card_processing(self):
@@ -561,6 +571,48 @@ class InlineResponse2014SetupsPayments(object):
         """
 
         self._batch_upload = batch_upload
+
+    @property
+    def transact_guard(self):
+        """
+        Gets the transact_guard of this InlineResponse2014SetupsPayments.
+
+        :return: The transact_guard of this InlineResponse2014SetupsPayments.
+        :rtype: InlineResponse2014SetupsPaymentsDigitalPayments
+        """
+        return self._transact_guard
+
+    @transact_guard.setter
+    def transact_guard(self, transact_guard):
+        """
+        Sets the transact_guard of this InlineResponse2014SetupsPayments.
+
+        :param transact_guard: The transact_guard of this InlineResponse2014SetupsPayments.
+        :type: InlineResponse2014SetupsPaymentsDigitalPayments
+        """
+
+        self._transact_guard = transact_guard
+
+    @property
+    def microform(self):
+        """
+        Gets the microform of this InlineResponse2014SetupsPayments.
+
+        :return: The microform of this InlineResponse2014SetupsPayments.
+        :rtype: InlineResponse2014SetupsPaymentsCardProcessing
+        """
+        return self._microform
+
+    @microform.setter
+    def microform(self, microform):
+        """
+        Sets the microform of this InlineResponse2014SetupsPayments.
+
+        :param microform: The microform of this InlineResponse2014SetupsPayments.
+        :type: InlineResponse2014SetupsPaymentsCardProcessing
+        """
+
+        self._microform = microform
 
     def to_dict(self):
         """

@@ -32,16 +32,18 @@ class Ucv1sessionsDataConsumerAuthenticationInformation(object):
     swagger_types = {
         'challenge_code': 'str',
         'message_category': 'str',
-        'acs_window_size': 'str'
+        'acs_window_size': 'str',
+        'product_code': 'str'
     }
 
     attribute_map = {
         'challenge_code': 'challengeCode',
         'message_category': 'messageCategory',
-        'acs_window_size': 'acsWindowSize'
+        'acs_window_size': 'acsWindowSize',
+        'product_code': 'productCode'
     }
 
-    def __init__(self, challenge_code=None, message_category=None, acs_window_size=None):
+    def __init__(self, challenge_code=None, message_category=None, acs_window_size=None, product_code=None):
         """
         Ucv1sessionsDataConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -49,6 +51,7 @@ class Ucv1sessionsDataConsumerAuthenticationInformation(object):
         self._challenge_code = None
         self._message_category = None
         self._acs_window_size = None
+        self._product_code = None
 
         if challenge_code is not None:
           self.challenge_code = challenge_code
@@ -56,6 +59,8 @@ class Ucv1sessionsDataConsumerAuthenticationInformation(object):
           self.message_category = message_category
         if acs_window_size is not None:
           self.acs_window_size = acs_window_size
+        if product_code is not None:
+          self.product_code = product_code
 
     @property
     def challenge_code(self):
@@ -125,6 +130,29 @@ class Ucv1sessionsDataConsumerAuthenticationInformation(object):
         """
 
         self._acs_window_size = acs_window_size
+
+    @property
+    def product_code(self):
+        """
+        Gets the product_code of this Ucv1sessionsDataConsumerAuthenticationInformation.
+        Specifies the product code, which designates the type of transaction.<br><br>  Specify one of the following values for this field:  - AIR: Airline purchase  Important Required for American Express SafeKey (U.S.).  - ACC: Accommodation Rental  - ACF: Account funding  - CHA: Check acceptance  - DIG: Digital Goods  - DSP: Cash Dispensing  - GAS: Fuel  - GEN: General Retail  - LUX: Luxury Retail  - PAL: Prepaid activation and load  - PHY: Goods or services purchase  - QCT: Quasi-cash transaction  - REN: Car Rental  - RES: Restaurant  - SVC: Services  - TBD: Other  - TRA: Travel<br>  **Important** Required for Visa Secure transactions in Brazil. Do not use this request field for any other types of transactions. 
+
+        :return: The product_code of this Ucv1sessionsDataConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._product_code
+
+    @product_code.setter
+    def product_code(self, product_code):
+        """
+        Sets the product_code of this Ucv1sessionsDataConsumerAuthenticationInformation.
+        Specifies the product code, which designates the type of transaction.<br><br>  Specify one of the following values for this field:  - AIR: Airline purchase  Important Required for American Express SafeKey (U.S.).  - ACC: Accommodation Rental  - ACF: Account funding  - CHA: Check acceptance  - DIG: Digital Goods  - DSP: Cash Dispensing  - GAS: Fuel  - GEN: General Retail  - LUX: Luxury Retail  - PAL: Prepaid activation and load  - PHY: Goods or services purchase  - QCT: Quasi-cash transaction  - REN: Car Rental  - RES: Restaurant  - SVC: Services  - TBD: Other  - TRA: Travel<br>  **Important** Required for Visa Secure transactions in Brazil. Do not use this request field for any other types of transactions. 
+
+        :param product_code: The product_code of this Ucv1sessionsDataConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._product_code = product_code
 
     def to_dict(self):
         """

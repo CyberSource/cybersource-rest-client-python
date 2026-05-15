@@ -187,7 +187,9 @@ class ApiClient(object):
 
             token = "Bearer " + token
             header_params['Authorization'] = str(token)
-        
+        header_params['v-c-sdk-telemetry-merchant-id'] = str(self.mconfig.merchant_id)
+        if self.mconfig.isSDK:
+            header_params['v-c-sdk-telemetry-mcp'] = "true"
 
     #  Set the digest
     def set_digest(self, body):

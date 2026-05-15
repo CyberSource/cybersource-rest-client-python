@@ -46,7 +46,8 @@ class CreateCreditRequest(object):
         'recipient_information': 'Ptsv2creditsRecipientInformation',
         'sender_information': 'Ptsv2creditsSenderInformation',
         'promotion_information': 'Ptsv2paymentsPromotionInformation',
-        'processor_information': 'Ptsv2reversalsProcessorInformation'
+        'processor_information': 'Ptsv2reversalsProcessorInformation',
+        'token_information': 'Ptsv2creditsTokenInformation'
     }
 
     attribute_map = {
@@ -66,10 +67,11 @@ class CreateCreditRequest(object):
         'recipient_information': 'recipientInformation',
         'sender_information': 'senderInformation',
         'promotion_information': 'promotionInformation',
-        'processor_information': 'processorInformation'
+        'processor_information': 'processorInformation',
+        'token_information': 'tokenInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, recipient_information=None, sender_information=None, promotion_information=None, processor_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, recipient_information=None, sender_information=None, promotion_information=None, processor_information=None, token_information=None):
         """
         CreateCreditRequest - a model defined in Swagger
         """
@@ -91,6 +93,7 @@ class CreateCreditRequest(object):
         self._sender_information = None
         self._promotion_information = None
         self._processor_information = None
+        self._token_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -126,6 +129,8 @@ class CreateCreditRequest(object):
           self.promotion_information = promotion_information
         if processor_information is not None:
           self.processor_information = processor_information
+        if token_information is not None:
+          self.token_information = token_information
 
     @property
     def client_reference_information(self):
@@ -485,6 +490,27 @@ class CreateCreditRequest(object):
         """
 
         self._processor_information = processor_information
+
+    @property
+    def token_information(self):
+        """
+        Gets the token_information of this CreateCreditRequest.
+
+        :return: The token_information of this CreateCreditRequest.
+        :rtype: Ptsv2creditsTokenInformation
+        """
+        return self._token_information
+
+    @token_information.setter
+    def token_information(self, token_information):
+        """
+        Sets the token_information of this CreateCreditRequest.
+
+        :param token_information: The token_information of this CreateCreditRequest.
+        :type: Ptsv2creditsTokenInformation
+        """
+
+        self._token_information = token_information
 
     def to_dict(self):
         """

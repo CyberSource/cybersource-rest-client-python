@@ -30,21 +30,100 @@ class Bavsv1accountvalidationsPaymentInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'customer': 'Bavsv1accountvalidationsPaymentInformationCustomer',
+        'payment_instrument': 'Bavsv1accountvalidationsPaymentInformationPaymentInstrument',
+        'instrument_identifier': 'Bavsv1accountvalidationsPaymentInformationInstrumentIdentifier',
         'bank': 'Bavsv1accountvalidationsPaymentInformationBank'
     }
 
     attribute_map = {
+        'customer': 'customer',
+        'payment_instrument': 'paymentInstrument',
+        'instrument_identifier': 'instrumentIdentifier',
         'bank': 'bank'
     }
 
-    def __init__(self, bank=None):
+    def __init__(self, customer=None, payment_instrument=None, instrument_identifier=None, bank=None):
         """
         Bavsv1accountvalidationsPaymentInformation - a model defined in Swagger
         """
 
+        self._customer = None
+        self._payment_instrument = None
+        self._instrument_identifier = None
         self._bank = None
 
-        self.bank = bank
+        if customer is not None:
+          self.customer = customer
+        if payment_instrument is not None:
+          self.payment_instrument = payment_instrument
+        if instrument_identifier is not None:
+          self.instrument_identifier = instrument_identifier
+        if bank is not None:
+          self.bank = bank
+
+    @property
+    def customer(self):
+        """
+        Gets the customer of this Bavsv1accountvalidationsPaymentInformation.
+
+        :return: The customer of this Bavsv1accountvalidationsPaymentInformation.
+        :rtype: Bavsv1accountvalidationsPaymentInformationCustomer
+        """
+        return self._customer
+
+    @customer.setter
+    def customer(self, customer):
+        """
+        Sets the customer of this Bavsv1accountvalidationsPaymentInformation.
+
+        :param customer: The customer of this Bavsv1accountvalidationsPaymentInformation.
+        :type: Bavsv1accountvalidationsPaymentInformationCustomer
+        """
+
+        self._customer = customer
+
+    @property
+    def payment_instrument(self):
+        """
+        Gets the payment_instrument of this Bavsv1accountvalidationsPaymentInformation.
+
+        :return: The payment_instrument of this Bavsv1accountvalidationsPaymentInformation.
+        :rtype: Bavsv1accountvalidationsPaymentInformationPaymentInstrument
+        """
+        return self._payment_instrument
+
+    @payment_instrument.setter
+    def payment_instrument(self, payment_instrument):
+        """
+        Sets the payment_instrument of this Bavsv1accountvalidationsPaymentInformation.
+
+        :param payment_instrument: The payment_instrument of this Bavsv1accountvalidationsPaymentInformation.
+        :type: Bavsv1accountvalidationsPaymentInformationPaymentInstrument
+        """
+
+        self._payment_instrument = payment_instrument
+
+    @property
+    def instrument_identifier(self):
+        """
+        Gets the instrument_identifier of this Bavsv1accountvalidationsPaymentInformation.
+
+        :return: The instrument_identifier of this Bavsv1accountvalidationsPaymentInformation.
+        :rtype: Bavsv1accountvalidationsPaymentInformationInstrumentIdentifier
+        """
+        return self._instrument_identifier
+
+    @instrument_identifier.setter
+    def instrument_identifier(self, instrument_identifier):
+        """
+        Sets the instrument_identifier of this Bavsv1accountvalidationsPaymentInformation.
+
+        :param instrument_identifier: The instrument_identifier of this Bavsv1accountvalidationsPaymentInformation.
+        :type: Bavsv1accountvalidationsPaymentInformationInstrumentIdentifier
+        """
+
+        self._instrument_identifier = instrument_identifier
 
     @property
     def bank(self):

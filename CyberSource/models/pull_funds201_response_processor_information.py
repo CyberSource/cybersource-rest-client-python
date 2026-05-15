@@ -36,8 +36,11 @@ class PullFunds201ResponseProcessorInformation(object):
         'transaction_id': 'str',
         'consumer_authentication_response': 'PullFunds201ResponseProcessorInformationConsumerAuthenticationResponse',
         'retrieval_reference_number': 'str',
-        'avs': 'PullFunds201ResponseProcessorInformationAvs',
-        'response_details': 'str'
+        'avs': 'PtsV2PayoutsPost201ResponseProcessorInformationAvs',
+        'response_details': 'str',
+        'customer': 'PtsV2PayoutsPost201ResponseProcessorInformationCustomer',
+        'electronic_verification_results': 'PtsV2PayoutsPost201ResponseProcessorInformationElectronicVerificationResults',
+        'card_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationCardVerification'
     }
 
     attribute_map = {
@@ -48,10 +51,13 @@ class PullFunds201ResponseProcessorInformation(object):
         'consumer_authentication_response': 'consumerAuthenticationResponse',
         'retrieval_reference_number': 'retrievalReferenceNumber',
         'avs': 'avs',
-        'response_details': 'responseDetails'
+        'response_details': 'responseDetails',
+        'customer': 'customer',
+        'electronic_verification_results': 'electronicVerificationResults',
+        'card_verification': 'cardVerification'
     }
 
-    def __init__(self, system_trace_audit_number=None, approval_code=None, response_code=None, transaction_id=None, consumer_authentication_response=None, retrieval_reference_number=None, avs=None, response_details=None):
+    def __init__(self, system_trace_audit_number=None, approval_code=None, response_code=None, transaction_id=None, consumer_authentication_response=None, retrieval_reference_number=None, avs=None, response_details=None, customer=None, electronic_verification_results=None, card_verification=None):
         """
         PullFunds201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -64,6 +70,9 @@ class PullFunds201ResponseProcessorInformation(object):
         self._retrieval_reference_number = None
         self._avs = None
         self._response_details = None
+        self._customer = None
+        self._electronic_verification_results = None
+        self._card_verification = None
 
         if system_trace_audit_number is not None:
           self.system_trace_audit_number = system_trace_audit_number
@@ -81,6 +90,12 @@ class PullFunds201ResponseProcessorInformation(object):
           self.avs = avs
         if response_details is not None:
           self.response_details = response_details
+        if customer is not None:
+          self.customer = customer
+        if electronic_verification_results is not None:
+          self.electronic_verification_results = electronic_verification_results
+        if card_verification is not None:
+          self.card_verification = card_verification
 
     @property
     def system_trace_audit_number(self):
@@ -224,7 +239,7 @@ class PullFunds201ResponseProcessorInformation(object):
         Gets the avs of this PullFunds201ResponseProcessorInformation.
 
         :return: The avs of this PullFunds201ResponseProcessorInformation.
-        :rtype: PullFunds201ResponseProcessorInformationAvs
+        :rtype: PtsV2PayoutsPost201ResponseProcessorInformationAvs
         """
         return self._avs
 
@@ -234,7 +249,7 @@ class PullFunds201ResponseProcessorInformation(object):
         Sets the avs of this PullFunds201ResponseProcessorInformation.
 
         :param avs: The avs of this PullFunds201ResponseProcessorInformation.
-        :type: PullFunds201ResponseProcessorInformationAvs
+        :type: PtsV2PayoutsPost201ResponseProcessorInformationAvs
         """
 
         self._avs = avs
@@ -261,6 +276,69 @@ class PullFunds201ResponseProcessorInformation(object):
         """
 
         self._response_details = response_details
+
+    @property
+    def customer(self):
+        """
+        Gets the customer of this PullFunds201ResponseProcessorInformation.
+
+        :return: The customer of this PullFunds201ResponseProcessorInformation.
+        :rtype: PtsV2PayoutsPost201ResponseProcessorInformationCustomer
+        """
+        return self._customer
+
+    @customer.setter
+    def customer(self, customer):
+        """
+        Sets the customer of this PullFunds201ResponseProcessorInformation.
+
+        :param customer: The customer of this PullFunds201ResponseProcessorInformation.
+        :type: PtsV2PayoutsPost201ResponseProcessorInformationCustomer
+        """
+
+        self._customer = customer
+
+    @property
+    def electronic_verification_results(self):
+        """
+        Gets the electronic_verification_results of this PullFunds201ResponseProcessorInformation.
+
+        :return: The electronic_verification_results of this PullFunds201ResponseProcessorInformation.
+        :rtype: PtsV2PayoutsPost201ResponseProcessorInformationElectronicVerificationResults
+        """
+        return self._electronic_verification_results
+
+    @electronic_verification_results.setter
+    def electronic_verification_results(self, electronic_verification_results):
+        """
+        Sets the electronic_verification_results of this PullFunds201ResponseProcessorInformation.
+
+        :param electronic_verification_results: The electronic_verification_results of this PullFunds201ResponseProcessorInformation.
+        :type: PtsV2PayoutsPost201ResponseProcessorInformationElectronicVerificationResults
+        """
+
+        self._electronic_verification_results = electronic_verification_results
+
+    @property
+    def card_verification(self):
+        """
+        Gets the card_verification of this PullFunds201ResponseProcessorInformation.
+
+        :return: The card_verification of this PullFunds201ResponseProcessorInformation.
+        :rtype: PtsV2PaymentsPost201ResponseProcessorInformationCardVerification
+        """
+        return self._card_verification
+
+    @card_verification.setter
+    def card_verification(self, card_verification):
+        """
+        Sets the card_verification of this PullFunds201ResponseProcessorInformation.
+
+        :param card_verification: The card_verification of this PullFunds201ResponseProcessorInformation.
+        :type: PtsV2PaymentsPost201ResponseProcessorInformationCardVerification
+        """
+
+        self._card_verification = card_verification
 
     def to_dict(self):
         """

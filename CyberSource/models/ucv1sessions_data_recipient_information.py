@@ -30,67 +30,129 @@ class Ucv1sessionsDataRecipientInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'account_id': 'str',
+        'account_type': 'str',
         'first_name': 'str',
         'middle_name': 'str',
         'last_name': 'str',
-        'country': 'str',
-        'account_id': 'str',
+        'address1': 'str',
         'administrative_area': 'str',
-        'account_type': 'str',
+        'postal_code': 'str',
+        'country': 'str',
+        'phone_number': 'str',
         'date_of_birth': 'str',
-        'postal_code': 'str'
+        'locality': 'str'
     }
 
     attribute_map = {
+        'account_id': 'accountId',
+        'account_type': 'accountType',
         'first_name': 'firstName',
         'middle_name': 'middleName',
         'last_name': 'lastName',
-        'country': 'country',
-        'account_id': 'accountId',
+        'address1': 'address1',
         'administrative_area': 'administrativeArea',
-        'account_type': 'accountType',
+        'postal_code': 'postalCode',
+        'country': 'country',
+        'phone_number': 'phoneNumber',
         'date_of_birth': 'dateOfBirth',
-        'postal_code': 'postalCode'
+        'locality': 'locality'
     }
 
-    def __init__(self, first_name=None, middle_name=None, last_name=None, country=None, account_id=None, administrative_area=None, account_type=None, date_of_birth=None, postal_code=None):
+    def __init__(self, account_id=None, account_type=None, first_name=None, middle_name=None, last_name=None, address1=None, administrative_area=None, postal_code=None, country=None, phone_number=None, date_of_birth=None, locality=None):
         """
         Ucv1sessionsDataRecipientInformation - a model defined in Swagger
         """
 
+        self._account_id = None
+        self._account_type = None
         self._first_name = None
         self._middle_name = None
         self._last_name = None
-        self._country = None
-        self._account_id = None
+        self._address1 = None
         self._administrative_area = None
-        self._account_type = None
-        self._date_of_birth = None
         self._postal_code = None
+        self._country = None
+        self._phone_number = None
+        self._date_of_birth = None
+        self._locality = None
 
+        if account_id is not None:
+          self.account_id = account_id
+        if account_type is not None:
+          self.account_type = account_type
         if first_name is not None:
           self.first_name = first_name
         if middle_name is not None:
           self.middle_name = middle_name
         if last_name is not None:
           self.last_name = last_name
-        if country is not None:
-          self.country = country
-        if account_id is not None:
-          self.account_id = account_id
+        if address1 is not None:
+          self.address1 = address1
         if administrative_area is not None:
           self.administrative_area = administrative_area
-        if account_type is not None:
-          self.account_type = account_type
-        if date_of_birth is not None:
-          self.date_of_birth = date_of_birth
         if postal_code is not None:
           self.postal_code = postal_code
+        if country is not None:
+          self.country = country
+        if phone_number is not None:
+          self.phone_number = phone_number
+        if date_of_birth is not None:
+          self.date_of_birth = date_of_birth
+        if locality is not None:
+          self.locality = locality
+
+    @property
+    def account_id(self):
+        """
+        Gets the account_id of this Ucv1sessionsDataRecipientInformation.
+        Identifier for the recipient's account. This field is applicable for AFT transactions. 
+
+        :return: The account_id of this Ucv1sessionsDataRecipientInformation.
+        :rtype: str
+        """
+        return self._account_id
+
+    @account_id.setter
+    def account_id(self, account_id):
+        """
+        Sets the account_id of this Ucv1sessionsDataRecipientInformation.
+        Identifier for the recipient's account. This field is applicable for AFT transactions. 
+
+        :param account_id: The account_id of this Ucv1sessionsDataRecipientInformation.
+        :type: str
+        """
+
+        self._account_id = account_id
+
+    @property
+    def account_type(self):
+        """
+        Gets the account_type of this Ucv1sessionsDataRecipientInformation.
+        Identifies the recipient's account type. This field is applicable for AFT transactions.  Valid values are:   - `00` for Other   - `01` for Routing Transit Number (RTN) + Bank Account Number (BAN)   - `02` for International Bank Account Number (IBAN)   - `03` for Card Account   - `06` for Bank Account Number (BAN) + Bank Identification Code (BIC), also known as a SWIFT code 
+
+        :return: The account_type of this Ucv1sessionsDataRecipientInformation.
+        :rtype: str
+        """
+        return self._account_type
+
+    @account_type.setter
+    def account_type(self, account_type):
+        """
+        Sets the account_type of this Ucv1sessionsDataRecipientInformation.
+        Identifies the recipient's account type. This field is applicable for AFT transactions.  Valid values are:   - `00` for Other   - `01` for Routing Transit Number (RTN) + Bank Account Number (BAN)   - `02` for International Bank Account Number (IBAN)   - `03` for Card Account   - `06` for Bank Account Number (BAN) + Bank Identification Code (BIC), also known as a SWIFT code 
+
+        :param account_type: The account_type of this Ucv1sessionsDataRecipientInformation.
+        :type: str
+        """
+
+        self._account_type = account_type
 
     @property
     def first_name(self):
         """
         Gets the first_name of this Ucv1sessionsDataRecipientInformation.
+        First name of the recipient. This field is applicable for AFT transactions.    Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :return: The first_name of this Ucv1sessionsDataRecipientInformation.
         :rtype: str
@@ -101,6 +163,7 @@ class Ucv1sessionsDataRecipientInformation(object):
     def first_name(self, first_name):
         """
         Sets the first_name of this Ucv1sessionsDataRecipientInformation.
+        First name of the recipient. This field is applicable for AFT transactions.    Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :param first_name: The first_name of this Ucv1sessionsDataRecipientInformation.
         :type: str
@@ -112,6 +175,7 @@ class Ucv1sessionsDataRecipientInformation(object):
     def middle_name(self):
         """
         Gets the middle_name of this Ucv1sessionsDataRecipientInformation.
+        Middle name of the recipient. This field is applicable for AFT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :return: The middle_name of this Ucv1sessionsDataRecipientInformation.
         :rtype: str
@@ -122,6 +186,7 @@ class Ucv1sessionsDataRecipientInformation(object):
     def middle_name(self, middle_name):
         """
         Sets the middle_name of this Ucv1sessionsDataRecipientInformation.
+        Middle name of the recipient. This field is applicable for AFT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :param middle_name: The middle_name of this Ucv1sessionsDataRecipientInformation.
         :type: str
@@ -133,6 +198,7 @@ class Ucv1sessionsDataRecipientInformation(object):
     def last_name(self):
         """
         Gets the last_name of this Ucv1sessionsDataRecipientInformation.
+        Last name of the recipient. This field is applicable for AFT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :return: The last_name of this Ucv1sessionsDataRecipientInformation.
         :rtype: str
@@ -143,6 +209,7 @@ class Ucv1sessionsDataRecipientInformation(object):
     def last_name(self, last_name):
         """
         Sets the last_name of this Ucv1sessionsDataRecipientInformation.
+        Last name of the recipient. This field is applicable for AFT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :param last_name: The last_name of this Ucv1sessionsDataRecipientInformation.
         :type: str
@@ -151,56 +218,33 @@ class Ucv1sessionsDataRecipientInformation(object):
         self._last_name = last_name
 
     @property
-    def country(self):
+    def address1(self):
         """
-        Gets the country of this Ucv1sessionsDataRecipientInformation.
-        The country code of the recipient's country<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request. 
+        Gets the address1 of this Ucv1sessionsDataRecipientInformation.
+        The street address of the recipient This field is applicable for AFT and OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor. 
 
-        :return: The country of this Ucv1sessionsDataRecipientInformation.
+        :return: The address1 of this Ucv1sessionsDataRecipientInformation.
         :rtype: str
         """
-        return self._country
+        return self._address1
 
-    @country.setter
-    def country(self, country):
+    @address1.setter
+    def address1(self, address1):
         """
-        Sets the country of this Ucv1sessionsDataRecipientInformation.
-        The country code of the recipient's country<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request. 
+        Sets the address1 of this Ucv1sessionsDataRecipientInformation.
+        The street address of the recipient This field is applicable for AFT and OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor. 
 
-        :param country: The country of this Ucv1sessionsDataRecipientInformation.
+        :param address1: The address1 of this Ucv1sessionsDataRecipientInformation.
         :type: str
         """
 
-        self._country = country
-
-    @property
-    def account_id(self):
-        """
-        Gets the account_id of this Ucv1sessionsDataRecipientInformation.
-        The account ID of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request. 
-
-        :return: The account_id of this Ucv1sessionsDataRecipientInformation.
-        :rtype: str
-        """
-        return self._account_id
-
-    @account_id.setter
-    def account_id(self, account_id):
-        """
-        Sets the account_id of this Ucv1sessionsDataRecipientInformation.
-        The account ID of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request. 
-
-        :param account_id: The account_id of this Ucv1sessionsDataRecipientInformation.
-        :type: str
-        """
-
-        self._account_id = account_id
+        self._address1 = address1
 
     @property
     def administrative_area(self):
         """
         Gets the administrative_area of this Ucv1sessionsDataRecipientInformation.
-        The administrative area of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request. 
+        The state or province of the recipient. This field is applicable for AFT transactions when the recipient country is US or CA. Else it is optional.  Must be a two character value 
 
         :return: The administrative_area of this Ucv1sessionsDataRecipientInformation.
         :rtype: str
@@ -211,7 +255,7 @@ class Ucv1sessionsDataRecipientInformation(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this Ucv1sessionsDataRecipientInformation.
-        The administrative area of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request. 
+        The state or province of the recipient. This field is applicable for AFT transactions when the recipient country is US or CA. Else it is optional.  Must be a two character value 
 
         :param administrative_area: The administrative_area of this Ucv1sessionsDataRecipientInformation.
         :type: str
@@ -220,56 +264,10 @@ class Ucv1sessionsDataRecipientInformation(object):
         self._administrative_area = administrative_area
 
     @property
-    def account_type(self):
-        """
-        Gets the account_type of this Ucv1sessionsDataRecipientInformation.
-        The account type of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request. 
-
-        :return: The account_type of this Ucv1sessionsDataRecipientInformation.
-        :rtype: str
-        """
-        return self._account_type
-
-    @account_type.setter
-    def account_type(self, account_type):
-        """
-        Sets the account_type of this Ucv1sessionsDataRecipientInformation.
-        The account type of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request. 
-
-        :param account_type: The account_type of this Ucv1sessionsDataRecipientInformation.
-        :type: str
-        """
-
-        self._account_type = account_type
-
-    @property
-    def date_of_birth(self):
-        """
-        Gets the date_of_birth of this Ucv1sessionsDataRecipientInformation.
-        The date of birth of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request. 
-
-        :return: The date_of_birth of this Ucv1sessionsDataRecipientInformation.
-        :rtype: str
-        """
-        return self._date_of_birth
-
-    @date_of_birth.setter
-    def date_of_birth(self, date_of_birth):
-        """
-        Sets the date_of_birth of this Ucv1sessionsDataRecipientInformation.
-        The date of birth of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request. 
-
-        :param date_of_birth: The date_of_birth of this Ucv1sessionsDataRecipientInformation.
-        :type: str
-        """
-
-        self._date_of_birth = date_of_birth
-
-    @property
     def postal_code(self):
         """
         Gets the postal_code of this Ucv1sessionsDataRecipientInformation.
-        The postal code of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request. 
+        Partial postal code for the recipient's address. For example, if the postal code is **NN5 7SG**, the value for this field should be the first part of the postal code: **NN5**. This field is a _pass-through_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
 
         :return: The postal_code of this Ucv1sessionsDataRecipientInformation.
         :rtype: str
@@ -280,13 +278,105 @@ class Ucv1sessionsDataRecipientInformation(object):
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this Ucv1sessionsDataRecipientInformation.
-        The postal code of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request. 
+        Partial postal code for the recipient's address. For example, if the postal code is **NN5 7SG**, the value for this field should be the first part of the postal code: **NN5**. This field is a _pass-through_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
 
         :param postal_code: The postal_code of this Ucv1sessionsDataRecipientInformation.
         :type: str
         """
 
         self._postal_code = postal_code
+
+    @property
+    def country(self):
+        """
+        Gets the country of this Ucv1sessionsDataRecipientInformation.
+        The country associated with the address of the recipient. This field is applicable for AFT and OCT transactions.  Must be a two character ISO country code.  For example, see [ISO Country Code](https://developer.cybersource.com/docs/cybs/en-us/country-codes/reference/all/na/country-codes/country-codes.html) 
+
+        :return: The country of this Ucv1sessionsDataRecipientInformation.
+        :rtype: str
+        """
+        return self._country
+
+    @country.setter
+    def country(self, country):
+        """
+        Sets the country of this Ucv1sessionsDataRecipientInformation.
+        The country associated with the address of the recipient. This field is applicable for AFT and OCT transactions.  Must be a two character ISO country code.  For example, see [ISO Country Code](https://developer.cybersource.com/docs/cybs/en-us/country-codes/reference/all/na/country-codes/country-codes.html) 
+
+        :param country: The country of this Ucv1sessionsDataRecipientInformation.
+        :type: str
+        """
+
+        self._country = country
+
+    @property
+    def phone_number(self):
+        """
+        Gets the phone_number of this Ucv1sessionsDataRecipientInformation.
+        Account Owner phone number
+
+        :return: The phone_number of this Ucv1sessionsDataRecipientInformation.
+        :rtype: str
+        """
+        return self._phone_number
+
+    @phone_number.setter
+    def phone_number(self, phone_number):
+        """
+        Sets the phone_number of this Ucv1sessionsDataRecipientInformation.
+        Account Owner phone number
+
+        :param phone_number: The phone_number of this Ucv1sessionsDataRecipientInformation.
+        :type: str
+        """
+
+        self._phone_number = phone_number
+
+    @property
+    def date_of_birth(self):
+        """
+        Gets the date_of_birth of this Ucv1sessionsDataRecipientInformation.
+        Recipient's date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+
+        :return: The date_of_birth of this Ucv1sessionsDataRecipientInformation.
+        :rtype: str
+        """
+        return self._date_of_birth
+
+    @date_of_birth.setter
+    def date_of_birth(self, date_of_birth):
+        """
+        Sets the date_of_birth of this Ucv1sessionsDataRecipientInformation.
+        Recipient's date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+
+        :param date_of_birth: The date_of_birth of this Ucv1sessionsDataRecipientInformation.
+        :type: str
+        """
+
+        self._date_of_birth = date_of_birth
+
+    @property
+    def locality(self):
+        """
+        Gets the locality of this Ucv1sessionsDataRecipientInformation.
+        The city of the recipient. This field is applicable for AFT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor. 
+
+        :return: The locality of this Ucv1sessionsDataRecipientInformation.
+        :rtype: str
+        """
+        return self._locality
+
+    @locality.setter
+    def locality(self, locality):
+        """
+        Sets the locality of this Ucv1sessionsDataRecipientInformation.
+        The city of the recipient. This field is applicable for AFT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor. 
+
+        :param locality: The locality of this Ucv1sessionsDataRecipientInformation.
+        :type: str
+        """
+
+        self._locality = locality
 
     def to_dict(self):
         """

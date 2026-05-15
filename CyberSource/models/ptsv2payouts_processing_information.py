@@ -39,7 +39,8 @@ class Ptsv2payoutsProcessingInformation(object):
         'purpose_of_payment': 'str',
         'funding_options': 'Ptsv2payoutsProcessingInformationFundingOptions',
         'language_code': 'str',
-        'purchase_options': 'Ptsv2payoutsProcessingInformationPurchaseOptions'
+        'purchase_options': 'Ptsv2payoutsProcessingInformationPurchaseOptions',
+        'account_verification_code': 'list[str]'
     }
 
     attribute_map = {
@@ -52,10 +53,11 @@ class Ptsv2payoutsProcessingInformation(object):
         'purpose_of_payment': 'purposeOfPayment',
         'funding_options': 'fundingOptions',
         'language_code': 'languageCode',
-        'purchase_options': 'purchaseOptions'
+        'purchase_options': 'purchaseOptions',
+        'account_verification_code': 'accountVerificationCode'
     }
 
-    def __init__(self, business_application_id=None, network_routing_order=None, commerce_indicator=None, reconciliation_id=None, payouts_options=None, transaction_reason=None, purpose_of_payment=None, funding_options=None, language_code=None, purchase_options=None):
+    def __init__(self, business_application_id=None, network_routing_order=None, commerce_indicator=None, reconciliation_id=None, payouts_options=None, transaction_reason=None, purpose_of_payment=None, funding_options=None, language_code=None, purchase_options=None, account_verification_code=None):
         """
         Ptsv2payoutsProcessingInformation - a model defined in Swagger
         """
@@ -70,6 +72,7 @@ class Ptsv2payoutsProcessingInformation(object):
         self._funding_options = None
         self._language_code = None
         self._purchase_options = None
+        self._account_verification_code = None
 
         if business_application_id is not None:
           self.business_application_id = business_application_id
@@ -91,6 +94,8 @@ class Ptsv2payoutsProcessingInformation(object):
           self.language_code = language_code
         if purchase_options is not None:
           self.purchase_options = purchase_options
+        if account_verification_code is not None:
+          self.account_verification_code = account_verification_code
 
     @property
     def business_application_id(self):
@@ -315,6 +320,29 @@ class Ptsv2payoutsProcessingInformation(object):
         """
 
         self._purchase_options = purchase_options
+
+    @property
+    def account_verification_code(self):
+        """
+        Gets the account_verification_code of this Ptsv2payoutsProcessingInformation.
+        Account verification code will inform what Payment Account Verification should be performed. With this array of codes, a merchant can choose à la carte what verifications to run. This field is optional, and the default is 1 if it is not passed in. This means that a full validation of the fields will be performed. Valid verification codes: - `1` = Full Account Verification (Card Account, CVN, CAVV, TAVV, Address, Name, eMail, Phone, Identity) - `2` = Card Account Verification - `3` = Address Verification - `4` = Card Authentication Method (CAM) (Cryptogram) - `5` = Cardholder Authentication Verification (CAVV) - `6` = Cardholder Identity Verification - `7` = CVV2 Verification - `8` = eMail Verification - `9` = Name Verification - `10` = Phone Verification 
+
+        :return: The account_verification_code of this Ptsv2payoutsProcessingInformation.
+        :rtype: list[str]
+        """
+        return self._account_verification_code
+
+    @account_verification_code.setter
+    def account_verification_code(self, account_verification_code):
+        """
+        Sets the account_verification_code of this Ptsv2payoutsProcessingInformation.
+        Account verification code will inform what Payment Account Verification should be performed. With this array of codes, a merchant can choose à la carte what verifications to run. This field is optional, and the default is 1 if it is not passed in. This means that a full validation of the fields will be performed. Valid verification codes: - `1` = Full Account Verification (Card Account, CVN, CAVV, TAVV, Address, Name, eMail, Phone, Identity) - `2` = Card Account Verification - `3` = Address Verification - `4` = Card Authentication Method (CAM) (Cryptogram) - `5` = Cardholder Authentication Verification (CAVV) - `6` = Cardholder Identity Verification - `7` = CVV2 Verification - `8` = eMail Verification - `9` = Name Verification - `10` = Phone Verification 
+
+        :param account_verification_code: The account_verification_code of this Ptsv2payoutsProcessingInformation.
+        :type: list[str]
+        """
+
+        self._account_verification_code = account_verification_code
 
     def to_dict(self):
         """

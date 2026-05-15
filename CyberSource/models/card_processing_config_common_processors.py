@@ -75,6 +75,10 @@ class CardProcessingConfigCommonProcessors(object):
         'enable_least_cost_routing': 'bool',
         'enable_cvv_response_indicator': 'bool',
         'enable_multi_currency_processing': 'str',
+        'transaction_type_identifier': 'str',
+        'sub_merchant_id': 'str',
+        'sub_merchant_email': 'str',
+        'sub_merchant_phone_number': 'str',
         'enable_pos_network_switching': 'bool',
         'enable_dynamic_currency_conversion': 'bool',
         'merchant_tier': 'str'
@@ -126,12 +130,16 @@ class CardProcessingConfigCommonProcessors(object):
         'enable_least_cost_routing': 'enableLeastCostRouting',
         'enable_cvv_response_indicator': 'enableCVVResponseIndicator',
         'enable_multi_currency_processing': 'enableMultiCurrencyProcessing',
+        'transaction_type_identifier': 'transactionTypeIdentifier',
+        'sub_merchant_id': 'subMerchantId',
+        'sub_merchant_email': 'subMerchantEmail',
+        'sub_merchant_phone_number': 'subMerchantPhoneNumber',
         'enable_pos_network_switching': 'enablePosNetworkSwitching',
         'enable_dynamic_currency_conversion': 'enableDynamicCurrencyConversion',
         'merchant_tier': 'merchantTier'
     }
 
-    def __init__(self, batch_group=None, business_application_id=None, merchant_verification_value=None, aba_number=None, acquirer=None, acquirers=None, merchant_id=None, terminal_id=None, payment_types=None, currencies=None, visa_aggregator_id=None, amex_aggregator_id=None, master_card_aggregator_id=None, sic_code=None, allow_multiple_bills=None, allow_merchant_descriptor_override=None, enhanced_data=None, fire_safety_indicator=None, quasi_cash=None, acquirer_merchant_id=None, avs_format=None, enable_long_trans_ref_no=None, enable_level2=None, enable_multiple_transaction_advice_addendum=None, amex_transaction_advice_addendum1=None, enable_multi_line_items=None, enable_transaction_reference_number=None, enable_auto_auth_reversal_after_void=None, enable_expresspay_pan_translation=None, enable_credit_auth=None, industry_code=None, send_amex_level2_data=None, soft_descriptor_type=None, vital_number=None, bank_number=None, chain_number=None, merchant_bin_number=None, merchant_location_number=None, store_id=None, travel_agency_code=None, travel_agency_name=None, settlement_currency=None, enable_least_cost_routing=None, enable_cvv_response_indicator=None, enable_multi_currency_processing=None, enable_pos_network_switching=None, enable_dynamic_currency_conversion=None, merchant_tier=None):
+    def __init__(self, batch_group=None, business_application_id=None, merchant_verification_value=None, aba_number=None, acquirer=None, acquirers=None, merchant_id=None, terminal_id=None, payment_types=None, currencies=None, visa_aggregator_id=None, amex_aggregator_id=None, master_card_aggregator_id=None, sic_code=None, allow_multiple_bills=None, allow_merchant_descriptor_override=None, enhanced_data=None, fire_safety_indicator=None, quasi_cash=None, acquirer_merchant_id=None, avs_format=None, enable_long_trans_ref_no=None, enable_level2=None, enable_multiple_transaction_advice_addendum=None, amex_transaction_advice_addendum1=None, enable_multi_line_items=None, enable_transaction_reference_number=None, enable_auto_auth_reversal_after_void=None, enable_expresspay_pan_translation=None, enable_credit_auth=None, industry_code=None, send_amex_level2_data=None, soft_descriptor_type=None, vital_number=None, bank_number=None, chain_number=None, merchant_bin_number=None, merchant_location_number=None, store_id=None, travel_agency_code=None, travel_agency_name=None, settlement_currency=None, enable_least_cost_routing=None, enable_cvv_response_indicator=None, enable_multi_currency_processing=None, transaction_type_identifier=None, sub_merchant_id=None, sub_merchant_email=None, sub_merchant_phone_number=None, enable_pos_network_switching=None, enable_dynamic_currency_conversion=None, merchant_tier=None):
         """
         CardProcessingConfigCommonProcessors - a model defined in Swagger
         """
@@ -181,6 +189,10 @@ class CardProcessingConfigCommonProcessors(object):
         self._enable_least_cost_routing = None
         self._enable_cvv_response_indicator = None
         self._enable_multi_currency_processing = None
+        self._transaction_type_identifier = None
+        self._sub_merchant_id = None
+        self._sub_merchant_email = None
+        self._sub_merchant_phone_number = None
         self._enable_pos_network_switching = None
         self._enable_dynamic_currency_conversion = None
         self._merchant_tier = None
@@ -274,6 +286,14 @@ class CardProcessingConfigCommonProcessors(object):
           self.enable_cvv_response_indicator = enable_cvv_response_indicator
         if enable_multi_currency_processing is not None:
           self.enable_multi_currency_processing = enable_multi_currency_processing
+        if transaction_type_identifier is not None:
+          self.transaction_type_identifier = transaction_type_identifier
+        if sub_merchant_id is not None:
+          self.sub_merchant_id = sub_merchant_id
+        if sub_merchant_email is not None:
+          self.sub_merchant_email = sub_merchant_email
+        if sub_merchant_phone_number is not None:
+          self.sub_merchant_phone_number = sub_merchant_phone_number
         if enable_pos_network_switching is not None:
           self.enable_pos_network_switching = enable_pos_network_switching
         if enable_dynamic_currency_conversion is not None:
@@ -1313,6 +1333,98 @@ class CardProcessingConfigCommonProcessors(object):
         """
 
         self._enable_multi_currency_processing = enable_multi_currency_processing
+
+    @property
+    def transaction_type_identifier(self):
+        """
+        Gets the transaction_type_identifier of this CardProcessingConfigCommonProcessors.
+        Transaction Type Identifier (TTI) field for Mastercard AFT transactions. Maps to ISO field F104.65.32. Used to ensure compliance with Mastercard's requirements for money send transactions when wallet classifications differ between Visa and Mastercard schemes. Takes priority over BAI values for Mastercard AFT transactions when present.
+
+        :return: The transaction_type_identifier of this CardProcessingConfigCommonProcessors.
+        :rtype: str
+        """
+        return self._transaction_type_identifier
+
+    @transaction_type_identifier.setter
+    def transaction_type_identifier(self, transaction_type_identifier):
+        """
+        Sets the transaction_type_identifier of this CardProcessingConfigCommonProcessors.
+        Transaction Type Identifier (TTI) field for Mastercard AFT transactions. Maps to ISO field F104.65.32. Used to ensure compliance with Mastercard's requirements for money send transactions when wallet classifications differ between Visa and Mastercard schemes. Takes priority over BAI values for Mastercard AFT transactions when present.
+
+        :param transaction_type_identifier: The transaction_type_identifier of this CardProcessingConfigCommonProcessors.
+        :type: str
+        """
+
+        self._transaction_type_identifier = transaction_type_identifier
+
+    @property
+    def sub_merchant_id(self):
+        """
+        Gets the sub_merchant_id of this CardProcessingConfigCommonProcessors.
+        The Sub merchant ID, sometimes referred to as the 'Seller ID' is generally used and *required for Aggregators and OptBlue participants. The 'Sub Merchant' is the Merchant whose transactions are submitted by a payment aggregator.
+
+        :return: The sub_merchant_id of this CardProcessingConfigCommonProcessors.
+        :rtype: str
+        """
+        return self._sub_merchant_id
+
+    @sub_merchant_id.setter
+    def sub_merchant_id(self, sub_merchant_id):
+        """
+        Sets the sub_merchant_id of this CardProcessingConfigCommonProcessors.
+        The Sub merchant ID, sometimes referred to as the 'Seller ID' is generally used and *required for Aggregators and OptBlue participants. The 'Sub Merchant' is the Merchant whose transactions are submitted by a payment aggregator.
+
+        :param sub_merchant_id: The sub_merchant_id of this CardProcessingConfigCommonProcessors.
+        :type: str
+        """
+
+        self._sub_merchant_id = sub_merchant_id
+
+    @property
+    def sub_merchant_email(self):
+        """
+        Gets the sub_merchant_email of this CardProcessingConfigCommonProcessors.
+        Sub Merchant Email of the Payment Facilitator's, OptBlue Participant
+
+        :return: The sub_merchant_email of this CardProcessingConfigCommonProcessors.
+        :rtype: str
+        """
+        return self._sub_merchant_email
+
+    @sub_merchant_email.setter
+    def sub_merchant_email(self, sub_merchant_email):
+        """
+        Sets the sub_merchant_email of this CardProcessingConfigCommonProcessors.
+        Sub Merchant Email of the Payment Facilitator's, OptBlue Participant
+
+        :param sub_merchant_email: The sub_merchant_email of this CardProcessingConfigCommonProcessors.
+        :type: str
+        """
+
+        self._sub_merchant_email = sub_merchant_email
+
+    @property
+    def sub_merchant_phone_number(self):
+        """
+        Gets the sub_merchant_phone_number of this CardProcessingConfigCommonProcessors.
+        Sub Merchant Phone Number of the Payment Facilitator's, OptBlue Participant's
+
+        :return: The sub_merchant_phone_number of this CardProcessingConfigCommonProcessors.
+        :rtype: str
+        """
+        return self._sub_merchant_phone_number
+
+    @sub_merchant_phone_number.setter
+    def sub_merchant_phone_number(self, sub_merchant_phone_number):
+        """
+        Sets the sub_merchant_phone_number of this CardProcessingConfigCommonProcessors.
+        Sub Merchant Phone Number of the Payment Facilitator's, OptBlue Participant's
+
+        :param sub_merchant_phone_number: The sub_merchant_phone_number of this CardProcessingConfigCommonProcessors.
+        :type: str
+        """
+
+        self._sub_merchant_phone_number = sub_merchant_phone_number
 
     @property
     def enable_pos_network_switching(self):

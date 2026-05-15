@@ -34,7 +34,8 @@ class PtsV2PaymentsPost201ResponseTokenInformation(object):
         'customer': 'PtsV2PaymentsPost201ResponseTokenInformationCustomer',
         'payment_instrument': 'PtsV2PaymentsPost201ResponseTokenInformationPaymentInstrument',
         'shipping_address': 'PtsV2PaymentsPost201ResponseTokenInformationShippingAddress',
-        'instrument_identifier': 'PtsV2PaymentsPost201ResponseTokenInformationInstrumentIdentifier'
+        'instrument_identifier': 'PtsV2PaymentsPost201ResponseTokenInformationInstrumentIdentifier',
+        'third_party_token': 'PtsV2PaymentsPost201ResponseTokenInformationThirdPartyToken'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class PtsV2PaymentsPost201ResponseTokenInformation(object):
         'customer': 'customer',
         'payment_instrument': 'paymentInstrument',
         'shipping_address': 'shippingAddress',
-        'instrument_identifier': 'instrumentIdentifier'
+        'instrument_identifier': 'instrumentIdentifier',
+        'third_party_token': 'thirdPartyToken'
     }
 
-    def __init__(self, instrumentidentifier_new=None, customer=None, payment_instrument=None, shipping_address=None, instrument_identifier=None):
+    def __init__(self, instrumentidentifier_new=None, customer=None, payment_instrument=None, shipping_address=None, instrument_identifier=None, third_party_token=None):
         """
         PtsV2PaymentsPost201ResponseTokenInformation - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class PtsV2PaymentsPost201ResponseTokenInformation(object):
         self._payment_instrument = None
         self._shipping_address = None
         self._instrument_identifier = None
+        self._third_party_token = None
 
         if instrumentidentifier_new is not None:
           self.instrumentidentifier_new = instrumentidentifier_new
@@ -66,6 +69,8 @@ class PtsV2PaymentsPost201ResponseTokenInformation(object):
           self.shipping_address = shipping_address
         if instrument_identifier is not None:
           self.instrument_identifier = instrument_identifier
+        if third_party_token is not None:
+          self.third_party_token = third_party_token
 
     @property
     def instrumentidentifier_new(self):
@@ -173,6 +178,27 @@ class PtsV2PaymentsPost201ResponseTokenInformation(object):
         """
 
         self._instrument_identifier = instrument_identifier
+
+    @property
+    def third_party_token(self):
+        """
+        Gets the third_party_token of this PtsV2PaymentsPost201ResponseTokenInformation.
+
+        :return: The third_party_token of this PtsV2PaymentsPost201ResponseTokenInformation.
+        :rtype: PtsV2PaymentsPost201ResponseTokenInformationThirdPartyToken
+        """
+        return self._third_party_token
+
+    @third_party_token.setter
+    def third_party_token(self, third_party_token):
+        """
+        Sets the third_party_token of this PtsV2PaymentsPost201ResponseTokenInformation.
+
+        :param third_party_token: The third_party_token of this PtsV2PaymentsPost201ResponseTokenInformation.
+        :type: PtsV2PaymentsPost201ResponseTokenInformationThirdPartyToken
+        """
+
+        self._third_party_token = third_party_token
 
     def to_dict(self):
         """

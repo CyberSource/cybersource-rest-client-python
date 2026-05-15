@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**aggregator_information** | [**Ucv1sessionsDataAggregatorInformation**](Ucv1sessionsDataAggregatorInformation.md) |  | [optional] 
 **order_information** | [**Ucv1sessionsDataOrderInformation**](Ucv1sessionsDataOrderInformation.md) |  | [optional] 
 **buyer_information** | [**Ucv1sessionsDataBuyerInformation**](Ucv1sessionsDataBuyerInformation.md) |  | [optional] 
 **client_reference_information** | [**Upv1capturecontextsDataClientReferenceInformation**](Upv1capturecontextsDataClientReferenceInformation.md) |  | [optional] 
@@ -10,9 +11,11 @@ Name | Type | Description | Notes
 **merchant_information** | [**Ucv1sessionsDataMerchantInformation**](Ucv1sessionsDataMerchantInformation.md) |  | [optional] 
 **processing_information** | [**Ucv1sessionsDataProcessingInformation**](Ucv1sessionsDataProcessingInformation.md) |  | [optional] 
 **recipient_information** | [**Ucv1sessionsDataRecipientInformation**](Ucv1sessionsDataRecipientInformation.md) |  | [optional] 
-**merchant_defined_information** | [**list[Ucv1sessionsDataMerchantDefinedInformation]**](Ucv1sessionsDataMerchantDefinedInformation.md) |  | [optional] 
+**sender_information** | [**Ucv1sessionsDataSenderInformation**](Ucv1sessionsDataSenderInformation.md) |  | [optional] 
 **device_information** | [**Ucv1sessionsDataDeviceInformation**](Ucv1sessionsDataDeviceInformation.md) |  | [optional] 
 **payment_information** | [**Ucv1sessionsDataPaymentInformation**](Ucv1sessionsDataPaymentInformation.md) |  | [optional] 
+**installment_information** | [**Ucv1sessionsDataInstallmentInformation**](Ucv1sessionsDataInstallmentInformation.md) |  | [optional] 
+**merchant_defined_information** | [**list[Ucv1sessionsDataMerchantDefinedInformation]**](Ucv1sessionsDataMerchantDefinedInformation.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -247,7 +247,7 @@ class CreateNewWebhooksApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -285,7 +285,7 @@ class CreateNewWebhooksApi(object):
                                         collection_formats=collection_formats,
                                         isResponseMLEforApi=isResponseMLEforApi)
 
-    def save_sym_egress_key(self, v_c_sender_organization_id, v_c_permissions, **kwargs):
+    def save_sym_egress_key(self, **kwargs):
         """
         Create Webhook Security Keys
         Create security keys that CyberSource will use internally to connect to your servers and validate messages using a digital signature.  Select the CREATE example for CyberSource to generate the key on our server and maintain it for you as well. Remember to save the key in the API response, so that you can use it to validate messages later. 
@@ -295,13 +295,13 @@ class CreateNewWebhooksApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.save_sym_egress_key(v_c_sender_organization_id, v_c_permissions, callback=callback_function)
+        >>> thread = api.save_sym_egress_key(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str v_c_sender_organization_id: Sender organization id (required)
-        :param str v_c_permissions: Encoded user permissions returned by the CGK, for the entity user who initiated the boarding (required)
         :param str v_c_correlation_id: A globally unique id associated with your request
+        :param str v_c_sender_organization_id: Sender organization id
+        :param str v_c_permissions: Encoded user permissions returned by the CGK, for the entity user who initiated the boarding
         :param SaveSymEgressKey save_sym_egress_key: Provide egress Symmetric key information to save (create or store or refresh)
         :return: InlineResponse2015
                  If the method is called asynchronously,
@@ -312,12 +312,12 @@ class CreateNewWebhooksApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.save_sym_egress_key_with_http_info(v_c_sender_organization_id, v_c_permissions, **kwargs)
+            return self.save_sym_egress_key_with_http_info(**kwargs)
         else:
-            (data) = self.save_sym_egress_key_with_http_info(v_c_sender_organization_id, v_c_permissions, **kwargs)
+            (data) = self.save_sym_egress_key_with_http_info(**kwargs)
             return data
 
-    def save_sym_egress_key_with_http_info(self, v_c_sender_organization_id, v_c_permissions, **kwargs):
+    def save_sym_egress_key_with_http_info(self, **kwargs):
         """
         Create Webhook Security Keys
         Create security keys that CyberSource will use internally to connect to your servers and validate messages using a digital signature.  Select the CREATE example for CyberSource to generate the key on our server and maintain it for you as well. Remember to save the key in the API response, so that you can use it to validate messages later. 
@@ -327,20 +327,20 @@ class CreateNewWebhooksApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.save_sym_egress_key_with_http_info(v_c_sender_organization_id, v_c_permissions, callback=callback_function)
+        >>> thread = api.save_sym_egress_key_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str v_c_sender_organization_id: Sender organization id (required)
-        :param str v_c_permissions: Encoded user permissions returned by the CGK, for the entity user who initiated the boarding (required)
         :param str v_c_correlation_id: A globally unique id associated with your request
+        :param str v_c_sender_organization_id: Sender organization id
+        :param str v_c_permissions: Encoded user permissions returned by the CGK, for the entity user who initiated the boarding
         :param SaveSymEgressKey save_sym_egress_key: Provide egress Symmetric key information to save (create or store or refresh)
         :return: InlineResponse2015
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['v_c_sender_organization_id', 'v_c_permissions', 'v_c_correlation_id', 'save_sym_egress_key']
+        all_params = ['v_c_correlation_id', 'v_c_sender_organization_id', 'v_c_permissions', 'save_sym_egress_key']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -355,14 +355,6 @@ class CreateNewWebhooksApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'v_c_sender_organization_id' is set
-        if ('v_c_sender_organization_id' not in params) or (params['v_c_sender_organization_id'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_sender_organization_id` when calling `save_sym_egress_key`")
-            raise ValueError("Missing the required parameter `v_c_sender_organization_id` when calling `save_sym_egress_key`")
-        # verify the required parameter 'v_c_permissions' is set
-        if ('v_c_permissions' not in params) or (params['v_c_permissions'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_permissions` when calling `save_sym_egress_key`")
-            raise ValueError("Missing the required parameter `v_c_permissions` when calling `save_sym_egress_key`")
 
 
         collection_formats = {}

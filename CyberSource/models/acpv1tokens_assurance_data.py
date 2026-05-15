@@ -88,7 +88,7 @@ class Acpv1tokensAssuranceData(object):
     def verification_type(self):
         """
         Gets the verification_type of this Acpv1tokensAssuranceData.
-        Type of the verification data.   Possible values:   - `CARDHOLDER` (Default)   - `DEVICE` 
+        Optional. Type of the verification data.   Possible values:   - `CARDHOLDER` (Default)   - `DEVICE` 
 
         :return: The verification_type of this Acpv1tokensAssuranceData.
         :rtype: str
@@ -99,7 +99,7 @@ class Acpv1tokensAssuranceData(object):
     def verification_type(self, verification_type):
         """
         Sets the verification_type of this Acpv1tokensAssuranceData.
-        Type of the verification data.   Possible values:   - `CARDHOLDER` (Default)   - `DEVICE` 
+        Optional. Type of the verification data.   Possible values:   - `CARDHOLDER` (Default)   - `DEVICE` 
 
         :param verification_type: The verification_type of this Acpv1tokensAssuranceData.
         :type: str
@@ -111,7 +111,7 @@ class Acpv1tokensAssuranceData(object):
     def verification_entity(self):
         """
         Gets the verification_entity of this Acpv1tokensAssuranceData.
-        Entity performing the verification.   Possible value:     - `10` - VISA (Default) 
+        Optional. Entity performing the verification.   Possible value:     - `10` - VISA (Default) 
 
         :return: The verification_entity of this Acpv1tokensAssuranceData.
         :rtype: str
@@ -122,7 +122,7 @@ class Acpv1tokensAssuranceData(object):
     def verification_entity(self, verification_entity):
         """
         Sets the verification_entity of this Acpv1tokensAssuranceData.
-        Entity performing the verification.   Possible value:     - `10` - VISA (Default) 
+        Optional. Entity performing the verification.   Possible value:     - `10` - VISA (Default) 
 
         :param verification_entity: The verification_entity of this Acpv1tokensAssuranceData.
         :type: str
@@ -134,7 +134,7 @@ class Acpv1tokensAssuranceData(object):
     def verification_events(self):
         """
         Gets the verification_events of this Acpv1tokensAssuranceData.
-        Event where the verification occurred.   Possible values:     - `01` - Payment transaction   - `02` - Add card/Card enrollment   - `03` - Profile access   - `04` - Account verification 
+        Optional. Event where the verification occurred.   Possible values:     - `01` - Payment transaction   - `02` - Add card/Card enrollment   - `03` - Profile access   - `04` - Account verification 
 
         :return: The verification_events of this Acpv1tokensAssuranceData.
         :rtype: list[str]
@@ -145,7 +145,7 @@ class Acpv1tokensAssuranceData(object):
     def verification_events(self, verification_events):
         """
         Sets the verification_events of this Acpv1tokensAssuranceData.
-        Event where the verification occurred.   Possible values:     - `01` - Payment transaction   - `02` - Add card/Card enrollment   - `03` - Profile access   - `04` - Account verification 
+        Optional. Event where the verification occurred.   Possible values:     - `01` - Payment transaction   - `02` - Add card/Card enrollment   - `03` - Profile access   - `04` - Account verification 
 
         :param verification_events: The verification_events of this Acpv1tokensAssuranceData.
         :type: list[str]
@@ -157,7 +157,7 @@ class Acpv1tokensAssuranceData(object):
     def verification_method(self):
         """
         Gets the verification_method of this Acpv1tokensAssuranceData.
-        Method of the verification.   Possible values:     - `02` - App-based authentication   - `04` - One-time passcode   - `21` - Visa Token Service step-up: Device binding   - `22` - Visa Token Service step-up: Cardholder verification   - `23` - FIDO2 
+        Required. Method of the verification.   Possible values:     - `02` - App-based authentication   - `04` - One-time passcode   - `21` - Visa Token Service step-up: Device binding   - `22` - Visa Token Service step-up: Cardholder verification   - `23` - FIDO2 
 
         :return: The verification_method of this Acpv1tokensAssuranceData.
         :rtype: str
@@ -168,7 +168,7 @@ class Acpv1tokensAssuranceData(object):
     def verification_method(self, verification_method):
         """
         Sets the verification_method of this Acpv1tokensAssuranceData.
-        Method of the verification.   Possible values:     - `02` - App-based authentication   - `04` - One-time passcode   - `21` - Visa Token Service step-up: Device binding   - `22` - Visa Token Service step-up: Cardholder verification   - `23` - FIDO2 
+        Required. Method of the verification.   Possible values:     - `02` - App-based authentication   - `04` - One-time passcode   - `21` - Visa Token Service step-up: Device binding   - `22` - Visa Token Service step-up: Cardholder verification   - `23` - FIDO2 
 
         :param verification_method: The verification_method of this Acpv1tokensAssuranceData.
         :type: str
@@ -180,7 +180,7 @@ class Acpv1tokensAssuranceData(object):
     def verification_results(self):
         """
         Gets the verification_results of this Acpv1tokensAssuranceData.
-        Result of the verification.   Possible values:     - `01` - Verified   - `02` - Not Verified   - `03` - Not performed   - `04` - Not required   - `21` - Not allowed 
+        Required. Result of the verification.   Possible values:     - `01` - Verified   - `02` - Not Verified   - `03` - Not performed   - `04` - Not required   - `21` - Not allowed 
 
         :return: The verification_results of this Acpv1tokensAssuranceData.
         :rtype: str
@@ -191,7 +191,7 @@ class Acpv1tokensAssuranceData(object):
     def verification_results(self, verification_results):
         """
         Sets the verification_results of this Acpv1tokensAssuranceData.
-        Result of the verification.   Possible values:     - `01` - Verified   - `02` - Not Verified   - `03` - Not performed   - `04` - Not required   - `21` - Not allowed 
+        Required. Result of the verification.   Possible values:     - `01` - Verified   - `02` - Not Verified   - `03` - Not performed   - `04` - Not required   - `21` - Not allowed 
 
         :param verification_results: The verification_results of this Acpv1tokensAssuranceData.
         :type: str
@@ -203,7 +203,7 @@ class Acpv1tokensAssuranceData(object):
     def verification_timestamp(self):
         """
         Gets the verification_timestamp of this Acpv1tokensAssuranceData.
-        Date and time the verification occurred. UTC time in Unix epoch format.
+        Required. Date and time the verification occurred. UTC time in Unix epoch format.
 
         :return: The verification_timestamp of this Acpv1tokensAssuranceData.
         :rtype: str
@@ -214,7 +214,7 @@ class Acpv1tokensAssuranceData(object):
     def verification_timestamp(self, verification_timestamp):
         """
         Sets the verification_timestamp of this Acpv1tokensAssuranceData.
-        Date and time the verification occurred. UTC time in Unix epoch format.
+        Required. Date and time the verification occurred. UTC time in Unix epoch format.
 
         :param verification_timestamp: The verification_timestamp of this Acpv1tokensAssuranceData.
         :type: str

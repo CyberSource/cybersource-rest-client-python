@@ -30,94 +30,51 @@ class InlineResponse4008(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'status': 'str',
-        'message': 'str',
         'code': 'str',
-        'details': 'list[InlineResponse4008Details]',
-        'submit_time_utc': 'str'
+        'message': 'str',
+        'localization_key': 'str',
+        'correlation_id': 'str',
+        'detail': 'str',
+        'fields': 'list[InlineResponse4008Fields]'
     }
 
     attribute_map = {
-        'status': 'status',
-        'message': 'message',
         'code': 'code',
-        'details': 'details',
-        'submit_time_utc': 'submitTimeUtc'
+        'message': 'message',
+        'localization_key': 'localizationKey',
+        'correlation_id': 'correlationId',
+        'detail': 'detail',
+        'fields': 'fields'
     }
 
-    def __init__(self, status=None, message=None, code=None, details=None, submit_time_utc=None):
+    def __init__(self, code=None, message=None, localization_key=None, correlation_id=None, detail=None, fields=None):
         """
         InlineResponse4008 - a model defined in Swagger
         """
 
-        self._status = None
-        self._message = None
         self._code = None
-        self._details = None
-        self._submit_time_utc = None
+        self._message = None
+        self._localization_key = None
+        self._correlation_id = None
+        self._detail = None
+        self._fields = None
 
-        if status is not None:
-          self.status = status
-        if message is not None:
-          self.message = message
-        if code is not None:
-          self.code = code
-        if details is not None:
-          self.details = details
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse4008.
-        The status of the submitted request.  Possible values: - BAD_REQUEST
-
-        :return: The status of this InlineResponse4008.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse4008.
-        The status of the submitted request.  Possible values: - BAD_REQUEST
-
-        :param status: The status of this InlineResponse4008.
-        :type: str
-        """
-
-        self._status = status
-
-    @property
-    def message(self):
-        """
-        Gets the message of this InlineResponse4008.
-        The detail message related to the status and reason listed above.
-
-        :return: The message of this InlineResponse4008.
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """
-        Sets the message of this InlineResponse4008.
-        The detail message related to the status and reason listed above.
-
-        :param message: The message of this InlineResponse4008.
-        :type: str
-        """
-
-        self._message = message
+        self.code = code
+        self.message = message
+        if localization_key is not None:
+          self.localization_key = localization_key
+        if correlation_id is not None:
+          self.correlation_id = correlation_id
+        if detail is not None:
+          self.detail = detail
+        if fields is not None:
+          self.fields = fields
 
     @property
     def code(self):
         """
         Gets the code of this InlineResponse4008.
-        An optional short string which identifies the exact error.
+        Error code
 
         :return: The code of this InlineResponse4008.
         :rtype: str
@@ -128,7 +85,7 @@ class InlineResponse4008(object):
     def code(self, code):
         """
         Sets the code of this InlineResponse4008.
-        An optional short string which identifies the exact error.
+        Error code
 
         :param code: The code of this InlineResponse4008.
         :type: str
@@ -137,50 +94,119 @@ class InlineResponse4008(object):
         self._code = code
 
     @property
-    def details(self):
+    def message(self):
         """
-        Gets the details of this InlineResponse4008.
-        An optional array which provides more details of the error.
+        Gets the message of this InlineResponse4008.
+        Error message
 
-        :return: The details of this InlineResponse4008.
-        :rtype: list[InlineResponse4008Details]
-        """
-        return self._details
-
-    @details.setter
-    def details(self, details):
-        """
-        Sets the details of this InlineResponse4008.
-        An optional array which provides more details of the error.
-
-        :param details: The details of this InlineResponse4008.
-        :type: list[InlineResponse4008Details]
-        """
-
-        self._details = details
-
-    @property
-    def submit_time_utc(self):
-        """
-        Gets the submit_time_utc of this InlineResponse4008.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :return: The submit_time_utc of this InlineResponse4008.
+        :return: The message of this InlineResponse4008.
         :rtype: str
         """
-        return self._submit_time_utc
+        return self._message
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @message.setter
+    def message(self, message):
         """
-        Sets the submit_time_utc of this InlineResponse4008.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Sets the message of this InlineResponse4008.
+        Error message
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse4008.
+        :param message: The message of this InlineResponse4008.
         :type: str
         """
 
-        self._submit_time_utc = submit_time_utc
+        self._message = message
+
+    @property
+    def localization_key(self):
+        """
+        Gets the localization_key of this InlineResponse4008.
+        Localization Key Name
+
+        :return: The localization_key of this InlineResponse4008.
+        :rtype: str
+        """
+        return self._localization_key
+
+    @localization_key.setter
+    def localization_key(self, localization_key):
+        """
+        Sets the localization_key of this InlineResponse4008.
+        Localization Key Name
+
+        :param localization_key: The localization_key of this InlineResponse4008.
+        :type: str
+        """
+
+        self._localization_key = localization_key
+
+    @property
+    def correlation_id(self):
+        """
+        Gets the correlation_id of this InlineResponse4008.
+        Correlation Id
+
+        :return: The correlation_id of this InlineResponse4008.
+        :rtype: str
+        """
+        return self._correlation_id
+
+    @correlation_id.setter
+    def correlation_id(self, correlation_id):
+        """
+        Sets the correlation_id of this InlineResponse4008.
+        Correlation Id
+
+        :param correlation_id: The correlation_id of this InlineResponse4008.
+        :type: str
+        """
+
+        self._correlation_id = correlation_id
+
+    @property
+    def detail(self):
+        """
+        Gets the detail of this InlineResponse4008.
+        Error Detail
+
+        :return: The detail of this InlineResponse4008.
+        :rtype: str
+        """
+        return self._detail
+
+    @detail.setter
+    def detail(self, detail):
+        """
+        Sets the detail of this InlineResponse4008.
+        Error Detail
+
+        :param detail: The detail of this InlineResponse4008.
+        :type: str
+        """
+
+        self._detail = detail
+
+    @property
+    def fields(self):
+        """
+        Gets the fields of this InlineResponse4008.
+        Error fields List
+
+        :return: The fields of this InlineResponse4008.
+        :rtype: list[InlineResponse4008Fields]
+        """
+        return self._fields
+
+    @fields.setter
+    def fields(self, fields):
+        """
+        Sets the fields of this InlineResponse4008.
+        Error fields List
+
+        :param fields: The fields of this InlineResponse4008.
+        :type: list[InlineResponse4008Fields]
+        """
+
+        self._fields = fields
 
     def to_dict(self):
         """

@@ -89,7 +89,8 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'signed_pares_status_reason': 'str',
         'signed_pares': 'str',
         'acs_reference_number': 'str',
-        'ds_reference_number': 'str'
+        'ds_reference_number': 'str',
+        'score_request': 'int'
     }
 
     attribute_map = {
@@ -152,10 +153,11 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'signed_pares_status_reason': 'signedParesStatusReason',
         'signed_pares': 'signedPares',
         'acs_reference_number': 'acsReferenceNumber',
-        'ds_reference_number': 'dsReferenceNumber'
+        'ds_reference_number': 'dsReferenceNumber',
+        'score_request': 'scoreRequest'
     }
 
-    def __init__(self, cavv=None, transaction_flow_indicator=None, cavv_algorithm=None, eci_raw=None, pares_status=None, veres_enrolled=None, xid=None, ucaf_collection_indicator=None, ucaf_authentication_data=None, strong_authentication=None, directory_server_transaction_id=None, pa_specification_version=None, authentication_type=None, response_access_token=None, acs_transaction_id=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, network_score=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, authentication_brand=None, effective_authentication_type=None, signed_pares_status_reason=None, signed_pares=None, acs_reference_number=None, ds_reference_number=None):
+    def __init__(self, cavv=None, transaction_flow_indicator=None, cavv_algorithm=None, eci_raw=None, pares_status=None, veres_enrolled=None, xid=None, ucaf_collection_indicator=None, ucaf_authentication_data=None, strong_authentication=None, directory_server_transaction_id=None, pa_specification_version=None, authentication_type=None, response_access_token=None, acs_transaction_id=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, network_score=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, authentication_brand=None, effective_authentication_type=None, signed_pares_status_reason=None, signed_pares=None, acs_reference_number=None, ds_reference_number=None, score_request=None):
         """
         Ptsv2paymentsConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -220,6 +222,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         self._signed_pares = None
         self._acs_reference_number = None
         self._ds_reference_number = None
+        self._score_request = None
 
         if cavv is not None:
           self.cavv = cavv
@@ -341,6 +344,8 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
           self.acs_reference_number = acs_reference_number
         if ds_reference_number is not None:
           self.ds_reference_number = ds_reference_number
+        if score_request is not None:
+          self.score_request = score_request
 
     @property
     def cavv(self):
@@ -1719,6 +1724,29 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         """
 
         self._ds_reference_number = ds_reference_number
+
+    @property
+    def score_request(self):
+        """
+        Gets the score_request of this Ptsv2paymentsConsumerAuthenticationInformation.
+        Risk Assessment from Mastercard. This is to be sent by merchant if they would like to request a score
+
+        :return: The score_request of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :rtype: int
+        """
+        return self._score_request
+
+    @score_request.setter
+    def score_request(self, score_request):
+        """
+        Sets the score_request of this Ptsv2paymentsConsumerAuthenticationInformation.
+        Risk Assessment from Mastercard. This is to be sent by merchant if they would like to request a score
+
+        :param score_request: The score_request of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :type: int
+        """
+
+        self._score_request = score_request
 
     def to_dict(self):
         """

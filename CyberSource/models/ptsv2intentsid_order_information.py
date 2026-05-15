@@ -33,7 +33,7 @@ class Ptsv2intentsidOrderInformation(object):
         'amount_details': 'Ptsv2intentsOrderInformationAmountDetails',
         'ship_to': 'Ptsv2intentsOrderInformationShipTo',
         'line_items': 'list[Ptsv2intentsOrderInformationLineItems]',
-        'invoice_details': 'Ptsv2intentsOrderInformationInvoiceDetails'
+        'invoice_details': 'Ptsv2billingagreementsOrderInformationInvoiceDetails'
     }
 
     attribute_map = {
@@ -131,7 +131,7 @@ class Ptsv2intentsidOrderInformation(object):
         Gets the invoice_details of this Ptsv2intentsidOrderInformation.
 
         :return: The invoice_details of this Ptsv2intentsidOrderInformation.
-        :rtype: Ptsv2intentsOrderInformationInvoiceDetails
+        :rtype: Ptsv2billingagreementsOrderInformationInvoiceDetails
         """
         return self._invoice_details
 
@@ -141,7 +141,7 @@ class Ptsv2intentsidOrderInformation(object):
         Sets the invoice_details of this Ptsv2intentsidOrderInformation.
 
         :param invoice_details: The invoice_details of this Ptsv2intentsidOrderInformation.
-        :type: Ptsv2intentsOrderInformationInvoiceDetails
+        :type: Ptsv2billingagreementsOrderInformationInvoiceDetails
         """
 
         self._invoice_details = invoice_details

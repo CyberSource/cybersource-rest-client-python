@@ -32,16 +32,18 @@ class RiskProducts(object):
     swagger_types = {
         'fraud_management_essentials': 'RiskProductsFraudManagementEssentials',
         'decision_manager': 'RiskProductsDecisionManager',
-        'portfolio_risk_controls': 'RiskProductsPortfolioRiskControls'
+        'portfolio_risk_controls': 'RiskProductsPortfolioRiskControls',
+        'enhanced_authentication': 'PaymentsProductsPayerAuthentication'
     }
 
     attribute_map = {
         'fraud_management_essentials': 'fraudManagementEssentials',
         'decision_manager': 'decisionManager',
-        'portfolio_risk_controls': 'portfolioRiskControls'
+        'portfolio_risk_controls': 'portfolioRiskControls',
+        'enhanced_authentication': 'enhancedAuthentication'
     }
 
-    def __init__(self, fraud_management_essentials=None, decision_manager=None, portfolio_risk_controls=None):
+    def __init__(self, fraud_management_essentials=None, decision_manager=None, portfolio_risk_controls=None, enhanced_authentication=None):
         """
         RiskProducts - a model defined in Swagger
         """
@@ -49,6 +51,7 @@ class RiskProducts(object):
         self._fraud_management_essentials = None
         self._decision_manager = None
         self._portfolio_risk_controls = None
+        self._enhanced_authentication = None
 
         if fraud_management_essentials is not None:
           self.fraud_management_essentials = fraud_management_essentials
@@ -56,6 +59,8 @@ class RiskProducts(object):
           self.decision_manager = decision_manager
         if portfolio_risk_controls is not None:
           self.portfolio_risk_controls = portfolio_risk_controls
+        if enhanced_authentication is not None:
+          self.enhanced_authentication = enhanced_authentication
 
     @property
     def fraud_management_essentials(self):
@@ -119,6 +124,27 @@ class RiskProducts(object):
         """
 
         self._portfolio_risk_controls = portfolio_risk_controls
+
+    @property
+    def enhanced_authentication(self):
+        """
+        Gets the enhanced_authentication of this RiskProducts.
+
+        :return: The enhanced_authentication of this RiskProducts.
+        :rtype: PaymentsProductsPayerAuthentication
+        """
+        return self._enhanced_authentication
+
+    @enhanced_authentication.setter
+    def enhanced_authentication(self, enhanced_authentication):
+        """
+        Sets the enhanced_authentication of this RiskProducts.
+
+        :param enhanced_authentication: The enhanced_authentication of this RiskProducts.
+        :type: PaymentsProductsPayerAuthentication
+        """
+
+        self._enhanced_authentication = enhanced_authentication
 
     def to_dict(self):
         """

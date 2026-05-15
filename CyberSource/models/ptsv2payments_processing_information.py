@@ -72,7 +72,12 @@ class Ptsv2paymentsProcessingInformation(object):
         'transaction_type_indicator': 'str',
         'purpose_of_payment': 'str',
         'language_code': 'str',
-        'original_payment_id': 'str'
+        'original_payment_id': 'str',
+        'amex_indirect_model_type': 'str',
+        'wallet_transaction_intent': 'float',
+        'destination_type': 'float',
+        'program_indicators': 'Ptsv2paymentsProcessingInformationProgramIndicators',
+        'inquiry_type': 'str'
     }
 
     attribute_map = {
@@ -118,10 +123,15 @@ class Ptsv2paymentsProcessingInformation(object):
         'transaction_type_indicator': 'transactionTypeIndicator',
         'purpose_of_payment': 'purposeOfPayment',
         'language_code': 'languageCode',
-        'original_payment_id': 'originalPaymentId'
+        'original_payment_id': 'originalPaymentId',
+        'amex_indirect_model_type': 'amexIndirectModelType',
+        'wallet_transaction_intent': 'walletTransactionIntent',
+        'destination_type': 'destinationType',
+        'program_indicators': 'programIndicators',
+        'inquiry_type': 'inquiryType'
     }
 
-    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, merchant_verification_value=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, timeout=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None, enabler_id=None, processing_instruction=None, transaction_type_indicator=None, purpose_of_payment=None, language_code=None, original_payment_id=None):
+    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, merchant_verification_value=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, timeout=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None, enabler_id=None, processing_instruction=None, transaction_type_indicator=None, purpose_of_payment=None, language_code=None, original_payment_id=None, amex_indirect_model_type=None, wallet_transaction_intent=None, destination_type=None, program_indicators=None, inquiry_type=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
@@ -169,6 +179,11 @@ class Ptsv2paymentsProcessingInformation(object):
         self._purpose_of_payment = None
         self._language_code = None
         self._original_payment_id = None
+        self._amex_indirect_model_type = None
+        self._wallet_transaction_intent = None
+        self._destination_type = None
+        self._program_indicators = None
+        self._inquiry_type = None
 
         if action_list is not None:
           self.action_list = action_list
@@ -256,6 +271,16 @@ class Ptsv2paymentsProcessingInformation(object):
           self.language_code = language_code
         if original_payment_id is not None:
           self.original_payment_id = original_payment_id
+        if amex_indirect_model_type is not None:
+          self.amex_indirect_model_type = amex_indirect_model_type
+        if wallet_transaction_intent is not None:
+          self.wallet_transaction_intent = wallet_transaction_intent
+        if destination_type is not None:
+          self.destination_type = destination_type
+        if program_indicators is not None:
+          self.program_indicators = program_indicators
+        if inquiry_type is not None:
+          self.inquiry_type = inquiry_type
 
     @property
     def action_list(self):
@@ -1050,7 +1075,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def network_partner_id(self):
         """
         Gets the network_partner_id of this Ptsv2paymentsProcessingInformation.
-        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction.  This field is supported for Visa Platform Connect. 
+        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction. This field is supported for Visa Platform Connect, Chase Paymentech Salem. 
 
         :return: The network_partner_id of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -1061,7 +1086,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def network_partner_id(self, network_partner_id):
         """
         Sets the network_partner_id of this Ptsv2paymentsProcessingInformation.
-        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction.  This field is supported for Visa Platform Connect. 
+        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction. This field is supported for Visa Platform Connect, Chase Paymentech Salem. 
 
         :param network_partner_id: The network_partner_id of this Ptsv2paymentsProcessingInformation.
         :type: str
@@ -1229,6 +1254,119 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._original_payment_id = original_payment_id
+
+    @property
+    def amex_indirect_model_type(self):
+        """
+        Gets the amex_indirect_model_type of this Ptsv2paymentsProcessingInformation.
+        Effective with the April 2025 release, American Express is introducing the following new Indirect Acceptor models : - Digital Wallet Operator   - Staged back to back transaction   - Peer to peer (P2P) transaction   - Stored value transaction - Marketplace  Each model must have a separate American Express Merchant Account number and will be assigned a unique Indirect Model Type value.  Valid/Sample Values : - `1`: Bill payment provider - `2`: Installment payment transaction - `3`: Marketplace - `4`: Peer to peer transaction - `5`: Staged back to back transaction - `6`: Stored value transaction 
+
+        :return: The amex_indirect_model_type of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._amex_indirect_model_type
+
+    @amex_indirect_model_type.setter
+    def amex_indirect_model_type(self, amex_indirect_model_type):
+        """
+        Sets the amex_indirect_model_type of this Ptsv2paymentsProcessingInformation.
+        Effective with the April 2025 release, American Express is introducing the following new Indirect Acceptor models : - Digital Wallet Operator   - Staged back to back transaction   - Peer to peer (P2P) transaction   - Stored value transaction - Marketplace  Each model must have a separate American Express Merchant Account number and will be assigned a unique Indirect Model Type value.  Valid/Sample Values : - `1`: Bill payment provider - `2`: Installment payment transaction - `3`: Marketplace - `4`: Peer to peer transaction - `5`: Staged back to back transaction - `6`: Stored value transaction 
+
+        :param amex_indirect_model_type: The amex_indirect_model_type of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._amex_indirect_model_type = amex_indirect_model_type
+
+    @property
+    def wallet_transaction_intent(self):
+        """
+        Gets the wallet_transaction_intent of this Ptsv2paymentsProcessingInformation.
+        Identifies the type of operation being performed by the staged digital wallet operator. The value distinguishes between a Cash-in transaction (coded as \"02\"), where funds are loaded into the digital wallet from a registered payment card, and a Purchase transaction (coded as \"01\"), where the wallet is used to make a payment to a merchant or transfer funds between wallets. This distinction is essential for transaction processing, reporting, and ensuring compliance with the specific rules and requirements associated with each card brand and transaction type. 
+
+        :return: The wallet_transaction_intent of this Ptsv2paymentsProcessingInformation.
+        :rtype: float
+        """
+        return self._wallet_transaction_intent
+
+    @wallet_transaction_intent.setter
+    def wallet_transaction_intent(self, wallet_transaction_intent):
+        """
+        Sets the wallet_transaction_intent of this Ptsv2paymentsProcessingInformation.
+        Identifies the type of operation being performed by the staged digital wallet operator. The value distinguishes between a Cash-in transaction (coded as \"02\"), where funds are loaded into the digital wallet from a registered payment card, and a Purchase transaction (coded as \"01\"), where the wallet is used to make a payment to a merchant or transfer funds between wallets. This distinction is essential for transaction processing, reporting, and ensuring compliance with the specific rules and requirements associated with each card brand and transaction type. 
+
+        :param wallet_transaction_intent: The wallet_transaction_intent of this Ptsv2paymentsProcessingInformation.
+        :type: float
+        """
+
+        self._wallet_transaction_intent = wallet_transaction_intent
+
+    @property
+    def destination_type(self):
+        """
+        Gets the destination_type of this Ptsv2paymentsProcessingInformation.
+        Identifies the destination/purpose of the cash-in:  • 04: M2M (Same ownership, same portfolio/arrangement) • 05: P2P (For another holder, same wallet/arrangement) • 06: Transfer to another arrangement (same ownership) • 07: Transfer to another arrangement (other ownership) • 08: Transfer to stored value digital wallet. 
+
+        :return: The destination_type of this Ptsv2paymentsProcessingInformation.
+        :rtype: float
+        """
+        return self._destination_type
+
+    @destination_type.setter
+    def destination_type(self, destination_type):
+        """
+        Sets the destination_type of this Ptsv2paymentsProcessingInformation.
+        Identifies the destination/purpose of the cash-in:  • 04: M2M (Same ownership, same portfolio/arrangement) • 05: P2P (For another holder, same wallet/arrangement) • 06: Transfer to another arrangement (same ownership) • 07: Transfer to another arrangement (other ownership) • 08: Transfer to stored value digital wallet. 
+
+        :param destination_type: The destination_type of this Ptsv2paymentsProcessingInformation.
+        :type: float
+        """
+
+        self._destination_type = destination_type
+
+    @property
+    def program_indicators(self):
+        """
+        Gets the program_indicators of this Ptsv2paymentsProcessingInformation.
+
+        :return: The program_indicators of this Ptsv2paymentsProcessingInformation.
+        :rtype: Ptsv2paymentsProcessingInformationProgramIndicators
+        """
+        return self._program_indicators
+
+    @program_indicators.setter
+    def program_indicators(self, program_indicators):
+        """
+        Sets the program_indicators of this Ptsv2paymentsProcessingInformation.
+
+        :param program_indicators: The program_indicators of this Ptsv2paymentsProcessingInformation.
+        :type: Ptsv2paymentsProcessingInformationProgramIndicators
+        """
+
+        self._program_indicators = program_indicators
+
+    @property
+    def inquiry_type(self):
+        """
+        Gets the inquiry_type of this Ptsv2paymentsProcessingInformation.
+        Type of inquiry for Zero dollar transactions. Mastercard is introducing Mastercard One Credential, a single, digitally connected credential that offers cardholders the ability to access multiple payment methods.   This field is used for Product Status Inquiry (PSI), Account Status Inquiry with Product Status Inquiry (ASI with PSI), and Account Status Inquiry with Product Status Inquiry and Probability Indicator.  This field is supported for Zero dollar transactions only.  Possible values: - `01`: Product status inquiry - `02`: Account status inquiry with product status inquiry - `03`: Account status Inquiry with Product Status Inquiry and Probability Indicator  #### Used by **Authorization (Zero dollar transactions)** Optional field. 
+
+        :return: The inquiry_type of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._inquiry_type
+
+    @inquiry_type.setter
+    def inquiry_type(self, inquiry_type):
+        """
+        Sets the inquiry_type of this Ptsv2paymentsProcessingInformation.
+        Type of inquiry for Zero dollar transactions. Mastercard is introducing Mastercard One Credential, a single, digitally connected credential that offers cardholders the ability to access multiple payment methods.   This field is used for Product Status Inquiry (PSI), Account Status Inquiry with Product Status Inquiry (ASI with PSI), and Account Status Inquiry with Product Status Inquiry and Probability Indicator.  This field is supported for Zero dollar transactions only.  Possible values: - `01`: Product status inquiry - `02`: Account status inquiry with product status inquiry - `03`: Account status Inquiry with Product Status Inquiry and Probability Indicator  #### Used by **Authorization (Zero dollar transactions)** Optional field. 
+
+        :param inquiry_type: The inquiry_type of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._inquiry_type = inquiry_type
 
     def to_dict(self):
         """

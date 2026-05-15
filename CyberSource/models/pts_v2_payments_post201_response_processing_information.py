@@ -33,6 +33,7 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
         'bank_transfer_options': 'PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions',
         'payment_solution': 'str',
         'enhanced_data_enabled': 'bool',
+        'digital_service_indicator': 'str',
         'capture_options': 'PtsV2PaymentsPost201ResponseProcessingInformationCaptureOptions',
         'authorization_options': 'PtsV2PaymentsPost201ResponseProcessingInformationAuthorizationOptions',
         'purchase_options': 'PtsV2PaymentsPost201ResponseProcessingInformationPurchaseOptions'
@@ -42,12 +43,13 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
         'bank_transfer_options': 'bankTransferOptions',
         'payment_solution': 'paymentSolution',
         'enhanced_data_enabled': 'enhancedDataEnabled',
+        'digital_service_indicator': 'digitalServiceIndicator',
         'capture_options': 'captureOptions',
         'authorization_options': 'authorizationOptions',
         'purchase_options': 'purchaseOptions'
     }
 
-    def __init__(self, bank_transfer_options=None, payment_solution=None, enhanced_data_enabled=None, capture_options=None, authorization_options=None, purchase_options=None):
+    def __init__(self, bank_transfer_options=None, payment_solution=None, enhanced_data_enabled=None, digital_service_indicator=None, capture_options=None, authorization_options=None, purchase_options=None):
         """
         PtsV2PaymentsPost201ResponseProcessingInformation - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
         self._bank_transfer_options = None
         self._payment_solution = None
         self._enhanced_data_enabled = None
+        self._digital_service_indicator = None
         self._capture_options = None
         self._authorization_options = None
         self._purchase_options = None
@@ -65,6 +68,8 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
           self.payment_solution = payment_solution
         if enhanced_data_enabled is not None:
           self.enhanced_data_enabled = enhanced_data_enabled
+        if digital_service_indicator is not None:
+          self.digital_service_indicator = digital_service_indicator
         if capture_options is not None:
           self.capture_options = capture_options
         if authorization_options is not None:
@@ -138,6 +143,29 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
         """
 
         self._enhanced_data_enabled = enhanced_data_enabled
+
+    @property
+    def digital_service_indicator(self):
+        """
+        Gets the digital_service_indicator of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        Mastercard Digital Enablement Service (MDES) digital service indicators received in the authorization response message for MDES transactions.   This data is provided in the 0110 response in the Field 34—Acceptance Environment Data (TLV Format), Dataset ID 04—Additional Service Result Data, Tag DF1F—Mastercard Digital Enablement Service Indicator for Acquirer to acquirers.  This field is in ANS, EBCDIC format and flows in Field 34, DSID 04 Tag DF1F, mapped to Mastercard Data Element DE119, Sub-element 004.  This field is supported for all flavors of Authorization response only.  #### Used by **Authorization Response** Response field only. 
+
+        :return: The digital_service_indicator of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        :rtype: str
+        """
+        return self._digital_service_indicator
+
+    @digital_service_indicator.setter
+    def digital_service_indicator(self, digital_service_indicator):
+        """
+        Sets the digital_service_indicator of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        Mastercard Digital Enablement Service (MDES) digital service indicators received in the authorization response message for MDES transactions.   This data is provided in the 0110 response in the Field 34—Acceptance Environment Data (TLV Format), Dataset ID 04—Additional Service Result Data, Tag DF1F—Mastercard Digital Enablement Service Indicator for Acquirer to acquirers.  This field is in ANS, EBCDIC format and flows in Field 34, DSID 04 Tag DF1F, mapped to Mastercard Data Element DE119, Sub-element 004.  This field is supported for all flavors of Authorization response only.  #### Used by **Authorization Response** Response field only. 
+
+        :param digital_service_indicator: The digital_service_indicator of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        :type: str
+        """
+
+        self._digital_service_indicator = digital_service_indicator
 
     @property
     def capture_options(self):

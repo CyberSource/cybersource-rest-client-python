@@ -35,7 +35,8 @@ class TmsEmbeddedInstrumentIdentifierBillTo(object):
         'locality': 'str',
         'administrative_area': 'str',
         'postal_code': 'str',
-        'country': 'str'
+        'country': 'str',
+        'email': 'str'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class TmsEmbeddedInstrumentIdentifierBillTo(object):
         'locality': 'locality',
         'administrative_area': 'administrativeArea',
         'postal_code': 'postalCode',
-        'country': 'country'
+        'country': 'country',
+        'email': 'email'
     }
 
-    def __init__(self, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, country=None):
+    def __init__(self, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, country=None, email=None):
         """
         TmsEmbeddedInstrumentIdentifierBillTo - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class TmsEmbeddedInstrumentIdentifierBillTo(object):
         self._administrative_area = None
         self._postal_code = None
         self._country = None
+        self._email = None
 
         if address1 is not None:
           self.address1 = address1
@@ -71,6 +74,8 @@ class TmsEmbeddedInstrumentIdentifierBillTo(object):
           self.postal_code = postal_code
         if country is not None:
           self.country = country
+        if email is not None:
+          self.email = email
 
     @property
     def address1(self):
@@ -209,6 +214,29 @@ class TmsEmbeddedInstrumentIdentifierBillTo(object):
         """
 
         self._country = country
+
+    @property
+    def email(self):
+        """
+        Gets the email of this TmsEmbeddedInstrumentIdentifierBillTo.
+        Customer's email address, including the full domain name. 
+
+        :return: The email of this TmsEmbeddedInstrumentIdentifierBillTo.
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this TmsEmbeddedInstrumentIdentifierBillTo.
+        Customer's email address, including the full domain name. 
+
+        :param email: The email of this TmsEmbeddedInstrumentIdentifierBillTo.
+        :type: str
+        """
+
+        self._email = email
 
     def to_dict(self):
         """

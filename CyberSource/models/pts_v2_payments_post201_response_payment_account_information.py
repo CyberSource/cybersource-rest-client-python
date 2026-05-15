@@ -30,22 +30,27 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'card': 'PtsV2PaymentsPost201ResponsePaymentAccountInformationCard'
+        'card': 'PtsV2PaymentsPost201ResponsePaymentAccountInformationCard',
+        'tokenized_card': 'PtsV2PaymentsPost201ResponsePaymentAccountInformationTokenizedCard'
     }
 
     attribute_map = {
-        'card': 'card'
+        'card': 'card',
+        'tokenized_card': 'tokenizedCard'
     }
 
-    def __init__(self, card=None):
+    def __init__(self, card=None, tokenized_card=None):
         """
         PtsV2PaymentsPost201ResponsePaymentAccountInformation - a model defined in Swagger
         """
 
         self._card = None
+        self._tokenized_card = None
 
         if card is not None:
           self.card = card
+        if tokenized_card is not None:
+          self.tokenized_card = tokenized_card
 
     @property
     def card(self):
@@ -67,6 +72,27 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformation(object):
         """
 
         self._card = card
+
+    @property
+    def tokenized_card(self):
+        """
+        Gets the tokenized_card of this PtsV2PaymentsPost201ResponsePaymentAccountInformation.
+
+        :return: The tokenized_card of this PtsV2PaymentsPost201ResponsePaymentAccountInformation.
+        :rtype: PtsV2PaymentsPost201ResponsePaymentAccountInformationTokenizedCard
+        """
+        return self._tokenized_card
+
+    @tokenized_card.setter
+    def tokenized_card(self, tokenized_card):
+        """
+        Sets the tokenized_card of this PtsV2PaymentsPost201ResponsePaymentAccountInformation.
+
+        :param tokenized_card: The tokenized_card of this PtsV2PaymentsPost201ResponsePaymentAccountInformation.
+        :type: PtsV2PaymentsPost201ResponsePaymentAccountInformationTokenizedCard
+        """
+
+        self._tokenized_card = tokenized_card
 
     def to_dict(self):
         """

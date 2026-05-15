@@ -32,16 +32,18 @@ class InlineResponse2014SetupsCommerceSolutions(object):
     swagger_types = {
         'token_management': 'InlineResponse2014SetupsPaymentsCardProcessing',
         'account_updater': 'InlineResponse2014SetupsPaymentsCardProcessing',
-        'bin_lookup': 'InlineResponse2014SetupsPaymentsCardProcessing'
+        'bin_lookup': 'InlineResponse2014SetupsPaymentsCardProcessing',
+        'agentic_commerce': 'InlineResponse2014SetupsPaymentsCardProcessing'
     }
 
     attribute_map = {
         'token_management': 'tokenManagement',
         'account_updater': 'accountUpdater',
-        'bin_lookup': 'binLookup'
+        'bin_lookup': 'binLookup',
+        'agentic_commerce': 'agenticCommerce'
     }
 
-    def __init__(self, token_management=None, account_updater=None, bin_lookup=None):
+    def __init__(self, token_management=None, account_updater=None, bin_lookup=None, agentic_commerce=None):
         """
         InlineResponse2014SetupsCommerceSolutions - a model defined in Swagger
         """
@@ -49,6 +51,7 @@ class InlineResponse2014SetupsCommerceSolutions(object):
         self._token_management = None
         self._account_updater = None
         self._bin_lookup = None
+        self._agentic_commerce = None
 
         if token_management is not None:
           self.token_management = token_management
@@ -56,6 +59,8 @@ class InlineResponse2014SetupsCommerceSolutions(object):
           self.account_updater = account_updater
         if bin_lookup is not None:
           self.bin_lookup = bin_lookup
+        if agentic_commerce is not None:
+          self.agentic_commerce = agentic_commerce
 
     @property
     def token_management(self):
@@ -119,6 +124,27 @@ class InlineResponse2014SetupsCommerceSolutions(object):
         """
 
         self._bin_lookup = bin_lookup
+
+    @property
+    def agentic_commerce(self):
+        """
+        Gets the agentic_commerce of this InlineResponse2014SetupsCommerceSolutions.
+
+        :return: The agentic_commerce of this InlineResponse2014SetupsCommerceSolutions.
+        :rtype: InlineResponse2014SetupsPaymentsCardProcessing
+        """
+        return self._agentic_commerce
+
+    @agentic_commerce.setter
+    def agentic_commerce(self, agentic_commerce):
+        """
+        Sets the agentic_commerce of this InlineResponse2014SetupsCommerceSolutions.
+
+        :param agentic_commerce: The agentic_commerce of this InlineResponse2014SetupsCommerceSolutions.
+        :type: InlineResponse2014SetupsPaymentsCardProcessing
+        """
+
+        self._agentic_commerce = agentic_commerce
 
     def to_dict(self):
         """

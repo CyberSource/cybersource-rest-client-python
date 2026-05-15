@@ -31,26 +31,31 @@ class Ptsv2paymentsidcapturesPointOfSaleInformation(object):
     """
     swagger_types = {
         'emv': 'Ptsv2paymentsidcapturesPointOfSaleInformationEmv',
-        'amex_capn_data': 'str'
+        'amex_capn_data': 'str',
+        'encrypted_key_id': 'str'
     }
 
     attribute_map = {
         'emv': 'emv',
-        'amex_capn_data': 'amexCapnData'
+        'amex_capn_data': 'amexCapnData',
+        'encrypted_key_id': 'encryptedKeyId'
     }
 
-    def __init__(self, emv=None, amex_capn_data=None):
+    def __init__(self, emv=None, amex_capn_data=None, encrypted_key_id=None):
         """
         Ptsv2paymentsidcapturesPointOfSaleInformation - a model defined in Swagger
         """
 
         self._emv = None
         self._amex_capn_data = None
+        self._encrypted_key_id = None
 
         if emv is not None:
           self.emv = emv
         if amex_capn_data is not None:
           self.amex_capn_data = amex_capn_data
+        if encrypted_key_id is not None:
+          self.encrypted_key_id = encrypted_key_id
 
     @property
     def emv(self):
@@ -95,6 +100,29 @@ class Ptsv2paymentsidcapturesPointOfSaleInformation(object):
         """
 
         self._amex_capn_data = amex_capn_data
+
+    @property
+    def encrypted_key_id(self):
+        """
+        Gets the encrypted_key_id of this Ptsv2paymentsidcapturesPointOfSaleInformation.
+        Identifies the Zone PIN Key (ZPK) used for Online PIN processing by providing the 10‑digit Key Set Identifier (KSI). This value indicates that the PIN block is encrypted under a ZPK and enables the Payment Security Service (PSS) to perform  the correct ZPK→ZPK PIN translation during card‑present EMV PIN transactions. 
+
+        :return: The encrypted_key_id of this Ptsv2paymentsidcapturesPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._encrypted_key_id
+
+    @encrypted_key_id.setter
+    def encrypted_key_id(self, encrypted_key_id):
+        """
+        Sets the encrypted_key_id of this Ptsv2paymentsidcapturesPointOfSaleInformation.
+        Identifies the Zone PIN Key (ZPK) used for Online PIN processing by providing the 10‑digit Key Set Identifier (KSI). This value indicates that the PIN block is encrypted under a ZPK and enables the Payment Security Service (PSS) to perform  the correct ZPK→ZPK PIN translation during card‑present EMV PIN transactions. 
+
+        :param encrypted_key_id: The encrypted_key_id of this Ptsv2paymentsidcapturesPointOfSaleInformation.
+        :type: str
+        """
+
+        self._encrypted_key_id = encrypted_key_id
 
     def to_dict(self):
         """

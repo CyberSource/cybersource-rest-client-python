@@ -31,6 +31,8 @@ class TmsCardArt(object):
     """
     swagger_types = {
         'foreground_color': 'str',
+        'background_color': 'str',
+        'label_color': 'str',
         'combined_asset': 'TmsCardArtCombinedAsset',
         'brand_logo_asset': 'TmsCardArtBrandLogoAsset',
         'issuer_logo_asset': 'TmsCardArtIssuerLogoAsset',
@@ -39,18 +41,22 @@ class TmsCardArt(object):
 
     attribute_map = {
         'foreground_color': 'foregroundColor',
+        'background_color': 'backgroundColor',
+        'label_color': 'labelColor',
         'combined_asset': 'combinedAsset',
         'brand_logo_asset': 'brandLogoAsset',
         'issuer_logo_asset': 'issuerLogoAsset',
         'icon_asset': 'iconAsset'
     }
 
-    def __init__(self, foreground_color=None, combined_asset=None, brand_logo_asset=None, issuer_logo_asset=None, icon_asset=None):
+    def __init__(self, foreground_color=None, background_color=None, label_color=None, combined_asset=None, brand_logo_asset=None, issuer_logo_asset=None, icon_asset=None):
         """
         TmsCardArt - a model defined in Swagger
         """
 
         self._foreground_color = None
+        self._background_color = None
+        self._label_color = None
         self._combined_asset = None
         self._brand_logo_asset = None
         self._issuer_logo_asset = None
@@ -58,6 +64,10 @@ class TmsCardArt(object):
 
         if foreground_color is not None:
           self.foreground_color = foreground_color
+        if background_color is not None:
+          self.background_color = background_color
+        if label_color is not None:
+          self.label_color = label_color
         if combined_asset is not None:
           self.combined_asset = combined_asset
         if brand_logo_asset is not None:
@@ -89,6 +99,52 @@ class TmsCardArt(object):
         """
 
         self._foreground_color = foreground_color
+
+    @property
+    def background_color(self):
+        """
+        Gets the background_color of this TmsCardArt.
+        Card background color. 
+
+        :return: The background_color of this TmsCardArt.
+        :rtype: str
+        """
+        return self._background_color
+
+    @background_color.setter
+    def background_color(self, background_color):
+        """
+        Sets the background_color of this TmsCardArt.
+        Card background color. 
+
+        :param background_color: The background_color of this TmsCardArt.
+        :type: str
+        """
+
+        self._background_color = background_color
+
+    @property
+    def label_color(self):
+        """
+        Gets the label_color of this TmsCardArt.
+        Card label color. 
+
+        :return: The label_color of this TmsCardArt.
+        :rtype: str
+        """
+        return self._label_color
+
+    @label_color.setter
+    def label_color(self, label_color):
+        """
+        Sets the label_color of this TmsCardArt.
+        Card label color. 
+
+        :param label_color: The label_color of this TmsCardArt.
+        :type: str
+        """
+
+        self._label_color = label_color
 
     @property
     def combined_asset(self):

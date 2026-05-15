@@ -34,7 +34,10 @@ class Ptsv2paymentsProcessorInformation(object):
         'authorization_options': 'Ptsv2paymentsProcessorInformationAuthorizationOptions',
         'reversal': 'Ptsv2paymentsProcessorInformationReversal',
         'network': 'Ptsv2paymentsProcessorInformationReversalNetwork',
-        'response_source_code': 'str'
+        'auth_approval_token': 'str',
+        'supplementary_transaction_data': 'str',
+        'response_source_code': 'str',
+        'cedp_verified_indicator': 'str'
     }
 
     attribute_map = {
@@ -42,10 +45,13 @@ class Ptsv2paymentsProcessorInformation(object):
         'authorization_options': 'authorizationOptions',
         'reversal': 'reversal',
         'network': 'network',
-        'response_source_code': 'responseSourceCode'
+        'auth_approval_token': 'authApprovalToken',
+        'supplementary_transaction_data': 'supplementaryTransactionData',
+        'response_source_code': 'responseSourceCode',
+        'cedp_verified_indicator': 'cedpVerifiedIndicator'
     }
 
-    def __init__(self, pre_approval_token=None, authorization_options=None, reversal=None, network=None, response_source_code=None):
+    def __init__(self, pre_approval_token=None, authorization_options=None, reversal=None, network=None, auth_approval_token=None, supplementary_transaction_data=None, response_source_code=None, cedp_verified_indicator=None):
         """
         Ptsv2paymentsProcessorInformation - a model defined in Swagger
         """
@@ -54,7 +60,10 @@ class Ptsv2paymentsProcessorInformation(object):
         self._authorization_options = None
         self._reversal = None
         self._network = None
+        self._auth_approval_token = None
+        self._supplementary_transaction_data = None
         self._response_source_code = None
+        self._cedp_verified_indicator = None
 
         if pre_approval_token is not None:
           self.pre_approval_token = pre_approval_token
@@ -64,8 +73,14 @@ class Ptsv2paymentsProcessorInformation(object):
           self.reversal = reversal
         if network is not None:
           self.network = network
+        if auth_approval_token is not None:
+          self.auth_approval_token = auth_approval_token
+        if supplementary_transaction_data is not None:
+          self.supplementary_transaction_data = supplementary_transaction_data
         if response_source_code is not None:
           self.response_source_code = response_source_code
+        if cedp_verified_indicator is not None:
+          self.cedp_verified_indicator = cedp_verified_indicator
 
     @property
     def pre_approval_token(self):
@@ -154,6 +169,52 @@ class Ptsv2paymentsProcessorInformation(object):
         self._network = network
 
     @property
+    def auth_approval_token(self):
+        """
+        Gets the auth_approval_token of this Ptsv2paymentsProcessorInformation.
+        Interoperability Token received by merchant for Authorization API. Field for merchant to send Klarna Advantage Plus authorization approval token for Auth API call. 
+
+        :return: The auth_approval_token of this Ptsv2paymentsProcessorInformation.
+        :rtype: str
+        """
+        return self._auth_approval_token
+
+    @auth_approval_token.setter
+    def auth_approval_token(self, auth_approval_token):
+        """
+        Sets the auth_approval_token of this Ptsv2paymentsProcessorInformation.
+        Interoperability Token received by merchant for Authorization API. Field for merchant to send Klarna Advantage Plus authorization approval token for Auth API call. 
+
+        :param auth_approval_token: The auth_approval_token of this Ptsv2paymentsProcessorInformation.
+        :type: str
+        """
+
+        self._auth_approval_token = auth_approval_token
+
+    @property
+    def supplementary_transaction_data(self):
+        """
+        Gets the supplementary_transaction_data of this Ptsv2paymentsProcessorInformation.
+        Supplementary transaction data for Klarna Advantage Plus. Fields to capture Interoperability Data from Merchant and transfer to Klarna for Authorization/Sale/Re-Auth/Capture APIs. 
+
+        :return: The supplementary_transaction_data of this Ptsv2paymentsProcessorInformation.
+        :rtype: str
+        """
+        return self._supplementary_transaction_data
+
+    @supplementary_transaction_data.setter
+    def supplementary_transaction_data(self, supplementary_transaction_data):
+        """
+        Sets the supplementary_transaction_data of this Ptsv2paymentsProcessorInformation.
+        Supplementary transaction data for Klarna Advantage Plus. Fields to capture Interoperability Data from Merchant and transfer to Klarna for Authorization/Sale/Re-Auth/Capture APIs. 
+
+        :param supplementary_transaction_data: The supplementary_transaction_data of this Ptsv2paymentsProcessorInformation.
+        :type: str
+        """
+
+        self._supplementary_transaction_data = supplementary_transaction_data
+
+    @property
     def response_source_code(self):
         """
         Gets the response_source_code of this Ptsv2paymentsProcessorInformation.
@@ -175,6 +236,29 @@ class Ptsv2paymentsProcessorInformation(object):
         """
 
         self._response_source_code = response_source_code
+
+    @property
+    def cedp_verified_indicator(self):
+        """
+        Gets the cedp_verified_indicator of this Ptsv2paymentsProcessorInformation.
+        Merchant Commercial Enhanced Data Program (CEDP) verified indicator for capture/bill requests.  This field is used when the client is doing authorization with a different gateway and capture/settlement with CyberSource.  This field flows in ISO field 34, DSID 02 tag DA, in AN, EBCDIC format.  Possible values: - `Y`: Merchant CEDP verified  #### Used by **Capture Request** Request field for force capture/bill support when auth is done with a different gateway. 
+
+        :return: The cedp_verified_indicator of this Ptsv2paymentsProcessorInformation.
+        :rtype: str
+        """
+        return self._cedp_verified_indicator
+
+    @cedp_verified_indicator.setter
+    def cedp_verified_indicator(self, cedp_verified_indicator):
+        """
+        Sets the cedp_verified_indicator of this Ptsv2paymentsProcessorInformation.
+        Merchant Commercial Enhanced Data Program (CEDP) verified indicator for capture/bill requests.  This field is used when the client is doing authorization with a different gateway and capture/settlement with CyberSource.  This field flows in ISO field 34, DSID 02 tag DA, in AN, EBCDIC format.  Possible values: - `Y`: Merchant CEDP verified  #### Used by **Capture Request** Request field for force capture/bill support when auth is done with a different gateway. 
+
+        :param cedp_verified_indicator: The cedp_verified_indicator of this Ptsv2paymentsProcessorInformation.
+        :type: str
+        """
+
+        self._cedp_verified_indicator = cedp_verified_indicator
 
     def to_dict(self):
         """

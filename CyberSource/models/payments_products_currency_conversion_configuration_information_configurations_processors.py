@@ -30,33 +30,61 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
                             and the value is json key in definition.
     """
     swagger_types = {
+        'provider': 'str',
         'merchant_id': 'str',
         'acquirer_id': 'str'
     }
 
     attribute_map = {
+        'provider': 'provider',
         'merchant_id': 'merchantId',
         'acquirer_id': 'acquirerId'
     }
 
-    def __init__(self, merchant_id=None, acquirer_id=None):
+    def __init__(self, provider=None, merchant_id=None, acquirer_id=None):
         """
         PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors - a model defined in Swagger
         """
 
+        self._provider = None
         self._merchant_id = None
         self._acquirer_id = None
 
+        if provider is not None:
+          self.provider = provider
         if merchant_id is not None:
           self.merchant_id = merchant_id
         if acquirer_id is not None:
           self.acquirer_id = acquirer_id
 
     @property
+    def provider(self):
+        """
+        Gets the provider of this PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors.
+        The name of the provider.
+
+        :return: The provider of this PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors.
+        :rtype: str
+        """
+        return self._provider
+
+    @provider.setter
+    def provider(self, provider):
+        """
+        Sets the provider of this PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors.
+        The name of the provider.
+
+        :param provider: The provider of this PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors.
+        :type: str
+        """
+
+        self._provider = provider
+
+    @property
     def merchant_id(self):
         """
         Gets the merchant_id of this PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors.
-        The merchant identifier for the Currency Conversion service. Check with your Currency Conversion Provider for details.
+        A unique identifier value assigned to each merchant. Assigned by the provider.
 
         :return: The merchant_id of this PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors.
         :rtype: str
@@ -67,7 +95,7 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
     def merchant_id(self, merchant_id):
         """
         Sets the merchant_id of this PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors.
-        The merchant identifier for the Currency Conversion service. Check with your Currency Conversion Provider for details.
+        A unique identifier value assigned to each merchant. Assigned by the provider.
 
         :param merchant_id: The merchant_id of this PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors.
         :type: str
@@ -79,6 +107,7 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
     def acquirer_id(self):
         """
         Gets the acquirer_id of this PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors.
+        This code identifies the financial institution acting as the acquirer.
 
         :return: The acquirer_id of this PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors.
         :rtype: str
@@ -89,6 +118,7 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
     def acquirer_id(self, acquirer_id):
         """
         Sets the acquirer_id of this PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors.
+        This code identifies the financial institution acting as the acquirer.
 
         :param acquirer_id: The acquirer_id of this PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors.
         :type: str

@@ -50,7 +50,7 @@ class Bavsv1accountvalidationsPaymentInformationBankAccount(object):
     def number(self):
         """
         Gets the number of this Bavsv1accountvalidationsPaymentInformationBankAccount.
-        Account Number.  Non-Negative Integer. example: 12345678901234577 
+        Account Number.  Non-Negative String, containing only digits. 
 
         :return: The number of this Bavsv1accountvalidationsPaymentInformationBankAccount.
         :rtype: str
@@ -61,7 +61,7 @@ class Bavsv1accountvalidationsPaymentInformationBankAccount(object):
     def number(self, number):
         """
         Sets the number of this Bavsv1accountvalidationsPaymentInformationBankAccount.
-        Account Number.  Non-Negative Integer. example: 12345678901234577 
+        Account Number.  Non-Negative String, containing only digits. 
 
         :param number: The number of this Bavsv1accountvalidationsPaymentInformationBankAccount.
         :type: str

@@ -35,7 +35,8 @@ class PostTokenizedCardRequest(object):
         'create_pan_instrument_identifier': 'bool',
         'source': 'str',
         'card': 'Tmsv2tokenizedcardsCard',
-        'passcode': 'Tmsv2tokenizedcardsPasscode'
+        'passcode': 'Tmsv2tokenizedcardsPasscode',
+        'bill_to': 'Tmsv2tokenizedcardsBillTo'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class PostTokenizedCardRequest(object):
         'create_pan_instrument_identifier': 'createPanInstrumentIdentifier',
         'source': 'source',
         'card': 'card',
-        'passcode': 'passcode'
+        'passcode': 'passcode',
+        'bill_to': 'billTo'
     }
 
-    def __init__(self, account_reference_id=None, consumer_id=None, create_pan_instrument_identifier=None, source=None, card=None, passcode=None):
+    def __init__(self, account_reference_id=None, consumer_id=None, create_pan_instrument_identifier=None, source=None, card=None, passcode=None, bill_to=None):
         """
         PostTokenizedCardRequest - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class PostTokenizedCardRequest(object):
         self._source = None
         self._card = None
         self._passcode = None
+        self._bill_to = None
 
         if account_reference_id is not None:
           self.account_reference_id = account_reference_id
@@ -70,6 +73,8 @@ class PostTokenizedCardRequest(object):
           self.card = card
         if passcode is not None:
           self.passcode = passcode
+        if bill_to is not None:
+          self.bill_to = bill_to
 
     @property
     def account_reference_id(self):
@@ -204,6 +209,27 @@ class PostTokenizedCardRequest(object):
         """
 
         self._passcode = passcode
+
+    @property
+    def bill_to(self):
+        """
+        Gets the bill_to of this PostTokenizedCardRequest.
+
+        :return: The bill_to of this PostTokenizedCardRequest.
+        :rtype: Tmsv2tokenizedcardsBillTo
+        """
+        return self._bill_to
+
+    @bill_to.setter
+    def bill_to(self, bill_to):
+        """
+        Sets the bill_to of this PostTokenizedCardRequest.
+
+        :param bill_to: The bill_to of this PostTokenizedCardRequest.
+        :type: Tmsv2tokenizedcardsBillTo
+        """
+
+        self._bill_to = bill_to
 
     def to_dict(self):
         """

@@ -37,7 +37,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         'processing_code': 'str',
         'sharing_group_code': 'str',
         'purpose_of_payment': 'str',
-        'reconciliation_id': 'str'
+        'reconciliation_id': 'str',
+        'account_verification_code': 'list[str]'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         'processing_code': 'processingCode',
         'sharing_group_code': 'sharingGroupCode',
         'purpose_of_payment': 'purposeOfPayment',
-        'reconciliation_id': 'reconciliationId'
+        'reconciliation_id': 'reconciliationId',
+        'account_verification_code': 'accountVerificationCode'
     }
 
-    def __init__(self, business_application_id=None, payouts_options=None, fee_program_id=None, network_partner_id=None, processing_code=None, sharing_group_code=None, purpose_of_payment=None, reconciliation_id=None):
+    def __init__(self, business_application_id=None, payouts_options=None, fee_program_id=None, network_partner_id=None, processing_code=None, sharing_group_code=None, purpose_of_payment=None, reconciliation_id=None, account_verification_code=None):
         """
         Ptsv1pushfundstransferProcessingInformation - a model defined in Swagger
         """
@@ -64,6 +66,7 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         self._sharing_group_code = None
         self._purpose_of_payment = None
         self._reconciliation_id = None
+        self._account_verification_code = None
 
         if business_application_id is not None:
           self.business_application_id = business_application_id
@@ -81,6 +84,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
           self.purpose_of_payment = purpose_of_payment
         if reconciliation_id is not None:
           self.reconciliation_id = reconciliation_id
+        if account_verification_code is not None:
+          self.account_verification_code = account_verification_code
 
     @property
     def business_application_id(self):
@@ -153,7 +158,7 @@ class Ptsv1pushfundstransferProcessingInformation(object):
     def network_partner_id(self):
         """
         Gets the network_partner_id of this Ptsv1pushfundstransferProcessingInformation.
-        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction. 
+        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction.  This field is supported for Visa Platform Connect, Chase Paymentech Salem. 
 
         :return: The network_partner_id of this Ptsv1pushfundstransferProcessingInformation.
         :rtype: str
@@ -164,7 +169,7 @@ class Ptsv1pushfundstransferProcessingInformation(object):
     def network_partner_id(self, network_partner_id):
         """
         Sets the network_partner_id of this Ptsv1pushfundstransferProcessingInformation.
-        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction. 
+        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction.  This field is supported for Visa Platform Connect, Chase Paymentech Salem. 
 
         :param network_partner_id: The network_partner_id of this Ptsv1pushfundstransferProcessingInformation.
         :type: str
@@ -263,6 +268,29 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         """
 
         self._reconciliation_id = reconciliation_id
+
+    @property
+    def account_verification_code(self):
+        """
+        Gets the account_verification_code of this Ptsv1pushfundstransferProcessingInformation.
+        Account verification code will inform what Payment Account Verification should be performed. With this array of codes, a merchant can choose à la carte what verifications to run. This field is optional, and the default is 1 if it is not passed in. This means that a full validation of the fields will be performed. Valid verification codes: - `1` = Full Account Verification (Card Account, CVN, CAVV, TAVV, Address, Name, eMail, Phone, Identity) - `2` = Card Account Verification - `3` = Address Verification - `4` = Card Authentication Method (CAM) (Cryptogram) - `5` = Cardholder Authentication Verification (CAVV) - `6` = Cardholder Identity Verification - `7` = CVV2 Verification - `8` = eMail Verification - `9` = Name Verification - `10` = Phone Verification 
+
+        :return: The account_verification_code of this Ptsv1pushfundstransferProcessingInformation.
+        :rtype: list[str]
+        """
+        return self._account_verification_code
+
+    @account_verification_code.setter
+    def account_verification_code(self, account_verification_code):
+        """
+        Sets the account_verification_code of this Ptsv1pushfundstransferProcessingInformation.
+        Account verification code will inform what Payment Account Verification should be performed. With this array of codes, a merchant can choose à la carte what verifications to run. This field is optional, and the default is 1 if it is not passed in. This means that a full validation of the fields will be performed. Valid verification codes: - `1` = Full Account Verification (Card Account, CVN, CAVV, TAVV, Address, Name, eMail, Phone, Identity) - `2` = Card Account Verification - `3` = Address Verification - `4` = Card Authentication Method (CAM) (Cryptogram) - `5` = Cardholder Authentication Verification (CAVV) - `6` = Cardholder Identity Verification - `7` = CVV2 Verification - `8` = eMail Verification - `9` = Name Verification - `10` = Phone Verification 
+
+        :param account_verification_code: The account_verification_code of this Ptsv1pushfundstransferProcessingInformation.
+        :type: list[str]
+        """
+
+        self._account_verification_code = account_verification_code
 
     def to_dict(self):
         """

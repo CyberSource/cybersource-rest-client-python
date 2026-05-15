@@ -32,6 +32,7 @@ class Ucv1sessionsDataMerchantInformationMerchantDescriptor(object):
     swagger_types = {
         'name': 'str',
         'alternate_name': 'str',
+        'contact': 'str',
         'locality': 'str',
         'phone': 'str',
         'country': 'str',
@@ -43,6 +44,7 @@ class Ucv1sessionsDataMerchantInformationMerchantDescriptor(object):
     attribute_map = {
         'name': 'name',
         'alternate_name': 'alternateName',
+        'contact': 'contact',
         'locality': 'locality',
         'phone': 'phone',
         'country': 'country',
@@ -51,13 +53,14 @@ class Ucv1sessionsDataMerchantInformationMerchantDescriptor(object):
         'address1': 'address1'
     }
 
-    def __init__(self, name=None, alternate_name=None, locality=None, phone=None, country=None, postal_code=None, administrative_area=None, address1=None):
+    def __init__(self, name=None, alternate_name=None, contact=None, locality=None, phone=None, country=None, postal_code=None, administrative_area=None, address1=None):
         """
         Ucv1sessionsDataMerchantInformationMerchantDescriptor - a model defined in Swagger
         """
 
         self._name = None
         self._alternate_name = None
+        self._contact = None
         self._locality = None
         self._phone = None
         self._country = None
@@ -69,6 +72,8 @@ class Ucv1sessionsDataMerchantInformationMerchantDescriptor(object):
           self.name = name
         if alternate_name is not None:
           self.alternate_name = alternate_name
+        if contact is not None:
+          self.contact = contact
         if locality is not None:
           self.locality = locality
         if phone is not None:
@@ -127,6 +132,29 @@ class Ucv1sessionsDataMerchantInformationMerchantDescriptor(object):
         """
 
         self._alternate_name = alternate_name
+
+    @property
+    def contact(self):
+        """
+        Gets the contact of this Ucv1sessionsDataMerchantInformationMerchantDescriptor.
+        Contact information for the merchant.  **Note** These are the maximum data lengths for the following payment processors: - FDCCompass (13) - Paymentech (13) 
+
+        :return: The contact of this Ucv1sessionsDataMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._contact
+
+    @contact.setter
+    def contact(self, contact):
+        """
+        Sets the contact of this Ucv1sessionsDataMerchantInformationMerchantDescriptor.
+        Contact information for the merchant.  **Note** These are the maximum data lengths for the following payment processors: - FDCCompass (13) - Paymentech (13) 
+
+        :param contact: The contact of this Ucv1sessionsDataMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._contact = contact
 
     @property
     def locality(self):

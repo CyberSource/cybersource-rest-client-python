@@ -69,7 +69,7 @@ class Ptsv1pullfundstransferOrderInformationAmountDetails(object):
     def total_amount(self):
         """
         Gets the total_amount of this Ptsv1pullfundstransferOrderInformationAmountDetails.
-        The total amount of the funds transfer including all fees.  This value cannot be negative.   Field must also be greater than zero: minimum value is the smallest amount in any given currency.   You can include a decimal point (.), but no other special characters. 
+        The total amount of the funds transfer including all fees.  This value cannot be negative.   You can include a decimal point (.), but no other special characters. 
 
         :return: The total_amount of this Ptsv1pullfundstransferOrderInformationAmountDetails.
         :rtype: str
@@ -80,7 +80,7 @@ class Ptsv1pullfundstransferOrderInformationAmountDetails(object):
     def total_amount(self, total_amount):
         """
         Sets the total_amount of this Ptsv1pullfundstransferOrderInformationAmountDetails.
-        The total amount of the funds transfer including all fees.  This value cannot be negative.   Field must also be greater than zero: minimum value is the smallest amount in any given currency.   You can include a decimal point (.), but no other special characters. 
+        The total amount of the funds transfer including all fees.  This value cannot be negative.   You can include a decimal point (.), but no other special characters. 
 
         :param total_amount: The total_amount of this Ptsv1pullfundstransferOrderInformationAmountDetails.
         :type: str

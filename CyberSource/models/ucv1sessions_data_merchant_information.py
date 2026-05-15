@@ -30,22 +30,27 @@ class Ucv1sessionsDataMerchantInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'merchant_descriptor': 'Ucv1sessionsDataMerchantInformationMerchantDescriptor'
+        'merchant_descriptor': 'Ucv1sessionsDataMerchantInformationMerchantDescriptor',
+        'vat_registration_number': 'str'
     }
 
     attribute_map = {
-        'merchant_descriptor': 'merchantDescriptor'
+        'merchant_descriptor': 'merchantDescriptor',
+        'vat_registration_number': 'vatRegistrationNumber'
     }
 
-    def __init__(self, merchant_descriptor=None):
+    def __init__(self, merchant_descriptor=None, vat_registration_number=None):
         """
         Ucv1sessionsDataMerchantInformation - a model defined in Swagger
         """
 
         self._merchant_descriptor = None
+        self._vat_registration_number = None
 
         if merchant_descriptor is not None:
           self.merchant_descriptor = merchant_descriptor
+        if vat_registration_number is not None:
+          self.vat_registration_number = vat_registration_number
 
     @property
     def merchant_descriptor(self):
@@ -67,6 +72,29 @@ class Ucv1sessionsDataMerchantInformation(object):
         """
 
         self._merchant_descriptor = merchant_descriptor
+
+    @property
+    def vat_registration_number(self):
+        """
+        Gets the vat_registration_number of this Ucv1sessionsDataMerchantInformation.
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.  #### CyberSource through VisaNet For CtV processors, the maximum length is 20. 
+
+        :return: The vat_registration_number of this Ucv1sessionsDataMerchantInformation.
+        :rtype: str
+        """
+        return self._vat_registration_number
+
+    @vat_registration_number.setter
+    def vat_registration_number(self, vat_registration_number):
+        """
+        Sets the vat_registration_number of this Ucv1sessionsDataMerchantInformation.
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.  #### CyberSource through VisaNet For CtV processors, the maximum length is 20. 
+
+        :param vat_registration_number: The vat_registration_number of this Ucv1sessionsDataMerchantInformation.
+        :type: str
+        """
+
+        self._vat_registration_number = vat_registration_number
 
     def to_dict(self):
         """

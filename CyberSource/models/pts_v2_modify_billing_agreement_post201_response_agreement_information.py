@@ -34,6 +34,8 @@ class PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation(object):
         'date_signed': 'str',
         'date_created': 'str',
         'date_revoked': 'str',
+        'type': 'str',
+        'frequency': 'str',
         'encoded_html': 'str',
         'encoded_html_popup': 'str',
         'url': 'str',
@@ -45,13 +47,15 @@ class PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation(object):
         'date_signed': 'dateSigned',
         'date_created': 'dateCreated',
         'date_revoked': 'dateRevoked',
+        'type': 'type',
+        'frequency': 'frequency',
         'encoded_html': 'encodedHtml',
         'encoded_html_popup': 'encodedHtmlPopup',
         'url': 'url',
         'transaction_id': 'transactionId'
     }
 
-    def __init__(self, id=None, date_signed=None, date_created=None, date_revoked=None, encoded_html=None, encoded_html_popup=None, url=None, transaction_id=None):
+    def __init__(self, id=None, date_signed=None, date_created=None, date_revoked=None, type=None, frequency=None, encoded_html=None, encoded_html_popup=None, url=None, transaction_id=None):
         """
         PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation - a model defined in Swagger
         """
@@ -60,6 +64,8 @@ class PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation(object):
         self._date_signed = None
         self._date_created = None
         self._date_revoked = None
+        self._type = None
+        self._frequency = None
         self._encoded_html = None
         self._encoded_html_popup = None
         self._url = None
@@ -73,6 +79,10 @@ class PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation(object):
           self.date_created = date_created
         if date_revoked is not None:
           self.date_revoked = date_revoked
+        if type is not None:
+          self.type = type
+        if frequency is not None:
+          self.frequency = frequency
         if encoded_html is not None:
           self.encoded_html = encoded_html
         if encoded_html_popup is not None:
@@ -173,6 +183,52 @@ class PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation(object):
         """
 
         self._date_revoked = date_revoked
+
+    @property
+    def type(self):
+        """
+        Gets the type of this PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation.
+        Identifies the type of schedule as either recurring, one-off, split or usage.  Possible values: - recurring - oneoff - split - usage
+
+        :return: The type of this PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation.
+        Identifies the type of schedule as either recurring, one-off, split or usage.  Possible values: - recurring - oneoff - split - usage
+
+        :param type: The type of this PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation.
+        :type: str
+        """
+
+        self._type = type
+
+    @property
+    def frequency(self):
+        """
+        Gets the frequency of this PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation.
+        Regularity with which the event occurs.  Possible values: - annual - monthly - quarterly - semiannual - weekly - daily - adhoc - intraday - fortnightly
+
+        :return: The frequency of this PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation.
+        :rtype: str
+        """
+        return self._frequency
+
+    @frequency.setter
+    def frequency(self, frequency):
+        """
+        Sets the frequency of this PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation.
+        Regularity with which the event occurs.  Possible values: - annual - monthly - quarterly - semiannual - weekly - daily - adhoc - intraday - fortnightly
+
+        :param frequency: The frequency of this PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation.
+        :type: str
+        """
+
+        self._frequency = frequency
 
     @property
     def encoded_html(self):
