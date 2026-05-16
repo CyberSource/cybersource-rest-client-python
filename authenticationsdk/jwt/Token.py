@@ -111,7 +111,7 @@ class JwtSignatureToken(TokenGeneration):
         # Set the request method, host and resource path in the JWT body as per the specification for all the request types
         jwt_payload["request-method"] = str(self.jwt_method.upper())
         jwt_payload["request-host"] = self.merchant_config.run_environment
-        jwt_payload["request-resource-path"] = str(self.request_target).split('?', 1)[0] #Split the string to remove the query params
+        jwt_payload["request-resource-path"] = self.request_target
 
         issuer = ''
         # Choose issuer claim in the JWT body as per the use_metakey flag in the config file
