@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **status** | **str** | The status for the call can be: - COMPLETED - INVALID_REQUEST - DECLINED  | [optional] 
 **message** | **str** | The message describing the reason of the status. Value can be   - Apartment number missing or not found.   - Insufficient address information.   - House/Box number not found on street.   - Multiple address matches were found.   - P.O. Box identifier not found or out of range.   - Route service identifier not found or out of range.   - Street name not found in Postal code.   - Postal code not found in database.   - Unable to verify or correct address.   - Multiple addres matches were found (international)   - Address match not found (no reason given)   - Unsupported character set  | [optional] 
 **client_reference_information** | [**RiskV1DecisionsPost201ResponseClientReferenceInformation**](RiskV1DecisionsPost201ResponseClientReferenceInformation.md) |  | [optional] 
-**address_verification_information** | [**RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation**](RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation.md) |  | [optional] 
+**address_verification_information** | [**RiskAddressVerificationInformation**](RiskAddressVerificationInformation.md) |  | [optional] 
 **error_information** | [**RiskV1AddressVerificationsPost201ResponseErrorInformation**](RiskV1AddressVerificationsPost201ResponseErrorInformation.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

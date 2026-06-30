@@ -65,7 +65,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'complete_url': 'str',
         'signature': 'str',
         'public_key': 'str',
-        'seller_protection': 'PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection',
+        'seller_protection': 'ProcessorInformationSellerProtection',
         'transaction_expiry_date': 'str',
         'custom_url': 'str',
         'scheme_assigned_id': 'str',
@@ -1073,7 +1073,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         Gets the seller_protection of this PtsV2PaymentsPost201ResponseProcessorInformation.
 
         :return: The seller_protection of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        :rtype: PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
+        :rtype: ProcessorInformationSellerProtection
         """
         return self._seller_protection
 
@@ -1083,7 +1083,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         Sets the seller_protection of this PtsV2PaymentsPost201ResponseProcessorInformation.
 
         :param seller_protection: The seller_protection of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        :type: PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
+        :type: ProcessorInformationSellerProtection
         """
 
         self._seller_protection = seller_protection

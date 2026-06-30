@@ -32,28 +32,33 @@ class Ucv1sessionsPaymentConfigurations(object):
     swagger_types = {
         'googlepay': 'Ucv1sessionsPaymentConfigurationsGOOGLEPAY',
         'clicktopay': 'Ucv1sessionsPaymentConfigurationsCLICKTOPAY',
+        'paypal': 'Ucv1sessionsPaymentConfigurationsPAYPAL',
         'tms_token': 'Ucv1sessionsPaymentConfigurationsTMSTOKEN'
     }
 
     attribute_map = {
         'googlepay': 'GOOGLEPAY',
         'clicktopay': 'CLICKTOPAY',
+        'paypal': 'PAYPAL',
         'tms_token': 'TMS_TOKEN'
     }
 
-    def __init__(self, googlepay=None, clicktopay=None, tms_token=None):
+    def __init__(self, googlepay=None, clicktopay=None, paypal=None, tms_token=None):
         """
         Ucv1sessionsPaymentConfigurations - a model defined in Swagger
         """
 
         self._googlepay = None
         self._clicktopay = None
+        self._paypal = None
         self._tms_token = None
 
         if googlepay is not None:
           self.googlepay = googlepay
         if clicktopay is not None:
           self.clicktopay = clicktopay
+        if paypal is not None:
+          self.paypal = paypal
         if tms_token is not None:
           self.tms_token = tms_token
 
@@ -98,6 +103,27 @@ class Ucv1sessionsPaymentConfigurations(object):
         """
 
         self._clicktopay = clicktopay
+
+    @property
+    def paypal(self):
+        """
+        Gets the paypal of this Ucv1sessionsPaymentConfigurations.
+
+        :return: The paypal of this Ucv1sessionsPaymentConfigurations.
+        :rtype: Ucv1sessionsPaymentConfigurationsPAYPAL
+        """
+        return self._paypal
+
+    @paypal.setter
+    def paypal(self, paypal):
+        """
+        Sets the paypal of this Ucv1sessionsPaymentConfigurations.
+
+        :param paypal: The paypal of this Ucv1sessionsPaymentConfigurations.
+        :type: Ucv1sessionsPaymentConfigurationsPAYPAL
+        """
+
+        self._paypal = paypal
 
     @property
     def tms_token(self):

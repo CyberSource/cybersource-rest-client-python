@@ -38,7 +38,7 @@ class PostInstrumentIdentifierRequest(object):
         'source': 'str',
         'token_provisioning_information': 'Ptsv2paymentsTokenInformationTokenProvisioningInformation',
         'card': 'TmsEmbeddedInstrumentIdentifierCard',
-        'point_of_sale_information': 'TmsEmbeddedInstrumentIdentifierPointOfSaleInformation',
+        'point_of_sale_information': 'TmsPointOfSaleInformation',
         'bank_account': 'TmsEmbeddedInstrumentIdentifierBankAccount',
         'tokenized_card': 'Tmsv2TokenizedCard',
         'issuer': 'TmsEmbeddedInstrumentIdentifierIssuer',
@@ -306,7 +306,7 @@ class PostInstrumentIdentifierRequest(object):
         Gets the point_of_sale_information of this PostInstrumentIdentifierRequest.
 
         :return: The point_of_sale_information of this PostInstrumentIdentifierRequest.
-        :rtype: TmsEmbeddedInstrumentIdentifierPointOfSaleInformation
+        :rtype: TmsPointOfSaleInformation
         """
         return self._point_of_sale_information
 
@@ -316,7 +316,7 @@ class PostInstrumentIdentifierRequest(object):
         Sets the point_of_sale_information of this PostInstrumentIdentifierRequest.
 
         :param point_of_sale_information: The point_of_sale_information of this PostInstrumentIdentifierRequest.
-        :type: TmsEmbeddedInstrumentIdentifierPointOfSaleInformation
+        :type: TmsPointOfSaleInformation
         """
 
         self._point_of_sale_information = point_of_sale_information

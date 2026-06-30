@@ -127,10 +127,10 @@ class VoidApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
 
         body_params = None
         if 'mit_void_request' in params:
@@ -256,10 +256,10 @@ class VoidApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
 
         body_params = None
         if 'void_capture_request' in params:
@@ -385,10 +385,10 @@ class VoidApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
 
         body_params = None
         if 'void_credit_request' in params:
@@ -514,10 +514,10 @@ class VoidApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
 
         body_params = None
         if 'void_payment_request' in params:
@@ -643,10 +643,10 @@ class VoidApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
 
         body_params = None
         if 'void_refund_request' in params:

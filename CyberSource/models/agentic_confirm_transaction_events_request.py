@@ -31,8 +31,8 @@ class AgenticConfirmTransactionEventsRequest(object):
     """
     swagger_types = {
         'client_correlation_id': 'str',
-        'payment_information': 'Acpv1tokensPaymentInformation',
-        'confirmation_data': 'list[Acpv1instructionsinstructionIdconfirmationsConfirmationData]'
+        'payment_information': 'Iccv1tokensPaymentInformation',
+        'confirmation_data': 'list[Iccv1instructionsinstructionIdconfirmationsConfirmationData]'
     }
 
     attribute_map = {
@@ -83,7 +83,7 @@ class AgenticConfirmTransactionEventsRequest(object):
         Gets the payment_information of this AgenticConfirmTransactionEventsRequest.
 
         :return: The payment_information of this AgenticConfirmTransactionEventsRequest.
-        :rtype: Acpv1tokensPaymentInformation
+        :rtype: Iccv1tokensPaymentInformation
         """
         return self._payment_information
 
@@ -93,7 +93,7 @@ class AgenticConfirmTransactionEventsRequest(object):
         Sets the payment_information of this AgenticConfirmTransactionEventsRequest.
 
         :param payment_information: The payment_information of this AgenticConfirmTransactionEventsRequest.
-        :type: Acpv1tokensPaymentInformation
+        :type: Iccv1tokensPaymentInformation
         """
 
         self._payment_information = payment_information
@@ -105,7 +105,7 @@ class AgenticConfirmTransactionEventsRequest(object):
         (Required) Contains Transaction, Order and Payment Confirmation Events.
 
         :return: The confirmation_data of this AgenticConfirmTransactionEventsRequest.
-        :rtype: list[Acpv1instructionsinstructionIdconfirmationsConfirmationData]
+        :rtype: list[Iccv1instructionsinstructionIdconfirmationsConfirmationData]
         """
         return self._confirmation_data
 
@@ -116,7 +116,7 @@ class AgenticConfirmTransactionEventsRequest(object):
         (Required) Contains Transaction, Order and Payment Confirmation Events.
 
         :param confirmation_data: The confirmation_data of this AgenticConfirmTransactionEventsRequest.
-        :type: list[Acpv1instructionsinstructionIdconfirmationsConfirmationData]
+        :type: list[Iccv1instructionsinstructionIdconfirmationsConfirmationData]
         """
 
         self._confirmation_data = confirmation_data

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **source** | **str** | Source of the card details. Possible Values: - CONTACTLESS_TAP  | [optional] 
 **token_provisioning_information** | [**Ptsv2paymentsTokenInformationTokenProvisioningInformation**](Ptsv2paymentsTokenInformationTokenProvisioningInformation.md) |  | [optional] 
 **card** | [**TmsEmbeddedInstrumentIdentifierCard**](TmsEmbeddedInstrumentIdentifierCard.md) |  | [optional] 
-**point_of_sale_information** | [**TmsEmbeddedInstrumentIdentifierPointOfSaleInformation**](TmsEmbeddedInstrumentIdentifierPointOfSaleInformation.md) |  | [optional] 
+**point_of_sale_information** | [**TmsPointOfSaleInformation**](TmsPointOfSaleInformation.md) |  | [optional] 
 **bank_account** | [**TmsEmbeddedInstrumentIdentifierBankAccount**](TmsEmbeddedInstrumentIdentifierBankAccount.md) |  | [optional] 
 **tokenized_card** | [**Tmsv2TokenizedCard**](Tmsv2TokenizedCard.md) |  | [optional] 
 **issuer** | [**TmsEmbeddedInstrumentIdentifierIssuer**](TmsEmbeddedInstrumentIdentifierIssuer.md) |  | [optional] 

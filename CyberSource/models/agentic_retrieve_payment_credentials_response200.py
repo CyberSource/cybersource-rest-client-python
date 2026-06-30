@@ -31,7 +31,7 @@ class AgenticRetrievePaymentCredentialsResponse200(object):
     """
     swagger_types = {
         'transaction_response_complete': 'AgenticRetrievePaymentCredentialsResponse200TransactionResponseComplete',
-        'transaction_response_with_pending_events': 'AgenticRetrievePaymentCredentialsResponse200TransactionResponseWithPendingEvents'
+        'transaction_response_with_pending_events': 'IccTransactionResponsePendingEvents'
     }
 
     attribute_map = {
@@ -79,7 +79,7 @@ class AgenticRetrievePaymentCredentialsResponse200(object):
         Gets the transaction_response_with_pending_events of this AgenticRetrievePaymentCredentialsResponse200.
 
         :return: The transaction_response_with_pending_events of this AgenticRetrievePaymentCredentialsResponse200.
-        :rtype: AgenticRetrievePaymentCredentialsResponse200TransactionResponseWithPendingEvents
+        :rtype: IccTransactionResponsePendingEvents
         """
         return self._transaction_response_with_pending_events
 
@@ -89,7 +89,7 @@ class AgenticRetrievePaymentCredentialsResponse200(object):
         Sets the transaction_response_with_pending_events of this AgenticRetrievePaymentCredentialsResponse200.
 
         :param transaction_response_with_pending_events: The transaction_response_with_pending_events of this AgenticRetrievePaymentCredentialsResponse200.
-        :type: AgenticRetrievePaymentCredentialsResponse200TransactionResponseWithPendingEvents
+        :type: IccTransactionResponsePendingEvents
         """
 
         self._transaction_response_with_pending_events = transaction_response_with_pending_events

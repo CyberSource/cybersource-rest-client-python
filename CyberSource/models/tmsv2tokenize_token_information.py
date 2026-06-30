@@ -33,8 +33,8 @@ class Tmsv2tokenizeTokenInformation(object):
         'jti': 'str',
         'transient_token_jwt': 'str',
         'customer': 'Tmsv2tokenizeTokenInformationCustomer',
-        'shipping_address': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress',
-        'payment_instrument': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrument',
+        'shipping_address': 'DefaultShippingAddress',
+        'payment_instrument': 'DefaultPaymentInstrument',
         'instrument_identifier': 'TmsEmbeddedInstrumentIdentifier'
     }
 
@@ -145,7 +145,7 @@ class Tmsv2tokenizeTokenInformation(object):
         Gets the shipping_address of this Tmsv2tokenizeTokenInformation.
 
         :return: The shipping_address of this Tmsv2tokenizeTokenInformation.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress
+        :rtype: DefaultShippingAddress
         """
         return self._shipping_address
 
@@ -155,7 +155,7 @@ class Tmsv2tokenizeTokenInformation(object):
         Sets the shipping_address of this Tmsv2tokenizeTokenInformation.
 
         :param shipping_address: The shipping_address of this Tmsv2tokenizeTokenInformation.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress
+        :type: DefaultShippingAddress
         """
 
         self._shipping_address = shipping_address
@@ -166,7 +166,7 @@ class Tmsv2tokenizeTokenInformation(object):
         Gets the payment_instrument of this Tmsv2tokenizeTokenInformation.
 
         :return: The payment_instrument of this Tmsv2tokenizeTokenInformation.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrument
+        :rtype: DefaultPaymentInstrument
         """
         return self._payment_instrument
 
@@ -176,7 +176,7 @@ class Tmsv2tokenizeTokenInformation(object):
         Sets the payment_instrument of this Tmsv2tokenizeTokenInformation.
 
         :param payment_instrument: The payment_instrument of this Tmsv2tokenizeTokenInformation.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrument
+        :type: DefaultPaymentInstrument
         """
 
         self._payment_instrument = payment_instrument

@@ -30,10 +30,10 @@ class InlineResponse2014SetupsCommerceSolutions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'token_management': 'InlineResponse2014SetupsPaymentsCardProcessing',
-        'account_updater': 'InlineResponse2014SetupsPaymentsCardProcessing',
-        'bin_lookup': 'InlineResponse2014SetupsPaymentsCardProcessing',
-        'agentic_commerce': 'InlineResponse2014SetupsPaymentsCardProcessing'
+        'token_management': 'PaymentsConfigurationSetupCardProcessing',
+        'account_updater': 'PaymentsConfigurationSetupCardProcessing',
+        'bin_lookup': 'PaymentsConfigurationSetupCardProcessing',
+        'agentic_commerce': 'PaymentsConfigurationSetupCardProcessing'
     }
 
     attribute_map = {
@@ -68,7 +68,7 @@ class InlineResponse2014SetupsCommerceSolutions(object):
         Gets the token_management of this InlineResponse2014SetupsCommerceSolutions.
 
         :return: The token_management of this InlineResponse2014SetupsCommerceSolutions.
-        :rtype: InlineResponse2014SetupsPaymentsCardProcessing
+        :rtype: PaymentsConfigurationSetupCardProcessing
         """
         return self._token_management
 
@@ -78,7 +78,7 @@ class InlineResponse2014SetupsCommerceSolutions(object):
         Sets the token_management of this InlineResponse2014SetupsCommerceSolutions.
 
         :param token_management: The token_management of this InlineResponse2014SetupsCommerceSolutions.
-        :type: InlineResponse2014SetupsPaymentsCardProcessing
+        :type: PaymentsConfigurationSetupCardProcessing
         """
 
         self._token_management = token_management
@@ -89,7 +89,7 @@ class InlineResponse2014SetupsCommerceSolutions(object):
         Gets the account_updater of this InlineResponse2014SetupsCommerceSolutions.
 
         :return: The account_updater of this InlineResponse2014SetupsCommerceSolutions.
-        :rtype: InlineResponse2014SetupsPaymentsCardProcessing
+        :rtype: PaymentsConfigurationSetupCardProcessing
         """
         return self._account_updater
 
@@ -99,7 +99,7 @@ class InlineResponse2014SetupsCommerceSolutions(object):
         Sets the account_updater of this InlineResponse2014SetupsCommerceSolutions.
 
         :param account_updater: The account_updater of this InlineResponse2014SetupsCommerceSolutions.
-        :type: InlineResponse2014SetupsPaymentsCardProcessing
+        :type: PaymentsConfigurationSetupCardProcessing
         """
 
         self._account_updater = account_updater
@@ -110,7 +110,7 @@ class InlineResponse2014SetupsCommerceSolutions(object):
         Gets the bin_lookup of this InlineResponse2014SetupsCommerceSolutions.
 
         :return: The bin_lookup of this InlineResponse2014SetupsCommerceSolutions.
-        :rtype: InlineResponse2014SetupsPaymentsCardProcessing
+        :rtype: PaymentsConfigurationSetupCardProcessing
         """
         return self._bin_lookup
 
@@ -120,7 +120,7 @@ class InlineResponse2014SetupsCommerceSolutions(object):
         Sets the bin_lookup of this InlineResponse2014SetupsCommerceSolutions.
 
         :param bin_lookup: The bin_lookup of this InlineResponse2014SetupsCommerceSolutions.
-        :type: InlineResponse2014SetupsPaymentsCardProcessing
+        :type: PaymentsConfigurationSetupCardProcessing
         """
 
         self._bin_lookup = bin_lookup
@@ -131,7 +131,7 @@ class InlineResponse2014SetupsCommerceSolutions(object):
         Gets the agentic_commerce of this InlineResponse2014SetupsCommerceSolutions.
 
         :return: The agentic_commerce of this InlineResponse2014SetupsCommerceSolutions.
-        :rtype: InlineResponse2014SetupsPaymentsCardProcessing
+        :rtype: PaymentsConfigurationSetupCardProcessing
         """
         return self._agentic_commerce
 
@@ -141,7 +141,7 @@ class InlineResponse2014SetupsCommerceSolutions(object):
         Sets the agentic_commerce of this InlineResponse2014SetupsCommerceSolutions.
 
         :param agentic_commerce: The agentic_commerce of this InlineResponse2014SetupsCommerceSolutions.
-        :type: InlineResponse2014SetupsPaymentsCardProcessing
+        :type: PaymentsConfigurationSetupCardProcessing
         """
 
         self._agentic_commerce = agentic_commerce

@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **jti** | **str** | TMS Transient Token, 64 hexadecimal id value representing captured payment credentials (including Sensitive Authentication Data, e.g. CVV).  | [optional] 
 **transient_token_jwt** | **str** | Flex API Transient Token encoded as JWT (JSON Web Token), e.g. Flex microform or Unified Payment checkout result.  | [optional] 
 **customer** | [**Tmsv2tokenizeTokenInformationCustomer**](Tmsv2tokenizeTokenInformationCustomer.md) |  | [optional] 
-**shipping_address** | [**Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress**](Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress.md) |  | [optional] 
-**payment_instrument** | [**Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrument**](Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrument.md) |  | [optional] 
+**shipping_address** | [**DefaultShippingAddress**](DefaultShippingAddress.md) |  | [optional] 
+**payment_instrument** | [**DefaultPaymentInstrument**](DefaultPaymentInstrument.md) |  | [optional] 
 **instrument_identifier** | [**TmsEmbeddedInstrumentIdentifier**](TmsEmbeddedInstrumentIdentifier.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

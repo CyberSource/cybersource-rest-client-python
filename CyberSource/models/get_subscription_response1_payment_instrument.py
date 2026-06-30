@@ -33,8 +33,8 @@ class GetSubscriptionResponse1PaymentInstrument(object):
         'id': 'str',
         'bank_account': 'GetSubscriptionResponse1PaymentInstrumentBankAccount',
         'card': 'GetSubscriptionResponse1PaymentInstrumentCard',
-        'bill_to': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBillTo',
-        'buyer_information': 'GetSubscriptionResponse1PaymentInstrumentBuyerInformation'
+        'bill_to': 'DefaultPaymentInstrumentBillTo',
+        'buyer_information': 'FollowOnTransactionBuyerInformation'
     }
 
     attribute_map = {
@@ -138,7 +138,7 @@ class GetSubscriptionResponse1PaymentInstrument(object):
         Gets the bill_to of this GetSubscriptionResponse1PaymentInstrument.
 
         :return: The bill_to of this GetSubscriptionResponse1PaymentInstrument.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBillTo
+        :rtype: DefaultPaymentInstrumentBillTo
         """
         return self._bill_to
 
@@ -148,7 +148,7 @@ class GetSubscriptionResponse1PaymentInstrument(object):
         Sets the bill_to of this GetSubscriptionResponse1PaymentInstrument.
 
         :param bill_to: The bill_to of this GetSubscriptionResponse1PaymentInstrument.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBillTo
+        :type: DefaultPaymentInstrumentBillTo
         """
 
         self._bill_to = bill_to
@@ -159,7 +159,7 @@ class GetSubscriptionResponse1PaymentInstrument(object):
         Gets the buyer_information of this GetSubscriptionResponse1PaymentInstrument.
 
         :return: The buyer_information of this GetSubscriptionResponse1PaymentInstrument.
-        :rtype: GetSubscriptionResponse1PaymentInstrumentBuyerInformation
+        :rtype: FollowOnTransactionBuyerInformation
         """
         return self._buyer_information
 
@@ -169,7 +169,7 @@ class GetSubscriptionResponse1PaymentInstrument(object):
         Sets the buyer_information of this GetSubscriptionResponse1PaymentInstrument.
 
         :param buyer_information: The buyer_information of this GetSubscriptionResponse1PaymentInstrument.
-        :type: GetSubscriptionResponse1PaymentInstrumentBuyerInformation
+        :type: FollowOnTransactionBuyerInformation
         """
 
         self._buyer_information = buyer_information

@@ -30,7 +30,7 @@ class ShippingAddressListForCustomerEmbedded(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'shipping_addresses': 'list[Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress]'
+        'shipping_addresses': 'list[DefaultShippingAddress]'
     }
 
     attribute_map = {
@@ -53,7 +53,7 @@ class ShippingAddressListForCustomerEmbedded(object):
         Gets the shipping_addresses of this ShippingAddressListForCustomerEmbedded.
 
         :return: The shipping_addresses of this ShippingAddressListForCustomerEmbedded.
-        :rtype: list[Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress]
+        :rtype: list[DefaultShippingAddress]
         """
         return self._shipping_addresses
 
@@ -63,7 +63,7 @@ class ShippingAddressListForCustomerEmbedded(object):
         Sets the shipping_addresses of this ShippingAddressListForCustomerEmbedded.
 
         :param shipping_addresses: The shipping_addresses of this ShippingAddressListForCustomerEmbedded.
-        :type: list[Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress]
+        :type: list[DefaultShippingAddress]
         """
 
         self._shipping_addresses = shipping_addresses

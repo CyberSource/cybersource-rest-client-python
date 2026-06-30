@@ -30,22 +30,442 @@ class PtsV2PayoutsPost201ResponseIssuerInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'oct_domestic_participant_indicator': 'bool',
+        'oct_cross_border_participant_indicator': 'bool',
+        'oct_money_transfer_domestic_indicator': 'bool',
+        'oct_money_transfer_cross_border_indicator': 'bool',
+        'oct_money_transfer_fast_funds_domestic_indicator': 'bool',
+        'oct_money_transfer_fast_funds_cross_border_indicator': 'bool',
+        'oct_money_transfer_merchant_country_restricted': 'bool',
+        'oct_non_money_transfer_domestic_indicator': 'bool',
+        'oct_non_money_transfer_cross_border_indicator': 'bool',
+        'oct_non_money_transfer_fast_funds_domestic_indicator': 'bool',
+        'oct_non_money_transfer_fast_funds_cross_border_indicator': 'bool',
+        'oct_online_gambling_domestic_indicator': 'bool',
+        'oct_online_gambling_cross_border_indicator': 'bool',
+        'oct_online_gambling_fast_funds_domestic_indicator': 'bool',
+        'oct_online_gambling_fast_funds_cross_border_indicator': 'bool',
         'service_processing_type': 'str'
     }
 
     attribute_map = {
+        'oct_domestic_participant_indicator': 'octDomesticParticipantIndicator',
+        'oct_cross_border_participant_indicator': 'octCrossBorderParticipantIndicator',
+        'oct_money_transfer_domestic_indicator': 'octMoneyTransferDomesticIndicator',
+        'oct_money_transfer_cross_border_indicator': 'octMoneyTransferCrossBorderIndicator',
+        'oct_money_transfer_fast_funds_domestic_indicator': 'octMoneyTransferFastFundsDomesticIndicator',
+        'oct_money_transfer_fast_funds_cross_border_indicator': 'octMoneyTransferFastFundsCrossBorderIndicator',
+        'oct_money_transfer_merchant_country_restricted': 'octMoneyTransferMerchantCountryRestricted',
+        'oct_non_money_transfer_domestic_indicator': 'octNonMoneyTransferDomesticIndicator',
+        'oct_non_money_transfer_cross_border_indicator': 'octNonMoneyTransferCrossBorderIndicator',
+        'oct_non_money_transfer_fast_funds_domestic_indicator': 'octNonMoneyTransferFastFundsDomesticIndicator',
+        'oct_non_money_transfer_fast_funds_cross_border_indicator': 'octNonMoneyTransferFastFundsCrossBorderIndicator',
+        'oct_online_gambling_domestic_indicator': 'octOnlineGamblingDomesticIndicator',
+        'oct_online_gambling_cross_border_indicator': 'octOnlineGamblingCrossBorderIndicator',
+        'oct_online_gambling_fast_funds_domestic_indicator': 'octOnlineGamblingFastFundsDomesticIndicator',
+        'oct_online_gambling_fast_funds_cross_border_indicator': 'octOnlineGamblingFastFundsCrossBorderIndicator',
         'service_processing_type': 'serviceProcessingType'
     }
 
-    def __init__(self, service_processing_type=None):
+    def __init__(self, oct_domestic_participant_indicator=None, oct_cross_border_participant_indicator=None, oct_money_transfer_domestic_indicator=None, oct_money_transfer_cross_border_indicator=None, oct_money_transfer_fast_funds_domestic_indicator=None, oct_money_transfer_fast_funds_cross_border_indicator=None, oct_money_transfer_merchant_country_restricted=None, oct_non_money_transfer_domestic_indicator=None, oct_non_money_transfer_cross_border_indicator=None, oct_non_money_transfer_fast_funds_domestic_indicator=None, oct_non_money_transfer_fast_funds_cross_border_indicator=None, oct_online_gambling_domestic_indicator=None, oct_online_gambling_cross_border_indicator=None, oct_online_gambling_fast_funds_domestic_indicator=None, oct_online_gambling_fast_funds_cross_border_indicator=None, service_processing_type=None):
         """
         PtsV2PayoutsPost201ResponseIssuerInformation - a model defined in Swagger
         """
 
+        self._oct_domestic_participant_indicator = None
+        self._oct_cross_border_participant_indicator = None
+        self._oct_money_transfer_domestic_indicator = None
+        self._oct_money_transfer_cross_border_indicator = None
+        self._oct_money_transfer_fast_funds_domestic_indicator = None
+        self._oct_money_transfer_fast_funds_cross_border_indicator = None
+        self._oct_money_transfer_merchant_country_restricted = None
+        self._oct_non_money_transfer_domestic_indicator = None
+        self._oct_non_money_transfer_cross_border_indicator = None
+        self._oct_non_money_transfer_fast_funds_domestic_indicator = None
+        self._oct_non_money_transfer_fast_funds_cross_border_indicator = None
+        self._oct_online_gambling_domestic_indicator = None
+        self._oct_online_gambling_cross_border_indicator = None
+        self._oct_online_gambling_fast_funds_domestic_indicator = None
+        self._oct_online_gambling_fast_funds_cross_border_indicator = None
         self._service_processing_type = None
 
+        if oct_domestic_participant_indicator is not None:
+          self.oct_domestic_participant_indicator = oct_domestic_participant_indicator
+        if oct_cross_border_participant_indicator is not None:
+          self.oct_cross_border_participant_indicator = oct_cross_border_participant_indicator
+        if oct_money_transfer_domestic_indicator is not None:
+          self.oct_money_transfer_domestic_indicator = oct_money_transfer_domestic_indicator
+        if oct_money_transfer_cross_border_indicator is not None:
+          self.oct_money_transfer_cross_border_indicator = oct_money_transfer_cross_border_indicator
+        if oct_money_transfer_fast_funds_domestic_indicator is not None:
+          self.oct_money_transfer_fast_funds_domestic_indicator = oct_money_transfer_fast_funds_domestic_indicator
+        if oct_money_transfer_fast_funds_cross_border_indicator is not None:
+          self.oct_money_transfer_fast_funds_cross_border_indicator = oct_money_transfer_fast_funds_cross_border_indicator
+        if oct_money_transfer_merchant_country_restricted is not None:
+          self.oct_money_transfer_merchant_country_restricted = oct_money_transfer_merchant_country_restricted
+        if oct_non_money_transfer_domestic_indicator is not None:
+          self.oct_non_money_transfer_domestic_indicator = oct_non_money_transfer_domestic_indicator
+        if oct_non_money_transfer_cross_border_indicator is not None:
+          self.oct_non_money_transfer_cross_border_indicator = oct_non_money_transfer_cross_border_indicator
+        if oct_non_money_transfer_fast_funds_domestic_indicator is not None:
+          self.oct_non_money_transfer_fast_funds_domestic_indicator = oct_non_money_transfer_fast_funds_domestic_indicator
+        if oct_non_money_transfer_fast_funds_cross_border_indicator is not None:
+          self.oct_non_money_transfer_fast_funds_cross_border_indicator = oct_non_money_transfer_fast_funds_cross_border_indicator
+        if oct_online_gambling_domestic_indicator is not None:
+          self.oct_online_gambling_domestic_indicator = oct_online_gambling_domestic_indicator
+        if oct_online_gambling_cross_border_indicator is not None:
+          self.oct_online_gambling_cross_border_indicator = oct_online_gambling_cross_border_indicator
+        if oct_online_gambling_fast_funds_domestic_indicator is not None:
+          self.oct_online_gambling_fast_funds_domestic_indicator = oct_online_gambling_fast_funds_domestic_indicator
+        if oct_online_gambling_fast_funds_cross_border_indicator is not None:
+          self.oct_online_gambling_fast_funds_cross_border_indicator = oct_online_gambling_fast_funds_cross_border_indicator
         if service_processing_type is not None:
           self.service_processing_type = service_processing_type
+
+    @property
+    def oct_domestic_participant_indicator(self):
+        """
+        Gets the oct_domestic_participant_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Domestic indicator for Push funds (OCT). If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :return: The oct_domestic_participant_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_domestic_participant_indicator
+
+    @oct_domestic_participant_indicator.setter
+    def oct_domestic_participant_indicator(self, oct_domestic_participant_indicator):
+        """
+        Sets the oct_domestic_participant_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Domestic indicator for Push funds (OCT). If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :param oct_domestic_participant_indicator: The oct_domestic_participant_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_domestic_participant_indicator = oct_domestic_participant_indicator
+
+    @property
+    def oct_cross_border_participant_indicator(self):
+        """
+        Gets the oct_cross_border_participant_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Cross-border indicator for push funds (OCT). If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :return: The oct_cross_border_participant_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_cross_border_participant_indicator
+
+    @oct_cross_border_participant_indicator.setter
+    def oct_cross_border_participant_indicator(self, oct_cross_border_participant_indicator):
+        """
+        Sets the oct_cross_border_participant_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Cross-border indicator for push funds (OCT). If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :param oct_cross_border_participant_indicator: The oct_cross_border_participant_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_cross_border_participant_indicator = oct_cross_border_participant_indicator
+
+    @property
+    def oct_money_transfer_domestic_indicator(self):
+        """
+        Gets the oct_money_transfer_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether domestic money transfer OCTs (push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.        Supported for Visa Direct. 
+
+        :return: The oct_money_transfer_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_money_transfer_domestic_indicator
+
+    @oct_money_transfer_domestic_indicator.setter
+    def oct_money_transfer_domestic_indicator(self, oct_money_transfer_domestic_indicator):
+        """
+        Sets the oct_money_transfer_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether domestic money transfer OCTs (push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.        Supported for Visa Direct. 
+
+        :param oct_money_transfer_domestic_indicator: The oct_money_transfer_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_money_transfer_domestic_indicator = oct_money_transfer_domestic_indicator
+
+    @property
+    def oct_money_transfer_cross_border_indicator(self):
+        """
+        Gets the oct_money_transfer_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether cross-border money transfer OCTs (push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :return: The oct_money_transfer_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_money_transfer_cross_border_indicator
+
+    @oct_money_transfer_cross_border_indicator.setter
+    def oct_money_transfer_cross_border_indicator(self, oct_money_transfer_cross_border_indicator):
+        """
+        Sets the oct_money_transfer_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether cross-border money transfer OCTs (push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :param oct_money_transfer_cross_border_indicator: The oct_money_transfer_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_money_transfer_cross_border_indicator = oct_money_transfer_cross_border_indicator
+
+    @property
+    def oct_money_transfer_fast_funds_domestic_indicator(self):
+        """
+        Gets the oct_money_transfer_fast_funds_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether domestic money transfer OCTs (fast push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :return: The oct_money_transfer_fast_funds_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_money_transfer_fast_funds_domestic_indicator
+
+    @oct_money_transfer_fast_funds_domestic_indicator.setter
+    def oct_money_transfer_fast_funds_domestic_indicator(self, oct_money_transfer_fast_funds_domestic_indicator):
+        """
+        Sets the oct_money_transfer_fast_funds_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether domestic money transfer OCTs (fast push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :param oct_money_transfer_fast_funds_domestic_indicator: The oct_money_transfer_fast_funds_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_money_transfer_fast_funds_domestic_indicator = oct_money_transfer_fast_funds_domestic_indicator
+
+    @property
+    def oct_money_transfer_fast_funds_cross_border_indicator(self):
+        """
+        Gets the oct_money_transfer_fast_funds_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether cross-border money transfer OCTs (fast push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :return: The oct_money_transfer_fast_funds_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_money_transfer_fast_funds_cross_border_indicator
+
+    @oct_money_transfer_fast_funds_cross_border_indicator.setter
+    def oct_money_transfer_fast_funds_cross_border_indicator(self, oct_money_transfer_fast_funds_cross_border_indicator):
+        """
+        Sets the oct_money_transfer_fast_funds_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether cross-border money transfer OCTs (fast push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :param oct_money_transfer_fast_funds_cross_border_indicator: The oct_money_transfer_fast_funds_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_money_transfer_fast_funds_cross_border_indicator = oct_money_transfer_fast_funds_cross_border_indicator
+
+    @property
+    def oct_money_transfer_merchant_country_restricted(self):
+        """
+        Gets the oct_money_transfer_merchant_country_restricted of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        This field indicates if the recipient issuer can accept push funds (OCT) transactions from the merchant country.  If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :return: The oct_money_transfer_merchant_country_restricted of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_money_transfer_merchant_country_restricted
+
+    @oct_money_transfer_merchant_country_restricted.setter
+    def oct_money_transfer_merchant_country_restricted(self, oct_money_transfer_merchant_country_restricted):
+        """
+        Sets the oct_money_transfer_merchant_country_restricted of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        This field indicates if the recipient issuer can accept push funds (OCT) transactions from the merchant country.  If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :param oct_money_transfer_merchant_country_restricted: The oct_money_transfer_merchant_country_restricted of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_money_transfer_merchant_country_restricted = oct_money_transfer_merchant_country_restricted
+
+    @property
+    def oct_non_money_transfer_domestic_indicator(self):
+        """
+        Gets the oct_non_money_transfer_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether domestic non-money transfer OCTs (push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :return: The oct_non_money_transfer_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_non_money_transfer_domestic_indicator
+
+    @oct_non_money_transfer_domestic_indicator.setter
+    def oct_non_money_transfer_domestic_indicator(self, oct_non_money_transfer_domestic_indicator):
+        """
+        Sets the oct_non_money_transfer_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether domestic non-money transfer OCTs (push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :param oct_non_money_transfer_domestic_indicator: The oct_non_money_transfer_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_non_money_transfer_domestic_indicator = oct_non_money_transfer_domestic_indicator
+
+    @property
+    def oct_non_money_transfer_cross_border_indicator(self):
+        """
+        Gets the oct_non_money_transfer_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether cross-border non-money transfer OCTs (push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :return: The oct_non_money_transfer_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_non_money_transfer_cross_border_indicator
+
+    @oct_non_money_transfer_cross_border_indicator.setter
+    def oct_non_money_transfer_cross_border_indicator(self, oct_non_money_transfer_cross_border_indicator):
+        """
+        Sets the oct_non_money_transfer_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether cross-border non-money transfer OCTs (push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :param oct_non_money_transfer_cross_border_indicator: The oct_non_money_transfer_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_non_money_transfer_cross_border_indicator = oct_non_money_transfer_cross_border_indicator
+
+    @property
+    def oct_non_money_transfer_fast_funds_domestic_indicator(self):
+        """
+        Gets the oct_non_money_transfer_fast_funds_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether domestic non-money transfer OCTs (fast push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :return: The oct_non_money_transfer_fast_funds_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_non_money_transfer_fast_funds_domestic_indicator
+
+    @oct_non_money_transfer_fast_funds_domestic_indicator.setter
+    def oct_non_money_transfer_fast_funds_domestic_indicator(self, oct_non_money_transfer_fast_funds_domestic_indicator):
+        """
+        Sets the oct_non_money_transfer_fast_funds_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether domestic non-money transfer OCTs (fast push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :param oct_non_money_transfer_fast_funds_domestic_indicator: The oct_non_money_transfer_fast_funds_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_non_money_transfer_fast_funds_domestic_indicator = oct_non_money_transfer_fast_funds_domestic_indicator
+
+    @property
+    def oct_non_money_transfer_fast_funds_cross_border_indicator(self):
+        """
+        Gets the oct_non_money_transfer_fast_funds_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether cross-border non-money transfer OCTs (fast push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :return: The oct_non_money_transfer_fast_funds_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_non_money_transfer_fast_funds_cross_border_indicator
+
+    @oct_non_money_transfer_fast_funds_cross_border_indicator.setter
+    def oct_non_money_transfer_fast_funds_cross_border_indicator(self, oct_non_money_transfer_fast_funds_cross_border_indicator):
+        """
+        Sets the oct_non_money_transfer_fast_funds_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether cross-border non-money transfer OCTs (fast push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :param oct_non_money_transfer_fast_funds_cross_border_indicator: The oct_non_money_transfer_fast_funds_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_non_money_transfer_fast_funds_cross_border_indicator = oct_non_money_transfer_fast_funds_cross_border_indicator
+
+    @property
+    def oct_online_gambling_domestic_indicator(self):
+        """
+        Gets the oct_online_gambling_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether domestic gambling OCTs (push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :return: The oct_online_gambling_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_online_gambling_domestic_indicator
+
+    @oct_online_gambling_domestic_indicator.setter
+    def oct_online_gambling_domestic_indicator(self, oct_online_gambling_domestic_indicator):
+        """
+        Sets the oct_online_gambling_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether domestic gambling OCTs (push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :param oct_online_gambling_domestic_indicator: The oct_online_gambling_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_online_gambling_domestic_indicator = oct_online_gambling_domestic_indicator
+
+    @property
+    def oct_online_gambling_cross_border_indicator(self):
+        """
+        Gets the oct_online_gambling_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether cross-border gambling OCTs (push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :return: The oct_online_gambling_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_online_gambling_cross_border_indicator
+
+    @oct_online_gambling_cross_border_indicator.setter
+    def oct_online_gambling_cross_border_indicator(self, oct_online_gambling_cross_border_indicator):
+        """
+        Sets the oct_online_gambling_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether cross-border gambling OCTs (push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :param oct_online_gambling_cross_border_indicator: The oct_online_gambling_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_online_gambling_cross_border_indicator = oct_online_gambling_cross_border_indicator
+
+    @property
+    def oct_online_gambling_fast_funds_domestic_indicator(self):
+        """
+        Gets the oct_online_gambling_fast_funds_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether domestic gambling OCTs (fast push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :return: The oct_online_gambling_fast_funds_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_online_gambling_fast_funds_domestic_indicator
+
+    @oct_online_gambling_fast_funds_domestic_indicator.setter
+    def oct_online_gambling_fast_funds_domestic_indicator(self, oct_online_gambling_fast_funds_domestic_indicator):
+        """
+        Sets the oct_online_gambling_fast_funds_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether domestic gambling OCTs (fast push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :param oct_online_gambling_fast_funds_domestic_indicator: The oct_online_gambling_fast_funds_domestic_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_online_gambling_fast_funds_domestic_indicator = oct_online_gambling_fast_funds_domestic_indicator
+
+    @property
+    def oct_online_gambling_fast_funds_cross_border_indicator(self):
+        """
+        Gets the oct_online_gambling_fast_funds_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether cross-border gambling OCTs (fast push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :return: The oct_online_gambling_fast_funds_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :rtype: bool
+        """
+        return self._oct_online_gambling_fast_funds_cross_border_indicator
+
+    @oct_online_gambling_fast_funds_cross_border_indicator.setter
+    def oct_online_gambling_fast_funds_cross_border_indicator(self, oct_online_gambling_fast_funds_cross_border_indicator):
+        """
+        Sets the oct_online_gambling_fast_funds_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        Indicates whether cross-border gambling OCTs (fast push funds) are allowed. If no Funds Transfer Attributes Inquiry data is available for this card account, the field is omitted.   Supported for Visa Direct. 
+
+        :param oct_online_gambling_fast_funds_cross_border_indicator: The oct_online_gambling_fast_funds_cross_border_indicator of this PtsV2PayoutsPost201ResponseIssuerInformation.
+        :type: bool
+        """
+
+        self._oct_online_gambling_fast_funds_cross_border_indicator = oct_online_gambling_fast_funds_cross_border_indicator
 
     @property
     def service_processing_type(self):

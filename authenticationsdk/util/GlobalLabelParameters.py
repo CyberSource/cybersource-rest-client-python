@@ -48,7 +48,22 @@ class GlobalLabelParameters:
     LOG_FILE_NAME_DEFAULT = "cybs"
     OLD_RUN_ENVIRONMENT_CONSTANTS = ["CYBERSOURCE.ENVIRONMENT.SANDBOX", "CYBERSOURCE.ENVIRONMENT.PRODUCTION", "CYBERSOURCE.IN.ENVIRONMENT.SANDBOX", "CYBERSOURCE.IN.ENVIRONMENT.PRODUCTION"]
     PROXY_PREFIX = "https"
-    HIDE_MERCHANT_CONFIG_PROPS = "merchantid,merchant_secretkey,merchant_keyid,key_alias,key_password,responseMlePrivateKeyFilePath,responseMlePrivateKeyFilePassword,responseMlePrivateKey"
+    HIDE_MERCHANT_CONFIG_PROPS = {
+        "merchantid",
+        "merchant_secretkey",
+        "merchant_keyid",
+        "key_alias",
+        "key_password",
+        "responseMlePrivateKeyFilePath",
+        "responseMlePrivateKeyFilePassword",
+        "responseMlePrivateKey",
+        "proxy_password",
+        "client_secret",
+        "ssl_key_password",
+        "access_token",
+        "refresh_token",
+        "private_key"
+    }
     FILE_NOT_FOUND = "File not found. Check path/filename entered. Entered path/filename : "
     SYSTEM_ERROR = "System error encountered while accessing file : "
     AUTH_ERROR = "Check Authentication Type (HTTP_Signature/JWT) in cybs.json."

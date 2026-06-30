@@ -37,7 +37,8 @@ class Ptsv2paymentsProcessorInformation(object):
         'auth_approval_token': 'str',
         'supplementary_transaction_data': 'str',
         'response_source_code': 'str',
-        'cedp_verified_indicator': 'str'
+        'cedp_verified_indicator': 'str',
+        'fee_program_indicator': 'str'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class Ptsv2paymentsProcessorInformation(object):
         'auth_approval_token': 'authApprovalToken',
         'supplementary_transaction_data': 'supplementaryTransactionData',
         'response_source_code': 'responseSourceCode',
-        'cedp_verified_indicator': 'cedpVerifiedIndicator'
+        'cedp_verified_indicator': 'cedpVerifiedIndicator',
+        'fee_program_indicator': 'feeProgramIndicator'
     }
 
-    def __init__(self, pre_approval_token=None, authorization_options=None, reversal=None, network=None, auth_approval_token=None, supplementary_transaction_data=None, response_source_code=None, cedp_verified_indicator=None):
+    def __init__(self, pre_approval_token=None, authorization_options=None, reversal=None, network=None, auth_approval_token=None, supplementary_transaction_data=None, response_source_code=None, cedp_verified_indicator=None, fee_program_indicator=None):
         """
         Ptsv2paymentsProcessorInformation - a model defined in Swagger
         """
@@ -64,6 +66,7 @@ class Ptsv2paymentsProcessorInformation(object):
         self._supplementary_transaction_data = None
         self._response_source_code = None
         self._cedp_verified_indicator = None
+        self._fee_program_indicator = None
 
         if pre_approval_token is not None:
           self.pre_approval_token = pre_approval_token
@@ -81,6 +84,8 @@ class Ptsv2paymentsProcessorInformation(object):
           self.response_source_code = response_source_code
         if cedp_verified_indicator is not None:
           self.cedp_verified_indicator = cedp_verified_indicator
+        if fee_program_indicator is not None:
+          self.fee_program_indicator = fee_program_indicator
 
     @property
     def pre_approval_token(self):
@@ -259,6 +264,29 @@ class Ptsv2paymentsProcessorInformation(object):
         """
 
         self._cedp_verified_indicator = cedp_verified_indicator
+
+    @property
+    def fee_program_indicator(self):
+        """
+        Gets the fee_program_indicator of this Ptsv2paymentsProcessorInformation.
+        Interchange reimbursement fee program indicator (FPI), which is used when assessing the fee applied to a cross-border or domestic Asia Pacific financial transaction. Acquirers and issues retain and return the FPI value in chargeback and representments.
+
+        :return: The fee_program_indicator of this Ptsv2paymentsProcessorInformation.
+        :rtype: str
+        """
+        return self._fee_program_indicator
+
+    @fee_program_indicator.setter
+    def fee_program_indicator(self, fee_program_indicator):
+        """
+        Sets the fee_program_indicator of this Ptsv2paymentsProcessorInformation.
+        Interchange reimbursement fee program indicator (FPI), which is used when assessing the fee applied to a cross-border or domestic Asia Pacific financial transaction. Acquirers and issues retain and return the FPI value in chargeback and representments.
+
+        :param fee_program_indicator: The fee_program_indicator of this Ptsv2paymentsProcessorInformation.
+        :type: str
+        """
+
+        self._fee_program_indicator = fee_program_indicator
 
     def to_dict(self):
         """

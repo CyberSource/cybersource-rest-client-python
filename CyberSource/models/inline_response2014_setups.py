@@ -30,7 +30,7 @@ class InlineResponse2014Setups(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'payments': 'InlineResponse2014SetupsPayments',
+        'payments': 'PaymentsConfigurationSetup',
         'risk': 'InlineResponse2014SetupsRisk',
         'commerce_solutions': 'InlineResponse2014SetupsCommerceSolutions',
         'value_added_services': 'InlineResponse2014SetupsValueAddedServices'
@@ -68,7 +68,7 @@ class InlineResponse2014Setups(object):
         Gets the payments of this InlineResponse2014Setups.
 
         :return: The payments of this InlineResponse2014Setups.
-        :rtype: InlineResponse2014SetupsPayments
+        :rtype: PaymentsConfigurationSetup
         """
         return self._payments
 
@@ -78,7 +78,7 @@ class InlineResponse2014Setups(object):
         Sets the payments of this InlineResponse2014Setups.
 
         :param payments: The payments of this InlineResponse2014Setups.
-        :type: InlineResponse2014SetupsPayments
+        :type: PaymentsConfigurationSetup
         """
 
         self._payments = payments

@@ -30,7 +30,7 @@ class PaymentsProductsUnifiedCheckoutConfigurationInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'configurations': 'PaymentsProductsUnifiedCheckoutConfigurationInformationConfigurations'
+        'configurations': 'UcConfigurations'
     }
 
     attribute_map = {
@@ -53,7 +53,7 @@ class PaymentsProductsUnifiedCheckoutConfigurationInformation(object):
         Gets the configurations of this PaymentsProductsUnifiedCheckoutConfigurationInformation.
 
         :return: The configurations of this PaymentsProductsUnifiedCheckoutConfigurationInformation.
-        :rtype: PaymentsProductsUnifiedCheckoutConfigurationInformationConfigurations
+        :rtype: UcConfigurations
         """
         return self._configurations
 
@@ -63,7 +63,7 @@ class PaymentsProductsUnifiedCheckoutConfigurationInformation(object):
         Sets the configurations of this PaymentsProductsUnifiedCheckoutConfigurationInformation.
 
         :param configurations: The configurations of this PaymentsProductsUnifiedCheckoutConfigurationInformation.
-        :type: PaymentsProductsUnifiedCheckoutConfigurationInformationConfigurations
+        :type: UcConfigurations
         """
 
         self._configurations = configurations

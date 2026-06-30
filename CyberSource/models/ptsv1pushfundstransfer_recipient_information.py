@@ -30,7 +30,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'payment_information': 'Ptsv1pushfundstransferRecipientInformationPaymentInformation',
+        'payment_information': 'PushFundsTransferPaymentInformation',
         'address1': 'str',
         'address2': 'str',
         'locality': 'str',
@@ -128,7 +128,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         Gets the payment_information of this Ptsv1pushfundstransferRecipientInformation.
 
         :return: The payment_information of this Ptsv1pushfundstransferRecipientInformation.
-        :rtype: Ptsv1pushfundstransferRecipientInformationPaymentInformation
+        :rtype: PushFundsTransferPaymentInformation
         """
         return self._payment_information
 
@@ -138,7 +138,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         Sets the payment_information of this Ptsv1pushfundstransferRecipientInformation.
 
         :param payment_information: The payment_information of this Ptsv1pushfundstransferRecipientInformation.
-        :type: Ptsv1pushfundstransferRecipientInformationPaymentInformation
+        :type: PushFundsTransferPaymentInformation
         """
 
         self._payment_information = payment_information

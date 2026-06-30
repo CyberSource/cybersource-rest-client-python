@@ -38,7 +38,7 @@ class PatchInstrumentIdentifierRequest(object):
         'source': 'str',
         'token_provisioning_information': 'Ptsv2paymentsTokenInformationTokenProvisioningInformation',
         'card': 'TmsEmbeddedInstrumentIdentifierCard',
-        'point_of_sale_information': 'TmsEmbeddedInstrumentIdentifierPointOfSaleInformation',
+        'point_of_sale_information': 'TmsPointOfSaleInformation',
         'bank_account': 'TmsEmbeddedInstrumentIdentifierBankAccount',
         'tokenized_card': 'Tmsv2TokenizedCard',
         'issuer': 'TmsEmbeddedInstrumentIdentifierIssuer',
@@ -306,7 +306,7 @@ class PatchInstrumentIdentifierRequest(object):
         Gets the point_of_sale_information of this PatchInstrumentIdentifierRequest.
 
         :return: The point_of_sale_information of this PatchInstrumentIdentifierRequest.
-        :rtype: TmsEmbeddedInstrumentIdentifierPointOfSaleInformation
+        :rtype: TmsPointOfSaleInformation
         """
         return self._point_of_sale_information
 
@@ -316,7 +316,7 @@ class PatchInstrumentIdentifierRequest(object):
         Sets the point_of_sale_information of this PatchInstrumentIdentifierRequest.
 
         :param point_of_sale_information: The point_of_sale_information of this PatchInstrumentIdentifierRequest.
-        :type: TmsEmbeddedInstrumentIdentifierPointOfSaleInformation
+        :type: TmsPointOfSaleInformation
         """
 
         self._point_of_sale_information = point_of_sale_information

@@ -51,7 +51,7 @@ class UnderwritingConfigurationOrganizationInformationBusinessInformation(object
         'address': 'UnderwritingConfigurationOrganizationInformationBusinessInformationAddress',
         'trading_address': 'UnderwritingConfigurationOrganizationInformationBusinessInformationTradingAddress',
         'business_contact': 'UnderwritingConfigurationOrganizationInformationBusinessInformationBusinessContact',
-        'business_details': 'UnderwritingConfigurationOrganizationInformationBusinessInformationBusinessDetails',
+        'business_details': 'UnderwritingConfigurationBusinessDetails',
         'owner_information': 'list[UnderwritingConfigurationOrganizationInformationBusinessInformationOwnerInformation]',
         'director_information': 'list[UnderwritingConfigurationOrganizationInformationBusinessInformationDirectorInformation]'
     }
@@ -632,7 +632,7 @@ class UnderwritingConfigurationOrganizationInformationBusinessInformation(object
         Gets the business_details of this UnderwritingConfigurationOrganizationInformationBusinessInformation.
 
         :return: The business_details of this UnderwritingConfigurationOrganizationInformationBusinessInformation.
-        :rtype: UnderwritingConfigurationOrganizationInformationBusinessInformationBusinessDetails
+        :rtype: UnderwritingConfigurationBusinessDetails
         """
         return self._business_details
 
@@ -642,7 +642,7 @@ class UnderwritingConfigurationOrganizationInformationBusinessInformation(object
         Sets the business_details of this UnderwritingConfigurationOrganizationInformationBusinessInformation.
 
         :param business_details: The business_details of this UnderwritingConfigurationOrganizationInformationBusinessInformation.
-        :type: UnderwritingConfigurationOrganizationInformationBusinessInformationBusinessDetails
+        :type: UnderwritingConfigurationBusinessDetails
         """
 
         self._business_details = business_details

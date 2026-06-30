@@ -30,7 +30,7 @@ class VTConfigCardNotPresent(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'global_payment_information': 'VTConfigCardNotPresentGlobalPaymentInformation',
+        'global_payment_information': 'VirtualTerminalGlobalPaymentSettings',
         'receipt_information': 'VTConfigCardNotPresentReceiptInformation'
     }
 
@@ -58,7 +58,7 @@ class VTConfigCardNotPresent(object):
         Gets the global_payment_information of this VTConfigCardNotPresent.
 
         :return: The global_payment_information of this VTConfigCardNotPresent.
-        :rtype: VTConfigCardNotPresentGlobalPaymentInformation
+        :rtype: VirtualTerminalGlobalPaymentSettings
         """
         return self._global_payment_information
 
@@ -68,7 +68,7 @@ class VTConfigCardNotPresent(object):
         Sets the global_payment_information of this VTConfigCardNotPresent.
 
         :param global_payment_information: The global_payment_information of this VTConfigCardNotPresent.
-        :type: VTConfigCardNotPresentGlobalPaymentInformation
+        :type: VirtualTerminalGlobalPaymentSettings
         """
 
         self._global_payment_information = global_payment_information

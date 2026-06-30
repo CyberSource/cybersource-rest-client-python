@@ -32,7 +32,7 @@ class PostIssuerLifeCycleSimulationRequest(object):
     swagger_types = {
         'state': 'str',
         'card': 'Tmsv2tokenizedcardstokenizedCardIdissuerlifecycleeventsimulationsCard',
-        'metadata': 'Tmsv2tokenizedcardstokenizedCardIdissuerlifecycleeventsimulationsMetadata'
+        'metadata': 'TmsIssuerLifeCycleEventSimulationMetadata'
     }
 
     attribute_map = {
@@ -107,7 +107,7 @@ class PostIssuerLifeCycleSimulationRequest(object):
         Gets the metadata of this PostIssuerLifeCycleSimulationRequest.
 
         :return: The metadata of this PostIssuerLifeCycleSimulationRequest.
-        :rtype: Tmsv2tokenizedcardstokenizedCardIdissuerlifecycleeventsimulationsMetadata
+        :rtype: TmsIssuerLifeCycleEventSimulationMetadata
         """
         return self._metadata
 
@@ -117,7 +117,7 @@ class PostIssuerLifeCycleSimulationRequest(object):
         Sets the metadata of this PostIssuerLifeCycleSimulationRequest.
 
         :param metadata: The metadata of this PostIssuerLifeCycleSimulationRequest.
-        :type: Tmsv2tokenizedcardstokenizedCardIdissuerlifecycleeventsimulationsMetadata
+        :type: TmsIssuerLifeCycleEventSimulationMetadata
         """
 
         self._metadata = metadata

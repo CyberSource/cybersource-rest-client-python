@@ -31,7 +31,7 @@ class MppCredentialsRequest(object):
     """
     swagger_types = {
         'instrument_id': 'str',
-        'challenge': 'Acpv1mppcredentialsChallenge'
+        'challenge': 'Iccv1mppcredentialsChallenge'
     }
 
     attribute_map = {
@@ -79,7 +79,7 @@ class MppCredentialsRequest(object):
         Gets the challenge of this MppCredentialsRequest.
 
         :return: The challenge of this MppCredentialsRequest.
-        :rtype: Acpv1mppcredentialsChallenge
+        :rtype: Iccv1mppcredentialsChallenge
         """
         return self._challenge
 
@@ -89,7 +89,7 @@ class MppCredentialsRequest(object):
         Sets the challenge of this MppCredentialsRequest.
 
         :param challenge: The challenge of this MppCredentialsRequest.
-        :type: Acpv1mppcredentialsChallenge
+        :type: Iccv1mppcredentialsChallenge
         """
 
         self._challenge = challenge

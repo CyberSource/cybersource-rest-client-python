@@ -30,94 +30,108 @@ class InlineResponse40011(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
-        'status': 'str',
+        'correlation_id': 'str',
+        'details': 'list[InlineResponse4001Details]',
+        'information_link': 'str',
         'message': 'str',
-        'reason': 'str',
-        'details': 'list[InlineResponse40011Details]'
+        'reason': 'str'
     }
 
     attribute_map = {
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status',
+        'correlation_id': 'correlationId',
+        'details': 'details',
+        'information_link': 'informationLink',
         'message': 'message',
-        'reason': 'reason',
-        'details': 'details'
+        'reason': 'reason'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, message=None, reason=None, details=None):
+    def __init__(self, correlation_id=None, details=None, information_link=None, message=None, reason=None):
         """
         InlineResponse40011 - a model defined in Swagger
         """
 
-        self._submit_time_utc = None
-        self._status = None
+        self._correlation_id = None
+        self._details = None
+        self._information_link = None
         self._message = None
         self._reason = None
-        self._details = None
 
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
-        if message is not None:
-          self.message = message
-        if reason is not None:
-          self.reason = reason
+        if correlation_id is not None:
+          self.correlation_id = correlation_id
         if details is not None:
           self.details = details
+        if information_link is not None:
+          self.information_link = information_link
+        self.message = message
+        self.reason = reason
 
     @property
-    def submit_time_utc(self):
+    def correlation_id(self):
         """
-        Gets the submit_time_utc of this InlineResponse40011.
-        Time verification was requested  Format: `YYYY-MM-DDThhmmssZ`, where: - `T`:  Separates the date and the time - `Z`:  Indicates Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT)  Example:  `2020-01-11T224757Z` equals January 11, 2020, at 22:47:57 (10:47:57 p.m.) 
+        Gets the correlation_id of this InlineResponse40011.
 
-        :return: The submit_time_utc of this InlineResponse40011.
+        :return: The correlation_id of this InlineResponse40011.
         :rtype: str
         """
-        return self._submit_time_utc
+        return self._correlation_id
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @correlation_id.setter
+    def correlation_id(self, correlation_id):
         """
-        Sets the submit_time_utc of this InlineResponse40011.
-        Time verification was requested  Format: `YYYY-MM-DDThhmmssZ`, where: - `T`:  Separates the date and the time - `Z`:  Indicates Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT)  Example:  `2020-01-11T224757Z` equals January 11, 2020, at 22:47:57 (10:47:57 p.m.) 
+        Sets the correlation_id of this InlineResponse40011.
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse40011.
+        :param correlation_id: The correlation_id of this InlineResponse40011.
         :type: str
         """
 
-        self._submit_time_utc = submit_time_utc
+        self._correlation_id = correlation_id
 
     @property
-    def status(self):
+    def details(self):
         """
-        Gets the status of this InlineResponse40011.
-        Possible values:   - `INVALID_REQUEST` 
+        Gets the details of this InlineResponse40011.
 
-        :return: The status of this InlineResponse40011.
+        :return: The details of this InlineResponse40011.
+        :rtype: list[InlineResponse4001Details]
+        """
+        return self._details
+
+    @details.setter
+    def details(self, details):
+        """
+        Sets the details of this InlineResponse40011.
+
+        :param details: The details of this InlineResponse40011.
+        :type: list[InlineResponse4001Details]
+        """
+
+        self._details = details
+
+    @property
+    def information_link(self):
+        """
+        Gets the information_link of this InlineResponse40011.
+
+        :return: The information_link of this InlineResponse40011.
         :rtype: str
         """
-        return self._status
+        return self._information_link
 
-    @status.setter
-    def status(self, status):
+    @information_link.setter
+    def information_link(self, information_link):
         """
-        Sets the status of this InlineResponse40011.
-        Possible values:   - `INVALID_REQUEST` 
+        Sets the information_link of this InlineResponse40011.
 
-        :param status: The status of this InlineResponse40011.
+        :param information_link: The information_link of this InlineResponse40011.
         :type: str
         """
 
-        self._status = status
+        self._information_link = information_link
 
     @property
     def message(self):
         """
         Gets the message of this InlineResponse40011.
-        The detail message related to the status and reason
 
         :return: The message of this InlineResponse40011.
         :rtype: str
@@ -128,7 +142,6 @@ class InlineResponse40011(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse40011.
-        The detail message related to the status and reason
 
         :param message: The message of this InlineResponse40011.
         :type: str
@@ -140,7 +153,7 @@ class InlineResponse40011(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse40011.
-        The reason of the status.  Possible values:   - `INVALID_REQUEST` 
+        Possible values: - INVALID_APIKEY - INVALID_SHIPPING_INPUT_PARAMS - CAPTURE_CONTEXT_INVALID - CAPTURE_CONTEXT_EXPIRED - SDK_XHR_ERROR - UNIFIEDPAYMENTS_VALIDATION_PARAMS - UNIFIEDPAYMENTS_VALIDATION_FIELDS - UNIFIEDPAYMENT_PAYMENT_PARAMITERS - CREATE_TOKEN_TIMEOUT - CREATE_TOKEN_XHR_ERROR - SHOW_LOAD_CONTAINER_SELECTOR - SHOW_LOAD_INVALID_CONTAINER - SHOW_TOKEN_TIMEOUT - SHOW_TOKEN_XHR_ERROR - SHOW_PAYMENT_TIMEOUT
 
         :return: The reason of this InlineResponse40011.
         :rtype: str
@@ -151,34 +164,13 @@ class InlineResponse40011(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse40011.
-        The reason of the status.  Possible values:   - `INVALID_REQUEST` 
+        Possible values: - INVALID_APIKEY - INVALID_SHIPPING_INPUT_PARAMS - CAPTURE_CONTEXT_INVALID - CAPTURE_CONTEXT_EXPIRED - SDK_XHR_ERROR - UNIFIEDPAYMENTS_VALIDATION_PARAMS - UNIFIEDPAYMENTS_VALIDATION_FIELDS - UNIFIEDPAYMENT_PAYMENT_PARAMITERS - CREATE_TOKEN_TIMEOUT - CREATE_TOKEN_XHR_ERROR - SHOW_LOAD_CONTAINER_SELECTOR - SHOW_LOAD_INVALID_CONTAINER - SHOW_TOKEN_TIMEOUT - SHOW_TOKEN_XHR_ERROR - SHOW_PAYMENT_TIMEOUT
 
         :param reason: The reason of this InlineResponse40011.
         :type: str
         """
 
         self._reason = reason
-
-    @property
-    def details(self):
-        """
-        Gets the details of this InlineResponse40011.
-
-        :return: The details of this InlineResponse40011.
-        :rtype: list[InlineResponse40011Details]
-        """
-        return self._details
-
-    @details.setter
-    def details(self, details):
-        """
-        Sets the details of this InlineResponse40011.
-
-        :param details: The details of this InlineResponse40011.
-        :type: list[InlineResponse40011Details]
-        """
-
-        self._details = details
 
     def to_dict(self):
         """

@@ -50,7 +50,7 @@ class Ucv1sessionsDataOrderInformationLineItems(object):
         'discount_applied': 'bool',
         'discount_rate': 'str',
         'invoice_number': 'str',
-        'tax_details': 'Upv1capturecontextsDataOrderInformationLineItemsTaxDetails',
+        'tax_details': 'Upv1capturecontextsDataOrderInformationTaxDetails',
         'fulfillment_type': 'str',
         'weight': 'str',
         'weight_identifier': 'str',
@@ -62,7 +62,7 @@ class Ucv1sessionsDataOrderInformationLineItems(object):
         'gift_card_currency': 'str',
         'shipping_destination_types': 'str',
         'gift': 'bool',
-        'passenger': 'Upv1capturecontextsDataOrderInformationLineItemsPassenger'
+        'passenger': 'Upv1capturecontextsDataOrderInformationPassenger'
     }
 
     attribute_map = {
@@ -673,7 +673,7 @@ class Ucv1sessionsDataOrderInformationLineItems(object):
         Gets the tax_details of this Ucv1sessionsDataOrderInformationLineItems.
 
         :return: The tax_details of this Ucv1sessionsDataOrderInformationLineItems.
-        :rtype: Upv1capturecontextsDataOrderInformationLineItemsTaxDetails
+        :rtype: Upv1capturecontextsDataOrderInformationTaxDetails
         """
         return self._tax_details
 
@@ -683,7 +683,7 @@ class Ucv1sessionsDataOrderInformationLineItems(object):
         Sets the tax_details of this Ucv1sessionsDataOrderInformationLineItems.
 
         :param tax_details: The tax_details of this Ucv1sessionsDataOrderInformationLineItems.
-        :type: Upv1capturecontextsDataOrderInformationLineItemsTaxDetails
+        :type: Upv1capturecontextsDataOrderInformationTaxDetails
         """
 
         self._tax_details = tax_details
@@ -947,7 +947,7 @@ class Ucv1sessionsDataOrderInformationLineItems(object):
         Gets the passenger of this Ucv1sessionsDataOrderInformationLineItems.
 
         :return: The passenger of this Ucv1sessionsDataOrderInformationLineItems.
-        :rtype: Upv1capturecontextsDataOrderInformationLineItemsPassenger
+        :rtype: Upv1capturecontextsDataOrderInformationPassenger
         """
         return self._passenger
 
@@ -957,7 +957,7 @@ class Ucv1sessionsDataOrderInformationLineItems(object):
         Sets the passenger of this Ucv1sessionsDataOrderInformationLineItems.
 
         :param passenger: The passenger of this Ucv1sessionsDataOrderInformationLineItems.
-        :type: Upv1capturecontextsDataOrderInformationLineItemsPassenger
+        :type: Upv1capturecontextsDataOrderInformationPassenger
         """
 
         self._passenger = passenger

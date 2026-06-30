@@ -38,7 +38,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         'response_details': 'str',
         'merchant_advice': 'PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice',
         'merchant_risk_prediction': 'str',
-        'seller_protection': 'PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection',
+        'seller_protection': 'ProcessorInformationSellerProtection',
         'network': 'Ptsv2paymentsProcessorInformationReversalNetwork'
     }
 
@@ -280,7 +280,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         Gets the seller_protection of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
 
         :return: The seller_protection of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
-        :rtype: PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
+        :rtype: ProcessorInformationSellerProtection
         """
         return self._seller_protection
 
@@ -290,7 +290,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         Sets the seller_protection of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
 
         :param seller_protection: The seller_protection of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
-        :type: PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
+        :type: ProcessorInformationSellerProtection
         """
 
         self._seller_protection = seller_protection

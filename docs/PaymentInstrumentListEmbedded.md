@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payment_instruments** | [**list[PaymentInstrumentListEmbeddedPaymentInstruments]**](PaymentInstrumentListEmbeddedPaymentInstruments.md) |  | [optional] 
+**payment_instruments** | [**list[PaymentInstrument]**](PaymentInstrument.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

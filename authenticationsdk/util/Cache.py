@@ -55,7 +55,7 @@ class FileCache:
                 self.update_cache(merchant_config, p12_file_path, key_password)
             return self.filecache[filename_without_ext]
         except Exception:
-            raise ValueError(f"ERROR : KeyPassword provided: {key_password} is incorrect.")
+            raise ValueError("ERROR: Failed to load P12 certificate. The key password may be incorrect.")
         
     def update_cache(self, merchant_config, p12_file_path, key_password):
         file_last_modified_time = os.stat(p12_file_path).st_mtime

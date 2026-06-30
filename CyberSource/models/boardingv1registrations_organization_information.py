@@ -36,7 +36,7 @@ class Boardingv1registrationsOrganizationInformation(object):
         'type': 'str',
         'status': 'str',
         'configurable': 'bool',
-        'business_information': 'Boardingv1registrationsOrganizationInformationBusinessInformation',
+        'business_information': 'BoardingBusinessInformation',
         'kyc': 'Boardingv1registrationsOrganizationInformationKYC',
         'owners': 'list[Boardingv1registrationsOrganizationInformationOwners]'
     }
@@ -226,7 +226,7 @@ class Boardingv1registrationsOrganizationInformation(object):
         Gets the business_information of this Boardingv1registrationsOrganizationInformation.
 
         :return: The business_information of this Boardingv1registrationsOrganizationInformation.
-        :rtype: Boardingv1registrationsOrganizationInformationBusinessInformation
+        :rtype: BoardingBusinessInformation
         """
         return self._business_information
 
@@ -236,7 +236,7 @@ class Boardingv1registrationsOrganizationInformation(object):
         Sets the business_information of this Boardingv1registrationsOrganizationInformation.
 
         :param business_information: The business_information of this Boardingv1registrationsOrganizationInformation.
-        :type: Boardingv1registrationsOrganizationInformationBusinessInformation
+        :type: BoardingBusinessInformation
         """
 
         self._business_information = business_information

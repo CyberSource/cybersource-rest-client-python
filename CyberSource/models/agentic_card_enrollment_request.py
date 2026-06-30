@@ -31,14 +31,14 @@ class AgenticCardEnrollmentRequest(object):
     """
     swagger_types = {
         'client_correlation_id': 'str',
-        'device_information': 'Acpv1tokensDeviceInformation',
-        'buyer_information': 'Acpv1tokensBuyerInformation',
-        'bill_to': 'Acpv1tokensBillTo',
-        'consumer_identity': 'Acpv1tokensConsumerIdentity',
-        'payment_information': 'Acpv1tokensPaymentInformation',
-        'enrollment_reference_data': 'Acpv1tokensEnrollmentReferenceData',
-        'assurance_data': 'list[Acpv1tokensAssuranceData]',
-        'consent_data': 'list[Acpv1tokensConsentData]'
+        'device_information': 'Iccv1tokensDeviceInformation',
+        'buyer_information': 'Iccv1tokensBuyerInformation',
+        'bill_to': 'Iccv1tokensBillTo',
+        'consumer_identity': 'Iccv1tokensConsumerIdentity',
+        'payment_information': 'Iccv1tokensPaymentInformation',
+        'enrollment_reference_data': 'Iccv1tokensEnrollmentReferenceData',
+        'assurance_data': 'list[Iccv1tokensAssuranceData]',
+        'consent_data': 'list[Iccv1tokensConsentData]'
     }
 
     attribute_map = {
@@ -110,7 +110,7 @@ class AgenticCardEnrollmentRequest(object):
         Gets the device_information of this AgenticCardEnrollmentRequest.
 
         :return: The device_information of this AgenticCardEnrollmentRequest.
-        :rtype: Acpv1tokensDeviceInformation
+        :rtype: Iccv1tokensDeviceInformation
         """
         return self._device_information
 
@@ -120,7 +120,7 @@ class AgenticCardEnrollmentRequest(object):
         Sets the device_information of this AgenticCardEnrollmentRequest.
 
         :param device_information: The device_information of this AgenticCardEnrollmentRequest.
-        :type: Acpv1tokensDeviceInformation
+        :type: Iccv1tokensDeviceInformation
         """
 
         self._device_information = device_information
@@ -131,7 +131,7 @@ class AgenticCardEnrollmentRequest(object):
         Gets the buyer_information of this AgenticCardEnrollmentRequest.
 
         :return: The buyer_information of this AgenticCardEnrollmentRequest.
-        :rtype: Acpv1tokensBuyerInformation
+        :rtype: Iccv1tokensBuyerInformation
         """
         return self._buyer_information
 
@@ -141,7 +141,7 @@ class AgenticCardEnrollmentRequest(object):
         Sets the buyer_information of this AgenticCardEnrollmentRequest.
 
         :param buyer_information: The buyer_information of this AgenticCardEnrollmentRequest.
-        :type: Acpv1tokensBuyerInformation
+        :type: Iccv1tokensBuyerInformation
         """
 
         self._buyer_information = buyer_information
@@ -152,7 +152,7 @@ class AgenticCardEnrollmentRequest(object):
         Gets the bill_to of this AgenticCardEnrollmentRequest.
 
         :return: The bill_to of this AgenticCardEnrollmentRequest.
-        :rtype: Acpv1tokensBillTo
+        :rtype: Iccv1tokensBillTo
         """
         return self._bill_to
 
@@ -162,7 +162,7 @@ class AgenticCardEnrollmentRequest(object):
         Sets the bill_to of this AgenticCardEnrollmentRequest.
 
         :param bill_to: The bill_to of this AgenticCardEnrollmentRequest.
-        :type: Acpv1tokensBillTo
+        :type: Iccv1tokensBillTo
         """
 
         self._bill_to = bill_to
@@ -173,7 +173,7 @@ class AgenticCardEnrollmentRequest(object):
         Gets the consumer_identity of this AgenticCardEnrollmentRequest.
 
         :return: The consumer_identity of this AgenticCardEnrollmentRequest.
-        :rtype: Acpv1tokensConsumerIdentity
+        :rtype: Iccv1tokensConsumerIdentity
         """
         return self._consumer_identity
 
@@ -183,7 +183,7 @@ class AgenticCardEnrollmentRequest(object):
         Sets the consumer_identity of this AgenticCardEnrollmentRequest.
 
         :param consumer_identity: The consumer_identity of this AgenticCardEnrollmentRequest.
-        :type: Acpv1tokensConsumerIdentity
+        :type: Iccv1tokensConsumerIdentity
         """
 
         self._consumer_identity = consumer_identity
@@ -194,7 +194,7 @@ class AgenticCardEnrollmentRequest(object):
         Gets the payment_information of this AgenticCardEnrollmentRequest.
 
         :return: The payment_information of this AgenticCardEnrollmentRequest.
-        :rtype: Acpv1tokensPaymentInformation
+        :rtype: Iccv1tokensPaymentInformation
         """
         return self._payment_information
 
@@ -204,7 +204,7 @@ class AgenticCardEnrollmentRequest(object):
         Sets the payment_information of this AgenticCardEnrollmentRequest.
 
         :param payment_information: The payment_information of this AgenticCardEnrollmentRequest.
-        :type: Acpv1tokensPaymentInformation
+        :type: Iccv1tokensPaymentInformation
         """
 
         self._payment_information = payment_information
@@ -215,7 +215,7 @@ class AgenticCardEnrollmentRequest(object):
         Gets the enrollment_reference_data of this AgenticCardEnrollmentRequest.
 
         :return: The enrollment_reference_data of this AgenticCardEnrollmentRequest.
-        :rtype: Acpv1tokensEnrollmentReferenceData
+        :rtype: Iccv1tokensEnrollmentReferenceData
         """
         return self._enrollment_reference_data
 
@@ -225,7 +225,7 @@ class AgenticCardEnrollmentRequest(object):
         Sets the enrollment_reference_data of this AgenticCardEnrollmentRequest.
 
         :param enrollment_reference_data: The enrollment_reference_data of this AgenticCardEnrollmentRequest.
-        :type: Acpv1tokensEnrollmentReferenceData
+        :type: Iccv1tokensEnrollmentReferenceData
         """
 
         self._enrollment_reference_data = enrollment_reference_data
@@ -237,7 +237,7 @@ class AgenticCardEnrollmentRequest(object):
         Assurance data.
 
         :return: The assurance_data of this AgenticCardEnrollmentRequest.
-        :rtype: list[Acpv1tokensAssuranceData]
+        :rtype: list[Iccv1tokensAssuranceData]
         """
         return self._assurance_data
 
@@ -248,7 +248,7 @@ class AgenticCardEnrollmentRequest(object):
         Assurance data.
 
         :param assurance_data: The assurance_data of this AgenticCardEnrollmentRequest.
-        :type: list[Acpv1tokensAssuranceData]
+        :type: list[Iccv1tokensAssuranceData]
         """
 
         self._assurance_data = assurance_data
@@ -260,7 +260,7 @@ class AgenticCardEnrollmentRequest(object):
         Consent data.
 
         :return: The consent_data of this AgenticCardEnrollmentRequest.
-        :rtype: list[Acpv1tokensConsentData]
+        :rtype: list[Iccv1tokensConsentData]
         """
         return self._consent_data
 
@@ -271,7 +271,7 @@ class AgenticCardEnrollmentRequest(object):
         Consent data.
 
         :param consent_data: The consent_data of this AgenticCardEnrollmentRequest.
-        :type: list[Acpv1tokensConsentData]
+        :type: list[Iccv1tokensConsentData]
         """
 
         self._consent_data = consent_data

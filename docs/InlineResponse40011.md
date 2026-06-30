@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**submit_time_utc** | **str** | Time verification was requested  Format: &#x60;YYYY-MM-DDThhmmssZ&#x60;, where: - &#x60;T&#x60;:  Separates the date and the time - &#x60;Z&#x60;:  Indicates Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT)  Example:  &#x60;2020-01-11T224757Z&#x60; equals January 11, 2020, at 22:47:57 (10:47:57 p.m.)  | [optional] 
-**status** | **str** | Possible values:   - &#x60;INVALID_REQUEST&#x60;  | [optional] 
-**message** | **str** | The detail message related to the status and reason | [optional] 
-**reason** | **str** | The reason of the status.  Possible values:   - &#x60;INVALID_REQUEST&#x60;  | [optional] 
-**details** | [**list[InlineResponse40011Details]**](InlineResponse40011Details.md) |  | [optional] 
+**correlation_id** | **str** |  | [optional] 
+**details** | [**list[InlineResponse4001Details]**](InlineResponse4001Details.md) |  | [optional] 
+**information_link** | **str** |  | [optional] 
+**message** | **str** |  | 
+**reason** | **str** | Possible values: - INVALID_APIKEY - INVALID_SHIPPING_INPUT_PARAMS - CAPTURE_CONTEXT_INVALID - CAPTURE_CONTEXT_EXPIRED - SDK_XHR_ERROR - UNIFIEDPAYMENTS_VALIDATION_PARAMS - UNIFIEDPAYMENTS_VALIDATION_FIELDS - UNIFIEDPAYMENT_PAYMENT_PARAMITERS - CREATE_TOKEN_TIMEOUT - CREATE_TOKEN_XHR_ERROR - SHOW_LOAD_CONTAINER_SELECTOR - SHOW_LOAD_INVALID_CONTAINER - SHOW_TOKEN_TIMEOUT - SHOW_TOKEN_XHR_ERROR - SHOW_PAYMENT_TIMEOUT | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

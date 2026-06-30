@@ -42,6 +42,7 @@ class PushFunds201Response(object):
         'order_information': 'PushFunds201ResponseOrderInformation',
         'payment_information': 'PushFunds201ResponsePaymentInformation',
         'processing_information': 'PushFunds201ResponseProcessingInformation',
+        'issuer_information': 'PushFunds201ResponseIssuerInformation',
         'links': 'PushFunds201ResponseLinks'
     }
 
@@ -58,10 +59,11 @@ class PushFunds201Response(object):
         'order_information': 'orderInformation',
         'payment_information': 'paymentInformation',
         'processing_information': 'processingInformation',
+        'issuer_information': 'issuerInformation',
         'links': '_links'
     }
 
-    def __init__(self, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, recipient_information=None, merchant_information=None, error_information=None, processor_information=None, order_information=None, payment_information=None, processing_information=None, links=None):
+    def __init__(self, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, recipient_information=None, merchant_information=None, error_information=None, processor_information=None, order_information=None, payment_information=None, processing_information=None, issuer_information=None, links=None):
         """
         PushFunds201Response - a model defined in Swagger
         """
@@ -78,6 +80,7 @@ class PushFunds201Response(object):
         self._order_information = None
         self._payment_information = None
         self._processing_information = None
+        self._issuer_information = None
         self._links = None
 
         if id is not None:
@@ -104,6 +107,8 @@ class PushFunds201Response(object):
           self.payment_information = payment_information
         if processing_information is not None:
           self.processing_information = processing_information
+        if issuer_information is not None:
+          self.issuer_information = issuer_information
         if links is not None:
           self.links = links
 
@@ -366,6 +371,27 @@ class PushFunds201Response(object):
         """
 
         self._processing_information = processing_information
+
+    @property
+    def issuer_information(self):
+        """
+        Gets the issuer_information of this PushFunds201Response.
+
+        :return: The issuer_information of this PushFunds201Response.
+        :rtype: PushFunds201ResponseIssuerInformation
+        """
+        return self._issuer_information
+
+    @issuer_information.setter
+    def issuer_information(self, issuer_information):
+        """
+        Sets the issuer_information of this PushFunds201Response.
+
+        :param issuer_information: The issuer_information of this PushFunds201Response.
+        :type: PushFunds201ResponseIssuerInformation
+        """
+
+        self._issuer_information = issuer_information
 
     @property
     def links(self):

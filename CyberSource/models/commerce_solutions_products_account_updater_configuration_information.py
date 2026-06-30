@@ -31,7 +31,7 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformation(object):
     """
     swagger_types = {
         'template_id': 'str',
-        'configurations': 'CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurations'
+        'configurations': 'AccountUpdaterConfigurations'
     }
 
     attribute_map = {
@@ -79,7 +79,7 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformation(object):
         Gets the configurations of this CommerceSolutionsProductsAccountUpdaterConfigurationInformation.
 
         :return: The configurations of this CommerceSolutionsProductsAccountUpdaterConfigurationInformation.
-        :rtype: CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurations
+        :rtype: AccountUpdaterConfigurations
         """
         return self._configurations
 
@@ -89,7 +89,7 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformation(object):
         Sets the configurations of this CommerceSolutionsProductsAccountUpdaterConfigurationInformation.
 
         :param configurations: The configurations of this CommerceSolutionsProductsAccountUpdaterConfigurationInformation.
-        :type: CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurations
+        :type: AccountUpdaterConfigurations
         """
 
         self._configurations = configurations

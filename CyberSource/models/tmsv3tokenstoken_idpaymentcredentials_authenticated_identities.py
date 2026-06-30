@@ -33,17 +33,19 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities(object):
         'id': 'str',
         'provider': 'str',
         'data': 'str',
-        'relying_party_id': 'str'
+        'relying_party_id': 'str',
+        'user_authentication_method': 'str'
     }
 
     attribute_map = {
         'id': 'id',
         'provider': 'provider',
         'data': 'data',
-        'relying_party_id': 'relyingPartyId'
+        'relying_party_id': 'relyingPartyId',
+        'user_authentication_method': 'userAuthenticationMethod'
     }
 
-    def __init__(self, id=None, provider=None, data=None, relying_party_id=None):
+    def __init__(self, id=None, provider=None, data=None, relying_party_id=None, user_authentication_method=None):
         """
         Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities(object):
         self._provider = None
         self._data = None
         self._relying_party_id = None
+        self._user_authentication_method = None
 
         if id is not None:
           self.id = id
@@ -61,6 +64,8 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities(object):
           self.data = data
         if relying_party_id is not None:
           self.relying_party_id = relying_party_id
+        if user_authentication_method is not None:
+          self.user_authentication_method = user_authentication_method
 
     @property
     def id(self):
@@ -89,7 +94,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities(object):
     def provider(self):
         """
         Gets the provider of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
-        The provider of the authenticated identity.  Possible Values:   - VISA_PAYMENT_PASSKEY 
+        The provider of the authenticated identity.  Possible Values:   - VISA_PAYMENT_PASSKEY   - CLIENT_DEVICE_CERT_JWS 
 
         :return: The provider of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
         :rtype: str
@@ -100,7 +105,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities(object):
     def provider(self, provider):
         """
         Sets the provider of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
-        The provider of the authenticated identity.  Possible Values:   - VISA_PAYMENT_PASSKEY 
+        The provider of the authenticated identity.  Possible Values:   - VISA_PAYMENT_PASSKEY   - CLIENT_DEVICE_CERT_JWS 
 
         :param provider: The provider of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
         :type: str
@@ -112,7 +117,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities(object):
     def data(self):
         """
         Gets the data of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
-        The data from the authenticated identity, for FIDO this could be the Attestation. Base64URL encoded string (RFC4648).  The encoding is the same as Base64, but uses '-' characters instead of '+' and '_' characters instead of '/'. 
+        The data from the authenticated identity. For Passkey this could be the FIDO Attestation. For Classic Cloud Token Framework (CTF) this could be a JWS containing device authentication information signed by a devices private key. Base64URL encoded string (RFC4648). The encoding is the same as Base64, but uses '-' characters instead of '+' and '_' characters instead of '/'. 
 
         :return: The data of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
         :rtype: str
@@ -123,7 +128,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities(object):
     def data(self, data):
         """
         Sets the data of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
-        The data from the authenticated identity, for FIDO this could be the Attestation. Base64URL encoded string (RFC4648).  The encoding is the same as Base64, but uses '-' characters instead of '+' and '_' characters instead of '/'. 
+        The data from the authenticated identity. For Passkey this could be the FIDO Attestation. For Classic Cloud Token Framework (CTF) this could be a JWS containing device authentication information signed by a devices private key. Base64URL encoded string (RFC4648). The encoding is the same as Base64, but uses '-' characters instead of '+' and '_' characters instead of '/'. 
 
         :param data: The data of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
         :type: str
@@ -135,7 +140,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities(object):
     def relying_party_id(self):
         """
         Gets the relying_party_id of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
-        The id of the Relying Party.  Base64URL encoded string (RFC4648).   The encoding is the same as Base64, but uses '-' characters instead of '+' and '_' characters instead of '/'. 
+        The id of the Relying Party.  Base64URL encoded string (RFC4648).  The encoding is the same as Base64, but uses '-' characters instead of '+' and '_' characters instead of '/'. 
 
         :return: The relying_party_id of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
         :rtype: str
@@ -146,13 +151,36 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities(object):
     def relying_party_id(self, relying_party_id):
         """
         Sets the relying_party_id of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
-        The id of the Relying Party.  Base64URL encoded string (RFC4648).   The encoding is the same as Base64, but uses '-' characters instead of '+' and '_' characters instead of '/'. 
+        The id of the Relying Party.  Base64URL encoded string (RFC4648).  The encoding is the same as Base64, but uses '-' characters instead of '+' and '_' characters instead of '/'. 
 
         :param relying_party_id: The relying_party_id of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
         :type: str
         """
 
         self._relying_party_id = relying_party_id
+
+    @property
+    def user_authentication_method(self):
+        """
+        Gets the user_authentication_method of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
+        The method used to authenticate the user.  Possible Values:   - USERNAME_PASSWORD   - PASSCODE_PASSWORD   - PASSCODE   - PASSWORD   - PATTERN   - BIOMETRIC_FINGERPRINT   - BIOMETRIC_FACIAL   - BIOMETRIC_IRIS   - BIOMETRIC_VOICE   - BIOMETRIC_BEHAVIORAL   - DEVICE_UNLOCKED_METHOD_UNKNOWN   - OTP_SMS   - OTP_EMAIL   - OTP_SMS_KNOWLEDGE   - KNOWLEDGE_BASED_AUTHENTICATION   - USER_UNVERIFIED   - BIOMETRIC 
+
+        :return: The user_authentication_method of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
+        :rtype: str
+        """
+        return self._user_authentication_method
+
+    @user_authentication_method.setter
+    def user_authentication_method(self, user_authentication_method):
+        """
+        Sets the user_authentication_method of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
+        The method used to authenticate the user.  Possible Values:   - USERNAME_PASSWORD   - PASSCODE_PASSWORD   - PASSCODE   - PASSWORD   - PATTERN   - BIOMETRIC_FINGERPRINT   - BIOMETRIC_FACIAL   - BIOMETRIC_IRIS   - BIOMETRIC_VOICE   - BIOMETRIC_BEHAVIORAL   - DEVICE_UNLOCKED_METHOD_UNKNOWN   - OTP_SMS   - OTP_EMAIL   - OTP_SMS_KNOWLEDGE   - KNOWLEDGE_BASED_AUTHENTICATION   - USER_UNVERIFIED   - BIOMETRIC 
+
+        :param user_authentication_method: The user_authentication_method of this Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities.
+        :type: str
+        """
+
+        self._user_authentication_method = user_authentication_method
 
     def to_dict(self):
         """

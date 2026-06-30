@@ -31,7 +31,7 @@ class PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigura
     """
     swagger_types = {
         'merchant_category_code': 'str',
-        'processors': 'dict(str, PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsProcessors)'
+        'processors': 'dict(str, AlternativePaymentsProcessorConfiguration)'
     }
 
     attribute_map = {
@@ -82,7 +82,7 @@ class PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigura
         This is a map. The allowed keys are below. Value should be an object containing a sole boolean property - enabled. <table>   <tr>     <td>klarna</td>   </tr>   <tr>     <td>payPal</td>   </tr>   <tr>     <td>alipay</td>   </tr>   <tr>     <td>bancontact</td>   </tr>   <tr>     <td>giropay</td>   </tr>   <tr>     <td>ideal</td>   </tr> </table> 
 
         :return: The processors of this PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurations.
-        :rtype: dict(str, PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsProcessors)
+        :rtype: dict(str, AlternativePaymentsProcessorConfiguration)
         """
         return self._processors
 
@@ -93,7 +93,7 @@ class PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigura
         This is a map. The allowed keys are below. Value should be an object containing a sole boolean property - enabled. <table>   <tr>     <td>klarna</td>   </tr>   <tr>     <td>payPal</td>   </tr>   <tr>     <td>alipay</td>   </tr>   <tr>     <td>bancontact</td>   </tr>   <tr>     <td>giropay</td>   </tr>   <tr>     <td>ideal</td>   </tr> </table> 
 
         :param processors: The processors of this PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurations.
-        :type: dict(str, PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsProcessors)
+        :type: dict(str, AlternativePaymentsProcessorConfiguration)
         """
 
         self._processors = processors

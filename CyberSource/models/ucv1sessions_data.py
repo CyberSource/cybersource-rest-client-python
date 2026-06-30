@@ -33,7 +33,7 @@ class Ucv1sessionsData(object):
         'aggregator_information': 'Ucv1sessionsDataAggregatorInformation',
         'order_information': 'Ucv1sessionsDataOrderInformation',
         'buyer_information': 'Ucv1sessionsDataBuyerInformation',
-        'client_reference_information': 'Upv1capturecontextsDataClientReferenceInformation',
+        'client_reference_information': 'Ucv1sessionsDataClientReferenceInformation',
         'consumer_authentication_information': 'Ucv1sessionsDataConsumerAuthenticationInformation',
         'merchant_information': 'Ucv1sessionsDataMerchantInformation',
         'processing_information': 'Ucv1sessionsDataProcessingInformation',
@@ -176,7 +176,7 @@ class Ucv1sessionsData(object):
         Gets the client_reference_information of this Ucv1sessionsData.
 
         :return: The client_reference_information of this Ucv1sessionsData.
-        :rtype: Upv1capturecontextsDataClientReferenceInformation
+        :rtype: Ucv1sessionsDataClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -186,7 +186,7 @@ class Ucv1sessionsData(object):
         Sets the client_reference_information of this Ucv1sessionsData.
 
         :param client_reference_information: The client_reference_information of this Ucv1sessionsData.
-        :type: Upv1capturecontextsDataClientReferenceInformation
+        :type: Ucv1sessionsDataClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

@@ -31,9 +31,9 @@ class AgenticCancelPurchaseIntentRequest(object):
     """
     swagger_types = {
         'client_correlation_id': 'str',
-        'payment_information': 'Acpv1tokensPaymentInformation',
-        'device_information': 'Acpv1tokensDeviceInformation',
-        'assurance_data': 'list[Acpv1tokensAssuranceData]'
+        'payment_information': 'Iccv1tokensPaymentInformation',
+        'device_information': 'Iccv1tokensDeviceInformation',
+        'assurance_data': 'list[Iccv1tokensAssuranceData]'
     }
 
     attribute_map = {
@@ -88,7 +88,7 @@ class AgenticCancelPurchaseIntentRequest(object):
         Gets the payment_information of this AgenticCancelPurchaseIntentRequest.
 
         :return: The payment_information of this AgenticCancelPurchaseIntentRequest.
-        :rtype: Acpv1tokensPaymentInformation
+        :rtype: Iccv1tokensPaymentInformation
         """
         return self._payment_information
 
@@ -98,7 +98,7 @@ class AgenticCancelPurchaseIntentRequest(object):
         Sets the payment_information of this AgenticCancelPurchaseIntentRequest.
 
         :param payment_information: The payment_information of this AgenticCancelPurchaseIntentRequest.
-        :type: Acpv1tokensPaymentInformation
+        :type: Iccv1tokensPaymentInformation
         """
 
         self._payment_information = payment_information
@@ -109,7 +109,7 @@ class AgenticCancelPurchaseIntentRequest(object):
         Gets the device_information of this AgenticCancelPurchaseIntentRequest.
 
         :return: The device_information of this AgenticCancelPurchaseIntentRequest.
-        :rtype: Acpv1tokensDeviceInformation
+        :rtype: Iccv1tokensDeviceInformation
         """
         return self._device_information
 
@@ -119,7 +119,7 @@ class AgenticCancelPurchaseIntentRequest(object):
         Sets the device_information of this AgenticCancelPurchaseIntentRequest.
 
         :param device_information: The device_information of this AgenticCancelPurchaseIntentRequest.
-        :type: Acpv1tokensDeviceInformation
+        :type: Iccv1tokensDeviceInformation
         """
 
         self._device_information = device_information
@@ -131,7 +131,7 @@ class AgenticCancelPurchaseIntentRequest(object):
         Assurance data.
 
         :return: The assurance_data of this AgenticCancelPurchaseIntentRequest.
-        :rtype: list[Acpv1tokensAssuranceData]
+        :rtype: list[Iccv1tokensAssuranceData]
         """
         return self._assurance_data
 
@@ -142,7 +142,7 @@ class AgenticCancelPurchaseIntentRequest(object):
         Assurance data.
 
         :param assurance_data: The assurance_data of this AgenticCancelPurchaseIntentRequest.
-        :type: list[Acpv1tokensAssuranceData]
+        :type: list[Iccv1tokensAssuranceData]
         """
 
         self._assurance_data = assurance_data

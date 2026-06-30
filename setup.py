@@ -4,7 +4,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "cybersource-rest-client-python"
-VERSION = "0.0.76"
+VERSION = "0.0.77"
 # To install the library, run the following
 #
 # python setup.py install
@@ -28,7 +28,8 @@ setup(
         "urllib3-future",
         "jwcrypto",
         "cryptography",
-        "pgpy"
+        "pgpy",
+        "standard-imghdr; python_version >= '3.13'"
     ],
     packages=find_packages(),
     include_package_data=True,

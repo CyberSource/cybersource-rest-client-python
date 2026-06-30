@@ -48,7 +48,7 @@ class Ptsv2paymentsProcessingInformation(object):
         'report_group': 'str',
         'visa_checkout_id': 'str',
         'industry_data_type': 'str',
-        'authorization_options': 'Ptsv2paymentsProcessingInformationAuthorizationOptions',
+        'authorization_options': 'ProcessingInfoAuthorizationOptions',
         'capture_options': 'Ptsv2paymentsProcessingInformationCaptureOptions',
         'recurring_options': 'Ptsv2paymentsProcessingInformationRecurringOptions',
         'bank_transfer_options': 'Ptsv2paymentsProcessingInformationBankTransferOptions',
@@ -539,7 +539,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def link_id(self):
         """
         Gets the link_id of this Ptsv2paymentsProcessingInformation.
-        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments 
+        Value that links the current authorization request to the original authorization request or previous declined Merchant Initiated Debt Recovery Transactions . Set this value to the ID that was returned in the reply message from the original authorization request or previous declined Merchant Initiated Debt Recovery Transactions.  This value is used for:  - Partial authorizations - Split shipments - Merchant Initiated Debt Recovery Transactions for Visa Platform Connect and China Union Pay merchants 
 
         :return: The link_id of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -550,7 +550,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def link_id(self, link_id):
         """
         Sets the link_id of this Ptsv2paymentsProcessingInformation.
-        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments 
+        Value that links the current authorization request to the original authorization request or previous declined Merchant Initiated Debt Recovery Transactions . Set this value to the ID that was returned in the reply message from the original authorization request or previous declined Merchant Initiated Debt Recovery Transactions.  This value is used for:  - Partial authorizations - Split shipments - Merchant Initiated Debt Recovery Transactions for Visa Platform Connect and China Union Pay merchants 
 
         :param link_id: The link_id of this Ptsv2paymentsProcessingInformation.
         :type: str
@@ -702,7 +702,7 @@ class Ptsv2paymentsProcessingInformation(object):
         Gets the authorization_options of this Ptsv2paymentsProcessingInformation.
 
         :return: The authorization_options of this Ptsv2paymentsProcessingInformation.
-        :rtype: Ptsv2paymentsProcessingInformationAuthorizationOptions
+        :rtype: ProcessingInfoAuthorizationOptions
         """
         return self._authorization_options
 
@@ -712,7 +712,7 @@ class Ptsv2paymentsProcessingInformation(object):
         Sets the authorization_options of this Ptsv2paymentsProcessingInformation.
 
         :param authorization_options: The authorization_options of this Ptsv2paymentsProcessingInformation.
-        :type: Ptsv2paymentsProcessingInformationAuthorizationOptions
+        :type: ProcessingInfoAuthorizationOptions
         """
 
         self._authorization_options = authorization_options

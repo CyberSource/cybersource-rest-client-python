@@ -43,7 +43,7 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         'ownership_percentage': 'float',
         'phone_number': 'str',
         'email': 'str',
-        'address': 'Boardingv1registrationsOrganizationInformationBusinessInformationAddress'
+        'address': 'BoardingBusinessInformationAddress'
     }
 
     attribute_map = {
@@ -393,7 +393,7 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         Gets the address of this Boardingv1registrationsOrganizationInformationOwners.
 
         :return: The address of this Boardingv1registrationsOrganizationInformationOwners.
-        :rtype: Boardingv1registrationsOrganizationInformationBusinessInformationAddress
+        :rtype: BoardingBusinessInformationAddress
         """
         return self._address
 
@@ -403,7 +403,7 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         Sets the address of this Boardingv1registrationsOrganizationInformationOwners.
 
         :param address: The address of this Boardingv1registrationsOrganizationInformationOwners.
-        :type: Boardingv1registrationsOrganizationInformationBusinessInformationAddress
+        :type: BoardingBusinessInformationAddress
         """
 
         self._address = address

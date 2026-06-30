@@ -198,7 +198,7 @@ class PtsV2CreditsPost201Response(object):
     def status(self):
         """
         Gets the status of this PtsV2CreditsPost201Response.
-        The status of the submitted transaction.  Possible values:  - PENDING  - COMPLETED (as in the case of PIN Debit Full Financial Credit) 
+        The status of the submitted transaction.  Possible values:  - PENDING  - AUTHORIZED  - DECLINED  - INVALID_REQUEST  - COMPLETED (as in the case of PIN Debit Full Financial Credit) 
 
         :return: The status of this PtsV2CreditsPost201Response.
         :rtype: str
@@ -209,7 +209,7 @@ class PtsV2CreditsPost201Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2CreditsPost201Response.
-        The status of the submitted transaction.  Possible values:  - PENDING  - COMPLETED (as in the case of PIN Debit Full Financial Credit) 
+        The status of the submitted transaction.  Possible values:  - PENDING  - AUTHORIZED  - DECLINED  - INVALID_REQUEST  - COMPLETED (as in the case of PIN Debit Full Financial Credit) 
 
         :param status: The status of this PtsV2CreditsPost201Response.
         :type: str

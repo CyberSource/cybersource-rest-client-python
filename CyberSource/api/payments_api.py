@@ -136,10 +136,10 @@ class PaymentsApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
 
         body_params = None
         if 'order_payment_request' in params:
@@ -256,10 +256,10 @@ class PaymentsApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
 
         body_params = None
         if 'create_payment_request' in params:
@@ -376,10 +376,10 @@ class PaymentsApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
 
         body_params = None
         if 'create_session_req' in params:
@@ -505,10 +505,10 @@ class PaymentsApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
 
         body_params = None
         if 'increment_auth_request' in params:
@@ -634,10 +634,10 @@ class PaymentsApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
 
         body_params = None
         if 'refresh_payment_status_request' in params:
@@ -672,7 +672,7 @@ class PaymentsApi(object):
                                         collection_formats=collection_formats,
                                         isResponseMLEforApi=isResponseMLEforApi)
 
-    def update_session_req(self, create_session_request, id, **kwargs):
+    def update_session_request(self, create_session_request, id, **kwargs):
         """
         Update Alternative Payments Sessions Request
         Update Alternative Payments Sessions Request
@@ -682,7 +682,7 @@ class PaymentsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_session_req(create_session_request, id, callback=callback_function)
+        >>> thread = api.update_session_request(create_session_request, id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -693,16 +693,16 @@ class PaymentsApi(object):
                  returns the request thread.
         """
 
-        self.logger.info("CALL TO METHOD `update_session_req` STARTED")
+        self.logger.info("CALL TO METHOD `update_session_request` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_session_req_with_http_info(create_session_request, id, **kwargs)
+            return self.update_session_request_with_http_info(create_session_request, id, **kwargs)
         else:
-            (data) = self.update_session_req_with_http_info(create_session_request, id, **kwargs)
+            (data) = self.update_session_request_with_http_info(create_session_request, id, **kwargs)
             return data
 
-    def update_session_req_with_http_info(self, create_session_request, id, **kwargs):
+    def update_session_request_with_http_info(self, create_session_request, id, **kwargs):
         """
         Update Alternative Payments Sessions Request
         Update Alternative Payments Sessions Request
@@ -712,7 +712,7 @@ class PaymentsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_session_req_with_http_info(create_session_request, id, callback=callback_function)
+        >>> thread = api.update_session_request_with_http_info(create_session_request, id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -734,18 +734,18 @@ class PaymentsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method update_session_req" % key
+                    " to method update_session_request" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'create_session_request' is set
         if ('create_session_request' not in params) or (params['create_session_request'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `create_session_request` when calling `update_session_req`")
-            raise ValueError("Missing the required parameter `create_session_request` when calling `update_session_req`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `create_session_request` when calling `update_session_request`")
+            raise ValueError("Missing the required parameter `create_session_request` when calling `update_session_request`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `update_session_req`")
-            raise ValueError("Missing the required parameter `id` when calling `update_session_req`")
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `update_session_request`")
+            raise ValueError("Missing the required parameter `id` when calling `update_session_request`")
 
 
         collection_formats = {}
@@ -763,10 +763,10 @@ class PaymentsApi(object):
         local_var_files = {}
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
 
         body_params = None
         if 'create_session_request' in params:
@@ -777,10 +777,10 @@ class PaymentsApi(object):
             body_params = process_body(body_params)
 
         inbound_mle_status = "optional"
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "update_session_req,update_session_req_with_http_info"):
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "update_session_request,update_session_request_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
-        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "update_session_req,update_session_req_with_http_info")
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "update_session_request,update_session_request_with_http_info")
 
         # Authentication setting
         auth_settings = []

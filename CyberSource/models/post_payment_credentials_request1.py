@@ -34,7 +34,7 @@ class PostPaymentCredentialsRequest1(object):
         'transaction_type': 'str',
         'client_correlation_id': 'str',
         'order_information': 'Tmsv3tokenstokenIdpaymentcredentialsOrderInformation',
-        'merchant_information': 'Tmsv3tokenstokenIdpaymentcredentialsMerchantInformation',
+        'merchant_information': 'TmsMerchantInformation',
         'device_information': 'Tmsv3tokenstokenIdpaymentcredentialsDeviceInformation',
         'authenticated_identities': 'list[Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities]'
     }
@@ -173,7 +173,7 @@ class PostPaymentCredentialsRequest1(object):
         Gets the merchant_information of this PostPaymentCredentialsRequest1.
 
         :return: The merchant_information of this PostPaymentCredentialsRequest1.
-        :rtype: Tmsv3tokenstokenIdpaymentcredentialsMerchantInformation
+        :rtype: TmsMerchantInformation
         """
         return self._merchant_information
 
@@ -183,7 +183,7 @@ class PostPaymentCredentialsRequest1(object):
         Sets the merchant_information of this PostPaymentCredentialsRequest1.
 
         :param merchant_information: The merchant_information of this PostPaymentCredentialsRequest1.
-        :type: Tmsv3tokenstokenIdpaymentcredentialsMerchantInformation
+        :type: TmsMerchantInformation
         """
 
         self._merchant_information = merchant_information

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**create_session_request**](PaymentsApi.md#create_session_request) | **POST** /pts/v2/payment-references | Create Alternative Payments Sessions Request
 [**increment_auth**](PaymentsApi.md#increment_auth) | **PATCH** /pts/v2/payments/{id} | Increment an Authorization
 [**refresh_payment_status**](PaymentsApi.md#refresh_payment_status) | **POST** /pts/v2/refresh-payment-status/{id} | Check a Payment Status
-[**update_session_req**](PaymentsApi.md#update_session_req) | **PATCH** /pts/v2/payment-references/{id} | Update Alternative Payments Sessions Request
+[**update_session_request**](PaymentsApi.md#update_session_request) | **PATCH** /pts/v2/payment-references/{id} | Update Alternative Payments Sessions Request
 
 
 # **create_order_request**
@@ -57,8 +57,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Content-Type**: application/json, application/json; charset=utf-8
+ - **Accept**: application/hal+json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -105,8 +105,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Content-Type**: application/json, application/json; charset=utf-8
+ - **Accept**: application/hal+json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -153,8 +153,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Content-Type**: application/json, application/json; charset=utf-8
+ - **Accept**: application/hal+json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -203,8 +203,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Content-Type**: application/json, application/json; charset=utf-8
+ - **Accept**: application/hal+json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -253,13 +253,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Content-Type**: application/json, application/json; charset=utf-8
+ - **Accept**: application/hal+json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_session_req**
-> PtsV2PaymentsPost201Response2 update_session_req(create_session_request, id)
+# **update_session_request**
+> PtsV2PaymentsPost201Response2 update_session_request(create_session_request, id)
 
 Update Alternative Payments Sessions Request
 
@@ -280,10 +280,10 @@ id = 'id_example' # str | The payment ID. This ID is returned from a previous pa
 
 try: 
     # Update Alternative Payments Sessions Request
-    api_response = api_instance.update_session_req(create_session_request, id)
+    api_response = api_instance.update_session_request(create_session_request, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PaymentsApi->update_session_req: %s\n" % e)
+    print("Exception when calling PaymentsApi->update_session_request: %s\n" % e)
 ```
 
 ### Parameters
@@ -303,8 +303,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Content-Type**: application/json, application/json; charset=utf-8
+ - **Accept**: application/hal+json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -30,8 +30,8 @@ class Tmsv2tokenizeTokenInformationCustomerEmbedded(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'default_payment_instrument': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrument',
-        'default_shipping_address': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress'
+        'default_payment_instrument': 'DefaultPaymentInstrument',
+        'default_shipping_address': 'DefaultShippingAddress'
     }
 
     attribute_map = {
@@ -58,7 +58,7 @@ class Tmsv2tokenizeTokenInformationCustomerEmbedded(object):
         Gets the default_payment_instrument of this Tmsv2tokenizeTokenInformationCustomerEmbedded.
 
         :return: The default_payment_instrument of this Tmsv2tokenizeTokenInformationCustomerEmbedded.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrument
+        :rtype: DefaultPaymentInstrument
         """
         return self._default_payment_instrument
 
@@ -68,7 +68,7 @@ class Tmsv2tokenizeTokenInformationCustomerEmbedded(object):
         Sets the default_payment_instrument of this Tmsv2tokenizeTokenInformationCustomerEmbedded.
 
         :param default_payment_instrument: The default_payment_instrument of this Tmsv2tokenizeTokenInformationCustomerEmbedded.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrument
+        :type: DefaultPaymentInstrument
         """
 
         self._default_payment_instrument = default_payment_instrument
@@ -79,7 +79,7 @@ class Tmsv2tokenizeTokenInformationCustomerEmbedded(object):
         Gets the default_shipping_address of this Tmsv2tokenizeTokenInformationCustomerEmbedded.
 
         :return: The default_shipping_address of this Tmsv2tokenizeTokenInformationCustomerEmbedded.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress
+        :rtype: DefaultShippingAddress
         """
         return self._default_shipping_address
 
@@ -89,7 +89,7 @@ class Tmsv2tokenizeTokenInformationCustomerEmbedded(object):
         Sets the default_shipping_address of this Tmsv2tokenizeTokenInformationCustomerEmbedded.
 
         :param default_shipping_address: The default_shipping_address of this Tmsv2tokenizeTokenInformationCustomerEmbedded.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress
+        :type: DefaultShippingAddress
         """
 
         self._default_shipping_address = default_shipping_address

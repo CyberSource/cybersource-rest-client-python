@@ -31,7 +31,7 @@ class Ptsv1pullfundstransferProcessingInformation(object):
     """
     swagger_types = {
         'commerce_indicator': 'str',
-        'funding_options': 'Ptsv1pullfundstransferProcessingInformationFundingOptions',
+        'funding_options': 'AftFundingOptions',
         'recurring_options': 'Ptsv1pullfundstransferProcessingInformationRecurringOptions',
         'business_application_id': 'str',
         'purpose_of_payment': 'str',
@@ -110,7 +110,7 @@ class Ptsv1pullfundstransferProcessingInformation(object):
         Gets the funding_options of this Ptsv1pullfundstransferProcessingInformation.
 
         :return: The funding_options of this Ptsv1pullfundstransferProcessingInformation.
-        :rtype: Ptsv1pullfundstransferProcessingInformationFundingOptions
+        :rtype: AftFundingOptions
         """
         return self._funding_options
 
@@ -120,7 +120,7 @@ class Ptsv1pullfundstransferProcessingInformation(object):
         Sets the funding_options of this Ptsv1pullfundstransferProcessingInformation.
 
         :param funding_options: The funding_options of this Ptsv1pullfundstransferProcessingInformation.
-        :type: Ptsv1pullfundstransferProcessingInformationFundingOptions
+        :type: AftFundingOptions
         """
 
         self._funding_options = funding_options

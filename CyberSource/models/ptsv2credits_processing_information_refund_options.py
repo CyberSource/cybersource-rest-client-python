@@ -30,22 +30,27 @@ class Ptsv2creditsProcessingInformationRefundOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'reason': 'str'
+        'reason': 'str',
+        'reconciliation_id_alternate': 'str'
     }
 
     attribute_map = {
-        'reason': 'reason'
+        'reason': 'reason',
+        'reconciliation_id_alternate': 'reconciliationIdAlternate'
     }
 
-    def __init__(self, reason=None):
+    def __init__(self, reason=None, reconciliation_id_alternate=None):
         """
         Ptsv2creditsProcessingInformationRefundOptions - a model defined in Swagger
         """
 
         self._reason = None
+        self._reconciliation_id_alternate = None
 
         if reason is not None:
           self.reason = reason
+        if reconciliation_id_alternate is not None:
+          self.reconciliation_id_alternate = reconciliation_id_alternate
 
     @property
     def reason(self):
@@ -69,6 +74,29 @@ class Ptsv2creditsProcessingInformationRefundOptions(object):
         """
 
         self._reason = reason
+
+    @property
+    def reconciliation_id_alternate(self):
+        """
+        Gets the reconciliation_id_alternate of this Ptsv2creditsProcessingInformationRefundOptions.
+        Alternative reference number that can be up to 12 characters in length. If this field is used, it overrides any data added to the ccCaptureService_reconciliationID field. You can use this value to reconcile Cybersource reports with processor reports.
+
+        :return: The reconciliation_id_alternate of this Ptsv2creditsProcessingInformationRefundOptions.
+        :rtype: str
+        """
+        return self._reconciliation_id_alternate
+
+    @reconciliation_id_alternate.setter
+    def reconciliation_id_alternate(self, reconciliation_id_alternate):
+        """
+        Sets the reconciliation_id_alternate of this Ptsv2creditsProcessingInformationRefundOptions.
+        Alternative reference number that can be up to 12 characters in length. If this field is used, it overrides any data added to the ccCaptureService_reconciliationID field. You can use this value to reconcile Cybersource reports with processor reports.
+
+        :param reconciliation_id_alternate: The reconciliation_id_alternate of this Ptsv2creditsProcessingInformationRefundOptions.
+        :type: str
+        """
+
+        self._reconciliation_id_alternate = reconciliation_id_alternate
 
     def to_dict(self):
         """

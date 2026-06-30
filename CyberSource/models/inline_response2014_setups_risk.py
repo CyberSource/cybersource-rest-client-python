@@ -30,9 +30,9 @@ class InlineResponse2014SetupsRisk(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'fraud_management_essentials': 'InlineResponse2014SetupsPaymentsCardProcessing',
-        'decision_manager': 'InlineResponse2014SetupsPaymentsCardProcessing',
-        'enhanced_authentication': 'InlineResponse2014SetupsPaymentsCardProcessing'
+        'fraud_management_essentials': 'PaymentsConfigurationSetupCardProcessing',
+        'decision_manager': 'PaymentsConfigurationSetupCardProcessing',
+        'enhanced_authentication': 'PaymentsConfigurationSetupCardProcessing'
     }
 
     attribute_map = {
@@ -63,7 +63,7 @@ class InlineResponse2014SetupsRisk(object):
         Gets the fraud_management_essentials of this InlineResponse2014SetupsRisk.
 
         :return: The fraud_management_essentials of this InlineResponse2014SetupsRisk.
-        :rtype: InlineResponse2014SetupsPaymentsCardProcessing
+        :rtype: PaymentsConfigurationSetupCardProcessing
         """
         return self._fraud_management_essentials
 
@@ -73,7 +73,7 @@ class InlineResponse2014SetupsRisk(object):
         Sets the fraud_management_essentials of this InlineResponse2014SetupsRisk.
 
         :param fraud_management_essentials: The fraud_management_essentials of this InlineResponse2014SetupsRisk.
-        :type: InlineResponse2014SetupsPaymentsCardProcessing
+        :type: PaymentsConfigurationSetupCardProcessing
         """
 
         self._fraud_management_essentials = fraud_management_essentials
@@ -84,7 +84,7 @@ class InlineResponse2014SetupsRisk(object):
         Gets the decision_manager of this InlineResponse2014SetupsRisk.
 
         :return: The decision_manager of this InlineResponse2014SetupsRisk.
-        :rtype: InlineResponse2014SetupsPaymentsCardProcessing
+        :rtype: PaymentsConfigurationSetupCardProcessing
         """
         return self._decision_manager
 
@@ -94,7 +94,7 @@ class InlineResponse2014SetupsRisk(object):
         Sets the decision_manager of this InlineResponse2014SetupsRisk.
 
         :param decision_manager: The decision_manager of this InlineResponse2014SetupsRisk.
-        :type: InlineResponse2014SetupsPaymentsCardProcessing
+        :type: PaymentsConfigurationSetupCardProcessing
         """
 
         self._decision_manager = decision_manager
@@ -105,7 +105,7 @@ class InlineResponse2014SetupsRisk(object):
         Gets the enhanced_authentication of this InlineResponse2014SetupsRisk.
 
         :return: The enhanced_authentication of this InlineResponse2014SetupsRisk.
-        :rtype: InlineResponse2014SetupsPaymentsCardProcessing
+        :rtype: PaymentsConfigurationSetupCardProcessing
         """
         return self._enhanced_authentication
 
@@ -115,7 +115,7 @@ class InlineResponse2014SetupsRisk(object):
         Sets the enhanced_authentication of this InlineResponse2014SetupsRisk.
 
         :param enhanced_authentication: The enhanced_authentication of this InlineResponse2014SetupsRisk.
-        :type: InlineResponse2014SetupsPaymentsCardProcessing
+        :type: PaymentsConfigurationSetupCardProcessing
         """
 
         self._enhanced_authentication = enhanced_authentication

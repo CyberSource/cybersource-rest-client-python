@@ -31,8 +31,8 @@ class AgenticRetrievePaymentCredentialsRequest(object):
     """
     swagger_types = {
         'client_correlation_id': 'str',
-        'payment_information': 'Acpv1tokensPaymentInformation',
-        'transaction_data': 'list[Acpv1instructionsinstructionIdcredentialsTransactionData]'
+        'payment_information': 'Iccv1tokensPaymentInformation',
+        'transaction_data': 'list[Iccv1instructionsinstructionIdcredentialsTransactionData]'
     }
 
     attribute_map = {
@@ -83,7 +83,7 @@ class AgenticRetrievePaymentCredentialsRequest(object):
         Gets the payment_information of this AgenticRetrievePaymentCredentialsRequest.
 
         :return: The payment_information of this AgenticRetrievePaymentCredentialsRequest.
-        :rtype: Acpv1tokensPaymentInformation
+        :rtype: Iccv1tokensPaymentInformation
         """
         return self._payment_information
 
@@ -93,7 +93,7 @@ class AgenticRetrievePaymentCredentialsRequest(object):
         Sets the payment_information of this AgenticRetrievePaymentCredentialsRequest.
 
         :param payment_information: The payment_information of this AgenticRetrievePaymentCredentialsRequest.
-        :type: Acpv1tokensPaymentInformation
+        :type: Iccv1tokensPaymentInformation
         """
 
         self._payment_information = payment_information
@@ -105,7 +105,7 @@ class AgenticRetrievePaymentCredentialsRequest(object):
         List of transaction data.
 
         :return: The transaction_data of this AgenticRetrievePaymentCredentialsRequest.
-        :rtype: list[Acpv1instructionsinstructionIdcredentialsTransactionData]
+        :rtype: list[Iccv1instructionsinstructionIdcredentialsTransactionData]
         """
         return self._transaction_data
 
@@ -116,7 +116,7 @@ class AgenticRetrievePaymentCredentialsRequest(object):
         List of transaction data.
 
         :param transaction_data: The transaction_data of this AgenticRetrievePaymentCredentialsRequest.
-        :type: list[Acpv1instructionsinstructionIdcredentialsTransactionData]
+        :type: list[Iccv1instructionsinstructionIdcredentialsTransactionData]
         """
 
         self._transaction_data = transaction_data

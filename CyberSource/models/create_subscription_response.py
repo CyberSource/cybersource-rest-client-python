@@ -143,7 +143,7 @@ class CreateSubscriptionResponse(object):
     def status(self):
         """
         Gets the status of this CreateSubscriptionResponse.
-        The status of the submitted transaction.  Possible values:  - COMPLETED  - PENDING_REVIEW  - DECLINED  - INVALID_REQUEST 
+        The status of the submitted transaction.  Possible values:  - COMPLETED  - DECLINED 
 
         :return: The status of this CreateSubscriptionResponse.
         :rtype: str
@@ -154,7 +154,7 @@ class CreateSubscriptionResponse(object):
     def status(self, status):
         """
         Sets the status of this CreateSubscriptionResponse.
-        The status of the submitted transaction.  Possible values:  - COMPLETED  - PENDING_REVIEW  - DECLINED  - INVALID_REQUEST 
+        The status of the submitted transaction.  Possible values:  - COMPLETED  - DECLINED 
 
         :param status: The status of this CreateSubscriptionResponse.
         :type: str

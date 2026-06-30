@@ -31,11 +31,11 @@ class AgenticUpdatePurchaseIntentRequest(object):
     """
     swagger_types = {
         'client_correlation_id': 'str',
-        'payment_information': 'Acpv1tokensPaymentInformation',
-        'device_information': 'Acpv1tokensDeviceInformation',
-        'assurance_data': 'list[Acpv1tokensAssuranceData]',
-        'mandates': 'list[Acpv1instructionsMandates]',
-        'buyer_information': 'Acpv1tokensBuyerInformation',
+        'payment_information': 'Iccv1tokensPaymentInformation',
+        'device_information': 'Iccv1tokensDeviceInformation',
+        'assurance_data': 'list[Iccv1tokensAssuranceData]',
+        'mandates': 'list[Iccv1instructionsMandates]',
+        'buyer_information': 'Iccv1tokensBuyerInformation',
         'consumer_prompt': 'str'
     }
 
@@ -101,7 +101,7 @@ class AgenticUpdatePurchaseIntentRequest(object):
         Gets the payment_information of this AgenticUpdatePurchaseIntentRequest.
 
         :return: The payment_information of this AgenticUpdatePurchaseIntentRequest.
-        :rtype: Acpv1tokensPaymentInformation
+        :rtype: Iccv1tokensPaymentInformation
         """
         return self._payment_information
 
@@ -111,7 +111,7 @@ class AgenticUpdatePurchaseIntentRequest(object):
         Sets the payment_information of this AgenticUpdatePurchaseIntentRequest.
 
         :param payment_information: The payment_information of this AgenticUpdatePurchaseIntentRequest.
-        :type: Acpv1tokensPaymentInformation
+        :type: Iccv1tokensPaymentInformation
         """
 
         self._payment_information = payment_information
@@ -122,7 +122,7 @@ class AgenticUpdatePurchaseIntentRequest(object):
         Gets the device_information of this AgenticUpdatePurchaseIntentRequest.
 
         :return: The device_information of this AgenticUpdatePurchaseIntentRequest.
-        :rtype: Acpv1tokensDeviceInformation
+        :rtype: Iccv1tokensDeviceInformation
         """
         return self._device_information
 
@@ -132,7 +132,7 @@ class AgenticUpdatePurchaseIntentRequest(object):
         Sets the device_information of this AgenticUpdatePurchaseIntentRequest.
 
         :param device_information: The device_information of this AgenticUpdatePurchaseIntentRequest.
-        :type: Acpv1tokensDeviceInformation
+        :type: Iccv1tokensDeviceInformation
         """
 
         self._device_information = device_information
@@ -144,7 +144,7 @@ class AgenticUpdatePurchaseIntentRequest(object):
         Assurance data.
 
         :return: The assurance_data of this AgenticUpdatePurchaseIntentRequest.
-        :rtype: list[Acpv1tokensAssuranceData]
+        :rtype: list[Iccv1tokensAssuranceData]
         """
         return self._assurance_data
 
@@ -155,7 +155,7 @@ class AgenticUpdatePurchaseIntentRequest(object):
         Assurance data.
 
         :param assurance_data: The assurance_data of this AgenticUpdatePurchaseIntentRequest.
-        :type: list[Acpv1tokensAssuranceData]
+        :type: list[Iccv1tokensAssuranceData]
         """
 
         self._assurance_data = assurance_data
@@ -166,7 +166,7 @@ class AgenticUpdatePurchaseIntentRequest(object):
         Gets the mandates of this AgenticUpdatePurchaseIntentRequest.
 
         :return: The mandates of this AgenticUpdatePurchaseIntentRequest.
-        :rtype: list[Acpv1instructionsMandates]
+        :rtype: list[Iccv1instructionsMandates]
         """
         return self._mandates
 
@@ -176,7 +176,7 @@ class AgenticUpdatePurchaseIntentRequest(object):
         Sets the mandates of this AgenticUpdatePurchaseIntentRequest.
 
         :param mandates: The mandates of this AgenticUpdatePurchaseIntentRequest.
-        :type: list[Acpv1instructionsMandates]
+        :type: list[Iccv1instructionsMandates]
         """
 
         self._mandates = mandates
@@ -187,7 +187,7 @@ class AgenticUpdatePurchaseIntentRequest(object):
         Gets the buyer_information of this AgenticUpdatePurchaseIntentRequest.
 
         :return: The buyer_information of this AgenticUpdatePurchaseIntentRequest.
-        :rtype: Acpv1tokensBuyerInformation
+        :rtype: Iccv1tokensBuyerInformation
         """
         return self._buyer_information
 
@@ -197,7 +197,7 @@ class AgenticUpdatePurchaseIntentRequest(object):
         Sets the buyer_information of this AgenticUpdatePurchaseIntentRequest.
 
         :param buyer_information: The buyer_information of this AgenticUpdatePurchaseIntentRequest.
-        :type: Acpv1tokensBuyerInformation
+        :type: Iccv1tokensBuyerInformation
         """
 
         self._buyer_information = buyer_information

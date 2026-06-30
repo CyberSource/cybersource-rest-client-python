@@ -9,9 +9,11 @@ from the CyberSource Flex V2 public keys API endpoint.
 from __future__ import absolute_import
 
 import json
+import re
 import ssl
 import certifi
 import urllib3
+from urllib.parse import quote
 
 from authenticationsdk.util.jwt.JWTUtility import get_rsa_public_key_from_jwk
 from authenticationsdk.util.jwt.JWTExceptions import InvalidJwkException
@@ -41,10 +43,17 @@ def fetch_public_key(kid, run_environment):
     if not kid:
         raise ValueError('kid parameter is required')
     
+    # Validate kid to prevent path traversal attacks (AISAST-10808)
+    kid_pattern = re.compile(r'^[a-zA-Z0-9\-_\.]+$')
+    if not kid_pattern.match(kid):
+        raise ValueError('Invalid kid parameter: contains disallowed characters')
+    if '..' in kid or '/' in kid or '\\' in kid:
+        raise ValueError('Invalid kid parameter: path traversal characters detected')
+    
     if not run_environment:
         raise ValueError('runEnvironment parameter is required')
     
-    url = f"https://{run_environment}/flex/v2/public-keys/{kid}"
+    url = f"https://{run_environment}/flex/v2/public-keys/{quote(kid, safe='')}"
     
     headers = {
         'Accept': 'application/json'

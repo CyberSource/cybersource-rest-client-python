@@ -5,23 +5,55 @@ from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
 
 
 class SensitiveFormatter(logging.Formatter):
+    # All entries stored in lowercase for case-insensitive matching
     sensitive_fields = [
-        "securityCode",
-        "cardNumber",
+        # Authentication / token fields
+        "securitycode",
+        "cardnumber",
         "number",
-        "expirationMonth",
-        "expirationYear",
-        "routingNumber",
+        "expirationmonth",
+        "expirationyear",
+        "routingnumber",
         "email",
-        "firstName",
-        "lastName",
-        "phoneNumber",
+        "firstname",
+        "lastname",
+        "phonenumber",
         "type",
         "token",
         "signature",
         "keyid",
-        "encryptedRequest",
-        "encryptedResponse"
+        "encryptedrequest",
+        "encryptedresponse",
+        # PCI card data fields
+        "accountnumber",
+        "prefix",
+        "suffix",
+        "bin",
+        # PII address fields
+        "address1",
+        "address2",
+        "postalcode",
+        "locality",
+        "administrativearea",
+        "country",
+        "district",
+        # PII personal fields
+        "company",
+        "ssn",
+        "dateofbirth",
+        "fullname",
+        "name",
+        # Additional sensitive fields
+        "password",
+        "secret",
+        "pin",
+        "cvv",
+        "cvv2",
+        "cvc",
+        "cvc2",
+        "card_number",
+        "security_code",
+        "account_number",
     ]
 
     """Formatter that removes sensitive information in urls."""
@@ -45,7 +77,7 @@ class SensitiveFormatter(logging.Formatter):
 
             if isinstance(json_msg, dict):
                 for prop in json_msg:
-                    is_field_sensitive = prop in SensitiveFormatter.sensitive_fields
+                    is_field_sensitive = prop.lower() in SensitiveFormatter.sensitive_fields
                     if is_field_sensitive:
                         if json_msg[prop] is not None:
                             if isinstance(json_msg[prop], str) and len(json_msg[prop]) > 0:

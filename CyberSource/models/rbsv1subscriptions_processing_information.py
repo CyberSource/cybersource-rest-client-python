@@ -31,7 +31,7 @@ class Rbsv1subscriptionsProcessingInformation(object):
     """
     swagger_types = {
         'commerce_indicator': 'str',
-        'authorization_options': 'Rbsv1subscriptionsProcessingInformationAuthorizationOptions'
+        'authorization_options': 'RbsAuthorizationOptions'
     }
 
     attribute_map = {
@@ -81,7 +81,7 @@ class Rbsv1subscriptionsProcessingInformation(object):
         Gets the authorization_options of this Rbsv1subscriptionsProcessingInformation.
 
         :return: The authorization_options of this Rbsv1subscriptionsProcessingInformation.
-        :rtype: Rbsv1subscriptionsProcessingInformationAuthorizationOptions
+        :rtype: RbsAuthorizationOptions
         """
         return self._authorization_options
 
@@ -91,7 +91,7 @@ class Rbsv1subscriptionsProcessingInformation(object):
         Sets the authorization_options of this Rbsv1subscriptionsProcessingInformation.
 
         :param authorization_options: The authorization_options of this Rbsv1subscriptionsProcessingInformation.
-        :type: Rbsv1subscriptionsProcessingInformationAuthorizationOptions
+        :type: RbsAuthorizationOptions
         """
 
         self._authorization_options = authorization_options

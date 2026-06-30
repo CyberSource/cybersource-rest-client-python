@@ -32,7 +32,7 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformation(object):
     swagger_types = {
         'ip_country_confidence': 'int',
         'info_codes': 'list[str]',
-        'watch_list': 'PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchList'
+        'watch_list': 'ExportComplianceWatchList'
     }
 
     attribute_map = {
@@ -109,7 +109,7 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformation(object):
         Gets the watch_list of this PtsV2PaymentsPost201ResponseWatchlistScreeningInformation.
 
         :return: The watch_list of this PtsV2PaymentsPost201ResponseWatchlistScreeningInformation.
-        :rtype: PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchList
+        :rtype: ExportComplianceWatchList
         """
         return self._watch_list
 
@@ -119,7 +119,7 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformation(object):
         Sets the watch_list of this PtsV2PaymentsPost201ResponseWatchlistScreeningInformation.
 
         :param watch_list: The watch_list of this PtsV2PaymentsPost201ResponseWatchlistScreeningInformation.
-        :type: PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchList
+        :type: ExportComplianceWatchList
         """
 
         self._watch_list = watch_list

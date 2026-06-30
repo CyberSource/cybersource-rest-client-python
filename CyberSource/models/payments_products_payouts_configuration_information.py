@@ -30,7 +30,7 @@ class PaymentsProductsPayoutsConfigurationInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'configurations': 'PaymentsProductsPayoutsConfigurationInformationConfigurations'
+        'configurations': 'BoardingPayoutsConfigurations'
     }
 
     attribute_map = {
@@ -53,7 +53,7 @@ class PaymentsProductsPayoutsConfigurationInformation(object):
         Gets the configurations of this PaymentsProductsPayoutsConfigurationInformation.
 
         :return: The configurations of this PaymentsProductsPayoutsConfigurationInformation.
-        :rtype: PaymentsProductsPayoutsConfigurationInformationConfigurations
+        :rtype: BoardingPayoutsConfigurations
         """
         return self._configurations
 
@@ -63,7 +63,7 @@ class PaymentsProductsPayoutsConfigurationInformation(object):
         Sets the configurations of this PaymentsProductsPayoutsConfigurationInformation.
 
         :param configurations: The configurations of this PaymentsProductsPayoutsConfigurationInformation.
-        :type: PaymentsProductsPayoutsConfigurationInformationConfigurations
+        :type: BoardingPayoutsConfigurations
         """
 
         self._configurations = configurations

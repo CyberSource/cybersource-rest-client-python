@@ -30,7 +30,7 @@ class PaymentsProductsMicroformConfigurationInformationConfigurations(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'features': 'PaymentsProductsMicroformConfigurationInformationConfigurationsFeatures'
+        'features': 'MicroformConfigFeatures'
     }
 
     attribute_map = {
@@ -53,7 +53,7 @@ class PaymentsProductsMicroformConfigurationInformationConfigurations(object):
         Gets the features of this PaymentsProductsMicroformConfigurationInformationConfigurations.
 
         :return: The features of this PaymentsProductsMicroformConfigurationInformationConfigurations.
-        :rtype: PaymentsProductsMicroformConfigurationInformationConfigurationsFeatures
+        :rtype: MicroformConfigFeatures
         """
         return self._features
 
@@ -63,7 +63,7 @@ class PaymentsProductsMicroformConfigurationInformationConfigurations(object):
         Sets the features of this PaymentsProductsMicroformConfigurationInformationConfigurations.
 
         :param features: The features of this PaymentsProductsMicroformConfigurationInformationConfigurations.
-        :type: PaymentsProductsMicroformConfigurationInformationConfigurationsFeatures
+        :type: MicroformConfigFeatures
         """
 
         self._features = features

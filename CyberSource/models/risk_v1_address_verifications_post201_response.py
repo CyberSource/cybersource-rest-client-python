@@ -37,7 +37,7 @@ class RiskV1AddressVerificationsPost201Response(object):
         'status': 'str',
         'message': 'str',
         'client_reference_information': 'RiskV1DecisionsPost201ResponseClientReferenceInformation',
-        'address_verification_information': 'RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation',
+        'address_verification_information': 'RiskAddressVerificationInformation',
         'error_information': 'RiskV1AddressVerificationsPost201ResponseErrorInformation'
     }
 
@@ -250,7 +250,7 @@ class RiskV1AddressVerificationsPost201Response(object):
         Gets the address_verification_information of this RiskV1AddressVerificationsPost201Response.
 
         :return: The address_verification_information of this RiskV1AddressVerificationsPost201Response.
-        :rtype: RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation
+        :rtype: RiskAddressVerificationInformation
         """
         return self._address_verification_information
 
@@ -260,7 +260,7 @@ class RiskV1AddressVerificationsPost201Response(object):
         Sets the address_verification_information of this RiskV1AddressVerificationsPost201Response.
 
         :param address_verification_information: The address_verification_information of this RiskV1AddressVerificationsPost201Response.
-        :type: RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation
+        :type: RiskAddressVerificationInformation
         """
 
         self._address_verification_information = address_verification_information

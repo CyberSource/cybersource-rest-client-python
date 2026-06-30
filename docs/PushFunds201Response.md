@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **order_information** | [**PushFunds201ResponseOrderInformation**](PushFunds201ResponseOrderInformation.md) |  | [optional] 
 **payment_information** | [**PushFunds201ResponsePaymentInformation**](PushFunds201ResponsePaymentInformation.md) |  | [optional] 
 **processing_information** | [**PushFunds201ResponseProcessingInformation**](PushFunds201ResponseProcessingInformation.md) |  | [optional] 
+**issuer_information** | [**PushFunds201ResponseIssuerInformation**](PushFunds201ResponseIssuerInformation.md) |  | [optional] 
 **links** | [**PushFunds201ResponseLinks**](PushFunds201ResponseLinks.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

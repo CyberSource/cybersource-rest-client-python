@@ -31,7 +31,7 @@ class Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiator(
     """
     swagger_types = {
         'credential_stored_on_file': 'bool',
-        'merchant_initiated_transaction': 'Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction'
+        'merchant_initiated_transaction': 'UnifiedCheckoutMerchantInitiatedTransaction'
     }
 
     attribute_map = {
@@ -81,7 +81,7 @@ class Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiator(
         Gets the merchant_initiated_transaction of this Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiator.
 
         :return: The merchant_initiated_transaction of this Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiator.
-        :rtype: Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction
+        :rtype: UnifiedCheckoutMerchantInitiatedTransaction
         """
         return self._merchant_initiated_transaction
 
@@ -91,7 +91,7 @@ class Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiator(
         Sets the merchant_initiated_transaction of this Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiator.
 
         :param merchant_initiated_transaction: The merchant_initiated_transaction of this Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiator.
-        :type: Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction
+        :type: UnifiedCheckoutMerchantInitiatedTransaction
         """
 
         self._merchant_initiated_transaction = merchant_initiated_transaction

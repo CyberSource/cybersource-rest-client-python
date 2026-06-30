@@ -30,11 +30,11 @@ class InlineResponse2014SetupsValueAddedServices(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'reporting': 'InlineResponse2014SetupsPaymentsDigitalPayments',
-        'transaction_search': 'InlineResponse2014SetupsPaymentsDigitalPayments',
-        'bank_account_validation': 'InlineResponse2014SetupsPaymentsDigitalPayments',
-        'flexapi': 'InlineResponse2014SetupsPaymentsDigitalPayments',
-        'webhooks': 'InlineResponse2014SetupsPaymentsDigitalPayments'
+        'reporting': 'PaymentsConfigurationSetupDigitalPayments',
+        'transaction_search': 'PaymentsConfigurationSetupDigitalPayments',
+        'bank_account_validation': 'PaymentsConfigurationSetupDigitalPayments',
+        'flexapi': 'PaymentsConfigurationSetupDigitalPayments',
+        'webhooks': 'PaymentsConfigurationSetupDigitalPayments'
     }
 
     attribute_map = {
@@ -73,7 +73,7 @@ class InlineResponse2014SetupsValueAddedServices(object):
         Gets the reporting of this InlineResponse2014SetupsValueAddedServices.
 
         :return: The reporting of this InlineResponse2014SetupsValueAddedServices.
-        :rtype: InlineResponse2014SetupsPaymentsDigitalPayments
+        :rtype: PaymentsConfigurationSetupDigitalPayments
         """
         return self._reporting
 
@@ -83,7 +83,7 @@ class InlineResponse2014SetupsValueAddedServices(object):
         Sets the reporting of this InlineResponse2014SetupsValueAddedServices.
 
         :param reporting: The reporting of this InlineResponse2014SetupsValueAddedServices.
-        :type: InlineResponse2014SetupsPaymentsDigitalPayments
+        :type: PaymentsConfigurationSetupDigitalPayments
         """
 
         self._reporting = reporting
@@ -94,7 +94,7 @@ class InlineResponse2014SetupsValueAddedServices(object):
         Gets the transaction_search of this InlineResponse2014SetupsValueAddedServices.
 
         :return: The transaction_search of this InlineResponse2014SetupsValueAddedServices.
-        :rtype: InlineResponse2014SetupsPaymentsDigitalPayments
+        :rtype: PaymentsConfigurationSetupDigitalPayments
         """
         return self._transaction_search
 
@@ -104,7 +104,7 @@ class InlineResponse2014SetupsValueAddedServices(object):
         Sets the transaction_search of this InlineResponse2014SetupsValueAddedServices.
 
         :param transaction_search: The transaction_search of this InlineResponse2014SetupsValueAddedServices.
-        :type: InlineResponse2014SetupsPaymentsDigitalPayments
+        :type: PaymentsConfigurationSetupDigitalPayments
         """
 
         self._transaction_search = transaction_search
@@ -115,7 +115,7 @@ class InlineResponse2014SetupsValueAddedServices(object):
         Gets the bank_account_validation of this InlineResponse2014SetupsValueAddedServices.
 
         :return: The bank_account_validation of this InlineResponse2014SetupsValueAddedServices.
-        :rtype: InlineResponse2014SetupsPaymentsDigitalPayments
+        :rtype: PaymentsConfigurationSetupDigitalPayments
         """
         return self._bank_account_validation
 
@@ -125,7 +125,7 @@ class InlineResponse2014SetupsValueAddedServices(object):
         Sets the bank_account_validation of this InlineResponse2014SetupsValueAddedServices.
 
         :param bank_account_validation: The bank_account_validation of this InlineResponse2014SetupsValueAddedServices.
-        :type: InlineResponse2014SetupsPaymentsDigitalPayments
+        :type: PaymentsConfigurationSetupDigitalPayments
         """
 
         self._bank_account_validation = bank_account_validation
@@ -136,7 +136,7 @@ class InlineResponse2014SetupsValueAddedServices(object):
         Gets the flexapi of this InlineResponse2014SetupsValueAddedServices.
 
         :return: The flexapi of this InlineResponse2014SetupsValueAddedServices.
-        :rtype: InlineResponse2014SetupsPaymentsDigitalPayments
+        :rtype: PaymentsConfigurationSetupDigitalPayments
         """
         return self._flexapi
 
@@ -146,7 +146,7 @@ class InlineResponse2014SetupsValueAddedServices(object):
         Sets the flexapi of this InlineResponse2014SetupsValueAddedServices.
 
         :param flexapi: The flexapi of this InlineResponse2014SetupsValueAddedServices.
-        :type: InlineResponse2014SetupsPaymentsDigitalPayments
+        :type: PaymentsConfigurationSetupDigitalPayments
         """
 
         self._flexapi = flexapi
@@ -157,7 +157,7 @@ class InlineResponse2014SetupsValueAddedServices(object):
         Gets the webhooks of this InlineResponse2014SetupsValueAddedServices.
 
         :return: The webhooks of this InlineResponse2014SetupsValueAddedServices.
-        :rtype: InlineResponse2014SetupsPaymentsDigitalPayments
+        :rtype: PaymentsConfigurationSetupDigitalPayments
         """
         return self._webhooks
 
@@ -167,7 +167,7 @@ class InlineResponse2014SetupsValueAddedServices(object):
         Sets the webhooks of this InlineResponse2014SetupsValueAddedServices.
 
         :param webhooks: The webhooks of this InlineResponse2014SetupsValueAddedServices.
-        :type: InlineResponse2014SetupsPaymentsDigitalPayments
+        :type: PaymentsConfigurationSetupDigitalPayments
         """
 
         self._webhooks = webhooks

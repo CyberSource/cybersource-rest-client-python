@@ -149,6 +149,11 @@ class MerchantConfiguration:
 
     def set_proxy_address(self, value):
         if not (value.get('proxy_address') is None):
+            if not value['proxy_address'].startswith('http://') and not value['proxy_address'].startswith('https://'):
+                raise ValueError(
+                    "proxy_address must include a scheme (http:// or https://). "
+                    "Please add 'http://' or 'https://' as part of the proxy_address value in config dictionary."
+                )
             self.proxy_address = value['proxy_address']
 
     def set_proxy_port(self, value):

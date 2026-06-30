@@ -70,9 +70,9 @@ class TestPaymentsApi(unittest.TestCase):
         """
         pass
 
-    def test_update_session_req(self):
+    def test_update_session_request(self):
         """
-        Test case for update_session_req
+        Test case for update_session_request
 
         Update Alternative Payments Sessions Request
         """

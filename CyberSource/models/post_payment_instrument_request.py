@@ -30,20 +30,20 @@ class PostPaymentInstrumentRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentLinks',
+        'links': 'DefaultPaymentInstrumentLinks',
         'id': 'str',
         'object': 'str',
         'default': 'bool',
         'state': 'str',
         'type': 'str',
-        'bank_account': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBankAccount',
-        'card': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentCard',
-        'buyer_information': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBuyerInformation',
-        'bill_to': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBillTo',
+        'bank_account': 'DefaultPaymentInstrumentBankAccount',
+        'card': 'DefaultPaymentInstrumentCard',
+        'buyer_information': 'DefaultPaymentInstrumentBuyerInformation',
+        'bill_to': 'DefaultPaymentInstrumentBillTo',
         'processing_information': 'TmsPaymentInstrumentProcessingInfo',
         'merchant_information': 'TmsMerchantInformation',
-        'instrument_identifier': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentInstrumentIdentifier',
-        'metadata': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentMetadata',
+        'instrument_identifier': 'DefaultPaymentInstrumentInstrumentIdentifier',
+        'metadata': 'DefaultPaymentInstrumentMetadata',
         'embedded': 'Tmsv1paymentinstrumentsEmbedded'
     }
 
@@ -123,7 +123,7 @@ class PostPaymentInstrumentRequest(object):
         Gets the links of this PostPaymentInstrumentRequest.
 
         :return: The links of this PostPaymentInstrumentRequest.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentLinks
+        :rtype: DefaultPaymentInstrumentLinks
         """
         return self._links
 
@@ -133,7 +133,7 @@ class PostPaymentInstrumentRequest(object):
         Sets the links of this PostPaymentInstrumentRequest.
 
         :param links: The links of this PostPaymentInstrumentRequest.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentLinks
+        :type: DefaultPaymentInstrumentLinks
         """
 
         self._links = links
@@ -259,7 +259,7 @@ class PostPaymentInstrumentRequest(object):
         Gets the bank_account of this PostPaymentInstrumentRequest.
 
         :return: The bank_account of this PostPaymentInstrumentRequest.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBankAccount
+        :rtype: DefaultPaymentInstrumentBankAccount
         """
         return self._bank_account
 
@@ -269,7 +269,7 @@ class PostPaymentInstrumentRequest(object):
         Sets the bank_account of this PostPaymentInstrumentRequest.
 
         :param bank_account: The bank_account of this PostPaymentInstrumentRequest.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBankAccount
+        :type: DefaultPaymentInstrumentBankAccount
         """
 
         self._bank_account = bank_account
@@ -280,7 +280,7 @@ class PostPaymentInstrumentRequest(object):
         Gets the card of this PostPaymentInstrumentRequest.
 
         :return: The card of this PostPaymentInstrumentRequest.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentCard
+        :rtype: DefaultPaymentInstrumentCard
         """
         return self._card
 
@@ -290,7 +290,7 @@ class PostPaymentInstrumentRequest(object):
         Sets the card of this PostPaymentInstrumentRequest.
 
         :param card: The card of this PostPaymentInstrumentRequest.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentCard
+        :type: DefaultPaymentInstrumentCard
         """
 
         self._card = card
@@ -301,7 +301,7 @@ class PostPaymentInstrumentRequest(object):
         Gets the buyer_information of this PostPaymentInstrumentRequest.
 
         :return: The buyer_information of this PostPaymentInstrumentRequest.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBuyerInformation
+        :rtype: DefaultPaymentInstrumentBuyerInformation
         """
         return self._buyer_information
 
@@ -311,7 +311,7 @@ class PostPaymentInstrumentRequest(object):
         Sets the buyer_information of this PostPaymentInstrumentRequest.
 
         :param buyer_information: The buyer_information of this PostPaymentInstrumentRequest.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBuyerInformation
+        :type: DefaultPaymentInstrumentBuyerInformation
         """
 
         self._buyer_information = buyer_information
@@ -322,7 +322,7 @@ class PostPaymentInstrumentRequest(object):
         Gets the bill_to of this PostPaymentInstrumentRequest.
 
         :return: The bill_to of this PostPaymentInstrumentRequest.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBillTo
+        :rtype: DefaultPaymentInstrumentBillTo
         """
         return self._bill_to
 
@@ -332,7 +332,7 @@ class PostPaymentInstrumentRequest(object):
         Sets the bill_to of this PostPaymentInstrumentRequest.
 
         :param bill_to: The bill_to of this PostPaymentInstrumentRequest.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBillTo
+        :type: DefaultPaymentInstrumentBillTo
         """
 
         self._bill_to = bill_to
@@ -385,7 +385,7 @@ class PostPaymentInstrumentRequest(object):
         Gets the instrument_identifier of this PostPaymentInstrumentRequest.
 
         :return: The instrument_identifier of this PostPaymentInstrumentRequest.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentInstrumentIdentifier
+        :rtype: DefaultPaymentInstrumentInstrumentIdentifier
         """
         return self._instrument_identifier
 
@@ -395,7 +395,7 @@ class PostPaymentInstrumentRequest(object):
         Sets the instrument_identifier of this PostPaymentInstrumentRequest.
 
         :param instrument_identifier: The instrument_identifier of this PostPaymentInstrumentRequest.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentInstrumentIdentifier
+        :type: DefaultPaymentInstrumentInstrumentIdentifier
         """
 
         self._instrument_identifier = instrument_identifier
@@ -406,7 +406,7 @@ class PostPaymentInstrumentRequest(object):
         Gets the metadata of this PostPaymentInstrumentRequest.
 
         :return: The metadata of this PostPaymentInstrumentRequest.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentMetadata
+        :rtype: DefaultPaymentInstrumentMetadata
         """
         return self._metadata
 
@@ -416,7 +416,7 @@ class PostPaymentInstrumentRequest(object):
         Sets the metadata of this PostPaymentInstrumentRequest.
 
         :param metadata: The metadata of this PostPaymentInstrumentRequest.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentMetadata
+        :type: DefaultPaymentInstrumentMetadata
         """
 
         self._metadata = metadata

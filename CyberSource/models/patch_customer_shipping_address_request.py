@@ -30,11 +30,11 @@ class PatchCustomerShippingAddressRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddressLinks',
+        'links': 'DefaultShippingAddressLinks',
         'id': 'str',
         'default': 'bool',
-        'ship_to': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddressShipTo',
-        'metadata': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddressMetadata'
+        'ship_to': 'DefaultShippingAddressShipTo',
+        'metadata': 'DefaultShippingAddressMetadata'
     }
 
     attribute_map = {
@@ -73,7 +73,7 @@ class PatchCustomerShippingAddressRequest(object):
         Gets the links of this PatchCustomerShippingAddressRequest.
 
         :return: The links of this PatchCustomerShippingAddressRequest.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddressLinks
+        :rtype: DefaultShippingAddressLinks
         """
         return self._links
 
@@ -83,7 +83,7 @@ class PatchCustomerShippingAddressRequest(object):
         Sets the links of this PatchCustomerShippingAddressRequest.
 
         :param links: The links of this PatchCustomerShippingAddressRequest.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddressLinks
+        :type: DefaultShippingAddressLinks
         """
 
         self._links = links
@@ -140,7 +140,7 @@ class PatchCustomerShippingAddressRequest(object):
         Gets the ship_to of this PatchCustomerShippingAddressRequest.
 
         :return: The ship_to of this PatchCustomerShippingAddressRequest.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddressShipTo
+        :rtype: DefaultShippingAddressShipTo
         """
         return self._ship_to
 
@@ -150,7 +150,7 @@ class PatchCustomerShippingAddressRequest(object):
         Sets the ship_to of this PatchCustomerShippingAddressRequest.
 
         :param ship_to: The ship_to of this PatchCustomerShippingAddressRequest.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddressShipTo
+        :type: DefaultShippingAddressShipTo
         """
 
         self._ship_to = ship_to
@@ -161,7 +161,7 @@ class PatchCustomerShippingAddressRequest(object):
         Gets the metadata of this PatchCustomerShippingAddressRequest.
 
         :return: The metadata of this PatchCustomerShippingAddressRequest.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddressMetadata
+        :rtype: DefaultShippingAddressMetadata
         """
         return self._metadata
 
@@ -171,7 +171,7 @@ class PatchCustomerShippingAddressRequest(object):
         Sets the metadata of this PatchCustomerShippingAddressRequest.
 
         :param metadata: The metadata of this PatchCustomerShippingAddressRequest.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddressMetadata
+        :type: DefaultShippingAddressMetadata
         """
 
         self._metadata = metadata

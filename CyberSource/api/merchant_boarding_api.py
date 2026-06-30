@@ -144,7 +144,7 @@ class MerchantBoardingApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        inbound_mle_status = "false"
+        inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_registration,get_registration_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
@@ -268,7 +268,7 @@ class MerchantBoardingApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_registration_body', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        inbound_mle_status = "false"
+        inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_registration,post_registration_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         

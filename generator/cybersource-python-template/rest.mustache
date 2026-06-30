@@ -155,13 +155,13 @@ class RESTClientObject(object):
         # https pool manager
         if mconfig.use_proxy and not (proxy_host is None or proxy_host == ''):
             # proxy auth headers
-            proxy_host = proxy_host.replace("https://", "").replace("http://", "")
+            # proxy_host = proxy_host.replace("https://", "").replace("http://", "")
             proxy_port = mconfig.proxy_port
             proxy_username = mconfig.proxy_username
             proxy_password = mconfig.proxy_password
             proxy_auth_headers = None
 
-            proxy = 'http://' + proxy_host + ':' + proxy_port
+            proxy = proxy_host + ':' + proxy_port
 
             hash_candidates['proxy'] = proxy
 

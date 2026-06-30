@@ -31,7 +31,7 @@ class Tmsv2customersEmbedded(object):
     """
     swagger_types = {
         'default_payment_instrument': 'PatchPaymentInstrumentRequest',
-        'default_shipping_address': 'Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress'
+        'default_shipping_address': 'DefaultShippingAddress'
     }
 
     attribute_map = {
@@ -79,7 +79,7 @@ class Tmsv2customersEmbedded(object):
         Gets the default_shipping_address of this Tmsv2customersEmbedded.
 
         :return: The default_shipping_address of this Tmsv2customersEmbedded.
-        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress
+        :rtype: DefaultShippingAddress
         """
         return self._default_shipping_address
 
@@ -89,7 +89,7 @@ class Tmsv2customersEmbedded(object):
         Sets the default_shipping_address of this Tmsv2customersEmbedded.
 
         :param default_shipping_address: The default_shipping_address of this Tmsv2customersEmbedded.
-        :type: Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress
+        :type: DefaultShippingAddress
         """
 
         self._default_shipping_address = default_shipping_address

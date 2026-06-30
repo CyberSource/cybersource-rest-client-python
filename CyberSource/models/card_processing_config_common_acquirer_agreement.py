@@ -30,7 +30,7 @@ class CardProcessingConfigCommonAcquirerAgreement(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'acquirer_code': 'CardProcessingConfigCommonAcquirerAgreementAcquirerCode'
+        'acquirer_code': 'BoardingAcquirerDetails'
     }
 
     attribute_map = {
@@ -53,7 +53,7 @@ class CardProcessingConfigCommonAcquirerAgreement(object):
         Gets the acquirer_code of this CardProcessingConfigCommonAcquirerAgreement.
 
         :return: The acquirer_code of this CardProcessingConfigCommonAcquirerAgreement.
-        :rtype: CardProcessingConfigCommonAcquirerAgreementAcquirerCode
+        :rtype: BoardingAcquirerDetails
         """
         return self._acquirer_code
 
@@ -63,7 +63,7 @@ class CardProcessingConfigCommonAcquirerAgreement(object):
         Sets the acquirer_code of this CardProcessingConfigCommonAcquirerAgreement.
 
         :param acquirer_code: The acquirer_code of this CardProcessingConfigCommonAcquirerAgreement.
-        :type: CardProcessingConfigCommonAcquirerAgreementAcquirerCode
+        :type: BoardingAcquirerDetails
         """
 
         self._acquirer_code = acquirer_code

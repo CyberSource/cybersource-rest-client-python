@@ -33,7 +33,7 @@ class Upv1capturecontextsDataOrderInformation(object):
         'amount_details': 'Upv1capturecontextsDataOrderInformationAmountDetails',
         'bill_to': 'Upv1capturecontextsDataOrderInformationBillTo',
         'ship_to': 'Upv1capturecontextsDataOrderInformationShipTo',
-        'line_items': 'Upv1capturecontextsDataOrderInformationLineItems',
+        'line_items': 'list[Upv1capturecontextsDataOrderInformationLineItems]',
         'invoice_details': 'Upv1capturecontextsDataOrderInformationInvoiceDetails'
     }
 
@@ -136,7 +136,7 @@ class Upv1capturecontextsDataOrderInformation(object):
         Gets the line_items of this Upv1capturecontextsDataOrderInformation.
 
         :return: The line_items of this Upv1capturecontextsDataOrderInformation.
-        :rtype: Upv1capturecontextsDataOrderInformationLineItems
+        :rtype: list[Upv1capturecontextsDataOrderInformationLineItems]
         """
         return self._line_items
 
@@ -146,7 +146,7 @@ class Upv1capturecontextsDataOrderInformation(object):
         Sets the line_items of this Upv1capturecontextsDataOrderInformation.
 
         :param line_items: The line_items of this Upv1capturecontextsDataOrderInformation.
-        :type: Upv1capturecontextsDataOrderInformationLineItems
+        :type: list[Upv1capturecontextsDataOrderInformationLineItems]
         """
 
         self._line_items = line_items

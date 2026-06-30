@@ -36,7 +36,7 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         'attributes': 'list[ReportingV3ReportDefinitionsNameGet200ResponseAttributes]',
         'supported_formats': 'list[str]',
         'description': 'str',
-        'default_settings': 'ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings',
+        'default_settings': 'ReportDefinitionDefaultSettings',
         'subscription_type': 'str'
     }
 
@@ -214,7 +214,7 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         Gets the default_settings of this ReportingV3ReportDefinitionsNameGet200Response.
 
         :return: The default_settings of this ReportingV3ReportDefinitionsNameGet200Response.
-        :rtype: ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings
+        :rtype: ReportDefinitionDefaultSettings
         """
         return self._default_settings
 
@@ -224,7 +224,7 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         Sets the default_settings of this ReportingV3ReportDefinitionsNameGet200Response.
 
         :param default_settings: The default_settings of this ReportingV3ReportDefinitionsNameGet200Response.
-        :type: ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings
+        :type: ReportDefinitionDefaultSettings
         """
 
         self._default_settings = default_settings

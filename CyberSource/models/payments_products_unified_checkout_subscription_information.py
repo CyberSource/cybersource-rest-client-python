@@ -33,7 +33,7 @@ class PaymentsProductsUnifiedCheckoutSubscriptionInformation(object):
         'enabled': 'bool',
         'enablement_status': 'str',
         'self_serviceability': 'str',
-        'features': 'PaymentsProductsUnifiedCheckoutSubscriptionInformationFeatures'
+        'features': 'UcFeatureSubscription'
     }
 
     attribute_map = {
@@ -135,7 +135,7 @@ class PaymentsProductsUnifiedCheckoutSubscriptionInformation(object):
         Gets the features of this PaymentsProductsUnifiedCheckoutSubscriptionInformation.
 
         :return: The features of this PaymentsProductsUnifiedCheckoutSubscriptionInformation.
-        :rtype: PaymentsProductsUnifiedCheckoutSubscriptionInformationFeatures
+        :rtype: UcFeatureSubscription
         """
         return self._features
 
@@ -145,7 +145,7 @@ class PaymentsProductsUnifiedCheckoutSubscriptionInformation(object):
         Sets the features of this PaymentsProductsUnifiedCheckoutSubscriptionInformation.
 
         :param features: The features of this PaymentsProductsUnifiedCheckoutSubscriptionInformation.
-        :type: PaymentsProductsUnifiedCheckoutSubscriptionInformationFeatures
+        :type: UcFeatureSubscription
         """
 
         self._features = features

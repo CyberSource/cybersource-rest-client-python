@@ -32,7 +32,7 @@ class Ucv1sessionsDataOrderInformation(object):
     swagger_types = {
         'amount_details': 'Ucv1sessionsDataOrderInformationAmountDetails',
         'bill_to': 'Ucv1sessionsDataOrderInformationBillTo',
-        'ship_to': 'Upv1capturecontextsDataOrderInformationShipTo',
+        'ship_to': 'Ucv1sessionsDataOrderInformationShipTo',
         'line_items': 'list[Ucv1sessionsDataOrderInformationLineItems]',
         'invoice_details': 'Ucv1sessionsDataOrderInformationInvoiceDetails',
         'shipping_details': 'Ucv1sessionsDataOrderInformationShippingDetails'
@@ -120,7 +120,7 @@ class Ucv1sessionsDataOrderInformation(object):
         Gets the ship_to of this Ucv1sessionsDataOrderInformation.
 
         :return: The ship_to of this Ucv1sessionsDataOrderInformation.
-        :rtype: Upv1capturecontextsDataOrderInformationShipTo
+        :rtype: Ucv1sessionsDataOrderInformationShipTo
         """
         return self._ship_to
 
@@ -130,7 +130,7 @@ class Ucv1sessionsDataOrderInformation(object):
         Sets the ship_to of this Ucv1sessionsDataOrderInformation.
 
         :param ship_to: The ship_to of this Ucv1sessionsDataOrderInformation.
-        :type: Upv1capturecontextsDataOrderInformationShipTo
+        :type: Ucv1sessionsDataOrderInformationShipTo
         """
 
         self._ship_to = ship_to

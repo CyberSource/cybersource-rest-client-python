@@ -149,7 +149,7 @@ class CredentialsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/acp/v1/mpp/credentials', 'POST',
+        return self.api_client.call_api(f'/icc/v1/mpp/credentials', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
