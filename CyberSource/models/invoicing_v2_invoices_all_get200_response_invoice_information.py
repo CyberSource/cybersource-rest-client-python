@@ -56,7 +56,7 @@ class InvoicingV2InvoicesAllGet200ResponseInvoiceInformation(object):
     def due_date(self):
         """
         Gets the due_date of this InvoicingV2InvoicesAllGet200ResponseInvoiceInformation.
-        The invoice due date. This field is required for creating an invoice. Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+        The invoice due date. This field is required for creating an invoice. Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day.  The invoice link automatically expires 12 months after the due date. 
 
         :return: The due_date of this InvoicingV2InvoicesAllGet200ResponseInvoiceInformation.
         :rtype: date
@@ -67,7 +67,7 @@ class InvoicingV2InvoicesAllGet200ResponseInvoiceInformation(object):
     def due_date(self, due_date):
         """
         Sets the due_date of this InvoicingV2InvoicesAllGet200ResponseInvoiceInformation.
-        The invoice due date. This field is required for creating an invoice. Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+        The invoice due date. This field is required for creating an invoice. Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day.  The invoice link automatically expires 12 months after the due date. 
 
         :param due_date: The due_date of this InvoicingV2InvoicesAllGet200ResponseInvoiceInformation.
         :type: date
@@ -79,7 +79,7 @@ class InvoicingV2InvoicesAllGet200ResponseInvoiceInformation(object):
     def expiration_date(self):
         """
         Gets the expiration_date of this InvoicingV2InvoicesAllGet200ResponseInvoiceInformation.
-        Define an expiration date for the link.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+        Define an expiration date for the link.  The date must be today or in the future.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day.  The invoice link automatically expires 12 months after the due date. 
 
         :return: The expiration_date of this InvoicingV2InvoicesAllGet200ResponseInvoiceInformation.
         :rtype: date
@@ -90,7 +90,7 @@ class InvoicingV2InvoicesAllGet200ResponseInvoiceInformation(object):
     def expiration_date(self, expiration_date):
         """
         Sets the expiration_date of this InvoicingV2InvoicesAllGet200ResponseInvoiceInformation.
-        Define an expiration date for the link.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+        Define an expiration date for the link.  The date must be today or in the future.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day.  The invoice link automatically expires 12 months after the due date. 
 
         :param expiration_date: The expiration_date of this InvoicingV2InvoicesAllGet200ResponseInvoiceInformation.
         :type: date

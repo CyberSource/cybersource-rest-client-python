@@ -40,6 +40,7 @@ class ProcessingInfoAuthorizationOptions(object):
         'balance_inquiry': 'bool',
         'ignore_avs_result': 'bool',
         'decline_avs_flags': 'list[str]',
+        'decline_ani_flags': 'list[str]',
         'ignore_cv_result': 'bool',
         'initiator': 'ProcessingInfoAuthorizationOptionsInitiator',
         'bill_payment': 'bool',
@@ -70,6 +71,7 @@ class ProcessingInfoAuthorizationOptions(object):
         'balance_inquiry': 'balanceInquiry',
         'ignore_avs_result': 'ignoreAvsResult',
         'decline_avs_flags': 'declineAvsFlags',
+        'decline_ani_flags': 'declineAniFlags',
         'ignore_cv_result': 'ignoreCvResult',
         'initiator': 'initiator',
         'bill_payment': 'billPayment',
@@ -89,7 +91,7 @@ class ProcessingInfoAuthorizationOptions(object):
         'money_load': 'moneyLoad'
     }
 
-    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, extend_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None, cash_advance_indicator=None, split_payment_transaction=None, card_verification_indicator=None, transaction_mode=None, aft_indicator=None, service_type=None, balance_update=None, money_load=None):
+    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, extend_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, decline_ani_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None, cash_advance_indicator=None, split_payment_transaction=None, card_verification_indicator=None, transaction_mode=None, aft_indicator=None, service_type=None, balance_update=None, money_load=None):
         """
         ProcessingInfoAuthorizationOptions - a model defined in Swagger
         """
@@ -104,6 +106,7 @@ class ProcessingInfoAuthorizationOptions(object):
         self._balance_inquiry = None
         self._ignore_avs_result = None
         self._decline_avs_flags = None
+        self._decline_ani_flags = None
         self._ignore_cv_result = None
         self._initiator = None
         self._bill_payment = None
@@ -142,6 +145,8 @@ class ProcessingInfoAuthorizationOptions(object):
           self.ignore_avs_result = ignore_avs_result
         if decline_avs_flags is not None:
           self.decline_avs_flags = decline_avs_flags
+        if decline_ani_flags is not None:
+          self.decline_ani_flags = decline_ani_flags
         if ignore_cv_result is not None:
           self.ignore_cv_result = ignore_cv_result
         if initiator is not None:
@@ -406,6 +411,29 @@ class ProcessingInfoAuthorizationOptions(object):
         """
 
         self._decline_avs_flags = decline_avs_flags
+
+    @property
+    def decline_ani_flags(self):
+        """
+        Gets the decline_ani_flags of this ProcessingInfoAuthorizationOptions.
+        User-defined list of ANI (Address Name Inquiry) codes that will cause the system to decline a transaction.  Address Name Inquiry is a Verification suite product which checks whether the name shared in the  transaction matches with the one stored at the issuing bank. This field replicates the same behavior  as AVS (which uses DAVSNO flag), but for ANI verification using the DANINO flag.  **Important**:  - By default, no ANI codes cause declines (empty/null) - Merchant specifies which ANI codes should trigger declines - When triggered, returns reason code 217 with reply flag `DANINO` - Use space to separate values in the list - To receive declines for the ANI code N, include the value N in the list  ### ANI Result Codes  |ANI Code|Description| |--- |--- | |Y|Match: Full name match with issuing bank records| |O|Partial match: Partial name match with issuing bank records| |N|No match: Name does not match issuing bank records| |U|Unverified: ANI verification not performed or not supported| |R|Retry: System should retry the ANI check|  ### Reply Flag When Triggered  When a transaction's ANI result matches one of the codes in this list, the system returns: - **Reason Code**: 217 - **Reply Flag**: `DANINO` - **Description**: Decline. The authorization request was approved by the issuing bank but was    flagged because it did not pass the Address Name Inquiry (ANI) check. - **Possible Action**: Review the order for the possibility of fraud.  #### Used by **Authorization** Optional field for controlling ANI-based declines.  #### API Ticket ACCAPI-2138 
+
+        :return: The decline_ani_flags of this ProcessingInfoAuthorizationOptions.
+        :rtype: list[str]
+        """
+        return self._decline_ani_flags
+
+    @decline_ani_flags.setter
+    def decline_ani_flags(self, decline_ani_flags):
+        """
+        Sets the decline_ani_flags of this ProcessingInfoAuthorizationOptions.
+        User-defined list of ANI (Address Name Inquiry) codes that will cause the system to decline a transaction.  Address Name Inquiry is a Verification suite product which checks whether the name shared in the  transaction matches with the one stored at the issuing bank. This field replicates the same behavior  as AVS (which uses DAVSNO flag), but for ANI verification using the DANINO flag.  **Important**:  - By default, no ANI codes cause declines (empty/null) - Merchant specifies which ANI codes should trigger declines - When triggered, returns reason code 217 with reply flag `DANINO` - Use space to separate values in the list - To receive declines for the ANI code N, include the value N in the list  ### ANI Result Codes  |ANI Code|Description| |--- |--- | |Y|Match: Full name match with issuing bank records| |O|Partial match: Partial name match with issuing bank records| |N|No match: Name does not match issuing bank records| |U|Unverified: ANI verification not performed or not supported| |R|Retry: System should retry the ANI check|  ### Reply Flag When Triggered  When a transaction's ANI result matches one of the codes in this list, the system returns: - **Reason Code**: 217 - **Reply Flag**: `DANINO` - **Description**: Decline. The authorization request was approved by the issuing bank but was    flagged because it did not pass the Address Name Inquiry (ANI) check. - **Possible Action**: Review the order for the possibility of fraud.  #### Used by **Authorization** Optional field for controlling ANI-based declines.  #### API Ticket ACCAPI-2138 
+
+        :param decline_ani_flags: The decline_ani_flags of this ProcessingInfoAuthorizationOptions.
+        :type: list[str]
+        """
+
+        self._decline_ani_flags = decline_ani_flags
 
     @property
     def ignore_cv_result(self):

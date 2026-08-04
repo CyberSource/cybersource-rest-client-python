@@ -49,6 +49,7 @@ class Ptsv2paymentsProcessingInformation(object):
         'visa_checkout_id': 'str',
         'industry_data_type': 'str',
         'authorization_options': 'ProcessingInfoAuthorizationOptions',
+        'card_verification': 'Ptsv2paymentsProcessingInformationCardVerification',
         'capture_options': 'Ptsv2paymentsProcessingInformationCaptureOptions',
         'recurring_options': 'Ptsv2paymentsProcessingInformationRecurringOptions',
         'bank_transfer_options': 'Ptsv2paymentsProcessingInformationBankTransferOptions',
@@ -100,6 +101,7 @@ class Ptsv2paymentsProcessingInformation(object):
         'visa_checkout_id': 'visaCheckoutId',
         'industry_data_type': 'industryDataType',
         'authorization_options': 'authorizationOptions',
+        'card_verification': 'cardVerification',
         'capture_options': 'captureOptions',
         'recurring_options': 'recurringOptions',
         'bank_transfer_options': 'bankTransferOptions',
@@ -131,7 +133,7 @@ class Ptsv2paymentsProcessingInformation(object):
         'inquiry_type': 'inquiryType'
     }
 
-    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, merchant_verification_value=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, timeout=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None, enabler_id=None, processing_instruction=None, transaction_type_indicator=None, purpose_of_payment=None, language_code=None, original_payment_id=None, amex_indirect_model_type=None, wallet_transaction_intent=None, destination_type=None, program_indicators=None, inquiry_type=None):
+    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, card_verification=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, merchant_verification_value=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, timeout=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None, enabler_id=None, processing_instruction=None, transaction_type_indicator=None, purpose_of_payment=None, language_code=None, original_payment_id=None, amex_indirect_model_type=None, wallet_transaction_intent=None, destination_type=None, program_indicators=None, inquiry_type=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
@@ -155,6 +157,7 @@ class Ptsv2paymentsProcessingInformation(object):
         self._visa_checkout_id = None
         self._industry_data_type = None
         self._authorization_options = None
+        self._card_verification = None
         self._capture_options = None
         self._recurring_options = None
         self._bank_transfer_options = None
@@ -223,6 +226,8 @@ class Ptsv2paymentsProcessingInformation(object):
           self.industry_data_type = industry_data_type
         if authorization_options is not None:
           self.authorization_options = authorization_options
+        if card_verification is not None:
+          self.card_verification = card_verification
         if capture_options is not None:
           self.capture_options = capture_options
         if recurring_options is not None:
@@ -716,6 +721,27 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._authorization_options = authorization_options
+
+    @property
+    def card_verification(self):
+        """
+        Gets the card_verification of this Ptsv2paymentsProcessingInformation.
+
+        :return: The card_verification of this Ptsv2paymentsProcessingInformation.
+        :rtype: Ptsv2paymentsProcessingInformationCardVerification
+        """
+        return self._card_verification
+
+    @card_verification.setter
+    def card_verification(self, card_verification):
+        """
+        Sets the card_verification of this Ptsv2paymentsProcessingInformation.
+
+        :param card_verification: The card_verification of this Ptsv2paymentsProcessingInformation.
+        :type: Ptsv2paymentsProcessingInformationCardVerification
+        """
+
+        self._card_verification = card_verification
 
     @property
     def capture_options(self):

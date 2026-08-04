@@ -152,7 +152,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     def payment_solution(self):
         """
         Gets the payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
-        Type of digital payment solution for the transaction. 
+        Type of digital payment solution for the transaction.  Note: After the upcoming service update, this field will return the applicable payment solution code for supported digital wallet transactions. 
 
         :return: The payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
         :rtype: str
@@ -163,7 +163,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     def payment_solution(self, payment_solution):
         """
         Sets the payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
-        Type of digital payment solution for the transaction. 
+        Type of digital payment solution for the transaction.  Note: After the upcoming service update, this field will return the applicable payment solution code for supported digital wallet transactions. 
 
         :param payment_solution: The payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
         :type: str

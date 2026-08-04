@@ -3,15 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**event_date** | **str** | Date that the webhook was delivered | [optional] 
-**event_type** | **str** | The event name the webhook was delivered for | [optional] 
-**organization_id** | **str** | The Organization Identifier. | [optional] 
-**payloads** | [**InlineResponse2017Payloads**](InlineResponse2017Payloads.md) |  | [optional] 
-**product_id** | **str** | The product the webhook was delivered for | [optional] 
-**request_type** | **str** | Identifies the the type of request | [optional] 
-**retry_number** | **int** | The number of retry attempts for a given webhook | [optional] 
-**transaction_trace_id** | **str** | The identifier for the webhook | [optional] 
-**webhook_id** | **str** | The identifier of the subscription | [optional] 
+**id** | **str** |  | [optional] 
+**submit_time_utc** | **datetime** | Time of request in UTC. &#x60;Format: YYYY-MM-DDThh:mm:ssZ&#x60;  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC.  | [optional] 
+**status** | **str** | The status of Registration request Possible Values:   - &#39;INITIALIZED&#39;   - &#39;RECEIVED&#39;   - &#39;PROCESSING&#39;   - &#39;SUCCESS&#39;   - &#39;FAILURE&#39;   - &#39;PARTIAL&#39;  | [optional] 
+**registration_information** | [**InlineResponse2017RegistrationInformation**](InlineResponse2017RegistrationInformation.md) |  | [optional] 
+**integration_information** | [**InlineResponse2017IntegrationInformation**](InlineResponse2017IntegrationInformation.md) |  | [optional] 
+**organization_information** | [**InlineResponse2017OrganizationInformation**](InlineResponse2017OrganizationInformation.md) |  | [optional] 
+**product_information_setups** | [**list[InlineResponse2017ProductInformationSetups]**](InlineResponse2017ProductInformationSetups.md) |  | [optional] 
+**message** | **str** |  | [optional] 
+**details** | **dict(str, list[object])** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

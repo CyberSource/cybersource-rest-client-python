@@ -173,7 +173,7 @@ class EMVTagDetailsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param Body body: (required)
+        :param Body2 body: (required)
         :return: TssV2PostEmvTags200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -202,7 +202,7 @@ class EMVTagDetailsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param Body body: (required)
+        :param Body2 body: (required)
         :return: TssV2PostEmvTags200Response
                  If the method is called asynchronously,
                  returns the request thread.

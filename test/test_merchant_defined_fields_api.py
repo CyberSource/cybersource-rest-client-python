@@ -38,11 +38,27 @@ class TestMerchantDefinedFieldsApi(unittest.TestCase):
         """
         pass
 
+    def test_create_pbl_merchant_defined_field_definition(self):
+        """
+        Test case for create_pbl_merchant_defined_field_definition
+
+        Create a PayByLink merchant defined field for a given reference type
+        """
+        pass
+
     def test_delete_merchant_defined_fields_definitions(self):
         """
         Test case for delete_merchant_defined_fields_definitions
 
         Delete a MerchantDefinedField by ID
+        """
+        pass
+
+    def test_delete_pbl_merchant_defined_fields_definitions(self):
+        """
+        Test case for delete_pbl_merchant_defined_fields_definitions
+
+        Delete a PayByLink MerchantDefinedField by ID
         """
         pass
 
@@ -54,11 +70,27 @@ class TestMerchantDefinedFieldsApi(unittest.TestCase):
         """
         pass
 
+    def test_get_pbl_merchant_defined_fields_definitions(self):
+        """
+        Test case for get_pbl_merchant_defined_fields_definitions
+
+        Get all PayByLink merchant defined fields for a given reference type
+        """
+        pass
+
     def test_put_merchant_defined_fields_definitions(self):
         """
         Test case for put_merchant_defined_fields_definitions
 
         Update a MerchantDefinedField by ID
+        """
+        pass
+
+    def test_put_pbl_merchant_defined_fields_definitions(self):
+        """
+        Test case for put_pbl_merchant_defined_fields_definitions
+
+        Update a PayByLink MerchantDefinedField by ID
         """
         pass
 

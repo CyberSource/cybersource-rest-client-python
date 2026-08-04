@@ -34,7 +34,7 @@ class InlineResponse2005IntegrationInformationTenantConfigurations(object):
         'tenant_configuration_id': 'str',
         'status': 'str',
         'submit_time_utc': 'datetime',
-        'tenant_information': 'Boardingv1registrationsIntegrationInformationTenantInformation'
+        'tenant_information': 'TenantInformation'
     }
 
     attribute_map = {
@@ -165,7 +165,7 @@ class InlineResponse2005IntegrationInformationTenantConfigurations(object):
         Gets the tenant_information of this InlineResponse2005IntegrationInformationTenantConfigurations.
 
         :return: The tenant_information of this InlineResponse2005IntegrationInformationTenantConfigurations.
-        :rtype: Boardingv1registrationsIntegrationInformationTenantInformation
+        :rtype: TenantInformation
         """
         return self._tenant_information
 
@@ -175,7 +175,7 @@ class InlineResponse2005IntegrationInformationTenantConfigurations(object):
         Sets the tenant_information of this InlineResponse2005IntegrationInformationTenantConfigurations.
 
         :param tenant_information: The tenant_information of this InlineResponse2005IntegrationInformationTenantConfigurations.
-        :type: Boardingv1registrationsIntegrationInformationTenantInformation
+        :type: TenantInformation
         """
 
         self._tenant_information = tenant_information

@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**submit_time_utc** | **str** | Time verification was requested  Format: &#x60;YYYY-MM-DDThhmmssZ&#x60;, where: - &#x60;T&#x60;:  Separates the date and the time - &#x60;Z&#x60;:  Indicates Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT)  Example:  &#x60;2020-01-11T224757Z&#x60; equals January 11, 2020, at 22:47:57 (10:47:57 p.m.)  | [optional] 
-**status** | **str** | Possible values:   - &#x60;INVALID_REQUEST&#x60;  | [optional] 
-**message** | **str** | The detail message related to the status and reason | [optional] 
-**reason** | **str** | The reason of the status.  Possible values:   - &#x60;INVALID_REQUEST&#x60;  | [optional] 
-**details** | [**list[InlineResponse40012Details]**](InlineResponse40012Details.md) |  | [optional] 
+**status** | **str** | The status of the submitted request.  Possible values: - BAD_REQUEST | [optional] 
+**message** | **str** | The detail message related to the status and reason listed above. | [optional] 
+**code** | **str** | An optional short string which identifies the exact error. | [optional] 
+**details** | [**list[InlineResponse40012Details]**](InlineResponse40012Details.md) | An optional array which provides more details of the error. | [optional] 
+**submit_time_utc** | **str** | Time of request in UTC. &#x60;Format: YYYY-MM-DDThh:mm:ssZ&#x60;  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -45,6 +45,268 @@ class AgentCapabilitiesApi(object):
 
 
 
+    def activate_agent_key(self, agent_id, key_id, **kwargs):
+        """
+        Activate a key
+        Activate a deactivated key. Raises 404 if agent or key not found, 403 if agent is deactivated.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.activate_agent_key(agent_id, key_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :param str key_id: Unique key identifier (required)
+        :return: AddAgentKeyResponse201
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `activate_agent_key` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.activate_agent_key_with_http_info(agent_id, key_id, **kwargs)
+        else:
+            (data) = self.activate_agent_key_with_http_info(agent_id, key_id, **kwargs)
+            return data
+
+    def activate_agent_key_with_http_info(self, agent_id, key_id, **kwargs):
+        """
+        Activate a key
+        Activate a deactivated key. Raises 404 if agent or key not found, 403 if agent is deactivated.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.activate_agent_key_with_http_info(agent_id, key_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :param str key_id: Unique key identifier (required)
+        :return: AddAgentKeyResponse201
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['agent_id', 'key_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method activate_agent_key" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'agent_id' is set
+        if ('agent_id' not in params) or (params['agent_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `agent_id` when calling `activate_agent_key`")
+            raise ValueError("Missing the required parameter `agent_id` when calling `activate_agent_key`")
+        # verify the required parameter 'key_id' is set
+        if ('key_id' not in params) or (params['key_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `key_id` when calling `activate_agent_key`")
+            raise ValueError("Missing the required parameter `key_id` when calling `activate_agent_key`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'agent_id' in params:
+            path_params['agentId'] = params['agent_id']
+            agentId=agent_id
+        if 'key_id' in params:
+            path_params['keyId'] = params['key_id']
+            keyId=key_id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        body_params = None
+        if 'POST' in ('POST'):
+            body_params = '{}'
+        
+        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
+        if file_post_body_and_delimiter is not None:
+            body_params = file_post_body_and_delimiter[0]
+            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+
+        inbound_mle_status = "mandatory"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "activate_agent_key,activate_agent_key_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "activate_agent_key,activate_agent_key_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/icc/v1/agents/{agentId}/keys/{keyId}/activate', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='AddAgentKeyResponse201',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
+    def add_agent_key(self, agent_id, key_request, **kwargs):
+        """
+        Add a key to an agent
+        [category 1 — Agent_Capabilities] Upload a Base64-encoded public key for an agent.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.add_agent_key(agent_id, key_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :param KeyRequest key_request: Key creation request (required)
+        :return: AddAgentKeyResponse201
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `add_agent_key` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.add_agent_key_with_http_info(agent_id, key_request, **kwargs)
+        else:
+            (data) = self.add_agent_key_with_http_info(agent_id, key_request, **kwargs)
+            return data
+
+    def add_agent_key_with_http_info(self, agent_id, key_request, **kwargs):
+        """
+        Add a key to an agent
+        [category 1 — Agent_Capabilities] Upload a Base64-encoded public key for an agent.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.add_agent_key_with_http_info(agent_id, key_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :param KeyRequest key_request: Key creation request (required)
+        :return: AddAgentKeyResponse201
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['agent_id', 'key_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method add_agent_key" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'agent_id' is set
+        if ('agent_id' not in params) or (params['agent_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `agent_id` when calling `add_agent_key`")
+            raise ValueError("Missing the required parameter `agent_id` when calling `add_agent_key`")
+        # verify the required parameter 'key_request' is set
+        if ('key_request' not in params) or (params['key_request'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `key_request` when calling `add_agent_key`")
+            raise ValueError("Missing the required parameter `key_request` when calling `add_agent_key`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'agent_id' in params:
+            path_params['agentId'] = params['agent_id']
+            agentId=agent_id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        body_params = None
+        if 'key_request' in params:
+            body_params = params['key_request']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'key_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = process_body(body_params)
+
+        inbound_mle_status = "mandatory"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "add_agent_key,add_agent_key_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "add_agent_key,add_agent_key_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/icc/v1/agents/{agentId}/keys', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='AddAgentKeyResponse201',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
     def cancel_purchase_intent(self, instruction_id, agentic_cancel_purchase_intent_request, **kwargs):
         """
         Cancel a purchase intent
@@ -303,6 +565,139 @@ class AgentCapabilitiesApi(object):
                                         collection_formats=collection_formats,
                                         isResponseMLEforApi=isResponseMLEforApi)
 
+    def deactivate_agent_key(self, agent_id, key_id, **kwargs):
+        """
+        Deactivate a key
+        Deactivate a key (soft delete). Raises 404 if key not found.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.deactivate_agent_key(agent_id, key_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :param str key_id: Unique key identifier (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `deactivate_agent_key` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.deactivate_agent_key_with_http_info(agent_id, key_id, **kwargs)
+        else:
+            (data) = self.deactivate_agent_key_with_http_info(agent_id, key_id, **kwargs)
+            return data
+
+    def deactivate_agent_key_with_http_info(self, agent_id, key_id, **kwargs):
+        """
+        Deactivate a key
+        Deactivate a key (soft delete). Raises 404 if key not found.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.deactivate_agent_key_with_http_info(agent_id, key_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :param str key_id: Unique key identifier (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['agent_id', 'key_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method deactivate_agent_key" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'agent_id' is set
+        if ('agent_id' not in params) or (params['agent_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `agent_id` when calling `deactivate_agent_key`")
+            raise ValueError("Missing the required parameter `agent_id` when calling `deactivate_agent_key`")
+        # verify the required parameter 'key_id' is set
+        if ('key_id' not in params) or (params['key_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `key_id` when calling `deactivate_agent_key`")
+            raise ValueError("Missing the required parameter `key_id` when calling `deactivate_agent_key`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'agent_id' in params:
+            path_params['agentId'] = params['agent_id']
+            agentId=agent_id
+        if 'key_id' in params:
+            path_params['keyId'] = params['key_id']
+            keyId=key_id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        body_params = None
+        if 'DELETE' in ('POST'):
+            body_params = '{}'
+        
+        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
+        if file_post_body_and_delimiter is not None:
+            body_params = file_post_body_and_delimiter[0]
+            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+
+        inbound_mle_status = "mandatory"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "deactivate_agent_key,deactivate_agent_key_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "deactivate_agent_key,deactivate_agent_key_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/icc/v1/agents/{agentId}/keys/{keyId}', 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
     def enroll_card(self, agentic_card_enrollment_request, **kwargs):
         """
         Enroll a card
@@ -423,6 +818,263 @@ class AgentCapabilitiesApi(object):
                                         collection_formats=collection_formats,
                                         isResponseMLEforApi=isResponseMLEforApi)
 
+    def get_agent(self, agent_id, **kwargs):
+        """
+        Get an agent
+        [category 1 — Agent_Capabilities] Get agent by ID with all keys. Raises 404 if agent not found.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_agent(agent_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :return: AgentRegistrationResponse201
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `get_agent` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_agent_with_http_info(agent_id, **kwargs)
+        else:
+            (data) = self.get_agent_with_http_info(agent_id, **kwargs)
+            return data
+
+    def get_agent_with_http_info(self, agent_id, **kwargs):
+        """
+        Get an agent
+        [category 1 — Agent_Capabilities] Get agent by ID with all keys. Raises 404 if agent not found.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_agent_with_http_info(agent_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :return: AgentRegistrationResponse201
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['agent_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_agent" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'agent_id' is set
+        if ('agent_id' not in params) or (params['agent_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `agent_id` when calling `get_agent`")
+            raise ValueError("Missing the required parameter `agent_id` when calling `get_agent`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'agent_id' in params:
+            path_params['agentId'] = params['agent_id']
+            agentId=agent_id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        body_params = None
+        if 'GET' in ('POST'):
+            body_params = '{}'
+        
+        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
+        if file_post_body_and_delimiter is not None:
+            body_params = file_post_body_and_delimiter[0]
+            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_agent,get_agent_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_agent,get_agent_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/icc/v1/agents/{agentId}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='AgentRegistrationResponse201',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
+    def get_agent_key(self, agent_id, key_id, **kwargs):
+        """
+        Get a key by agent and key ID
+        Get a specific key by agent ID and key ID. Raises 404 if key not found.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_agent_key(agent_id, key_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :param str key_id: Unique key identifier (required)
+        :return: AddAgentKeyResponse201
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `get_agent_key` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_agent_key_with_http_info(agent_id, key_id, **kwargs)
+        else:
+            (data) = self.get_agent_key_with_http_info(agent_id, key_id, **kwargs)
+            return data
+
+    def get_agent_key_with_http_info(self, agent_id, key_id, **kwargs):
+        """
+        Get a key by agent and key ID
+        Get a specific key by agent ID and key ID. Raises 404 if key not found.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_agent_key_with_http_info(agent_id, key_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :param str key_id: Unique key identifier (required)
+        :return: AddAgentKeyResponse201
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['agent_id', 'key_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_agent_key" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'agent_id' is set
+        if ('agent_id' not in params) or (params['agent_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `agent_id` when calling `get_agent_key`")
+            raise ValueError("Missing the required parameter `agent_id` when calling `get_agent_key`")
+        # verify the required parameter 'key_id' is set
+        if ('key_id' not in params) or (params['key_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `key_id` when calling `get_agent_key`")
+            raise ValueError("Missing the required parameter `key_id` when calling `get_agent_key`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'agent_id' in params:
+            path_params['agentId'] = params['agent_id']
+            agentId=agent_id
+        if 'key_id' in params:
+            path_params['keyId'] = params['key_id']
+            keyId=key_id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        body_params = None
+        if 'GET' in ('POST'):
+            body_params = '{}'
+        
+        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
+        if file_post_body_and_delimiter is not None:
+            body_params = file_post_body_and_delimiter[0]
+            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_agent_key,get_agent_key_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_agent_key,get_agent_key_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/icc/v1/agents/{agentId}/keys/{keyId}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='AddAgentKeyResponse201',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
     def initiate_purchase_intent(self, agentic_create_purchase_intent_request, **kwargs):
         """
         Initiate a purchase intent
@@ -535,6 +1187,258 @@ class AgentCapabilitiesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='AgenticCreatePurchaseIntentResponse200',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
+    def list_agent_keys(self, agent_id, **kwargs):
+        """
+        List keys for an agent
+        [category 1 — Agent_Capabilities] List all keys for a specific agent with pagination.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_agent_keys(agent_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :param int page: Page number (1-indexed)
+        :param int page_size: Items per page (max 100)
+        :return: ListAgentKeysResponse200
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `list_agent_keys` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.list_agent_keys_with_http_info(agent_id, **kwargs)
+        else:
+            (data) = self.list_agent_keys_with_http_info(agent_id, **kwargs)
+            return data
+
+    def list_agent_keys_with_http_info(self, agent_id, **kwargs):
+        """
+        List keys for an agent
+        [category 1 — Agent_Capabilities] List all keys for a specific agent with pagination.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_agent_keys_with_http_info(agent_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :param int page: Page number (1-indexed)
+        :param int page_size: Items per page (max 100)
+        :return: ListAgentKeysResponse200
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['agent_id', 'page', 'page_size']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method list_agent_keys" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'agent_id' is set
+        if ('agent_id' not in params) or (params['agent_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `agent_id` when calling `list_agent_keys`")
+            raise ValueError("Missing the required parameter `agent_id` when calling `list_agent_keys`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'agent_id' in params:
+            path_params['agentId'] = params['agent_id']
+            agentId=agent_id
+
+        query_params = []
+        if 'page' in params:
+            query_params.append(('page', params['page']))
+        if 'page_size' in params:
+            query_params.append(('pageSize', params['page_size']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        body_params = None
+        if 'GET' in ('POST'):
+            body_params = '{}'
+        
+        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
+        if file_post_body_and_delimiter is not None:
+            body_params = file_post_body_and_delimiter[0]
+            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "list_agent_keys,list_agent_keys_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "list_agent_keys,list_agent_keys_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/icc/v1/agents/{agentId}/keys', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='ListAgentKeysResponse200',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
+    def register_agent(self, agent_request, **kwargs):
+        """
+        Register an agent
+        Register a new AI agent in the VARS. Once registered, the agent can upload public keys that merchants and Visa services use to verify request signatures. Raises 409 if domain, contactEmail, or tokenRequestorId already exists.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.register_agent(agent_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param AgentRequest agent_request: Agent registration request (required)
+        :return: AgentRegistrationResponse201
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `register_agent` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.register_agent_with_http_info(agent_request, **kwargs)
+        else:
+            (data) = self.register_agent_with_http_info(agent_request, **kwargs)
+            return data
+
+    def register_agent_with_http_info(self, agent_request, **kwargs):
+        """
+        Register an agent
+        Register a new AI agent in the VARS. Once registered, the agent can upload public keys that merchants and Visa services use to verify request signatures. Raises 409 if domain, contactEmail, or tokenRequestorId already exists.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.register_agent_with_http_info(agent_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param AgentRequest agent_request: Agent registration request (required)
+        :return: AgentRegistrationResponse201
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['agent_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method register_agent" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'agent_request' is set
+        if ('agent_request' not in params) or (params['agent_request'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `agent_request` when calling `register_agent`")
+            raise ValueError("Missing the required parameter `agent_request` when calling `register_agent`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        body_params = None
+        if 'agent_request' in params:
+            body_params = params['agent_request']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'agent_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = process_body(body_params)
+
+        inbound_mle_status = "mandatory"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "register_agent,register_agent_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "register_agent,register_agent_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/icc/v1/agents', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='AgentRegistrationResponse201',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -664,6 +1568,273 @@ class AgentCapabilitiesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='AgenticRetrievePaymentCredentialsResponse200',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
+    def update_agent(self, agent_id, agent_update, **kwargs):
+        """
+        Update an agent
+        [category 1 — Agent_Capabilities] Update agent information. Updatable fields are name, domain, description, contactEmail, and agentMetadata. Extra fields (e.g. tokenRequestorId, keys) will return 422 Validation Error. Raises 404 if agent not found, 403 if agent is deactivated, 409 if new domain or contactEmail already exists.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_agent(agent_id, agent_update, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :param AgentUpdate agent_update: Agent update request (required)
+        :return: AgentRegistrationResponse201
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `update_agent` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_agent_with_http_info(agent_id, agent_update, **kwargs)
+        else:
+            (data) = self.update_agent_with_http_info(agent_id, agent_update, **kwargs)
+            return data
+
+    def update_agent_with_http_info(self, agent_id, agent_update, **kwargs):
+        """
+        Update an agent
+        [category 1 — Agent_Capabilities] Update agent information. Updatable fields are name, domain, description, contactEmail, and agentMetadata. Extra fields (e.g. tokenRequestorId, keys) will return 422 Validation Error. Raises 404 if agent not found, 403 if agent is deactivated, 409 if new domain or contactEmail already exists.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_agent_with_http_info(agent_id, agent_update, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :param AgentUpdate agent_update: Agent update request (required)
+        :return: AgentRegistrationResponse201
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['agent_id', 'agent_update']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_agent" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'agent_id' is set
+        if ('agent_id' not in params) or (params['agent_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `agent_id` when calling `update_agent`")
+            raise ValueError("Missing the required parameter `agent_id` when calling `update_agent`")
+        # verify the required parameter 'agent_update' is set
+        if ('agent_update' not in params) or (params['agent_update'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `agent_update` when calling `update_agent`")
+            raise ValueError("Missing the required parameter `agent_update` when calling `update_agent`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'agent_id' in params:
+            path_params['agentId'] = params['agent_id']
+            agentId=agent_id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        body_params = None
+        if 'agent_update' in params:
+            body_params = params['agent_update']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'agent_update', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = process_body(body_params)
+
+        inbound_mle_status = "mandatory"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "update_agent,update_agent_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "update_agent,update_agent_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/icc/v1/agents/{agentId}', 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='AgentRegistrationResponse201',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
+    def update_agent_key(self, agent_id, key_id, key_update, **kwargs):
+        """
+        Update a key
+        Update key information. Updatable fields are keyName, publicKey, algorithm, and expirationDate. Raises 404 if agent or key not found, 403 if agent or key is deactivated, 409 if new keyName already exists.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_agent_key(agent_id, key_id, key_update, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :param str key_id: Unique key identifier (required)
+        :param KeyUpdate key_update: Key update request (required)
+        :return: AddAgentKeyResponse201
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `update_agent_key` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_agent_key_with_http_info(agent_id, key_id, key_update, **kwargs)
+        else:
+            (data) = self.update_agent_key_with_http_info(agent_id, key_id, key_update, **kwargs)
+            return data
+
+    def update_agent_key_with_http_info(self, agent_id, key_id, key_update, **kwargs):
+        """
+        Update a key
+        Update key information. Updatable fields are keyName, publicKey, algorithm, and expirationDate. Raises 404 if agent or key not found, 403 if agent or key is deactivated, 409 if new keyName already exists.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_agent_key_with_http_info(agent_id, key_id, key_update, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str agent_id: Unique agent identifier (required)
+        :param str key_id: Unique key identifier (required)
+        :param KeyUpdate key_update: Key update request (required)
+        :return: AddAgentKeyResponse201
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['agent_id', 'key_id', 'key_update']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_agent_key" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'agent_id' is set
+        if ('agent_id' not in params) or (params['agent_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `agent_id` when calling `update_agent_key`")
+            raise ValueError("Missing the required parameter `agent_id` when calling `update_agent_key`")
+        # verify the required parameter 'key_id' is set
+        if ('key_id' not in params) or (params['key_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `key_id` when calling `update_agent_key`")
+            raise ValueError("Missing the required parameter `key_id` when calling `update_agent_key`")
+        # verify the required parameter 'key_update' is set
+        if ('key_update' not in params) or (params['key_update'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `key_update` when calling `update_agent_key`")
+            raise ValueError("Missing the required parameter `key_update` when calling `update_agent_key`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'agent_id' in params:
+            path_params['agentId'] = params['agent_id']
+            agentId=agent_id
+        if 'key_id' in params:
+            path_params['keyId'] = params['key_id']
+            keyId=key_id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        body_params = None
+        if 'key_update' in params:
+            body_params = params['key_update']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'key_update', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = process_body(body_params)
+
+        inbound_mle_status = "mandatory"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "update_agent_key,update_agent_key_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "update_agent_key,update_agent_key_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/icc/v1/agents/{agentId}/keys/{keyId}', 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='AddAgentKeyResponse201',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

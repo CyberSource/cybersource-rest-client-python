@@ -30,21 +30,41 @@ class Iplv2paymentlinksPurchaseInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'purchase_number': 'str'
+        'purchase_number': 'str',
+        'transaction_reference_number': 'str',
+        'expiration_date': 'date',
+        'expiration_amount': 'str',
+        'expiration_quantity': 'str'
     }
 
     attribute_map = {
-        'purchase_number': 'purchaseNumber'
+        'purchase_number': 'purchaseNumber',
+        'transaction_reference_number': 'transactionReferenceNumber',
+        'expiration_date': 'expirationDate',
+        'expiration_amount': 'expirationAmount',
+        'expiration_quantity': 'expirationQuantity'
     }
 
-    def __init__(self, purchase_number=None):
+    def __init__(self, purchase_number=None, transaction_reference_number=None, expiration_date=None, expiration_amount=None, expiration_quantity=None):
         """
         Iplv2paymentlinksPurchaseInformation - a model defined in Swagger
         """
 
         self._purchase_number = None
+        self._transaction_reference_number = None
+        self._expiration_date = None
+        self._expiration_amount = None
+        self._expiration_quantity = None
 
         self.purchase_number = purchase_number
+        if transaction_reference_number is not None:
+          self.transaction_reference_number = transaction_reference_number
+        if expiration_date is not None:
+          self.expiration_date = expiration_date
+        if expiration_amount is not None:
+          self.expiration_amount = expiration_amount
+        if expiration_quantity is not None:
+          self.expiration_quantity = expiration_quantity
 
     @property
     def purchase_number(self):
@@ -68,6 +88,98 @@ class Iplv2paymentlinksPurchaseInformation(object):
         """
 
         self._purchase_number = purchase_number
+
+    @property
+    def transaction_reference_number(self):
+        """
+        Gets the transaction_reference_number of this Iplv2paymentlinksPurchaseInformation.
+        The transaction reference number (TRN) is a identifier assigned to each payment transaction that allows merchants, customers, and payment processors to track and reference specific transactions throughout their lifecycle.  When provided, this value is passed to the payment processor as the reconciliation ID for the payment. For invoices this is typically the invoice number, and for purchase or donation links it is typically the link identifier.  Only letters and numbers are allowed; spaces and other special characters are not permitted. 
+
+        :return: The transaction_reference_number of this Iplv2paymentlinksPurchaseInformation.
+        :rtype: str
+        """
+        return self._transaction_reference_number
+
+    @transaction_reference_number.setter
+    def transaction_reference_number(self, transaction_reference_number):
+        """
+        Sets the transaction_reference_number of this Iplv2paymentlinksPurchaseInformation.
+        The transaction reference number (TRN) is a identifier assigned to each payment transaction that allows merchants, customers, and payment processors to track and reference specific transactions throughout their lifecycle.  When provided, this value is passed to the payment processor as the reconciliation ID for the payment. For invoices this is typically the invoice number, and for purchase or donation links it is typically the link identifier.  Only letters and numbers are allowed; spaces and other special characters are not permitted. 
+
+        :param transaction_reference_number: The transaction_reference_number of this Iplv2paymentlinksPurchaseInformation.
+        :type: str
+        """
+
+        self._transaction_reference_number = transaction_reference_number
+
+    @property
+    def expiration_date(self):
+        """
+        Gets the expiration_date of this Iplv2paymentlinksPurchaseInformation.
+        Define an expiration date for the link.  The date must be today or in the future.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day.  The invoice link automatically expires 12 months after the due date. 
+
+        :return: The expiration_date of this Iplv2paymentlinksPurchaseInformation.
+        :rtype: date
+        """
+        return self._expiration_date
+
+    @expiration_date.setter
+    def expiration_date(self, expiration_date):
+        """
+        Sets the expiration_date of this Iplv2paymentlinksPurchaseInformation.
+        Define an expiration date for the link.  The date must be today or in the future.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day.  The invoice link automatically expires 12 months after the due date. 
+
+        :param expiration_date: The expiration_date of this Iplv2paymentlinksPurchaseInformation.
+        :type: date
+        """
+
+        self._expiration_date = expiration_date
+
+    @property
+    def expiration_amount(self):
+        """
+        Gets the expiration_amount of this Iplv2paymentlinksPurchaseInformation.
+        Define an expiry amount for the link.  Must be null or greater than 0.  If the total price of all transactions for this link exceeds the expiry amount, the link will expire. 
+
+        :return: The expiration_amount of this Iplv2paymentlinksPurchaseInformation.
+        :rtype: str
+        """
+        return self._expiration_amount
+
+    @expiration_amount.setter
+    def expiration_amount(self, expiration_amount):
+        """
+        Sets the expiration_amount of this Iplv2paymentlinksPurchaseInformation.
+        Define an expiry amount for the link.  Must be null or greater than 0.  If the total price of all transactions for this link exceeds the expiry amount, the link will expire. 
+
+        :param expiration_amount: The expiration_amount of this Iplv2paymentlinksPurchaseInformation.
+        :type: str
+        """
+
+        self._expiration_amount = expiration_amount
+
+    @property
+    def expiration_quantity(self):
+        """
+        Gets the expiration_quantity of this Iplv2paymentlinksPurchaseInformation.
+        Define an expiration quantity for the link.  Must be null or greater than 0.  If the total quantity of items sold exceeds the expiration quantity, the link is expired. 
+
+        :return: The expiration_quantity of this Iplv2paymentlinksPurchaseInformation.
+        :rtype: str
+        """
+        return self._expiration_quantity
+
+    @expiration_quantity.setter
+    def expiration_quantity(self, expiration_quantity):
+        """
+        Sets the expiration_quantity of this Iplv2paymentlinksPurchaseInformation.
+        Define an expiration quantity for the link.  Must be null or greater than 0.  If the total quantity of items sold exceeds the expiration quantity, the link is expired. 
+
+        :param expiration_quantity: The expiration_quantity of this Iplv2paymentlinksPurchaseInformation.
+        :type: str
+        """
+
+        self._expiration_quantity = expiration_quantity
 
     def to_dict(self):
         """

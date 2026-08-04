@@ -34,7 +34,8 @@ class UpdatePaymentLinkRequest(object):
         'client_reference_information': 'Invoicingv2invoicesClientReferenceInformation',
         'processing_information': 'Iplv2paymentlinksidProcessingInformation',
         'purchase_information': 'Iplv2paymentlinksidPurchaseInformation',
-        'order_information': 'Iplv2paymentlinksidOrderInformation'
+        'order_information': 'Iplv2paymentlinksidOrderInformation',
+        'merchant_defined_field_values': 'list[Invoicingv2invoicesMerchantDefinedFieldValues]'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class UpdatePaymentLinkRequest(object):
         'client_reference_information': 'clientReferenceInformation',
         'processing_information': 'processingInformation',
         'purchase_information': 'purchaseInformation',
-        'order_information': 'orderInformation'
+        'order_information': 'orderInformation',
+        'merchant_defined_field_values': 'merchantDefinedFieldValues'
     }
 
-    def __init__(self, status=None, client_reference_information=None, processing_information=None, purchase_information=None, order_information=None):
+    def __init__(self, status=None, client_reference_information=None, processing_information=None, purchase_information=None, order_information=None, merchant_defined_field_values=None):
         """
         UpdatePaymentLinkRequest - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class UpdatePaymentLinkRequest(object):
         self._processing_information = None
         self._purchase_information = None
         self._order_information = None
+        self._merchant_defined_field_values = None
 
         if status is not None:
           self.status = status
@@ -66,6 +69,8 @@ class UpdatePaymentLinkRequest(object):
           self.purchase_information = purchase_information
         if order_information is not None:
           self.order_information = order_information
+        if merchant_defined_field_values is not None:
+          self.merchant_defined_field_values = merchant_defined_field_values
 
     @property
     def status(self):
@@ -173,6 +178,27 @@ class UpdatePaymentLinkRequest(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def merchant_defined_field_values(self):
+        """
+        Gets the merchant_defined_field_values of this UpdatePaymentLinkRequest.
+
+        :return: The merchant_defined_field_values of this UpdatePaymentLinkRequest.
+        :rtype: list[Invoicingv2invoicesMerchantDefinedFieldValues]
+        """
+        return self._merchant_defined_field_values
+
+    @merchant_defined_field_values.setter
+    def merchant_defined_field_values(self, merchant_defined_field_values):
+        """
+        Sets the merchant_defined_field_values of this UpdatePaymentLinkRequest.
+
+        :param merchant_defined_field_values: The merchant_defined_field_values of this UpdatePaymentLinkRequest.
+        :type: list[Invoicingv2invoicesMerchantDefinedFieldValues]
+        """
+
+        self._merchant_defined_field_values = merchant_defined_field_values
 
     def to_dict(self):
         """

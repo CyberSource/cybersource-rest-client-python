@@ -117,7 +117,7 @@ class InlineResponse4005(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse4005.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE  - INVALID_FOLLOW_ON_TRANSACTION_STATUS 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION 
 
         :return: The reason of this InlineResponse4005.
         :rtype: str
@@ -128,7 +128,7 @@ class InlineResponse4005(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse4005.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE  - INVALID_FOLLOW_ON_TRANSACTION_STATUS 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION 
 
         :param reason: The reason of this InlineResponse4005.
         :type: str

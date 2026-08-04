@@ -427,7 +427,7 @@ class NetworkTokensApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_issuer_life_cycle_simulation_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        inbound_mle_status = "false"
+        inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_issuer_life_cycle_simulation,post_issuer_life_cycle_simulation_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
@@ -858,7 +858,7 @@ class NetworkTokensApi(object):
             for asynchronous request. (optional)
         :param str tokenized_card_id: The Id of a tokenized card. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :param TmsTokenizedCardDeleteRequest post_tokenized_card_delete_request:
+        :param PostTokenizedCardDeleteRequest post_tokenized_card_delete_request:
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -889,7 +889,7 @@ class NetworkTokensApi(object):
             for asynchronous request. (optional)
         :param str tokenized_card_id: The Id of a tokenized card. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :param TmsTokenizedCardDeleteRequest post_tokenized_card_delete_request:
+        :param PostTokenizedCardDeleteRequest post_tokenized_card_delete_request:
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.

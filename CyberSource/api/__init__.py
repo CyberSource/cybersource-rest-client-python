@@ -4,6 +4,7 @@ from __future__ import absolute_import
 from .o_auth_api import OAuthApi
 from .batch_upload_with_mtls_api import BatchUploadWithMTLSApi
 from .agent_capabilities_api import AgentCapabilitiesApi
+from .agent_capabilities_api import AgentCapabilitiesApi
 from .batches_api import BatchesApi
 from .bin_lookup_api import BinLookupApi
 from .chargeback_details_api import ChargebackDetailsApi
@@ -21,12 +22,15 @@ from .download_dtd_api import DownloadDTDApi
 from .download_xsd_api import DownloadXSDApi
 from .emv_tag_details_api import EMVTagDetailsApi
 from .flex_api_api import FlexAPIApi
+from .foreign_exchange_rates_api import ForeignExchangeRatesApi
 from .instrument_identifier_api import InstrumentIdentifierApi
 from .interchange_clearing_level_details_api import InterchangeClearingLevelDetailsApi
 from .invoice_settings_api import InvoiceSettingsApi
 from .invoices_api import InvoicesApi
 from .manage_webhooks_api import ManageWebhooksApi
+from .merchant_capabilities_api import MerchantCapabilitiesApi
 from .merchant_boarding_api import MerchantBoardingApi
+from .merchant_capabilities_api import MerchantCapabilitiesApi
 from .merchant_defined_fields_api import MerchantDefinedFieldsApi
 from .microform_integration_api import MicroformIntegrationApi
 from .net_fundings_api import NetFundingsApi
@@ -55,6 +59,8 @@ from .subscriptions_follow_ons_api import SubscriptionsFollowOnsApi
 from .tokenize_api import TokenizeApi
 from .transaction_batches_api import TransactionBatchesApi
 from .transaction_details_api import TransactionDetailsApi
+from .transaction_query_api import TransactionQueryApi
+from .transaction_risk_labeling_api import TransactionRiskLabelingApi
 from .transient_token_data_v2_api import TransientTokenDataV2Api
 from .unified_checkout_capture_context_api import UnifiedCheckoutCaptureContextApi
 from .unified_checkout_v1_capture_context_api import UnifiedCheckoutV1CaptureContextApi

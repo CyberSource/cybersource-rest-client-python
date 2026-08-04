@@ -31,26 +31,36 @@ class InlineResponse2018(object):
     """
     swagger_types = {
         'submit_time_utc': 'str',
-        'status': 'str'
+        'status': 'str',
+        'client_reference_information': 'Kmsegressv2keyssymClientReferenceInformation',
+        'key_information': 'InlineResponse2018KeyInformation'
     }
 
     attribute_map = {
         'submit_time_utc': 'submitTimeUtc',
-        'status': 'status'
+        'status': 'status',
+        'client_reference_information': 'clientReferenceInformation',
+        'key_information': 'keyInformation'
     }
 
-    def __init__(self, submit_time_utc=None, status=None):
+    def __init__(self, submit_time_utc=None, status=None, client_reference_information=None, key_information=None):
         """
         InlineResponse2018 - a model defined in Swagger
         """
 
         self._submit_time_utc = None
         self._status = None
+        self._client_reference_information = None
+        self._key_information = None
 
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
         if status is not None:
           self.status = status
+        if client_reference_information is not None:
+          self.client_reference_information = client_reference_information
+        if key_information is not None:
+          self.key_information = key_information
 
     @property
     def submit_time_utc(self):
@@ -97,6 +107,48 @@ class InlineResponse2018(object):
         """
 
         self._status = status
+
+    @property
+    def client_reference_information(self):
+        """
+        Gets the client_reference_information of this InlineResponse2018.
+
+        :return: The client_reference_information of this InlineResponse2018.
+        :rtype: Kmsegressv2keyssymClientReferenceInformation
+        """
+        return self._client_reference_information
+
+    @client_reference_information.setter
+    def client_reference_information(self, client_reference_information):
+        """
+        Sets the client_reference_information of this InlineResponse2018.
+
+        :param client_reference_information: The client_reference_information of this InlineResponse2018.
+        :type: Kmsegressv2keyssymClientReferenceInformation
+        """
+
+        self._client_reference_information = client_reference_information
+
+    @property
+    def key_information(self):
+        """
+        Gets the key_information of this InlineResponse2018.
+
+        :return: The key_information of this InlineResponse2018.
+        :rtype: InlineResponse2018KeyInformation
+        """
+        return self._key_information
+
+    @key_information.setter
+    def key_information(self, key_information):
+        """
+        Sets the key_information of this InlineResponse2018.
+
+        :param key_information: The key_information of this InlineResponse2018.
+        :type: InlineResponse2018KeyInformation
+        """
+
+        self._key_information = key_information
 
     def to_dict(self):
         """

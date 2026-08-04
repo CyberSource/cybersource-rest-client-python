@@ -30,66 +30,94 @@ class InlineResponse5022(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
+        'id': 'str',
+        'submit_time_stamp_utc': 'str',
         'status': 'str',
-        'message': 'str',
-        'reason': 'str'
+        'reason': 'str',
+        'message': 'str'
     }
 
     attribute_map = {
-        'submit_time_utc': 'submitTimeUtc',
+        'id': 'id',
+        'submit_time_stamp_utc': 'submitTimeStampUtc',
         'status': 'status',
-        'message': 'message',
-        'reason': 'reason'
+        'reason': 'reason',
+        'message': 'message'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, message=None, reason=None):
+    def __init__(self, id=None, submit_time_stamp_utc=None, status=None, reason=None, message=None):
         """
         InlineResponse5022 - a model defined in Swagger
         """
 
-        self._submit_time_utc = None
+        self._id = None
+        self._submit_time_stamp_utc = None
         self._status = None
-        self._message = None
         self._reason = None
+        self._message = None
 
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
+        if id is not None:
+          self.id = id
+        if submit_time_stamp_utc is not None:
+          self.submit_time_stamp_utc = submit_time_stamp_utc
         if status is not None:
           self.status = status
-        if message is not None:
-          self.message = message
         if reason is not None:
           self.reason = reason
+        if message is not None:
+          self.message = message
 
     @property
-    def submit_time_utc(self):
+    def id(self):
         """
-        Gets the submit_time_utc of this InlineResponse5022.
-        Time verification was requested  Format: `YYYY-MM-DDThhmmssZ`, where: - `T`:  Separates the date and the time - `Z`:  Indicates Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT)  Example:  `2020-01-11T224757Z` equals January 11, 2020, at 22:47:57 (10:47:57 p.m.) 
+        Gets the id of this InlineResponse5022.
+        A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource. 
 
-        :return: The submit_time_utc of this InlineResponse5022.
+        :return: The id of this InlineResponse5022.
         :rtype: str
         """
-        return self._submit_time_utc
+        return self._id
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @id.setter
+    def id(self, id):
         """
-        Sets the submit_time_utc of this InlineResponse5022.
-        Time verification was requested  Format: `YYYY-MM-DDThhmmssZ`, where: - `T`:  Separates the date and the time - `Z`:  Indicates Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT)  Example:  `2020-01-11T224757Z` equals January 11, 2020, at 22:47:57 (10:47:57 p.m.) 
+        Sets the id of this InlineResponse5022.
+        A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource. 
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse5022.
+        :param id: The id of this InlineResponse5022.
         :type: str
         """
 
-        self._submit_time_utc = submit_time_utc
+        self._id = id
+
+    @property
+    def submit_time_stamp_utc(self):
+        """
+        Gets the submit_time_stamp_utc of this InlineResponse5022.
+        Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :return: The submit_time_stamp_utc of this InlineResponse5022.
+        :rtype: str
+        """
+        return self._submit_time_stamp_utc
+
+    @submit_time_stamp_utc.setter
+    def submit_time_stamp_utc(self, submit_time_stamp_utc):
+        """
+        Sets the submit_time_stamp_utc of this InlineResponse5022.
+        Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :param submit_time_stamp_utc: The submit_time_stamp_utc of this InlineResponse5022.
+        :type: str
+        """
+
+        self._submit_time_stamp_utc = submit_time_stamp_utc
 
     @property
     def status(self):
         """
         Gets the status of this InlineResponse5022.
-        The status of the submitted transaction. Possible values:   - `SERVER_ERROR` 
+        Possible values: - SERVER_ERROR 
 
         :return: The status of this InlineResponse5022.
         :rtype: str
@@ -100,7 +128,7 @@ class InlineResponse5022(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse5022.
-        The status of the submitted transaction. Possible values:   - `SERVER_ERROR` 
+        Possible values: - SERVER_ERROR 
 
         :param status: The status of this InlineResponse5022.
         :type: str
@@ -109,33 +137,10 @@ class InlineResponse5022(object):
         self._status = status
 
     @property
-    def message(self):
-        """
-        Gets the message of this InlineResponse5022.
-        The detail message related to the status and reason
-
-        :return: The message of this InlineResponse5022.
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """
-        Sets the message of this InlineResponse5022.
-        The detail message related to the status and reason
-
-        :param message: The message of this InlineResponse5022.
-        :type: str
-        """
-
-        self._message = message
-
-    @property
     def reason(self):
         """
         Gets the reason of this InlineResponse5022.
-        The reason of the status.  Possible values:   - `SYSTEM_ERROR`   - `SERVER_TIMEOUT`   - `SERVICE_TIMEOUT` 
+        The reason of the status.  Possible values: - SYSTEM_ERROR 
 
         :return: The reason of this InlineResponse5022.
         :rtype: str
@@ -146,13 +151,36 @@ class InlineResponse5022(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse5022.
-        The reason of the status.  Possible values:   - `SYSTEM_ERROR`   - `SERVER_TIMEOUT`   - `SERVICE_TIMEOUT` 
+        The reason of the status.  Possible values: - SYSTEM_ERROR 
 
         :param reason: The reason of this InlineResponse5022.
         :type: str
         """
 
         self._reason = reason
+
+    @property
+    def message(self):
+        """
+        Gets the message of this InlineResponse5022.
+        The detail message related to the status and reason listed above. 
+
+        :return: The message of this InlineResponse5022.
+        :rtype: str
+        """
+        return self._message
+
+    @message.setter
+    def message(self, message):
+        """
+        Sets the message of this InlineResponse5022.
+        The detail message related to the status and reason listed above. 
+
+        :param message: The message of this InlineResponse5022.
+        :type: str
+        """
+
+        self._message = message
 
     def to_dict(self):
         """

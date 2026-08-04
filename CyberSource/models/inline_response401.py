@@ -30,66 +30,112 @@ class InlineResponse401(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'status': 'str',
-        'message': 'str',
-        'code': 'str',
-        'submit_time_utc': 'str'
+        'id': 'str',
+        'submit_time_stamp_utc': 'str',
+        'reason': 'str',
+        'message': 'str'
     }
 
     attribute_map = {
-        'status': 'status',
-        'message': 'message',
-        'code': 'code',
-        'submit_time_utc': 'submitTimeUtc'
+        'id': 'id',
+        'submit_time_stamp_utc': 'submitTimeStampUtc',
+        'reason': 'reason',
+        'message': 'message'
     }
 
-    def __init__(self, status=None, message=None, code=None, submit_time_utc=None):
+    def __init__(self, id=None, submit_time_stamp_utc=None, reason=None, message=None):
         """
         InlineResponse401 - a model defined in Swagger
         """
 
-        self._status = None
+        self._id = None
+        self._submit_time_stamp_utc = None
+        self._reason = None
         self._message = None
-        self._code = None
-        self._submit_time_utc = None
 
-        if status is not None:
-          self.status = status
+        if id is not None:
+          self.id = id
+        if submit_time_stamp_utc is not None:
+          self.submit_time_stamp_utc = submit_time_stamp_utc
+        if reason is not None:
+          self.reason = reason
         if message is not None:
           self.message = message
-        if code is not None:
-          self.code = code
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
 
     @property
-    def status(self):
+    def id(self):
         """
-        Gets the status of this InlineResponse401.
-        The status of the submitted request.   Possible values: - UNAUTHORIZED
+        Gets the id of this InlineResponse401.
+        A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource. 
 
-        :return: The status of this InlineResponse401.
+        :return: The id of this InlineResponse401.
         :rtype: str
         """
-        return self._status
+        return self._id
 
-    @status.setter
-    def status(self, status):
+    @id.setter
+    def id(self, id):
         """
-        Sets the status of this InlineResponse401.
-        The status of the submitted request.   Possible values: - UNAUTHORIZED
+        Sets the id of this InlineResponse401.
+        A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource. 
 
-        :param status: The status of this InlineResponse401.
+        :param id: The id of this InlineResponse401.
         :type: str
         """
 
-        self._status = status
+        self._id = id
+
+    @property
+    def submit_time_stamp_utc(self):
+        """
+        Gets the submit_time_stamp_utc of this InlineResponse401.
+        Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :return: The submit_time_stamp_utc of this InlineResponse401.
+        :rtype: str
+        """
+        return self._submit_time_stamp_utc
+
+    @submit_time_stamp_utc.setter
+    def submit_time_stamp_utc(self, submit_time_stamp_utc):
+        """
+        Sets the submit_time_stamp_utc of this InlineResponse401.
+        Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :param submit_time_stamp_utc: The submit_time_stamp_utc of this InlineResponse401.
+        :type: str
+        """
+
+        self._submit_time_stamp_utc = submit_time_stamp_utc
+
+    @property
+    def reason(self):
+        """
+        Gets the reason of this InlineResponse401.
+        The reason of the status.  Possible values: - UNAUTHORIZED 
+
+        :return: The reason of this InlineResponse401.
+        :rtype: str
+        """
+        return self._reason
+
+    @reason.setter
+    def reason(self, reason):
+        """
+        Sets the reason of this InlineResponse401.
+        The reason of the status.  Possible values: - UNAUTHORIZED 
+
+        :param reason: The reason of this InlineResponse401.
+        :type: str
+        """
+
+        self._reason = reason
 
     @property
     def message(self):
         """
         Gets the message of this InlineResponse401.
-        The detail message related to the status and reason listed above.
+        The detail message related to the status and reason listed above. 
 
         :return: The message of this InlineResponse401.
         :rtype: str
@@ -100,59 +146,13 @@ class InlineResponse401(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse401.
-        The detail message related to the status and reason listed above.
+        The detail message related to the status and reason listed above. 
 
         :param message: The message of this InlineResponse401.
         :type: str
         """
 
         self._message = message
-
-    @property
-    def code(self):
-        """
-        Gets the code of this InlineResponse401.
-        An optional short string which identifies the exact error.
-
-        :return: The code of this InlineResponse401.
-        :rtype: str
-        """
-        return self._code
-
-    @code.setter
-    def code(self, code):
-        """
-        Sets the code of this InlineResponse401.
-        An optional short string which identifies the exact error.
-
-        :param code: The code of this InlineResponse401.
-        :type: str
-        """
-
-        self._code = code
-
-    @property
-    def submit_time_utc(self):
-        """
-        Gets the submit_time_utc of this InlineResponse401.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :return: The submit_time_utc of this InlineResponse401.
-        :rtype: str
-        """
-        return self._submit_time_utc
-
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
-        """
-        Sets the submit_time_utc of this InlineResponse401.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :param submit_time_utc: The submit_time_utc of this InlineResponse401.
-        :type: str
-        """
-
-        self._submit_time_utc = submit_time_utc
 
     def to_dict(self):
         """

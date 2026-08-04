@@ -69,7 +69,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.EMVTagDetailsApi()
-body = CyberSource.Body() # Body | 
+body = CyberSource.Body2() # Body2 | 
 
 try: 
     # Parse an EMV String
@@ -83,7 +83,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body**](Body.md)|  | 
+ **body** | [**Body2**](Body2.md)|  | 
 
 ### Return type
 

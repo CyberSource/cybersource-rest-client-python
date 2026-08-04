@@ -172,6 +172,135 @@ class MerchantDefinedFieldsApi(object):
                                         collection_formats=collection_formats,
                                         isResponseMLEforApi=isResponseMLEforApi)
 
+    def create_pbl_merchant_defined_field_definition(self, reference_type, merchant_defined_field_definition_request, **kwargs):
+        """
+        Create a PayByLink merchant defined field for a given reference type
+        Creates a merchant defined field for the given reference type (`Purchase` or `Donation`). The field type is independent of the reference type: both `Purchase` and `Donation` support both `Text` and `Select` fields. Set `fieldType` to `Text` or `Select` accordingly. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_pbl_merchant_defined_field_definition(reference_type, merchant_defined_field_definition_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str reference_type: The reference type for which the merchant defined field is to be created. Available values are Purchase and Donation (required)
+        :param MerchantDefinedFieldDefinitionRequest1 merchant_defined_field_definition_request: (required)
+        :return: list[InlineResponse2004]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `create_pbl_merchant_defined_field_definition` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_pbl_merchant_defined_field_definition_with_http_info(reference_type, merchant_defined_field_definition_request, **kwargs)
+        else:
+            (data) = self.create_pbl_merchant_defined_field_definition_with_http_info(reference_type, merchant_defined_field_definition_request, **kwargs)
+            return data
+
+    def create_pbl_merchant_defined_field_definition_with_http_info(self, reference_type, merchant_defined_field_definition_request, **kwargs):
+        """
+        Create a PayByLink merchant defined field for a given reference type
+        Creates a merchant defined field for the given reference type (`Purchase` or `Donation`). The field type is independent of the reference type: both `Purchase` and `Donation` support both `Text` and `Select` fields. Set `fieldType` to `Text` or `Select` accordingly. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_pbl_merchant_defined_field_definition_with_http_info(reference_type, merchant_defined_field_definition_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str reference_type: The reference type for which the merchant defined field is to be created. Available values are Purchase and Donation (required)
+        :param MerchantDefinedFieldDefinitionRequest1 merchant_defined_field_definition_request: (required)
+        :return: list[InlineResponse2004]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['reference_type', 'merchant_defined_field_definition_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_pbl_merchant_defined_field_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'reference_type' is set
+        if ('reference_type' not in params) or (params['reference_type'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `reference_type` when calling `create_pbl_merchant_defined_field_definition`")
+            raise ValueError("Missing the required parameter `reference_type` when calling `create_pbl_merchant_defined_field_definition`")
+        # verify the required parameter 'merchant_defined_field_definition_request' is set
+        if ('merchant_defined_field_definition_request' not in params) or (params['merchant_defined_field_definition_request'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `merchant_defined_field_definition_request` when calling `create_pbl_merchant_defined_field_definition`")
+            raise ValueError("Missing the required parameter `merchant_defined_field_definition_request` when calling `create_pbl_merchant_defined_field_definition`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'reference_type' in params:
+            path_params['referenceType'] = params['reference_type']
+            referenceType=reference_type
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json'])
+
+        body_params = None
+        if 'merchant_defined_field_definition_request' in params:
+            body_params = params['merchant_defined_field_definition_request']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'merchant_defined_field_definition_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = process_body(body_params)
+
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_pbl_merchant_defined_field_definition,create_pbl_merchant_defined_field_definition_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_pbl_merchant_defined_field_definition,create_pbl_merchant_defined_field_definition_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/ipl/v2/{referenceType}/merchantDefinedFields', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='list[InlineResponse2004]',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
     def delete_merchant_defined_fields_definitions(self, reference_type, id, **kwargs):
         """
         Delete a MerchantDefinedField by ID
@@ -288,6 +417,137 @@ class MerchantDefinedFieldsApi(object):
         auth_settings = []
 
         return self.api_client.call_api(f'/invoicing/v2/{referenceType}/merchantDefinedFields/{id}', 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
+    def delete_pbl_merchant_defined_fields_definitions(self, reference_type, id, **kwargs):
+        """
+        Delete a PayByLink MerchantDefinedField by ID
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_pbl_merchant_defined_fields_definitions(reference_type, id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str reference_type: (required)
+        :param int id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `delete_pbl_merchant_defined_fields_definitions` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_pbl_merchant_defined_fields_definitions_with_http_info(reference_type, id, **kwargs)
+        else:
+            (data) = self.delete_pbl_merchant_defined_fields_definitions_with_http_info(reference_type, id, **kwargs)
+            return data
+
+    def delete_pbl_merchant_defined_fields_definitions_with_http_info(self, reference_type, id, **kwargs):
+        """
+        Delete a PayByLink MerchantDefinedField by ID
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_pbl_merchant_defined_fields_definitions_with_http_info(reference_type, id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str reference_type: (required)
+        :param int id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['reference_type', 'id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_pbl_merchant_defined_fields_definitions" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'reference_type' is set
+        if ('reference_type' not in params) or (params['reference_type'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `reference_type` when calling `delete_pbl_merchant_defined_fields_definitions`")
+            raise ValueError("Missing the required parameter `reference_type` when calling `delete_pbl_merchant_defined_fields_definitions`")
+        # verify the required parameter 'id' is set
+        if ('id' not in params) or (params['id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `delete_pbl_merchant_defined_fields_definitions`")
+            raise ValueError("Missing the required parameter `id` when calling `delete_pbl_merchant_defined_fields_definitions`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'reference_type' in params:
+            path_params['referenceType'] = params['reference_type']
+            referenceType=reference_type
+        if 'id' in params:
+            path_params['id'] = params['id']
+            id=id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        body_params = None
+        if 'DELETE' in ('POST'):
+            body_params = '{}'
+        
+        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
+        if file_post_body_and_delimiter is not None:
+            body_params = file_post_body_and_delimiter[0]
+            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "delete_pbl_merchant_defined_fields_definitions,delete_pbl_merchant_defined_fields_definitions_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "delete_pbl_merchant_defined_fields_definitions,delete_pbl_merchant_defined_fields_definitions_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/ipl/v2/{referenceType}/merchantDefinedFields/{id}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -425,6 +685,128 @@ class MerchantDefinedFieldsApi(object):
                                         collection_formats=collection_formats,
                                         isResponseMLEforApi=isResponseMLEforApi)
 
+    def get_pbl_merchant_defined_fields_definitions(self, reference_type, **kwargs):
+        """
+        Get all PayByLink merchant defined fields for a given reference type
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_pbl_merchant_defined_fields_definitions(reference_type, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str reference_type: The reference type for which merchant defined fields are to be fetched. Available values are Purchase, Donation and PayByLink. PayByLink returns the merchant defined fields for both Purchase and Donation combined. (required)
+        :return: list[InlineResponse2004]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `get_pbl_merchant_defined_fields_definitions` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_pbl_merchant_defined_fields_definitions_with_http_info(reference_type, **kwargs)
+        else:
+            (data) = self.get_pbl_merchant_defined_fields_definitions_with_http_info(reference_type, **kwargs)
+            return data
+
+    def get_pbl_merchant_defined_fields_definitions_with_http_info(self, reference_type, **kwargs):
+        """
+        Get all PayByLink merchant defined fields for a given reference type
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_pbl_merchant_defined_fields_definitions_with_http_info(reference_type, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str reference_type: The reference type for which merchant defined fields are to be fetched. Available values are Purchase, Donation and PayByLink. PayByLink returns the merchant defined fields for both Purchase and Donation combined. (required)
+        :return: list[InlineResponse2004]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['reference_type']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_pbl_merchant_defined_fields_definitions" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'reference_type' is set
+        if ('reference_type' not in params) or (params['reference_type'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `reference_type` when calling `get_pbl_merchant_defined_fields_definitions`")
+            raise ValueError("Missing the required parameter `reference_type` when calling `get_pbl_merchant_defined_fields_definitions`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'reference_type' in params:
+            path_params['referenceType'] = params['reference_type']
+            referenceType=reference_type
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json'])
+
+        body_params = None
+        if 'GET' in ('POST'):
+            body_params = '{}'
+        
+        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
+        if file_post_body_and_delimiter is not None:
+            body_params = file_post_body_and_delimiter[0]
+            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_pbl_merchant_defined_fields_definitions,get_pbl_merchant_defined_fields_definitions_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_pbl_merchant_defined_fields_definitions,get_pbl_merchant_defined_fields_definitions_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/ipl/v2/{referenceType}/merchantDefinedFields', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='list[InlineResponse2004]',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
     def put_merchant_defined_fields_definitions(self, reference_type, id, merchant_defined_field_core, **kwargs):
         """
         Update a MerchantDefinedField by ID
@@ -546,6 +928,142 @@ class MerchantDefinedFieldsApi(object):
         auth_settings = []
 
         return self.api_client.call_api(f'/invoicing/v2/{referenceType}/merchantDefinedFields/{id}', 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='list[InlineResponse2004]',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
+    def put_pbl_merchant_defined_fields_definitions(self, reference_type, id, merchant_defined_field_core, **kwargs):
+        """
+        Update a PayByLink MerchantDefinedField by ID
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_pbl_merchant_defined_fields_definitions(reference_type, id, merchant_defined_field_core, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str reference_type: (required)
+        :param int id: (required)
+        :param MerchantDefinedFieldCore1 merchant_defined_field_core: (required)
+        :return: list[InlineResponse2004]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `put_pbl_merchant_defined_fields_definitions` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.put_pbl_merchant_defined_fields_definitions_with_http_info(reference_type, id, merchant_defined_field_core, **kwargs)
+        else:
+            (data) = self.put_pbl_merchant_defined_fields_definitions_with_http_info(reference_type, id, merchant_defined_field_core, **kwargs)
+            return data
+
+    def put_pbl_merchant_defined_fields_definitions_with_http_info(self, reference_type, id, merchant_defined_field_core, **kwargs):
+        """
+        Update a PayByLink MerchantDefinedField by ID
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_pbl_merchant_defined_fields_definitions_with_http_info(reference_type, id, merchant_defined_field_core, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str reference_type: (required)
+        :param int id: (required)
+        :param MerchantDefinedFieldCore1 merchant_defined_field_core: (required)
+        :return: list[InlineResponse2004]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['reference_type', 'id', 'merchant_defined_field_core']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method put_pbl_merchant_defined_fields_definitions" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'reference_type' is set
+        if ('reference_type' not in params) or (params['reference_type'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `reference_type` when calling `put_pbl_merchant_defined_fields_definitions`")
+            raise ValueError("Missing the required parameter `reference_type` when calling `put_pbl_merchant_defined_fields_definitions`")
+        # verify the required parameter 'id' is set
+        if ('id' not in params) or (params['id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `put_pbl_merchant_defined_fields_definitions`")
+            raise ValueError("Missing the required parameter `id` when calling `put_pbl_merchant_defined_fields_definitions`")
+        # verify the required parameter 'merchant_defined_field_core' is set
+        if ('merchant_defined_field_core' not in params) or (params['merchant_defined_field_core'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `merchant_defined_field_core` when calling `put_pbl_merchant_defined_fields_definitions`")
+            raise ValueError("Missing the required parameter `merchant_defined_field_core` when calling `put_pbl_merchant_defined_fields_definitions`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'reference_type' in params:
+            path_params['referenceType'] = params['reference_type']
+            referenceType=reference_type
+        if 'id' in params:
+            path_params['id'] = params['id']
+            id=id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        body_params = None
+        if 'merchant_defined_field_core' in params:
+            body_params = params['merchant_defined_field_core']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'merchant_defined_field_core', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = process_body(body_params)
+
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "put_pbl_merchant_defined_fields_definitions,put_pbl_merchant_defined_fields_definitions_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "put_pbl_merchant_defined_fields_definitions,put_pbl_merchant_defined_fields_definitions_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/ipl/v2/{referenceType}/merchantDefinedFields/{id}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,

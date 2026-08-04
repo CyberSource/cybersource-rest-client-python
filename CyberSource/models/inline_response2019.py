@@ -30,122 +30,196 @@ class InlineResponse2019(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'InlineResponse2019ClientReferenceInformation',
-        'id': 'str',
-        'submit_time_utc': 'str',
+        'webhook_id': 'str',
+        'organization_id': 'str',
+        'products': 'list[Notificationsubscriptionsv2webhooksProducts]',
+        'webhook_url': 'str',
+        'health_check_url': 'str',
         'status': 'str',
-        'error_information': 'InlineResponse2019ErrorInformation',
-        'order_information': 'InlineResponse2019OrderInformation',
-        'processor_information': 'InlineResponse2019ProcessorInformation'
+        'name': 'str',
+        'description': 'str',
+        'retry_policy': 'Notificationsubscriptionsv2webhooksRetryPolicy',
+        'security_policy': 'Notificationsubscriptionsv2webhooksSecurityPolicy',
+        'created_on': 'str',
+        'notification_scope': 'str'
     }
 
     attribute_map = {
-        'client_reference_information': 'clientReferenceInformation',
-        'id': 'id',
-        'submit_time_utc': 'submitTimeUtc',
+        'webhook_id': 'webhookId',
+        'organization_id': 'organizationId',
+        'products': 'products',
+        'webhook_url': 'webhookUrl',
+        'health_check_url': 'healthCheckUrl',
         'status': 'status',
-        'error_information': 'errorInformation',
-        'order_information': 'orderInformation',
-        'processor_information': 'processorInformation'
+        'name': 'name',
+        'description': 'description',
+        'retry_policy': 'retryPolicy',
+        'security_policy': 'securityPolicy',
+        'created_on': 'createdOn',
+        'notification_scope': 'notificationScope'
     }
 
-    def __init__(self, client_reference_information=None, id=None, submit_time_utc=None, status=None, error_information=None, order_information=None, processor_information=None):
+    def __init__(self, webhook_id=None, organization_id=None, products=None, webhook_url=None, health_check_url=None, status='INACTIVE', name=None, description=None, retry_policy=None, security_policy=None, created_on=None, notification_scope='DESCENDANTS'):
         """
         InlineResponse2019 - a model defined in Swagger
         """
 
-        self._client_reference_information = None
-        self._id = None
-        self._submit_time_utc = None
+        self._webhook_id = None
+        self._organization_id = None
+        self._products = None
+        self._webhook_url = None
+        self._health_check_url = None
         self._status = None
-        self._error_information = None
-        self._order_information = None
-        self._processor_information = None
+        self._name = None
+        self._description = None
+        self._retry_policy = None
+        self._security_policy = None
+        self._created_on = None
+        self._notification_scope = None
 
-        if client_reference_information is not None:
-          self.client_reference_information = client_reference_information
-        self.id = id
-        self.submit_time_utc = submit_time_utc
-        self.status = status
-        if error_information is not None:
-          self.error_information = error_information
-        if order_information is not None:
-          self.order_information = order_information
-        if processor_information is not None:
-          self.processor_information = processor_information
-
-    @property
-    def client_reference_information(self):
-        """
-        Gets the client_reference_information of this InlineResponse2019.
-
-        :return: The client_reference_information of this InlineResponse2019.
-        :rtype: InlineResponse2019ClientReferenceInformation
-        """
-        return self._client_reference_information
-
-    @client_reference_information.setter
-    def client_reference_information(self, client_reference_information):
-        """
-        Sets the client_reference_information of this InlineResponse2019.
-
-        :param client_reference_information: The client_reference_information of this InlineResponse2019.
-        :type: InlineResponse2019ClientReferenceInformation
-        """
-
-        self._client_reference_information = client_reference_information
+        if webhook_id is not None:
+          self.webhook_id = webhook_id
+        if organization_id is not None:
+          self.organization_id = organization_id
+        if products is not None:
+          self.products = products
+        if webhook_url is not None:
+          self.webhook_url = webhook_url
+        if health_check_url is not None:
+          self.health_check_url = health_check_url
+        if status is not None:
+          self.status = status
+        if name is not None:
+          self.name = name
+        if description is not None:
+          self.description = description
+        if retry_policy is not None:
+          self.retry_policy = retry_policy
+        if security_policy is not None:
+          self.security_policy = security_policy
+        if created_on is not None:
+          self.created_on = created_on
+        if notification_scope is not None:
+          self.notification_scope = notification_scope
 
     @property
-    def id(self):
+    def webhook_id(self):
         """
-        Gets the id of this InlineResponse2019.
-        Request ID generated by Cybersource. This was sent in the header on the request. Echo value from x-requestid 
+        Gets the webhook_id of this InlineResponse2019.
+        Webhook Id. This is generated by the server.
 
-        :return: The id of this InlineResponse2019.
+        :return: The webhook_id of this InlineResponse2019.
         :rtype: str
         """
-        return self._id
+        return self._webhook_id
 
-    @id.setter
-    def id(self, id):
+    @webhook_id.setter
+    def webhook_id(self, webhook_id):
         """
-        Sets the id of this InlineResponse2019.
-        Request ID generated by Cybersource. This was sent in the header on the request. Echo value from x-requestid 
+        Sets the webhook_id of this InlineResponse2019.
+        Webhook Id. This is generated by the server.
 
-        :param id: The id of this InlineResponse2019.
+        :param webhook_id: The webhook_id of this InlineResponse2019.
         :type: str
         """
 
-        self._id = id
+        self._webhook_id = webhook_id
 
     @property
-    def submit_time_utc(self):
+    def organization_id(self):
         """
-        Gets the submit_time_utc of this InlineResponse2019.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ`  **Example** `2023-05-17T22:47:57Z` equals May 17, 2023, at 22:47:57 (10:47:57 PM). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Gets the organization_id of this InlineResponse2019.
+        Organization ID.
 
-        :return: The submit_time_utc of this InlineResponse2019.
+        :return: The organization_id of this InlineResponse2019.
         :rtype: str
         """
-        return self._submit_time_utc
+        return self._organization_id
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @organization_id.setter
+    def organization_id(self, organization_id):
         """
-        Sets the submit_time_utc of this InlineResponse2019.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ`  **Example** `2023-05-17T22:47:57Z` equals May 17, 2023, at 22:47:57 (10:47:57 PM). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Sets the organization_id of this InlineResponse2019.
+        Organization ID.
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse2019.
+        :param organization_id: The organization_id of this InlineResponse2019.
         :type: str
         """
 
-        self._submit_time_utc = submit_time_utc
+        self._organization_id = organization_id
+
+    @property
+    def products(self):
+        """
+        Gets the products of this InlineResponse2019.
+
+        :return: The products of this InlineResponse2019.
+        :rtype: list[Notificationsubscriptionsv2webhooksProducts]
+        """
+        return self._products
+
+    @products.setter
+    def products(self, products):
+        """
+        Sets the products of this InlineResponse2019.
+
+        :param products: The products of this InlineResponse2019.
+        :type: list[Notificationsubscriptionsv2webhooksProducts]
+        """
+
+        self._products = products
+
+    @property
+    def webhook_url(self):
+        """
+        Gets the webhook_url of this InlineResponse2019.
+        The client's endpoint (URL) to receive webhooks.
+
+        :return: The webhook_url of this InlineResponse2019.
+        :rtype: str
+        """
+        return self._webhook_url
+
+    @webhook_url.setter
+    def webhook_url(self, webhook_url):
+        """
+        Sets the webhook_url of this InlineResponse2019.
+        The client's endpoint (URL) to receive webhooks.
+
+        :param webhook_url: The webhook_url of this InlineResponse2019.
+        :type: str
+        """
+
+        self._webhook_url = webhook_url
+
+    @property
+    def health_check_url(self):
+        """
+        Gets the health_check_url of this InlineResponse2019.
+        The client's health check endpoint (URL).
+
+        :return: The health_check_url of this InlineResponse2019.
+        :rtype: str
+        """
+        return self._health_check_url
+
+    @health_check_url.setter
+    def health_check_url(self, health_check_url):
+        """
+        Sets the health_check_url of this InlineResponse2019.
+        The client's health check endpoint (URL).
+
+        :param health_check_url: The health_check_url of this InlineResponse2019.
+        :type: str
+        """
+
+        self._health_check_url = health_check_url
 
     @property
     def status(self):
         """
         Gets the status of this InlineResponse2019.
-        Message describing the status of the currency conversion request.   Possible values: - PENDING - DECLINED - SERVER_ERROR
+        Webhook status.
 
         :return: The status of this InlineResponse2019.
         :rtype: str
@@ -156,7 +230,7 @@ class InlineResponse2019(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse2019.
-        Message describing the status of the currency conversion request.   Possible values: - PENDING - DECLINED - SERVER_ERROR
+        Webhook status.
 
         :param status: The status of this InlineResponse2019.
         :type: str
@@ -165,67 +239,138 @@ class InlineResponse2019(object):
         self._status = status
 
     @property
-    def error_information(self):
+    def name(self):
         """
-        Gets the error_information of this InlineResponse2019.
+        Gets the name of this InlineResponse2019.
+        Client friendly webhook name.
 
-        :return: The error_information of this InlineResponse2019.
-        :rtype: InlineResponse2019ErrorInformation
+        :return: The name of this InlineResponse2019.
+        :rtype: str
         """
-        return self._error_information
+        return self._name
 
-    @error_information.setter
-    def error_information(self, error_information):
+    @name.setter
+    def name(self, name):
         """
-        Sets the error_information of this InlineResponse2019.
+        Sets the name of this InlineResponse2019.
+        Client friendly webhook name.
 
-        :param error_information: The error_information of this InlineResponse2019.
-        :type: InlineResponse2019ErrorInformation
+        :param name: The name of this InlineResponse2019.
+        :type: str
         """
 
-        self._error_information = error_information
+        self._name = name
 
     @property
-    def order_information(self):
+    def description(self):
         """
-        Gets the order_information of this InlineResponse2019.
+        Gets the description of this InlineResponse2019.
+        Client friendly webhook description.
 
-        :return: The order_information of this InlineResponse2019.
-        :rtype: InlineResponse2019OrderInformation
+        :return: The description of this InlineResponse2019.
+        :rtype: str
         """
-        return self._order_information
+        return self._description
 
-    @order_information.setter
-    def order_information(self, order_information):
+    @description.setter
+    def description(self, description):
         """
-        Sets the order_information of this InlineResponse2019.
+        Sets the description of this InlineResponse2019.
+        Client friendly webhook description.
 
-        :param order_information: The order_information of this InlineResponse2019.
-        :type: InlineResponse2019OrderInformation
+        :param description: The description of this InlineResponse2019.
+        :type: str
         """
 
-        self._order_information = order_information
+        self._description = description
 
     @property
-    def processor_information(self):
+    def retry_policy(self):
         """
-        Gets the processor_information of this InlineResponse2019.
+        Gets the retry_policy of this InlineResponse2019.
 
-        :return: The processor_information of this InlineResponse2019.
-        :rtype: InlineResponse2019ProcessorInformation
+        :return: The retry_policy of this InlineResponse2019.
+        :rtype: Notificationsubscriptionsv2webhooksRetryPolicy
         """
-        return self._processor_information
+        return self._retry_policy
 
-    @processor_information.setter
-    def processor_information(self, processor_information):
+    @retry_policy.setter
+    def retry_policy(self, retry_policy):
         """
-        Sets the processor_information of this InlineResponse2019.
+        Sets the retry_policy of this InlineResponse2019.
 
-        :param processor_information: The processor_information of this InlineResponse2019.
-        :type: InlineResponse2019ProcessorInformation
+        :param retry_policy: The retry_policy of this InlineResponse2019.
+        :type: Notificationsubscriptionsv2webhooksRetryPolicy
         """
 
-        self._processor_information = processor_information
+        self._retry_policy = retry_policy
+
+    @property
+    def security_policy(self):
+        """
+        Gets the security_policy of this InlineResponse2019.
+
+        :return: The security_policy of this InlineResponse2019.
+        :rtype: Notificationsubscriptionsv2webhooksSecurityPolicy
+        """
+        return self._security_policy
+
+    @security_policy.setter
+    def security_policy(self, security_policy):
+        """
+        Sets the security_policy of this InlineResponse2019.
+
+        :param security_policy: The security_policy of this InlineResponse2019.
+        :type: Notificationsubscriptionsv2webhooksSecurityPolicy
+        """
+
+        self._security_policy = security_policy
+
+    @property
+    def created_on(self):
+        """
+        Gets the created_on of this InlineResponse2019.
+        Date on which webhook was created/registered.
+
+        :return: The created_on of this InlineResponse2019.
+        :rtype: str
+        """
+        return self._created_on
+
+    @created_on.setter
+    def created_on(self, created_on):
+        """
+        Sets the created_on of this InlineResponse2019.
+        Date on which webhook was created/registered.
+
+        :param created_on: The created_on of this InlineResponse2019.
+        :type: str
+        """
+
+        self._created_on = created_on
+
+    @property
+    def notification_scope(self):
+        """
+        Gets the notification_scope of this InlineResponse2019.
+        The webhook scope. 1. SELF The Webhook is used to deliver webhooks for only this Organization (or Merchant). 2. DESCENDANTS The Webhook is used to deliver webhooks for this Organization and its children. This field is optional.    Possible values: - SELF - DESCENDANTS
+
+        :return: The notification_scope of this InlineResponse2019.
+        :rtype: str
+        """
+        return self._notification_scope
+
+    @notification_scope.setter
+    def notification_scope(self, notification_scope):
+        """
+        Sets the notification_scope of this InlineResponse2019.
+        The webhook scope. 1. SELF The Webhook is used to deliver webhooks for only this Organization (or Merchant). 2. DESCENDANTS The Webhook is used to deliver webhooks for this Organization and its children. This field is optional.    Possible values: - SELF - DESCENDANTS
+
+        :param notification_scope: The notification_scope of this InlineResponse2019.
+        :type: str
+        """
+
+        self._notification_scope = notification_scope
 
     def to_dict(self):
         """
