@@ -33,17 +33,19 @@ class CreatePaymentLinkRequest(object):
         'client_reference_information': 'Invoicingv2invoicesClientReferenceInformation',
         'processing_information': 'Iplv2paymentlinksProcessingInformation',
         'purchase_information': 'Iplv2paymentlinksPurchaseInformation',
-        'order_information': 'Iplv2paymentlinksOrderInformation'
+        'order_information': 'Iplv2paymentlinksOrderInformation',
+        'merchant_defined_field_values': 'list[Invoicingv2invoicesMerchantDefinedFieldValues]'
     }
 
     attribute_map = {
         'client_reference_information': 'clientReferenceInformation',
         'processing_information': 'processingInformation',
         'purchase_information': 'purchaseInformation',
-        'order_information': 'orderInformation'
+        'order_information': 'orderInformation',
+        'merchant_defined_field_values': 'merchantDefinedFieldValues'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, purchase_information=None, order_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, purchase_information=None, order_information=None, merchant_defined_field_values=None):
         """
         CreatePaymentLinkRequest - a model defined in Swagger
         """
@@ -52,12 +54,15 @@ class CreatePaymentLinkRequest(object):
         self._processing_information = None
         self._purchase_information = None
         self._order_information = None
+        self._merchant_defined_field_values = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
         self.processing_information = processing_information
         self.purchase_information = purchase_information
         self.order_information = order_information
+        if merchant_defined_field_values is not None:
+          self.merchant_defined_field_values = merchant_defined_field_values
 
     @property
     def client_reference_information(self):
@@ -142,6 +147,27 @@ class CreatePaymentLinkRequest(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def merchant_defined_field_values(self):
+        """
+        Gets the merchant_defined_field_values of this CreatePaymentLinkRequest.
+
+        :return: The merchant_defined_field_values of this CreatePaymentLinkRequest.
+        :rtype: list[Invoicingv2invoicesMerchantDefinedFieldValues]
+        """
+        return self._merchant_defined_field_values
+
+    @merchant_defined_field_values.setter
+    def merchant_defined_field_values(self, merchant_defined_field_values):
+        """
+        Sets the merchant_defined_field_values of this CreatePaymentLinkRequest.
+
+        :param merchant_defined_field_values: The merchant_defined_field_values of this CreatePaymentLinkRequest.
+        :type: list[Invoicingv2invoicesMerchantDefinedFieldValues]
+        """
+
+        self._merchant_defined_field_values = merchant_defined_field_values
 
     def to_dict(self):
         """

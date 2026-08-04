@@ -36,7 +36,8 @@ class PblPaymentLinksPost201Response(object):
         'status': 'str',
         'processing_information': 'Iplv2paymentlinksProcessingInformation',
         'purchase_information': 'PblPaymentLinksPost201ResponsePurchaseInformation',
-        'order_information': 'PblPaymentLinksPost201ResponseOrderInformation'
+        'order_information': 'PblPaymentLinksPost201ResponseOrderInformation',
+        'merchant_defined_field_values_with_definition': 'list[InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition]'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class PblPaymentLinksPost201Response(object):
         'status': 'status',
         'processing_information': 'processingInformation',
         'purchase_information': 'purchaseInformation',
-        'order_information': 'orderInformation'
+        'order_information': 'orderInformation',
+        'merchant_defined_field_values_with_definition': 'merchantDefinedFieldValuesWithDefinition'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, processing_information=None, purchase_information=None, order_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, processing_information=None, purchase_information=None, order_information=None, merchant_defined_field_values_with_definition=None):
         """
         PblPaymentLinksPost201Response - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class PblPaymentLinksPost201Response(object):
         self._processing_information = None
         self._purchase_information = None
         self._order_information = None
+        self._merchant_defined_field_values_with_definition = None
 
         if links is not None:
           self.links = links
@@ -76,6 +79,8 @@ class PblPaymentLinksPost201Response(object):
           self.purchase_information = purchase_information
         if order_information is not None:
           self.order_information = order_information
+        if merchant_defined_field_values_with_definition is not None:
+          self.merchant_defined_field_values_with_definition = merchant_defined_field_values_with_definition
 
     @property
     def links(self):
@@ -229,6 +234,27 @@ class PblPaymentLinksPost201Response(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def merchant_defined_field_values_with_definition(self):
+        """
+        Gets the merchant_defined_field_values_with_definition of this PblPaymentLinksPost201Response.
+
+        :return: The merchant_defined_field_values_with_definition of this PblPaymentLinksPost201Response.
+        :rtype: list[InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition]
+        """
+        return self._merchant_defined_field_values_with_definition
+
+    @merchant_defined_field_values_with_definition.setter
+    def merchant_defined_field_values_with_definition(self, merchant_defined_field_values_with_definition):
+        """
+        Sets the merchant_defined_field_values_with_definition of this PblPaymentLinksPost201Response.
+
+        :param merchant_defined_field_values_with_definition: The merchant_defined_field_values_with_definition of this PblPaymentLinksPost201Response.
+        :type: list[InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition]
+        """
+
+        self._merchant_defined_field_values_with_definition = merchant_defined_field_values_with_definition
 
     def to_dict(self):
         """

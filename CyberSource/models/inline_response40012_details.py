@@ -31,32 +31,37 @@ class InlineResponse40012Details(object):
     """
     swagger_types = {
         'field': 'str',
-        'reason': 'str'
+        'reason': 'str',
+        'code': 'str'
     }
 
     attribute_map = {
         'field': 'field',
-        'reason': 'reason'
+        'reason': 'reason',
+        'code': 'code'
     }
 
-    def __init__(self, field=None, reason=None):
+    def __init__(self, field=None, reason=None, code=None):
         """
         InlineResponse40012Details - a model defined in Swagger
         """
 
         self._field = None
         self._reason = None
+        self._code = None
 
         if field is not None:
           self.field = field
         if reason is not None:
           self.reason = reason
+        if code is not None:
+          self.code = code
 
     @property
     def field(self):
         """
         Gets the field of this InlineResponse40012Details.
-        This is the flattened JSON object field name/path that is either missing or invalid. 
+        This is the flattened JSON object field name/path that is either missing or invalid.
 
         :return: The field of this InlineResponse40012Details.
         :rtype: str
@@ -67,7 +72,7 @@ class InlineResponse40012Details(object):
     def field(self, field):
         """
         Sets the field of this InlineResponse40012Details.
-        This is the flattened JSON object field name/path that is either missing or invalid. 
+        This is the flattened JSON object field name/path that is either missing or invalid.
 
         :param field: The field of this InlineResponse40012Details.
         :type: str
@@ -79,7 +84,7 @@ class InlineResponse40012Details(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse40012Details.
-        Possible reasons for the error.  Possible values:   - `MISSING_FIELD`   - `INVALID_DATA` 
+        Possible reasons for the error. 
 
         :return: The reason of this InlineResponse40012Details.
         :rtype: str
@@ -90,13 +95,36 @@ class InlineResponse40012Details(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse40012Details.
-        Possible reasons for the error.  Possible values:   - `MISSING_FIELD`   - `INVALID_DATA` 
+        Possible reasons for the error. 
 
         :param reason: The reason of this InlineResponse40012Details.
         :type: str
         """
 
         self._reason = reason
+
+    @property
+    def code(self):
+        """
+        Gets the code of this InlineResponse40012Details.
+        An optional short string which identifies the exact field error.
+
+        :return: The code of this InlineResponse40012Details.
+        :rtype: str
+        """
+        return self._code
+
+    @code.setter
+    def code(self, code):
+        """
+        Sets the code of this InlineResponse40012Details.
+        An optional short string which identifies the exact field error.
+
+        :param code: The code of this InlineResponse40012Details.
+        :type: str
+        """
+
+        self._code = code
 
     def to_dict(self):
         """

@@ -339,7 +339,7 @@ from pprint import pprint
 api_instance = CyberSource.NetworkTokensApi()
 tokenized_card_id = 'tokenized_card_id_example' # str | The Id of a tokenized card.
 profile_id = 'profile_id_example' # str | The Id of a profile containing user specific TMS configuration. (optional)
-post_tokenized_card_delete_request = CyberSource.TmsTokenizedCardDeleteRequest() # TmsTokenizedCardDeleteRequest |  (optional)
+post_tokenized_card_delete_request = CyberSource.PostTokenizedCardDeleteRequest() # PostTokenizedCardDeleteRequest |  (optional)
 
 try: 
     # Delete a Tokenized Card
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tokenized_card_id** | **str**| The Id of a tokenized card. | 
  **profile_id** | **str**| The Id of a profile containing user specific TMS configuration. | [optional] 
- **post_tokenized_card_delete_request** | [**TmsTokenizedCardDeleteRequest**](TmsTokenizedCardDeleteRequest.md)|  | [optional] 
+ **post_tokenized_card_delete_request** | [**PostTokenizedCardDeleteRequest**](PostTokenizedCardDeleteRequest.md)|  | [optional] 
 
 ### Return type
 

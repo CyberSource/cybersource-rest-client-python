@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **processing_information** | [**Iplv2paymentlinksProcessingInformation**](Iplv2paymentlinksProcessingInformation.md) |  | 
 **purchase_information** | [**Iplv2paymentlinksPurchaseInformation**](Iplv2paymentlinksPurchaseInformation.md) |  | 
 **order_information** | [**Iplv2paymentlinksOrderInformation**](Iplv2paymentlinksOrderInformation.md) |  | 
+**merchant_defined_field_values** | [**list[Invoicingv2invoicesMerchantDefinedFieldValues]**](Invoicingv2invoicesMerchantDefinedFieldValues.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

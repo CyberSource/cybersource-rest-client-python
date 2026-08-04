@@ -30,51 +30,83 @@ class TestAgentCapabilitiesApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_cancel_purchase_intent(self):
+    def test_cancel_checkout(self):
         """
-        Test case for cancel_purchase_intent
+        Test case for cancel_checkout
 
-        Cancel a purchase intent
-        """
-        pass
-
-    def test_confirm_transaction_events(self):
-        """
-        Test case for confirm_transaction_events
-
-        Confirm transaction events
+        Cancel Checkout ACP
         """
         pass
 
-    def test_enroll_card(self):
+    def test_complete_checkout(self):
         """
-        Test case for enroll_card
+        Test case for complete_checkout
 
-        Enroll a card
-        """
-        pass
-
-    def test_initiate_purchase_intent(self):
-        """
-        Test case for initiate_purchase_intent
-
-        Initiate a purchase intent
+        Complete Checkout ACP
         """
         pass
 
-    def test_retrieve_payment_credentials(self):
+    def test_create_checkout_session(self):
         """
-        Test case for retrieve_payment_credentials
+        Test case for create_checkout_session
 
-        Retrieve payment credentials
+        Create Checkout Session ACP
         """
         pass
 
-    def test_update_purchase_intent(self):
+    def test_get_checkout_session(self):
         """
-        Test case for update_purchase_intent
+        Test case for get_checkout_session
 
-        Update a purchase intent
+        Get Checkout Session ACP
+        """
+        pass
+
+    def test_ucp_cancel_checkout(self):
+        """
+        Test case for ucp_cancel_checkout
+
+        Cancel Checkout UCP
+        """
+        pass
+
+    def test_ucp_complete_checkout(self):
+        """
+        Test case for ucp_complete_checkout
+
+        Complete Checkout UCP
+        """
+        pass
+
+    def test_ucp_create_checkout_session(self):
+        """
+        Test case for ucp_create_checkout_session
+
+        Create Checkout Session UCP
+        """
+        pass
+
+    def test_ucp_get_checkout_session(self):
+        """
+        Test case for ucp_get_checkout_session
+
+        Get Checkout Session UCP
+        """
+        pass
+
+    def test_ucp_update_checkout_session(self):
+        """
+        Test case for ucp_update_checkout_session
+
+        Update Checkout Session UCP
+        """
+        pass
+
+    def test_update_checkout_session(self):
+        """
+        Test case for update_checkout_session
+
+        Update Checkout Session ACP
         """
         pass
 

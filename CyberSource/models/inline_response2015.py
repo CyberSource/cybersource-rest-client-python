@@ -30,66 +30,80 @@ class InlineResponse2015(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
+        'id': 'str',
         'status': 'str',
-        'client_reference_information': 'Kmsegressv2keyssymClientReferenceInformation',
-        'key_information': 'InlineResponse2015KeyInformation'
+        'submit_time_stamp_utc': 'str',
+        'links': 'InlineResponse2015Links',
+        'transactions': 'list[InlineResponse2015Transactions]',
+        'client_reference_information': 'InlineResponse2015ClientReferenceInformation',
+        'error_information': 'InlineResponse2015ErrorInformation'
     }
 
     attribute_map = {
-        'submit_time_utc': 'submitTimeUtc',
+        'id': 'id',
         'status': 'status',
+        'submit_time_stamp_utc': 'submitTimeStampUtc',
+        'links': '_links',
+        'transactions': 'transactions',
         'client_reference_information': 'clientReferenceInformation',
-        'key_information': 'keyInformation'
+        'error_information': 'errorInformation'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, client_reference_information=None, key_information=None):
+    def __init__(self, id=None, status=None, submit_time_stamp_utc=None, links=None, transactions=None, client_reference_information=None, error_information=None):
         """
         InlineResponse2015 - a model defined in Swagger
         """
 
-        self._submit_time_utc = None
+        self._id = None
         self._status = None
+        self._submit_time_stamp_utc = None
+        self._links = None
+        self._transactions = None
         self._client_reference_information = None
-        self._key_information = None
+        self._error_information = None
 
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
+        if id is not None:
+          self.id = id
+        self.status = status
+        if submit_time_stamp_utc is not None:
+          self.submit_time_stamp_utc = submit_time_stamp_utc
+        if links is not None:
+          self.links = links
+        if transactions is not None:
+          self.transactions = transactions
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
-        if key_information is not None:
-          self.key_information = key_information
+        if error_information is not None:
+          self.error_information = error_information
 
     @property
-    def submit_time_utc(self):
+    def id(self):
         """
-        Gets the submit_time_utc of this InlineResponse2015.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Gets the id of this InlineResponse2015.
+        A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource. 
 
-        :return: The submit_time_utc of this InlineResponse2015.
+        :return: The id of this InlineResponse2015.
         :rtype: str
         """
-        return self._submit_time_utc
+        return self._id
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @id.setter
+    def id(self, id):
         """
-        Sets the submit_time_utc of this InlineResponse2015.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Sets the id of this InlineResponse2015.
+        A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource. 
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse2015.
+        :param id: The id of this InlineResponse2015.
         :type: str
         """
 
-        self._submit_time_utc = submit_time_utc
+        self._id = id
 
     @property
     def status(self):
         """
         Gets the status of this InlineResponse2015.
-        The status of the submitted transaction. Possible values:  - ACCEPTED 
+        The status of the submitted transaction.  Possible values: - `COMPLETED` - `SERVER_ERROR` - `INVALID_REQUEST` - `DECLINED` 
 
         :return: The status of this InlineResponse2015.
         :rtype: str
@@ -100,7 +114,7 @@ class InlineResponse2015(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse2015.
-        The status of the submitted transaction. Possible values:  - ACCEPTED 
+        The status of the submitted transaction.  Possible values: - `COMPLETED` - `SERVER_ERROR` - `INVALID_REQUEST` - `DECLINED` 
 
         :param status: The status of this InlineResponse2015.
         :type: str
@@ -109,12 +123,77 @@ class InlineResponse2015(object):
         self._status = status
 
     @property
+    def submit_time_stamp_utc(self):
+        """
+        Gets the submit_time_stamp_utc of this InlineResponse2015.
+        Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :return: The submit_time_stamp_utc of this InlineResponse2015.
+        :rtype: str
+        """
+        return self._submit_time_stamp_utc
+
+    @submit_time_stamp_utc.setter
+    def submit_time_stamp_utc(self, submit_time_stamp_utc):
+        """
+        Sets the submit_time_stamp_utc of this InlineResponse2015.
+        Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :param submit_time_stamp_utc: The submit_time_stamp_utc of this InlineResponse2015.
+        :type: str
+        """
+
+        self._submit_time_stamp_utc = submit_time_stamp_utc
+
+    @property
+    def links(self):
+        """
+        Gets the links of this InlineResponse2015.
+
+        :return: The links of this InlineResponse2015.
+        :rtype: InlineResponse2015Links
+        """
+        return self._links
+
+    @links.setter
+    def links(self, links):
+        """
+        Sets the links of this InlineResponse2015.
+
+        :param links: The links of this InlineResponse2015.
+        :type: InlineResponse2015Links
+        """
+
+        self._links = links
+
+    @property
+    def transactions(self):
+        """
+        Gets the transactions of this InlineResponse2015.
+
+        :return: The transactions of this InlineResponse2015.
+        :rtype: list[InlineResponse2015Transactions]
+        """
+        return self._transactions
+
+    @transactions.setter
+    def transactions(self, transactions):
+        """
+        Sets the transactions of this InlineResponse2015.
+
+        :param transactions: The transactions of this InlineResponse2015.
+        :type: list[InlineResponse2015Transactions]
+        """
+
+        self._transactions = transactions
+
+    @property
     def client_reference_information(self):
         """
         Gets the client_reference_information of this InlineResponse2015.
 
         :return: The client_reference_information of this InlineResponse2015.
-        :rtype: Kmsegressv2keyssymClientReferenceInformation
+        :rtype: InlineResponse2015ClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -124,31 +203,31 @@ class InlineResponse2015(object):
         Sets the client_reference_information of this InlineResponse2015.
 
         :param client_reference_information: The client_reference_information of this InlineResponse2015.
-        :type: Kmsegressv2keyssymClientReferenceInformation
+        :type: InlineResponse2015ClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information
 
     @property
-    def key_information(self):
+    def error_information(self):
         """
-        Gets the key_information of this InlineResponse2015.
+        Gets the error_information of this InlineResponse2015.
 
-        :return: The key_information of this InlineResponse2015.
-        :rtype: InlineResponse2015KeyInformation
+        :return: The error_information of this InlineResponse2015.
+        :rtype: InlineResponse2015ErrorInformation
         """
-        return self._key_information
+        return self._error_information
 
-    @key_information.setter
-    def key_information(self, key_information):
+    @error_information.setter
+    def error_information(self, error_information):
         """
-        Sets the key_information of this InlineResponse2015.
+        Sets the error_information of this InlineResponse2015.
 
-        :param key_information: The key_information of this InlineResponse2015.
-        :type: InlineResponse2015KeyInformation
+        :param error_information: The error_information of this InlineResponse2015.
+        :type: InlineResponse2015ErrorInformation
         """
 
-        self._key_information = key_information
+        self._error_information = error_information
 
     def to_dict(self):
         """

@@ -65,7 +65,7 @@ class OffersApi(object):
         :param str v_c_correlation_id: (required)
         :param str v_c_organization_id: (required)
         :param OfferRequest offer_request: (required)
-        :return: InlineResponse2019
+        :return: InlineResponse20112
                  If the method is called asynchronously,
                  returns the request thread.
 
@@ -102,7 +102,7 @@ class OffersApi(object):
         :param str v_c_correlation_id: (required)
         :param str v_c_organization_id: (required)
         :param OfferRequest offer_request: (required)
-        :return: InlineResponse2019
+        :return: InlineResponse20112
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -199,7 +199,7 @@ class OffersApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2019',
+                                        response_type='InlineResponse20112',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

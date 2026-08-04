@@ -31,7 +31,7 @@ class Boardingv1registrationsIntegrationInformationTenantConfigurations(object):
     """
     swagger_types = {
         'solution_id': 'str',
-        'tenant_information': 'Boardingv1registrationsIntegrationInformationTenantInformation'
+        'tenant_information': 'TenantInformation'
     }
 
     attribute_map = {
@@ -80,7 +80,7 @@ class Boardingv1registrationsIntegrationInformationTenantConfigurations(object):
         Gets the tenant_information of this Boardingv1registrationsIntegrationInformationTenantConfigurations.
 
         :return: The tenant_information of this Boardingv1registrationsIntegrationInformationTenantConfigurations.
-        :rtype: Boardingv1registrationsIntegrationInformationTenantInformation
+        :rtype: TenantInformation
         """
         return self._tenant_information
 
@@ -90,7 +90,7 @@ class Boardingv1registrationsIntegrationInformationTenantConfigurations(object):
         Sets the tenant_information of this Boardingv1registrationsIntegrationInformationTenantConfigurations.
 
         :param tenant_information: The tenant_information of this Boardingv1registrationsIntegrationInformationTenantConfigurations.
-        :type: Boardingv1registrationsIntegrationInformationTenantInformation
+        :type: TenantInformation
         """
 
         self._tenant_information = tenant_information

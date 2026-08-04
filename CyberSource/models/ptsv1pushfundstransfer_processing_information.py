@@ -34,6 +34,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         'payouts_options': 'Ptsv1pushfundstransferProcessingInformationPayoutsOptions',
         'fee_program_id': 'str',
         'network_partner_id': 'str',
+        'transaction_type_indicator': 'str',
+        'interchange_rate_designator': 'str',
         'processing_code': 'str',
         'sharing_group_code': 'str',
         'purpose_of_payment': 'str',
@@ -46,6 +48,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         'payouts_options': 'payoutsOptions',
         'fee_program_id': 'feeProgramId',
         'network_partner_id': 'networkPartnerId',
+        'transaction_type_indicator': 'transactionTypeIndicator',
+        'interchange_rate_designator': 'interchangeRateDesignator',
         'processing_code': 'processingCode',
         'sharing_group_code': 'sharingGroupCode',
         'purpose_of_payment': 'purposeOfPayment',
@@ -53,7 +57,7 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         'account_verification_code': 'accountVerificationCode'
     }
 
-    def __init__(self, business_application_id=None, payouts_options=None, fee_program_id=None, network_partner_id=None, processing_code=None, sharing_group_code=None, purpose_of_payment=None, reconciliation_id=None, account_verification_code=None):
+    def __init__(self, business_application_id=None, payouts_options=None, fee_program_id=None, network_partner_id=None, transaction_type_indicator=None, interchange_rate_designator=None, processing_code=None, sharing_group_code=None, purpose_of_payment=None, reconciliation_id=None, account_verification_code=None):
         """
         Ptsv1pushfundstransferProcessingInformation - a model defined in Swagger
         """
@@ -62,6 +66,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         self._payouts_options = None
         self._fee_program_id = None
         self._network_partner_id = None
+        self._transaction_type_indicator = None
+        self._interchange_rate_designator = None
         self._processing_code = None
         self._sharing_group_code = None
         self._purpose_of_payment = None
@@ -76,6 +82,10 @@ class Ptsv1pushfundstransferProcessingInformation(object):
           self.fee_program_id = fee_program_id
         if network_partner_id is not None:
           self.network_partner_id = network_partner_id
+        if transaction_type_indicator is not None:
+          self.transaction_type_indicator = transaction_type_indicator
+        if interchange_rate_designator is not None:
+          self.interchange_rate_designator = interchange_rate_designator
         if processing_code is not None:
           self.processing_code = processing_code
         if sharing_group_code is not None:
@@ -91,7 +101,7 @@ class Ptsv1pushfundstransferProcessingInformation(object):
     def business_application_id(self):
         """
         Gets the business_application_id of this Ptsv1pushfundstransferProcessingInformation.
-        Money Transfer (MT) - `AA`: Account to Account - `BI`: Bank-Initiated Money Transfer - `CD`: Cash Deposit - `FT`: Funds Transfer - `TU`: Prepaid Card Loan - `WT`: Wallet Transfer-Staged Digital Wallet (SDW) Transfer - `PP`: P2P Money Transfer  Funds Disbursement (FD) - `BB`: Business-to-business Supplier Payments - `BP`: Non-Card Bill Pay  - `CP`: Credit Card Bill Pay - `FD`: General Funds Disbursements - `GD`: Government Disbursements and Government Initiated Tax Refunds - `GP`: Gambling/Gaming Payouts (other than online gaming) - `LO`: Loyalty Payments - `MD`: Merchant Settlement - `MI`: Faster Refunds - `OG`: Online Gambling Payouts - `PD`: Payroll and Pension Disbursements - `RP`: Request-to-Pay Service 
+        Payouts transaction type.  Money Transfer (MT) - `AA`: Account to Account - `BI`: Bank-Initiated Money Transfer - `CD`: Cash Deposit - `FT`: Funds Transfer - `LA`: Liquid Assets - `PP`: P2P Money Transfer - `WT`: Wallet Transfer-Staged Digital Wallet (SDW) Transfer  Funds Disbursement (FD) - `BB`: Business-to-business Supplier Payments - `BP`: Non-Card Bill Pay - `CP`: Credit Card Bill Pay - `FD`: General Funds Disbursements - `GD`: Government Disbursements and Government Initiated Tax Refunds - `GP`: Gambling/Gaming Payouts (other than online gaming) - `LO`: Loyalty Payments - `MD`: Merchant Settlement - `MI`: Faster Refunds - `OG`: Online Gambling Payouts - `PD`: Payroll and Pension Disbursements - `RP`: Request-to-Pay Service - `TU`: Prepaid Card Load  Supported BAIs vary by payment gateway and configuration. Clients are responsible for confirming gateway specific BAI availability. Conditional - If not provided in payload, the value is picked from Merchant Configuration. 
 
         :return: The business_application_id of this Ptsv1pushfundstransferProcessingInformation.
         :rtype: str
@@ -102,7 +112,7 @@ class Ptsv1pushfundstransferProcessingInformation(object):
     def business_application_id(self, business_application_id):
         """
         Sets the business_application_id of this Ptsv1pushfundstransferProcessingInformation.
-        Money Transfer (MT) - `AA`: Account to Account - `BI`: Bank-Initiated Money Transfer - `CD`: Cash Deposit - `FT`: Funds Transfer - `TU`: Prepaid Card Loan - `WT`: Wallet Transfer-Staged Digital Wallet (SDW) Transfer - `PP`: P2P Money Transfer  Funds Disbursement (FD) - `BB`: Business-to-business Supplier Payments - `BP`: Non-Card Bill Pay  - `CP`: Credit Card Bill Pay - `FD`: General Funds Disbursements - `GD`: Government Disbursements and Government Initiated Tax Refunds - `GP`: Gambling/Gaming Payouts (other than online gaming) - `LO`: Loyalty Payments - `MD`: Merchant Settlement - `MI`: Faster Refunds - `OG`: Online Gambling Payouts - `PD`: Payroll and Pension Disbursements - `RP`: Request-to-Pay Service 
+        Payouts transaction type.  Money Transfer (MT) - `AA`: Account to Account - `BI`: Bank-Initiated Money Transfer - `CD`: Cash Deposit - `FT`: Funds Transfer - `LA`: Liquid Assets - `PP`: P2P Money Transfer - `WT`: Wallet Transfer-Staged Digital Wallet (SDW) Transfer  Funds Disbursement (FD) - `BB`: Business-to-business Supplier Payments - `BP`: Non-Card Bill Pay - `CP`: Credit Card Bill Pay - `FD`: General Funds Disbursements - `GD`: Government Disbursements and Government Initiated Tax Refunds - `GP`: Gambling/Gaming Payouts (other than online gaming) - `LO`: Loyalty Payments - `MD`: Merchant Settlement - `MI`: Faster Refunds - `OG`: Online Gambling Payouts - `PD`: Payroll and Pension Disbursements - `RP`: Request-to-Pay Service - `TU`: Prepaid Card Load  Supported BAIs vary by payment gateway and configuration. Clients are responsible for confirming gateway specific BAI availability. Conditional - If not provided in payload, the value is picked from Merchant Configuration. 
 
         :param business_application_id: The business_application_id of this Ptsv1pushfundstransferProcessingInformation.
         :type: str
@@ -158,7 +168,7 @@ class Ptsv1pushfundstransferProcessingInformation(object):
     def network_partner_id(self):
         """
         Gets the network_partner_id of this Ptsv1pushfundstransferProcessingInformation.
-        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction.  This field is supported for Visa Platform Connect, Chase Paymentech Salem. 
+        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction. 
 
         :return: The network_partner_id of this Ptsv1pushfundstransferProcessingInformation.
         :rtype: str
@@ -169,13 +179,59 @@ class Ptsv1pushfundstransferProcessingInformation(object):
     def network_partner_id(self, network_partner_id):
         """
         Sets the network_partner_id of this Ptsv1pushfundstransferProcessingInformation.
-        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction.  This field is supported for Visa Platform Connect, Chase Paymentech Salem. 
+        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction. 
 
         :param network_partner_id: The network_partner_id of this Ptsv1pushfundstransferProcessingInformation.
         :type: str
         """
 
         self._network_partner_id = network_partner_id
+
+    @property
+    def transaction_type_indicator(self):
+        """
+        Gets the transaction_type_indicator of this Ptsv1pushfundstransferProcessingInformation.
+        Transaction Type Identifier for Mastercard Send. 3-character code that identifies the transaction type on the Mastercard network. When provided, this value takes priority over businessApplicationId for determining the payment type. 
+
+        :return: The transaction_type_indicator of this Ptsv1pushfundstransferProcessingInformation.
+        :rtype: str
+        """
+        return self._transaction_type_indicator
+
+    @transaction_type_indicator.setter
+    def transaction_type_indicator(self, transaction_type_indicator):
+        """
+        Sets the transaction_type_indicator of this Ptsv1pushfundstransferProcessingInformation.
+        Transaction Type Identifier for Mastercard Send. 3-character code that identifies the transaction type on the Mastercard network. When provided, this value takes priority over businessApplicationId for determining the payment type. 
+
+        :param transaction_type_indicator: The transaction_type_indicator of this Ptsv1pushfundstransferProcessingInformation.
+        :type: str
+        """
+
+        self._transaction_type_indicator = transaction_type_indicator
+
+    @property
+    def interchange_rate_designator(self):
+        """
+        Gets the interchange_rate_designator of this Ptsv1pushfundstransferProcessingInformation.
+        The IRD used for clearing the transaction on the Mastercard network. Details - Alphanumeric, length 2 characters.  This field is supported for Visa Platform Connect, Chase Paymentech Salem. 
+
+        :return: The interchange_rate_designator of this Ptsv1pushfundstransferProcessingInformation.
+        :rtype: str
+        """
+        return self._interchange_rate_designator
+
+    @interchange_rate_designator.setter
+    def interchange_rate_designator(self, interchange_rate_designator):
+        """
+        Sets the interchange_rate_designator of this Ptsv1pushfundstransferProcessingInformation.
+        The IRD used for clearing the transaction on the Mastercard network. Details - Alphanumeric, length 2 characters.  This field is supported for Visa Platform Connect, Chase Paymentech Salem. 
+
+        :param interchange_rate_designator: The interchange_rate_designator of this Ptsv1pushfundstransferProcessingInformation.
+        :type: str
+        """
+
+        self._interchange_rate_designator = interchange_rate_designator
 
     @property
     def processing_code(self):

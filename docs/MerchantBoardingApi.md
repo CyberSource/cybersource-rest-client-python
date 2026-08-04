@@ -5,6 +5,7 @@ All URIs are relative to *https://apitest.cybersource.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_registration**](MerchantBoardingApi.md#get_registration) | **GET** /boarding/v1/registrations/{registrationId} | Gets all the information on a boarding registration
+[**patch_registration**](MerchantBoardingApi.md#patch_registration) | **PATCH** /boarding/v1/registrations/{registrationId} | Updates the information on a boarding registration
 [**post_registration**](MerchantBoardingApi.md#post_registration) | **POST** /boarding/v1/registrations | Create a boarding registration
 
 
@@ -56,8 +57,60 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **patch_registration**
+> InlineResponse2005 patch_registration(registration_id, patch_registration_body, v_c_idempotency_id=v_c_idempotency_id)
+
+Updates the information on a boarding registration
+
+This end point will partially update a boarding registration 
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.MerchantBoardingApi()
+registration_id = 'registration_id_example' # str | Identifies the boarding registration to be updated
+patch_registration_body = CyberSource.PatchRegistrationBody() # PatchRegistrationBody | Boarding registration data to be patched
+v_c_idempotency_id = 'v_c_idempotency_id_example' # str | defines idempotency of the request (optional)
+
+try: 
+    # Updates the information on a boarding registration
+    api_response = api_instance.patch_registration(registration_id, patch_registration_body, v_c_idempotency_id=v_c_idempotency_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MerchantBoardingApi->patch_registration: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **registration_id** | **str**| Identifies the boarding registration to be updated | 
+ **patch_registration_body** | [**PatchRegistrationBody**](PatchRegistrationBody.md)| Boarding registration data to be patched | 
+ **v_c_idempotency_id** | **str**| defines idempotency of the request | [optional] 
+
+### Return type
+
+[**InlineResponse2005**](InlineResponse2005.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **post_registration**
-> InlineResponse2014 post_registration(post_registration_body, v_c_idempotency_id=v_c_idempotency_id)
+> InlineResponse2017 post_registration(post_registration_body, v_c_idempotency_id=v_c_idempotency_id)
 
 Create a boarding registration
 
@@ -93,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2014**](InlineResponse2014.md)
+[**InlineResponse2017**](InlineResponse2017.md)
 
 ### Authorization
 

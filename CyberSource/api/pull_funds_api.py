@@ -197,7 +197,7 @@ class PullFundsApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'pull_funds_refund_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        inbound_mle_status = "false"
+        inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_pull_funds_refund,create_pull_funds_refund_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
@@ -374,7 +374,7 @@ class PullFundsApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'pull_funds_reversal_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        inbound_mle_status = "false"
+        inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_pull_funds_reversal,create_pull_funds_reversal_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
@@ -542,7 +542,7 @@ class PullFundsApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'pull_funds_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        inbound_mle_status = "false"
+        inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_pull_funds_transfer,create_pull_funds_transfer_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         

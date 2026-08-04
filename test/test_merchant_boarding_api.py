@@ -38,6 +38,14 @@ class TestMerchantBoardingApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_registration(self):
+        """
+        Test case for patch_registration
+
+        Updates the information on a boarding registration
+        """
+        pass
+
     def test_post_registration(self):
         """
         Test case for post_registration

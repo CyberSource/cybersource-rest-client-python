@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **phone_number** | **bool** | Collect the payers phone number. | [optional] [default to False]
 **email** | **bool** | Collect the payers email address when the email address is not known or confirm it if it is known at the time of invoice creation. | [optional] [default to False]
 **enable_merchant_email_notifications** | **bool** | Whether you would like to receive payment notification for successful transaction | [optional] [default to False]
+**merchant_email** | **str** | The merchant&#39;s email address for receiving payment notifications. | [optional] 
 **custom_labels** | [**list[InvoicingV2InvoicesPost201ResponseInvoiceInformationCustomLabels]**](InvoicingV2InvoicesPost201ResponseInvoiceInformationCustomLabels.md) | A list of custom labels that allows you to override (rename) default field names and control the visibility of specific fields on invoices and items. If the list is empty, the labels will not be overwritten.  | [optional] 
 **custom_redirect_urls** | [**InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationCustomRedirectUrls**](InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationCustomRedirectUrls.md) |  | [optional] 
 

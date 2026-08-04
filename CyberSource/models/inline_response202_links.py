@@ -30,7 +30,7 @@ class InlineResponse202Links(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        '_self': 'InlineResponse4011LinksSelf',
+        '_self': 'InlineResponse4013LinksSelf',
         'status': 'list[InlineResponse202LinksStatus]'
     }
 
@@ -58,7 +58,7 @@ class InlineResponse202Links(object):
         Gets the _self of this InlineResponse202Links.
 
         :return: The _self of this InlineResponse202Links.
-        :rtype: InlineResponse4011LinksSelf
+        :rtype: InlineResponse4013LinksSelf
         """
         return self.__self
 
@@ -68,7 +68,7 @@ class InlineResponse202Links(object):
         Sets the _self of this InlineResponse202Links.
 
         :param _self: The _self of this InlineResponse202Links.
-        :type: InlineResponse4011LinksSelf
+        :type: InlineResponse4013LinksSelf
         """
 
         self.__self = _self

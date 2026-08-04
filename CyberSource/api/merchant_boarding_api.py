@@ -169,6 +169,139 @@ class MerchantBoardingApi(object):
                                         collection_formats=collection_formats,
                                         isResponseMLEforApi=isResponseMLEforApi)
 
+    def patch_registration(self, registration_id, patch_registration_body, **kwargs):
+        """
+        Updates the information on a boarding registration
+        This end point will partially update a boarding registration 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_registration(registration_id, patch_registration_body, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str registration_id: Identifies the boarding registration to be updated (required)
+        :param PatchRegistrationBody patch_registration_body: Boarding registration data to be patched (required)
+        :param str v_c_idempotency_id: defines idempotency of the request
+        :return: InlineResponse2005
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `patch_registration` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.patch_registration_with_http_info(registration_id, patch_registration_body, **kwargs)
+        else:
+            (data) = self.patch_registration_with_http_info(registration_id, patch_registration_body, **kwargs)
+            return data
+
+    def patch_registration_with_http_info(self, registration_id, patch_registration_body, **kwargs):
+        """
+        Updates the information on a boarding registration
+        This end point will partially update a boarding registration 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_registration_with_http_info(registration_id, patch_registration_body, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str registration_id: Identifies the boarding registration to be updated (required)
+        :param PatchRegistrationBody patch_registration_body: Boarding registration data to be patched (required)
+        :param str v_c_idempotency_id: defines idempotency of the request
+        :return: InlineResponse2005
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['registration_id', 'patch_registration_body', 'v_c_idempotency_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_registration" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'registration_id' is set
+        if ('registration_id' not in params) or (params['registration_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `registration_id` when calling `patch_registration`")
+            raise ValueError("Missing the required parameter `registration_id` when calling `patch_registration`")
+        # verify the required parameter 'patch_registration_body' is set
+        if ('patch_registration_body' not in params) or (params['patch_registration_body'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `patch_registration_body` when calling `patch_registration`")
+            raise ValueError("Missing the required parameter `patch_registration_body` when calling `patch_registration`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'registration_id' in params:
+            path_params['registrationId'] = params['registration_id']
+            registrationId=registration_id
+
+        query_params = []
+
+        header_params = {}
+        if 'v_c_idempotency_id' in params:
+            header_params['v-c-idempotency-id'] = params['v_c_idempotency_id']
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json'])
+
+        body_params = None
+        if 'patch_registration_body' in params:
+            body_params = params['patch_registration_body']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'patch_registration_body', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = process_body(body_params)
+
+        inbound_mle_status = "optional"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "patch_registration,patch_registration_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "patch_registration,patch_registration_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/boarding/v1/registrations/{registrationId}', 'PATCH',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='InlineResponse2005',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
     def post_registration(self, post_registration_body, **kwargs):
         """
         Create a boarding registration
@@ -185,7 +318,7 @@ class MerchantBoardingApi(object):
             for asynchronous request. (optional)
         :param PostRegistrationBody post_registration_body: Boarding registration data (required)
         :param str v_c_idempotency_id: defines idempotency of the request
-        :return: InlineResponse2014
+        :return: InlineResponse2017
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -215,7 +348,7 @@ class MerchantBoardingApi(object):
             for asynchronous request. (optional)
         :param PostRegistrationBody post_registration_body: Boarding registration data (required)
         :param str v_c_idempotency_id: defines idempotency of the request
-        :return: InlineResponse2014
+        :return: InlineResponse2017
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -268,7 +401,7 @@ class MerchantBoardingApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_registration_body', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        inbound_mle_status = "mandatory"
+        inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_registration,post_registration_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
@@ -284,7 +417,7 @@ class MerchantBoardingApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2014',
+                                        response_type='InlineResponse2017',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

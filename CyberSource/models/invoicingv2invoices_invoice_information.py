@@ -31,6 +31,7 @@ class Invoicingv2invoicesInvoiceInformation(object):
     """
     swagger_types = {
         'invoice_number': 'str',
+        'transaction_reference_number': 'str',
         'description': 'str',
         'due_date': 'date',
         'expiration_date': 'date',
@@ -41,6 +42,7 @@ class Invoicingv2invoicesInvoiceInformation(object):
 
     attribute_map = {
         'invoice_number': 'invoiceNumber',
+        'transaction_reference_number': 'transactionReferenceNumber',
         'description': 'description',
         'due_date': 'dueDate',
         'expiration_date': 'expirationDate',
@@ -49,12 +51,13 @@ class Invoicingv2invoicesInvoiceInformation(object):
         'delivery_mode': 'deliveryMode'
     }
 
-    def __init__(self, invoice_number=None, description=None, due_date=None, expiration_date=None, send_immediately=False, allow_partial_payments=False, delivery_mode=None):
+    def __init__(self, invoice_number=None, transaction_reference_number=None, description=None, due_date=None, expiration_date=None, send_immediately=False, allow_partial_payments=False, delivery_mode=None):
         """
         Invoicingv2invoicesInvoiceInformation - a model defined in Swagger
         """
 
         self._invoice_number = None
+        self._transaction_reference_number = None
         self._description = None
         self._due_date = None
         self._expiration_date = None
@@ -64,6 +67,8 @@ class Invoicingv2invoicesInvoiceInformation(object):
 
         if invoice_number is not None:
           self.invoice_number = invoice_number
+        if transaction_reference_number is not None:
+          self.transaction_reference_number = transaction_reference_number
         self.description = description
         self.due_date = due_date
         if expiration_date is not None:
@@ -99,6 +104,29 @@ class Invoicingv2invoicesInvoiceInformation(object):
         self._invoice_number = invoice_number
 
     @property
+    def transaction_reference_number(self):
+        """
+        Gets the transaction_reference_number of this Invoicingv2invoicesInvoiceInformation.
+        The transaction reference number (TRN) is a identifier assigned to each payment transaction that allows merchants, customers, and payment processors to track and reference specific transactions throughout their lifecycle.  When provided, this value is passed to the payment processor as the reconciliation ID for the payment. For invoices this is typically the invoice number, and for purchase or donation links it is typically the link identifier.  Only letters and numbers are allowed; spaces and other special characters are not permitted. 
+
+        :return: The transaction_reference_number of this Invoicingv2invoicesInvoiceInformation.
+        :rtype: str
+        """
+        return self._transaction_reference_number
+
+    @transaction_reference_number.setter
+    def transaction_reference_number(self, transaction_reference_number):
+        """
+        Sets the transaction_reference_number of this Invoicingv2invoicesInvoiceInformation.
+        The transaction reference number (TRN) is a identifier assigned to each payment transaction that allows merchants, customers, and payment processors to track and reference specific transactions throughout their lifecycle.  When provided, this value is passed to the payment processor as the reconciliation ID for the payment. For invoices this is typically the invoice number, and for purchase or donation links it is typically the link identifier.  Only letters and numbers are allowed; spaces and other special characters are not permitted. 
+
+        :param transaction_reference_number: The transaction_reference_number of this Invoicingv2invoicesInvoiceInformation.
+        :type: str
+        """
+
+        self._transaction_reference_number = transaction_reference_number
+
+    @property
     def description(self):
         """
         Gets the description of this Invoicingv2invoicesInvoiceInformation.
@@ -125,7 +153,7 @@ class Invoicingv2invoicesInvoiceInformation(object):
     def due_date(self):
         """
         Gets the due_date of this Invoicingv2invoicesInvoiceInformation.
-        The invoice due date. This field is required for creating an invoice. Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+        The invoice due date. This field is required for creating an invoice. Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day.  The invoice link automatically expires 12 months after the due date. 
 
         :return: The due_date of this Invoicingv2invoicesInvoiceInformation.
         :rtype: date
@@ -136,7 +164,7 @@ class Invoicingv2invoicesInvoiceInformation(object):
     def due_date(self, due_date):
         """
         Sets the due_date of this Invoicingv2invoicesInvoiceInformation.
-        The invoice due date. This field is required for creating an invoice. Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+        The invoice due date. This field is required for creating an invoice. Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day.  The invoice link automatically expires 12 months after the due date. 
 
         :param due_date: The due_date of this Invoicingv2invoicesInvoiceInformation.
         :type: date
@@ -148,7 +176,7 @@ class Invoicingv2invoicesInvoiceInformation(object):
     def expiration_date(self):
         """
         Gets the expiration_date of this Invoicingv2invoicesInvoiceInformation.
-        Define an expiration date for the link.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+        Define an expiration date for the link.  The date must be today or in the future.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day.  The invoice link automatically expires 12 months after the due date. 
 
         :return: The expiration_date of this Invoicingv2invoicesInvoiceInformation.
         :rtype: date
@@ -159,7 +187,7 @@ class Invoicingv2invoicesInvoiceInformation(object):
     def expiration_date(self, expiration_date):
         """
         Sets the expiration_date of this Invoicingv2invoicesInvoiceInformation.
-        Define an expiration date for the link.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+        Define an expiration date for the link.  The date must be today or in the future.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day.  The invoice link automatically expires 12 months after the due date. 
 
         :param expiration_date: The expiration_date of this Invoicingv2invoicesInvoiceInformation.
         :type: date

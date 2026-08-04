@@ -34,6 +34,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
         'auth_indicator': 'str',
         'extend_auth_indicator': 'str',
         'card_verification_indicator': 'bool',
+        'aft_indicator': 'bool',
         'initiator': 'TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsInitiator'
     }
 
@@ -42,10 +43,11 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
         'auth_indicator': 'authIndicator',
         'extend_auth_indicator': 'extendAuthIndicator',
         'card_verification_indicator': 'cardVerificationIndicator',
+        'aft_indicator': 'aftIndicator',
         'initiator': 'initiator'
     }
 
-    def __init__(self, auth_type=None, auth_indicator=None, extend_auth_indicator=None, card_verification_indicator=None, initiator=None):
+    def __init__(self, auth_type=None, auth_indicator=None, extend_auth_indicator=None, card_verification_indicator=None, aft_indicator=None, initiator=None):
         """
         TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
@@ -54,6 +56,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
         self._auth_indicator = None
         self._extend_auth_indicator = None
         self._card_verification_indicator = None
+        self._aft_indicator = None
         self._initiator = None
 
         if auth_type is not None:
@@ -64,6 +67,8 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
           self.extend_auth_indicator = extend_auth_indicator
         if card_verification_indicator is not None:
           self.card_verification_indicator = card_verification_indicator
+        if aft_indicator is not None:
+          self.aft_indicator = aft_indicator
         if initiator is not None:
           self.initiator = initiator
 
@@ -158,6 +163,29 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
         """
 
         self._card_verification_indicator = card_verification_indicator
+
+    @property
+    def aft_indicator(self):
+        """
+        Gets the aft_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        Indicates whether the transaction is an Account Funding Transaction (AFT).  This field is mandatory for Account Funding Transactions (AFT).   Possible values:   - `true` (This is an AFT transaction)   - `false` (default value) (This is not an AFT transaction) 
+
+        :return: The aft_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        :rtype: bool
+        """
+        return self._aft_indicator
+
+    @aft_indicator.setter
+    def aft_indicator(self, aft_indicator):
+        """
+        Sets the aft_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        Indicates whether the transaction is an Account Funding Transaction (AFT).  This field is mandatory for Account Funding Transactions (AFT).   Possible values:   - `true` (This is an AFT transaction)   - `false` (default value) (This is not an AFT transaction) 
+
+        :param aft_indicator: The aft_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        :type: bool
+        """
+
+        self._aft_indicator = aft_indicator
 
     @property
     def initiator(self):
