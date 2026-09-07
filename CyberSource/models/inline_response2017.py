@@ -30,92 +30,46 @@ class InlineResponse2017(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'submit_time_utc': 'datetime',
+        'submit_time_utc': 'str',
         'status': 'str',
-        'registration_information': 'InlineResponse2017RegistrationInformation',
-        'integration_information': 'InlineResponse2017IntegrationInformation',
-        'organization_information': 'InlineResponse2017OrganizationInformation',
-        'product_information_setups': 'list[InlineResponse2017ProductInformationSetups]',
-        'message': 'str',
-        'details': 'dict(str, list[object])'
+        'client_reference_information': 'Kmsegressv2keyssymClientReferenceInformation',
+        'key_information': 'InlineResponse2017KeyInformation'
     }
 
     attribute_map = {
-        'id': 'id',
         'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
-        'registration_information': 'registrationInformation',
-        'integration_information': 'integrationInformation',
-        'organization_information': 'organizationInformation',
-        'product_information_setups': 'productInformationSetups',
-        'message': 'message',
-        'details': 'details'
+        'client_reference_information': 'clientReferenceInformation',
+        'key_information': 'keyInformation'
     }
 
-    def __init__(self, id=None, submit_time_utc=None, status=None, registration_information=None, integration_information=None, organization_information=None, product_information_setups=None, message=None, details=None):
+    def __init__(self, submit_time_utc=None, status=None, client_reference_information=None, key_information=None):
         """
         InlineResponse2017 - a model defined in Swagger
         """
 
-        self._id = None
         self._submit_time_utc = None
         self._status = None
-        self._registration_information = None
-        self._integration_information = None
-        self._organization_information = None
-        self._product_information_setups = None
-        self._message = None
-        self._details = None
+        self._client_reference_information = None
+        self._key_information = None
 
-        if id is not None:
-          self.id = id
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
         if status is not None:
           self.status = status
-        if registration_information is not None:
-          self.registration_information = registration_information
-        if integration_information is not None:
-          self.integration_information = integration_information
-        if organization_information is not None:
-          self.organization_information = organization_information
-        if product_information_setups is not None:
-          self.product_information_setups = product_information_setups
-        if message is not None:
-          self.message = message
-        if details is not None:
-          self.details = details
-
-    @property
-    def id(self):
-        """
-        Gets the id of this InlineResponse2017.
-
-        :return: The id of this InlineResponse2017.
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """
-        Sets the id of this InlineResponse2017.
-
-        :param id: The id of this InlineResponse2017.
-        :type: str
-        """
-
-        self._id = id
+        if client_reference_information is not None:
+          self.client_reference_information = client_reference_information
+        if key_information is not None:
+          self.key_information = key_information
 
     @property
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this InlineResponse2017.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :return: The submit_time_utc of this InlineResponse2017.
-        :rtype: datetime
+        :rtype: str
         """
         return self._submit_time_utc
 
@@ -123,10 +77,10 @@ class InlineResponse2017(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this InlineResponse2017.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :param submit_time_utc: The submit_time_utc of this InlineResponse2017.
-        :type: datetime
+        :type: str
         """
 
         self._submit_time_utc = submit_time_utc
@@ -135,7 +89,7 @@ class InlineResponse2017(object):
     def status(self):
         """
         Gets the status of this InlineResponse2017.
-        The status of Registration request Possible Values:   - 'INITIALIZED'   - 'RECEIVED'   - 'PROCESSING'   - 'SUCCESS'   - 'FAILURE'   - 'PARTIAL' 
+        The status of the submitted transaction. Possible values:  - ACCEPTED 
 
         :return: The status of this InlineResponse2017.
         :rtype: str
@@ -146,7 +100,7 @@ class InlineResponse2017(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse2017.
-        The status of Registration request Possible Values:   - 'INITIALIZED'   - 'RECEIVED'   - 'PROCESSING'   - 'SUCCESS'   - 'FAILURE'   - 'PARTIAL' 
+        The status of the submitted transaction. Possible values:  - ACCEPTED 
 
         :param status: The status of this InlineResponse2017.
         :type: str
@@ -155,130 +109,46 @@ class InlineResponse2017(object):
         self._status = status
 
     @property
-    def registration_information(self):
+    def client_reference_information(self):
         """
-        Gets the registration_information of this InlineResponse2017.
+        Gets the client_reference_information of this InlineResponse2017.
 
-        :return: The registration_information of this InlineResponse2017.
-        :rtype: InlineResponse2017RegistrationInformation
+        :return: The client_reference_information of this InlineResponse2017.
+        :rtype: Kmsegressv2keyssymClientReferenceInformation
         """
-        return self._registration_information
+        return self._client_reference_information
 
-    @registration_information.setter
-    def registration_information(self, registration_information):
+    @client_reference_information.setter
+    def client_reference_information(self, client_reference_information):
         """
-        Sets the registration_information of this InlineResponse2017.
+        Sets the client_reference_information of this InlineResponse2017.
 
-        :param registration_information: The registration_information of this InlineResponse2017.
-        :type: InlineResponse2017RegistrationInformation
+        :param client_reference_information: The client_reference_information of this InlineResponse2017.
+        :type: Kmsegressv2keyssymClientReferenceInformation
         """
 
-        self._registration_information = registration_information
+        self._client_reference_information = client_reference_information
 
     @property
-    def integration_information(self):
+    def key_information(self):
         """
-        Gets the integration_information of this InlineResponse2017.
+        Gets the key_information of this InlineResponse2017.
 
-        :return: The integration_information of this InlineResponse2017.
-        :rtype: InlineResponse2017IntegrationInformation
+        :return: The key_information of this InlineResponse2017.
+        :rtype: InlineResponse2017KeyInformation
         """
-        return self._integration_information
+        return self._key_information
 
-    @integration_information.setter
-    def integration_information(self, integration_information):
+    @key_information.setter
+    def key_information(self, key_information):
         """
-        Sets the integration_information of this InlineResponse2017.
+        Sets the key_information of this InlineResponse2017.
 
-        :param integration_information: The integration_information of this InlineResponse2017.
-        :type: InlineResponse2017IntegrationInformation
-        """
-
-        self._integration_information = integration_information
-
-    @property
-    def organization_information(self):
-        """
-        Gets the organization_information of this InlineResponse2017.
-
-        :return: The organization_information of this InlineResponse2017.
-        :rtype: InlineResponse2017OrganizationInformation
-        """
-        return self._organization_information
-
-    @organization_information.setter
-    def organization_information(self, organization_information):
-        """
-        Sets the organization_information of this InlineResponse2017.
-
-        :param organization_information: The organization_information of this InlineResponse2017.
-        :type: InlineResponse2017OrganizationInformation
+        :param key_information: The key_information of this InlineResponse2017.
+        :type: InlineResponse2017KeyInformation
         """
 
-        self._organization_information = organization_information
-
-    @property
-    def product_information_setups(self):
-        """
-        Gets the product_information_setups of this InlineResponse2017.
-
-        :return: The product_information_setups of this InlineResponse2017.
-        :rtype: list[InlineResponse2017ProductInformationSetups]
-        """
-        return self._product_information_setups
-
-    @product_information_setups.setter
-    def product_information_setups(self, product_information_setups):
-        """
-        Sets the product_information_setups of this InlineResponse2017.
-
-        :param product_information_setups: The product_information_setups of this InlineResponse2017.
-        :type: list[InlineResponse2017ProductInformationSetups]
-        """
-
-        self._product_information_setups = product_information_setups
-
-    @property
-    def message(self):
-        """
-        Gets the message of this InlineResponse2017.
-
-        :return: The message of this InlineResponse2017.
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """
-        Sets the message of this InlineResponse2017.
-
-        :param message: The message of this InlineResponse2017.
-        :type: str
-        """
-
-        self._message = message
-
-    @property
-    def details(self):
-        """
-        Gets the details of this InlineResponse2017.
-
-        :return: The details of this InlineResponse2017.
-        :rtype: dict(str, list[object])
-        """
-        return self._details
-
-    @details.setter
-    def details(self, details):
-        """
-        Sets the details of this InlineResponse2017.
-
-        :param details: The details of this InlineResponse2017.
-        :type: dict(str, list[object])
-        """
-
-        self._details = details
+        self._key_information = key_information
 
     def to_dict(self):
         """

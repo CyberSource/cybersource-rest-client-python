@@ -30,86 +30,94 @@ class InlineResponse2014OrderInformationAmountDetails(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'markup_rate': 'str',
+        'authorized_amount': 'str',
+        'currency': 'str',
         'exchange_rate': 'str',
-        'original_amount': 'str',
-        'destination_amount': 'str',
-        'original_amount_without_markup': 'str',
-        'settlement_amount': 'str',
-        'settlement_currency': 'str',
-        'settlement_exchange_rate': 'str'
+        'total_amount': 'str',
+        'settlement_amount': 'str'
     }
 
     attribute_map = {
-        'markup_rate': 'markupRate',
+        'authorized_amount': 'authorizedAmount',
+        'currency': 'currency',
         'exchange_rate': 'exchangeRate',
-        'original_amount': 'originalAmount',
-        'destination_amount': 'destinationAmount',
-        'original_amount_without_markup': 'originalAmountWithoutMarkup',
-        'settlement_amount': 'settlementAmount',
-        'settlement_currency': 'settlementCurrency',
-        'settlement_exchange_rate': 'settlementExchangeRate'
+        'total_amount': 'totalAmount',
+        'settlement_amount': 'settlementAmount'
     }
 
-    def __init__(self, markup_rate=None, exchange_rate=None, original_amount=None, destination_amount=None, original_amount_without_markup=None, settlement_amount=None, settlement_currency=None, settlement_exchange_rate=None):
+    def __init__(self, authorized_amount=None, currency=None, exchange_rate=None, total_amount=None, settlement_amount=None):
         """
         InlineResponse2014OrderInformationAmountDetails - a model defined in Swagger
         """
 
-        self._markup_rate = None
+        self._authorized_amount = None
+        self._currency = None
         self._exchange_rate = None
-        self._original_amount = None
-        self._destination_amount = None
-        self._original_amount_without_markup = None
+        self._total_amount = None
         self._settlement_amount = None
-        self._settlement_currency = None
-        self._settlement_exchange_rate = None
 
-        if markup_rate is not None:
-          self.markup_rate = markup_rate
+        if authorized_amount is not None:
+          self.authorized_amount = authorized_amount
+        if currency is not None:
+          self.currency = currency
         if exchange_rate is not None:
           self.exchange_rate = exchange_rate
-        if original_amount is not None:
-          self.original_amount = original_amount
-        if destination_amount is not None:
-          self.destination_amount = destination_amount
-        if original_amount_without_markup is not None:
-          self.original_amount_without_markup = original_amount_without_markup
+        if total_amount is not None:
+          self.total_amount = total_amount
         if settlement_amount is not None:
           self.settlement_amount = settlement_amount
-        if settlement_currency is not None:
-          self.settlement_currency = settlement_currency
-        if settlement_exchange_rate is not None:
-          self.settlement_exchange_rate = settlement_exchange_rate
 
     @property
-    def markup_rate(self):
+    def authorized_amount(self):
         """
-        Gets the markup_rate of this InlineResponse2014OrderInformationAmountDetails.
-        The markup between the offer exchange rate and wholesale rates, i.e. the mark up. Expressed as a percentage of 100, e.g. 3.75.  If the markup value is not supplied in the API, and the Acquiring BIN is provided, the markup configured during onboarding will be picked up and applied to the transaction. To override any markup defaults set up on the account, always send a markup value of 0.00 to indicate 0% markup.   Supported by Visa Direct. 
+        Gets the authorized_amount of this InlineResponse2014OrderInformationAmountDetails.
+        Amount that was authorized. 
 
-        :return: The markup_rate of this InlineResponse2014OrderInformationAmountDetails.
+        :return: The authorized_amount of this InlineResponse2014OrderInformationAmountDetails.
         :rtype: str
         """
-        return self._markup_rate
+        return self._authorized_amount
 
-    @markup_rate.setter
-    def markup_rate(self, markup_rate):
+    @authorized_amount.setter
+    def authorized_amount(self, authorized_amount):
         """
-        Sets the markup_rate of this InlineResponse2014OrderInformationAmountDetails.
-        The markup between the offer exchange rate and wholesale rates, i.e. the mark up. Expressed as a percentage of 100, e.g. 3.75.  If the markup value is not supplied in the API, and the Acquiring BIN is provided, the markup configured during onboarding will be picked up and applied to the transaction. To override any markup defaults set up on the account, always send a markup value of 0.00 to indicate 0% markup.   Supported by Visa Direct. 
+        Sets the authorized_amount of this InlineResponse2014OrderInformationAmountDetails.
+        Amount that was authorized. 
 
-        :param markup_rate: The markup_rate of this InlineResponse2014OrderInformationAmountDetails.
+        :param authorized_amount: The authorized_amount of this InlineResponse2014OrderInformationAmountDetails.
         :type: str
         """
 
-        self._markup_rate = markup_rate
+        self._authorized_amount = authorized_amount
+
+    @property
+    def currency(self):
+        """
+        Gets the currency of this InlineResponse2014OrderInformationAmountDetails.
+        Currency used for the order. Use the three-character ISO Standard Currency Codes. 
+
+        :return: The currency of this InlineResponse2014OrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._currency
+
+    @currency.setter
+    def currency(self, currency):
+        """
+        Sets the currency of this InlineResponse2014OrderInformationAmountDetails.
+        Currency used for the order. Use the three-character ISO Standard Currency Codes. 
+
+        :param currency: The currency of this InlineResponse2014OrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._currency = currency
 
     @property
     def exchange_rate(self):
         """
         Gets the exchange_rate of this InlineResponse2014OrderInformationAmountDetails.
-        Exchange rate returned by the card network.
+        The rate of conversion of the currency given in the request. 
 
         :return: The exchange_rate of this InlineResponse2014OrderInformationAmountDetails.
         :rtype: str
@@ -120,7 +128,7 @@ class InlineResponse2014OrderInformationAmountDetails(object):
     def exchange_rate(self, exchange_rate):
         """
         Sets the exchange_rate of this InlineResponse2014OrderInformationAmountDetails.
-        Exchange rate returned by the card network.
+        The rate of conversion of the currency given in the request. 
 
         :param exchange_rate: The exchange_rate of this InlineResponse2014OrderInformationAmountDetails.
         :type: str
@@ -129,79 +137,33 @@ class InlineResponse2014OrderInformationAmountDetails(object):
         self._exchange_rate = exchange_rate
 
     @property
-    def original_amount(self):
+    def total_amount(self):
         """
-        Gets the original_amount of this InlineResponse2014OrderInformationAmountDetails.
-        Amount in your original local pricing currency.  This value cannot be negative. You can include a decimal point (.) in this field to denote the currency exponent, but you cannot include any other special characters.  If needed, CyberSource truncates the amount to the correct number of decimal places. 
+        Gets the total_amount of this InlineResponse2014OrderInformationAmountDetails.
+        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places. 
 
-        :return: The original_amount of this InlineResponse2014OrderInformationAmountDetails.
+        :return: The total_amount of this InlineResponse2014OrderInformationAmountDetails.
         :rtype: str
         """
-        return self._original_amount
+        return self._total_amount
 
-    @original_amount.setter
-    def original_amount(self, original_amount):
+    @total_amount.setter
+    def total_amount(self, total_amount):
         """
-        Sets the original_amount of this InlineResponse2014OrderInformationAmountDetails.
-        Amount in your original local pricing currency.  This value cannot be negative. You can include a decimal point (.) in this field to denote the currency exponent, but you cannot include any other special characters.  If needed, CyberSource truncates the amount to the correct number of decimal places. 
+        Sets the total_amount of this InlineResponse2014OrderInformationAmountDetails.
+        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places. 
 
-        :param original_amount: The original_amount of this InlineResponse2014OrderInformationAmountDetails.
+        :param total_amount: The total_amount of this InlineResponse2014OrderInformationAmountDetails.
         :type: str
         """
 
-        self._original_amount = original_amount
-
-    @property
-    def destination_amount(self):
-        """
-        Gets the destination_amount of this InlineResponse2014OrderInformationAmountDetails.
-        Amount in your destination's local pricing currency.  This value cannot be negative. You can include a decimal point (.) in this field to denote the currency exponent, but you cannot include any other special characters.  If needed, CyberSource truncates the amount to the correct number of decimal places. 
-
-        :return: The destination_amount of this InlineResponse2014OrderInformationAmountDetails.
-        :rtype: str
-        """
-        return self._destination_amount
-
-    @destination_amount.setter
-    def destination_amount(self, destination_amount):
-        """
-        Sets the destination_amount of this InlineResponse2014OrderInformationAmountDetails.
-        Amount in your destination's local pricing currency.  This value cannot be negative. You can include a decimal point (.) in this field to denote the currency exponent, but you cannot include any other special characters.  If needed, CyberSource truncates the amount to the correct number of decimal places. 
-
-        :param destination_amount: The destination_amount of this InlineResponse2014OrderInformationAmountDetails.
-        :type: str
-        """
-
-        self._destination_amount = destination_amount
-
-    @property
-    def original_amount_without_markup(self):
-        """
-        Gets the original_amount_without_markup of this InlineResponse2014OrderInformationAmountDetails.
-        Original Transaction Amount excluding markup in source currency. This field will be returned in a source-to-destination inquiry response when markup is applicable.  Supported by Visa Direct 
-
-        :return: The original_amount_without_markup of this InlineResponse2014OrderInformationAmountDetails.
-        :rtype: str
-        """
-        return self._original_amount_without_markup
-
-    @original_amount_without_markup.setter
-    def original_amount_without_markup(self, original_amount_without_markup):
-        """
-        Sets the original_amount_without_markup of this InlineResponse2014OrderInformationAmountDetails.
-        Original Transaction Amount excluding markup in source currency. This field will be returned in a source-to-destination inquiry response when markup is applicable.  Supported by Visa Direct 
-
-        :param original_amount_without_markup: The original_amount_without_markup of this InlineResponse2014OrderInformationAmountDetails.
-        :type: str
-        """
-
-        self._original_amount_without_markup = original_amount_without_markup
+        self._total_amount = total_amount
 
     @property
     def settlement_amount(self):
         """
         Gets the settlement_amount of this InlineResponse2014OrderInformationAmountDetails.
-        The transaction amount in settlement currency.
+        This is a multicurrency field. It contains the transaction amount, converted to the currency used to bill the cardholder's account. 
 
         :return: The settlement_amount of this InlineResponse2014OrderInformationAmountDetails.
         :rtype: str
@@ -212,59 +174,13 @@ class InlineResponse2014OrderInformationAmountDetails(object):
     def settlement_amount(self, settlement_amount):
         """
         Sets the settlement_amount of this InlineResponse2014OrderInformationAmountDetails.
-        The transaction amount in settlement currency.
+        This is a multicurrency field. It contains the transaction amount, converted to the currency used to bill the cardholder's account. 
 
         :param settlement_amount: The settlement_amount of this InlineResponse2014OrderInformationAmountDetails.
         :type: str
         """
 
         self._settlement_amount = settlement_amount
-
-    @property
-    def settlement_currency(self):
-        """
-        Gets the settlement_currency of this InlineResponse2014OrderInformationAmountDetails.
-        The currency in which Visa or Mastercard settles with the acquirer/acquirer.  Use [ISO 4217 3-Alpha Currency Codes](https://developer.cybersource.com/content/dam/docs/cybs/en-us/currency-codes/reference/all/na/currency-codes.pdf). 
-
-        :return: The settlement_currency of this InlineResponse2014OrderInformationAmountDetails.
-        :rtype: str
-        """
-        return self._settlement_currency
-
-    @settlement_currency.setter
-    def settlement_currency(self, settlement_currency):
-        """
-        Sets the settlement_currency of this InlineResponse2014OrderInformationAmountDetails.
-        The currency in which Visa or Mastercard settles with the acquirer/acquirer.  Use [ISO 4217 3-Alpha Currency Codes](https://developer.cybersource.com/content/dam/docs/cybs/en-us/currency-codes/reference/all/na/currency-codes.pdf). 
-
-        :param settlement_currency: The settlement_currency of this InlineResponse2014OrderInformationAmountDetails.
-        :type: str
-        """
-
-        self._settlement_currency = settlement_currency
-
-    @property
-    def settlement_exchange_rate(self):
-        """
-        Gets the settlement_exchange_rate of this InlineResponse2014OrderInformationAmountDetails.
-        Exchange rate returned by the card network for settlement.
-
-        :return: The settlement_exchange_rate of this InlineResponse2014OrderInformationAmountDetails.
-        :rtype: str
-        """
-        return self._settlement_exchange_rate
-
-    @settlement_exchange_rate.setter
-    def settlement_exchange_rate(self, settlement_exchange_rate):
-        """
-        Sets the settlement_exchange_rate of this InlineResponse2014OrderInformationAmountDetails.
-        Exchange rate returned by the card network for settlement.
-
-        :param settlement_exchange_rate: The settlement_exchange_rate of this InlineResponse2014OrderInformationAmountDetails.
-        :type: str
-        """
-
-        self._settlement_exchange_rate = settlement_exchange_rate
 
     def to_dict(self):
         """

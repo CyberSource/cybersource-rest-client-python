@@ -30,96 +30,205 @@ class InlineResponse2013(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'request_id': 'str',
-        'submit_time_utc': 'datetime',
-        'results': 'InlineResponse2013Results'
+        'id': 'str',
+        'status': 'str',
+        'submit_time_stamp_utc': 'str',
+        'order_information': 'InlineResponse2013OrderInformation',
+        'error_information': 'InlineResponse2013ErrorInformation',
+        'processor_information': 'InlineResponse2013ProcessorInformation',
+        'processing_information': 'InlineResponse2013ProcessingInformation'
     }
 
     attribute_map = {
-        'request_id': 'requestId',
-        'submit_time_utc': 'submitTimeUtc',
-        'results': 'results'
+        'id': 'id',
+        'status': 'status',
+        'submit_time_stamp_utc': 'submitTimeStampUtc',
+        'order_information': 'orderInformation',
+        'error_information': 'errorInformation',
+        'processor_information': 'processorInformation',
+        'processing_information': 'processingInformation'
     }
 
-    def __init__(self, request_id=None, submit_time_utc=None, results=None):
+    def __init__(self, id=None, status=None, submit_time_stamp_utc=None, order_information=None, error_information=None, processor_information=None, processing_information=None):
         """
         InlineResponse2013 - a model defined in Swagger
         """
 
-        self._request_id = None
-        self._submit_time_utc = None
-        self._results = None
+        self._id = None
+        self._status = None
+        self._submit_time_stamp_utc = None
+        self._order_information = None
+        self._error_information = None
+        self._processor_information = None
+        self._processing_information = None
 
-        self.request_id = request_id
-        self.submit_time_utc = submit_time_utc
-        self.results = results
+        if id is not None:
+          self.id = id
+        if status is not None:
+          self.status = status
+        if submit_time_stamp_utc is not None:
+          self.submit_time_stamp_utc = submit_time_stamp_utc
+        if order_information is not None:
+          self.order_information = order_information
+        if error_information is not None:
+          self.error_information = error_information
+        if processor_information is not None:
+          self.processor_information = processor_information
+        if processing_information is not None:
+          self.processing_information = processing_information
 
     @property
-    def request_id(self):
+    def id(self):
         """
-        Gets the request_id of this InlineResponse2013.
-        Echoes the unique request identifier submitted in the original label request, enabling end-to-end correlation between request and response.
+        Gets the id of this InlineResponse2013.
+        A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource. 
 
-        :return: The request_id of this InlineResponse2013.
+        :return: The id of this InlineResponse2013.
         :rtype: str
         """
-        return self._request_id
+        return self._id
 
-    @request_id.setter
-    def request_id(self, request_id):
+    @id.setter
+    def id(self, id):
         """
-        Sets the request_id of this InlineResponse2013.
-        Echoes the unique request identifier submitted in the original label request, enabling end-to-end correlation between request and response.
+        Sets the id of this InlineResponse2013.
+        A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource. 
 
-        :param request_id: The request_id of this InlineResponse2013.
+        :param id: The id of this InlineResponse2013.
         :type: str
         """
 
-        self._request_id = request_id
+        self._id = id
 
     @property
-    def submit_time_utc(self):
+    def status(self):
         """
-        Gets the submit_time_utc of this InlineResponse2013.
-        UTC timestamp indicating when the label submission request was received and processed.
+        Gets the status of this InlineResponse2013.
+        The status of the submitted transaction.  Possible values: - `COMPLETED` - `INVALID_REQUEST` - `SERVER_ERROR` 
 
-        :return: The submit_time_utc of this InlineResponse2013.
-        :rtype: datetime
+        :return: The status of this InlineResponse2013.
+        :rtype: str
         """
-        return self._submit_time_utc
+        return self._status
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @status.setter
+    def status(self, status):
         """
-        Sets the submit_time_utc of this InlineResponse2013.
-        UTC timestamp indicating when the label submission request was received and processed.
+        Sets the status of this InlineResponse2013.
+        The status of the submitted transaction.  Possible values: - `COMPLETED` - `INVALID_REQUEST` - `SERVER_ERROR` 
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse2013.
-        :type: datetime
+        :param status: The status of this InlineResponse2013.
+        :type: str
         """
 
-        self._submit_time_utc = submit_time_utc
+        self._status = status
 
     @property
-    def results(self):
+    def submit_time_stamp_utc(self):
         """
-        Gets the results of this InlineResponse2013.
+        Gets the submit_time_stamp_utc of this InlineResponse2013.
+        Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
 
-        :return: The results of this InlineResponse2013.
-        :rtype: InlineResponse2013Results
+        :return: The submit_time_stamp_utc of this InlineResponse2013.
+        :rtype: str
         """
-        return self._results
+        return self._submit_time_stamp_utc
 
-    @results.setter
-    def results(self, results):
+    @submit_time_stamp_utc.setter
+    def submit_time_stamp_utc(self, submit_time_stamp_utc):
         """
-        Sets the results of this InlineResponse2013.
+        Sets the submit_time_stamp_utc of this InlineResponse2013.
+        Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
 
-        :param results: The results of this InlineResponse2013.
-        :type: InlineResponse2013Results
+        :param submit_time_stamp_utc: The submit_time_stamp_utc of this InlineResponse2013.
+        :type: str
         """
 
-        self._results = results
+        self._submit_time_stamp_utc = submit_time_stamp_utc
+
+    @property
+    def order_information(self):
+        """
+        Gets the order_information of this InlineResponse2013.
+
+        :return: The order_information of this InlineResponse2013.
+        :rtype: InlineResponse2013OrderInformation
+        """
+        return self._order_information
+
+    @order_information.setter
+    def order_information(self, order_information):
+        """
+        Sets the order_information of this InlineResponse2013.
+
+        :param order_information: The order_information of this InlineResponse2013.
+        :type: InlineResponse2013OrderInformation
+        """
+
+        self._order_information = order_information
+
+    @property
+    def error_information(self):
+        """
+        Gets the error_information of this InlineResponse2013.
+
+        :return: The error_information of this InlineResponse2013.
+        :rtype: InlineResponse2013ErrorInformation
+        """
+        return self._error_information
+
+    @error_information.setter
+    def error_information(self, error_information):
+        """
+        Sets the error_information of this InlineResponse2013.
+
+        :param error_information: The error_information of this InlineResponse2013.
+        :type: InlineResponse2013ErrorInformation
+        """
+
+        self._error_information = error_information
+
+    @property
+    def processor_information(self):
+        """
+        Gets the processor_information of this InlineResponse2013.
+
+        :return: The processor_information of this InlineResponse2013.
+        :rtype: InlineResponse2013ProcessorInformation
+        """
+        return self._processor_information
+
+    @processor_information.setter
+    def processor_information(self, processor_information):
+        """
+        Sets the processor_information of this InlineResponse2013.
+
+        :param processor_information: The processor_information of this InlineResponse2013.
+        :type: InlineResponse2013ProcessorInformation
+        """
+
+        self._processor_information = processor_information
+
+    @property
+    def processing_information(self):
+        """
+        Gets the processing_information of this InlineResponse2013.
+
+        :return: The processing_information of this InlineResponse2013.
+        :rtype: InlineResponse2013ProcessingInformation
+        """
+        return self._processing_information
+
+    @processing_information.setter
+    def processing_information(self, processing_information):
+        """
+        Sets the processing_information of this InlineResponse2013.
+
+        :param processing_information: The processing_information of this InlineResponse2013.
+        :type: InlineResponse2013ProcessingInformation
+        """
+
+        self._processing_information = processing_information
 
     def to_dict(self):
         """

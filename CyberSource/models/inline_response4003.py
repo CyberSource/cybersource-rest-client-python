@@ -35,7 +35,7 @@ class InlineResponse4003(object):
         'status': 'str',
         'reason': 'str',
         'message': 'str',
-        'details': 'list[InlineResponse2014ErrorInformationDetails]'
+        'details': 'list[InlineResponse2013ErrorInformationDetails]'
     }
 
     attribute_map = {
@@ -193,7 +193,7 @@ class InlineResponse4003(object):
         Gets the details of this InlineResponse4003.
 
         :return: The details of this InlineResponse4003.
-        :rtype: list[InlineResponse2014ErrorInformationDetails]
+        :rtype: list[InlineResponse2013ErrorInformationDetails]
         """
         return self._details
 
@@ -203,7 +203,7 @@ class InlineResponse4003(object):
         Sets the details of this InlineResponse4003.
 
         :param details: The details of this InlineResponse4003.
-        :type: list[InlineResponse2014ErrorInformationDetails]
+        :type: list[InlineResponse2013ErrorInformationDetails]
         """
 
         self._details = details

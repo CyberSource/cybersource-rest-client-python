@@ -60,13 +60,13 @@ from .tokenize_api import TokenizeApi
 from .transaction_batches_api import TransactionBatchesApi
 from .transaction_details_api import TransactionDetailsApi
 from .transaction_query_api import TransactionQueryApi
-from .transaction_risk_labeling_api import TransactionRiskLabelingApi
 from .transient_token_data_v2_api import TransientTokenDataV2Api
 from .unified_checkout_capture_context_api import UnifiedCheckoutCaptureContextApi
 from .unified_checkout_v1_capture_context_api import UnifiedCheckoutV1CaptureContextApi
 from .user_management_api import UserManagementApi
 from .user_management_search_api import UserManagementSearchApi
 from .verification_api import VerificationApi
+from .visa_protect_risk_insights_api import VisaProtectRiskInsightsApi
 from .bank_account_validation_api import BankAccountValidationApi
 from .billing_agreements_api import BillingAgreementsApi
 from .capture_api import CaptureApi

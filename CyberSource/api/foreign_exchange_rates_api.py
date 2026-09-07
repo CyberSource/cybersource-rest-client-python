@@ -66,7 +66,7 @@ class ForeignExchangeRatesApi(object):
         :param str v_c_permissions: (required)
         :param str v_c_correlation_id: (required)
         :param str v_c_organization_id: (required)
-        :return: InlineResponse2014
+        :return: InlineResponse2013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -101,7 +101,7 @@ class ForeignExchangeRatesApi(object):
         :param str v_c_permissions: (required)
         :param str v_c_correlation_id: (required)
         :param str v_c_organization_id: (required)
-        :return: InlineResponse2014
+        :return: InlineResponse2013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -204,7 +204,7 @@ class ForeignExchangeRatesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2014',
+                                        response_type='InlineResponse2013',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

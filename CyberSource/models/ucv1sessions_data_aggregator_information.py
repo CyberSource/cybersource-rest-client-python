@@ -250,7 +250,7 @@ class Ucv1sessionsDataAggregatorInformation(object):
     def country(self):
         """
         Gets the country of this Ucv1sessionsDataAggregatorInformation.
-        Acquirer country.
+        Acquirer country used for Payment Facilitator scenarios.
 
         :return: The country of this Ucv1sessionsDataAggregatorInformation.
         :rtype: str
@@ -261,7 +261,7 @@ class Ucv1sessionsDataAggregatorInformation(object):
     def country(self, country):
         """
         Sets the country of this Ucv1sessionsDataAggregatorInformation.
-        Acquirer country.
+        Acquirer country used for Payment Facilitator scenarios.
 
         :param country: The country of this Ucv1sessionsDataAggregatorInformation.
         :type: str

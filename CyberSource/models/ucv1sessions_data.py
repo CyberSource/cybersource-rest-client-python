@@ -31,6 +31,7 @@ class Ucv1sessionsData(object):
     """
     swagger_types = {
         'aggregator_information': 'Ucv1sessionsDataAggregatorInformation',
+        'acquirer_information': 'Ucv1sessionsDataAcquirerInformation',
         'order_information': 'Ucv1sessionsDataOrderInformation',
         'buyer_information': 'Ucv1sessionsDataBuyerInformation',
         'client_reference_information': 'Ucv1sessionsDataClientReferenceInformation',
@@ -47,6 +48,7 @@ class Ucv1sessionsData(object):
 
     attribute_map = {
         'aggregator_information': 'aggregatorInformation',
+        'acquirer_information': 'acquirerInformation',
         'order_information': 'orderInformation',
         'buyer_information': 'buyerInformation',
         'client_reference_information': 'clientReferenceInformation',
@@ -61,12 +63,13 @@ class Ucv1sessionsData(object):
         'merchant_defined_information': 'merchantDefinedInformation'
     }
 
-    def __init__(self, aggregator_information=None, order_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, merchant_information=None, processing_information=None, recipient_information=None, sender_information=None, device_information=None, payment_information=None, installment_information=None, merchant_defined_information=None):
+    def __init__(self, aggregator_information=None, acquirer_information=None, order_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, merchant_information=None, processing_information=None, recipient_information=None, sender_information=None, device_information=None, payment_information=None, installment_information=None, merchant_defined_information=None):
         """
         Ucv1sessionsData - a model defined in Swagger
         """
 
         self._aggregator_information = None
+        self._acquirer_information = None
         self._order_information = None
         self._buyer_information = None
         self._client_reference_information = None
@@ -82,6 +85,8 @@ class Ucv1sessionsData(object):
 
         if aggregator_information is not None:
           self.aggregator_information = aggregator_information
+        if acquirer_information is not None:
+          self.acquirer_information = acquirer_information
         if order_information is not None:
           self.order_information = order_information
         if buyer_information is not None:
@@ -127,6 +132,27 @@ class Ucv1sessionsData(object):
         """
 
         self._aggregator_information = aggregator_information
+
+    @property
+    def acquirer_information(self):
+        """
+        Gets the acquirer_information of this Ucv1sessionsData.
+
+        :return: The acquirer_information of this Ucv1sessionsData.
+        :rtype: Ucv1sessionsDataAcquirerInformation
+        """
+        return self._acquirer_information
+
+    @acquirer_information.setter
+    def acquirer_information(self, acquirer_information):
+        """
+        Sets the acquirer_information of this Ucv1sessionsData.
+
+        :param acquirer_information: The acquirer_information of this Ucv1sessionsData.
+        :type: Ucv1sessionsDataAcquirerInformation
+        """
+
+        self._acquirer_information = acquirer_information
 
     @property
     def order_information(self):

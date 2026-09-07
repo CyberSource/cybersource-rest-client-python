@@ -30,27 +30,163 @@ class UnifiedriskTransaction(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'transaction_id': 'str'
+        'transaction_id': 'str',
+        'status': 'str',
+        'status_reason': 'str',
+        'message_type': 'str',
+        'type': 'str',
+        'attribute': 'str',
+        'initiator': 'str',
+        'channel': 'str',
+        'timestamp': 'datetime',
+        'cutoff_date_time': 'datetime',
+        'is_recurring': 'bool',
+        'pre_order': 'bool',
+        'pre_order_date': 'date',
+        'reordered': 'bool',
+        'destination_country': 'str',
+        'decline_phase': 'str',
+        'trusted_merchant': 'bool',
+        'additional_fees': 'UnifiedriskTransactionAdditionalFees',
+        'amount': 'UnifiedriskTransactionAmount',
+        'recurring_details': 'UnifiedriskTransactionRecurringDetails',
+        'direction': 'str',
+        'is_chargeback': 'bool',
+        'fraud_liability': 'str',
+        'on_us_flag': 'bool',
+        'number_of_transactions': 'int',
+        'batch_details': 'UnifiedriskTransactionBatchDetails',
+        'check_details': 'UnifiedriskTransactionCheckDetails',
+        'purpose': 'str'
     }
 
     attribute_map = {
-        'transaction_id': 'transactionId'
+        'transaction_id': 'transactionId',
+        'status': 'status',
+        'status_reason': 'statusReason',
+        'message_type': 'messageType',
+        'type': 'type',
+        'attribute': 'attribute',
+        'initiator': 'initiator',
+        'channel': 'channel',
+        'timestamp': 'timestamp',
+        'cutoff_date_time': 'cutoffDateTime',
+        'is_recurring': 'isRecurring',
+        'pre_order': 'preOrder',
+        'pre_order_date': 'preOrderDate',
+        'reordered': 'reordered',
+        'destination_country': 'destinationCountry',
+        'decline_phase': 'declinePhase',
+        'trusted_merchant': 'trustedMerchant',
+        'additional_fees': 'additionalFees',
+        'amount': 'amount',
+        'recurring_details': 'recurringDetails',
+        'direction': 'direction',
+        'is_chargeback': 'isChargeback',
+        'fraud_liability': 'fraudLiability',
+        'on_us_flag': 'onUsFlag',
+        'number_of_transactions': 'numberOfTransactions',
+        'batch_details': 'batchDetails',
+        'check_details': 'checkDetails',
+        'purpose': 'purpose'
     }
 
-    def __init__(self, transaction_id=None):
+    def __init__(self, transaction_id=None, status=None, status_reason=None, message_type=None, type=None, attribute=None, initiator=None, channel=None, timestamp=None, cutoff_date_time=None, is_recurring=None, pre_order=None, pre_order_date=None, reordered=None, destination_country=None, decline_phase=None, trusted_merchant=None, additional_fees=None, amount=None, recurring_details=None, direction=None, is_chargeback=None, fraud_liability=None, on_us_flag=None, number_of_transactions=None, batch_details=None, check_details=None, purpose=None):
         """
         UnifiedriskTransaction - a model defined in Swagger
         """
 
         self._transaction_id = None
+        self._status = None
+        self._status_reason = None
+        self._message_type = None
+        self._type = None
+        self._attribute = None
+        self._initiator = None
+        self._channel = None
+        self._timestamp = None
+        self._cutoff_date_time = None
+        self._is_recurring = None
+        self._pre_order = None
+        self._pre_order_date = None
+        self._reordered = None
+        self._destination_country = None
+        self._decline_phase = None
+        self._trusted_merchant = None
+        self._additional_fees = None
+        self._amount = None
+        self._recurring_details = None
+        self._direction = None
+        self._is_chargeback = None
+        self._fraud_liability = None
+        self._on_us_flag = None
+        self._number_of_transactions = None
+        self._batch_details = None
+        self._check_details = None
+        self._purpose = None
 
-        self.transaction_id = transaction_id
+        if transaction_id is not None:
+          self.transaction_id = transaction_id
+        if status is not None:
+          self.status = status
+        if status_reason is not None:
+          self.status_reason = status_reason
+        if message_type is not None:
+          self.message_type = message_type
+        if type is not None:
+          self.type = type
+        if attribute is not None:
+          self.attribute = attribute
+        if initiator is not None:
+          self.initiator = initiator
+        if channel is not None:
+          self.channel = channel
+        if timestamp is not None:
+          self.timestamp = timestamp
+        if cutoff_date_time is not None:
+          self.cutoff_date_time = cutoff_date_time
+        if is_recurring is not None:
+          self.is_recurring = is_recurring
+        if pre_order is not None:
+          self.pre_order = pre_order
+        if pre_order_date is not None:
+          self.pre_order_date = pre_order_date
+        if reordered is not None:
+          self.reordered = reordered
+        if destination_country is not None:
+          self.destination_country = destination_country
+        if decline_phase is not None:
+          self.decline_phase = decline_phase
+        if trusted_merchant is not None:
+          self.trusted_merchant = trusted_merchant
+        if additional_fees is not None:
+          self.additional_fees = additional_fees
+        if amount is not None:
+          self.amount = amount
+        if recurring_details is not None:
+          self.recurring_details = recurring_details
+        if direction is not None:
+          self.direction = direction
+        if is_chargeback is not None:
+          self.is_chargeback = is_chargeback
+        if fraud_liability is not None:
+          self.fraud_liability = fraud_liability
+        if on_us_flag is not None:
+          self.on_us_flag = on_us_flag
+        if number_of_transactions is not None:
+          self.number_of_transactions = number_of_transactions
+        if batch_details is not None:
+          self.batch_details = batch_details
+        if check_details is not None:
+          self.check_details = check_details
+        if purpose is not None:
+          self.purpose = purpose
 
     @property
     def transaction_id(self):
         """
         Gets the transaction_id of this UnifiedriskTransaction.
-        The transaction identifier correlating this label to the original risk assessment request
+        Unique identifier for the transaction being assessed
 
         :return: The transaction_id of this UnifiedriskTransaction.
         :rtype: str
@@ -61,13 +197,624 @@ class UnifiedriskTransaction(object):
     def transaction_id(self, transaction_id):
         """
         Sets the transaction_id of this UnifiedriskTransaction.
-        The transaction identifier correlating this label to the original risk assessment request
+        Unique identifier for the transaction being assessed
 
         :param transaction_id: The transaction_id of this UnifiedriskTransaction.
         :type: str
         """
 
         self._transaction_id = transaction_id
+
+    @property
+    def status(self):
+        """
+        Gets the status of this UnifiedriskTransaction.
+        Transaction status: NEW, APPROVED, DECLINED, REVERSED, FRAUD
+
+        :return: The status of this UnifiedriskTransaction.
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this UnifiedriskTransaction.
+        Transaction status: NEW, APPROVED, DECLINED, REVERSED, FRAUD
+
+        :param status: The status of this UnifiedriskTransaction.
+        :type: str
+        """
+
+        self._status = status
+
+    @property
+    def status_reason(self):
+        """
+        Gets the status_reason of this UnifiedriskTransaction.
+        Reason code for the transaction status
+
+        :return: The status_reason of this UnifiedriskTransaction.
+        :rtype: str
+        """
+        return self._status_reason
+
+    @status_reason.setter
+    def status_reason(self, status_reason):
+        """
+        Sets the status_reason of this UnifiedriskTransaction.
+        Reason code for the transaction status
+
+        :param status_reason: The status_reason of this UnifiedriskTransaction.
+        :type: str
+        """
+
+        self._status_reason = status_reason
+
+    @property
+    def message_type(self):
+        """
+        Gets the message_type of this UnifiedriskTransaction.
+        Message type: AUTHORIZATION, INQUIRY, ADVICE, REVERSAL
+
+        :return: The message_type of this UnifiedriskTransaction.
+        :rtype: str
+        """
+        return self._message_type
+
+    @message_type.setter
+    def message_type(self, message_type):
+        """
+        Sets the message_type of this UnifiedriskTransaction.
+        Message type: AUTHORIZATION, INQUIRY, ADVICE, REVERSAL
+
+        :param message_type: The message_type of this UnifiedriskTransaction.
+        :type: str
+        """
+
+        self._message_type = message_type
+
+    @property
+    def type(self):
+        """
+        Gets the type of this UnifiedriskTransaction.
+        The type of transaction being processed
+
+        :return: The type of this UnifiedriskTransaction.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this UnifiedriskTransaction.
+        The type of transaction being processed
+
+        :param type: The type of this UnifiedriskTransaction.
+        :type: str
+        """
+
+        self._type = type
+
+    @property
+    def attribute(self):
+        """
+        Gets the attribute of this UnifiedriskTransaction.
+        Transaction attribute: AGGREGATION, CARDLESS_ATM, etc
+
+        :return: The attribute of this UnifiedriskTransaction.
+        :rtype: str
+        """
+        return self._attribute
+
+    @attribute.setter
+    def attribute(self, attribute):
+        """
+        Sets the attribute of this UnifiedriskTransaction.
+        Transaction attribute: AGGREGATION, CARDLESS_ATM, etc
+
+        :param attribute: The attribute of this UnifiedriskTransaction.
+        :type: str
+        """
+
+        self._attribute = attribute
+
+    @property
+    def initiator(self):
+        """
+        Gets the initiator of this UnifiedriskTransaction.
+        Who initiated transaction: MERCHANT, CUSTOMER
+
+        :return: The initiator of this UnifiedriskTransaction.
+        :rtype: str
+        """
+        return self._initiator
+
+    @initiator.setter
+    def initiator(self, initiator):
+        """
+        Sets the initiator of this UnifiedriskTransaction.
+        Who initiated transaction: MERCHANT, CUSTOMER
+
+        :param initiator: The initiator of this UnifiedriskTransaction.
+        :type: str
+        """
+
+        self._initiator = initiator
+
+    @property
+    def channel(self):
+        """
+        Gets the channel of this UnifiedriskTransaction.
+        Channel used: ONLINE, MOBILE, ATM, BRANCH, etc
+
+        :return: The channel of this UnifiedriskTransaction.
+        :rtype: str
+        """
+        return self._channel
+
+    @channel.setter
+    def channel(self, channel):
+        """
+        Sets the channel of this UnifiedriskTransaction.
+        Channel used: ONLINE, MOBILE, ATM, BRANCH, etc
+
+        :param channel: The channel of this UnifiedriskTransaction.
+        :type: str
+        """
+
+        self._channel = channel
+
+    @property
+    def timestamp(self):
+        """
+        Gets the timestamp of this UnifiedriskTransaction.
+        Local transaction timestamp without timezone
+
+        :return: The timestamp of this UnifiedriskTransaction.
+        :rtype: datetime
+        """
+        return self._timestamp
+
+    @timestamp.setter
+    def timestamp(self, timestamp):
+        """
+        Sets the timestamp of this UnifiedriskTransaction.
+        Local transaction timestamp without timezone
+
+        :param timestamp: The timestamp of this UnifiedriskTransaction.
+        :type: datetime
+        """
+
+        self._timestamp = timestamp
+
+    @property
+    def cutoff_date_time(self):
+        """
+        Gets the cutoff_date_time of this UnifiedriskTransaction.
+        Cutoff date/time for event or journey
+
+        :return: The cutoff_date_time of this UnifiedriskTransaction.
+        :rtype: datetime
+        """
+        return self._cutoff_date_time
+
+    @cutoff_date_time.setter
+    def cutoff_date_time(self, cutoff_date_time):
+        """
+        Sets the cutoff_date_time of this UnifiedriskTransaction.
+        Cutoff date/time for event or journey
+
+        :param cutoff_date_time: The cutoff_date_time of this UnifiedriskTransaction.
+        :type: datetime
+        """
+
+        self._cutoff_date_time = cutoff_date_time
+
+    @property
+    def is_recurring(self):
+        """
+        Gets the is_recurring of this UnifiedriskTransaction.
+        Indicates if this is a recurring transaction
+
+        :return: The is_recurring of this UnifiedriskTransaction.
+        :rtype: bool
+        """
+        return self._is_recurring
+
+    @is_recurring.setter
+    def is_recurring(self, is_recurring):
+        """
+        Sets the is_recurring of this UnifiedriskTransaction.
+        Indicates if this is a recurring transaction
+
+        :param is_recurring: The is_recurring of this UnifiedriskTransaction.
+        :type: bool
+        """
+
+        self._is_recurring = is_recurring
+
+    @property
+    def pre_order(self):
+        """
+        Gets the pre_order of this UnifiedriskTransaction.
+        Indicates if this is a pre-order
+
+        :return: The pre_order of this UnifiedriskTransaction.
+        :rtype: bool
+        """
+        return self._pre_order
+
+    @pre_order.setter
+    def pre_order(self, pre_order):
+        """
+        Sets the pre_order of this UnifiedriskTransaction.
+        Indicates if this is a pre-order
+
+        :param pre_order: The pre_order of this UnifiedriskTransaction.
+        :type: bool
+        """
+
+        self._pre_order = pre_order
+
+    @property
+    def pre_order_date(self):
+        """
+        Gets the pre_order_date of this UnifiedriskTransaction.
+        Expected availability date for pre-order
+
+        :return: The pre_order_date of this UnifiedriskTransaction.
+        :rtype: date
+        """
+        return self._pre_order_date
+
+    @pre_order_date.setter
+    def pre_order_date(self, pre_order_date):
+        """
+        Sets the pre_order_date of this UnifiedriskTransaction.
+        Expected availability date for pre-order
+
+        :param pre_order_date: The pre_order_date of this UnifiedriskTransaction.
+        :type: date
+        """
+
+        self._pre_order_date = pre_order_date
+
+    @property
+    def reordered(self):
+        """
+        Gets the reordered of this UnifiedriskTransaction.
+        Indicates if customer is reordering
+
+        :return: The reordered of this UnifiedriskTransaction.
+        :rtype: bool
+        """
+        return self._reordered
+
+    @reordered.setter
+    def reordered(self, reordered):
+        """
+        Sets the reordered of this UnifiedriskTransaction.
+        Indicates if customer is reordering
+
+        :param reordered: The reordered of this UnifiedriskTransaction.
+        :type: bool
+        """
+
+        self._reordered = reordered
+
+    @property
+    def destination_country(self):
+        """
+        Gets the destination_country of this UnifiedriskTransaction.
+        Destination country for funds
+
+        :return: The destination_country of this UnifiedriskTransaction.
+        :rtype: str
+        """
+        return self._destination_country
+
+    @destination_country.setter
+    def destination_country(self, destination_country):
+        """
+        Sets the destination_country of this UnifiedriskTransaction.
+        Destination country for funds
+
+        :param destination_country: The destination_country of this UnifiedriskTransaction.
+        :type: str
+        """
+
+        self._destination_country = destination_country
+
+    @property
+    def decline_phase(self):
+        """
+        Gets the decline_phase of this UnifiedriskTransaction.
+        Phase where transaction was declined
+
+        :return: The decline_phase of this UnifiedriskTransaction.
+        :rtype: str
+        """
+        return self._decline_phase
+
+    @decline_phase.setter
+    def decline_phase(self, decline_phase):
+        """
+        Sets the decline_phase of this UnifiedriskTransaction.
+        Phase where transaction was declined
+
+        :param decline_phase: The decline_phase of this UnifiedriskTransaction.
+        :type: str
+        """
+
+        self._decline_phase = decline_phase
+
+    @property
+    def trusted_merchant(self):
+        """
+        Gets the trusted_merchant of this UnifiedriskTransaction.
+        Indicates if merchant is on trusted list
+
+        :return: The trusted_merchant of this UnifiedriskTransaction.
+        :rtype: bool
+        """
+        return self._trusted_merchant
+
+    @trusted_merchant.setter
+    def trusted_merchant(self, trusted_merchant):
+        """
+        Sets the trusted_merchant of this UnifiedriskTransaction.
+        Indicates if merchant is on trusted list
+
+        :param trusted_merchant: The trusted_merchant of this UnifiedriskTransaction.
+        :type: bool
+        """
+
+        self._trusted_merchant = trusted_merchant
+
+    @property
+    def additional_fees(self):
+        """
+        Gets the additional_fees of this UnifiedriskTransaction.
+
+        :return: The additional_fees of this UnifiedriskTransaction.
+        :rtype: UnifiedriskTransactionAdditionalFees
+        """
+        return self._additional_fees
+
+    @additional_fees.setter
+    def additional_fees(self, additional_fees):
+        """
+        Sets the additional_fees of this UnifiedriskTransaction.
+
+        :param additional_fees: The additional_fees of this UnifiedriskTransaction.
+        :type: UnifiedriskTransactionAdditionalFees
+        """
+
+        self._additional_fees = additional_fees
+
+    @property
+    def amount(self):
+        """
+        Gets the amount of this UnifiedriskTransaction.
+
+        :return: The amount of this UnifiedriskTransaction.
+        :rtype: UnifiedriskTransactionAmount
+        """
+        return self._amount
+
+    @amount.setter
+    def amount(self, amount):
+        """
+        Sets the amount of this UnifiedriskTransaction.
+
+        :param amount: The amount of this UnifiedriskTransaction.
+        :type: UnifiedriskTransactionAmount
+        """
+
+        self._amount = amount
+
+    @property
+    def recurring_details(self):
+        """
+        Gets the recurring_details of this UnifiedriskTransaction.
+
+        :return: The recurring_details of this UnifiedriskTransaction.
+        :rtype: UnifiedriskTransactionRecurringDetails
+        """
+        return self._recurring_details
+
+    @recurring_details.setter
+    def recurring_details(self, recurring_details):
+        """
+        Sets the recurring_details of this UnifiedriskTransaction.
+
+        :param recurring_details: The recurring_details of this UnifiedriskTransaction.
+        :type: UnifiedriskTransactionRecurringDetails
+        """
+
+        self._recurring_details = recurring_details
+
+    @property
+    def direction(self):
+        """
+        Gets the direction of this UnifiedriskTransaction.
+        Direction of the transaction flow relative to the customer's account (e.g., CREDIT for incoming funds, DEBIT for outgoing funds). Determines risk model orientation and velocity tracking
+
+        :return: The direction of this UnifiedriskTransaction.
+        :rtype: str
+        """
+        return self._direction
+
+    @direction.setter
+    def direction(self, direction):
+        """
+        Sets the direction of this UnifiedriskTransaction.
+        Direction of the transaction flow relative to the customer's account (e.g., CREDIT for incoming funds, DEBIT for outgoing funds). Determines risk model orientation and velocity tracking
+
+        :param direction: The direction of this UnifiedriskTransaction.
+        :type: str
+        """
+
+        self._direction = direction
+
+    @property
+    def is_chargeback(self):
+        """
+        Gets the is_chargeback of this UnifiedriskTransaction.
+        Indicates whether this transaction represents a chargeback or dispute reversal. True signals a disputed transaction requiring fraud investigation and issuer liability assessment
+
+        :return: The is_chargeback of this UnifiedriskTransaction.
+        :rtype: bool
+        """
+        return self._is_chargeback
+
+    @is_chargeback.setter
+    def is_chargeback(self, is_chargeback):
+        """
+        Sets the is_chargeback of this UnifiedriskTransaction.
+        Indicates whether this transaction represents a chargeback or dispute reversal. True signals a disputed transaction requiring fraud investigation and issuer liability assessment
+
+        :param is_chargeback: The is_chargeback of this UnifiedriskTransaction.
+        :type: bool
+        """
+
+        self._is_chargeback = is_chargeback
+
+    @property
+    def fraud_liability(self):
+        """
+        Gets the fraud_liability of this UnifiedriskTransaction.
+        Indicates which party bears fraud liability for this transaction (e.g., ISSUER, MERCHANT, ACQUIRER). Liability shifts apply in 3DS-authenticated or EMV chip transactions
+
+        :return: The fraud_liability of this UnifiedriskTransaction.
+        :rtype: str
+        """
+        return self._fraud_liability
+
+    @fraud_liability.setter
+    def fraud_liability(self, fraud_liability):
+        """
+        Sets the fraud_liability of this UnifiedriskTransaction.
+        Indicates which party bears fraud liability for this transaction (e.g., ISSUER, MERCHANT, ACQUIRER). Liability shifts apply in 3DS-authenticated or EMV chip transactions
+
+        :param fraud_liability: The fraud_liability of this UnifiedriskTransaction.
+        :type: str
+        """
+
+        self._fraud_liability = fraud_liability
+
+    @property
+    def on_us_flag(self):
+        """
+        Gets the on_us_flag of this UnifiedriskTransaction.
+        Indicates whether the transaction is an on-us transaction where the issuing and acquiring institutions are the same entity. On-us transactions may follow different risk rules and processing paths
+
+        :return: The on_us_flag of this UnifiedriskTransaction.
+        :rtype: bool
+        """
+        return self._on_us_flag
+
+    @on_us_flag.setter
+    def on_us_flag(self, on_us_flag):
+        """
+        Sets the on_us_flag of this UnifiedriskTransaction.
+        Indicates whether the transaction is an on-us transaction where the issuing and acquiring institutions are the same entity. On-us transactions may follow different risk rules and processing paths
+
+        :param on_us_flag: The on_us_flag of this UnifiedriskTransaction.
+        :type: bool
+        """
+
+        self._on_us_flag = on_us_flag
+
+    @property
+    def number_of_transactions(self):
+        """
+        Gets the number_of_transactions of this UnifiedriskTransaction.
+        Total count of transactions associated with this batch, order, or session. Used for velocity-based risk rules and aggregated fraud monitoring
+
+        :return: The number_of_transactions of this UnifiedriskTransaction.
+        :rtype: int
+        """
+        return self._number_of_transactions
+
+    @number_of_transactions.setter
+    def number_of_transactions(self, number_of_transactions):
+        """
+        Sets the number_of_transactions of this UnifiedriskTransaction.
+        Total count of transactions associated with this batch, order, or session. Used for velocity-based risk rules and aggregated fraud monitoring
+
+        :param number_of_transactions: The number_of_transactions of this UnifiedriskTransaction.
+        :type: int
+        """
+
+        self._number_of_transactions = number_of_transactions
+
+    @property
+    def batch_details(self):
+        """
+        Gets the batch_details of this UnifiedriskTransaction.
+
+        :return: The batch_details of this UnifiedriskTransaction.
+        :rtype: UnifiedriskTransactionBatchDetails
+        """
+        return self._batch_details
+
+    @batch_details.setter
+    def batch_details(self, batch_details):
+        """
+        Sets the batch_details of this UnifiedriskTransaction.
+
+        :param batch_details: The batch_details of this UnifiedriskTransaction.
+        :type: UnifiedriskTransactionBatchDetails
+        """
+
+        self._batch_details = batch_details
+
+    @property
+    def check_details(self):
+        """
+        Gets the check_details of this UnifiedriskTransaction.
+
+        :return: The check_details of this UnifiedriskTransaction.
+        :rtype: UnifiedriskTransactionCheckDetails
+        """
+        return self._check_details
+
+    @check_details.setter
+    def check_details(self, check_details):
+        """
+        Sets the check_details of this UnifiedriskTransaction.
+
+        :param check_details: The check_details of this UnifiedriskTransaction.
+        :type: UnifiedriskTransactionCheckDetails
+        """
+
+        self._check_details = check_details
+
+    @property
+    def purpose(self):
+        """
+        Gets the purpose of this UnifiedriskTransaction.
+        Business purpose or reason code for this transaction (e.g., PURCH for purchase, SALA for salary, REFND for refund). Used for transaction classification and AML monitoring
+
+        :return: The purpose of this UnifiedriskTransaction.
+        :rtype: str
+        """
+        return self._purpose
+
+    @purpose.setter
+    def purpose(self, purpose):
+        """
+        Sets the purpose of this UnifiedriskTransaction.
+        Business purpose or reason code for this transaction (e.g., PURCH for purchase, SALA for salary, REFND for refund). Used for transaction classification and AML monitoring
+
+        :param purpose: The purpose of this UnifiedriskTransaction.
+        :type: str
+        """
+
+        self._purpose = purpose
 
     def to_dict(self):
         """

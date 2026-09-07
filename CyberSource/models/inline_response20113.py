@@ -30,83 +30,104 @@ class InlineResponse20113(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'ucp': 'InlineResponse20113Ucp',
         'id': 'str',
         'status': 'str',
         'currency': 'str',
+        'buyer': 'UcpCheckoutSessionResponseBuyer',
         'line_items': 'list[InlineResponse20113LineItems]',
-        'fulfillment_address': 'InlineResponse20113FulfillmentAddress',
-        'fulfillment_options': 'list[InlineResponse20113FulfillmentOptions]',
-        'fulfillment_option_id': 'str',
-        'totals': 'list[InlineResponse20113Totals]',
-        'buyer': 'AcpCheckoutSessionResponseBuyer',
-        'payment_provider': 'InlineResponse20113PaymentProvider',
-        'messages': 'list[InlineResponse20113Messages]',
-        'links': 'list[InlineResponse20113Links]'
+        'totals': 'list[Iccv1checkoutsessionsFulfillmentTotals]',
+        'fulfillment': 'InlineResponse20113Fulfillment',
+        'payment': 'InlineResponse20113Payment',
+        'discounts': 'InlineResponse20113Discounts',
+        'order': 'InlineResponse20113Order',
+        'links': 'list[InlineResponse20112Links]'
     }
 
     attribute_map = {
+        'ucp': 'ucp',
         'id': 'id',
         'status': 'status',
         'currency': 'currency',
-        'line_items': 'line_items',
-        'fulfillment_address': 'fulfillment_address',
-        'fulfillment_options': 'fulfillment_options',
-        'fulfillment_option_id': 'fulfillment_option_id',
-        'totals': 'totals',
         'buyer': 'buyer',
-        'payment_provider': 'payment_provider',
-        'messages': 'messages',
+        'line_items': 'line_items',
+        'totals': 'totals',
+        'fulfillment': 'fulfillment',
+        'payment': 'payment',
+        'discounts': 'discounts',
+        'order': 'order',
         'links': 'links'
     }
 
-    def __init__(self, id=None, status=None, currency=None, line_items=None, fulfillment_address=None, fulfillment_options=None, fulfillment_option_id=None, totals=None, buyer=None, payment_provider=None, messages=None, links=None):
+    def __init__(self, ucp=None, id=None, status=None, currency=None, buyer=None, line_items=None, totals=None, fulfillment=None, payment=None, discounts=None, order=None, links=None):
         """
         InlineResponse20113 - a model defined in Swagger
         """
 
+        self._ucp = None
         self._id = None
         self._status = None
         self._currency = None
-        self._line_items = None
-        self._fulfillment_address = None
-        self._fulfillment_options = None
-        self._fulfillment_option_id = None
-        self._totals = None
         self._buyer = None
-        self._payment_provider = None
-        self._messages = None
+        self._line_items = None
+        self._totals = None
+        self._fulfillment = None
+        self._payment = None
+        self._discounts = None
+        self._order = None
         self._links = None
 
+        if ucp is not None:
+          self.ucp = ucp
         if id is not None:
           self.id = id
         if status is not None:
           self.status = status
         if currency is not None:
           self.currency = currency
-        if line_items is not None:
-          self.line_items = line_items
-        if fulfillment_address is not None:
-          self.fulfillment_address = fulfillment_address
-        if fulfillment_options is not None:
-          self.fulfillment_options = fulfillment_options
-        if fulfillment_option_id is not None:
-          self.fulfillment_option_id = fulfillment_option_id
-        if totals is not None:
-          self.totals = totals
         if buyer is not None:
           self.buyer = buyer
-        if payment_provider is not None:
-          self.payment_provider = payment_provider
-        if messages is not None:
-          self.messages = messages
+        if line_items is not None:
+          self.line_items = line_items
+        if totals is not None:
+          self.totals = totals
+        if fulfillment is not None:
+          self.fulfillment = fulfillment
+        if payment is not None:
+          self.payment = payment
+        if discounts is not None:
+          self.discounts = discounts
+        if order is not None:
+          self.order = order
         if links is not None:
           self.links = links
+
+    @property
+    def ucp(self):
+        """
+        Gets the ucp of this InlineResponse20113.
+
+        :return: The ucp of this InlineResponse20113.
+        :rtype: InlineResponse20113Ucp
+        """
+        return self._ucp
+
+    @ucp.setter
+    def ucp(self, ucp):
+        """
+        Sets the ucp of this InlineResponse20113.
+
+        :param ucp: The ucp of this InlineResponse20113.
+        :type: InlineResponse20113Ucp
+        """
+
+        self._ucp = ucp
 
     @property
     def id(self):
         """
         Gets the id of this InlineResponse20113.
-        Unique identifier for this checkout session. Required for all subsequent calls (update, complete, cancel). 
+        Unique UCP session identifier. Required for all subsequent UCP calls (update, complete, cancel). 
 
         :return: The id of this InlineResponse20113.
         :rtype: str
@@ -117,7 +138,7 @@ class InlineResponse20113(object):
     def id(self, id):
         """
         Sets the id of this InlineResponse20113.
-        Unique identifier for this checkout session. Required for all subsequent calls (update, complete, cancel). 
+        Unique UCP session identifier. Required for all subsequent UCP calls (update, complete, cancel). 
 
         :param id: The id of this InlineResponse20113.
         :type: str
@@ -129,7 +150,7 @@ class InlineResponse20113(object):
     def status(self):
         """
         Gets the status of this InlineResponse20113.
-        Current lifecycle state of the session per ACP spec: - `not_ready_for_payment` — session is open but not yet ready - `ready_for_payment` — session is ready to be completed - `completed` — order has been placed; session is immutable - `canceled` — session was abandoned; no charge was made   Possible values: - not_ready_for_payment - ready_for_payment - completed - canceled
+        Current lifecycle state of the session. - `active` — open and modifiable - `completed` — order placed, immutable - `cancelled` — abandoned, no charge made   Possible values: - active - completed - cancelled
 
         :return: The status of this InlineResponse20113.
         :rtype: str
@@ -140,7 +161,7 @@ class InlineResponse20113(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse20113.
-        Current lifecycle state of the session per ACP spec: - `not_ready_for_payment` — session is open but not yet ready - `ready_for_payment` — session is ready to be completed - `completed` — order has been placed; session is immutable - `canceled` — session was abandoned; no charge was made   Possible values: - not_ready_for_payment - ready_for_payment - completed - canceled
+        Current lifecycle state of the session. - `active` — open and modifiable - `completed` — order placed, immutable - `cancelled` — abandoned, no charge made   Possible values: - active - completed - cancelled
 
         :param status: The status of this InlineResponse20113.
         :type: str
@@ -152,7 +173,7 @@ class InlineResponse20113(object):
     def currency(self):
         """
         Gets the currency of this InlineResponse20113.
-        ISO 4217 lowercase currency code for this session.
+        ISO 4217 currency code for this session (e.g. `USD`, `EUR`).
 
         :return: The currency of this InlineResponse20113.
         :rtype: str
@@ -163,7 +184,7 @@ class InlineResponse20113(object):
     def currency(self, currency):
         """
         Sets the currency of this InlineResponse20113.
-        ISO 4217 lowercase currency code for this session.
+        ISO 4217 currency code for this session (e.g. `USD`, `EUR`).
 
         :param currency: The currency of this InlineResponse20113.
         :type: str
@@ -172,10 +193,31 @@ class InlineResponse20113(object):
         self._currency = currency
 
     @property
+    def buyer(self):
+        """
+        Gets the buyer of this InlineResponse20113.
+
+        :return: The buyer of this InlineResponse20113.
+        :rtype: UcpCheckoutSessionResponseBuyer
+        """
+        return self._buyer
+
+    @buyer.setter
+    def buyer(self, buyer):
+        """
+        Sets the buyer of this InlineResponse20113.
+
+        :param buyer: The buyer of this InlineResponse20113.
+        :type: UcpCheckoutSessionResponseBuyer
+        """
+
+        self._buyer = buyer
+
+    @property
     def line_items(self):
         """
         Gets the line_items of this InlineResponse20113.
-        Line items with merchant-confirmed pricing.
+        Cart line items with merchant-confirmed pricing.
 
         :return: The line_items of this InlineResponse20113.
         :rtype: list[InlineResponse20113LineItems]
@@ -186,7 +228,7 @@ class InlineResponse20113(object):
     def line_items(self, line_items):
         """
         Sets the line_items of this InlineResponse20113.
-        Line items with merchant-confirmed pricing.
+        Cart line items with merchant-confirmed pricing.
 
         :param line_items: The line_items of this InlineResponse20113.
         :type: list[InlineResponse20113LineItems]
@@ -195,80 +237,13 @@ class InlineResponse20113(object):
         self._line_items = line_items
 
     @property
-    def fulfillment_address(self):
-        """
-        Gets the fulfillment_address of this InlineResponse20113.
-
-        :return: The fulfillment_address of this InlineResponse20113.
-        :rtype: InlineResponse20113FulfillmentAddress
-        """
-        return self._fulfillment_address
-
-    @fulfillment_address.setter
-    def fulfillment_address(self, fulfillment_address):
-        """
-        Sets the fulfillment_address of this InlineResponse20113.
-
-        :param fulfillment_address: The fulfillment_address of this InlineResponse20113.
-        :type: InlineResponse20113FulfillmentAddress
-        """
-
-        self._fulfillment_address = fulfillment_address
-
-    @property
-    def fulfillment_options(self):
-        """
-        Gets the fulfillment_options of this InlineResponse20113.
-        Available fulfillment methods with pricing.
-
-        :return: The fulfillment_options of this InlineResponse20113.
-        :rtype: list[InlineResponse20113FulfillmentOptions]
-        """
-        return self._fulfillment_options
-
-    @fulfillment_options.setter
-    def fulfillment_options(self, fulfillment_options):
-        """
-        Sets the fulfillment_options of this InlineResponse20113.
-        Available fulfillment methods with pricing.
-
-        :param fulfillment_options: The fulfillment_options of this InlineResponse20113.
-        :type: list[InlineResponse20113FulfillmentOptions]
-        """
-
-        self._fulfillment_options = fulfillment_options
-
-    @property
-    def fulfillment_option_id(self):
-        """
-        Gets the fulfillment_option_id of this InlineResponse20113.
-        ID of the currently selected fulfillment option.
-
-        :return: The fulfillment_option_id of this InlineResponse20113.
-        :rtype: str
-        """
-        return self._fulfillment_option_id
-
-    @fulfillment_option_id.setter
-    def fulfillment_option_id(self, fulfillment_option_id):
-        """
-        Sets the fulfillment_option_id of this InlineResponse20113.
-        ID of the currently selected fulfillment option.
-
-        :param fulfillment_option_id: The fulfillment_option_id of this InlineResponse20113.
-        :type: str
-        """
-
-        self._fulfillment_option_id = fulfillment_option_id
-
-    @property
     def totals(self):
         """
         Gets the totals of this InlineResponse20113.
-        Order cost breakdown as an array of typed total lines. All amounts in minor units (cents).
+        Order cost breakdown. Each entry represents one total type (subtotal, tax, shipping, discount, or grand total). Amounts are in **cents** (not micros). 
 
         :return: The totals of this InlineResponse20113.
-        :rtype: list[InlineResponse20113Totals]
+        :rtype: list[Iccv1checkoutsessionsFulfillmentTotals]
         """
         return self._totals
 
@@ -276,87 +251,106 @@ class InlineResponse20113(object):
     def totals(self, totals):
         """
         Sets the totals of this InlineResponse20113.
-        Order cost breakdown as an array of typed total lines. All amounts in minor units (cents).
+        Order cost breakdown. Each entry represents one total type (subtotal, tax, shipping, discount, or grand total). Amounts are in **cents** (not micros). 
 
         :param totals: The totals of this InlineResponse20113.
-        :type: list[InlineResponse20113Totals]
+        :type: list[Iccv1checkoutsessionsFulfillmentTotals]
         """
 
         self._totals = totals
 
     @property
-    def buyer(self):
+    def fulfillment(self):
         """
-        Gets the buyer of this InlineResponse20113.
+        Gets the fulfillment of this InlineResponse20113.
 
-        :return: The buyer of this InlineResponse20113.
-        :rtype: AcpCheckoutSessionResponseBuyer
+        :return: The fulfillment of this InlineResponse20113.
+        :rtype: InlineResponse20113Fulfillment
         """
-        return self._buyer
+        return self._fulfillment
 
-    @buyer.setter
-    def buyer(self, buyer):
+    @fulfillment.setter
+    def fulfillment(self, fulfillment):
         """
-        Sets the buyer of this InlineResponse20113.
+        Sets the fulfillment of this InlineResponse20113.
 
-        :param buyer: The buyer of this InlineResponse20113.
-        :type: AcpCheckoutSessionResponseBuyer
+        :param fulfillment: The fulfillment of this InlineResponse20113.
+        :type: InlineResponse20113Fulfillment
         """
 
-        self._buyer = buyer
+        self._fulfillment = fulfillment
 
     @property
-    def payment_provider(self):
+    def payment(self):
         """
-        Gets the payment_provider of this InlineResponse20113.
+        Gets the payment of this InlineResponse20113.
 
-        :return: The payment_provider of this InlineResponse20113.
-        :rtype: InlineResponse20113PaymentProvider
+        :return: The payment of this InlineResponse20113.
+        :rtype: InlineResponse20113Payment
         """
-        return self._payment_provider
+        return self._payment
 
-    @payment_provider.setter
-    def payment_provider(self, payment_provider):
+    @payment.setter
+    def payment(self, payment):
         """
-        Sets the payment_provider of this InlineResponse20113.
+        Sets the payment of this InlineResponse20113.
 
-        :param payment_provider: The payment_provider of this InlineResponse20113.
-        :type: InlineResponse20113PaymentProvider
+        :param payment: The payment of this InlineResponse20113.
+        :type: InlineResponse20113Payment
         """
 
-        self._payment_provider = payment_provider
+        self._payment = payment
 
     @property
-    def messages(self):
+    def discounts(self):
         """
-        Gets the messages of this InlineResponse20113.
-        Informational or error messages from the merchant backend.
+        Gets the discounts of this InlineResponse20113.
 
-        :return: The messages of this InlineResponse20113.
-        :rtype: list[InlineResponse20113Messages]
+        :return: The discounts of this InlineResponse20113.
+        :rtype: InlineResponse20113Discounts
         """
-        return self._messages
+        return self._discounts
 
-    @messages.setter
-    def messages(self, messages):
+    @discounts.setter
+    def discounts(self, discounts):
         """
-        Sets the messages of this InlineResponse20113.
-        Informational or error messages from the merchant backend.
+        Sets the discounts of this InlineResponse20113.
 
-        :param messages: The messages of this InlineResponse20113.
-        :type: list[InlineResponse20113Messages]
+        :param discounts: The discounts of this InlineResponse20113.
+        :type: InlineResponse20113Discounts
         """
 
-        self._messages = messages
+        self._discounts = discounts
+
+    @property
+    def order(self):
+        """
+        Gets the order of this InlineResponse20113.
+
+        :return: The order of this InlineResponse20113.
+        :rtype: InlineResponse20113Order
+        """
+        return self._order
+
+    @order.setter
+    def order(self, order):
+        """
+        Sets the order of this InlineResponse20113.
+
+        :param order: The order of this InlineResponse20113.
+        :type: InlineResponse20113Order
+        """
+
+        self._order = order
 
     @property
     def links(self):
         """
         Gets the links of this InlineResponse20113.
-        Related resource links from the merchant (e.g. terms of use, privacy policy, seller shop policies). 
+        Related resource links (e.g. terms of use, privacy policy).
 
         :return: The links of this InlineResponse20113.
-        :rtype: list[InlineResponse20113Links]
+        :rtype: list[InlineResponse20112Links]
         """
         return self._links
 
@@ -364,10 +358,10 @@ class InlineResponse20113(object):
     def links(self, links):
         """
         Sets the links of this InlineResponse20113.
-        Related resource links from the merchant (e.g. terms of use, privacy policy, seller shop policies). 
+        Related resource links (e.g. terms of use, privacy policy).
 
         :param links: The links of this InlineResponse20113.
-        :type: list[InlineResponse20113Links]
+        :type: list[InlineResponse20112Links]
         """
 
         self._links = links

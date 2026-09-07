@@ -34,7 +34,7 @@ class InlineResponse2005(object):
         'integration_information': 'InlineResponse2005IntegrationInformation',
         'organization_information': 'Boardingv1registrationsOrganizationInformation',
         'product_information': 'Boardingv1registrationsProductInformation',
-        'product_information_setups': 'list[InlineResponse2017ProductInformationSetups]',
+        'product_information_setups': 'list[InlineResponse2016ProductInformationSetups]',
         'document_information': 'Boardingv1registrationsDocumentInformation',
         'details': 'dict(str, list[object])'
     }
@@ -167,7 +167,7 @@ class InlineResponse2005(object):
         Gets the product_information_setups of this InlineResponse2005.
 
         :return: The product_information_setups of this InlineResponse2005.
-        :rtype: list[InlineResponse2017ProductInformationSetups]
+        :rtype: list[InlineResponse2016ProductInformationSetups]
         """
         return self._product_information_setups
 
@@ -177,7 +177,7 @@ class InlineResponse2005(object):
         Sets the product_information_setups of this InlineResponse2005.
 
         :param product_information_setups: The product_information_setups of this InlineResponse2005.
-        :type: list[InlineResponse2017ProductInformationSetups]
+        :type: list[InlineResponse2016ProductInformationSetups]
         """
 
         self._product_information_setups = product_information_setups

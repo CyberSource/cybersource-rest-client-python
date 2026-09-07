@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **integration_information** | [**InlineResponse2005IntegrationInformation**](InlineResponse2005IntegrationInformation.md) |  | [optional] 
 **organization_information** | [**Boardingv1registrationsOrganizationInformation**](Boardingv1registrationsOrganizationInformation.md) |  | [optional] 
 **product_information** | [**Boardingv1registrationsProductInformation**](Boardingv1registrationsProductInformation.md) |  | [optional] 
-**product_information_setups** | [**list[InlineResponse2017ProductInformationSetups]**](InlineResponse2017ProductInformationSetups.md) |  | [optional] 
+**product_information_setups** | [**list[InlineResponse2016ProductInformationSetups]**](InlineResponse2016ProductInformationSetups.md) |  | [optional] 
 **document_information** | [**Boardingv1registrationsDocumentInformation**](Boardingv1registrationsDocumentInformation.md) |  | [optional] 
 **details** | **dict(str, list[object])** |  | [optional] 
 

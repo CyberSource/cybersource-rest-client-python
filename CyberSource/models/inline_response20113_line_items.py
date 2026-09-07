@@ -32,50 +32,35 @@ class InlineResponse20113LineItems(object):
     swagger_types = {
         'id': 'str',
         'item': 'InlineResponse20113Item',
-        'base_amount': 'int',
-        'discount': 'int',
-        'subtotal': 'int',
-        'tax': 'int',
-        'total': 'int'
+        'quantity': 'int',
+        'totals': 'list[Iccv1checkoutsessionsFulfillmentTotals]'
     }
 
     attribute_map = {
         'id': 'id',
         'item': 'item',
-        'base_amount': 'base_amount',
-        'discount': 'discount',
-        'subtotal': 'subtotal',
-        'tax': 'tax',
-        'total': 'total'
+        'quantity': 'quantity',
+        'totals': 'totals'
     }
 
-    def __init__(self, id=None, item=None, base_amount=None, discount=None, subtotal=None, tax=None, total=None):
+    def __init__(self, id=None, item=None, quantity=None, totals=None):
         """
         InlineResponse20113LineItems - a model defined in Swagger
         """
 
         self._id = None
         self._item = None
-        self._base_amount = None
-        self._discount = None
-        self._subtotal = None
-        self._tax = None
-        self._total = None
+        self._quantity = None
+        self._totals = None
 
         if id is not None:
           self.id = id
         if item is not None:
           self.item = item
-        if base_amount is not None:
-          self.base_amount = base_amount
-        if discount is not None:
-          self.discount = discount
-        if subtotal is not None:
-          self.subtotal = subtotal
-        if tax is not None:
-          self.tax = tax
-        if total is not None:
-          self.total = total
+        if quantity is not None:
+          self.quantity = quantity
+        if totals is not None:
+          self.totals = totals
 
     @property
     def id(self):
@@ -122,119 +107,50 @@ class InlineResponse20113LineItems(object):
         self._item = item
 
     @property
-    def base_amount(self):
+    def quantity(self):
         """
-        Gets the base_amount of this InlineResponse20113LineItems.
-        Unit price × quantity before discounts, in minor units.
+        Gets the quantity of this InlineResponse20113LineItems.
+        Number of units in this line item. Minimum 1.
 
-        :return: The base_amount of this InlineResponse20113LineItems.
+        :return: The quantity of this InlineResponse20113LineItems.
         :rtype: int
         """
-        return self._base_amount
+        return self._quantity
 
-    @base_amount.setter
-    def base_amount(self, base_amount):
+    @quantity.setter
+    def quantity(self, quantity):
         """
-        Sets the base_amount of this InlineResponse20113LineItems.
-        Unit price × quantity before discounts, in minor units.
+        Sets the quantity of this InlineResponse20113LineItems.
+        Number of units in this line item. Minimum 1.
 
-        :param base_amount: The base_amount of this InlineResponse20113LineItems.
+        :param quantity: The quantity of this InlineResponse20113LineItems.
         :type: int
         """
 
-        self._base_amount = base_amount
+        self._quantity = quantity
 
     @property
-    def discount(self):
+    def totals(self):
         """
-        Gets the discount of this InlineResponse20113LineItems.
-        Discount amount for this line item, in minor units.
+        Gets the totals of this InlineResponse20113LineItems.
+        Per-line-item cost breakdown (subtotal, tax, etc.). Amounts in cents.
 
-        :return: The discount of this InlineResponse20113LineItems.
-        :rtype: int
+        :return: The totals of this InlineResponse20113LineItems.
+        :rtype: list[Iccv1checkoutsessionsFulfillmentTotals]
         """
-        return self._discount
+        return self._totals
 
-    @discount.setter
-    def discount(self, discount):
+    @totals.setter
+    def totals(self, totals):
         """
-        Sets the discount of this InlineResponse20113LineItems.
-        Discount amount for this line item, in minor units.
+        Sets the totals of this InlineResponse20113LineItems.
+        Per-line-item cost breakdown (subtotal, tax, etc.). Amounts in cents.
 
-        :param discount: The discount of this InlineResponse20113LineItems.
-        :type: int
-        """
-
-        self._discount = discount
-
-    @property
-    def subtotal(self):
-        """
-        Gets the subtotal of this InlineResponse20113LineItems.
-        base_amount minus discount, in minor units.
-
-        :return: The subtotal of this InlineResponse20113LineItems.
-        :rtype: int
-        """
-        return self._subtotal
-
-    @subtotal.setter
-    def subtotal(self, subtotal):
-        """
-        Sets the subtotal of this InlineResponse20113LineItems.
-        base_amount minus discount, in minor units.
-
-        :param subtotal: The subtotal of this InlineResponse20113LineItems.
-        :type: int
+        :param totals: The totals of this InlineResponse20113LineItems.
+        :type: list[Iccv1checkoutsessionsFulfillmentTotals]
         """
 
-        self._subtotal = subtotal
-
-    @property
-    def tax(self):
-        """
-        Gets the tax of this InlineResponse20113LineItems.
-        Tax on this line item, in minor units.
-
-        :return: The tax of this InlineResponse20113LineItems.
-        :rtype: int
-        """
-        return self._tax
-
-    @tax.setter
-    def tax(self, tax):
-        """
-        Sets the tax of this InlineResponse20113LineItems.
-        Tax on this line item, in minor units.
-
-        :param tax: The tax of this InlineResponse20113LineItems.
-        :type: int
-        """
-
-        self._tax = tax
-
-    @property
-    def total(self):
-        """
-        Gets the total of this InlineResponse20113LineItems.
-        subtotal plus tax, in minor units.
-
-        :return: The total of this InlineResponse20113LineItems.
-        :rtype: int
-        """
-        return self._total
-
-    @total.setter
-    def total(self, total):
-        """
-        Sets the total of this InlineResponse20113LineItems.
-        subtotal plus tax, in minor units.
-
-        :param total: The total of this InlineResponse20113LineItems.
-        :type: int
-        """
-
-        self._total = total
+        self._totals = totals
 
     def to_dict(self):
         """

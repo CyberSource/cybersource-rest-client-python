@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **city** | **str** | Acquirer city. | [optional] 
 **state** | **str** | Acquirer state. | [optional] 
 **postal_code** | **str** | Acquirer postal code. | [optional] 
-**country** | **str** | Acquirer country. | [optional] 
+**country** | **str** | Acquirer country used for Payment Facilitator scenarios. | [optional] 
 **service_providername** | **str** | Contains transfer service provider name. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

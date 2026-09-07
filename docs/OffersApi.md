@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **create_offer**
-> InlineResponse20112 create_offer(content_type, x_requestid, v_c_merchant_id, v_c_correlation_id, v_c_organization_id, offer_request)
+> InlineResponse20111 create_offer(content_type, x_requestid, v_c_merchant_id, v_c_correlation_id, v_c_organization_id, offer_request)
 
 Create an Offer
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20112**](InlineResponse20112.md)
+[**InlineResponse20111**](InlineResponse20111.md)
 
 ### Authorization
 
