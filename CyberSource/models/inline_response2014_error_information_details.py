@@ -79,7 +79,7 @@ class InlineResponse2014ErrorInformationDetails(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse2014ErrorInformationDetails.
-        Possible reasons for the error.  Possible values: - `MISSING_FIELD` - `INVALID_DATA` 
+        Possible reasons for the error.  Possible values: - `INVALID_DATA` - `SYSTEM_ERROR` - `NOT_FOUND` - `UNAUTHORIZED` - `SYSTEM_TIMEOUT` - `PROCESSOR_ERROR` 
 
         :return: The reason of this InlineResponse2014ErrorInformationDetails.
         :rtype: str
@@ -90,7 +90,7 @@ class InlineResponse2014ErrorInformationDetails(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse2014ErrorInformationDetails.
-        Possible reasons for the error.  Possible values: - `MISSING_FIELD` - `INVALID_DATA` 
+        Possible reasons for the error.  Possible values: - `INVALID_DATA` - `SYSTEM_ERROR` - `NOT_FOUND` - `UNAUTHORIZED` - `SYSTEM_TIMEOUT` - `PROCESSOR_ERROR` 
 
         :param reason: The reason of this InlineResponse2014ErrorInformationDetails.
         :type: str

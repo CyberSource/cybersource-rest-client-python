@@ -69,7 +69,7 @@ class TransactionQueryApi(object):
         :param str v_c_organization_id: (required)
         :param int limit: The maximum number of options to be retrieved from the processor and displayed to the consumer. 
         :param int offset: Offset from the first item in the list of options received from the processor. If you want to display the options in multiple lists, this number represents the first option displayed in each list. 
-        :return: InlineResponse2015
+        :return: InlineResponse2014
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -107,7 +107,7 @@ class TransactionQueryApi(object):
         :param str v_c_organization_id: (required)
         :param int limit: The maximum number of options to be retrieved from the processor and displayed to the consumer. 
         :param int offset: Offset from the first item in the list of options received from the processor. If you want to display the options in multiple lists, this number represents the first option displayed in each list. 
-        :return: InlineResponse2015
+        :return: InlineResponse2014
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -221,7 +221,7 @@ class TransactionQueryApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2015',
+                                        response_type='InlineResponse2014',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

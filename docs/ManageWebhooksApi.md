@@ -61,7 +61,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_webhook_subscription_by_id**
-> InlineResponse2019 get_webhook_subscription_by_id(webhook_id)
+> InlineResponse2018 get_webhook_subscription_by_id(webhook_id)
 
 Get Details On a Single Webhook
 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2019**](InlineResponse2019.md)
+[**InlineResponse2018**](InlineResponse2018.md)
 
 ### Authorization
 
@@ -161,7 +161,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notification_subscriptions_v1_webhooks_webhook_id_post**
-> InlineResponse20110 notification_subscriptions_v1_webhooks_webhook_id_post(webhook_id)
+> InlineResponse2019 notification_subscriptions_v1_webhooks_webhook_id_post(webhook_id)
 
 Test a Webhook Configuration
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20110**](InlineResponse20110.md)
+[**InlineResponse2019**](InlineResponse2019.md)
 
 ### Authorization
 
@@ -308,7 +308,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **save_asym_egress_key**
-> InlineResponse20111 save_asym_egress_key(save_asym_egress_key, v_c_correlation_id=v_c_correlation_id, v_c_sender_organization_id=v_c_sender_organization_id, v_c_permissions=v_c_permissions)
+> InlineResponse20110 save_asym_egress_key(save_asym_egress_key, v_c_correlation_id=v_c_correlation_id, v_c_sender_organization_id=v_c_sender_organization_id, v_c_permissions=v_c_permissions)
 
 Message Level Encryption
 
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20111**](InlineResponse20111.md)
+[**InlineResponse20110**](InlineResponse20110.md)
 
 ### Authorization
 

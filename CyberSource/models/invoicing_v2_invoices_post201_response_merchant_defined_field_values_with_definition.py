@@ -30,6 +30,7 @@ class InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition
                             and the value is json key in definition.
     """
     swagger_types = {
+        'mdf_value_id': 'str',
         'reference_type': 'str',
         'label': 'str',
         'field_type': 'str',
@@ -46,6 +47,7 @@ class InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition
     }
 
     attribute_map = {
+        'mdf_value_id': 'mdfValueId',
         'reference_type': 'referenceType',
         'label': 'label',
         'field_type': 'fieldType',
@@ -61,11 +63,12 @@ class InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition
         'merchant_defined_data_index': 'merchantDefinedDataIndex'
     }
 
-    def __init__(self, reference_type=None, label=None, field_type=None, customer_visible=None, read_only=None, text_min_length=None, text_max_length=None, text_default_value=None, possible_values=None, value=None, position=None, definition_id=None, merchant_defined_data_index=None):
+    def __init__(self, mdf_value_id=None, reference_type=None, label=None, field_type=None, customer_visible=None, read_only=None, text_min_length=None, text_max_length=None, text_default_value=None, possible_values=None, value=None, position=None, definition_id=None, merchant_defined_data_index=None):
         """
         InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition - a model defined in Swagger
         """
 
+        self._mdf_value_id = None
         self._reference_type = None
         self._label = None
         self._field_type = None
@@ -80,6 +83,8 @@ class InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition
         self._definition_id = None
         self._merchant_defined_data_index = None
 
+        if mdf_value_id is not None:
+          self.mdf_value_id = mdf_value_id
         if reference_type is not None:
           self.reference_type = reference_type
         if label is not None:
@@ -106,6 +111,27 @@ class InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition
           self.definition_id = definition_id
         if merchant_defined_data_index is not None:
           self.merchant_defined_data_index = merchant_defined_data_index
+
+    @property
+    def mdf_value_id(self):
+        """
+        Gets the mdf_value_id of this InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition.
+
+        :return: The mdf_value_id of this InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition.
+        :rtype: str
+        """
+        return self._mdf_value_id
+
+    @mdf_value_id.setter
+    def mdf_value_id(self, mdf_value_id):
+        """
+        Sets the mdf_value_id of this InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition.
+
+        :param mdf_value_id: The mdf_value_id of this InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition.
+        :type: str
+        """
+
+        self._mdf_value_id = mdf_value_id
 
     @property
     def reference_type(self):

@@ -34,13 +34,13 @@ class InlineResponse20018(object):
         'status': 'str',
         'currency': 'str',
         'buyer': 'AcpCheckoutSessionResponseBuyer',
-        'line_items': 'list[InlineResponse20113LineItems]',
+        'line_items': 'list[InlineResponse20112LineItems]',
         'fulfillment_address': 'InlineResponse20017FulfillmentAddress',
-        'fulfillment_options': 'list[InlineResponse20113FulfillmentOptions]',
+        'fulfillment_options': 'list[InlineResponse20112FulfillmentOptions]',
         'fulfillment_option_id': 'str',
-        'totals': 'list[InlineResponse20113Totals]',
-        'messages': 'list[InlineResponse20113Messages]',
-        'links': 'list[InlineResponse20113Links]'
+        'totals': 'list[InlineResponse20112Totals]',
+        'messages': 'list[InlineResponse20112Messages]',
+        'links': 'list[InlineResponse20112Links]'
     }
 
     attribute_map = {
@@ -194,7 +194,7 @@ class InlineResponse20018(object):
         Line items with merchant-confirmed pricing.
 
         :return: The line_items of this InlineResponse20018.
-        :rtype: list[InlineResponse20113LineItems]
+        :rtype: list[InlineResponse20112LineItems]
         """
         return self._line_items
 
@@ -205,7 +205,7 @@ class InlineResponse20018(object):
         Line items with merchant-confirmed pricing.
 
         :param line_items: The line_items of this InlineResponse20018.
-        :type: list[InlineResponse20113LineItems]
+        :type: list[InlineResponse20112LineItems]
         """
 
         self._line_items = line_items
@@ -238,7 +238,7 @@ class InlineResponse20018(object):
         Available fulfillment methods with pricing.
 
         :return: The fulfillment_options of this InlineResponse20018.
-        :rtype: list[InlineResponse20113FulfillmentOptions]
+        :rtype: list[InlineResponse20112FulfillmentOptions]
         """
         return self._fulfillment_options
 
@@ -249,7 +249,7 @@ class InlineResponse20018(object):
         Available fulfillment methods with pricing.
 
         :param fulfillment_options: The fulfillment_options of this InlineResponse20018.
-        :type: list[InlineResponse20113FulfillmentOptions]
+        :type: list[InlineResponse20112FulfillmentOptions]
         """
 
         self._fulfillment_options = fulfillment_options
@@ -284,7 +284,7 @@ class InlineResponse20018(object):
         Order cost breakdown as typed total lines. All amounts in minor units (cents).
 
         :return: The totals of this InlineResponse20018.
-        :rtype: list[InlineResponse20113Totals]
+        :rtype: list[InlineResponse20112Totals]
         """
         return self._totals
 
@@ -295,7 +295,7 @@ class InlineResponse20018(object):
         Order cost breakdown as typed total lines. All amounts in minor units (cents).
 
         :param totals: The totals of this InlineResponse20018.
-        :type: list[InlineResponse20113Totals]
+        :type: list[InlineResponse20112Totals]
         """
 
         self._totals = totals
@@ -307,7 +307,7 @@ class InlineResponse20018(object):
         Informational or error messages from the merchant backend.
 
         :return: The messages of this InlineResponse20018.
-        :rtype: list[InlineResponse20113Messages]
+        :rtype: list[InlineResponse20112Messages]
         """
         return self._messages
 
@@ -318,7 +318,7 @@ class InlineResponse20018(object):
         Informational or error messages from the merchant backend.
 
         :param messages: The messages of this InlineResponse20018.
-        :type: list[InlineResponse20113Messages]
+        :type: list[InlineResponse20112Messages]
         """
 
         self._messages = messages
@@ -330,7 +330,7 @@ class InlineResponse20018(object):
         Related resource links from the merchant (e.g. terms of use, privacy policy).
 
         :return: The links of this InlineResponse20018.
-        :rtype: list[InlineResponse20113Links]
+        :rtype: list[InlineResponse20112Links]
         """
         return self._links
 
@@ -341,7 +341,7 @@ class InlineResponse20018(object):
         Related resource links from the merchant (e.g. terms of use, privacy policy).
 
         :param links: The links of this InlineResponse20018.
-        :type: list[InlineResponse20113Links]
+        :type: list[InlineResponse20112Links]
         """
 
         self._links = links

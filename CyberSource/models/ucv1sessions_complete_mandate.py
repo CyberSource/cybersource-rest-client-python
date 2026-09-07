@@ -33,17 +33,19 @@ class Ucv1sessionsCompleteMandate(object):
         'type': 'str',
         'tms': 'Ucv1sessionsCompleteMandateTms',
         'decision_manager': 'bool',
-        'consumer_authentication': 'str'
+        'consumer_authentication': 'str',
+        'suppress': 'bool'
     }
 
     attribute_map = {
         'type': 'type',
         'tms': 'tms',
         'decision_manager': 'decisionManager',
-        'consumer_authentication': 'consumerAuthentication'
+        'consumer_authentication': 'consumerAuthentication',
+        'suppress': 'suppress'
     }
 
-    def __init__(self, type=None, tms=None, decision_manager=None, consumer_authentication=None):
+    def __init__(self, type=None, tms=None, decision_manager=None, consumer_authentication=None, suppress=None):
         """
         Ucv1sessionsCompleteMandate - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class Ucv1sessionsCompleteMandate(object):
         self._tms = None
         self._decision_manager = None
         self._consumer_authentication = None
+        self._suppress = None
 
         if type is not None:
           self.type = type
@@ -61,6 +64,8 @@ class Ucv1sessionsCompleteMandate(object):
           self.decision_manager = decision_manager
         if consumer_authentication is not None:
           self.consumer_authentication = consumer_authentication
+        if suppress is not None:
+          self.suppress = suppress
 
     @property
     def type(self):
@@ -151,6 +156,29 @@ class Ucv1sessionsCompleteMandate(object):
         """
 
         self._consumer_authentication = consumer_authentication
+
+    @property
+    def suppress(self):
+        """
+        Gets the suppress of this Ucv1sessionsCompleteMandate.
+        Controls whether the Complete Mandate experience or related processing is suppressed. 
+
+        :return: The suppress of this Ucv1sessionsCompleteMandate.
+        :rtype: bool
+        """
+        return self._suppress
+
+    @suppress.setter
+    def suppress(self, suppress):
+        """
+        Sets the suppress of this Ucv1sessionsCompleteMandate.
+        Controls whether the Complete Mandate experience or related processing is suppressed. 
+
+        :param suppress: The suppress of this Ucv1sessionsCompleteMandate.
+        :type: bool
+        """
+
+        self._suppress = suppress
 
     def to_dict(self):
         """

@@ -33,17 +33,19 @@ class Ucv1sessionsDataConsumerAuthenticationInformation(object):
         'challenge_code': 'str',
         'message_category': 'str',
         'acs_window_size': 'str',
-        'product_code': 'str'
+        'product_code': 'str',
+        'language_preference': 'str'
     }
 
     attribute_map = {
         'challenge_code': 'challengeCode',
         'message_category': 'messageCategory',
         'acs_window_size': 'acsWindowSize',
-        'product_code': 'productCode'
+        'product_code': 'productCode',
+        'language_preference': 'languagePreference'
     }
 
-    def __init__(self, challenge_code=None, message_category=None, acs_window_size=None, product_code=None):
+    def __init__(self, challenge_code=None, message_category=None, acs_window_size=None, product_code=None, language_preference=None):
         """
         Ucv1sessionsDataConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class Ucv1sessionsDataConsumerAuthenticationInformation(object):
         self._message_category = None
         self._acs_window_size = None
         self._product_code = None
+        self._language_preference = None
 
         if challenge_code is not None:
           self.challenge_code = challenge_code
@@ -61,6 +64,8 @@ class Ucv1sessionsDataConsumerAuthenticationInformation(object):
           self.acs_window_size = acs_window_size
         if product_code is not None:
           self.product_code = product_code
+        if language_preference is not None:
+          self.language_preference = language_preference
 
     @property
     def challenge_code(self):
@@ -153,6 +158,29 @@ class Ucv1sessionsDataConsumerAuthenticationInformation(object):
         """
 
         self._product_code = product_code
+
+    @property
+    def language_preference(self):
+        """
+        Gets the language_preference of this Ucv1sessionsDataConsumerAuthenticationInformation.
+        Preferred language to be used for cardholder authentication and challenge experiences (subject to issuer/ACS support). 
+
+        :return: The language_preference of this Ucv1sessionsDataConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._language_preference
+
+    @language_preference.setter
+    def language_preference(self, language_preference):
+        """
+        Sets the language_preference of this Ucv1sessionsDataConsumerAuthenticationInformation.
+        Preferred language to be used for cardholder authentication and challenge experiences (subject to issuer/ACS support). 
+
+        :param language_preference: The language_preference of this Ucv1sessionsDataConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._language_preference = language_preference
 
     def to_dict(self):
         """

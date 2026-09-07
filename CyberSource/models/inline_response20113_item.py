@@ -31,37 +31,37 @@ class InlineResponse20113Item(object):
     """
     swagger_types = {
         'id': 'str',
-        'name': 'str',
-        'quantity': 'int'
+        'title': 'str',
+        'price': 'int'
     }
 
     attribute_map = {
         'id': 'id',
-        'name': 'name',
-        'quantity': 'quantity'
+        'title': 'title',
+        'price': 'price'
     }
 
-    def __init__(self, id=None, name=None, quantity=None):
+    def __init__(self, id=None, title=None, price=None):
         """
         InlineResponse20113Item - a model defined in Swagger
         """
 
         self._id = None
-        self._name = None
-        self._quantity = None
+        self._title = None
+        self._price = None
 
         if id is not None:
           self.id = id
-        if name is not None:
-          self.name = name
-        if quantity is not None:
-          self.quantity = quantity
+        if title is not None:
+          self.title = title
+        if price is not None:
+          self.price = price
 
     @property
     def id(self):
         """
         Gets the id of this InlineResponse20113Item.
-        Product identifier.
+        The merchant's product ID or SKU.
 
         :return: The id of this InlineResponse20113Item.
         :rtype: str
@@ -72,7 +72,7 @@ class InlineResponse20113Item(object):
     def id(self, id):
         """
         Sets the id of this InlineResponse20113Item.
-        Product identifier.
+        The merchant's product ID or SKU.
 
         :param id: The id of this InlineResponse20113Item.
         :type: str
@@ -81,50 +81,50 @@ class InlineResponse20113Item(object):
         self._id = id
 
     @property
-    def name(self):
+    def title(self):
         """
-        Gets the name of this InlineResponse20113Item.
-        Product display name.
+        Gets the title of this InlineResponse20113Item.
+        Human-readable product name.
 
-        :return: The name of this InlineResponse20113Item.
+        :return: The title of this InlineResponse20113Item.
         :rtype: str
         """
-        return self._name
+        return self._title
 
-    @name.setter
-    def name(self, name):
+    @title.setter
+    def title(self, title):
         """
-        Sets the name of this InlineResponse20113Item.
-        Product display name.
+        Sets the title of this InlineResponse20113Item.
+        Human-readable product name.
 
-        :param name: The name of this InlineResponse20113Item.
+        :param title: The title of this InlineResponse20113Item.
         :type: str
         """
 
-        self._name = name
+        self._title = title
 
     @property
-    def quantity(self):
+    def price(self):
         """
-        Gets the quantity of this InlineResponse20113Item.
-        Number of units.
+        Gets the price of this InlineResponse20113Item.
+        Unit price in cents. Example: 2999 = $29.99 USD.
 
-        :return: The quantity of this InlineResponse20113Item.
+        :return: The price of this InlineResponse20113Item.
         :rtype: int
         """
-        return self._quantity
+        return self._price
 
-    @quantity.setter
-    def quantity(self, quantity):
+    @price.setter
+    def price(self, price):
         """
-        Sets the quantity of this InlineResponse20113Item.
-        Number of units.
+        Sets the price of this InlineResponse20113Item.
+        Unit price in cents. Example: 2999 = $29.99 USD.
 
-        :param quantity: The quantity of this InlineResponse20113Item.
+        :param price: The price of this InlineResponse20113Item.
         :type: int
         """
 
-        self._quantity = quantity
+        self._price = price
 
     def to_dict(self):
         """

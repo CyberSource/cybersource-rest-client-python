@@ -58,7 +58,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notification_subscriptions_v2_webhooks_post**
-> InlineResponse2019 notification_subscriptions_v2_webhooks_post(create_webhook=create_webhook)
+> InlineResponse2018 notification_subscriptions_v2_webhooks_post(create_webhook=create_webhook)
 
 Create a New Webhook Subscription
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2019**](InlineResponse2019.md)
+[**InlineResponse2018**](InlineResponse2018.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **save_sym_egress_key**
-> InlineResponse2018 save_sym_egress_key(v_c_correlation_id=v_c_correlation_id, v_c_sender_organization_id=v_c_sender_organization_id, v_c_permissions=v_c_permissions, save_sym_egress_key=save_sym_egress_key)
+> InlineResponse2017 save_sym_egress_key(v_c_correlation_id=v_c_correlation_id, v_c_sender_organization_id=v_c_sender_organization_id, v_c_permissions=v_c_permissions, save_sym_egress_key=save_sym_egress_key)
 
 Create Webhook Security Keys
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2018**](InlineResponse2018.md)
+[**InlineResponse2017**](InlineResponse2017.md)
 
 ### Authorization
 

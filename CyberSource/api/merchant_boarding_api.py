@@ -318,7 +318,7 @@ class MerchantBoardingApi(object):
             for asynchronous request. (optional)
         :param PostRegistrationBody post_registration_body: Boarding registration data (required)
         :param str v_c_idempotency_id: defines idempotency of the request
-        :return: InlineResponse2017
+        :return: InlineResponse2016
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -348,7 +348,7 @@ class MerchantBoardingApi(object):
             for asynchronous request. (optional)
         :param PostRegistrationBody post_registration_body: Boarding registration data (required)
         :param str v_c_idempotency_id: defines idempotency of the request
-        :return: InlineResponse2017
+        :return: InlineResponse2016
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -417,7 +417,7 @@ class MerchantBoardingApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2017',
+                                        response_type='InlineResponse2016',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

@@ -30,7 +30,7 @@ class InlineResponse2004(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
+        'id': 'str',
         'field_type': 'str',
         'label': 'str',
         'customer_visible': 'bool',
@@ -108,7 +108,7 @@ class InlineResponse2004(object):
         Gets the id of this InlineResponse2004.
 
         :return: The id of this InlineResponse2004.
-        :rtype: int
+        :rtype: str
         """
         return self._id
 
@@ -118,7 +118,7 @@ class InlineResponse2004(object):
         Sets the id of this InlineResponse2004.
 
         :param id: The id of this InlineResponse2004.
-        :type: int
+        :type: str
         """
 
         self._id = id

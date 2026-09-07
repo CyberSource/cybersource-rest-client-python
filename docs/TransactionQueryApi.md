@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **create_query_api**
-> InlineResponse2015 create_query_api(id, body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, limit=limit, offset=offset)
+> InlineResponse2014 create_query_api(id, body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, limit=limit, offset=offset)
 
 Query Transaction Details
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2015**](InlineResponse2015.md)
+[**InlineResponse2014**](InlineResponse2014.md)
 
 ### Authorization
 

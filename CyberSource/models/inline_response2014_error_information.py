@@ -105,7 +105,7 @@ class InlineResponse2014ErrorInformation(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse2014ErrorInformation.
-        The reason of the status.  Possible values: - `INVALID_DATA` - `INVALID_MERCHANT_CONFIGURATION` - `SYSTEM_ERROR` 
+        Possible reasons for the error.  Possible values: - `INVALID_DATA` - `SYSTEM_ERROR` - `NOT_FOUND` - `UNAUTHORIZED` - `SYSTEM_TIMEOUT` - `PROCESSOR_ERROR` 
 
         :return: The reason of this InlineResponse2014ErrorInformation.
         :rtype: str
@@ -116,7 +116,7 @@ class InlineResponse2014ErrorInformation(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse2014ErrorInformation.
-        The reason of the status.  Possible values: - `INVALID_DATA` - `INVALID_MERCHANT_CONFIGURATION` - `SYSTEM_ERROR` 
+        Possible reasons for the error.  Possible values: - `INVALID_DATA` - `SYSTEM_ERROR` - `NOT_FOUND` - `UNAUTHORIZED` - `SYSTEM_TIMEOUT` - `PROCESSOR_ERROR` 
 
         :param reason: The reason of this InlineResponse2014ErrorInformation.
         :type: str

@@ -33,23 +33,23 @@ class InlineResponse2014(object):
         'id': 'str',
         'status': 'str',
         'submit_time_stamp_utc': 'str',
-        'order_information': 'InlineResponse2014OrderInformation',
-        'error_information': 'InlineResponse2014ErrorInformation',
-        'processor_information': 'InlineResponse2014ProcessorInformation',
-        'processing_information': 'InlineResponse2014ProcessingInformation'
+        'links': 'InlineResponse2014Links',
+        'transactions': 'list[InlineResponse2014Transactions]',
+        'client_reference_information': 'InlineResponse2014ClientReferenceInformation',
+        'error_information': 'InlineResponse2014ErrorInformation'
     }
 
     attribute_map = {
         'id': 'id',
         'status': 'status',
         'submit_time_stamp_utc': 'submitTimeStampUtc',
-        'order_information': 'orderInformation',
-        'error_information': 'errorInformation',
-        'processor_information': 'processorInformation',
-        'processing_information': 'processingInformation'
+        'links': '_links',
+        'transactions': 'transactions',
+        'client_reference_information': 'clientReferenceInformation',
+        'error_information': 'errorInformation'
     }
 
-    def __init__(self, id=None, status=None, submit_time_stamp_utc=None, order_information=None, error_information=None, processor_information=None, processing_information=None):
+    def __init__(self, id=None, status=None, submit_time_stamp_utc=None, links=None, transactions=None, client_reference_information=None, error_information=None):
         """
         InlineResponse2014 - a model defined in Swagger
         """
@@ -57,25 +57,24 @@ class InlineResponse2014(object):
         self._id = None
         self._status = None
         self._submit_time_stamp_utc = None
-        self._order_information = None
+        self._links = None
+        self._transactions = None
+        self._client_reference_information = None
         self._error_information = None
-        self._processor_information = None
-        self._processing_information = None
 
         if id is not None:
           self.id = id
-        if status is not None:
-          self.status = status
+        self.status = status
         if submit_time_stamp_utc is not None:
           self.submit_time_stamp_utc = submit_time_stamp_utc
-        if order_information is not None:
-          self.order_information = order_information
+        if links is not None:
+          self.links = links
+        if transactions is not None:
+          self.transactions = transactions
+        if client_reference_information is not None:
+          self.client_reference_information = client_reference_information
         if error_information is not None:
           self.error_information = error_information
-        if processor_information is not None:
-          self.processor_information = processor_information
-        if processing_information is not None:
-          self.processing_information = processing_information
 
     @property
     def id(self):
@@ -104,7 +103,7 @@ class InlineResponse2014(object):
     def status(self):
         """
         Gets the status of this InlineResponse2014.
-        The status of the submitted transaction.  Possible values: - `COMPLETED` - `INVALID_REQUEST` - `SERVER_ERROR` 
+        The status of the submitted transaction.  Possible values: - `COMPLETED` - `SERVER_ERROR` - `INVALID_REQUEST` - `DECLINED` 
 
         :return: The status of this InlineResponse2014.
         :rtype: str
@@ -115,7 +114,7 @@ class InlineResponse2014(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse2014.
-        The status of the submitted transaction.  Possible values: - `COMPLETED` - `INVALID_REQUEST` - `SERVER_ERROR` 
+        The status of the submitted transaction.  Possible values: - `COMPLETED` - `SERVER_ERROR` - `INVALID_REQUEST` - `DECLINED` 
 
         :param status: The status of this InlineResponse2014.
         :type: str
@@ -147,25 +146,67 @@ class InlineResponse2014(object):
         self._submit_time_stamp_utc = submit_time_stamp_utc
 
     @property
-    def order_information(self):
+    def links(self):
         """
-        Gets the order_information of this InlineResponse2014.
+        Gets the links of this InlineResponse2014.
 
-        :return: The order_information of this InlineResponse2014.
-        :rtype: InlineResponse2014OrderInformation
+        :return: The links of this InlineResponse2014.
+        :rtype: InlineResponse2014Links
         """
-        return self._order_information
+        return self._links
 
-    @order_information.setter
-    def order_information(self, order_information):
+    @links.setter
+    def links(self, links):
         """
-        Sets the order_information of this InlineResponse2014.
+        Sets the links of this InlineResponse2014.
 
-        :param order_information: The order_information of this InlineResponse2014.
-        :type: InlineResponse2014OrderInformation
+        :param links: The links of this InlineResponse2014.
+        :type: InlineResponse2014Links
         """
 
-        self._order_information = order_information
+        self._links = links
+
+    @property
+    def transactions(self):
+        """
+        Gets the transactions of this InlineResponse2014.
+
+        :return: The transactions of this InlineResponse2014.
+        :rtype: list[InlineResponse2014Transactions]
+        """
+        return self._transactions
+
+    @transactions.setter
+    def transactions(self, transactions):
+        """
+        Sets the transactions of this InlineResponse2014.
+
+        :param transactions: The transactions of this InlineResponse2014.
+        :type: list[InlineResponse2014Transactions]
+        """
+
+        self._transactions = transactions
+
+    @property
+    def client_reference_information(self):
+        """
+        Gets the client_reference_information of this InlineResponse2014.
+
+        :return: The client_reference_information of this InlineResponse2014.
+        :rtype: InlineResponse2014ClientReferenceInformation
+        """
+        return self._client_reference_information
+
+    @client_reference_information.setter
+    def client_reference_information(self, client_reference_information):
+        """
+        Sets the client_reference_information of this InlineResponse2014.
+
+        :param client_reference_information: The client_reference_information of this InlineResponse2014.
+        :type: InlineResponse2014ClientReferenceInformation
+        """
+
+        self._client_reference_information = client_reference_information
 
     @property
     def error_information(self):
@@ -187,48 +228,6 @@ class InlineResponse2014(object):
         """
 
         self._error_information = error_information
-
-    @property
-    def processor_information(self):
-        """
-        Gets the processor_information of this InlineResponse2014.
-
-        :return: The processor_information of this InlineResponse2014.
-        :rtype: InlineResponse2014ProcessorInformation
-        """
-        return self._processor_information
-
-    @processor_information.setter
-    def processor_information(self, processor_information):
-        """
-        Sets the processor_information of this InlineResponse2014.
-
-        :param processor_information: The processor_information of this InlineResponse2014.
-        :type: InlineResponse2014ProcessorInformation
-        """
-
-        self._processor_information = processor_information
-
-    @property
-    def processing_information(self):
-        """
-        Gets the processing_information of this InlineResponse2014.
-
-        :return: The processing_information of this InlineResponse2014.
-        :rtype: InlineResponse2014ProcessingInformation
-        """
-        return self._processing_information
-
-    @processing_information.setter
-    def processing_information(self, processing_information):
-        """
-        Sets the processing_information of this InlineResponse2014.
-
-        :param processing_information: The processing_information of this InlineResponse2014.
-        :type: InlineResponse2014ProcessingInformation
-        """
-
-        self._processing_information = processing_information
 
     def to_dict(self):
         """

@@ -30,43 +30,127 @@ class InlineResponse2014ProcessingInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'routing': 'InlineResponse2014ProcessingInformationRouting'
+        'business_application_id': 'str',
+        'commerce_indicator': 'str',
+        'payouts_options': 'InlineResponse2014ProcessingInformationPayoutsOptions',
+        'reconciliation_id': 'str'
     }
 
     attribute_map = {
-        'routing': 'routing'
+        'business_application_id': 'businessApplicationId',
+        'commerce_indicator': 'commerceIndicator',
+        'payouts_options': 'payoutsOptions',
+        'reconciliation_id': 'reconciliationId'
     }
 
-    def __init__(self, routing=None):
+    def __init__(self, business_application_id=None, commerce_indicator=None, payouts_options=None, reconciliation_id=None):
         """
         InlineResponse2014ProcessingInformation - a model defined in Swagger
         """
 
-        self._routing = None
+        self._business_application_id = None
+        self._commerce_indicator = None
+        self._payouts_options = None
+        self._reconciliation_id = None
 
-        if routing is not None:
-          self.routing = routing
+        if business_application_id is not None:
+          self.business_application_id = business_application_id
+        if commerce_indicator is not None:
+          self.commerce_indicator = commerce_indicator
+        if payouts_options is not None:
+          self.payouts_options = payouts_options
+        if reconciliation_id is not None:
+          self.reconciliation_id = reconciliation_id
 
     @property
-    def routing(self):
+    def business_application_id(self):
         """
-        Gets the routing of this InlineResponse2014ProcessingInformation.
+        Gets the business_application_id of this InlineResponse2014ProcessingInformation.
+        Payouts transaction type.  Possible Values: - `AA` - Account to account - `AB` - Business to Business - `PP` - Person to person - `TU` - Top-up for enhanced prepaid loads - `WT` - Wallet transfer - `BI` - Bank Initiated - `FT` - Funds Transfer - `FD` - Funds Disbursement - `GD` - Government Disbursement - `PD` - Payroll Disbursement - `LA` - Liquid Assets - `CP` - Card Bill Payment - `MP` - Non-card Bill Payment - `CD` - Cash Deposit - `CI` - Cash in - `CO` - Cash out - `GP` - Gambling Payment - `LO` - Loyalty and Offers - `MD` - Merchant Disbursement - `MI` - Merchant Initiated OCT for Faster Refund - `OG` - Online Gambling - `OT` - Own Account Transfer - `PS` - Payment for goods and services - `RP` - Request-To-Pay Service 
 
-        :return: The routing of this InlineResponse2014ProcessingInformation.
-        :rtype: InlineResponse2014ProcessingInformationRouting
+        :return: The business_application_id of this InlineResponse2014ProcessingInformation.
+        :rtype: str
         """
-        return self._routing
+        return self._business_application_id
 
-    @routing.setter
-    def routing(self, routing):
+    @business_application_id.setter
+    def business_application_id(self, business_application_id):
         """
-        Sets the routing of this InlineResponse2014ProcessingInformation.
+        Sets the business_application_id of this InlineResponse2014ProcessingInformation.
+        Payouts transaction type.  Possible Values: - `AA` - Account to account - `AB` - Business to Business - `PP` - Person to person - `TU` - Top-up for enhanced prepaid loads - `WT` - Wallet transfer - `BI` - Bank Initiated - `FT` - Funds Transfer - `FD` - Funds Disbursement - `GD` - Government Disbursement - `PD` - Payroll Disbursement - `LA` - Liquid Assets - `CP` - Card Bill Payment - `MP` - Non-card Bill Payment - `CD` - Cash Deposit - `CI` - Cash in - `CO` - Cash out - `GP` - Gambling Payment - `LO` - Loyalty and Offers - `MD` - Merchant Disbursement - `MI` - Merchant Initiated OCT for Faster Refund - `OG` - Online Gambling - `OT` - Own Account Transfer - `PS` - Payment for goods and services - `RP` - Request-To-Pay Service 
 
-        :param routing: The routing of this InlineResponse2014ProcessingInformation.
-        :type: InlineResponse2014ProcessingInformationRouting
+        :param business_application_id: The business_application_id of this InlineResponse2014ProcessingInformation.
+        :type: str
         """
 
-        self._routing = routing
+        self._business_application_id = business_application_id
+
+    @property
+    def commerce_indicator(self):
+        """
+        Gets the commerce_indicator of this InlineResponse2014ProcessingInformation.
+        Type of transaction. 
+
+        :return: The commerce_indicator of this InlineResponse2014ProcessingInformation.
+        :rtype: str
+        """
+        return self._commerce_indicator
+
+    @commerce_indicator.setter
+    def commerce_indicator(self, commerce_indicator):
+        """
+        Sets the commerce_indicator of this InlineResponse2014ProcessingInformation.
+        Type of transaction. 
+
+        :param commerce_indicator: The commerce_indicator of this InlineResponse2014ProcessingInformation.
+        :type: str
+        """
+
+        self._commerce_indicator = commerce_indicator
+
+    @property
+    def payouts_options(self):
+        """
+        Gets the payouts_options of this InlineResponse2014ProcessingInformation.
+
+        :return: The payouts_options of this InlineResponse2014ProcessingInformation.
+        :rtype: InlineResponse2014ProcessingInformationPayoutsOptions
+        """
+        return self._payouts_options
+
+    @payouts_options.setter
+    def payouts_options(self, payouts_options):
+        """
+        Sets the payouts_options of this InlineResponse2014ProcessingInformation.
+
+        :param payouts_options: The payouts_options of this InlineResponse2014ProcessingInformation.
+        :type: InlineResponse2014ProcessingInformationPayoutsOptions
+        """
+
+        self._payouts_options = payouts_options
+
+    @property
+    def reconciliation_id(self):
+        """
+        Gets the reconciliation_id of this InlineResponse2014ProcessingInformation.
+        CyberSource or merchant generated transaction reference number. This is sent to the processor and is echoed back in the response to the merchant. This is This value is used for reconciliation purposes. 
+
+        :return: The reconciliation_id of this InlineResponse2014ProcessingInformation.
+        :rtype: str
+        """
+        return self._reconciliation_id
+
+    @reconciliation_id.setter
+    def reconciliation_id(self, reconciliation_id):
+        """
+        Sets the reconciliation_id of this InlineResponse2014ProcessingInformation.
+        CyberSource or merchant generated transaction reference number. This is sent to the processor and is echoed back in the response to the merchant. This is This value is used for reconciliation purposes. 
+
+        :param reconciliation_id: The reconciliation_id of this InlineResponse2014ProcessingInformation.
+        :type: str
+        """
+
+        self._reconciliation_id = reconciliation_id
 
     def to_dict(self):
         """
