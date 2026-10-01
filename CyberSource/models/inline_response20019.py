@@ -30,78 +30,66 @@ class InlineResponse20019(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'job_id': 'str',
         'status': 'str',
-        'feed_id': 'str',
-        'total_submitted': 'int',
-        'success_count': 'int',
-        'failed_count': 'int',
-        'errors': 'list[InlineResponse20019Errors]',
-        'ingested_at': 'datetime',
-        'forwarded_to_agent': 'bool',
-        'agent_endpoint': 'str',
-        'forwarded_to_ucp_agent': 'bool',
-        'google_merchant': 'InlineResponse20019GoogleMerchant'
+        'processing': 'InlineResponse20019Processing',
+        'syndication': 'dict(str, InlineResponse20019Syndication)'
     }
 
     attribute_map = {
+        'job_id': 'jobId',
         'status': 'status',
-        'feed_id': 'feed_id',
-        'total_submitted': 'total_submitted',
-        'success_count': 'success_count',
-        'failed_count': 'failed_count',
-        'errors': 'errors',
-        'ingested_at': 'ingested_at',
-        'forwarded_to_agent': 'forwarded_to_agent',
-        'agent_endpoint': 'agent_endpoint',
-        'forwarded_to_ucp_agent': 'forwarded_to_ucp_agent',
-        'google_merchant': 'google_merchant'
+        'processing': 'processing',
+        'syndication': 'syndication'
     }
 
-    def __init__(self, status=None, feed_id=None, total_submitted=None, success_count=None, failed_count=None, errors=None, ingested_at=None, forwarded_to_agent=None, agent_endpoint=None, forwarded_to_ucp_agent=None, google_merchant=None):
+    def __init__(self, job_id=None, status=None, processing=None, syndication=None):
         """
         InlineResponse20019 - a model defined in Swagger
         """
 
+        self._job_id = None
         self._status = None
-        self._feed_id = None
-        self._total_submitted = None
-        self._success_count = None
-        self._failed_count = None
-        self._errors = None
-        self._ingested_at = None
-        self._forwarded_to_agent = None
-        self._agent_endpoint = None
-        self._forwarded_to_ucp_agent = None
-        self._google_merchant = None
+        self._processing = None
+        self._syndication = None
 
+        if job_id is not None:
+          self.job_id = job_id
         if status is not None:
           self.status = status
-        if feed_id is not None:
-          self.feed_id = feed_id
-        if total_submitted is not None:
-          self.total_submitted = total_submitted
-        if success_count is not None:
-          self.success_count = success_count
-        if failed_count is not None:
-          self.failed_count = failed_count
-        if errors is not None:
-          self.errors = errors
-        if ingested_at is not None:
-          self.ingested_at = ingested_at
-        if forwarded_to_agent is not None:
-          self.forwarded_to_agent = forwarded_to_agent
-        if agent_endpoint is not None:
-          self.agent_endpoint = agent_endpoint
-        if forwarded_to_ucp_agent is not None:
-          self.forwarded_to_ucp_agent = forwarded_to_ucp_agent
-        if google_merchant is not None:
-          self.google_merchant = google_merchant
+        if processing is not None:
+          self.processing = processing
+        if syndication is not None:
+          self.syndication = syndication
+
+    @property
+    def job_id(self):
+        """
+        Gets the job_id of this InlineResponse20019.
+        Unique identifier of the feed submission job.
+
+        :return: The job_id of this InlineResponse20019.
+        :rtype: str
+        """
+        return self._job_id
+
+    @job_id.setter
+    def job_id(self, job_id):
+        """
+        Sets the job_id of this InlineResponse20019.
+        Unique identifier of the feed submission job.
+
+        :param job_id: The job_id of this InlineResponse20019.
+        :type: str
+        """
+
+        self._job_id = job_id
 
     @property
     def status(self):
         """
         Gets the status of this InlineResponse20019.
-        Overall ingestion result: - `success` — all products were validated and saved - `partial_success` — some products failed validation; `errors` lists the failures - `failed` — no products were saved; check `errors` for details   Possible values: - success - partial_success - failed
+        Overall status of the feed job.  Possible values: - PENDING - PROCESSING - COMPLETED - FAILED
 
         :return: The status of this InlineResponse20019.
         :rtype: str
@@ -112,7 +100,7 @@ class InlineResponse20019(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse20019.
-        Overall ingestion result: - `success` — all products were validated and saved - `partial_success` — some products failed validation; `errors` lists the failures - `failed` — no products were saved; check `errors` for details   Possible values: - success - partial_success - failed
+        Overall status of the feed job.  Possible values: - PENDING - PROCESSING - COMPLETED - FAILED
 
         :param status: The status of this InlineResponse20019.
         :type: str
@@ -121,232 +109,48 @@ class InlineResponse20019(object):
         self._status = status
 
     @property
-    def feed_id(self):
+    def processing(self):
         """
-        Gets the feed_id of this InlineResponse20019.
-        Unique identifier for this feed ingestion job. Use this with the Syndication Status endpoint to monitor the asynchronous protocol sync progress (e.g. to Google Merchant Center). 
+        Gets the processing of this InlineResponse20019.
 
-        :return: The feed_id of this InlineResponse20019.
-        :rtype: str
+        :return: The processing of this InlineResponse20019.
+        :rtype: InlineResponse20019Processing
         """
-        return self._feed_id
+        return self._processing
 
-    @feed_id.setter
-    def feed_id(self, feed_id):
+    @processing.setter
+    def processing(self, processing):
         """
-        Sets the feed_id of this InlineResponse20019.
-        Unique identifier for this feed ingestion job. Use this with the Syndication Status endpoint to monitor the asynchronous protocol sync progress (e.g. to Google Merchant Center). 
+        Sets the processing of this InlineResponse20019.
 
-        :param feed_id: The feed_id of this InlineResponse20019.
-        :type: str
+        :param processing: The processing of this InlineResponse20019.
+        :type: InlineResponse20019Processing
         """
 
-        self._feed_id = feed_id
+        self._processing = processing
 
     @property
-    def total_submitted(self):
+    def syndication(self):
         """
-        Gets the total_submitted of this InlineResponse20019.
-        Total number of product records in the submitted feed.
+        Gets the syndication of this InlineResponse20019.
+        Per-protocol syndication status, keyed by lowercase protocol name (e.g. `acp`, `ucp`). 
 
-        :return: The total_submitted of this InlineResponse20019.
-        :rtype: int
+        :return: The syndication of this InlineResponse20019.
+        :rtype: dict(str, InlineResponse20019Syndication)
         """
-        return self._total_submitted
+        return self._syndication
 
-    @total_submitted.setter
-    def total_submitted(self, total_submitted):
+    @syndication.setter
+    def syndication(self, syndication):
         """
-        Sets the total_submitted of this InlineResponse20019.
-        Total number of product records in the submitted feed.
+        Sets the syndication of this InlineResponse20019.
+        Per-protocol syndication status, keyed by lowercase protocol name (e.g. `acp`, `ucp`). 
 
-        :param total_submitted: The total_submitted of this InlineResponse20019.
-        :type: int
-        """
-
-        self._total_submitted = total_submitted
-
-    @property
-    def success_count(self):
-        """
-        Gets the success_count of this InlineResponse20019.
-        Number of products that passed validation and were saved to the catalog.
-
-        :return: The success_count of this InlineResponse20019.
-        :rtype: int
-        """
-        return self._success_count
-
-    @success_count.setter
-    def success_count(self, success_count):
-        """
-        Sets the success_count of this InlineResponse20019.
-        Number of products that passed validation and were saved to the catalog.
-
-        :param success_count: The success_count of this InlineResponse20019.
-        :type: int
+        :param syndication: The syndication of this InlineResponse20019.
+        :type: dict(str, InlineResponse20019Syndication)
         """
 
-        self._success_count = success_count
-
-    @property
-    def failed_count(self):
-        """
-        Gets the failed_count of this InlineResponse20019.
-        Number of products that failed validation and were not saved.
-
-        :return: The failed_count of this InlineResponse20019.
-        :rtype: int
-        """
-        return self._failed_count
-
-    @failed_count.setter
-    def failed_count(self, failed_count):
-        """
-        Sets the failed_count of this InlineResponse20019.
-        Number of products that failed validation and were not saved.
-
-        :param failed_count: The failed_count of this InlineResponse20019.
-        :type: int
-        """
-
-        self._failed_count = failed_count
-
-    @property
-    def errors(self):
-        """
-        Gets the errors of this InlineResponse20019.
-        Per-product validation errors for products that failed ingestion. Each entry identifies the product, the specific field that failed, and the reason. `null` when `failed_count` is zero. 
-
-        :return: The errors of this InlineResponse20019.
-        :rtype: list[InlineResponse20019Errors]
-        """
-        return self._errors
-
-    @errors.setter
-    def errors(self, errors):
-        """
-        Sets the errors of this InlineResponse20019.
-        Per-product validation errors for products that failed ingestion. Each entry identifies the product, the specific field that failed, and the reason. `null` when `failed_count` is zero. 
-
-        :param errors: The errors of this InlineResponse20019.
-        :type: list[InlineResponse20019Errors]
-        """
-
-        self._errors = errors
-
-    @property
-    def ingested_at(self):
-        """
-        Gets the ingested_at of this InlineResponse20019.
-        ISO 8601 timestamp when the ingestion completed.
-
-        :return: The ingested_at of this InlineResponse20019.
-        :rtype: datetime
-        """
-        return self._ingested_at
-
-    @ingested_at.setter
-    def ingested_at(self, ingested_at):
-        """
-        Sets the ingested_at of this InlineResponse20019.
-        ISO 8601 timestamp when the ingestion completed.
-
-        :param ingested_at: The ingested_at of this InlineResponse20019.
-        :type: datetime
-        """
-
-        self._ingested_at = ingested_at
-
-    @property
-    def forwarded_to_agent(self):
-        """
-        Gets the forwarded_to_agent of this InlineResponse20019.
-        Indicates whether the ingested products were scheduled for syndication to the configured AI agent endpoint. Set to `true` when at least one product was successfully saved. Note: syndication is asynchronous — this field confirms the dispatch was initiated, not that the agent received the data. 
-
-        :return: The forwarded_to_agent of this InlineResponse20019.
-        :rtype: bool
-        """
-        return self._forwarded_to_agent
-
-    @forwarded_to_agent.setter
-    def forwarded_to_agent(self, forwarded_to_agent):
-        """
-        Sets the forwarded_to_agent of this InlineResponse20019.
-        Indicates whether the ingested products were scheduled for syndication to the configured AI agent endpoint. Set to `true` when at least one product was successfully saved. Note: syndication is asynchronous — this field confirms the dispatch was initiated, not that the agent received the data. 
-
-        :param forwarded_to_agent: The forwarded_to_agent of this InlineResponse20019.
-        :type: bool
-        """
-
-        self._forwarded_to_agent = forwarded_to_agent
-
-    @property
-    def agent_endpoint(self):
-        """
-        Gets the agent_endpoint of this InlineResponse20019.
-        The AI agent endpoint URL that the products were forwarded to. Present when `forwarded_to_agent` is `true`. 
-
-        :return: The agent_endpoint of this InlineResponse20019.
-        :rtype: str
-        """
-        return self._agent_endpoint
-
-    @agent_endpoint.setter
-    def agent_endpoint(self, agent_endpoint):
-        """
-        Sets the agent_endpoint of this InlineResponse20019.
-        The AI agent endpoint URL that the products were forwarded to. Present when `forwarded_to_agent` is `true`. 
-
-        :param agent_endpoint: The agent_endpoint of this InlineResponse20019.
-        :type: str
-        """
-
-        self._agent_endpoint = agent_endpoint
-
-    @property
-    def forwarded_to_ucp_agent(self):
-        """
-        Gets the forwarded_to_ucp_agent of this InlineResponse20019.
-        Indicates whether the ingested products were scheduled for syndication to the UCP (Unified Commerce Platform) agent. Set to `true` when UCP syndication is enabled and at least one product was successfully saved. 
-
-        :return: The forwarded_to_ucp_agent of this InlineResponse20019.
-        :rtype: bool
-        """
-        return self._forwarded_to_ucp_agent
-
-    @forwarded_to_ucp_agent.setter
-    def forwarded_to_ucp_agent(self, forwarded_to_ucp_agent):
-        """
-        Sets the forwarded_to_ucp_agent of this InlineResponse20019.
-        Indicates whether the ingested products were scheduled for syndication to the UCP (Unified Commerce Platform) agent. Set to `true` when UCP syndication is enabled and at least one product was successfully saved. 
-
-        :param forwarded_to_ucp_agent: The forwarded_to_ucp_agent of this InlineResponse20019.
-        :type: bool
-        """
-
-        self._forwarded_to_ucp_agent = forwarded_to_ucp_agent
-
-    @property
-    def google_merchant(self):
-        """
-        Gets the google_merchant of this InlineResponse20019.
-
-        :return: The google_merchant of this InlineResponse20019.
-        :rtype: InlineResponse20019GoogleMerchant
-        """
-        return self._google_merchant
-
-    @google_merchant.setter
-    def google_merchant(self, google_merchant):
-        """
-        Sets the google_merchant of this InlineResponse20019.
-
-        :param google_merchant: The google_merchant of this InlineResponse20019.
-        :type: InlineResponse20019GoogleMerchant
-        """
-
-        self._google_merchant = google_merchant
+        self._syndication = syndication
 
     def to_dict(self):
         """

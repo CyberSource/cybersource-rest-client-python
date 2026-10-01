@@ -30,10 +30,10 @@ class UnifiedriskPaymentBankAccountBalanceBefore(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'value': 'float',
+        'value': 'str',
         'currency': 'str',
         'base_currency': 'str',
-        'base_value': 'float',
+        'base_value': 'str',
         'merchant_currency': 'str',
         'merchant_value': 'str'
     }
@@ -79,7 +79,7 @@ class UnifiedriskPaymentBankAccountBalanceBefore(object):
         Account balance before transaction    
 
         :return: The value of this UnifiedriskPaymentBankAccountBalanceBefore.
-        :rtype: float
+        :rtype: str
         """
         return self._value
 
@@ -90,7 +90,7 @@ class UnifiedriskPaymentBankAccountBalanceBefore(object):
         Account balance before transaction    
 
         :param value: The value of this UnifiedriskPaymentBankAccountBalanceBefore.
-        :type: float
+        :type: str
         """
 
         self._value = value
@@ -148,7 +148,7 @@ class UnifiedriskPaymentBankAccountBalanceBefore(object):
         Balance in base currency    
 
         :return: The base_value of this UnifiedriskPaymentBankAccountBalanceBefore.
-        :rtype: float
+        :rtype: str
         """
         return self._base_value
 
@@ -159,7 +159,7 @@ class UnifiedriskPaymentBankAccountBalanceBefore(object):
         Balance in base currency    
 
         :param base_value: The base_value of this UnifiedriskPaymentBankAccountBalanceBefore.
-        :type: float
+        :type: str
         """
 
         self._base_value = base_value

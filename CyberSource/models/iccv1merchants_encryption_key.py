@@ -69,7 +69,7 @@ class Iccv1merchantsEncryptionKey(object):
     def key_name(self):
         """
         Gets the key_name of this Iccv1merchantsEncryptionKey.
-        Unique name for the key
+        Unique  name for this encryption key within the merchant.
 
         :return: The key_name of this Iccv1merchantsEncryptionKey.
         :rtype: str
@@ -80,7 +80,7 @@ class Iccv1merchantsEncryptionKey(object):
     def key_name(self, key_name):
         """
         Sets the key_name of this Iccv1merchantsEncryptionKey.
-        Unique name for the key
+        Unique  name for this encryption key within the merchant.
 
         :param key_name: The key_name of this Iccv1merchantsEncryptionKey.
         :type: str
@@ -92,7 +92,7 @@ class Iccv1merchantsEncryptionKey(object):
     def encryption_key(self):
         """
         Gets the encryption_key of this Iccv1merchantsEncryptionKey.
-        Base64-encoded public key (JWE key wrap public key)
+        Base64-encoded public key used for JWE key wrapping. Supported formats are PEM (PKCS#8 or PKCS#1) and JWK.
 
         :return: The encryption_key of this Iccv1merchantsEncryptionKey.
         :rtype: str
@@ -103,7 +103,7 @@ class Iccv1merchantsEncryptionKey(object):
     def encryption_key(self, encryption_key):
         """
         Sets the encryption_key of this Iccv1merchantsEncryptionKey.
-        Base64-encoded public key (JWE key wrap public key)
+        Base64-encoded public key used for JWE key wrapping. Supported formats are PEM (PKCS#8 or PKCS#1) and JWK.
 
         :param encryption_key: The encryption_key of this Iccv1merchantsEncryptionKey.
         :type: str
@@ -115,7 +115,7 @@ class Iccv1merchantsEncryptionKey(object):
     def algorithm(self):
         """
         Gets the algorithm of this Iccv1merchantsEncryptionKey.
-        JWE key wrap algorithm  Possible values: - RSA-OAEP - RSA-OAEP-256 - RSA-OAEP-384 - RSA-OAEP-512
+        JWE key wrap algorithm used to encrypt the content encryption key:  - ***RSA-OAEP*** — RSA-OAEP with SHA-1  - ***RSA-OAEP-256*** — RSA-OAEP with SHA-256  - ***RSA-OAEP-384*** — RSA-OAEP with SHA-384  - ***RSA-OAEP-512*** — RSA-OAEP with SHA-512   Possible values: - RSA-OAEP - RSA-OAEP-256 - RSA-OAEP-384 - RSA-OAEP-512
 
         :return: The algorithm of this Iccv1merchantsEncryptionKey.
         :rtype: str
@@ -126,7 +126,7 @@ class Iccv1merchantsEncryptionKey(object):
     def algorithm(self, algorithm):
         """
         Sets the algorithm of this Iccv1merchantsEncryptionKey.
-        JWE key wrap algorithm  Possible values: - RSA-OAEP - RSA-OAEP-256 - RSA-OAEP-384 - RSA-OAEP-512
+        JWE key wrap algorithm used to encrypt the content encryption key:  - ***RSA-OAEP*** — RSA-OAEP with SHA-1  - ***RSA-OAEP-256*** — RSA-OAEP with SHA-256  - ***RSA-OAEP-384*** — RSA-OAEP with SHA-384  - ***RSA-OAEP-512*** — RSA-OAEP with SHA-512   Possible values: - RSA-OAEP - RSA-OAEP-256 - RSA-OAEP-384 - RSA-OAEP-512
 
         :param algorithm: The algorithm of this Iccv1merchantsEncryptionKey.
         :type: str
@@ -138,7 +138,7 @@ class Iccv1merchantsEncryptionKey(object):
     def encryption_type(self):
         """
         Gets the encryption_type of this Iccv1merchantsEncryptionKey.
-        JWE content encryption algorithm (defaults to A256GCM)  Possible values: - A256GCM - A128GCM - C20P - A256CBC-HS512 - A128CBC-HS256 - A256CCM - A128CCM
+        JWE content encryption algorithm used to encrypt the payment payload. Defaults to ***A256GCM*** if not provided.  Possible values: - A256GCM - A128GCM - C20P - A256CBC_HS512 - A128CBC_HS256 - A256CCM - A128CCM
 
         :return: The encryption_type of this Iccv1merchantsEncryptionKey.
         :rtype: str
@@ -149,7 +149,7 @@ class Iccv1merchantsEncryptionKey(object):
     def encryption_type(self, encryption_type):
         """
         Sets the encryption_type of this Iccv1merchantsEncryptionKey.
-        JWE content encryption algorithm (defaults to A256GCM)  Possible values: - A256GCM - A128GCM - C20P - A256CBC-HS512 - A128CBC-HS256 - A256CCM - A128CCM
+        JWE content encryption algorithm used to encrypt the payment payload. Defaults to ***A256GCM*** if not provided.  Possible values: - A256GCM - A128GCM - C20P - A256CBC_HS512 - A128CBC_HS256 - A256CCM - A128CCM
 
         :param encryption_type: The encryption_type of this Iccv1merchantsEncryptionKey.
         :type: str
@@ -161,7 +161,7 @@ class Iccv1merchantsEncryptionKey(object):
     def expiration_date(self):
         """
         Gets the expiration_date of this Iccv1merchantsEncryptionKey.
-        Key expiration date in UTC (defaults to 14 days from now if not provided)
+        Key expiration date-time in UTC. Defaults to 14 days from registration if omitted.
 
         :return: The expiration_date of this Iccv1merchantsEncryptionKey.
         :rtype: datetime
@@ -172,7 +172,7 @@ class Iccv1merchantsEncryptionKey(object):
     def expiration_date(self, expiration_date):
         """
         Sets the expiration_date of this Iccv1merchantsEncryptionKey.
-        Key expiration date in UTC (defaults to 14 days from now if not provided)
+        Key expiration date-time in UTC. Defaults to 14 days from registration if omitted.
 
         :param expiration_date: The expiration_date of this Iccv1merchantsEncryptionKey.
         :type: datetime

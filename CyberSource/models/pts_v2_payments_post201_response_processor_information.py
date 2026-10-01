@@ -77,7 +77,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'order_status': 'str',
         'merchant_risk_prediction': 'str',
         'network': 'Ptsv2paymentsProcessorInformationReversalNetwork',
-        'cedp_verified_indicator': 'str'
+        'cedp_verified_indicator': 'str',
+        'transaction_link_identifier': 'str'
     }
 
     attribute_map = {
@@ -128,10 +129,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'order_status': 'orderStatus',
         'merchant_risk_prediction': 'merchantRiskPrediction',
         'network': 'network',
-        'cedp_verified_indicator': 'cedpVerifiedIndicator'
+        'cedp_verified_indicator': 'cedpVerifiedIndicator',
+        'transaction_link_identifier': 'transactionLinkIdentifier'
     }
 
-    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, response_source_code=None, forwarded_acquirer_code=None, settlement_date=None, sequence_number=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None, custom_url=None, scheme_assigned_id=None, device_url=None, disbursement_mode=None, update_time_utc=None, expiration_time_utc=None, order_id=None, order_status=None, merchant_risk_prediction=None, network=None, cedp_verified_indicator=None):
+    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, response_source_code=None, forwarded_acquirer_code=None, settlement_date=None, sequence_number=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None, custom_url=None, scheme_assigned_id=None, device_url=None, disbursement_mode=None, update_time_utc=None, expiration_time_utc=None, order_id=None, order_status=None, merchant_risk_prediction=None, network=None, cedp_verified_indicator=None, transaction_link_identifier=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -184,6 +186,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._merchant_risk_prediction = None
         self._network = None
         self._cedp_verified_indicator = None
+        self._transaction_link_identifier = None
 
         if auth_indicator is not None:
           self.auth_indicator = auth_indicator
@@ -281,6 +284,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.network = network
         if cedp_verified_indicator is not None:
           self.cedp_verified_indicator = cedp_verified_indicator
+        if transaction_link_identifier is not None:
+          self.transaction_link_identifier = transaction_link_identifier
 
     @property
     def auth_indicator(self):
@@ -1361,6 +1366,29 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         """
 
         self._cedp_verified_indicator = cedp_verified_indicator
+
+    @property
+    def transaction_link_identifier(self):
+        """
+        Gets the transaction_link_identifier of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Transaction Link Identifier (TLID). Links all messages within a transaction lifecycle for Mastercard transactions. Received from Mastercard in the authorization response and automatically replayed for lifecycle transactions (reversals, follow-on credits, authorization refresh).  #### PIN Debit Also returned for PIN Debit purchase, credit, and reversal transactions. For PIN Debit (Visa Gateway) flows, this value is mapped to Visa Field 111 (DSI 07, Tag C0). 
+
+        :return: The transaction_link_identifier of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._transaction_link_identifier
+
+    @transaction_link_identifier.setter
+    def transaction_link_identifier(self, transaction_link_identifier):
+        """
+        Sets the transaction_link_identifier of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Transaction Link Identifier (TLID). Links all messages within a transaction lifecycle for Mastercard transactions. Received from Mastercard in the authorization response and automatically replayed for lifecycle transactions (reversals, follow-on credits, authorization refresh).  #### PIN Debit Also returned for PIN Debit purchase, credit, and reversal transactions. For PIN Debit (Visa Gateway) flows, this value is mapped to Visa Field 111 (DSI 07, Tag C0). 
+
+        :param transaction_link_identifier: The transaction_link_identifier of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._transaction_link_identifier = transaction_link_identifier
 
     def to_dict(self):
         """

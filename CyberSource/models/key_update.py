@@ -66,7 +66,7 @@ class KeyUpdate(object):
     def key_name(self):
         """
         Gets the key_name of this KeyUpdate.
-        Unique identifier for the key
+        Unique  name for this key within the agent. Must be unique per agent.
 
         :return: The key_name of this KeyUpdate.
         :rtype: str
@@ -77,7 +77,7 @@ class KeyUpdate(object):
     def key_name(self, key_name):
         """
         Sets the key_name of this KeyUpdate.
-        Unique identifier for the key
+        Unique  name for this key within the agent. Must be unique per agent.
 
         :param key_name: The key_name of this KeyUpdate.
         :type: str
@@ -89,7 +89,7 @@ class KeyUpdate(object):
     def public_key(self):
         """
         Gets the public_key of this KeyUpdate.
-        Base64-encoded public key. Supports PEM (PKCS#8, PKCS#1), JWK, DER, and OpenSSH formats. Max 10000 characters.
+        Base64-encoded public key. Supported formats are PEM (PKCS#8 or PKCS#1) and JWK. Must be provided together with `algorithm`.
 
         :return: The public_key of this KeyUpdate.
         :rtype: str
@@ -100,7 +100,7 @@ class KeyUpdate(object):
     def public_key(self, public_key):
         """
         Sets the public_key of this KeyUpdate.
-        Base64-encoded public key. Supports PEM (PKCS#8, PKCS#1), JWK, DER, and OpenSSH formats. Max 10000 characters.
+        Base64-encoded public key. Supported formats are PEM (PKCS#8 or PKCS#1) and JWK. Must be provided together with `algorithm`.
 
         :param public_key: The public_key of this KeyUpdate.
         :type: str
@@ -112,7 +112,7 @@ class KeyUpdate(object):
     def algorithm(self):
         """
         Gets the algorithm of this KeyUpdate.
-        Signing algorithm. Must match the key type (e.g., an RSA key requires RSA-SHA256 or RSA-SHA512).  Possible values: - RSA-SHA256 - RSA-SHA512 - ECDSA-SHA256 - ECDSA-SHA512 - EdDSA
+        HTTP Signature signing algorithm (RFC 9421 §3.3 registry). Must be provided together with `publicKey`:  - ***rsa-pss-sha256*** — RSA-PSS with SHA-256  - ***rsa-pss-sha512*** — RSA-PSS with SHA-512  - ***ecdsa-p256-sha256*** — ECDSA on P-256 curve with SHA-256  - ***ecdsa-p384-sha384*** — ECDSA on P-384 curve with SHA-384  - ***ed25519*** — EdDSA on Curve25519   Possible values: - rsa-pss-sha256 - rsa-pss-sha512 - ecdsa-p256-sha256 - ecdsa-p384-sha384 - ed25519
 
         :return: The algorithm of this KeyUpdate.
         :rtype: str
@@ -123,7 +123,7 @@ class KeyUpdate(object):
     def algorithm(self, algorithm):
         """
         Sets the algorithm of this KeyUpdate.
-        Signing algorithm. Must match the key type (e.g., an RSA key requires RSA-SHA256 or RSA-SHA512).  Possible values: - RSA-SHA256 - RSA-SHA512 - ECDSA-SHA256 - ECDSA-SHA512 - EdDSA
+        HTTP Signature signing algorithm (RFC 9421 §3.3 registry). Must be provided together with `publicKey`:  - ***rsa-pss-sha256*** — RSA-PSS with SHA-256  - ***rsa-pss-sha512*** — RSA-PSS with SHA-512  - ***ecdsa-p256-sha256*** — ECDSA on P-256 curve with SHA-256  - ***ecdsa-p384-sha384*** — ECDSA on P-384 curve with SHA-384  - ***ed25519*** — EdDSA on Curve25519   Possible values: - rsa-pss-sha256 - rsa-pss-sha512 - ecdsa-p256-sha256 - ecdsa-p384-sha384 - ed25519
 
         :param algorithm: The algorithm of this KeyUpdate.
         :type: str
@@ -135,7 +135,7 @@ class KeyUpdate(object):
     def expiration_date(self):
         """
         Gets the expiration_date of this KeyUpdate.
-        Key expiration date in UTC
+        Key expiration date-time in UTC.
 
         :return: The expiration_date of this KeyUpdate.
         :rtype: datetime
@@ -146,7 +146,7 @@ class KeyUpdate(object):
     def expiration_date(self, expiration_date):
         """
         Sets the expiration_date of this KeyUpdate.
-        Key expiration date in UTC
+        Key expiration date-time in UTC.
 
         :param expiration_date: The expiration_date of this KeyUpdate.
         :type: datetime

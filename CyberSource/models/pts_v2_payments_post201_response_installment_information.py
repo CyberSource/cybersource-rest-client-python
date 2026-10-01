@@ -55,7 +55,13 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         'minimum_total_count': 'str',
         'maximum_total_count': 'str',
         'first_installment_amount': 'str',
-        'first_installment_date': 'str'
+        'first_installment_date': 'str',
+        'grace_period_duration': 'str',
+        'payment_type': 'str',
+        'amount_type': 'str',
+        'percentage_discount': 'str',
+        'interest_indicator': 'str',
+        'financing_currency': 'str'
     }
 
     attribute_map = {
@@ -84,10 +90,16 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         'minimum_total_count': 'minimumTotalCount',
         'maximum_total_count': 'maximumTotalCount',
         'first_installment_amount': 'firstInstallmentAmount',
-        'first_installment_date': 'firstInstallmentDate'
+        'first_installment_date': 'firstInstallmentDate',
+        'grace_period_duration': 'gracePeriodDuration',
+        'payment_type': 'paymentType',
+        'amount_type': 'amountType',
+        'percentage_discount': 'percentageDiscount',
+        'interest_indicator': 'interestIndicator',
+        'financing_currency': 'financingCurrency'
     }
 
-    def __init__(self, additional_costs=None, additional_costs_percentage=None, amount=None, amount_funded=None, amount_requested_percentage=None, annual_financing_cost=None, annual_interest_rate=None, expenses=None, expenses_percentage=None, fees=None, fees_percentage=None, frequency=None, insurance=None, insurance_percentage=None, invoice_data=None, monthly_interest_rate=None, plan_type=None, sequence=None, taxes=None, taxes_percentage=None, total_amount=None, total_count=None, minimum_total_count=None, maximum_total_count=None, first_installment_amount=None, first_installment_date=None):
+    def __init__(self, additional_costs=None, additional_costs_percentage=None, amount=None, amount_funded=None, amount_requested_percentage=None, annual_financing_cost=None, annual_interest_rate=None, expenses=None, expenses_percentage=None, fees=None, fees_percentage=None, frequency=None, insurance=None, insurance_percentage=None, invoice_data=None, monthly_interest_rate=None, plan_type=None, sequence=None, taxes=None, taxes_percentage=None, total_amount=None, total_count=None, minimum_total_count=None, maximum_total_count=None, first_installment_amount=None, first_installment_date=None, grace_period_duration=None, payment_type=None, amount_type=None, percentage_discount=None, interest_indicator=None, financing_currency=None):
         """
         PtsV2PaymentsPost201ResponseInstallmentInformation - a model defined in Swagger
         """
@@ -118,6 +130,12 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         self._maximum_total_count = None
         self._first_installment_amount = None
         self._first_installment_date = None
+        self._grace_period_duration = None
+        self._payment_type = None
+        self._amount_type = None
+        self._percentage_discount = None
+        self._interest_indicator = None
+        self._financing_currency = None
 
         if additional_costs is not None:
           self.additional_costs = additional_costs
@@ -171,6 +189,18 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
           self.first_installment_amount = first_installment_amount
         if first_installment_date is not None:
           self.first_installment_date = first_installment_date
+        if grace_period_duration is not None:
+          self.grace_period_duration = grace_period_duration
+        if payment_type is not None:
+          self.payment_type = payment_type
+        if amount_type is not None:
+          self.amount_type = amount_type
+        if percentage_discount is not None:
+          self.percentage_discount = percentage_discount
+        if interest_indicator is not None:
+          self.interest_indicator = interest_indicator
+        if financing_currency is not None:
+          self.financing_currency = financing_currency
 
     @property
     def additional_costs(self):
@@ -769,6 +799,144 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         """
 
         self._first_installment_date = first_installment_date
+
+    @property
+    def grace_period_duration(self):
+        """
+        Gets the grace_period_duration of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Grace period requested by the customer before the first installment payment is due.  When you include this field in a request, you must also include the grace period duration type field.  The value for this field corresponds to the following data in the TC 33 capture file3: Record: CP01 TCR5, Position: 100-101, Field: Mastercard Grace Period Details.  This field is supported only for Mastercard installment payments in Brazil and Greece. 
+
+        :return: The grace_period_duration of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._grace_period_duration
+
+    @grace_period_duration.setter
+    def grace_period_duration(self, grace_period_duration):
+        """
+        Sets the grace_period_duration of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Grace period requested by the customer before the first installment payment is due.  When you include this field in a request, you must also include the grace period duration type field.  The value for this field corresponds to the following data in the TC 33 capture file3: Record: CP01 TCR5, Position: 100-101, Field: Mastercard Grace Period Details.  This field is supported only for Mastercard installment payments in Brazil and Greece. 
+
+        :param grace_period_duration: The grace_period_duration of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+
+        self._grace_period_duration = grace_period_duration
+
+    @property
+    def payment_type(self):
+        """
+        Gets the payment_type of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Payment plan for the installments. This field is supported only for installment payments on Visa Platform Connect, RuPay and SPG-KSA seamless flow.  Possible values for a standing-instruction (SI) merchant-initiated transaction (MIT) with Diners Club or Mastercard in India or with an India-issued card: - 1: SI with a fixed amount. - 2: SI with a maximum amount. - 3: Other kind of SI.  Possible values for a type of Installment transaction for on-soil transaction in Kingdom of Saudi Arabia - 1: Registration or first transaction. - 2: Subsequent transaction.  Possible values for other kinds of installment payments: - 0 (default): Regular installment. This value is not allowed for airline transactions. - 1: Installment payment with down payment. - 2: Installment payment without down payment. This value is supported only for airline transactions. - 3: Installment payment; down payment and boarding fee will follow. This value is supported only for airline transactions. - 4: Down payment only; regular installment payment will follow. - 5: Boarding fee only. This value is supported only for airline transactions. - 6: SI de-registration on RuPay for the payer authentication seamless flow. 
+
+        :return: The payment_type of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._payment_type
+
+    @payment_type.setter
+    def payment_type(self, payment_type):
+        """
+        Sets the payment_type of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Payment plan for the installments. This field is supported only for installment payments on Visa Platform Connect, RuPay and SPG-KSA seamless flow.  Possible values for a standing-instruction (SI) merchant-initiated transaction (MIT) with Diners Club or Mastercard in India or with an India-issued card: - 1: SI with a fixed amount. - 2: SI with a maximum amount. - 3: Other kind of SI.  Possible values for a type of Installment transaction for on-soil transaction in Kingdom of Saudi Arabia - 1: Registration or first transaction. - 2: Subsequent transaction.  Possible values for other kinds of installment payments: - 0 (default): Regular installment. This value is not allowed for airline transactions. - 1: Installment payment with down payment. - 2: Installment payment without down payment. This value is supported only for airline transactions. - 3: Installment payment; down payment and boarding fee will follow. This value is supported only for airline transactions. - 4: Down payment only; regular installment payment will follow. - 5: Boarding fee only. This value is supported only for airline transactions. - 6: SI de-registration on RuPay for the payer authentication seamless flow. 
+
+        :param payment_type: The payment_type of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+
+        self._payment_type = payment_type
+
+    @property
+    def amount_type(self):
+        """
+        Gets the amount_type of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Valid Values from Issuer - Percentage = 999v99 Example P123.12 - Amount = 9(10)v99 Example A123.12 
+
+        :return: The amount_type of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._amount_type
+
+    @amount_type.setter
+    def amount_type(self, amount_type):
+        """
+        Sets the amount_type of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Valid Values from Issuer - Percentage = 999v99 Example P123.12 - Amount = 9(10)v99 Example A123.12 
+
+        :param amount_type: The amount_type of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+
+        self._amount_type = amount_type
+
+    @property
+    def percentage_discount(self):
+        """
+        Gets the percentage_discount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Valid Values from Issuer 
+
+        :return: The percentage_discount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._percentage_discount
+
+    @percentage_discount.setter
+    def percentage_discount(self, percentage_discount):
+        """
+        Sets the percentage_discount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Valid Values from Issuer 
+
+        :param percentage_discount: The percentage_discount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+
+        self._percentage_discount = percentage_discount
+
+    @property
+    def interest_indicator(self):
+        """
+        Gets the interest_indicator of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Indicates if the installment plan has interest.  Possible values: -Y - with interest -N - without interest -NULL - Do not send the field if no information available 
+
+        :return: The interest_indicator of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._interest_indicator
+
+    @interest_indicator.setter
+    def interest_indicator(self, interest_indicator):
+        """
+        Sets the interest_indicator of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Indicates if the installment plan has interest.  Possible values: -Y - with interest -N - without interest -NULL - Do not send the field if no information available 
+
+        :param interest_indicator: The interest_indicator of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+
+        self._interest_indicator = interest_indicator
+
+    @property
+    def financing_currency(self):
+        """
+        Gets the financing_currency of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Valid Values from Issuer 
+
+        :return: The financing_currency of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._financing_currency
+
+    @financing_currency.setter
+    def financing_currency(self, financing_currency):
+        """
+        Sets the financing_currency of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Valid Values from Issuer 
+
+        :param financing_currency: The financing_currency of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+
+        self._financing_currency = financing_currency
 
     def to_dict(self):
         """

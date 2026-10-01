@@ -30,32 +30,142 @@ class PtsV2PaymentsPost201Response1OrderInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'reference_id': 'str',
+        'description': 'str',
+        'custom_id': 'str',
+        'merchant_descriptor': 'PtsV2PaymentsPost201Response1OrderInformationMerchantDescriptor',
         'bill_to': 'PtsV2PaymentsPost201Response1OrderInformationBillTo',
         'ship_to': 'PtsV2PaymentsPost201Response1OrderInformationShipTo',
         'amount_details': 'PtsV2PaymentsPost201Response1OrderInformationAmountDetails'
     }
 
     attribute_map = {
+        'reference_id': 'referenceId',
+        'description': 'description',
+        'custom_id': 'customId',
+        'merchant_descriptor': 'merchantDescriptor',
         'bill_to': 'billTo',
         'ship_to': 'shipTo',
         'amount_details': 'amountDetails'
     }
 
-    def __init__(self, bill_to=None, ship_to=None, amount_details=None):
+    def __init__(self, reference_id=None, description=None, custom_id=None, merchant_descriptor=None, bill_to=None, ship_to=None, amount_details=None):
         """
         PtsV2PaymentsPost201Response1OrderInformation - a model defined in Swagger
         """
 
+        self._reference_id = None
+        self._description = None
+        self._custom_id = None
+        self._merchant_descriptor = None
         self._bill_to = None
         self._ship_to = None
         self._amount_details = None
 
+        if reference_id is not None:
+          self.reference_id = reference_id
+        if description is not None:
+          self.description = description
+        if custom_id is not None:
+          self.custom_id = custom_id
+        if merchant_descriptor is not None:
+          self.merchant_descriptor = merchant_descriptor
         if bill_to is not None:
           self.bill_to = bill_to
         if ship_to is not None:
           self.ship_to = ship_to
         if amount_details is not None:
           self.amount_details = amount_details
+
+    @property
+    def reference_id(self):
+        """
+        Gets the reference_id of this PtsV2PaymentsPost201Response1OrderInformation.
+        Merchant-generated order reference or tracking number for the payment. 
+
+        :return: The reference_id of this PtsV2PaymentsPost201Response1OrderInformation.
+        :rtype: str
+        """
+        return self._reference_id
+
+    @reference_id.setter
+    def reference_id(self, reference_id):
+        """
+        Sets the reference_id of this PtsV2PaymentsPost201Response1OrderInformation.
+        Merchant-generated order reference or tracking number for the payment. 
+
+        :param reference_id: The reference_id of this PtsV2PaymentsPost201Response1OrderInformation.
+        :type: str
+        """
+
+        self._reference_id = reference_id
+
+    @property
+    def description(self):
+        """
+        Gets the description of this PtsV2PaymentsPost201Response1OrderInformation.
+        Description of the order, as provided by the merchant in the original request. 
+
+        :return: The description of this PtsV2PaymentsPost201Response1OrderInformation.
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """
+        Sets the description of this PtsV2PaymentsPost201Response1OrderInformation.
+        Description of the order, as provided by the merchant in the original request. 
+
+        :param description: The description of this PtsV2PaymentsPost201Response1OrderInformation.
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def custom_id(self):
+        """
+        Gets the custom_id of this PtsV2PaymentsPost201Response1OrderInformation.
+        Merchant-defined custom identifier for the order. 
+
+        :return: The custom_id of this PtsV2PaymentsPost201Response1OrderInformation.
+        :rtype: str
+        """
+        return self._custom_id
+
+    @custom_id.setter
+    def custom_id(self, custom_id):
+        """
+        Sets the custom_id of this PtsV2PaymentsPost201Response1OrderInformation.
+        Merchant-defined custom identifier for the order. 
+
+        :param custom_id: The custom_id of this PtsV2PaymentsPost201Response1OrderInformation.
+        :type: str
+        """
+
+        self._custom_id = custom_id
+
+    @property
+    def merchant_descriptor(self):
+        """
+        Gets the merchant_descriptor of this PtsV2PaymentsPost201Response1OrderInformation.
+
+        :return: The merchant_descriptor of this PtsV2PaymentsPost201Response1OrderInformation.
+        :rtype: PtsV2PaymentsPost201Response1OrderInformationMerchantDescriptor
+        """
+        return self._merchant_descriptor
+
+    @merchant_descriptor.setter
+    def merchant_descriptor(self, merchant_descriptor):
+        """
+        Sets the merchant_descriptor of this PtsV2PaymentsPost201Response1OrderInformation.
+
+        :param merchant_descriptor: The merchant_descriptor of this PtsV2PaymentsPost201Response1OrderInformation.
+        :type: PtsV2PaymentsPost201Response1OrderInformationMerchantDescriptor
+        """
+
+        self._merchant_descriptor = merchant_descriptor
 
     @property
     def bill_to(self):

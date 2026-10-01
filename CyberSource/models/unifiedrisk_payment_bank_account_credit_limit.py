@@ -30,12 +30,12 @@ class UnifiedriskPaymentBankAccountCreditLimit(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'value': 'float',
+        'value': 'str',
         'currency': 'str',
         'base_currency': 'str',
-        'base_value': 'float',
+        'base_value': 'str',
         'merchant_currency': 'str',
-        'merchant_value': 'float'
+        'merchant_value': 'str'
     }
 
     attribute_map = {
@@ -79,7 +79,7 @@ class UnifiedriskPaymentBankAccountCreditLimit(object):
         Credit limit on account    
 
         :return: The value of this UnifiedriskPaymentBankAccountCreditLimit.
-        :rtype: float
+        :rtype: str
         """
         return self._value
 
@@ -90,7 +90,7 @@ class UnifiedriskPaymentBankAccountCreditLimit(object):
         Credit limit on account    
 
         :param value: The value of this UnifiedriskPaymentBankAccountCreditLimit.
-        :type: float
+        :type: str
         """
 
         self._value = value
@@ -148,7 +148,7 @@ class UnifiedriskPaymentBankAccountCreditLimit(object):
         Value of transaction expressed in the currency defined in the baseCurrency field.    
 
         :return: The base_value of this UnifiedriskPaymentBankAccountCreditLimit.
-        :rtype: float
+        :rtype: str
         """
         return self._base_value
 
@@ -159,7 +159,7 @@ class UnifiedriskPaymentBankAccountCreditLimit(object):
         Value of transaction expressed in the currency defined in the baseCurrency field.    
 
         :param base_value: The base_value of this UnifiedriskPaymentBankAccountCreditLimit.
-        :type: float
+        :type: str
         """
 
         self._base_value = base_value
@@ -194,7 +194,7 @@ class UnifiedriskPaymentBankAccountCreditLimit(object):
         Credit limit amount expressed in the merchant's local currency, used for utilization ratio calculations and cross-currency risk assessment
 
         :return: The merchant_value of this UnifiedriskPaymentBankAccountCreditLimit.
-        :rtype: float
+        :rtype: str
         """
         return self._merchant_value
 
@@ -205,7 +205,7 @@ class UnifiedriskPaymentBankAccountCreditLimit(object):
         Credit limit amount expressed in the merchant's local currency, used for utilization ratio calculations and cross-currency risk assessment
 
         :param merchant_value: The merchant_value of this UnifiedriskPaymentBankAccountCreditLimit.
-        :type: float
+        :type: str
         """
 
         self._merchant_value = merchant_value

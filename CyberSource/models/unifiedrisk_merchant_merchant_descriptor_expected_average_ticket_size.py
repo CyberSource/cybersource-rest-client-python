@@ -31,11 +31,11 @@ class UnifiedriskMerchantMerchantDescriptorExpectedAverageTicketSize(object):
     """
     swagger_types = {
         'base_currency': 'str',
-        'base_value': 'int',
+        'base_value': 'str',
         'currency': 'str',
         'merchant_currency': 'str',
-        'merchant_value': 'int',
-        'value': 'int'
+        'merchant_value': 'str',
+        'value': 'str'
     }
 
     attribute_map = {
@@ -102,7 +102,7 @@ class UnifiedriskMerchantMerchantDescriptorExpectedAverageTicketSize(object):
         Expected average transaction value in the base currency, expressed in minor units (e.g., cents)
 
         :return: The base_value of this UnifiedriskMerchantMerchantDescriptorExpectedAverageTicketSize.
-        :rtype: int
+        :rtype: str
         """
         return self._base_value
 
@@ -113,7 +113,7 @@ class UnifiedriskMerchantMerchantDescriptorExpectedAverageTicketSize(object):
         Expected average transaction value in the base currency, expressed in minor units (e.g., cents)
 
         :param base_value: The base_value of this UnifiedriskMerchantMerchantDescriptorExpectedAverageTicketSize.
-        :type: int
+        :type: str
         """
 
         self._base_value = base_value
@@ -171,7 +171,7 @@ class UnifiedriskMerchantMerchantDescriptorExpectedAverageTicketSize(object):
         Expected average transaction value expressed in the merchant's local currency, in minor units
 
         :return: The merchant_value of this UnifiedriskMerchantMerchantDescriptorExpectedAverageTicketSize.
-        :rtype: int
+        :rtype: str
         """
         return self._merchant_value
 
@@ -182,7 +182,7 @@ class UnifiedriskMerchantMerchantDescriptorExpectedAverageTicketSize(object):
         Expected average transaction value expressed in the merchant's local currency, in minor units
 
         :param merchant_value: The merchant_value of this UnifiedriskMerchantMerchantDescriptorExpectedAverageTicketSize.
-        :type: int
+        :type: str
         """
 
         self._merchant_value = merchant_value
@@ -194,7 +194,7 @@ class UnifiedriskMerchantMerchantDescriptorExpectedAverageTicketSize(object):
         Expected average transaction value in the transaction currency, in minor units (e.g., cents)
 
         :return: The value of this UnifiedriskMerchantMerchantDescriptorExpectedAverageTicketSize.
-        :rtype: int
+        :rtype: str
         """
         return self._value
 
@@ -205,7 +205,7 @@ class UnifiedriskMerchantMerchantDescriptorExpectedAverageTicketSize(object):
         Expected average transaction value in the transaction currency, in minor units (e.g., cents)
 
         :param value: The value of this UnifiedriskMerchantMerchantDescriptorExpectedAverageTicketSize.
-        :type: int
+        :type: str
         """
 
         self._value = value

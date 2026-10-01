@@ -38,6 +38,7 @@ class PtsV2PaymentsPost201ResponseOrderInformationShipTo(object):
         'administrative_area': 'str',
         'postal_code': 'str',
         'country': 'str',
+        'email': 'str',
         'phone_number': 'str'
     }
 
@@ -50,10 +51,11 @@ class PtsV2PaymentsPost201ResponseOrderInformationShipTo(object):
         'administrative_area': 'administrativeArea',
         'postal_code': 'postalCode',
         'country': 'country',
+        'email': 'email',
         'phone_number': 'phoneNumber'
     }
 
-    def __init__(self, firstname=None, lastname=None, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, country=None, phone_number=None):
+    def __init__(self, firstname=None, lastname=None, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, country=None, email=None, phone_number=None):
         """
         PtsV2PaymentsPost201ResponseOrderInformationShipTo - a model defined in Swagger
         """
@@ -66,6 +68,7 @@ class PtsV2PaymentsPost201ResponseOrderInformationShipTo(object):
         self._administrative_area = None
         self._postal_code = None
         self._country = None
+        self._email = None
         self._phone_number = None
 
         if firstname is not None:
@@ -84,6 +87,8 @@ class PtsV2PaymentsPost201ResponseOrderInformationShipTo(object):
           self.postal_code = postal_code
         if country is not None:
           self.country = country
+        if email is not None:
+          self.email = email
         if phone_number is not None:
           self.phone_number = phone_number
 
@@ -270,6 +275,29 @@ class PtsV2PaymentsPost201ResponseOrderInformationShipTo(object):
         """
 
         self._country = country
+
+    @property
+    def email(self):
+        """
+        Gets the email of this PtsV2PaymentsPost201ResponseOrderInformationShipTo.
+        Email address of the shipping recipient. 
+
+        :return: The email of this PtsV2PaymentsPost201ResponseOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this PtsV2PaymentsPost201ResponseOrderInformationShipTo.
+        Email address of the shipping recipient. 
+
+        :param email: The email of this PtsV2PaymentsPost201ResponseOrderInformationShipTo.
+        :type: str
+        """
+
+        self._email = email
 
     @property
     def phone_number(self):

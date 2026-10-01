@@ -33,6 +33,7 @@ class PtsV2PaymentsPost201Response1(object):
         'id': 'str',
         'status': 'str',
         'submit_time_utc': 'str',
+        'update_time_utc': 'str',
         'processor_information': 'PtsV2PaymentsPost201Response1ProcessorInformation',
         'reconciliation_id': 'str',
         'payment_information': 'PtsV2PaymentsPost201Response1PaymentInformation',
@@ -46,6 +47,7 @@ class PtsV2PaymentsPost201Response1(object):
         'id': 'id',
         'status': 'status',
         'submit_time_utc': 'submitTimeUtc',
+        'update_time_utc': 'updateTimeUtc',
         'processor_information': 'processorInformation',
         'reconciliation_id': 'reconciliationId',
         'payment_information': 'paymentInformation',
@@ -55,7 +57,7 @@ class PtsV2PaymentsPost201Response1(object):
         'error_information': 'errorInformation'
     }
 
-    def __init__(self, id=None, status=None, submit_time_utc=None, processor_information=None, reconciliation_id=None, payment_information=None, order_information=None, client_reference_information=None, issuer_information=None, error_information=None):
+    def __init__(self, id=None, status=None, submit_time_utc=None, update_time_utc=None, processor_information=None, reconciliation_id=None, payment_information=None, order_information=None, client_reference_information=None, issuer_information=None, error_information=None):
         """
         PtsV2PaymentsPost201Response1 - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class PtsV2PaymentsPost201Response1(object):
         self._id = None
         self._status = None
         self._submit_time_utc = None
+        self._update_time_utc = None
         self._processor_information = None
         self._reconciliation_id = None
         self._payment_information = None
@@ -77,6 +80,8 @@ class PtsV2PaymentsPost201Response1(object):
           self.status = status
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
+        if update_time_utc is not None:
+          self.update_time_utc = update_time_utc
         if processor_information is not None:
           self.processor_information = processor_information
         if reconciliation_id is not None:
@@ -160,6 +165,29 @@ class PtsV2PaymentsPost201Response1(object):
         """
 
         self._submit_time_utc = submit_time_utc
+
+    @property
+    def update_time_utc(self):
+        """
+        Gets the update_time_utc of this PtsV2PaymentsPost201Response1.
+        The date and time when the request was last updated. **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). 
+
+        :return: The update_time_utc of this PtsV2PaymentsPost201Response1.
+        :rtype: str
+        """
+        return self._update_time_utc
+
+    @update_time_utc.setter
+    def update_time_utc(self, update_time_utc):
+        """
+        Sets the update_time_utc of this PtsV2PaymentsPost201Response1.
+        The date and time when the request was last updated. **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). 
+
+        :param update_time_utc: The update_time_utc of this PtsV2PaymentsPost201Response1.
+        :type: str
+        """
+
+        self._update_time_utc = update_time_utc
 
     @property
     def processor_information(self):

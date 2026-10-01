@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **administrative_area** | **str** | State or province of shipping address. This is a State, Province, and Territory Codes for the United States and Canada.  | [optional] 
 **postal_code** | **str** | Postal code of the shipping address. Consists of 5 to 9 digits.  | [optional] 
 **country** | **str** | Country of shipping address. This is a two-character ISO Standard Country Codes.  | [optional] 
+**email** | **str** | Email address of the shipping recipient.  | [optional] 
 **phone_number** | **str** | Phone number of the recipient.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -35,6 +35,7 @@ class CreateOrderRequest(object):
         'merchant_information': 'Ptsv2intentsMerchantInformation',
         'payment_information': 'Ptsv2intentsPaymentInformation',
         'order_information': 'Ptsv2intentsOrderInformation',
+        'buyer_information': 'Ptsv2intentsBuyerInformation',
         'sender_information': 'Ptsv2intentsSenderInformation',
         'event_information': 'Ptsv2intentsEventInformation',
         'travel_information': 'Ptsv2intentsTravelInformation',
@@ -47,13 +48,14 @@ class CreateOrderRequest(object):
         'merchant_information': 'merchantInformation',
         'payment_information': 'paymentInformation',
         'order_information': 'orderInformation',
+        'buyer_information': 'buyerInformation',
         'sender_information': 'senderInformation',
         'event_information': 'eventInformation',
         'travel_information': 'travelInformation',
         'recipient_information': 'recipientInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, merchant_information=None, payment_information=None, order_information=None, sender_information=None, event_information=None, travel_information=None, recipient_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, merchant_information=None, payment_information=None, order_information=None, buyer_information=None, sender_information=None, event_information=None, travel_information=None, recipient_information=None):
         """
         CreateOrderRequest - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class CreateOrderRequest(object):
         self._merchant_information = None
         self._payment_information = None
         self._order_information = None
+        self._buyer_information = None
         self._sender_information = None
         self._event_information = None
         self._travel_information = None
@@ -78,6 +81,8 @@ class CreateOrderRequest(object):
           self.payment_information = payment_information
         if order_information is not None:
           self.order_information = order_information
+        if buyer_information is not None:
+          self.buyer_information = buyer_information
         if sender_information is not None:
           self.sender_information = sender_information
         if event_information is not None:
@@ -191,6 +196,27 @@ class CreateOrderRequest(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def buyer_information(self):
+        """
+        Gets the buyer_information of this CreateOrderRequest.
+
+        :return: The buyer_information of this CreateOrderRequest.
+        :rtype: Ptsv2intentsBuyerInformation
+        """
+        return self._buyer_information
+
+    @buyer_information.setter
+    def buyer_information(self, buyer_information):
+        """
+        Sets the buyer_information of this CreateOrderRequest.
+
+        :param buyer_information: The buyer_information of this CreateOrderRequest.
+        :type: Ptsv2intentsBuyerInformation
+        """
+
+        self._buyer_information = buyer_information
 
     @property
     def sender_information(self):

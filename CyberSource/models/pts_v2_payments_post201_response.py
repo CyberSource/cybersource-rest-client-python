@@ -34,6 +34,7 @@ class PtsV2PaymentsPost201Response(object):
         'id': 'str',
         'message': 'str',
         'submit_time_utc': 'str',
+        'create_time_utc': 'str',
         'status': 'str',
         'reconciliation_id': 'str',
         'error_information': 'PtsV2PaymentsPost201ResponseErrorInformation',
@@ -62,6 +63,7 @@ class PtsV2PaymentsPost201Response(object):
         'id': 'id',
         'message': 'message',
         'submit_time_utc': 'submitTimeUtc',
+        'create_time_utc': 'createTimeUtc',
         'status': 'status',
         'reconciliation_id': 'reconciliationId',
         'error_information': 'errorInformation',
@@ -85,7 +87,7 @@ class PtsV2PaymentsPost201Response(object):
         'watchlist_screening_information': 'watchlistScreeningInformation'
     }
 
-    def __init__(self, links=None, id=None, message=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, payment_insights_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, buyer_information=None, risk_information=None, consumer_authentication_information=None, merchant_information=None, clearing_information=None, embedded_actions=None, watchlist_screening_information=None):
+    def __init__(self, links=None, id=None, message=None, submit_time_utc=None, create_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, payment_insights_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, buyer_information=None, risk_information=None, consumer_authentication_information=None, merchant_information=None, clearing_information=None, embedded_actions=None, watchlist_screening_information=None):
         """
         PtsV2PaymentsPost201Response - a model defined in Swagger
         """
@@ -94,6 +96,7 @@ class PtsV2PaymentsPost201Response(object):
         self._id = None
         self._message = None
         self._submit_time_utc = None
+        self._create_time_utc = None
         self._status = None
         self._reconciliation_id = None
         self._error_information = None
@@ -124,6 +127,8 @@ class PtsV2PaymentsPost201Response(object):
           self.message = message
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
+        if create_time_utc is not None:
+          self.create_time_utc = create_time_utc
         if status is not None:
           self.status = status
         if reconciliation_id is not None:
@@ -256,6 +261,29 @@ class PtsV2PaymentsPost201Response(object):
         """
 
         self._submit_time_utc = submit_time_utc
+
+    @property
+    def create_time_utc(self):
+        """
+        Gets the create_time_utc of this PtsV2PaymentsPost201Response.
+        Time when the authorization was created, in UTC. 
+
+        :return: The create_time_utc of this PtsV2PaymentsPost201Response.
+        :rtype: str
+        """
+        return self._create_time_utc
+
+    @create_time_utc.setter
+    def create_time_utc(self, create_time_utc):
+        """
+        Sets the create_time_utc of this PtsV2PaymentsPost201Response.
+        Time when the authorization was created, in UTC. 
+
+        :param create_time_utc: The create_time_utc of this PtsV2PaymentsPost201Response.
+        :type: str
+        """
+
+        self._create_time_utc = create_time_utc
 
     @property
     def status(self):

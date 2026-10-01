@@ -31,7 +31,7 @@ class BoardingPayoutsConfigurations(object):
     """
     swagger_types = {
         'common': 'BoardingPayoutsConfigurationsCommon',
-        'processors': 'dict(str, object)'
+        'processors': 'dict(str, BoardingPayoutsConfigurationsProcessors)'
     }
 
     attribute_map = {
@@ -79,7 +79,7 @@ class BoardingPayoutsConfigurations(object):
         Gets the processors of this BoardingPayoutsConfigurations.
 
         :return: The processors of this BoardingPayoutsConfigurations.
-        :rtype: dict(str, object)
+        :rtype: dict(str, BoardingPayoutsConfigurationsProcessors)
         """
         return self._processors
 
@@ -89,7 +89,7 @@ class BoardingPayoutsConfigurations(object):
         Sets the processors of this BoardingPayoutsConfigurations.
 
         :param processors: The processors of this BoardingPayoutsConfigurations.
-        :type: dict(str, object)
+        :type: dict(str, BoardingPayoutsConfigurationsProcessors)
         """
 
         self._processors = processors

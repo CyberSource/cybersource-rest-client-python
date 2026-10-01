@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **processing_information** | [**Ptsv2paymentreferencesProcessingInformation**](Ptsv2paymentreferencesProcessingInformation.md) |  | [optional] 
 **payment_information** | [**Ptsv2paymentreferencesPaymentInformation**](Ptsv2paymentreferencesPaymentInformation.md) |  | [optional] 
 **order_information** | [**Ptsv2paymentreferencesOrderInformation**](Ptsv2paymentreferencesOrderInformation.md) |  | [optional] 
+**order_history** | [**list[Ptsv2paymentsOrderHistory]**](Ptsv2paymentsOrderHistory.md) | Array of the buyer&#39;s previous orders.  | [optional] 
 **buyer_information** | [**Ptsv2paymentreferencesBuyerInformation**](Ptsv2paymentreferencesBuyerInformation.md) |  | [optional] 
 **device_information** | [**Ptsv2paymentreferencesDeviceInformation**](Ptsv2paymentreferencesDeviceInformation.md) |  | [optional] 
 **merchant_information** | [**Ptsv2paymentreferencesMerchantInformation**](Ptsv2paymentreferencesMerchantInformation.md) |  | [optional] 

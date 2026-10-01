@@ -30,12 +30,12 @@ class UnifiedriskTransactionAmount(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'value': 'float',
+        'value': 'str',
         'currency': 'str',
         'base_currency': 'str',
-        'base_value': 'float',
+        'base_value': 'str',
         'merchant_currency': 'str',
-        'merchant_value': 'float'
+        'merchant_value': 'str'
     }
 
     attribute_map = {
@@ -79,7 +79,7 @@ class UnifiedriskTransactionAmount(object):
         Transaction amount in the specified currency
 
         :return: The value of this UnifiedriskTransactionAmount.
-        :rtype: float
+        :rtype: str
         """
         return self._value
 
@@ -90,7 +90,7 @@ class UnifiedriskTransactionAmount(object):
         Transaction amount in the specified currency
 
         :param value: The value of this UnifiedriskTransactionAmount.
-        :type: float
+        :type: str
         """
 
         self._value = value
@@ -148,7 +148,7 @@ class UnifiedriskTransactionAmount(object):
         Amount in base currency
 
         :return: The base_value of this UnifiedriskTransactionAmount.
-        :rtype: float
+        :rtype: str
         """
         return self._base_value
 
@@ -159,7 +159,7 @@ class UnifiedriskTransactionAmount(object):
         Amount in base currency
 
         :param base_value: The base_value of this UnifiedriskTransactionAmount.
-        :type: float
+        :type: str
         """
 
         self._base_value = base_value
@@ -194,7 +194,7 @@ class UnifiedriskTransactionAmount(object):
         Transaction amount expressed in the merchant's local currency, used for cross-currency comparison and risk threshold evaluation against merchant's baseline
 
         :return: The merchant_value of this UnifiedriskTransactionAmount.
-        :rtype: float
+        :rtype: str
         """
         return self._merchant_value
 
@@ -205,7 +205,7 @@ class UnifiedriskTransactionAmount(object):
         Transaction amount expressed in the merchant's local currency, used for cross-currency comparison and risk threshold evaluation against merchant's baseline
 
         :param merchant_value: The merchant_value of this UnifiedriskTransactionAmount.
-        :type: float
+        :type: str
         """
 
         self._merchant_value = merchant_value

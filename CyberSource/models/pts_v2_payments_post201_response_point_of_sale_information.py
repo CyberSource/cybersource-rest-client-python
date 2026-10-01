@@ -32,16 +32,18 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
     swagger_types = {
         'emv': 'PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv',
         'amex_capn_data': 'str',
-        'terminal_id': 'str'
+        'terminal_id': 'str',
+        'free_text': 'str'
     }
 
     attribute_map = {
         'emv': 'emv',
         'amex_capn_data': 'amexCapnData',
-        'terminal_id': 'terminalId'
+        'terminal_id': 'terminalId',
+        'free_text': 'freeText'
     }
 
-    def __init__(self, emv=None, amex_capn_data=None, terminal_id=None):
+    def __init__(self, emv=None, amex_capn_data=None, terminal_id=None, free_text=None):
         """
         PtsV2PaymentsPost201ResponsePointOfSaleInformation - a model defined in Swagger
         """
@@ -49,6 +51,7 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
         self._emv = None
         self._amex_capn_data = None
         self._terminal_id = None
+        self._free_text = None
 
         if emv is not None:
           self.emv = emv
@@ -56,6 +59,8 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
           self.amex_capn_data = amex_capn_data
         if terminal_id is not None:
           self.terminal_id = terminal_id
+        if free_text is not None:
+          self.free_text = free_text
 
     @property
     def emv(self):
@@ -123,6 +128,29 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
         """
 
         self._terminal_id = terminal_id
+
+    @property
+    def free_text(self):
+        """
+        Gets the free_text of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
+        The issuers must use DE 123 (Receipt Free Text) to respond with free-text messages, if the transaction requires this message to be displayed on the POS device. The issuer must request their Customer Implementation Service agent to enable DE 123 for this use, as it is not enabled as a default feature. When enabled, consider the test case on DE 123 for this use (Issuer Mastercard and Debit Mastercard - MSR Product and Services - Receipt Free Text (Peru) - Authorization Requests). 
+
+        :return: The free_text of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
+        :rtype: str
+        """
+        return self._free_text
+
+    @free_text.setter
+    def free_text(self, free_text):
+        """
+        Sets the free_text of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
+        The issuers must use DE 123 (Receipt Free Text) to respond with free-text messages, if the transaction requires this message to be displayed on the POS device. The issuer must request their Customer Implementation Service agent to enable DE 123 for this use, as it is not enabled as a default feature. When enabled, consider the test case on DE 123 for this use (Issuer Mastercard and Debit Mastercard - MSR Product and Services - Receipt Free Text (Peru) - Authorization Requests). 
+
+        :param free_text: The free_text of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
+        :type: str
+        """
+
+        self._free_text = free_text
 
     def to_dict(self):
         """

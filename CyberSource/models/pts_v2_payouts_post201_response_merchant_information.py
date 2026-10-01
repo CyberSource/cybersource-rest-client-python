@@ -30,7 +30,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'merchant_descriptor': 'PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor'
+        'merchant_descriptor': 'PtsV2PaymentsPost201Response1OrderInformationMerchantDescriptor'
     }
 
     attribute_map = {
@@ -53,7 +53,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformation(object):
         Gets the merchant_descriptor of this PtsV2PayoutsPost201ResponseMerchantInformation.
 
         :return: The merchant_descriptor of this PtsV2PayoutsPost201ResponseMerchantInformation.
-        :rtype: PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor
+        :rtype: PtsV2PaymentsPost201Response1OrderInformationMerchantDescriptor
         """
         return self._merchant_descriptor
 
@@ -63,7 +63,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformation(object):
         Sets the merchant_descriptor of this PtsV2PayoutsPost201ResponseMerchantInformation.
 
         :param merchant_descriptor: The merchant_descriptor of this PtsV2PayoutsPost201ResponseMerchantInformation.
-        :type: PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor
+        :type: PtsV2PaymentsPost201Response1OrderInformationMerchantDescriptor
         """
 
         self._merchant_descriptor = merchant_descriptor

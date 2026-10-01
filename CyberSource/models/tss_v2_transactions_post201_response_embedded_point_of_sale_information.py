@@ -34,7 +34,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         'terminal_serial_number': 'str',
         'device_id': 'str',
         'partner': 'TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformationPartner',
-        'emv': 'Ptsv2paymentsidreversalsPointOfSaleInformationEmv'
+        'emv': 'PtsV2PaymentsReversalsPost201ResponsePointOfSaleInformationEmv'
     }
 
     attribute_map = {
@@ -163,7 +163,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         Gets the emv of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
 
         :return: The emv of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        :rtype: Ptsv2paymentsidreversalsPointOfSaleInformationEmv
+        :rtype: PtsV2PaymentsReversalsPost201ResponsePointOfSaleInformationEmv
         """
         return self._emv
 
@@ -173,7 +173,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         Sets the emv of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
 
         :param emv: The emv of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        :type: Ptsv2paymentsidreversalsPointOfSaleInformationEmv
+        :type: PtsV2PaymentsReversalsPost201ResponsePointOfSaleInformationEmv
         """
 
         self._emv = emv

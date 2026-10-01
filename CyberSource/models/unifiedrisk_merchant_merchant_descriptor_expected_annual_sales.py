@@ -32,11 +32,11 @@ class UnifiedriskMerchantMerchantDescriptorExpectedAnnualSales(object):
     swagger_types = {
         'expected_annual_sales': 'object',
         'base_currency': 'str',
-        'base_value': 'int',
+        'base_value': 'str',
         'currency': 'str',
         'merchant_currency': 'str',
-        'merchant_value': 'int',
-        'value': 'int',
+        'merchant_value': 'str',
+        'value': 'str',
         'expected_annual_volume': 'int'
     }
 
@@ -135,7 +135,7 @@ class UnifiedriskMerchantMerchantDescriptorExpectedAnnualSales(object):
         Expected annual sales value in the base currency, in minor units
 
         :return: The base_value of this UnifiedriskMerchantMerchantDescriptorExpectedAnnualSales.
-        :rtype: int
+        :rtype: str
         """
         return self._base_value
 
@@ -146,7 +146,7 @@ class UnifiedriskMerchantMerchantDescriptorExpectedAnnualSales(object):
         Expected annual sales value in the base currency, in minor units
 
         :param base_value: The base_value of this UnifiedriskMerchantMerchantDescriptorExpectedAnnualSales.
-        :type: int
+        :type: str
         """
 
         self._base_value = base_value
@@ -204,7 +204,7 @@ class UnifiedriskMerchantMerchantDescriptorExpectedAnnualSales(object):
         Expected annual sales in the merchant's local currency, in minor units
 
         :return: The merchant_value of this UnifiedriskMerchantMerchantDescriptorExpectedAnnualSales.
-        :rtype: int
+        :rtype: str
         """
         return self._merchant_value
 
@@ -215,7 +215,7 @@ class UnifiedriskMerchantMerchantDescriptorExpectedAnnualSales(object):
         Expected annual sales in the merchant's local currency, in minor units
 
         :param merchant_value: The merchant_value of this UnifiedriskMerchantMerchantDescriptorExpectedAnnualSales.
-        :type: int
+        :type: str
         """
 
         self._merchant_value = merchant_value
@@ -227,7 +227,7 @@ class UnifiedriskMerchantMerchantDescriptorExpectedAnnualSales(object):
         Expected annual sales amount in the specified currency, in minor units
 
         :return: The value of this UnifiedriskMerchantMerchantDescriptorExpectedAnnualSales.
-        :rtype: int
+        :rtype: str
         """
         return self._value
 
@@ -238,7 +238,7 @@ class UnifiedriskMerchantMerchantDescriptorExpectedAnnualSales(object):
         Expected annual sales amount in the specified currency, in minor units
 
         :param value: The value of this UnifiedriskMerchantMerchantDescriptorExpectedAnnualSales.
-        :type: int
+        :type: str
         """
 
         self._value = value

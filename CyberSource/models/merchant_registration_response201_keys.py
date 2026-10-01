@@ -174,7 +174,7 @@ class MerchantRegistrationResponse201Keys(object):
     def encryption_type(self):
         """
         Gets the encryption_type of this MerchantRegistrationResponse201Keys.
-        JWE content encryption algorithm  Possible values: - A256GCM - A128GCM - C20P - A256CBC-HS512 - A128CBC-HS256 - A256CCM - A128CCM
+        JWE content encryption algorithm  Possible values: - A256GCM - A128GCM - C20P - A256CBC_HS512 - A128CBC_HS256 - A256CCM - A128CCM
 
         :return: The encryption_type of this MerchantRegistrationResponse201Keys.
         :rtype: str
@@ -185,7 +185,7 @@ class MerchantRegistrationResponse201Keys(object):
     def encryption_type(self, encryption_type):
         """
         Sets the encryption_type of this MerchantRegistrationResponse201Keys.
-        JWE content encryption algorithm  Possible values: - A256GCM - A128GCM - C20P - A256CBC-HS512 - A128CBC-HS256 - A256CCM - A128CCM
+        JWE content encryption algorithm  Possible values: - A256GCM - A128GCM - C20P - A256CBC_HS512 - A128CBC_HS256 - A256CCM - A128CCM
 
         :param encryption_type: The encryption_type of this MerchantRegistrationResponse201Keys.
         :type: str

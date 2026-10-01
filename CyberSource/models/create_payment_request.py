@@ -35,6 +35,7 @@ class CreatePaymentRequest(object):
         'issuer_information': 'Ptsv2paymentsIssuerInformation',
         'payment_information': 'Ptsv2paymentsPaymentInformation',
         'order_information': 'Ptsv2paymentsOrderInformation',
+        'order_history': 'list[Ptsv2paymentsOrderHistory]',
         'buyer_information': 'Ptsv2paymentsBuyerInformation',
         'sender_information': 'Ptsv2paymentsSenderInformation',
         'recipient_information': 'Ptsv2paymentsRecipientInformation',
@@ -67,6 +68,7 @@ class CreatePaymentRequest(object):
         'issuer_information': 'issuerInformation',
         'payment_information': 'paymentInformation',
         'order_information': 'orderInformation',
+        'order_history': 'orderHistory',
         'buyer_information': 'buyerInformation',
         'sender_information': 'senderInformation',
         'recipient_information': 'recipientInformation',
@@ -93,7 +95,7 @@ class CreatePaymentRequest(object):
         'watchlist_screening_information': 'watchlistScreeningInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, sender_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, health_care_information=None, promotion_information=None, token_information=None, invoice_details=None, processor_information=None, agreement_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None, unscheduled_payment_information=None, hosted_payment_information=None, watchlist_screening_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, order_history=None, buyer_information=None, sender_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, health_care_information=None, promotion_information=None, token_information=None, invoice_details=None, processor_information=None, agreement_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None, unscheduled_payment_information=None, hosted_payment_information=None, watchlist_screening_information=None):
         """
         CreatePaymentRequest - a model defined in Swagger
         """
@@ -103,6 +105,7 @@ class CreatePaymentRequest(object):
         self._issuer_information = None
         self._payment_information = None
         self._order_information = None
+        self._order_history = None
         self._buyer_information = None
         self._sender_information = None
         self._recipient_information = None
@@ -138,6 +141,8 @@ class CreatePaymentRequest(object):
           self.payment_information = payment_information
         if order_information is not None:
           self.order_information = order_information
+        if order_history is not None:
+          self.order_history = order_history
         if buyer_information is not None:
           self.buyer_information = buyer_information
         if sender_information is not None:
@@ -291,6 +296,29 @@ class CreatePaymentRequest(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def order_history(self):
+        """
+        Gets the order_history of this CreatePaymentRequest.
+        Array of the buyer's previous orders. 
+
+        :return: The order_history of this CreatePaymentRequest.
+        :rtype: list[Ptsv2paymentsOrderHistory]
+        """
+        return self._order_history
+
+    @order_history.setter
+    def order_history(self, order_history):
+        """
+        Sets the order_history of this CreatePaymentRequest.
+        Array of the buyer's previous orders. 
+
+        :param order_history: The order_history of this CreatePaymentRequest.
+        :type: list[Ptsv2paymentsOrderHistory]
+        """
+
+        self._order_history = order_history
 
     @property
     def buyer_information(self):

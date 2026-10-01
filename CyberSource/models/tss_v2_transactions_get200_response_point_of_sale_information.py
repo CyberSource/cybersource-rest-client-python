@@ -34,7 +34,7 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
         'entry_mode': 'str',
         'terminal_capability': 'int',
         'cardholder_verification_method_used': 'int',
-        'emv': 'Ptsv2paymentsidreversalsPointOfSaleInformationEmv'
+        'emv': 'PtsV2PaymentsReversalsPost201ResponsePointOfSaleInformationEmv'
     }
 
     attribute_map = {
@@ -165,7 +165,7 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
         Gets the emv of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
 
         :return: The emv of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
-        :rtype: Ptsv2paymentsidreversalsPointOfSaleInformationEmv
+        :rtype: PtsV2PaymentsReversalsPost201ResponsePointOfSaleInformationEmv
         """
         return self._emv
 
@@ -175,7 +175,7 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
         Sets the emv of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
 
         :param emv: The emv of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
-        :type: Ptsv2paymentsidreversalsPointOfSaleInformationEmv
+        :type: PtsV2PaymentsReversalsPost201ResponsePointOfSaleInformationEmv
         """
 
         self._emv = emv

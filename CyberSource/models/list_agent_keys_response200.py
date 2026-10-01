@@ -85,7 +85,7 @@ class ListAgentKeysResponse200(object):
     def agent_name(self):
         """
         Gets the agent_name of this ListAgentKeysResponse200.
-        Agent name
+        Display name of the agent
 
         :return: The agent_name of this ListAgentKeysResponse200.
         :rtype: str
@@ -96,7 +96,7 @@ class ListAgentKeysResponse200(object):
     def agent_name(self, agent_name):
         """
         Sets the agent_name of this ListAgentKeysResponse200.
-        Agent name
+        Display name of the agent
 
         :param agent_name: The agent_name of this ListAgentKeysResponse200.
         :type: str
@@ -108,7 +108,7 @@ class ListAgentKeysResponse200(object):
     def keys(self):
         """
         Gets the keys of this ListAgentKeysResponse200.
-        List of keys (without agentId/agentName/agentType since they are at parent level)
+        Paginated list of public keys belonging to this agent (agentId/agentName/agentType omitted — available at the parent level)
 
         :return: The keys of this ListAgentKeysResponse200.
         :rtype: list[AgentRegistrationResponse201Keys]
@@ -119,7 +119,7 @@ class ListAgentKeysResponse200(object):
     def keys(self, keys):
         """
         Sets the keys of this ListAgentKeysResponse200.
-        List of keys (without agentId/agentName/agentType since they are at parent level)
+        Paginated list of public keys belonging to this agent (agentId/agentName/agentType omitted — available at the parent level)
 
         :param keys: The keys of this ListAgentKeysResponse200.
         :type: list[AgentRegistrationResponse201Keys]

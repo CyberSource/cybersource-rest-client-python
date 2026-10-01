@@ -50,12 +50,9 @@ class InlineResponse20112Totals(object):
         self._display_text = None
         self._amount = None
 
-        if type is not None:
-          self.type = type
-        if display_text is not None:
-          self.display_text = display_text
-        if amount is not None:
-          self.amount = amount
+        self.type = type
+        self.display_text = display_text
+        self.amount = amount
 
     @property
     def type(self):

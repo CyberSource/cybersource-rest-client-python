@@ -50,6 +50,7 @@ class PaymentsConfigurationSetup(object):
         'receivables_manager': 'PaymentsConfigurationSetupDigitalPayments',
         'service_fee': 'PaymentsConfigurationSetupCardProcessing',
         'batch_upload': 'PaymentsConfigurationSetupDigitalPayments',
+        'payment_events': 'PaymentsConfigurationSetupDigitalPayments',
         'transact_guard': 'PaymentsConfigurationSetupDigitalPayments',
         'microform': 'PaymentsConfigurationSetupCardProcessing'
     }
@@ -75,11 +76,12 @@ class PaymentsConfigurationSetup(object):
         'receivables_manager': 'receivablesManager',
         'service_fee': 'serviceFee',
         'batch_upload': 'batchUpload',
+        'payment_events': 'paymentEvents',
         'transact_guard': 'transactGuard',
         'microform': 'microform'
     }
 
-    def __init__(self, card_processing=None, alternative_payment_methods=None, card_present_connect=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, cybs_ready_terminal=None, payment_orchestration=None, payouts=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None, batch_upload=None, transact_guard=None, microform=None):
+    def __init__(self, card_processing=None, alternative_payment_methods=None, card_present_connect=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, cybs_ready_terminal=None, payment_orchestration=None, payouts=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None, batch_upload=None, payment_events=None, transact_guard=None, microform=None):
         """
         PaymentsConfigurationSetup - a model defined in Swagger
         """
@@ -104,6 +106,7 @@ class PaymentsConfigurationSetup(object):
         self._receivables_manager = None
         self._service_fee = None
         self._batch_upload = None
+        self._payment_events = None
         self._transact_guard = None
         self._microform = None
 
@@ -147,6 +150,8 @@ class PaymentsConfigurationSetup(object):
           self.service_fee = service_fee
         if batch_upload is not None:
           self.batch_upload = batch_upload
+        if payment_events is not None:
+          self.payment_events = payment_events
         if transact_guard is not None:
           self.transact_guard = transact_guard
         if microform is not None:
@@ -571,6 +576,27 @@ class PaymentsConfigurationSetup(object):
         """
 
         self._batch_upload = batch_upload
+
+    @property
+    def payment_events(self):
+        """
+        Gets the payment_events of this PaymentsConfigurationSetup.
+
+        :return: The payment_events of this PaymentsConfigurationSetup.
+        :rtype: PaymentsConfigurationSetupDigitalPayments
+        """
+        return self._payment_events
+
+    @payment_events.setter
+    def payment_events(self, payment_events):
+        """
+        Sets the payment_events of this PaymentsConfigurationSetup.
+
+        :param payment_events: The payment_events of this PaymentsConfigurationSetup.
+        :type: PaymentsConfigurationSetupDigitalPayments
+        """
+
+        self._payment_events = payment_events
 
     @property
     def transact_guard(self):

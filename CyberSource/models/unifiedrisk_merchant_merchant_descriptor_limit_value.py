@@ -31,11 +31,11 @@ class UnifiedriskMerchantMerchantDescriptorLimitValue(object):
     """
     swagger_types = {
         'base_currency': 'str',
-        'base_value': 'int',
+        'base_value': 'str',
         'currency': 'str',
         'merchant_currency': 'str',
-        'merchant_value': 'int',
-        'value': 'int',
+        'merchant_value': 'str',
+        'value': 'str',
         'expected_monthly_volume': 'int'
     }
 
@@ -107,7 +107,7 @@ class UnifiedriskMerchantMerchantDescriptorLimitValue(object):
         Financial limit amount in the base currency, in minor units
 
         :return: The base_value of this UnifiedriskMerchantMerchantDescriptorLimitValue.
-        :rtype: int
+        :rtype: str
         """
         return self._base_value
 
@@ -118,7 +118,7 @@ class UnifiedriskMerchantMerchantDescriptorLimitValue(object):
         Financial limit amount in the base currency, in minor units
 
         :param base_value: The base_value of this UnifiedriskMerchantMerchantDescriptorLimitValue.
-        :type: int
+        :type: str
         """
 
         self._base_value = base_value
@@ -176,7 +176,7 @@ class UnifiedriskMerchantMerchantDescriptorLimitValue(object):
         Financial limit in the merchant's local currency, in minor units
 
         :return: The merchant_value of this UnifiedriskMerchantMerchantDescriptorLimitValue.
-        :rtype: int
+        :rtype: str
         """
         return self._merchant_value
 
@@ -187,7 +187,7 @@ class UnifiedriskMerchantMerchantDescriptorLimitValue(object):
         Financial limit in the merchant's local currency, in minor units
 
         :param merchant_value: The merchant_value of this UnifiedriskMerchantMerchantDescriptorLimitValue.
-        :type: int
+        :type: str
         """
 
         self._merchant_value = merchant_value
@@ -199,7 +199,7 @@ class UnifiedriskMerchantMerchantDescriptorLimitValue(object):
         Limit value amount in the specified currency, in minor units
 
         :return: The value of this UnifiedriskMerchantMerchantDescriptorLimitValue.
-        :rtype: int
+        :rtype: str
         """
         return self._value
 
@@ -210,7 +210,7 @@ class UnifiedriskMerchantMerchantDescriptorLimitValue(object):
         Limit value amount in the specified currency, in minor units
 
         :param value: The value of this UnifiedriskMerchantMerchantDescriptorLimitValue.
-        :type: int
+        :type: str
         """
 
         self._value = value

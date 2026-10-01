@@ -71,7 +71,7 @@ class KeyUpdate1(object):
     def key_name(self):
         """
         Gets the key_name of this KeyUpdate1.
-        Unique name for the key
+        Unique  name for this encryption key within the merchant.
 
         :return: The key_name of this KeyUpdate1.
         :rtype: str
@@ -82,7 +82,7 @@ class KeyUpdate1(object):
     def key_name(self, key_name):
         """
         Sets the key_name of this KeyUpdate1.
-        Unique name for the key
+        Unique  name for this encryption key within the merchant.
 
         :param key_name: The key_name of this KeyUpdate1.
         :type: str
@@ -94,7 +94,7 @@ class KeyUpdate1(object):
     def encryption_key(self):
         """
         Gets the encryption_key of this KeyUpdate1.
-        Base64-encoded public key (JWE key wrap public key)
+        Base64-encoded public key used for JWE key wrapping. Supported formats are PEM (PKCS#8 or PKCS#1) and JWK.
 
         :return: The encryption_key of this KeyUpdate1.
         :rtype: str
@@ -105,7 +105,7 @@ class KeyUpdate1(object):
     def encryption_key(self, encryption_key):
         """
         Sets the encryption_key of this KeyUpdate1.
-        Base64-encoded public key (JWE key wrap public key)
+        Base64-encoded public key used for JWE key wrapping. Supported formats are PEM (PKCS#8 or PKCS#1) and JWK.
 
         :param encryption_key: The encryption_key of this KeyUpdate1.
         :type: str
@@ -117,7 +117,7 @@ class KeyUpdate1(object):
     def algorithm(self):
         """
         Gets the algorithm of this KeyUpdate1.
-        JWE key wrap algorithm  Possible values: - RSA-OAEP - RSA-OAEP-256 - RSA-OAEP-384 - RSA-OAEP-512
+        JWE key wrap algorithm used to encrypt the content encryption key:  - ***RSA-OAEP*** — RSA-OAEP with SHA-1  - ***RSA-OAEP-256*** — RSA-OAEP with SHA-256  - ***RSA-OAEP-384*** — RSA-OAEP with SHA-384  - ***RSA-OAEP-512*** — RSA-OAEP with SHA-512   Possible values: - RSA-OAEP - RSA-OAEP-256 - RSA-OAEP-384 - RSA-OAEP-512
 
         :return: The algorithm of this KeyUpdate1.
         :rtype: str
@@ -128,7 +128,7 @@ class KeyUpdate1(object):
     def algorithm(self, algorithm):
         """
         Sets the algorithm of this KeyUpdate1.
-        JWE key wrap algorithm  Possible values: - RSA-OAEP - RSA-OAEP-256 - RSA-OAEP-384 - RSA-OAEP-512
+        JWE key wrap algorithm used to encrypt the content encryption key:  - ***RSA-OAEP*** — RSA-OAEP with SHA-1  - ***RSA-OAEP-256*** — RSA-OAEP with SHA-256  - ***RSA-OAEP-384*** — RSA-OAEP with SHA-384  - ***RSA-OAEP-512*** — RSA-OAEP with SHA-512   Possible values: - RSA-OAEP - RSA-OAEP-256 - RSA-OAEP-384 - RSA-OAEP-512
 
         :param algorithm: The algorithm of this KeyUpdate1.
         :type: str
@@ -140,7 +140,7 @@ class KeyUpdate1(object):
     def encryption_type(self):
         """
         Gets the encryption_type of this KeyUpdate1.
-        JWE content encryption algorithm  Possible values: - A256GCM - A128GCM - C20P - A256CBC-HS512 - A128CBC-HS256 - A256CCM - A128CCM
+        JWE content encryption algorithm used to encrypt the payment payload.  Possible values: - A256GCM - A128GCM - C20P - A256CBC_HS512 - A128CBC_HS256 - A256CCM - A128CCM
 
         :return: The encryption_type of this KeyUpdate1.
         :rtype: str
@@ -151,7 +151,7 @@ class KeyUpdate1(object):
     def encryption_type(self, encryption_type):
         """
         Sets the encryption_type of this KeyUpdate1.
-        JWE content encryption algorithm  Possible values: - A256GCM - A128GCM - C20P - A256CBC-HS512 - A128CBC-HS256 - A256CCM - A128CCM
+        JWE content encryption algorithm used to encrypt the payment payload.  Possible values: - A256GCM - A128GCM - C20P - A256CBC_HS512 - A128CBC_HS256 - A256CCM - A128CCM
 
         :param encryption_type: The encryption_type of this KeyUpdate1.
         :type: str
@@ -163,7 +163,7 @@ class KeyUpdate1(object):
     def expiration_date(self):
         """
         Gets the expiration_date of this KeyUpdate1.
-        Key expiration date in UTC
+        Key expiration date-time in UTC.
 
         :return: The expiration_date of this KeyUpdate1.
         :rtype: datetime
@@ -174,7 +174,7 @@ class KeyUpdate1(object):
     def expiration_date(self, expiration_date):
         """
         Sets the expiration_date of this KeyUpdate1.
-        Key expiration date in UTC
+        Key expiration date-time in UTC.
 
         :param expiration_date: The expiration_date of this KeyUpdate1.
         :type: datetime

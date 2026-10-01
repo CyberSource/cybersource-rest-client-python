@@ -71,12 +71,9 @@ class InlineResponse20112FulfillmentOptions(object):
         self._tax = None
         self._total = None
 
-        if id is not None:
-          self.id = id
-        if type is not None:
-          self.type = type
-        if title is not None:
-          self.title = title
+        self.id = id
+        self.type = type
+        self.title = title
         if subtitle is not None:
           self.subtitle = subtitle
         if carrier is not None:
@@ -85,12 +82,9 @@ class InlineResponse20112FulfillmentOptions(object):
           self.earliest_delivery_time = earliest_delivery_time
         if latest_delivery_time is not None:
           self.latest_delivery_time = latest_delivery_time
-        if subtotal is not None:
-          self.subtotal = subtotal
-        if tax is not None:
-          self.tax = tax
-        if total is not None:
-          self.total = total
+        self.subtotal = subtotal
+        self.tax = tax
+        self.total = total
 
     @property
     def id(self):
