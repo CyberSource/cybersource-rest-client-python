@@ -41,7 +41,8 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         'settlement_date': 'str',
         'update_time_utc': 'str',
         'network': 'Ptsv2paymentsProcessorInformationReversalNetwork',
-        'merchant_advice': 'PtsV2PaymentsRefundPost201ResponseProcessorInformationMerchantAdvice'
+        'merchant_advice': 'PtsV2PaymentsRefundPost201ResponseProcessorInformationMerchantAdvice',
+        'transaction_link_identifier': 'str'
     }
 
     attribute_map = {
@@ -56,10 +57,11 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         'settlement_date': 'settlementDate',
         'update_time_utc': 'updateTimeUtc',
         'network': 'network',
-        'merchant_advice': 'merchantAdvice'
+        'merchant_advice': 'merchantAdvice',
+        'transaction_link_identifier': 'transactionLinkIdentifier'
     }
 
-    def __init__(self, approval_code=None, transaction_id=None, forwarded_acquirer_code=None, merchant_number=None, response_code=None, response_source_code=None, ach_verification=None, network_transaction_id=None, settlement_date=None, update_time_utc=None, network=None, merchant_advice=None):
+    def __init__(self, approval_code=None, transaction_id=None, forwarded_acquirer_code=None, merchant_number=None, response_code=None, response_source_code=None, ach_verification=None, network_transaction_id=None, settlement_date=None, update_time_utc=None, network=None, merchant_advice=None, transaction_link_identifier=None):
         """
         PtsV2PaymentsRefundPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -76,6 +78,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         self._update_time_utc = None
         self._network = None
         self._merchant_advice = None
+        self._transaction_link_identifier = None
 
         if approval_code is not None:
           self.approval_code = approval_code
@@ -101,6 +104,8 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
           self.network = network
         if merchant_advice is not None:
           self.merchant_advice = merchant_advice
+        if transaction_link_identifier is not None:
+          self.transaction_link_identifier = transaction_link_identifier
 
     @property
     def approval_code(self):
@@ -371,6 +376,29 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         """
 
         self._merchant_advice = merchant_advice
+
+    @property
+    def transaction_link_identifier(self):
+        """
+        Gets the transaction_link_identifier of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        Transaction Link Identifier (TLID). Links all messages within a transaction lifecycle for Mastercard transactions. Received from Mastercard in the authorization response and automatically replayed for lifecycle transactions (reversals, follow-on credits, authorization refresh).  #### PIN Debit Also returned for PIN Debit purchase, credit, and reversal transactions. For PIN Debit (Visa Gateway) flows, this value is mapped to Visa Field 111 (DSI 07, Tag C0). 
+
+        :return: The transaction_link_identifier of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._transaction_link_identifier
+
+    @transaction_link_identifier.setter
+    def transaction_link_identifier(self, transaction_link_identifier):
+        """
+        Sets the transaction_link_identifier of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        Transaction Link Identifier (TLID). Links all messages within a transaction lifecycle for Mastercard transactions. Received from Mastercard in the authorization response and automatically replayed for lifecycle transactions (reversals, follow-on credits, authorization refresh).  #### PIN Debit Also returned for PIN Debit purchase, credit, and reversal transactions. For PIN Debit (Visa Gateway) flows, this value is mapped to Visa Field 111 (DSI 07, Tag C0). 
+
+        :param transaction_link_identifier: The transaction_link_identifier of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._transaction_link_identifier = transaction_link_identifier
 
     def to_dict(self):
         """

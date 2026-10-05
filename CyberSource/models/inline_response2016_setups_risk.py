@@ -32,16 +32,18 @@ class InlineResponse2016SetupsRisk(object):
     swagger_types = {
         'fraud_management_essentials': 'PaymentsConfigurationSetupCardProcessing',
         'decision_manager': 'PaymentsConfigurationSetupCardProcessing',
-        'enhanced_authentication': 'PaymentsConfigurationSetupCardProcessing'
+        'enhanced_authentication': 'PaymentsConfigurationSetupCardProcessing',
+        'vpri': 'PaymentsConfigurationSetupDigitalPayments'
     }
 
     attribute_map = {
         'fraud_management_essentials': 'fraudManagementEssentials',
         'decision_manager': 'decisionManager',
-        'enhanced_authentication': 'enhancedAuthentication'
+        'enhanced_authentication': 'enhancedAuthentication',
+        'vpri': 'vpri'
     }
 
-    def __init__(self, fraud_management_essentials=None, decision_manager=None, enhanced_authentication=None):
+    def __init__(self, fraud_management_essentials=None, decision_manager=None, enhanced_authentication=None, vpri=None):
         """
         InlineResponse2016SetupsRisk - a model defined in Swagger
         """
@@ -49,6 +51,7 @@ class InlineResponse2016SetupsRisk(object):
         self._fraud_management_essentials = None
         self._decision_manager = None
         self._enhanced_authentication = None
+        self._vpri = None
 
         if fraud_management_essentials is not None:
           self.fraud_management_essentials = fraud_management_essentials
@@ -56,6 +59,8 @@ class InlineResponse2016SetupsRisk(object):
           self.decision_manager = decision_manager
         if enhanced_authentication is not None:
           self.enhanced_authentication = enhanced_authentication
+        if vpri is not None:
+          self.vpri = vpri
 
     @property
     def fraud_management_essentials(self):
@@ -119,6 +124,27 @@ class InlineResponse2016SetupsRisk(object):
         """
 
         self._enhanced_authentication = enhanced_authentication
+
+    @property
+    def vpri(self):
+        """
+        Gets the vpri of this InlineResponse2016SetupsRisk.
+
+        :return: The vpri of this InlineResponse2016SetupsRisk.
+        :rtype: PaymentsConfigurationSetupDigitalPayments
+        """
+        return self._vpri
+
+    @vpri.setter
+    def vpri(self, vpri):
+        """
+        Sets the vpri of this InlineResponse2016SetupsRisk.
+
+        :param vpri: The vpri of this InlineResponse2016SetupsRisk.
+        :type: PaymentsConfigurationSetupDigitalPayments
+        """
+
+        self._vpri = vpri
 
     def to_dict(self):
         """

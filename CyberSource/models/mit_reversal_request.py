@@ -34,7 +34,7 @@ class MitReversalRequest(object):
         'reversal_information': 'Ptsv2paymentsidreversalsReversalInformation',
         'processing_information': 'Ptsv2paymentsidreversalsProcessingInformation',
         'order_information': 'Ptsv2paymentsidreversalsOrderInformation',
-        'point_of_sale_information': 'Ptsv2paymentsidreversalsPointOfSaleInformation',
+        'point_of_sale_information': 'Ptsv2paymentsPointOfSaleInformation',
         'device_information': 'Ptsv2paymentsidreversalsDeviceInformation',
         'processor_information': 'Ptsv2reversalsProcessorInformation'
     }
@@ -167,7 +167,7 @@ class MitReversalRequest(object):
         Gets the point_of_sale_information of this MitReversalRequest.
 
         :return: The point_of_sale_information of this MitReversalRequest.
-        :rtype: Ptsv2paymentsidreversalsPointOfSaleInformation
+        :rtype: Ptsv2paymentsPointOfSaleInformation
         """
         return self._point_of_sale_information
 
@@ -177,7 +177,7 @@ class MitReversalRequest(object):
         Sets the point_of_sale_information of this MitReversalRequest.
 
         :param point_of_sale_information: The point_of_sale_information of this MitReversalRequest.
-        :type: Ptsv2paymentsidreversalsPointOfSaleInformation
+        :type: Ptsv2paymentsPointOfSaleInformation
         """
 
         self._point_of_sale_information = point_of_sale_information

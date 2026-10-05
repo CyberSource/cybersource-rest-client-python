@@ -228,7 +228,7 @@ class ActivateMerchantKeyResponse200(object):
     def encryption_type(self):
         """
         Gets the encryption_type of this ActivateMerchantKeyResponse200.
-        JWE content encryption algorithm  Possible values: - A256GCM - A128GCM - C20P - A256CBC-HS512 - A128CBC-HS256 - A256CCM - A128CCM
+        JWE content encryption algorithm  Possible values: - A256GCM - A128GCM - C20P - A256CBC_HS512 - A128CBC_HS256 - A256CCM - A128CCM
 
         :return: The encryption_type of this ActivateMerchantKeyResponse200.
         :rtype: str
@@ -239,7 +239,7 @@ class ActivateMerchantKeyResponse200(object):
     def encryption_type(self, encryption_type):
         """
         Sets the encryption_type of this ActivateMerchantKeyResponse200.
-        JWE content encryption algorithm  Possible values: - A256GCM - A128GCM - C20P - A256CBC-HS512 - A128CBC-HS256 - A256CCM - A128CCM
+        JWE content encryption algorithm  Possible values: - A256GCM - A128GCM - C20P - A256CBC_HS512 - A128CBC_HS256 - A256CCM - A128CCM
 
         :param encryption_type: The encryption_type of this ActivateMerchantKeyResponse200.
         :type: str

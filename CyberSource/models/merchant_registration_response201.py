@@ -40,8 +40,8 @@ class MerchantRegistrationResponse201(object):
         'merchant_metadata': 'object',
         'acceptance_relationships': 'list[str]',
         'protocol_interactions': 'list[Iccv1merchantsProtocolInteractions]',
-        'web_integrations': 'Iccv1merchantsWebIntegrations',
-        'api_integrations': 'Iccv1merchantsApiIntegrations',
+        'web_integrations': 'MerchantRegistrationResponse201WebIntegrations',
+        'api_integrations': 'MerchantRegistrationResponse201ApiIntegrations',
         'is_active': 'bool',
         'created_at': 'datetime',
         'updated_at': 'datetime',
@@ -165,7 +165,7 @@ class MerchantRegistrationResponse201(object):
     def merchant_url(self):
         """
         Gets the merchant_url of this MerchantRegistrationResponse201.
-        Base merchant URL
+        Fully-qualified HTTPS URL of the merchant's domain
 
         :return: The merchant_url of this MerchantRegistrationResponse201.
         :rtype: str
@@ -176,7 +176,7 @@ class MerchantRegistrationResponse201(object):
     def merchant_url(self, merchant_url):
         """
         Sets the merchant_url of this MerchantRegistrationResponse201.
-        Base merchant URL
+        Fully-qualified HTTPS URL of the merchant's domain
 
         :param merchant_url: The merchant_url of this MerchantRegistrationResponse201.
         :type: str
@@ -188,7 +188,7 @@ class MerchantRegistrationResponse201(object):
     def vmid(self):
         """
         Gets the vmid of this MerchantRegistrationResponse201.
-        Visa Merchant ID
+        Visa Merchant ID (VMID) — unique identifier assigned by Visa
 
         :return: The vmid of this MerchantRegistrationResponse201.
         :rtype: str
@@ -199,7 +199,7 @@ class MerchantRegistrationResponse201(object):
     def vmid(self, vmid):
         """
         Sets the vmid of this MerchantRegistrationResponse201.
-        Visa Merchant ID
+        Visa Merchant ID (VMID) — unique identifier assigned by Visa
 
         :param vmid: The vmid of this MerchantRegistrationResponse201.
         :type: str
@@ -211,7 +211,7 @@ class MerchantRegistrationResponse201(object):
     def cryptogram_type(self):
         """
         Gets the cryptogram_type of this MerchantRegistrationResponse201.
-        Authentication cryptogram type  Possible values: - TAVV - DAVV
+        Authentication cryptogram type used for payment credential generation: 'TAVV' (Token Authentication Verification Value) or 'DAVV' (Device Authentication Verification Value)  Possible values: - TAVV - DAVV
 
         :return: The cryptogram_type of this MerchantRegistrationResponse201.
         :rtype: str
@@ -222,7 +222,7 @@ class MerchantRegistrationResponse201(object):
     def cryptogram_type(self, cryptogram_type):
         """
         Sets the cryptogram_type of this MerchantRegistrationResponse201.
-        Authentication cryptogram type  Possible values: - TAVV - DAVV
+        Authentication cryptogram type used for payment credential generation: 'TAVV' (Token Authentication Verification Value) or 'DAVV' (Device Authentication Verification Value)  Possible values: - TAVV - DAVV
 
         :param cryptogram_type: The cryptogram_type of this MerchantRegistrationResponse201.
         :type: str
@@ -234,7 +234,7 @@ class MerchantRegistrationResponse201(object):
     def payment_payload_type(self):
         """
         Gets the payment_payload_type of this MerchantRegistrationResponse201.
-        Credential delivery format  Possible values: - ENCRYPTED - UNENCRYPTED
+        Credential delivery format: 'ENCRYPTED' (JWE-wrapped, requires an active encryption key) or 'UNENCRYPTED'  Possible values: - ENCRYPTED - UNENCRYPTED
 
         :return: The payment_payload_type of this MerchantRegistrationResponse201.
         :rtype: str
@@ -245,7 +245,7 @@ class MerchantRegistrationResponse201(object):
     def payment_payload_type(self, payment_payload_type):
         """
         Sets the payment_payload_type of this MerchantRegistrationResponse201.
-        Credential delivery format  Possible values: - ENCRYPTED - UNENCRYPTED
+        Credential delivery format: 'ENCRYPTED' (JWE-wrapped, requires an active encryption key) or 'UNENCRYPTED'  Possible values: - ENCRYPTED - UNENCRYPTED
 
         :param payment_payload_type: The payment_payload_type of this MerchantRegistrationResponse201.
         :type: str
@@ -257,7 +257,7 @@ class MerchantRegistrationResponse201(object):
     def indicator(self):
         """
         Gets the indicator of this MerchantRegistrationResponse201.
-        Transaction processing type  Possible values: - TAP - ACG - BOTH
+        Transaction processing indicator: 'TAP' (Trusted Agent Protocol), 'ACG' (Agentic Checkout Gateway), or 'BOTH'  Possible values: - TAP - ACG - BOTH
 
         :return: The indicator of this MerchantRegistrationResponse201.
         :rtype: str
@@ -268,7 +268,7 @@ class MerchantRegistrationResponse201(object):
     def indicator(self, indicator):
         """
         Sets the indicator of this MerchantRegistrationResponse201.
-        Transaction processing type  Possible values: - TAP - ACG - BOTH
+        Transaction processing indicator: 'TAP' (Trusted Agent Protocol), 'ACG' (Agentic Checkout Gateway), or 'BOTH'  Possible values: - TAP - ACG - BOTH
 
         :param indicator: The indicator of this MerchantRegistrationResponse201.
         :type: str
@@ -280,7 +280,7 @@ class MerchantRegistrationResponse201(object):
     def merchant_metadata(self):
         """
         Gets the merchant_metadata of this MerchantRegistrationResponse201.
-        Additional merchant metadata
+        Free-form metadata object for additional merchant context
 
         :return: The merchant_metadata of this MerchantRegistrationResponse201.
         :rtype: object
@@ -291,7 +291,7 @@ class MerchantRegistrationResponse201(object):
     def merchant_metadata(self, merchant_metadata):
         """
         Sets the merchant_metadata of this MerchantRegistrationResponse201.
-        Additional merchant metadata
+        Free-form metadata object for additional merchant context
 
         :param merchant_metadata: The merchant_metadata of this MerchantRegistrationResponse201.
         :type: object
@@ -303,7 +303,7 @@ class MerchantRegistrationResponse201(object):
     def acceptance_relationships(self):
         """
         Gets the acceptance_relationships of this MerchantRegistrationResponse201.
-        List of acceptance network relationships
+        List of payment network acceptance relationships (e.g., \"Visa\")
 
         :return: The acceptance_relationships of this MerchantRegistrationResponse201.
         :rtype: list[str]
@@ -314,7 +314,7 @@ class MerchantRegistrationResponse201(object):
     def acceptance_relationships(self, acceptance_relationships):
         """
         Sets the acceptance_relationships of this MerchantRegistrationResponse201.
-        List of acceptance network relationships
+        List of payment network acceptance relationships (e.g., \"Visa\")
 
         :param acceptance_relationships: The acceptance_relationships of this MerchantRegistrationResponse201.
         :type: list[str]
@@ -326,7 +326,7 @@ class MerchantRegistrationResponse201(object):
     def protocol_interactions(self):
         """
         Gets the protocol_interactions of this MerchantRegistrationResponse201.
-        List of protocol interaction configurations (ucp, acp, x402)
+        List of protocol endpoint configurations defining how agents interact with this merchant (ucp, acp, x402)
 
         :return: The protocol_interactions of this MerchantRegistrationResponse201.
         :rtype: list[Iccv1merchantsProtocolInteractions]
@@ -337,7 +337,7 @@ class MerchantRegistrationResponse201(object):
     def protocol_interactions(self, protocol_interactions):
         """
         Sets the protocol_interactions of this MerchantRegistrationResponse201.
-        List of protocol interaction configurations (ucp, acp, x402)
+        List of protocol endpoint configurations defining how agents interact with this merchant (ucp, acp, x402)
 
         :param protocol_interactions: The protocol_interactions of this MerchantRegistrationResponse201.
         :type: list[Iccv1merchantsProtocolInteractions]
@@ -351,7 +351,7 @@ class MerchantRegistrationResponse201(object):
         Gets the web_integrations of this MerchantRegistrationResponse201.
 
         :return: The web_integrations of this MerchantRegistrationResponse201.
-        :rtype: Iccv1merchantsWebIntegrations
+        :rtype: MerchantRegistrationResponse201WebIntegrations
         """
         return self._web_integrations
 
@@ -361,7 +361,7 @@ class MerchantRegistrationResponse201(object):
         Sets the web_integrations of this MerchantRegistrationResponse201.
 
         :param web_integrations: The web_integrations of this MerchantRegistrationResponse201.
-        :type: Iccv1merchantsWebIntegrations
+        :type: MerchantRegistrationResponse201WebIntegrations
         """
 
         self._web_integrations = web_integrations
@@ -372,7 +372,7 @@ class MerchantRegistrationResponse201(object):
         Gets the api_integrations of this MerchantRegistrationResponse201.
 
         :return: The api_integrations of this MerchantRegistrationResponse201.
-        :rtype: Iccv1merchantsApiIntegrations
+        :rtype: MerchantRegistrationResponse201ApiIntegrations
         """
         return self._api_integrations
 
@@ -382,7 +382,7 @@ class MerchantRegistrationResponse201(object):
         Sets the api_integrations of this MerchantRegistrationResponse201.
 
         :param api_integrations: The api_integrations of this MerchantRegistrationResponse201.
-        :type: Iccv1merchantsApiIntegrations
+        :type: MerchantRegistrationResponse201ApiIntegrations
         """
 
         self._api_integrations = api_integrations

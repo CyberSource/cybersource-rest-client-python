@@ -3,8 +3,8 @@ from __future__ import absolute_import
 # import apis into api package
 from .o_auth_api import OAuthApi
 from .batch_upload_with_mtls_api import BatchUploadWithMTLSApi
-from .agent_capabilities_api import AgentCapabilitiesApi
-from .agent_capabilities_api import AgentCapabilitiesApi
+from .acp_checkout_api import ACPCheckoutApi
+from .agent_registration_api import AgentRegistrationApi
 from .batches_api import BatchesApi
 from .bin_lookup_api import BinLookupApi
 from .chargeback_details_api import ChargebackDetailsApi
@@ -21,6 +21,7 @@ from .device_search_api import DeviceSearchApi
 from .download_dtd_api import DownloadDTDApi
 from .download_xsd_api import DownloadXSDApi
 from .emv_tag_details_api import EMVTagDetailsApi
+from .enrollment_api import EnrollmentApi
 from .flex_api_api import FlexAPIApi
 from .foreign_exchange_rates_api import ForeignExchangeRatesApi
 from .instrument_identifier_api import InstrumentIdentifierApi
@@ -28,10 +29,9 @@ from .interchange_clearing_level_details_api import InterchangeClearingLevelDeta
 from .invoice_settings_api import InvoiceSettingsApi
 from .invoices_api import InvoicesApi
 from .manage_webhooks_api import ManageWebhooksApi
-from .merchant_capabilities_api import MerchantCapabilitiesApi
 from .merchant_boarding_api import MerchantBoardingApi
-from .merchant_capabilities_api import MerchantCapabilitiesApi
 from .merchant_defined_fields_api import MerchantDefinedFieldsApi
+from .merchant_registration_api import MerchantRegistrationApi
 from .microform_integration_api import MicroformIntegrationApi
 from .net_fundings_api import NetFundingsApi
 from .network_tokens_api import NetworkTokensApi
@@ -39,12 +39,15 @@ from .notification_of_changes_api import NotificationOfChangesApi
 from .offers_api import OffersApi
 from .payer_authentication_api import PayerAuthenticationApi
 from .payment_batch_summaries_api import PaymentBatchSummariesApi
+from .payment_events_api import PaymentEventsApi
 from .payment_instrument_api import PaymentInstrumentApi
 from .payment_links_api import PaymentLinksApi
 from .payouts_api import PayoutsApi
 from .plans_api import PlansApi
+from .product_feed_api import ProductFeedApi
 from .pull_funds_api import PullFundsApi
 from .purchase_and_refund_details_api import PurchaseAndRefundDetailsApi
+from .purchase_intent_api import PurchaseIntentApi
 from .push_funds_api import PushFundsApi
 from .report_definitions_api import ReportDefinitionsApi
 from .report_downloads_api import ReportDownloadsApi
@@ -61,6 +64,7 @@ from .transaction_batches_api import TransactionBatchesApi
 from .transaction_details_api import TransactionDetailsApi
 from .transaction_query_api import TransactionQueryApi
 from .transient_token_data_v2_api import TransientTokenDataV2Api
+from .ucp_checkout_api import UCPCheckoutApi
 from .unified_checkout_capture_context_api import UnifiedCheckoutCaptureContextApi
 from .unified_checkout_v1_capture_context_api import UnifiedCheckoutV1CaptureContextApi
 from .user_management_api import UserManagementApi

@@ -35,7 +35,8 @@ class VoidCaptureRequest(object):
         'order_information': 'Ptsv2paymentsidvoidsOrderInformation',
         'agreement_information': 'Ptsv2paymentsidvoidsAgreementInformation',
         'merchant_information': 'Ptsv2paymentsidvoidsMerchantInformation',
-        'processing_information': 'Ptsv2paymentsidvoidsProcessingInformation'
+        'processing_information': 'Ptsv2paymentsidvoidsProcessingInformation',
+        'point_of_sale_information': 'Ptsv2paymentsPointOfSaleInformation'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class VoidCaptureRequest(object):
         'order_information': 'orderInformation',
         'agreement_information': 'agreementInformation',
         'merchant_information': 'merchantInformation',
-        'processing_information': 'processingInformation'
+        'processing_information': 'processingInformation',
+        'point_of_sale_information': 'pointOfSaleInformation'
     }
 
-    def __init__(self, client_reference_information=None, payment_information=None, order_information=None, agreement_information=None, merchant_information=None, processing_information=None):
+    def __init__(self, client_reference_information=None, payment_information=None, order_information=None, agreement_information=None, merchant_information=None, processing_information=None, point_of_sale_information=None):
         """
         VoidCaptureRequest - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class VoidCaptureRequest(object):
         self._agreement_information = None
         self._merchant_information = None
         self._processing_information = None
+        self._point_of_sale_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -71,6 +74,8 @@ class VoidCaptureRequest(object):
           self.merchant_information = merchant_information
         if processing_information is not None:
           self.processing_information = processing_information
+        if point_of_sale_information is not None:
+          self.point_of_sale_information = point_of_sale_information
 
     @property
     def client_reference_information(self):
@@ -197,6 +202,27 @@ class VoidCaptureRequest(object):
         """
 
         self._processing_information = processing_information
+
+    @property
+    def point_of_sale_information(self):
+        """
+        Gets the point_of_sale_information of this VoidCaptureRequest.
+
+        :return: The point_of_sale_information of this VoidCaptureRequest.
+        :rtype: Ptsv2paymentsPointOfSaleInformation
+        """
+        return self._point_of_sale_information
+
+    @point_of_sale_information.setter
+    def point_of_sale_information(self, point_of_sale_information):
+        """
+        Sets the point_of_sale_information of this VoidCaptureRequest.
+
+        :param point_of_sale_information: The point_of_sale_information of this VoidCaptureRequest.
+        :type: Ptsv2paymentsPointOfSaleInformation
+        """
+
+        self._point_of_sale_information = point_of_sale_information
 
     def to_dict(self):
         """

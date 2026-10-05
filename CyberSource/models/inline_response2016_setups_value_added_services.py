@@ -34,7 +34,8 @@ class InlineResponse2016SetupsValueAddedServices(object):
         'transaction_search': 'PaymentsConfigurationSetupDigitalPayments',
         'bank_account_validation': 'PaymentsConfigurationSetupDigitalPayments',
         'flexapi': 'PaymentsConfigurationSetupDigitalPayments',
-        'webhooks': 'PaymentsConfigurationSetupDigitalPayments'
+        'webhooks': 'PaymentsConfigurationSetupDigitalPayments',
+        'smarter_retry': 'PaymentsConfigurationSetupDigitalPayments'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class InlineResponse2016SetupsValueAddedServices(object):
         'transaction_search': 'transactionSearch',
         'bank_account_validation': 'bankAccountValidation',
         'flexapi': 'flexapi',
-        'webhooks': 'webhooks'
+        'webhooks': 'webhooks',
+        'smarter_retry': 'smarterRetry'
     }
 
-    def __init__(self, reporting=None, transaction_search=None, bank_account_validation=None, flexapi=None, webhooks=None):
+    def __init__(self, reporting=None, transaction_search=None, bank_account_validation=None, flexapi=None, webhooks=None, smarter_retry=None):
         """
         InlineResponse2016SetupsValueAddedServices - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class InlineResponse2016SetupsValueAddedServices(object):
         self._bank_account_validation = None
         self._flexapi = None
         self._webhooks = None
+        self._smarter_retry = None
 
         if reporting is not None:
           self.reporting = reporting
@@ -66,6 +69,8 @@ class InlineResponse2016SetupsValueAddedServices(object):
           self.flexapi = flexapi
         if webhooks is not None:
           self.webhooks = webhooks
+        if smarter_retry is not None:
+          self.smarter_retry = smarter_retry
 
     @property
     def reporting(self):
@@ -171,6 +176,27 @@ class InlineResponse2016SetupsValueAddedServices(object):
         """
 
         self._webhooks = webhooks
+
+    @property
+    def smarter_retry(self):
+        """
+        Gets the smarter_retry of this InlineResponse2016SetupsValueAddedServices.
+
+        :return: The smarter_retry of this InlineResponse2016SetupsValueAddedServices.
+        :rtype: PaymentsConfigurationSetupDigitalPayments
+        """
+        return self._smarter_retry
+
+    @smarter_retry.setter
+    def smarter_retry(self, smarter_retry):
+        """
+        Sets the smarter_retry of this InlineResponse2016SetupsValueAddedServices.
+
+        :param smarter_retry: The smarter_retry of this InlineResponse2016SetupsValueAddedServices.
+        :type: PaymentsConfigurationSetupDigitalPayments
+        """
+
+        self._smarter_retry = smarter_retry
 
     def to_dict(self):
         """

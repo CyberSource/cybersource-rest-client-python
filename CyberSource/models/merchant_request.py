@@ -121,7 +121,7 @@ class MerchantRequest(object):
     def merchant_url(self):
         """
         Gets the merchant_url of this MerchantRequest.
-        Base merchant URL (must use HTTPS)
+        Base URL of the merchant's domain. Must use HTTPS and be unique across all registrations.
 
         :return: The merchant_url of this MerchantRequest.
         :rtype: str
@@ -132,7 +132,7 @@ class MerchantRequest(object):
     def merchant_url(self, merchant_url):
         """
         Sets the merchant_url of this MerchantRequest.
-        Base merchant URL (must use HTTPS)
+        Base URL of the merchant's domain. Must use HTTPS and be unique across all registrations.
 
         :param merchant_url: The merchant_url of this MerchantRequest.
         :type: str
@@ -144,7 +144,7 @@ class MerchantRequest(object):
     def vmid(self):
         """
         Gets the vmid of this MerchantRequest.
-        Visa Merchant ID — unique identifier
+        Visa Merchant ID (VMID). Must be unique — raises 409 if already in use.
 
         :return: The vmid of this MerchantRequest.
         :rtype: str
@@ -155,7 +155,7 @@ class MerchantRequest(object):
     def vmid(self, vmid):
         """
         Sets the vmid of this MerchantRequest.
-        Visa Merchant ID — unique identifier
+        Visa Merchant ID (VMID). Must be unique — raises 409 if already in use.
 
         :param vmid: The vmid of this MerchantRequest.
         :type: str
@@ -167,7 +167,7 @@ class MerchantRequest(object):
     def indicator(self):
         """
         Gets the indicator of this MerchantRequest.
-        Transaction processing type  Possible values: - TAP - ACG - BOTH
+        Transaction processing indicator:  - ***TAP*** — Trusted Agent Protocol  - ***ACG*** — Agentic Checkout Gateway  - ***BOTH*** — supports both TAP and ACG   Possible values: - TAP - ACG - BOTH
 
         :return: The indicator of this MerchantRequest.
         :rtype: str
@@ -178,7 +178,7 @@ class MerchantRequest(object):
     def indicator(self, indicator):
         """
         Sets the indicator of this MerchantRequest.
-        Transaction processing type  Possible values: - TAP - ACG - BOTH
+        Transaction processing indicator:  - ***TAP*** — Trusted Agent Protocol  - ***ACG*** — Agentic Checkout Gateway  - ***BOTH*** — supports both TAP and ACG   Possible values: - TAP - ACG - BOTH
 
         :param indicator: The indicator of this MerchantRequest.
         :type: str
@@ -190,7 +190,7 @@ class MerchantRequest(object):
     def cryptogram_type(self):
         """
         Gets the cryptogram_type of this MerchantRequest.
-        Authentication cryptogram type (defaults to DAVV)  Possible values: - TAVV - DAVV
+        Authentication cryptogram type used for payment credential generation. Defaults to ***DAVV*** if not provided.  Possible values: - TAVV - DAVV
 
         :return: The cryptogram_type of this MerchantRequest.
         :rtype: str
@@ -201,7 +201,7 @@ class MerchantRequest(object):
     def cryptogram_type(self, cryptogram_type):
         """
         Sets the cryptogram_type of this MerchantRequest.
-        Authentication cryptogram type (defaults to DAVV)  Possible values: - TAVV - DAVV
+        Authentication cryptogram type used for payment credential generation. Defaults to ***DAVV*** if not provided.  Possible values: - TAVV - DAVV
 
         :param cryptogram_type: The cryptogram_type of this MerchantRequest.
         :type: str
@@ -213,7 +213,7 @@ class MerchantRequest(object):
     def payment_payload_type(self):
         """
         Gets the payment_payload_type of this MerchantRequest.
-        Credential delivery format (defaults to UNENCRYPTED)  Possible values: - ENCRYPTED - UNENCRYPTED
+        Credential delivery format. Set to ***ENCRYPTED*** to enable JWE-encrypted payload delivery — requires an `encryptionKey`. Defaults to ***UNENCRYPTED***.  Possible values: - ENCRYPTED - UNENCRYPTED
 
         :return: The payment_payload_type of this MerchantRequest.
         :rtype: str
@@ -224,7 +224,7 @@ class MerchantRequest(object):
     def payment_payload_type(self, payment_payload_type):
         """
         Sets the payment_payload_type of this MerchantRequest.
-        Credential delivery format (defaults to UNENCRYPTED)  Possible values: - ENCRYPTED - UNENCRYPTED
+        Credential delivery format. Set to ***ENCRYPTED*** to enable JWE-encrypted payload delivery — requires an `encryptionKey`. Defaults to ***UNENCRYPTED***.  Possible values: - ENCRYPTED - UNENCRYPTED
 
         :param payment_payload_type: The payment_payload_type of this MerchantRequest.
         :type: str
@@ -257,7 +257,7 @@ class MerchantRequest(object):
     def acceptance_relationships(self):
         """
         Gets the acceptance_relationships of this MerchantRequest.
-        List of acceptance network relationships
+        List of payment network acceptance relationships (e.g., \"Visa\").
 
         :return: The acceptance_relationships of this MerchantRequest.
         :rtype: list[str]
@@ -268,7 +268,7 @@ class MerchantRequest(object):
     def acceptance_relationships(self, acceptance_relationships):
         """
         Sets the acceptance_relationships of this MerchantRequest.
-        List of acceptance network relationships
+        List of payment network acceptance relationships (e.g., \"Visa\").
 
         :param acceptance_relationships: The acceptance_relationships of this MerchantRequest.
         :type: list[str]
@@ -280,7 +280,7 @@ class MerchantRequest(object):
     def protocol_interactions(self):
         """
         Gets the protocol_interactions of this MerchantRequest.
-        List of protocol configurations (ucp, acp, x402) with HTTPS URLs
+        List of protocol interaction configurations defining the merchant's endpoint for each supported protocol (ucp, acp, x402).
 
         :return: The protocol_interactions of this MerchantRequest.
         :rtype: list[Iccv1merchantsProtocolInteractions]
@@ -291,7 +291,7 @@ class MerchantRequest(object):
     def protocol_interactions(self, protocol_interactions):
         """
         Sets the protocol_interactions of this MerchantRequest.
-        List of protocol configurations (ucp, acp, x402) with HTTPS URLs
+        List of protocol interaction configurations defining the merchant's endpoint for each supported protocol (ucp, acp, x402).
 
         :param protocol_interactions: The protocol_interactions of this MerchantRequest.
         :type: list[Iccv1merchantsProtocolInteractions]

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **response_details** | **str** | This field might contain information about a decline.  | [optional] 
 **response_code** | **str** | This field is set to the value of response code returned by the processor.  | [optional] 
 **seller_protection** | [**ProcessorInformationSellerProtection**](ProcessorInformationSellerProtection.md) |  | [optional] 
+**payment_url** | **str** | Direct the customer to this URL to complete the payment. | [optional] 
 **avs** | [**PtsV2PaymentsPost201Response1ProcessorInformationAvs**](PtsV2PaymentsPost201Response1ProcessorInformationAvs.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

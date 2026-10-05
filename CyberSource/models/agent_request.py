@@ -35,7 +35,7 @@ class AgentRequest(object):
         'description': 'str',
         'contact_email': 'str',
         'token_requestor_id': 'str',
-        'agent_metadata': 'dict(str, str)',
+        'agent_metadata': 'object',
         'keys': 'list[Iccv1agentsKeys]'
     }
 
@@ -76,7 +76,7 @@ class AgentRequest(object):
     def name(self):
         """
         Gets the name of this AgentRequest.
-        Agent name
+        Display name for the agent
 
         :return: The name of this AgentRequest.
         :rtype: str
@@ -87,7 +87,7 @@ class AgentRequest(object):
     def name(self, name):
         """
         Sets the name of this AgentRequest.
-        Agent name
+        Display name for the agent
 
         :param name: The name of this AgentRequest.
         :type: str
@@ -99,7 +99,7 @@ class AgentRequest(object):
     def domain(self):
         """
         Gets the domain of this AgentRequest.
-        Agent domain URL
+        Fully-qualified HTTPS URL of the agent's home domain. Must be unique — registration raises 409 if it already exists.
 
         :return: The domain of this AgentRequest.
         :rtype: str
@@ -110,7 +110,7 @@ class AgentRequest(object):
     def domain(self, domain):
         """
         Sets the domain of this AgentRequest.
-        Agent domain URL
+        Fully-qualified HTTPS URL of the agent's home domain. Must be unique — registration raises 409 if it already exists.
 
         :param domain: The domain of this AgentRequest.
         :type: str
@@ -122,7 +122,7 @@ class AgentRequest(object):
     def description(self):
         """
         Gets the description of this AgentRequest.
-        Agent description
+        Description of the agent's purpose or capabilities
 
         :return: The description of this AgentRequest.
         :rtype: str
@@ -133,7 +133,7 @@ class AgentRequest(object):
     def description(self, description):
         """
         Sets the description of this AgentRequest.
-        Agent description
+        Description of the agent's purpose or capabilities
 
         :param description: The description of this AgentRequest.
         :type: str
@@ -145,7 +145,7 @@ class AgentRequest(object):
     def contact_email(self):
         """
         Gets the contact_email of this AgentRequest.
-        Contact email
+        Contact email for the team or individual responsible for this agent
 
         :return: The contact_email of this AgentRequest.
         :rtype: str
@@ -156,7 +156,7 @@ class AgentRequest(object):
     def contact_email(self, contact_email):
         """
         Sets the contact_email of this AgentRequest.
-        Contact email
+        Contact email for the team or individual responsible for this agent
 
         :param contact_email: The contact_email of this AgentRequest.
         :type: str
@@ -168,7 +168,7 @@ class AgentRequest(object):
     def token_requestor_id(self):
         """
         Gets the token_requestor_id of this AgentRequest.
-        Unique token requestor identifier
+        Token Requestor ID (TRID) assigned by Visa
 
         :return: The token_requestor_id of this AgentRequest.
         :rtype: str
@@ -179,7 +179,7 @@ class AgentRequest(object):
     def token_requestor_id(self, token_requestor_id):
         """
         Sets the token_requestor_id of this AgentRequest.
-        Unique token requestor identifier
+        Token Requestor ID (TRID) assigned by Visa
 
         :param token_requestor_id: The token_requestor_id of this AgentRequest.
         :type: str
@@ -191,10 +191,10 @@ class AgentRequest(object):
     def agent_metadata(self):
         """
         Gets the agent_metadata of this AgentRequest.
-        Optional metadata (e.g., framework, version)
+        Free-form metadata object for agent context (e.g., AI framework, language, runtime). Max 10KB.
 
         :return: The agent_metadata of this AgentRequest.
-        :rtype: dict(str, str)
+        :rtype: object
         """
         return self._agent_metadata
 
@@ -202,10 +202,10 @@ class AgentRequest(object):
     def agent_metadata(self, agent_metadata):
         """
         Sets the agent_metadata of this AgentRequest.
-        Optional metadata (e.g., framework, version)
+        Free-form metadata object for agent context (e.g., AI framework, language, runtime). Max 10KB.
 
         :param agent_metadata: The agent_metadata of this AgentRequest.
-        :type: dict(str, str)
+        :type: object
         """
 
         self._agent_metadata = agent_metadata
@@ -214,7 +214,7 @@ class AgentRequest(object):
     def keys(self):
         """
         Gets the keys of this AgentRequest.
-        Optional list of keys to create with the agent
+        Optional array of public keys to register alongside the agent. Keys are created in ***deactivated*** state and must be activated separately via POST /agents/{agentId}/keys/{keyId}/activate. 
 
         :return: The keys of this AgentRequest.
         :rtype: list[Iccv1agentsKeys]
@@ -225,7 +225,7 @@ class AgentRequest(object):
     def keys(self, keys):
         """
         Sets the keys of this AgentRequest.
-        Optional list of keys to create with the agent
+        Optional array of public keys to register alongside the agent. Keys are created in ***deactivated*** state and must be activated separately via POST /agents/{agentId}/keys/{keyId}/activate. 
 
         :param keys: The keys of this AgentRequest.
         :type: list[Iccv1agentsKeys]

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **decision_manager** | [**RiskProductsDecisionManager**](RiskProductsDecisionManager.md) |  | [optional] 
 **portfolio_risk_controls** | [**RiskProductsPortfolioRiskControls**](RiskProductsPortfolioRiskControls.md) |  | [optional] 
 **enhanced_authentication** | [**PaymentsProductsPayerAuthentication**](PaymentsProductsPayerAuthentication.md) |  | [optional] 
+**vpri** | [**PaymentsProductsTax**](PaymentsProductsTax.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

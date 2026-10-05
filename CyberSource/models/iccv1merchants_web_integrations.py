@@ -32,7 +32,7 @@ class Iccv1merchantsWebIntegrations(object):
     swagger_types = {
         'integration_spec': 'str',
         'url': 'str',
-        'metadata': 'dict(str, str)'
+        'metadata': 'dict(str, object)'
     }
 
     attribute_map = {
@@ -108,7 +108,7 @@ class Iccv1merchantsWebIntegrations(object):
         Optional metadata (max 10KB)
 
         :return: The metadata of this Iccv1merchantsWebIntegrations.
-        :rtype: dict(str, str)
+        :rtype: dict(str, object)
         """
         return self._metadata
 
@@ -119,7 +119,7 @@ class Iccv1merchantsWebIntegrations(object):
         Optional metadata (max 10KB)
 
         :param metadata: The metadata of this Iccv1merchantsWebIntegrations.
-        :type: dict(str, str)
+        :type: dict(str, object)
         """
 
         self._metadata = metadata

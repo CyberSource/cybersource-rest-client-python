@@ -30,7 +30,7 @@ class Ptsv2paymentsidrefundsPointOfSaleInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'emv': 'Ptsv2paymentsidcapturesPointOfSaleInformationEmv',
+        'emv': 'Ptsv2paymentsidrefundsPointOfSaleInformationEmv',
         'terminal_category': 'str'
     }
 
@@ -58,7 +58,7 @@ class Ptsv2paymentsidrefundsPointOfSaleInformation(object):
         Gets the emv of this Ptsv2paymentsidrefundsPointOfSaleInformation.
 
         :return: The emv of this Ptsv2paymentsidrefundsPointOfSaleInformation.
-        :rtype: Ptsv2paymentsidcapturesPointOfSaleInformationEmv
+        :rtype: Ptsv2paymentsidrefundsPointOfSaleInformationEmv
         """
         return self._emv
 
@@ -68,7 +68,7 @@ class Ptsv2paymentsidrefundsPointOfSaleInformation(object):
         Sets the emv of this Ptsv2paymentsidrefundsPointOfSaleInformation.
 
         :param emv: The emv of this Ptsv2paymentsidrefundsPointOfSaleInformation.
-        :type: Ptsv2paymentsidcapturesPointOfSaleInformationEmv
+        :type: Ptsv2paymentsidrefundsPointOfSaleInformationEmv
         """
 
         self._emv = emv

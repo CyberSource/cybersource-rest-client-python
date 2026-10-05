@@ -77,30 +77,19 @@ class InlineResponse20017(object):
         self._messages = None
         self._links = None
 
-        if id is not None:
-          self.id = id
-        if status is not None:
-          self.status = status
-        if currency is not None:
-          self.currency = currency
-        if buyer is not None:
-          self.buyer = buyer
-        if line_items is not None:
-          self.line_items = line_items
+        self.id = id
+        self.status = status
+        self.currency = currency
+        self.buyer = buyer
+        self.line_items = line_items
         if fulfillment_address is not None:
           self.fulfillment_address = fulfillment_address
-        if fulfillment_options is not None:
-          self.fulfillment_options = fulfillment_options
-        if fulfillment_option_id is not None:
-          self.fulfillment_option_id = fulfillment_option_id
-        if totals is not None:
-          self.totals = totals
-        if order is not None:
-          self.order = order
-        if messages is not None:
-          self.messages = messages
-        if links is not None:
-          self.links = links
+        self.fulfillment_options = fulfillment_options
+        self.fulfillment_option_id = fulfillment_option_id
+        self.totals = totals
+        self.order = order
+        self.messages = messages
+        self.links = links
 
     @property
     def id(self):

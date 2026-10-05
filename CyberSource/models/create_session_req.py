@@ -34,6 +34,7 @@ class CreateSessionReq(object):
         'processing_information': 'Ptsv2paymentreferencesProcessingInformation',
         'payment_information': 'Ptsv2paymentreferencesPaymentInformation',
         'order_information': 'Ptsv2paymentreferencesOrderInformation',
+        'order_history': 'list[Ptsv2paymentsOrderHistory]',
         'buyer_information': 'Ptsv2paymentreferencesBuyerInformation',
         'device_information': 'Ptsv2paymentreferencesDeviceInformation',
         'merchant_information': 'Ptsv2paymentreferencesMerchantInformation',
@@ -48,6 +49,7 @@ class CreateSessionReq(object):
         'processing_information': 'processingInformation',
         'payment_information': 'paymentInformation',
         'order_information': 'orderInformation',
+        'order_history': 'orderHistory',
         'buyer_information': 'buyerInformation',
         'device_information': 'deviceInformation',
         'merchant_information': 'merchantInformation',
@@ -57,7 +59,7 @@ class CreateSessionReq(object):
         'travel_information': 'travelInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, user_interface=None, merchant_defined_information=None, agreement_information=None, travel_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, order_history=None, buyer_information=None, device_information=None, merchant_information=None, user_interface=None, merchant_defined_information=None, agreement_information=None, travel_information=None):
         """
         CreateSessionReq - a model defined in Swagger
         """
@@ -66,6 +68,7 @@ class CreateSessionReq(object):
         self._processing_information = None
         self._payment_information = None
         self._order_information = None
+        self._order_history = None
         self._buyer_information = None
         self._device_information = None
         self._merchant_information = None
@@ -82,6 +85,8 @@ class CreateSessionReq(object):
           self.payment_information = payment_information
         if order_information is not None:
           self.order_information = order_information
+        if order_history is not None:
+          self.order_history = order_history
         if buyer_information is not None:
           self.buyer_information = buyer_information
         if device_information is not None:
@@ -180,6 +185,29 @@ class CreateSessionReq(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def order_history(self):
+        """
+        Gets the order_history of this CreateSessionReq.
+        Array of the buyer's previous orders. 
+
+        :return: The order_history of this CreateSessionReq.
+        :rtype: list[Ptsv2paymentsOrderHistory]
+        """
+        return self._order_history
+
+    @order_history.setter
+    def order_history(self, order_history):
+        """
+        Sets the order_history of this CreateSessionReq.
+        Array of the buyer's previous orders. 
+
+        :param order_history: The order_history of this CreateSessionReq.
+        :type: list[Ptsv2paymentsOrderHistory]
+        """
+
+        self._order_history = order_history
 
     @property
     def buyer_information(self):

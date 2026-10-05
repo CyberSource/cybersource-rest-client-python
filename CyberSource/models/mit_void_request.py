@@ -33,17 +33,19 @@ class MitVoidRequest(object):
         'client_reference_information': 'Ptsv2paymentsClientReferenceInformation',
         'payment_information': 'Ptsv2paymentsidvoidsPaymentInformation',
         'order_information': 'Ptsv2paymentsidvoidsOrderInformation',
-        'processing_information': 'Ptsv2voidsProcessingInformation'
+        'processing_information': 'Ptsv2voidsProcessingInformation',
+        'point_of_sale_information': 'Ptsv2paymentsPointOfSaleInformation'
     }
 
     attribute_map = {
         'client_reference_information': 'clientReferenceInformation',
         'payment_information': 'paymentInformation',
         'order_information': 'orderInformation',
-        'processing_information': 'processingInformation'
+        'processing_information': 'processingInformation',
+        'point_of_sale_information': 'pointOfSaleInformation'
     }
 
-    def __init__(self, client_reference_information=None, payment_information=None, order_information=None, processing_information=None):
+    def __init__(self, client_reference_information=None, payment_information=None, order_information=None, processing_information=None, point_of_sale_information=None):
         """
         MitVoidRequest - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class MitVoidRequest(object):
         self._payment_information = None
         self._order_information = None
         self._processing_information = None
+        self._point_of_sale_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -61,6 +64,8 @@ class MitVoidRequest(object):
           self.order_information = order_information
         if processing_information is not None:
           self.processing_information = processing_information
+        if point_of_sale_information is not None:
+          self.point_of_sale_information = point_of_sale_information
 
     @property
     def client_reference_information(self):
@@ -145,6 +150,27 @@ class MitVoidRequest(object):
         """
 
         self._processing_information = processing_information
+
+    @property
+    def point_of_sale_information(self):
+        """
+        Gets the point_of_sale_information of this MitVoidRequest.
+
+        :return: The point_of_sale_information of this MitVoidRequest.
+        :rtype: Ptsv2paymentsPointOfSaleInformation
+        """
+        return self._point_of_sale_information
+
+    @point_of_sale_information.setter
+    def point_of_sale_information(self, point_of_sale_information):
+        """
+        Sets the point_of_sale_information of this MitVoidRequest.
+
+        :param point_of_sale_information: The point_of_sale_information of this MitVoidRequest.
+        :type: Ptsv2paymentsPointOfSaleInformation
+        """
+
+        self._point_of_sale_information = point_of_sale_information
 
     def to_dict(self):
         """

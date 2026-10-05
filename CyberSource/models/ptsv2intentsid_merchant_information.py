@@ -30,7 +30,7 @@ class Ptsv2intentsidMerchantInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'merchant_descriptor': 'Ptsv2intentsMerchantInformationMerchantDescriptor'
+        'merchant_descriptor': 'Ptsv2intentsidMerchantInformationMerchantDescriptor'
     }
 
     attribute_map = {
@@ -53,7 +53,7 @@ class Ptsv2intentsidMerchantInformation(object):
         Gets the merchant_descriptor of this Ptsv2intentsidMerchantInformation.
 
         :return: The merchant_descriptor of this Ptsv2intentsidMerchantInformation.
-        :rtype: Ptsv2intentsMerchantInformationMerchantDescriptor
+        :rtype: Ptsv2intentsidMerchantInformationMerchantDescriptor
         """
         return self._merchant_descriptor
 
@@ -63,7 +63,7 @@ class Ptsv2intentsidMerchantInformation(object):
         Sets the merchant_descriptor of this Ptsv2intentsidMerchantInformation.
 
         :param merchant_descriptor: The merchant_descriptor of this Ptsv2intentsidMerchantInformation.
-        :type: Ptsv2intentsMerchantInformationMerchantDescriptor
+        :type: Ptsv2intentsidMerchantInformationMerchantDescriptor
         """
 
         self._merchant_descriptor = merchant_descriptor

@@ -38,7 +38,7 @@ class CapturePaymentRequest(object):
         'device_information': 'Ptsv2paymentsidcapturesDeviceInformation',
         'merchant_information': 'Ptsv2paymentsidcapturesMerchantInformation',
         'aggregator_information': 'Ptsv2paymentsidcapturesAggregatorInformation',
-        'point_of_sale_information': 'Ptsv2paymentsidcapturesPointOfSaleInformation',
+        'point_of_sale_information': 'Ptsv2paymentsPointOfSaleInformation',
         'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
         'merchant_defined_secure_information': 'Ptsv2paymentsMerchantDefinedSecureInformation',
         'installment_information': 'Ptsv2paymentsidcapturesInstallmentInformation',
@@ -291,7 +291,7 @@ class CapturePaymentRequest(object):
         Gets the point_of_sale_information of this CapturePaymentRequest.
 
         :return: The point_of_sale_information of this CapturePaymentRequest.
-        :rtype: Ptsv2paymentsidcapturesPointOfSaleInformation
+        :rtype: Ptsv2paymentsPointOfSaleInformation
         """
         return self._point_of_sale_information
 
@@ -301,7 +301,7 @@ class CapturePaymentRequest(object):
         Sets the point_of_sale_information of this CapturePaymentRequest.
 
         :param point_of_sale_information: The point_of_sale_information of this CapturePaymentRequest.
-        :type: Ptsv2paymentsidcapturesPointOfSaleInformation
+        :type: Ptsv2paymentsPointOfSaleInformation
         """
 
         self._point_of_sale_information = point_of_sale_information

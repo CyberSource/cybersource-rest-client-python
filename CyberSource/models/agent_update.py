@@ -34,7 +34,7 @@ class AgentUpdate(object):
         'domain': 'str',
         'description': 'str',
         'contact_email': 'str',
-        'agent_metadata': 'dict(str, str)'
+        'agent_metadata': 'object'
     }
 
     attribute_map = {
@@ -71,7 +71,7 @@ class AgentUpdate(object):
     def name(self):
         """
         Gets the name of this AgentUpdate.
-        Agent name
+        Display name for the agent
 
         :return: The name of this AgentUpdate.
         :rtype: str
@@ -82,7 +82,7 @@ class AgentUpdate(object):
     def name(self, name):
         """
         Sets the name of this AgentUpdate.
-        Agent name
+        Display name for the agent
 
         :param name: The name of this AgentUpdate.
         :type: str
@@ -94,7 +94,7 @@ class AgentUpdate(object):
     def domain(self):
         """
         Gets the domain of this AgentUpdate.
-        Agent domain URL
+        Fully-qualified HTTPS URL of the agent's home domain. Must be unique — raises 409 if already registered.
 
         :return: The domain of this AgentUpdate.
         :rtype: str
@@ -105,7 +105,7 @@ class AgentUpdate(object):
     def domain(self, domain):
         """
         Sets the domain of this AgentUpdate.
-        Agent domain URL
+        Fully-qualified HTTPS URL of the agent's home domain. Must be unique — raises 409 if already registered.
 
         :param domain: The domain of this AgentUpdate.
         :type: str
@@ -117,7 +117,7 @@ class AgentUpdate(object):
     def description(self):
         """
         Gets the description of this AgentUpdate.
-        Agent description
+        Description of the agent's purpose or capabilities
 
         :return: The description of this AgentUpdate.
         :rtype: str
@@ -128,7 +128,7 @@ class AgentUpdate(object):
     def description(self, description):
         """
         Sets the description of this AgentUpdate.
-        Agent description
+        Description of the agent's purpose or capabilities
 
         :param description: The description of this AgentUpdate.
         :type: str
@@ -140,7 +140,7 @@ class AgentUpdate(object):
     def contact_email(self):
         """
         Gets the contact_email of this AgentUpdate.
-        Contact email
+        Contact email for the team or individual responsible for this agent
 
         :return: The contact_email of this AgentUpdate.
         :rtype: str
@@ -151,7 +151,7 @@ class AgentUpdate(object):
     def contact_email(self, contact_email):
         """
         Sets the contact_email of this AgentUpdate.
-        Contact email
+        Contact email for the team or individual responsible for this agent
 
         :param contact_email: The contact_email of this AgentUpdate.
         :type: str
@@ -163,10 +163,10 @@ class AgentUpdate(object):
     def agent_metadata(self):
         """
         Gets the agent_metadata of this AgentUpdate.
-        Optional metadata (e.g., framework, version)
+        Free-form metadata object for agent context (e.g., AI framework, language, runtime). Max 10KB.
 
         :return: The agent_metadata of this AgentUpdate.
-        :rtype: dict(str, str)
+        :rtype: object
         """
         return self._agent_metadata
 
@@ -174,10 +174,10 @@ class AgentUpdate(object):
     def agent_metadata(self, agent_metadata):
         """
         Sets the agent_metadata of this AgentUpdate.
-        Optional metadata (e.g., framework, version)
+        Free-form metadata object for agent context (e.g., AI framework, language, runtime). Max 10KB.
 
         :param agent_metadata: The agent_metadata of this AgentUpdate.
-        :type: dict(str, str)
+        :type: object
         """
 
         self._agent_metadata = agent_metadata

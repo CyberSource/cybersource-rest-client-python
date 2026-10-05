@@ -37,7 +37,7 @@ class AgentRegistrationResponse201(object):
         'contact_email': 'str',
         'token_requestor_id': 'str',
         'agent_type': 'str',
-        'agent_metadata': 'dict(str, str)',
+        'agent_metadata': 'object',
         'is_active': 'bool',
         'created_at': 'datetime',
         'updated_at': 'datetime',
@@ -121,7 +121,7 @@ class AgentRegistrationResponse201(object):
     def name(self):
         """
         Gets the name of this AgentRegistrationResponse201.
-        Agent name
+        Display name for the agent
 
         :return: The name of this AgentRegistrationResponse201.
         :rtype: str
@@ -132,7 +132,7 @@ class AgentRegistrationResponse201(object):
     def name(self, name):
         """
         Sets the name of this AgentRegistrationResponse201.
-        Agent name
+        Display name for the agent
 
         :param name: The name of this AgentRegistrationResponse201.
         :type: str
@@ -144,7 +144,7 @@ class AgentRegistrationResponse201(object):
     def domain(self):
         """
         Gets the domain of this AgentRegistrationResponse201.
-        Agent domain URL
+        Fully-qualified HTTPS URL of the agent's home domain
 
         :return: The domain of this AgentRegistrationResponse201.
         :rtype: str
@@ -155,7 +155,7 @@ class AgentRegistrationResponse201(object):
     def domain(self, domain):
         """
         Sets the domain of this AgentRegistrationResponse201.
-        Agent domain URL
+        Fully-qualified HTTPS URL of the agent's home domain
 
         :param domain: The domain of this AgentRegistrationResponse201.
         :type: str
@@ -167,7 +167,7 @@ class AgentRegistrationResponse201(object):
     def description(self):
         """
         Gets the description of this AgentRegistrationResponse201.
-        Agent description
+        Description of the agent's purpose or capabilities
 
         :return: The description of this AgentRegistrationResponse201.
         :rtype: str
@@ -178,7 +178,7 @@ class AgentRegistrationResponse201(object):
     def description(self, description):
         """
         Sets the description of this AgentRegistrationResponse201.
-        Agent description
+        Description of the agent's purpose or capabilities
 
         :param description: The description of this AgentRegistrationResponse201.
         :type: str
@@ -190,7 +190,7 @@ class AgentRegistrationResponse201(object):
     def contact_email(self):
         """
         Gets the contact_email of this AgentRegistrationResponse201.
-        Contact email
+        Contact email for the team or individual responsible for this agent
 
         :return: The contact_email of this AgentRegistrationResponse201.
         :rtype: str
@@ -201,7 +201,7 @@ class AgentRegistrationResponse201(object):
     def contact_email(self, contact_email):
         """
         Sets the contact_email of this AgentRegistrationResponse201.
-        Contact email
+        Contact email for the team or individual responsible for this agent
 
         :param contact_email: The contact_email of this AgentRegistrationResponse201.
         :type: str
@@ -213,7 +213,7 @@ class AgentRegistrationResponse201(object):
     def token_requestor_id(self):
         """
         Gets the token_requestor_id of this AgentRegistrationResponse201.
-        Unique token requestor identifier
+        Token Requestor ID (TRID) assigned by Visa, shared with the parent trusted agent for OSAs
 
         :return: The token_requestor_id of this AgentRegistrationResponse201.
         :rtype: str
@@ -224,7 +224,7 @@ class AgentRegistrationResponse201(object):
     def token_requestor_id(self, token_requestor_id):
         """
         Sets the token_requestor_id of this AgentRegistrationResponse201.
-        Unique token requestor identifier
+        Token Requestor ID (TRID) assigned by Visa, shared with the parent trusted agent for OSAs
 
         :param token_requestor_id: The token_requestor_id of this AgentRegistrationResponse201.
         :type: str
@@ -236,7 +236,7 @@ class AgentRegistrationResponse201(object):
     def agent_type(self):
         """
         Gets the agent_type of this AgentRegistrationResponse201.
-        Agent classification: 'trusted' (commercially onboarded) or 'known' (open-source/unverified)  Possible values: - trusted - known
+        Agent classification: 'trusted' (commercially onboarded via Visa) or 'known' (open-source/community agent, unverified)  Possible values: - trusted - known
 
         :return: The agent_type of this AgentRegistrationResponse201.
         :rtype: str
@@ -247,7 +247,7 @@ class AgentRegistrationResponse201(object):
     def agent_type(self, agent_type):
         """
         Sets the agent_type of this AgentRegistrationResponse201.
-        Agent classification: 'trusted' (commercially onboarded) or 'known' (open-source/unverified)  Possible values: - trusted - known
+        Agent classification: 'trusted' (commercially onboarded via Visa) or 'known' (open-source/community agent, unverified)  Possible values: - trusted - known
 
         :param agent_type: The agent_type of this AgentRegistrationResponse201.
         :type: str
@@ -259,10 +259,10 @@ class AgentRegistrationResponse201(object):
     def agent_metadata(self):
         """
         Gets the agent_metadata of this AgentRegistrationResponse201.
-        Additional agent metadata
+        Free-form metadata object for agent context (e.g., AI framework, language, runtime). Max 10KB.
 
         :return: The agent_metadata of this AgentRegistrationResponse201.
-        :rtype: dict(str, str)
+        :rtype: object
         """
         return self._agent_metadata
 
@@ -270,10 +270,10 @@ class AgentRegistrationResponse201(object):
     def agent_metadata(self, agent_metadata):
         """
         Sets the agent_metadata of this AgentRegistrationResponse201.
-        Additional agent metadata
+        Free-form metadata object for agent context (e.g., AI framework, language, runtime). Max 10KB.
 
         :param agent_metadata: The agent_metadata of this AgentRegistrationResponse201.
-        :type: dict(str, str)
+        :type: object
         """
 
         self._agent_metadata = agent_metadata
@@ -282,7 +282,7 @@ class AgentRegistrationResponse201(object):
     def is_active(self):
         """
         Gets the is_active of this AgentRegistrationResponse201.
-        Whether the agent is active
+        Whether the agent is currently active. Deactivated agents cannot add or activate keys.
 
         :return: The is_active of this AgentRegistrationResponse201.
         :rtype: bool
@@ -293,7 +293,7 @@ class AgentRegistrationResponse201(object):
     def is_active(self, is_active):
         """
         Sets the is_active of this AgentRegistrationResponse201.
-        Whether the agent is active
+        Whether the agent is currently active. Deactivated agents cannot add or activate keys.
 
         :param is_active: The is_active of this AgentRegistrationResponse201.
         :type: bool
@@ -305,7 +305,7 @@ class AgentRegistrationResponse201(object):
     def created_at(self):
         """
         Gets the created_at of this AgentRegistrationResponse201.
-        Creation timestamp
+        ISO 8601 UTC timestamp when the agent was registered
 
         :return: The created_at of this AgentRegistrationResponse201.
         :rtype: datetime
@@ -316,7 +316,7 @@ class AgentRegistrationResponse201(object):
     def created_at(self, created_at):
         """
         Sets the created_at of this AgentRegistrationResponse201.
-        Creation timestamp
+        ISO 8601 UTC timestamp when the agent was registered
 
         :param created_at: The created_at of this AgentRegistrationResponse201.
         :type: datetime
@@ -328,7 +328,7 @@ class AgentRegistrationResponse201(object):
     def updated_at(self):
         """
         Gets the updated_at of this AgentRegistrationResponse201.
-        Last update timestamp
+        ISO 8601 UTC timestamp when the agent was last updated
 
         :return: The updated_at of this AgentRegistrationResponse201.
         :rtype: datetime
@@ -339,7 +339,7 @@ class AgentRegistrationResponse201(object):
     def updated_at(self, updated_at):
         """
         Sets the updated_at of this AgentRegistrationResponse201.
-        Last update timestamp
+        ISO 8601 UTC timestamp when the agent was last updated
 
         :param updated_at: The updated_at of this AgentRegistrationResponse201.
         :type: datetime
@@ -351,7 +351,7 @@ class AgentRegistrationResponse201(object):
     def keys(self):
         """
         Gets the keys of this AgentRegistrationResponse201.
-        List of keys associated with the agent
+        List of public keys associated with the agent (both active and deactivated)
 
         :return: The keys of this AgentRegistrationResponse201.
         :rtype: list[AgentRegistrationResponse201Keys]
@@ -362,7 +362,7 @@ class AgentRegistrationResponse201(object):
     def keys(self, keys):
         """
         Sets the keys of this AgentRegistrationResponse201.
-        List of keys associated with the agent
+        List of public keys associated with the agent (both active and deactivated)
 
         :param keys: The keys of this AgentRegistrationResponse201.
         :type: list[AgentRegistrationResponse201Keys]

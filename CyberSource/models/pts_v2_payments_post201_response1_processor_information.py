@@ -37,6 +37,7 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         'response_details': 'str',
         'response_code': 'str',
         'seller_protection': 'ProcessorInformationSellerProtection',
+        'payment_url': 'str',
         'avs': 'PtsV2PaymentsPost201Response1ProcessorInformationAvs'
     }
 
@@ -48,10 +49,11 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         'response_details': 'responseDetails',
         'response_code': 'responseCode',
         'seller_protection': 'sellerProtection',
+        'payment_url': 'paymentUrl',
         'avs': 'avs'
     }
 
-    def __init__(self, transaction_id=None, trade_number=None, raw_response=None, raw_response_local=None, response_details=None, response_code=None, seller_protection=None, avs=None):
+    def __init__(self, transaction_id=None, trade_number=None, raw_response=None, raw_response_local=None, response_details=None, response_code=None, seller_protection=None, payment_url=None, avs=None):
         """
         PtsV2PaymentsPost201Response1ProcessorInformation - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         self._response_details = None
         self._response_code = None
         self._seller_protection = None
+        self._payment_url = None
         self._avs = None
 
         if transaction_id is not None:
@@ -79,6 +82,8 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
           self.response_code = response_code
         if seller_protection is not None:
           self.seller_protection = seller_protection
+        if payment_url is not None:
+          self.payment_url = payment_url
         if avs is not None:
           self.avs = avs
 
@@ -240,6 +245,29 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         """
 
         self._seller_protection = seller_protection
+
+    @property
+    def payment_url(self):
+        """
+        Gets the payment_url of this PtsV2PaymentsPost201Response1ProcessorInformation.
+        Direct the customer to this URL to complete the payment.
+
+        :return: The payment_url of this PtsV2PaymentsPost201Response1ProcessorInformation.
+        :rtype: str
+        """
+        return self._payment_url
+
+    @payment_url.setter
+    def payment_url(self, payment_url):
+        """
+        Sets the payment_url of this PtsV2PaymentsPost201Response1ProcessorInformation.
+        Direct the customer to this URL to complete the payment.
+
+        :param payment_url: The payment_url of this PtsV2PaymentsPost201Response1ProcessorInformation.
+        :type: str
+        """
+
+        self._payment_url = payment_url
 
     @property
     def avs(self):

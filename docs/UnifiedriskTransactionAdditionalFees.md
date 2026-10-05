@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | **float** | Additional fees amount | [optional] 
+**value** | **str** | Additional fees amount | [optional] 
 **currency** | **str** | Currency for additional fees | [optional] 
 **base_currency** | **str** | Base currency for additional fees | [optional] 
-**base_value** | **float** | Additional fees in base currency | [optional] 
+**base_value** | **str** | Additional fees in base currency | [optional] 
 **merchant_currency** | **str** | ISO 4217 3-letter code for the merchant&#39;s local currency used to express the additional fees amount (e.g., EUR for EU merchants) | [optional] 
 **merchant_value** | **str** | Additional fees amount expressed in the merchant&#39;s local currency, used for cross-currency fee reconciliation | [optional] 
 

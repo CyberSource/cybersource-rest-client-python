@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **bank_account_validation** | [**PaymentsProductsTax**](PaymentsProductsTax.md) |  | [optional] 
 **flexapi** | [**PaymentsProductsTax**](PaymentsProductsTax.md) |  | [optional] 
 **webhooks** | [**PaymentsProductsTax**](PaymentsProductsTax.md) |  | [optional] 
+**smarter_retry** | [**PaymentsProductsTax**](PaymentsProductsTax.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

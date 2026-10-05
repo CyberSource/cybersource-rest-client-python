@@ -33,7 +33,7 @@ class Iccv1merchantsProtocolInteractions(object):
         'protocol': 'str',
         'url': 'str',
         'documentation_url': 'str',
-        'metadata': 'dict(str, str)'
+        'metadata': 'dict(str, object)'
     }
 
     attribute_map = {
@@ -136,7 +136,7 @@ class Iccv1merchantsProtocolInteractions(object):
         Optional metadata (max 10KB)
 
         :return: The metadata of this Iccv1merchantsProtocolInteractions.
-        :rtype: dict(str, str)
+        :rtype: dict(str, object)
         """
         return self._metadata
 
@@ -147,7 +147,7 @@ class Iccv1merchantsProtocolInteractions(object):
         Optional metadata (max 10KB)
 
         :param metadata: The metadata of this Iccv1merchantsProtocolInteractions.
-        :type: dict(str, str)
+        :type: dict(str, object)
         """
 
         self._metadata = metadata

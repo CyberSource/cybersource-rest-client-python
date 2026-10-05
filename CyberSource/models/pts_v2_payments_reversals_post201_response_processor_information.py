@@ -39,7 +39,8 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         'master_card_service_reply_code': 'str',
         'response_details': 'str',
         'provider_response': 'str',
-        'network': 'Ptsv2paymentsProcessorInformationReversalNetwork'
+        'network': 'Ptsv2paymentsProcessorInformationReversalNetwork',
+        'transaction_link_identifier': 'str'
     }
 
     attribute_map = {
@@ -52,10 +53,11 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         'master_card_service_reply_code': 'masterCardServiceReplyCode',
         'response_details': 'responseDetails',
         'provider_response': 'providerResponse',
-        'network': 'network'
+        'network': 'network',
+        'transaction_link_identifier': 'transactionLinkIdentifier'
     }
 
-    def __init__(self, transaction_id=None, response_code=None, network_transaction_id=None, response_category_code=None, forwarded_acquirer_code=None, master_card_service_code=None, master_card_service_reply_code=None, response_details=None, provider_response=None, network=None):
+    def __init__(self, transaction_id=None, response_code=None, network_transaction_id=None, response_category_code=None, forwarded_acquirer_code=None, master_card_service_code=None, master_card_service_reply_code=None, response_details=None, provider_response=None, network=None, transaction_link_identifier=None):
         """
         PtsV2PaymentsReversalsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -70,6 +72,7 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         self._response_details = None
         self._provider_response = None
         self._network = None
+        self._transaction_link_identifier = None
 
         if transaction_id is not None:
           self.transaction_id = transaction_id
@@ -91,6 +94,8 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
           self.provider_response = provider_response
         if network is not None:
           self.network = network
+        if transaction_link_identifier is not None:
+          self.transaction_link_identifier = transaction_link_identifier
 
     @property
     def transaction_id(self):
@@ -319,6 +324,29 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         """
 
         self._network = network
+
+    @property
+    def transaction_link_identifier(self):
+        """
+        Gets the transaction_link_identifier of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        Transaction Link Identifier (TLID). Links all messages within a transaction lifecycle for Mastercard transactions. Received from Mastercard in the authorization response and automatically replayed for lifecycle transactions (reversals, follow-on credits, authorization refresh).  #### PIN Debit Also returned for PIN Debit purchase, credit, and reversal transactions. For PIN Debit (Visa Gateway) flows, this value is mapped to Visa Field 111 (DSI 07, Tag C0). 
+
+        :return: The transaction_link_identifier of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._transaction_link_identifier
+
+    @transaction_link_identifier.setter
+    def transaction_link_identifier(self, transaction_link_identifier):
+        """
+        Sets the transaction_link_identifier of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        Transaction Link Identifier (TLID). Links all messages within a transaction lifecycle for Mastercard transactions. Received from Mastercard in the authorization response and automatically replayed for lifecycle transactions (reversals, follow-on credits, authorization refresh).  #### PIN Debit Also returned for PIN Debit purchase, credit, and reversal transactions. For PIN Debit (Visa Gateway) flows, this value is mapped to Visa Field 111 (DSI 07, Tag C0). 
+
+        :param transaction_link_identifier: The transaction_link_identifier of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._transaction_link_identifier = transaction_link_identifier
 
     def to_dict(self):
         """

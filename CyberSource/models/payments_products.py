@@ -51,6 +51,7 @@ class PaymentsProducts(object):
         'receivables_manager': 'PaymentsProductsTax',
         'service_fee': 'PaymentsProductsServiceFee',
         'batch_upload': 'PaymentsProductsTax',
+        'payment_events': 'PaymentsProductsTax',
         'transact_guard': 'PaymentsProductsTax',
         'microform': 'PaymentsProductsMicroform'
     }
@@ -77,11 +78,12 @@ class PaymentsProducts(object):
         'receivables_manager': 'receivablesManager',
         'service_fee': 'serviceFee',
         'batch_upload': 'batchUpload',
+        'payment_events': 'paymentEvents',
         'transact_guard': 'transactGuard',
         'microform': 'microform'
     }
 
-    def __init__(self, card_processing=None, alternative_payment_methods=None, card_present_connect=None, cybs_ready_terminal=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, payment_orchestration=None, payouts=None, differential_fee=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None, batch_upload=None, transact_guard=None, microform=None):
+    def __init__(self, card_processing=None, alternative_payment_methods=None, card_present_connect=None, cybs_ready_terminal=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, payment_orchestration=None, payouts=None, differential_fee=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None, batch_upload=None, payment_events=None, transact_guard=None, microform=None):
         """
         PaymentsProducts - a model defined in Swagger
         """
@@ -107,6 +109,7 @@ class PaymentsProducts(object):
         self._receivables_manager = None
         self._service_fee = None
         self._batch_upload = None
+        self._payment_events = None
         self._transact_guard = None
         self._microform = None
 
@@ -152,6 +155,8 @@ class PaymentsProducts(object):
           self.service_fee = service_fee
         if batch_upload is not None:
           self.batch_upload = batch_upload
+        if payment_events is not None:
+          self.payment_events = payment_events
         if transact_guard is not None:
           self.transact_guard = transact_guard
         if microform is not None:
@@ -597,6 +602,27 @@ class PaymentsProducts(object):
         """
 
         self._batch_upload = batch_upload
+
+    @property
+    def payment_events(self):
+        """
+        Gets the payment_events of this PaymentsProducts.
+
+        :return: The payment_events of this PaymentsProducts.
+        :rtype: PaymentsProductsTax
+        """
+        return self._payment_events
+
+    @payment_events.setter
+    def payment_events(self, payment_events):
+        """
+        Sets the payment_events of this PaymentsProducts.
+
+        :param payment_events: The payment_events of this PaymentsProducts.
+        :type: PaymentsProductsTax
+        """
+
+        self._payment_events = payment_events
 
     @property
     def transact_guard(self):

@@ -37,7 +37,8 @@ class Ptsv2intentsOrderInformationLineItems(object):
         'type_of_supply': 'str',
         'unit_price': 'str',
         'total_amount': 'str',
-        'tax_amount': 'str'
+        'tax_amount': 'str',
+        'shipping_preference': 'str'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class Ptsv2intentsOrderInformationLineItems(object):
         'type_of_supply': 'typeOfSupply',
         'unit_price': 'unitPrice',
         'total_amount': 'totalAmount',
-        'tax_amount': 'taxAmount'
+        'tax_amount': 'taxAmount',
+        'shipping_preference': 'shippingPreference'
     }
 
-    def __init__(self, product_name=None, product_description=None, product_sku=None, quantity=None, type_of_supply=None, unit_price=None, total_amount=None, tax_amount=None):
+    def __init__(self, product_name=None, product_description=None, product_sku=None, quantity=None, type_of_supply=None, unit_price=None, total_amount=None, tax_amount=None, shipping_preference=None):
         """
         Ptsv2intentsOrderInformationLineItems - a model defined in Swagger
         """
@@ -64,6 +66,7 @@ class Ptsv2intentsOrderInformationLineItems(object):
         self._unit_price = None
         self._total_amount = None
         self._tax_amount = None
+        self._shipping_preference = None
 
         if product_name is not None:
           self.product_name = product_name
@@ -81,6 +84,8 @@ class Ptsv2intentsOrderInformationLineItems(object):
           self.total_amount = total_amount
         if tax_amount is not None:
           self.tax_amount = tax_amount
+        if shipping_preference is not None:
+          self.shipping_preference = shipping_preference
 
     @property
     def product_name(self):
@@ -265,6 +270,29 @@ class Ptsv2intentsOrderInformationLineItems(object):
         """
 
         self._tax_amount = tax_amount
+
+    @property
+    def shipping_preference(self):
+        """
+        Gets the shipping_preference of this Ptsv2intentsOrderInformationLineItems.
+        Controls shipping behavior during checkout. Use `NO_SHIPPING` for digital goods, `SET_PROVIDED_ADDRESS` when `orderInformation.shipTo` is provided, and `GET_FROM_FILE` to use the buyer's saved address.   Possible values: - NO_SHIPPING - SET_PROVIDED_ADDRESS - GET_FROM_FILE
+
+        :return: The shipping_preference of this Ptsv2intentsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._shipping_preference
+
+    @shipping_preference.setter
+    def shipping_preference(self, shipping_preference):
+        """
+        Sets the shipping_preference of this Ptsv2intentsOrderInformationLineItems.
+        Controls shipping behavior during checkout. Use `NO_SHIPPING` for digital goods, `SET_PROVIDED_ADDRESS` when `orderInformation.shipTo` is provided, and `GET_FROM_FILE` to use the buyer's saved address.   Possible values: - NO_SHIPPING - SET_PROVIDED_ADDRESS - GET_FROM_FILE
+
+        :param shipping_preference: The shipping_preference of this Ptsv2intentsOrderInformationLineItems.
+        :type: str
+        """
+
+        self._shipping_preference = shipping_preference
 
     def to_dict(self):
         """

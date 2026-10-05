@@ -31,24 +31,29 @@ class Ptsv2intentsMerchantInformationMerchantDescriptor(object):
     """
     swagger_types = {
         'name': 'str',
+        'value': 'str',
         'email': 'str'
     }
 
     attribute_map = {
         'name': 'name',
+        'value': 'value',
         'email': 'email'
     }
 
-    def __init__(self, name=None, email=None):
+    def __init__(self, name=None, value=None, email=None):
         """
         Ptsv2intentsMerchantInformationMerchantDescriptor - a model defined in Swagger
         """
 
         self._name = None
+        self._value = None
         self._email = None
 
         if name is not None:
           self.name = name
+        if value is not None:
+          self.value = value
         if email is not None:
           self.email = email
 
@@ -74,6 +79,29 @@ class Ptsv2intentsMerchantInformationMerchantDescriptor(object):
         """
 
         self._name = name
+
+    @property
+    def value(self):
+        """
+        Gets the value of this Ptsv2intentsMerchantInformationMerchantDescriptor.
+        Value of the merchant descriptor shown to the buyer for this order. 
+
+        :return: The value of this Ptsv2intentsMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        """
+        Sets the value of this Ptsv2intentsMerchantInformationMerchantDescriptor.
+        Value of the merchant descriptor shown to the buyer for this order. 
+
+        :param value: The value of this Ptsv2intentsMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._value = value
 
     @property
     def email(self):

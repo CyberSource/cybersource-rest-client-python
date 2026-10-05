@@ -33,17 +33,19 @@ class RiskProducts(object):
         'fraud_management_essentials': 'RiskProductsFraudManagementEssentials',
         'decision_manager': 'RiskProductsDecisionManager',
         'portfolio_risk_controls': 'RiskProductsPortfolioRiskControls',
-        'enhanced_authentication': 'PaymentsProductsPayerAuthentication'
+        'enhanced_authentication': 'PaymentsProductsPayerAuthentication',
+        'vpri': 'PaymentsProductsTax'
     }
 
     attribute_map = {
         'fraud_management_essentials': 'fraudManagementEssentials',
         'decision_manager': 'decisionManager',
         'portfolio_risk_controls': 'portfolioRiskControls',
-        'enhanced_authentication': 'enhancedAuthentication'
+        'enhanced_authentication': 'enhancedAuthentication',
+        'vpri': 'vpri'
     }
 
-    def __init__(self, fraud_management_essentials=None, decision_manager=None, portfolio_risk_controls=None, enhanced_authentication=None):
+    def __init__(self, fraud_management_essentials=None, decision_manager=None, portfolio_risk_controls=None, enhanced_authentication=None, vpri=None):
         """
         RiskProducts - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class RiskProducts(object):
         self._decision_manager = None
         self._portfolio_risk_controls = None
         self._enhanced_authentication = None
+        self._vpri = None
 
         if fraud_management_essentials is not None:
           self.fraud_management_essentials = fraud_management_essentials
@@ -61,6 +64,8 @@ class RiskProducts(object):
           self.portfolio_risk_controls = portfolio_risk_controls
         if enhanced_authentication is not None:
           self.enhanced_authentication = enhanced_authentication
+        if vpri is not None:
+          self.vpri = vpri
 
     @property
     def fraud_management_essentials(self):
@@ -145,6 +150,27 @@ class RiskProducts(object):
         """
 
         self._enhanced_authentication = enhanced_authentication
+
+    @property
+    def vpri(self):
+        """
+        Gets the vpri of this RiskProducts.
+
+        :return: The vpri of this RiskProducts.
+        :rtype: PaymentsProductsTax
+        """
+        return self._vpri
+
+    @vpri.setter
+    def vpri(self, vpri):
+        """
+        Sets the vpri of this RiskProducts.
+
+        :param vpri: The vpri of this RiskProducts.
+        :type: PaymentsProductsTax
+        """
+
+        self._vpri = vpri
 
     def to_dict(self):
         """
