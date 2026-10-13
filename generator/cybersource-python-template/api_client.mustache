@@ -8,7 +8,13 @@ import json
 import mimetypes
 import tempfile
 import threading
-import pkg_resources
+# Use stdlib importlib.metadata instead of pkg_resources: pkg_resources was
+# removed in setuptools 82, and it was the only thing pulling setuptools in at
+# runtime, so setuptools is no longer a runtime dependency.
+try:
+    from importlib.metadata import version, PackageNotFoundError
+except ImportError:  # Python < 3.8
+    from importlib_metadata import version, PackageNotFoundError
 
 from datetime import date, datetime
 
@@ -97,8 +103,11 @@ class ApiClient(object):
         self.default_headers[header_name] = header_value
 
     def get_client_id(self):
-        version = pkg_resources.require("cybersource-rest-client-python")[0].version
-        return "cybs-rest-sdk-python-" + version
+        try:
+            sdk_version = version("cybersource-rest-client-python")
+        except PackageNotFoundError:
+            sdk_version = "unknown"
+        return "cybs-rest-sdk-python-" + sdk_version
     
     def remove_first_underscore(self, dict_obj):
         converted_dict_obj = {}
