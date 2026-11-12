@@ -44,7 +44,7 @@ class PatchCustomerPaymentInstrumentRequest(object):
         'merchant_information': 'TmsMerchantInformation',
         'instrument_identifier': 'DefaultPaymentInstrumentInstrumentIdentifier',
         'metadata': 'DefaultPaymentInstrumentMetadata',
-        'embedded': 'Tmsv1paymentinstrumentsEmbedded'
+        'embedded': 'PaymentInstrumentEmbedded2'
     }
 
     attribute_map = {
@@ -427,7 +427,7 @@ class PatchCustomerPaymentInstrumentRequest(object):
         Gets the embedded of this PatchCustomerPaymentInstrumentRequest.
 
         :return: The embedded of this PatchCustomerPaymentInstrumentRequest.
-        :rtype: Tmsv1paymentinstrumentsEmbedded
+        :rtype: PaymentInstrumentEmbedded2
         """
         return self._embedded
 
@@ -437,7 +437,7 @@ class PatchCustomerPaymentInstrumentRequest(object):
         Sets the embedded of this PatchCustomerPaymentInstrumentRequest.
 
         :param embedded: The embedded of this PatchCustomerPaymentInstrumentRequest.
-        :type: Tmsv1paymentinstrumentsEmbedded
+        :type: PaymentInstrumentEmbedded2
         """
 
         self._embedded = embedded

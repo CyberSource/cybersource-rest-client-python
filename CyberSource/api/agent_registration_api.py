@@ -141,8 +141,10 @@ class AgentRegistrationApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'POST' in ('POST'):
@@ -151,11 +153,12 @@ class AgentRegistrationApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "activate_agent_key,activate_agent_key_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "activate_agent_key,activate_agent_key_with_http_info")
 
@@ -178,7 +181,7 @@ class AgentRegistrationApi(object):
                                         collection_formats=collection_formats,
                                         isResponseMLEforApi=isResponseMLEforApi)
 
-    def add_agent_key(self, agent_id, key_request, **kwargs):
+    def add_agent_key(self, agent_id, add_agent_key_request, **kwargs):
         """
         Add a key to an agent
         **Add a Key to an Agent**<br>Uploads a new public key for the specified agent. The key is created in ***deactivated*** state and must be explicitly activated via `POST /agents/{agentId}/keys/{keyId}/activate` before it can be used.<br><br> Returns **404** if the agent is not found, **403** if the agent is deactivated. 
@@ -188,12 +191,12 @@ class AgentRegistrationApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.add_agent_key(agent_id, key_request, callback=callback_function)
+        >>> thread = api.add_agent_key(agent_id, add_agent_key_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str agent_id: Unique agent identifier (required)
-        :param KeyRequest key_request: Key creation request (required)
+        :param AddAgentKeyRequest add_agent_key_request: Key creation request (required)
         :return: AddAgentKeyResponse201
                  If the method is called asynchronously,
                  returns the request thread.
@@ -203,12 +206,12 @@ class AgentRegistrationApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.add_agent_key_with_http_info(agent_id, key_request, **kwargs)
+            return self.add_agent_key_with_http_info(agent_id, add_agent_key_request, **kwargs)
         else:
-            (data) = self.add_agent_key_with_http_info(agent_id, key_request, **kwargs)
+            (data) = self.add_agent_key_with_http_info(agent_id, add_agent_key_request, **kwargs)
             return data
 
-    def add_agent_key_with_http_info(self, agent_id, key_request, **kwargs):
+    def add_agent_key_with_http_info(self, agent_id, add_agent_key_request, **kwargs):
         """
         Add a key to an agent
         **Add a Key to an Agent**<br>Uploads a new public key for the specified agent. The key is created in ***deactivated*** state and must be explicitly activated via `POST /agents/{agentId}/keys/{keyId}/activate` before it can be used.<br><br> Returns **404** if the agent is not found, **403** if the agent is deactivated. 
@@ -218,18 +221,18 @@ class AgentRegistrationApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.add_agent_key_with_http_info(agent_id, key_request, callback=callback_function)
+        >>> thread = api.add_agent_key_with_http_info(agent_id, add_agent_key_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str agent_id: Unique agent identifier (required)
-        :param KeyRequest key_request: Key creation request (required)
+        :param AddAgentKeyRequest add_agent_key_request: Key creation request (required)
         :return: AddAgentKeyResponse201
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['agent_id', 'key_request']
+        all_params = ['agent_id', 'add_agent_key_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -248,10 +251,10 @@ class AgentRegistrationApi(object):
         if ('agent_id' not in params) or (params['agent_id'] is None):
             self.logger.error("InvalidArgumentException : Missing the required parameter `agent_id` when calling `add_agent_key`")
             raise ValueError("Missing the required parameter `agent_id` when calling `add_agent_key`")
-        # verify the required parameter 'key_request' is set
-        if ('key_request' not in params) or (params['key_request'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `key_request` when calling `add_agent_key`")
-            raise ValueError("Missing the required parameter `key_request` when calling `add_agent_key`")
+        # verify the required parameter 'add_agent_key_request' is set
+        if ('add_agent_key_request' not in params) or (params['add_agent_key_request'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `add_agent_key_request` when calling `add_agent_key`")
+            raise ValueError("Missing the required parameter `add_agent_key_request` when calling `add_agent_key`")
 
 
         collection_formats = {}
@@ -271,20 +274,22 @@ class AgentRegistrationApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
-        if 'key_request' in params:
-            body_params = params['key_request']
+        if 'add_agent_key_request' in params:
+            body_params = params['add_agent_key_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'key_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'add_agent_key_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "add_agent_key,add_agent_key_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "add_agent_key,add_agent_key_with_http_info")
 
@@ -394,8 +399,10 @@ class AgentRegistrationApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -404,11 +411,12 @@ class AgentRegistrationApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_agent,get_agent_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_agent,get_agent_with_http_info")
 
@@ -527,8 +535,10 @@ class AgentRegistrationApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -537,11 +547,12 @@ class AgentRegistrationApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_agent_key,get_agent_key_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_agent_key,get_agent_key_with_http_info")
 
@@ -659,8 +670,10 @@ class AgentRegistrationApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -669,11 +682,12 @@ class AgentRegistrationApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "list_agent_keys,list_agent_keys_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "list_agent_keys,list_agent_keys_with_http_info")
 
@@ -780,8 +794,10 @@ class AgentRegistrationApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'agent_request' in params:
@@ -793,7 +809,7 @@ class AgentRegistrationApi(object):
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "register_agent,register_agent_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "register_agent,register_agent_with_http_info")
 
@@ -909,8 +925,10 @@ class AgentRegistrationApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'agent_update' in params:
@@ -922,7 +940,7 @@ class AgentRegistrationApi(object):
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "update_agent,update_agent_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "update_agent,update_agent_with_http_info")
 
@@ -945,7 +963,7 @@ class AgentRegistrationApi(object):
                                         collection_formats=collection_formats,
                                         isResponseMLEforApi=isResponseMLEforApi)
 
-    def update_agent_key(self, agent_id, key_id, key_update, **kwargs):
+    def update_agent_key(self, agent_id, key_id, update_agent_key_request, **kwargs):
         """
         Update a key
         **Update a Key**<br>Updates key information. The following fields can be modified: `keyName`, `publicKey`, `algorithm`, and `expirationDate`.<br><br> **Note:** `publicKey` and `algorithm` must always be updated together.<br> Returns **404** if the agent or key is not found, **403** if the agent or key is deactivated, **409** if the new `keyName` already exists. 
@@ -955,13 +973,13 @@ class AgentRegistrationApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_agent_key(agent_id, key_id, key_update, callback=callback_function)
+        >>> thread = api.update_agent_key(agent_id, key_id, update_agent_key_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str agent_id: Unique agent identifier (required)
         :param str key_id: Unique key identifier (required)
-        :param KeyUpdate key_update: Key update request (required)
+        :param UpdateAgentKeyRequest update_agent_key_request: Key update request (required)
         :return: AddAgentKeyResponse201
                  If the method is called asynchronously,
                  returns the request thread.
@@ -971,12 +989,12 @@ class AgentRegistrationApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_agent_key_with_http_info(agent_id, key_id, key_update, **kwargs)
+            return self.update_agent_key_with_http_info(agent_id, key_id, update_agent_key_request, **kwargs)
         else:
-            (data) = self.update_agent_key_with_http_info(agent_id, key_id, key_update, **kwargs)
+            (data) = self.update_agent_key_with_http_info(agent_id, key_id, update_agent_key_request, **kwargs)
             return data
 
-    def update_agent_key_with_http_info(self, agent_id, key_id, key_update, **kwargs):
+    def update_agent_key_with_http_info(self, agent_id, key_id, update_agent_key_request, **kwargs):
         """
         Update a key
         **Update a Key**<br>Updates key information. The following fields can be modified: `keyName`, `publicKey`, `algorithm`, and `expirationDate`.<br><br> **Note:** `publicKey` and `algorithm` must always be updated together.<br> Returns **404** if the agent or key is not found, **403** if the agent or key is deactivated, **409** if the new `keyName` already exists. 
@@ -986,19 +1004,19 @@ class AgentRegistrationApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_agent_key_with_http_info(agent_id, key_id, key_update, callback=callback_function)
+        >>> thread = api.update_agent_key_with_http_info(agent_id, key_id, update_agent_key_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str agent_id: Unique agent identifier (required)
         :param str key_id: Unique key identifier (required)
-        :param KeyUpdate key_update: Key update request (required)
+        :param UpdateAgentKeyRequest update_agent_key_request: Key update request (required)
         :return: AddAgentKeyResponse201
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['agent_id', 'key_id', 'key_update']
+        all_params = ['agent_id', 'key_id', 'update_agent_key_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1021,10 +1039,10 @@ class AgentRegistrationApi(object):
         if ('key_id' not in params) or (params['key_id'] is None):
             self.logger.error("InvalidArgumentException : Missing the required parameter `key_id` when calling `update_agent_key`")
             raise ValueError("Missing the required parameter `key_id` when calling `update_agent_key`")
-        # verify the required parameter 'key_update' is set
-        if ('key_update' not in params) or (params['key_update'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `key_update` when calling `update_agent_key`")
-            raise ValueError("Missing the required parameter `key_update` when calling `update_agent_key`")
+        # verify the required parameter 'update_agent_key_request' is set
+        if ('update_agent_key_request' not in params) or (params['update_agent_key_request'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `update_agent_key_request` when calling `update_agent_key`")
+            raise ValueError("Missing the required parameter `update_agent_key_request` when calling `update_agent_key`")
 
 
         collection_formats = {}
@@ -1047,20 +1065,22 @@ class AgentRegistrationApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
-        if 'key_update' in params:
-            body_params = params['key_update']
+        if 'update_agent_key_request' in params:
+            body_params = params['update_agent_key_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'key_update', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'update_agent_key_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "update_agent_key,update_agent_key_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "update_agent_key,update_agent_key_with_http_info")
 

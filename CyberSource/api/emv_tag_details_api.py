@@ -122,8 +122,10 @@ class EMVTagDetailsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -132,11 +134,12 @@ class EMVTagDetailsApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_emv_tags,get_emv_tags_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_emv_tags,get_emv_tags_with_http_info")
 
@@ -159,7 +162,7 @@ class EMVTagDetailsApi(object):
                                         collection_formats=collection_formats,
                                         isResponseMLEforApi=isResponseMLEforApi)
 
-    def parse_emv_tags(self, body, **kwargs):
+    def parse_emv_tags(self, parse_emv_tags_request, **kwargs):
         """
         Parse an EMV String
         Pass an EMV Tag-Length-Value (TLV) string for parsing.
@@ -169,11 +172,11 @@ class EMVTagDetailsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.parse_emv_tags(body, callback=callback_function)
+        >>> thread = api.parse_emv_tags(parse_emv_tags_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param Body2 body: (required)
+        :param ParseEmvTagsRequest parse_emv_tags_request: (required)
         :return: TssV2PostEmvTags200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -183,12 +186,12 @@ class EMVTagDetailsApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.parse_emv_tags_with_http_info(body, **kwargs)
+            return self.parse_emv_tags_with_http_info(parse_emv_tags_request, **kwargs)
         else:
-            (data) = self.parse_emv_tags_with_http_info(body, **kwargs)
+            (data) = self.parse_emv_tags_with_http_info(parse_emv_tags_request, **kwargs)
             return data
 
-    def parse_emv_tags_with_http_info(self, body, **kwargs):
+    def parse_emv_tags_with_http_info(self, parse_emv_tags_request, **kwargs):
         """
         Parse an EMV String
         Pass an EMV Tag-Length-Value (TLV) string for parsing.
@@ -198,17 +201,17 @@ class EMVTagDetailsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.parse_emv_tags_with_http_info(body, callback=callback_function)
+        >>> thread = api.parse_emv_tags_with_http_info(parse_emv_tags_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param Body2 body: (required)
+        :param ParseEmvTagsRequest parse_emv_tags_request: (required)
         :return: TssV2PostEmvTags200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body']
+        all_params = ['parse_emv_tags_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -223,10 +226,10 @@ class EMVTagDetailsApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `body` when calling `parse_emv_tags`")
-            raise ValueError("Missing the required parameter `body` when calling `parse_emv_tags`")
+        # verify the required parameter 'parse_emv_tags_request' is set
+        if ('parse_emv_tags_request' not in params) or (params['parse_emv_tags_request'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `parse_emv_tags_request` when calling `parse_emv_tags`")
+            raise ValueError("Missing the required parameter `parse_emv_tags_request` when calling `parse_emv_tags`")
 
 
         collection_formats = {}
@@ -243,20 +246,22 @@ class EMVTagDetailsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if 'parse_emv_tags_request' in params:
+            body_params = params['parse_emv_tags_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'body', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'parse_emv_tags_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "parse_emv_tags,parse_emv_tags_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "parse_emv_tags,parse_emv_tags_with_http_info")
 

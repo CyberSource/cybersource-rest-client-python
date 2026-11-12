@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **post_search_query**
-> InlineResponse2009 post_search_query(post_device_search_request)
+> DeviceSearchResponse post_search_query(post_device_search_request)
 
 Retrieve List of Devices for a given search query V2
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**DeviceSearchResponse**](DeviceSearchResponse.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_search_query_v3**
-> InlineResponse20011 post_search_query_v3(post_device_search_request_v3)
+> DeviceSearchV3Response post_search_query_v3(post_device_search_request_v3)
 
 Retrieve List of Devices for a given search query
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**DeviceSearchV3Response**](DeviceSearchV3Response.md)
 
 ### Authorization
 

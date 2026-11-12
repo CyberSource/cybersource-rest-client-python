@@ -34,7 +34,8 @@ class Riskv1decisionsBuyerInformation(object):
         'username': 'str',
         'hashed_password': 'str',
         'date_of_birth': 'str',
-        'personal_identification': 'list[Ptsv2paymentsBuyerInformationPersonalIdentification]'
+        'personal_identification': 'list[Ptsv2paymentsBuyerInformationPersonalIdentification]',
+        'loyalty': 'Riskv1decisionsBuyerInformationLoyalty'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class Riskv1decisionsBuyerInformation(object):
         'username': 'username',
         'hashed_password': 'hashedPassword',
         'date_of_birth': 'dateOfBirth',
-        'personal_identification': 'personalIdentification'
+        'personal_identification': 'personalIdentification',
+        'loyalty': 'loyalty'
     }
 
-    def __init__(self, merchant_customer_id=None, username=None, hashed_password=None, date_of_birth=None, personal_identification=None):
+    def __init__(self, merchant_customer_id=None, username=None, hashed_password=None, date_of_birth=None, personal_identification=None, loyalty=None):
         """
         Riskv1decisionsBuyerInformation - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class Riskv1decisionsBuyerInformation(object):
         self._hashed_password = None
         self._date_of_birth = None
         self._personal_identification = None
+        self._loyalty = None
 
         if merchant_customer_id is not None:
           self.merchant_customer_id = merchant_customer_id
@@ -66,6 +69,8 @@ class Riskv1decisionsBuyerInformation(object):
           self.date_of_birth = date_of_birth
         if personal_identification is not None:
           self.personal_identification = personal_identification
+        if loyalty is not None:
+          self.loyalty = loyalty
 
     @property
     def merchant_customer_id(self):
@@ -179,6 +184,27 @@ class Riskv1decisionsBuyerInformation(object):
         """
 
         self._personal_identification = personal_identification
+
+    @property
+    def loyalty(self):
+        """
+        Gets the loyalty of this Riskv1decisionsBuyerInformation.
+
+        :return: The loyalty of this Riskv1decisionsBuyerInformation.
+        :rtype: Riskv1decisionsBuyerInformationLoyalty
+        """
+        return self._loyalty
+
+    @loyalty.setter
+    def loyalty(self, loyalty):
+        """
+        Sets the loyalty of this Riskv1decisionsBuyerInformation.
+
+        :param loyalty: The loyalty of this Riskv1decisionsBuyerInformation.
+        :type: Riskv1decisionsBuyerInformationLoyalty
+        """
+
+        self._loyalty = loyalty
 
     def to_dict(self):
         """

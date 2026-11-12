@@ -31,7 +31,7 @@ class CardProcessingConfigCommonPaymentTypes(object):
     """
     swagger_types = {
         'enabled': 'bool',
-        'currencies': 'dict(str, CardProcessingConfigCommonCurrencies)'
+        'currencies': 'dict(str, CurrencyConfiguration)'
     }
 
     attribute_map = {
@@ -80,7 +80,7 @@ class CardProcessingConfigCommonPaymentTypes(object):
         Three-character [ISO 4217 ALPHA-3 Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)
 
         :return: The currencies of this CardProcessingConfigCommonPaymentTypes.
-        :rtype: dict(str, CardProcessingConfigCommonCurrencies)
+        :rtype: dict(str, CurrencyConfiguration)
         """
         return self._currencies
 
@@ -91,7 +91,7 @@ class CardProcessingConfigCommonPaymentTypes(object):
         Three-character [ISO 4217 ALPHA-3 Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)
 
         :param currencies: The currencies of this CardProcessingConfigCommonPaymentTypes.
-        :type: dict(str, CardProcessingConfigCommonCurrencies)
+        :type: dict(str, CurrencyConfiguration)
         """
 
         self._currencies = currencies

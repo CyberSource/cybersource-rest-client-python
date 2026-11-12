@@ -129,8 +129,10 @@ class PayerAuthenticationApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'check_payer_auth_enrollment_request' in params:
@@ -142,7 +144,7 @@ class PayerAuthenticationApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "check_payer_auth_enrollment,check_payer_auth_enrollment_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "check_payer_auth_enrollment,check_payer_auth_enrollment_with_http_info")
 
@@ -249,8 +251,10 @@ class PayerAuthenticationApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'payer_auth_setup_request' in params:
@@ -262,7 +266,7 @@ class PayerAuthenticationApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "payer_auth_setup,payer_auth_setup_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "payer_auth_setup,payer_auth_setup_with_http_info")
 
@@ -369,8 +373,10 @@ class PayerAuthenticationApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'validate_request' in params:
@@ -382,7 +388,7 @@ class PayerAuthenticationApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "validate_authentication_results,validate_authentication_results_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "validate_authentication_results,validate_authentication_results_with_http_info")
 

@@ -49,6 +49,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         'processor_information': 'TssV2TransactionsPost201ResponseEmbeddedProcessorInformation',
         'point_of_sale_information': 'TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation',
         'risk_information': 'TssV2TransactionsPost201ResponseEmbeddedRiskInformation',
+        'travel_information': 'TssV2TransactionsGet200ResponseTravelInformation',
         'links': 'TssV2TransactionsPost201ResponseEmbeddedLinks'
     }
 
@@ -72,10 +73,11 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         'processor_information': 'processorInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
         'risk_information': 'riskInformation',
+        'travel_information': 'travelInformation',
         'links': '_links'
     }
 
-    def __init__(self, id=None, submit_time_utc=None, merchant_id=None, status=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, fraud_marking_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, links=None):
+    def __init__(self, id=None, submit_time_utc=None, merchant_id=None, status=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, fraud_marking_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, travel_information=None, links=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries - a model defined in Swagger
         """
@@ -99,6 +101,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         self._processor_information = None
         self._point_of_sale_information = None
         self._risk_information = None
+        self._travel_information = None
         self._links = None
 
         if id is not None:
@@ -139,6 +142,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
           self.point_of_sale_information = point_of_sale_information
         if risk_information is not None:
           self.risk_information = risk_information
+        if travel_information is not None:
+          self.travel_information = travel_information
         if links is not None:
           self.links = links
 
@@ -550,6 +555,27 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         """
 
         self._risk_information = risk_information
+
+    @property
+    def travel_information(self):
+        """
+        Gets the travel_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
+
+        :return: The travel_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
+        :rtype: TssV2TransactionsGet200ResponseTravelInformation
+        """
+        return self._travel_information
+
+    @travel_information.setter
+    def travel_information(self, travel_information):
+        """
+        Sets the travel_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
+
+        :param travel_information: The travel_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
+        :type: TssV2TransactionsGet200ResponseTravelInformation
+        """
+
+        self._travel_information = travel_information
 
     @property
     def links(self):

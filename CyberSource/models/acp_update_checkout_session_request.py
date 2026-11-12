@@ -32,7 +32,7 @@ class AcpUpdateCheckoutSessionRequest(object):
     swagger_types = {
         'items': 'list[Iccv1checkoutSessionsItems]',
         'buyer': 'AcpUpdateCheckoutSessionBuyer',
-        'fulfillment_address': 'Iccv1checkoutSessionssessionIdFulfillmentAddress',
+        'fulfillment_address': 'Iccv1UpdateCheckoutSessionsFulfillmentAddress',
         'fulfillment_option_id': 'str'
     }
 
@@ -112,7 +112,7 @@ class AcpUpdateCheckoutSessionRequest(object):
         Gets the fulfillment_address of this AcpUpdateCheckoutSessionRequest.
 
         :return: The fulfillment_address of this AcpUpdateCheckoutSessionRequest.
-        :rtype: Iccv1checkoutSessionssessionIdFulfillmentAddress
+        :rtype: Iccv1UpdateCheckoutSessionsFulfillmentAddress
         """
         return self._fulfillment_address
 
@@ -122,7 +122,7 @@ class AcpUpdateCheckoutSessionRequest(object):
         Sets the fulfillment_address of this AcpUpdateCheckoutSessionRequest.
 
         :param fulfillment_address: The fulfillment_address of this AcpUpdateCheckoutSessionRequest.
-        :type: Iccv1checkoutSessionssessionIdFulfillmentAddress
+        :type: Iccv1UpdateCheckoutSessionsFulfillmentAddress
         """
 
         self._fulfillment_address = fulfillment_address

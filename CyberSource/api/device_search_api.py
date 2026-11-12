@@ -60,7 +60,7 @@ class DeviceSearchApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostDeviceSearchRequest post_device_search_request: (required)
-        :return: InlineResponse2009
+        :return: DeviceSearchResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -89,7 +89,7 @@ class DeviceSearchApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostDeviceSearchRequest post_device_search_request: (required)
-        :return: InlineResponse2009
+        :return: DeviceSearchResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -129,8 +129,10 @@ class DeviceSearchApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=UTF-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=UTF-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=UTF-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'post_device_search_request' in params:
@@ -142,7 +144,7 @@ class DeviceSearchApi(object):
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_search_query,post_search_query_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_search_query,post_search_query_with_http_info")
 
@@ -156,7 +158,7 @@ class DeviceSearchApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2009',
+                                        response_type='DeviceSearchResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -180,7 +182,7 @@ class DeviceSearchApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostDeviceSearchRequestV3 post_device_search_request_v3: (required)
-        :return: InlineResponse20011
+        :return: DeviceSearchV3Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -209,7 +211,7 @@ class DeviceSearchApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostDeviceSearchRequestV3 post_device_search_request_v3: (required)
-        :return: InlineResponse20011
+        :return: DeviceSearchV3Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -249,8 +251,10 @@ class DeviceSearchApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=UTF-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=UTF-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=UTF-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'post_device_search_request_v3' in params:
@@ -262,7 +266,7 @@ class DeviceSearchApi(object):
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_search_query_v3,post_search_query_v3_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_search_query_v3,post_search_query_v3_with_http_info")
 
@@ -276,7 +280,7 @@ class DeviceSearchApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20011',
+                                        response_type='DeviceSearchV3Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

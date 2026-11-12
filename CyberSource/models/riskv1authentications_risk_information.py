@@ -30,7 +30,7 @@ class Riskv1authenticationsRiskInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'buyer_history': 'Ptsv2paymentsRiskInformationBuyerHistory'
+        'buyer_history': 'Riskv1decisionsRiskInformationBuyerHistory'
     }
 
     attribute_map = {
@@ -53,7 +53,7 @@ class Riskv1authenticationsRiskInformation(object):
         Gets the buyer_history of this Riskv1authenticationsRiskInformation.
 
         :return: The buyer_history of this Riskv1authenticationsRiskInformation.
-        :rtype: Ptsv2paymentsRiskInformationBuyerHistory
+        :rtype: Riskv1decisionsRiskInformationBuyerHistory
         """
         return self._buyer_history
 
@@ -63,7 +63,7 @@ class Riskv1authenticationsRiskInformation(object):
         Sets the buyer_history of this Riskv1authenticationsRiskInformation.
 
         :param buyer_history: The buyer_history of this Riskv1authenticationsRiskInformation.
-        :type: Ptsv2paymentsRiskInformationBuyerHistory
+        :type: Riskv1decisionsRiskInformationBuyerHistory
         """
 
         self._buyer_history = buyer_history

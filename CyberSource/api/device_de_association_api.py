@@ -129,8 +129,10 @@ class DeviceDeAssociationApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=UTF-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=UTF-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'de_association_request_body' in params:
@@ -142,7 +144,7 @@ class DeviceDeAssociationApi(object):
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "delete_terminal_association,delete_terminal_association_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "delete_terminal_association,delete_terminal_association_with_http_info")
 
@@ -180,7 +182,7 @@ class DeviceDeAssociationApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param list[DeviceDeAssociateV3Request] device_de_associate_v3_request: deviceId that has to be de-associated to the destination organizationId. (required)
-        :return: list[InlineResponse20010]
+        :return: list[DeviceDeAssociateV3Response]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -209,7 +211,7 @@ class DeviceDeAssociationApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param list[DeviceDeAssociateV3Request] device_de_associate_v3_request: deviceId that has to be de-associated to the destination organizationId. (required)
-        :return: list[InlineResponse20010]
+        :return: list[DeviceDeAssociateV3Response]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -249,8 +251,10 @@ class DeviceDeAssociationApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=UTF-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=UTF-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=UTF-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'device_de_associate_v3_request' in params:
@@ -262,7 +266,7 @@ class DeviceDeAssociationApi(object):
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_de_associate_v3_terminal,post_de_associate_v3_terminal_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_de_associate_v3_terminal,post_de_associate_v3_terminal_with_http_info")
 
@@ -276,7 +280,7 @@ class DeviceDeAssociationApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='list[InlineResponse20010]',
+                                        response_type='list[DeviceDeAssociateV3Response]',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

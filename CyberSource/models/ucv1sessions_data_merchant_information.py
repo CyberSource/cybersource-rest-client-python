@@ -77,7 +77,7 @@ class Ucv1sessionsDataMerchantInformation(object):
     def vat_registration_number(self):
         """
         Gets the vat_registration_number of this Ucv1sessionsDataMerchantInformation.
-        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.  #### CyberSource through VisaNet For CtV processors, the maximum length is 20. 
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes. 
 
         :return: The vat_registration_number of this Ucv1sessionsDataMerchantInformation.
         :rtype: str
@@ -88,7 +88,7 @@ class Ucv1sessionsDataMerchantInformation(object):
     def vat_registration_number(self, vat_registration_number):
         """
         Sets the vat_registration_number of this Ucv1sessionsDataMerchantInformation.
-        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.  #### CyberSource through VisaNet For CtV processors, the maximum length is 20. 
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes. 
 
         :param vat_registration_number: The vat_registration_number of this Ucv1sessionsDataMerchantInformation.
         :type: str

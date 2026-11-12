@@ -65,7 +65,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_agent_key**
-> AddAgentKeyResponse201 add_agent_key(agent_id, key_request)
+> AddAgentKeyResponse201 add_agent_key(agent_id, add_agent_key_request)
 
 Add a key to an agent
 
@@ -82,11 +82,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.AgentRegistrationApi()
 agent_id = 'agent_id_example' # str | Unique agent identifier
-key_request = CyberSource.KeyRequest() # KeyRequest | Key creation request
+add_agent_key_request = CyberSource.AddAgentKeyRequest() # AddAgentKeyRequest | Key creation request
 
 try: 
     # Add a key to an agent
-    api_response = api_instance.add_agent_key(agent_id, key_request)
+    api_response = api_instance.add_agent_key(agent_id, add_agent_key_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AgentRegistrationApi->add_agent_key: %s\n" % e)
@@ -97,7 +97,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **agent_id** | **str**| Unique agent identifier | 
- **key_request** | [**KeyRequest**](KeyRequest.md)| Key creation request | 
+ **add_agent_key_request** | [**AddAgentKeyRequest**](AddAgentKeyRequest.md)| Key creation request | 
 
 ### Return type
 
@@ -363,7 +363,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_agent_key**
-> AddAgentKeyResponse201 update_agent_key(agent_id, key_id, key_update)
+> AddAgentKeyResponse201 update_agent_key(agent_id, key_id, update_agent_key_request)
 
 Update a key
 
@@ -381,11 +381,11 @@ from pprint import pprint
 api_instance = CyberSource.AgentRegistrationApi()
 agent_id = 'agent_id_example' # str | Unique agent identifier
 key_id = 'key_id_example' # str | Unique key identifier
-key_update = CyberSource.KeyUpdate() # KeyUpdate | Key update request
+update_agent_key_request = CyberSource.UpdateAgentKeyRequest() # UpdateAgentKeyRequest | Key update request
 
 try: 
     # Update a key
-    api_response = api_instance.update_agent_key(agent_id, key_id, key_update)
+    api_response = api_instance.update_agent_key(agent_id, key_id, update_agent_key_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AgentRegistrationApi->update_agent_key: %s\n" % e)
@@ -397,7 +397,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **agent_id** | **str**| Unique agent identifier | 
  **key_id** | **str**| Unique key identifier | 
- **key_update** | [**KeyUpdate**](KeyUpdate.md)| Key update request | 
+ **update_agent_key_request** | [**UpdateAgentKeyRequest**](UpdateAgentKeyRequest.md)| Key update request | 
 
 ### Return type
 

@@ -30,22 +30,20 @@ class InlineResponse5001(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
+        'submit_time_utc': 'datetime',
         'status': 'str',
         'reason': 'str',
-        'message': 'str',
-        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
+        'message': 'str'
     }
 
     attribute_map = {
         'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
         'reason': 'reason',
-        'message': 'message',
-        'details': 'details'
+        'message': 'message'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, details=None):
+    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None):
         """
         InlineResponse5001 - a model defined in Swagger
         """
@@ -54,7 +52,6 @@ class InlineResponse5001(object):
         self._status = None
         self._reason = None
         self._message = None
-        self._details = None
 
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
@@ -64,17 +61,15 @@ class InlineResponse5001(object):
           self.reason = reason
         if message is not None:
           self.message = message
-        if details is not None:
-          self.details = details
 
     @property
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this InlineResponse5001.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
 
         :return: The submit_time_utc of this InlineResponse5001.
-        :rtype: str
+        :rtype: datetime
         """
         return self._submit_time_utc
 
@@ -82,10 +77,10 @@ class InlineResponse5001(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this InlineResponse5001.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
 
         :param submit_time_utc: The submit_time_utc of this InlineResponse5001.
-        :type: str
+        :type: datetime
         """
 
         self._submit_time_utc = submit_time_utc
@@ -94,7 +89,7 @@ class InlineResponse5001(object):
     def status(self):
         """
         Gets the status of this InlineResponse5001.
-        The status of the submitted transaction. Possible values: - `SERVER_ERROR` 
+        The http status description of the submitted request.
 
         :return: The status of this InlineResponse5001.
         :rtype: str
@@ -105,7 +100,7 @@ class InlineResponse5001(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse5001.
-        The status of the submitted transaction. Possible values: - `SERVER_ERROR` 
+        The http status description of the submitted request.
 
         :param status: The status of this InlineResponse5001.
         :type: str
@@ -117,7 +112,7 @@ class InlineResponse5001(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse5001.
-        The reason of the status. Possible Values: - `SYSTEM_ERROR` 
+        Documented reason codes. Client should be able to use the key for generating their own error message Possible Values:   - 'SYSTEM_ERROR' 
 
         :return: The reason of this InlineResponse5001.
         :rtype: str
@@ -128,7 +123,7 @@ class InlineResponse5001(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse5001.
-        The reason of the status. Possible Values: - `SYSTEM_ERROR` 
+        Documented reason codes. Client should be able to use the key for generating their own error message Possible Values:   - 'SYSTEM_ERROR' 
 
         :param reason: The reason of this InlineResponse5001.
         :type: str
@@ -140,7 +135,7 @@ class InlineResponse5001(object):
     def message(self):
         """
         Gets the message of this InlineResponse5001.
-        Underlying service error with exception.
+        Descriptive message for the error.
 
         :return: The message of this InlineResponse5001.
         :rtype: str
@@ -151,34 +146,13 @@ class InlineResponse5001(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse5001.
-        Underlying service error with exception.
+        Descriptive message for the error.
 
         :param message: The message of this InlineResponse5001.
         :type: str
         """
 
         self._message = message
-
-    @property
-    def details(self):
-        """
-        Gets the details of this InlineResponse5001.
-
-        :return: The details of this InlineResponse5001.
-        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
-        """
-        return self._details
-
-    @details.setter
-    def details(self, details):
-        """
-        Sets the details of this InlineResponse5001.
-
-        :param details: The details of this InlineResponse5001.
-        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
-        """
-
-        self._details = details
 
     def to_dict(self):
         """

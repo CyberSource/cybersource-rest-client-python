@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **get_card_art_asset**
-> InlineResponse2002 get_card_art_asset(instrument_identifier_id, token_provider, asset_type)
+> CardArtAssetResponse get_card_art_asset(instrument_identifier_id, token_provider, asset_type)
 
 Retrieve Card Art
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**CardArtAssetResponse**](CardArtAssetResponse.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tokenized_card**
-> InlineResponse2001 get_tokenized_card(tokenized_card_id, profile_id=profile_id)
+> GetTokenizedCardResponse get_tokenized_card(tokenized_card_id, profile_id=profile_id)
 
 Retrieve a Tokenized Card
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**GetTokenizedCardResponse**](GetTokenizedCardResponse.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.NetworkTokensApi()
 token_id = 'token_id_example' # str | The Id of a token representing a Customer, Payment Instrument or Instrument Identifier.
-post_payment_credentials_request = CyberSource.PostPaymentCredentialsRequest1() # PostPaymentCredentialsRequest1 | 
+post_payment_credentials_request = CyberSource.PostPaymentCredentialsRequest() # PostPaymentCredentialsRequest | 
 profile_id = 'profile_id_example' # str | The Id of a profile containing user specific TMS configuration. (optional)
 
 try: 
@@ -200,7 +200,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **token_id** | **str**| The Id of a token representing a Customer, Payment Instrument or Instrument Identifier. | 
- **post_payment_credentials_request** | [**PostPaymentCredentialsRequest1**](PostPaymentCredentialsRequest1.md)|  | 
+ **post_payment_credentials_request** | [**PostPaymentCredentialsRequest**](PostPaymentCredentialsRequest.md)|  | 
  **profile_id** | **str**| The Id of a profile containing user specific TMS configuration. | [optional] 
 
 ### Return type
@@ -219,7 +219,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_token_payment_credentials_v3**
-> InlineResponse2011 post_token_payment_credentials_v3(token_id, post_payment_credentials_request, profile_id=profile_id)
+> PostPaymentCredentialsResponse post_token_payment_credentials_v3(token_id, post_payment_credentials_v3_request, profile_id=profile_id)
 
 Generate Payment Credentials Latest Version v3
 
@@ -236,12 +236,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.NetworkTokensApi()
 token_id = 'token_id_example' # str | The Id of a token representing a Customer, Payment Instrument or Instrument Identifier.
-post_payment_credentials_request = CyberSource.PostPaymentCredentialsRequest() # PostPaymentCredentialsRequest | 
+post_payment_credentials_v3_request = CyberSource.PostPaymentCredentialsV3Request() # PostPaymentCredentialsV3Request | 
 profile_id = 'profile_id_example' # str | The Id of a profile containing user specific TMS configuration. (optional)
 
 try: 
     # Generate Payment Credentials Latest Version v3
-    api_response = api_instance.post_token_payment_credentials_v3(token_id, post_payment_credentials_request, profile_id=profile_id)
+    api_response = api_instance.post_token_payment_credentials_v3(token_id, post_payment_credentials_v3_request, profile_id=profile_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling NetworkTokensApi->post_token_payment_credentials_v3: %s\n" % e)
@@ -252,12 +252,12 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **token_id** | **str**| The Id of a token representing a Customer, Payment Instrument or Instrument Identifier. | 
- **post_payment_credentials_request** | [**PostPaymentCredentialsRequest**](PostPaymentCredentialsRequest.md)|  | 
+ **post_payment_credentials_v3_request** | [**PostPaymentCredentialsV3Request**](PostPaymentCredentialsV3Request.md)|  | 
  **profile_id** | **str**| The Id of a profile containing user specific TMS configuration. | [optional] 
 
 ### Return type
 
-[**InlineResponse2011**](InlineResponse2011.md)
+[**PostPaymentCredentialsResponse**](PostPaymentCredentialsResponse.md)
 
 ### Authorization
 
@@ -271,7 +271,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_tokenized_card**
-> InlineResponse2001 post_tokenized_card(post_tokenized_card_request, profile_id=profile_id)
+> GetTokenizedCardResponse post_tokenized_card(post_tokenized_card_request, profile_id=profile_id)
 
 Create a Tokenized Card
 
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**GetTokenizedCardResponse**](GetTokenizedCardResponse.md)
 
 ### Authorization
 

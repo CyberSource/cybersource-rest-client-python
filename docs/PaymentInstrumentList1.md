@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**links** | [**PaymentInstrumentListLinks**](PaymentInstrumentListLinks.md) |  | [optional] 
+**links** | [**InstrumentIdentifierPaymentInstrumentListLinks**](InstrumentIdentifierPaymentInstrumentListLinks.md) |  | [optional] 
 **offset** | **int** | The offset parameter supplied in the request. | [optional] 
 **limit** | **int** | The limit parameter supplied in the request. | [optional] 
 **count** | **int** | The number of Payment Instruments returned in the array. | [optional] 
 **total** | **int** | The total number of Payment Instruments associated with the Customer or Instrument Identifier. | [optional] 
-**embedded** | [**PaymentInstrumentList1Embedded**](PaymentInstrumentList1Embedded.md) |  | [optional] 
+**embedded** | [**InstrumentIdentifierPaymentInstrumentListEmbedded1**](InstrumentIdentifierPaymentInstrumentListEmbedded1.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

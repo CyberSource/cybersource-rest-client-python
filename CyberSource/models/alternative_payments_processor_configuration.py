@@ -30,7 +30,7 @@ class AlternativePaymentsProcessorConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'payment_methods': 'dict(str, PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsPaymentMethods)'
+        'payment_methods': 'dict(str, AlternativePaymentsPaymentMethodConfiguration)'
     }
 
     attribute_map = {
@@ -54,7 +54,7 @@ class AlternativePaymentsProcessorConfiguration(object):
         Payment methods supported by the processor. The following values are supported: - klarna - CREDIT_CARD - DEBIT_CARD 
 
         :return: The payment_methods of this AlternativePaymentsProcessorConfiguration.
-        :rtype: dict(str, PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsPaymentMethods)
+        :rtype: dict(str, AlternativePaymentsPaymentMethodConfiguration)
         """
         return self._payment_methods
 
@@ -65,7 +65,7 @@ class AlternativePaymentsProcessorConfiguration(object):
         Payment methods supported by the processor. The following values are supported: - klarna - CREDIT_CARD - DEBIT_CARD 
 
         :param payment_methods: The payment_methods of this AlternativePaymentsProcessorConfiguration.
-        :type: dict(str, PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsPaymentMethods)
+        :type: dict(str, AlternativePaymentsPaymentMethodConfiguration)
         """
 
         self._payment_methods = payment_methods

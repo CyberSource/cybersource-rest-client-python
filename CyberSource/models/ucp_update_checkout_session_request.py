@@ -34,9 +34,9 @@ class UcpUpdateCheckoutSessionRequest(object):
         'line_items': 'list[Iccv1checkoutsessionsLineItems]',
         'buyer': 'UcpUpdateCheckoutSessionBuyer',
         'currency': 'str',
-        'payment': 'Iccv1checkoutsessionssessionIdPayment',
-        'fulfillment': 'Iccv1checkoutsessionssessionIdFulfillment',
-        'discounts': 'Iccv1checkoutsessionssessionIdDiscounts'
+        'payment': 'Iccv1UpdateCheckoutsessionsPayment',
+        'fulfillment': 'Iccv1UpdateCheckoutSessionsFulfillment',
+        'discounts': 'Iccv1UpdateCheckoutSessionsDiscounts'
     }
 
     attribute_map = {
@@ -173,7 +173,7 @@ class UcpUpdateCheckoutSessionRequest(object):
         Gets the payment of this UcpUpdateCheckoutSessionRequest.
 
         :return: The payment of this UcpUpdateCheckoutSessionRequest.
-        :rtype: Iccv1checkoutsessionssessionIdPayment
+        :rtype: Iccv1UpdateCheckoutsessionsPayment
         """
         return self._payment
 
@@ -183,7 +183,7 @@ class UcpUpdateCheckoutSessionRequest(object):
         Sets the payment of this UcpUpdateCheckoutSessionRequest.
 
         :param payment: The payment of this UcpUpdateCheckoutSessionRequest.
-        :type: Iccv1checkoutsessionssessionIdPayment
+        :type: Iccv1UpdateCheckoutsessionsPayment
         """
 
         self._payment = payment
@@ -194,7 +194,7 @@ class UcpUpdateCheckoutSessionRequest(object):
         Gets the fulfillment of this UcpUpdateCheckoutSessionRequest.
 
         :return: The fulfillment of this UcpUpdateCheckoutSessionRequest.
-        :rtype: Iccv1checkoutsessionssessionIdFulfillment
+        :rtype: Iccv1UpdateCheckoutSessionsFulfillment
         """
         return self._fulfillment
 
@@ -204,7 +204,7 @@ class UcpUpdateCheckoutSessionRequest(object):
         Sets the fulfillment of this UcpUpdateCheckoutSessionRequest.
 
         :param fulfillment: The fulfillment of this UcpUpdateCheckoutSessionRequest.
-        :type: Iccv1checkoutsessionssessionIdFulfillment
+        :type: Iccv1UpdateCheckoutSessionsFulfillment
         """
 
         self._fulfillment = fulfillment
@@ -215,7 +215,7 @@ class UcpUpdateCheckoutSessionRequest(object):
         Gets the discounts of this UcpUpdateCheckoutSessionRequest.
 
         :return: The discounts of this UcpUpdateCheckoutSessionRequest.
-        :rtype: Iccv1checkoutsessionssessionIdDiscounts
+        :rtype: Iccv1UpdateCheckoutSessionsDiscounts
         """
         return self._discounts
 
@@ -225,7 +225,7 @@ class UcpUpdateCheckoutSessionRequest(object):
         Sets the discounts of this UcpUpdateCheckoutSessionRequest.
 
         :param discounts: The discounts of this UcpUpdateCheckoutSessionRequest.
-        :type: Iccv1checkoutsessionssessionIdDiscounts
+        :type: Iccv1UpdateCheckoutSessionsDiscounts
         """
 
         self._discounts = discounts

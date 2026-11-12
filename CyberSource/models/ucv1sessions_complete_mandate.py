@@ -161,7 +161,7 @@ class Ucv1sessionsCompleteMandate(object):
     def suppress(self):
         """
         Gets the suppress of this Ucv1sessionsCompleteMandate.
-        Controls whether the Complete Mandate experience or related processing is suppressed. 
+        Controls whether the Complete Mandate experience or related processing is suppressed.  Possible values:  - True  - False<br><br>  Optional field: This field can be configured through the Merchant Experience screens in the Business Center. The configured value may be overridden on a per‑transaction basis in the uc/v1/sessions API request. 
 
         :return: The suppress of this Ucv1sessionsCompleteMandate.
         :rtype: bool
@@ -172,7 +172,7 @@ class Ucv1sessionsCompleteMandate(object):
     def suppress(self, suppress):
         """
         Sets the suppress of this Ucv1sessionsCompleteMandate.
-        Controls whether the Complete Mandate experience or related processing is suppressed. 
+        Controls whether the Complete Mandate experience or related processing is suppressed.  Possible values:  - True  - False<br><br>  Optional field: This field can be configured through the Merchant Experience screens in the Business Center. The configured value may be overridden on a per‑transaction basis in the uc/v1/sessions API request. 
 
         :param suppress: The suppress of this Ucv1sessionsCompleteMandate.
         :type: bool

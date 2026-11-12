@@ -31,7 +31,7 @@ class PtsV2PaymentsOrderPost201ResponseProcessorInformation(object):
     """
     swagger_types = {
         'seller_protection': 'PtsV2PaymentsOrderPost201ResponseProcessorInformationSellerProtection',
-        'avs': 'PtsV2PaymentsPost201Response1ProcessorInformationAvs',
+        'avs': 'RefreshPaymentStatusResponseProcessorInformationAvs',
         'transaction_id': 'str',
         'response_details': 'str'
     }
@@ -89,7 +89,7 @@ class PtsV2PaymentsOrderPost201ResponseProcessorInformation(object):
         Gets the avs of this PtsV2PaymentsOrderPost201ResponseProcessorInformation.
 
         :return: The avs of this PtsV2PaymentsOrderPost201ResponseProcessorInformation.
-        :rtype: PtsV2PaymentsPost201Response1ProcessorInformationAvs
+        :rtype: RefreshPaymentStatusResponseProcessorInformationAvs
         """
         return self._avs
 
@@ -99,7 +99,7 @@ class PtsV2PaymentsOrderPost201ResponseProcessorInformation(object):
         Sets the avs of this PtsV2PaymentsOrderPost201ResponseProcessorInformation.
 
         :param avs: The avs of this PtsV2PaymentsOrderPost201ResponseProcessorInformation.
-        :type: PtsV2PaymentsPost201Response1ProcessorInformationAvs
+        :type: RefreshPaymentStatusResponseProcessorInformationAvs
         """
 
         self._avs = avs

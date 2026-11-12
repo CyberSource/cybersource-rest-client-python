@@ -30,22 +30,47 @@ class Riskv1decisionsProcessingInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'action_list': 'list[str]'
+        'action_list': 'list[str]',
+        'business_application_id': 'str',
+        'purpose_of_payment': 'str',
+        'pre_auth_status': 'str',
+        'pre_auth_response_code': 'str',
+        'authorization_options': 'Riskv1decisionsProcessingInformationAuthorizationOptions'
     }
 
     attribute_map = {
-        'action_list': 'actionList'
+        'action_list': 'actionList',
+        'business_application_id': 'businessApplicationId',
+        'purpose_of_payment': 'purposeOfPayment',
+        'pre_auth_status': 'preAuthStatus',
+        'pre_auth_response_code': 'preAuthResponseCode',
+        'authorization_options': 'authorizationOptions'
     }
 
-    def __init__(self, action_list=None):
+    def __init__(self, action_list=None, business_application_id=None, purpose_of_payment=None, pre_auth_status=None, pre_auth_response_code=None, authorization_options=None):
         """
         Riskv1decisionsProcessingInformation - a model defined in Swagger
         """
 
         self._action_list = None
+        self._business_application_id = None
+        self._purpose_of_payment = None
+        self._pre_auth_status = None
+        self._pre_auth_response_code = None
+        self._authorization_options = None
 
         if action_list is not None:
           self.action_list = action_list
+        if business_application_id is not None:
+          self.business_application_id = business_application_id
+        if purpose_of_payment is not None:
+          self.purpose_of_payment = purpose_of_payment
+        if pre_auth_status is not None:
+          self.pre_auth_status = pre_auth_status
+        if pre_auth_response_code is not None:
+          self.pre_auth_response_code = pre_auth_response_code
+        if authorization_options is not None:
+          self.authorization_options = authorization_options
 
     @property
     def action_list(self):
@@ -69,6 +94,119 @@ class Riskv1decisionsProcessingInformation(object):
         """
 
         self._action_list = action_list
+
+    @property
+    def business_application_id(self):
+        """
+        Gets the business_application_id of this Riskv1decisionsProcessingInformation.
+        Required for AFT and OCT transactions.  Given below is a list of all the BAI values available. However, the processors may support only few specific BAI values.  - AA : Account-to-account  - BB : Supplier Payments - BI : Bank-Initiated P2P Money Transfer - BP : Non-Card Bill Pay/Bill Pay - CD : Cash Deposit - CP : Credit card Bill Payment - FD : Funds disbursement  - FT : Funds transfer - GD : Government Disbursement - GP : Gambling payout (non-online gambling) - LO : Loyalty credits and rebates - MD : Merchant Settlement - OG : Online Gambling Payout - PD : Payroll and pension disbursement - PP : Person-to-Person or Peer-to-Peer - TU : Top up, prepaid load - WT : Digital wallet  
+
+        :return: The business_application_id of this Riskv1decisionsProcessingInformation.
+        :rtype: str
+        """
+        return self._business_application_id
+
+    @business_application_id.setter
+    def business_application_id(self, business_application_id):
+        """
+        Sets the business_application_id of this Riskv1decisionsProcessingInformation.
+        Required for AFT and OCT transactions.  Given below is a list of all the BAI values available. However, the processors may support only few specific BAI values.  - AA : Account-to-account  - BB : Supplier Payments - BI : Bank-Initiated P2P Money Transfer - BP : Non-Card Bill Pay/Bill Pay - CD : Cash Deposit - CP : Credit card Bill Payment - FD : Funds disbursement  - FT : Funds transfer - GD : Government Disbursement - GP : Gambling payout (non-online gambling) - LO : Loyalty credits and rebates - MD : Merchant Settlement - OG : Online Gambling Payout - PD : Payroll and pension disbursement - PP : Person-to-Person or Peer-to-Peer - TU : Top up, prepaid load - WT : Digital wallet  
+
+        :param business_application_id: The business_application_id of this Riskv1decisionsProcessingInformation.
+        :type: str
+        """
+
+        self._business_application_id = business_application_id
+
+    @property
+    def purpose_of_payment(self):
+        """
+        Gets the purpose_of_payment of this Riskv1decisionsProcessingInformation.
+        This field is applicable for AFT and OCT transactions. For list of supported values, please refer to Developer Guide. 
+
+        :return: The purpose_of_payment of this Riskv1decisionsProcessingInformation.
+        :rtype: str
+        """
+        return self._purpose_of_payment
+
+    @purpose_of_payment.setter
+    def purpose_of_payment(self, purpose_of_payment):
+        """
+        Sets the purpose_of_payment of this Riskv1decisionsProcessingInformation.
+        This field is applicable for AFT and OCT transactions. For list of supported values, please refer to Developer Guide. 
+
+        :param purpose_of_payment: The purpose_of_payment of this Riskv1decisionsProcessingInformation.
+        :type: str
+        """
+
+        self._purpose_of_payment = purpose_of_payment
+
+    @property
+    def pre_auth_status(self):
+        """
+        Gets the pre_auth_status of this Riskv1decisionsProcessingInformation.
+        Outcome of a pre-authorization process. Used when processing payment outside of CyberSource and sent to Decision Manager post-authorisation. Possible values: Approved, Rejected, Hold. 
+
+        :return: The pre_auth_status of this Riskv1decisionsProcessingInformation.
+        :rtype: str
+        """
+        return self._pre_auth_status
+
+    @pre_auth_status.setter
+    def pre_auth_status(self, pre_auth_status):
+        """
+        Sets the pre_auth_status of this Riskv1decisionsProcessingInformation.
+        Outcome of a pre-authorization process. Used when processing payment outside of CyberSource and sent to Decision Manager post-authorisation. Possible values: Approved, Rejected, Hold. 
+
+        :param pre_auth_status: The pre_auth_status of this Riskv1decisionsProcessingInformation.
+        :type: str
+        """
+
+        self._pre_auth_status = pre_auth_status
+
+    @property
+    def pre_auth_response_code(self):
+        """
+        Gets the pre_auth_response_code of this Riskv1decisionsProcessingInformation.
+        Alphanumeric code returned by the issuer or payment gateway during the pre-authorization stage of a transaction. 
+
+        :return: The pre_auth_response_code of this Riskv1decisionsProcessingInformation.
+        :rtype: str
+        """
+        return self._pre_auth_response_code
+
+    @pre_auth_response_code.setter
+    def pre_auth_response_code(self, pre_auth_response_code):
+        """
+        Sets the pre_auth_response_code of this Riskv1decisionsProcessingInformation.
+        Alphanumeric code returned by the issuer or payment gateway during the pre-authorization stage of a transaction. 
+
+        :param pre_auth_response_code: The pre_auth_response_code of this Riskv1decisionsProcessingInformation.
+        :type: str
+        """
+
+        self._pre_auth_response_code = pre_auth_response_code
+
+    @property
+    def authorization_options(self):
+        """
+        Gets the authorization_options of this Riskv1decisionsProcessingInformation.
+
+        :return: The authorization_options of this Riskv1decisionsProcessingInformation.
+        :rtype: Riskv1decisionsProcessingInformationAuthorizationOptions
+        """
+        return self._authorization_options
+
+    @authorization_options.setter
+    def authorization_options(self, authorization_options):
+        """
+        Sets the authorization_options of this Riskv1decisionsProcessingInformation.
+
+        :param authorization_options: The authorization_options of this Riskv1decisionsProcessingInformation.
+        :type: Riskv1decisionsProcessingInformationAuthorizationOptions
+        """
+
+        self._authorization_options = authorization_options
 
     def to_dict(self):
         """

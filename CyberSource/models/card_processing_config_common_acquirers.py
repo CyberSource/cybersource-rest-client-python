@@ -41,7 +41,7 @@ class CardProcessingConfigCommonAcquirers(object):
         'allow_multiple_bills': 'bool',
         'enable_transaction_reference_number': 'bool',
         'payment_types': 'dict(str, CardProcessingConfigCommonPaymentTypes)',
-        'currencies': 'dict(str, CardProcessingConfigCommonCurrencies)'
+        'currencies': 'dict(str, CurrencyConfiguration)'
     }
 
     attribute_map = {
@@ -362,7 +362,7 @@ class CardProcessingConfigCommonAcquirers(object):
         Three-character [ISO 4217 ALPHA-3 Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)
 
         :return: The currencies of this CardProcessingConfigCommonAcquirers.
-        :rtype: dict(str, CardProcessingConfigCommonCurrencies)
+        :rtype: dict(str, CurrencyConfiguration)
         """
         return self._currencies
 
@@ -373,7 +373,7 @@ class CardProcessingConfigCommonAcquirers(object):
         Three-character [ISO 4217 ALPHA-3 Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)
 
         :param currencies: The currencies of this CardProcessingConfigCommonAcquirers.
-        :type: dict(str, CardProcessingConfigCommonCurrencies)
+        :type: dict(str, CurrencyConfiguration)
         """
 
         self._currencies = currencies

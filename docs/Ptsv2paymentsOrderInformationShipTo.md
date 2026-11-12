@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **destination_types** | **str** | Shipping destination of item. Example: Commercial, Residential, Store  | [optional] 
 **destination_code** | **int** | Indicates destination chosen for the transaction. Possible values: - 01- Ship to cardholder billing address - 02- Ship to another verified address on file with merchant - 03- Ship to address that is different than billing address - 04- Ship to store (store address should be populated on request) - 05- Digital goods - 06- Travel and event tickets, not shipped - 07- Other  | [optional] 
 **method** | **str** | Shipping method for the product. Possible values: - lowcost: Lowest-cost service - sameday: Courier or same-day service - oneday: Next-day or overnight service - twoday: Two-day service - threeday: Three-day service - pickup: Store pick-up - other: Other shipping method - none: No shipping method because product is a service or subscription Required for American Express SafeKey (U.S.).  | [optional] 
+**carrier_name** | **str** | Name of carrier (UPS, FedEx, USPS, etc.)  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

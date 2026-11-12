@@ -32,7 +32,7 @@ class Iccv1checkoutSessionssessionIdcompletePaymentData(object):
     swagger_types = {
         'token': 'str',
         'provider': 'str',
-        'billing_address': 'Iccv1checkoutSessionssessionIdcompletePaymentDataBillingAddress'
+        'billing_address': 'Iccv1checkoutSessionsPaymentDataBillingAddress'
     }
 
     attribute_map = {
@@ -107,7 +107,7 @@ class Iccv1checkoutSessionssessionIdcompletePaymentData(object):
         Gets the billing_address of this Iccv1checkoutSessionssessionIdcompletePaymentData.
 
         :return: The billing_address of this Iccv1checkoutSessionssessionIdcompletePaymentData.
-        :rtype: Iccv1checkoutSessionssessionIdcompletePaymentDataBillingAddress
+        :rtype: Iccv1checkoutSessionsPaymentDataBillingAddress
         """
         return self._billing_address
 
@@ -117,7 +117,7 @@ class Iccv1checkoutSessionssessionIdcompletePaymentData(object):
         Sets the billing_address of this Iccv1checkoutSessionssessionIdcompletePaymentData.
 
         :param billing_address: The billing_address of this Iccv1checkoutSessionssessionIdcompletePaymentData.
-        :type: Iccv1checkoutSessionssessionIdcompletePaymentDataBillingAddress
+        :type: Iccv1checkoutSessionsPaymentDataBillingAddress
         """
 
         self._billing_address = billing_address

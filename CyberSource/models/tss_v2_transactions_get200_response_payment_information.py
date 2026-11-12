@@ -31,7 +31,7 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
     """
     swagger_types = {
         'payment_type': 'TssV2TransactionsGet200ResponsePaymentInformationPaymentType',
-        'e_wallet': 'PtsV2PaymentsPost201Response1PaymentInformationEWallet',
+        'e_wallet': 'RefreshPaymentStatusResponsePaymentInformationEWallet',
         'customer': 'TssV2TransactionsGet200ResponsePaymentInformationCustomer',
         'card': 'TssV2TransactionsGet200ResponsePaymentInformationCard',
         'brands': 'list[TssV2TransactionsGet200ResponsePaymentInformationBrands]',
@@ -144,7 +144,7 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         Gets the e_wallet of this TssV2TransactionsGet200ResponsePaymentInformation.
 
         :return: The e_wallet of this TssV2TransactionsGet200ResponsePaymentInformation.
-        :rtype: PtsV2PaymentsPost201Response1PaymentInformationEWallet
+        :rtype: RefreshPaymentStatusResponsePaymentInformationEWallet
         """
         return self._e_wallet
 
@@ -154,7 +154,7 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         Sets the e_wallet of this TssV2TransactionsGet200ResponsePaymentInformation.
 
         :param e_wallet: The e_wallet of this TssV2TransactionsGet200ResponsePaymentInformation.
-        :type: PtsV2PaymentsPost201Response1PaymentInformationEWallet
+        :type: RefreshPaymentStatusResponsePaymentInformationEWallet
         """
 
         self._e_wallet = e_wallet

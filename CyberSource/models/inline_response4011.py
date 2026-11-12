@@ -30,112 +30,187 @@ class InlineResponse4011(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'submit_time_stamp_utc': 'str',
-        'reason': 'str',
+        'links': 'InlineResponse4011Links',
+        'code': 'str',
+        'correlation_id': 'str',
+        'detail': 'str',
+        'fields': 'list[InlineResponse4011Fields]',
+        'localization_key': 'str',
         'message': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'submit_time_stamp_utc': 'submitTimeStampUtc',
-        'reason': 'reason',
+        'links': '_links',
+        'code': 'code',
+        'correlation_id': 'correlationId',
+        'detail': 'detail',
+        'fields': 'fields',
+        'localization_key': 'localizationKey',
         'message': 'message'
     }
 
-    def __init__(self, id=None, submit_time_stamp_utc=None, reason=None, message=None):
+    def __init__(self, links=None, code=None, correlation_id=None, detail=None, fields=None, localization_key=None, message=None):
         """
         InlineResponse4011 - a model defined in Swagger
         """
 
-        self._id = None
-        self._submit_time_stamp_utc = None
-        self._reason = None
+        self._links = None
+        self._code = None
+        self._correlation_id = None
+        self._detail = None
+        self._fields = None
+        self._localization_key = None
         self._message = None
 
-        if id is not None:
-          self.id = id
-        if submit_time_stamp_utc is not None:
-          self.submit_time_stamp_utc = submit_time_stamp_utc
-        if reason is not None:
-          self.reason = reason
+        if links is not None:
+          self.links = links
+        if code is not None:
+          self.code = code
+        if correlation_id is not None:
+          self.correlation_id = correlation_id
+        if detail is not None:
+          self.detail = detail
+        if fields is not None:
+          self.fields = fields
+        if localization_key is not None:
+          self.localization_key = localization_key
         if message is not None:
           self.message = message
 
     @property
-    def id(self):
+    def links(self):
         """
-        Gets the id of this InlineResponse4011.
-        A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource. 
+        Gets the links of this InlineResponse4011.
 
-        :return: The id of this InlineResponse4011.
-        :rtype: str
+        :return: The links of this InlineResponse4011.
+        :rtype: InlineResponse4011Links
         """
-        return self._id
+        return self._links
 
-    @id.setter
-    def id(self, id):
+    @links.setter
+    def links(self, links):
         """
-        Sets the id of this InlineResponse4011.
-        A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource. 
+        Sets the links of this InlineResponse4011.
 
-        :param id: The id of this InlineResponse4011.
-        :type: str
+        :param links: The links of this InlineResponse4011.
+        :type: InlineResponse4011Links
         """
 
-        self._id = id
+        self._links = links
 
     @property
-    def submit_time_stamp_utc(self):
+    def code(self):
         """
-        Gets the submit_time_stamp_utc of this InlineResponse4011.
-        Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Gets the code of this InlineResponse4011.
+        Valid Values:   * FORBIDDEN_RESPONSE   * VALIDATION_ERROR   * UNSUPPORTED_MEDIA_TYPE   * MALFORMED_PAYLOAD_ERROR   * SERVER_ERROR 
 
-        :return: The submit_time_stamp_utc of this InlineResponse4011.
+        :return: The code of this InlineResponse4011.
         :rtype: str
         """
-        return self._submit_time_stamp_utc
+        return self._code
 
-    @submit_time_stamp_utc.setter
-    def submit_time_stamp_utc(self, submit_time_stamp_utc):
+    @code.setter
+    def code(self, code):
         """
-        Sets the submit_time_stamp_utc of this InlineResponse4011.
-        Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Sets the code of this InlineResponse4011.
+        Valid Values:   * FORBIDDEN_RESPONSE   * VALIDATION_ERROR   * UNSUPPORTED_MEDIA_TYPE   * MALFORMED_PAYLOAD_ERROR   * SERVER_ERROR 
 
-        :param submit_time_stamp_utc: The submit_time_stamp_utc of this InlineResponse4011.
+        :param code: The code of this InlineResponse4011.
         :type: str
         """
 
-        self._submit_time_stamp_utc = submit_time_stamp_utc
+        self._code = code
 
     @property
-    def reason(self):
+    def correlation_id(self):
         """
-        Gets the reason of this InlineResponse4011.
-        The reason of the status.  Possible values: - UNAUTHORIZED 
+        Gets the correlation_id of this InlineResponse4011.
 
-        :return: The reason of this InlineResponse4011.
+        :return: The correlation_id of this InlineResponse4011.
         :rtype: str
         """
-        return self._reason
+        return self._correlation_id
 
-    @reason.setter
-    def reason(self, reason):
+    @correlation_id.setter
+    def correlation_id(self, correlation_id):
         """
-        Sets the reason of this InlineResponse4011.
-        The reason of the status.  Possible values: - UNAUTHORIZED 
+        Sets the correlation_id of this InlineResponse4011.
 
-        :param reason: The reason of this InlineResponse4011.
+        :param correlation_id: The correlation_id of this InlineResponse4011.
         :type: str
         """
 
-        self._reason = reason
+        self._correlation_id = correlation_id
+
+    @property
+    def detail(self):
+        """
+        Gets the detail of this InlineResponse4011.
+
+        :return: The detail of this InlineResponse4011.
+        :rtype: str
+        """
+        return self._detail
+
+    @detail.setter
+    def detail(self, detail):
+        """
+        Sets the detail of this InlineResponse4011.
+
+        :param detail: The detail of this InlineResponse4011.
+        :type: str
+        """
+
+        self._detail = detail
+
+    @property
+    def fields(self):
+        """
+        Gets the fields of this InlineResponse4011.
+
+        :return: The fields of this InlineResponse4011.
+        :rtype: list[InlineResponse4011Fields]
+        """
+        return self._fields
+
+    @fields.setter
+    def fields(self, fields):
+        """
+        Sets the fields of this InlineResponse4011.
+
+        :param fields: The fields of this InlineResponse4011.
+        :type: list[InlineResponse4011Fields]
+        """
+
+        self._fields = fields
+
+    @property
+    def localization_key(self):
+        """
+        Gets the localization_key of this InlineResponse4011.
+        Valid Values:   * cybsapi.forbidden.response   * cybsapi.validation.error   * cybsapi.media.notsupported 
+
+        :return: The localization_key of this InlineResponse4011.
+        :rtype: str
+        """
+        return self._localization_key
+
+    @localization_key.setter
+    def localization_key(self, localization_key):
+        """
+        Sets the localization_key of this InlineResponse4011.
+        Valid Values:   * cybsapi.forbidden.response   * cybsapi.validation.error   * cybsapi.media.notsupported 
+
+        :param localization_key: The localization_key of this InlineResponse4011.
+        :type: str
+        """
+
+        self._localization_key = localization_key
 
     @property
     def message(self):
         """
         Gets the message of this InlineResponse4011.
-        The detail message related to the status and reason listed above. 
 
         :return: The message of this InlineResponse4011.
         :rtype: str
@@ -146,7 +221,6 @@ class InlineResponse4011(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse4011.
-        The detail message related to the status and reason listed above. 
 
         :param message: The message of this InlineResponse4011.
         :type: str

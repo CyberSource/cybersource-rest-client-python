@@ -34,7 +34,9 @@ class Riskv1decisionsPaymentInformation(object):
         'tokenized_card': 'Riskv1decisionsPaymentInformationTokenizedCard',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
         'bank': 'Ptsv2paymentsPaymentInformationBank',
-        'method': 'str'
+        'method': 'str',
+        'payment_type': 'Ptsv2refreshpaymentstatusidPaymentInformationPaymentType',
+        'payment_account_reference': 'Riskv1decisionsPaymentInformationPaymentAccountReference'
     }
 
     attribute_map = {
@@ -42,10 +44,12 @@ class Riskv1decisionsPaymentInformation(object):
         'tokenized_card': 'tokenizedCard',
         'customer': 'customer',
         'bank': 'bank',
-        'method': 'method'
+        'method': 'method',
+        'payment_type': 'paymentType',
+        'payment_account_reference': 'paymentAccountReference'
     }
 
-    def __init__(self, card=None, tokenized_card=None, customer=None, bank=None, method=None):
+    def __init__(self, card=None, tokenized_card=None, customer=None, bank=None, method=None, payment_type=None, payment_account_reference=None):
         """
         Riskv1decisionsPaymentInformation - a model defined in Swagger
         """
@@ -55,6 +59,8 @@ class Riskv1decisionsPaymentInformation(object):
         self._customer = None
         self._bank = None
         self._method = None
+        self._payment_type = None
+        self._payment_account_reference = None
 
         if card is not None:
           self.card = card
@@ -66,6 +72,10 @@ class Riskv1decisionsPaymentInformation(object):
           self.bank = bank
         if method is not None:
           self.method = method
+        if payment_type is not None:
+          self.payment_type = payment_type
+        if payment_account_reference is not None:
+          self.payment_account_reference = payment_account_reference
 
     @property
     def card(self):
@@ -173,6 +183,48 @@ class Riskv1decisionsPaymentInformation(object):
         """
 
         self._method = method
+
+    @property
+    def payment_type(self):
+        """
+        Gets the payment_type of this Riskv1decisionsPaymentInformation.
+
+        :return: The payment_type of this Riskv1decisionsPaymentInformation.
+        :rtype: Ptsv2refreshpaymentstatusidPaymentInformationPaymentType
+        """
+        return self._payment_type
+
+    @payment_type.setter
+    def payment_type(self, payment_type):
+        """
+        Sets the payment_type of this Riskv1decisionsPaymentInformation.
+
+        :param payment_type: The payment_type of this Riskv1decisionsPaymentInformation.
+        :type: Ptsv2refreshpaymentstatusidPaymentInformationPaymentType
+        """
+
+        self._payment_type = payment_type
+
+    @property
+    def payment_account_reference(self):
+        """
+        Gets the payment_account_reference of this Riskv1decisionsPaymentInformation.
+
+        :return: The payment_account_reference of this Riskv1decisionsPaymentInformation.
+        :rtype: Riskv1decisionsPaymentInformationPaymentAccountReference
+        """
+        return self._payment_account_reference
+
+    @payment_account_reference.setter
+    def payment_account_reference(self, payment_account_reference):
+        """
+        Sets the payment_account_reference of this Riskv1decisionsPaymentInformation.
+
+        :param payment_account_reference: The payment_account_reference of this Riskv1decisionsPaymentInformation.
+        :type: Riskv1decisionsPaymentInformationPaymentAccountReference
+        """
+
+        self._payment_account_reference = payment_account_reference
 
     def to_dict(self):
         """

@@ -41,6 +41,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
         'product_code': 'str',
         'gift': 'bool',
         'distributor_product_sku': 'str',
+        'product_type': 'str',
         'passenger': 'Ptsv2paymentsOrderInformationPassenger',
         'shipping_destination_types': 'str',
         'tax_amount': 'str',
@@ -60,6 +61,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
         'product_code': 'productCode',
         'gift': 'gift',
         'distributor_product_sku': 'distributorProductSku',
+        'product_type': 'productType',
         'passenger': 'passenger',
         'shipping_destination_types': 'shippingDestinationTypes',
         'tax_amount': 'taxAmount',
@@ -67,7 +69,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
         'restricted_export_countries': 'restrictedExportCountries'
     }
 
-    def __init__(self, total_amount=None, unit_price=None, quantity=None, gift_card_currency=None, product_sku=None, product_risk=None, product_description=None, product_name=None, product_code=None, gift=None, distributor_product_sku=None, passenger=None, shipping_destination_types=None, tax_amount=None, allowed_export_countries=None, restricted_export_countries=None):
+    def __init__(self, total_amount=None, unit_price=None, quantity=None, gift_card_currency=None, product_sku=None, product_risk=None, product_description=None, product_name=None, product_code=None, gift=None, distributor_product_sku=None, product_type=None, passenger=None, shipping_destination_types=None, tax_amount=None, allowed_export_countries=None, restricted_export_countries=None):
         """
         Riskv1decisionsOrderInformationLineItems - a model defined in Swagger
         """
@@ -83,6 +85,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
         self._product_code = None
         self._gift = None
         self._distributor_product_sku = None
+        self._product_type = None
         self._passenger = None
         self._shipping_destination_types = None
         self._tax_amount = None
@@ -111,6 +114,8 @@ class Riskv1decisionsOrderInformationLineItems(object):
           self.gift = gift
         if distributor_product_sku is not None:
           self.distributor_product_sku = distributor_product_sku
+        if product_type is not None:
+          self.product_type = product_type
         if passenger is not None:
           self.passenger = passenger
         if shipping_destination_types is not None:
@@ -374,6 +379,29 @@ class Riskv1decisionsOrderInformationLineItems(object):
         """
 
         self._distributor_product_sku = distributor_product_sku
+
+    @property
+    def product_type(self):
+        """
+        Gets the product_type of this Riskv1decisionsOrderInformationLineItems.
+        Type of product (e.g., Prepaid, Postpaid, Electronic Devices, Flight, Hotel).
+
+        :return: The product_type of this Riskv1decisionsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._product_type
+
+    @product_type.setter
+    def product_type(self, product_type):
+        """
+        Sets the product_type of this Riskv1decisionsOrderInformationLineItems.
+        Type of product (e.g., Prepaid, Postpaid, Electronic Devices, Flight, Hotel).
+
+        :param product_type: The product_type of this Riskv1decisionsOrderInformationLineItems.
+        :type: str
+        """
+
+        self._product_type = product_type
 
     @property
     def passenger(self):

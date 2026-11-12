@@ -4,13 +4,61 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**create_webhook_subscription**](CreateNewWebhooksApi.md#create_webhook_subscription) | **POST** /notification-subscriptions/v2/webhooks | Create a New Webhook Subscription
 [**find_products_to_subscribe**](CreateNewWebhooksApi.md#find_products_to_subscribe) | **GET** /notification-subscriptions/v2/products/{organizationId} | Find Products You Can Subscribe To
-[**notification_subscriptions_v2_webhooks_post**](CreateNewWebhooksApi.md#notification_subscriptions_v2_webhooks_post) | **POST** /notification-subscriptions/v2/webhooks | Create a New Webhook Subscription
 [**save_sym_egress_key**](CreateNewWebhooksApi.md#save_sym_egress_key) | **POST** /kms/egress/v2/keys-sym | Create Webhook Security Keys
 
 
+# **create_webhook_subscription**
+> CreateWebhookSubscriptionResponse create_webhook_subscription(create_webhook=create_webhook)
+
+Create a New Webhook Subscription
+
+Create a new webhook subscription. Before creating a webhook, ensure that a signature key has been created.  For the example \"Create Webhook using oAuth with Client Credentials\" - for clients who have more than one oAuth Provider and have different client secrets that they would like to config for a given webhook, they may do so by overriding the keyId inside security config of webhook subscription. See the Developer Center examples section titled \"Webhook Security - Create or Store Egress Symmetric Key - Store oAuth Credentials For Symmetric Key\" to store these oAuth credentials that CYBS will need for oAuth.  For JWT authentication, attach your oAuth details to the webhook subscription. See the example \"Create Webhook using oAuth with JWT\" 
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.CreateNewWebhooksApi()
+create_webhook = CyberSource.CreateWebhook() # CreateWebhook | The webhook payload (optional)
+
+try: 
+    # Create a New Webhook Subscription
+    api_response = api_instance.create_webhook_subscription(create_webhook=create_webhook)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CreateNewWebhooksApi->create_webhook_subscription: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_webhook** | [**CreateWebhook**](CreateWebhook.md)| The webhook payload | [optional] 
+
+### Return type
+
+[**CreateWebhookSubscriptionResponse**](CreateWebhookSubscriptionResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **find_products_to_subscribe**
-> list[InlineResponse2006] find_products_to_subscribe(organization_id)
+> list[ProductCatalogProduct] find_products_to_subscribe(organization_id)
 
 Find Products You Can Subscribe To
 
@@ -44,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[InlineResponse2006]**](InlineResponse2006.md)
+[**list[ProductCatalogProduct]**](ProductCatalogProduct.md)
 
 ### Authorization
 
@@ -57,56 +105,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **notification_subscriptions_v2_webhooks_post**
-> InlineResponse2018 notification_subscriptions_v2_webhooks_post(create_webhook=create_webhook)
-
-Create a New Webhook Subscription
-
-Create a new webhook subscription. Before creating a webhook, ensure that a signature key has been created.  For the example \"Create Webhook using oAuth with Client Credentials\" - for clients who have more than one oAuth Provider and have different client secrets that they would like to config for a given webhook, they may do so by overriding the keyId inside security config of webhook subscription. See the Developer Center examples section titled \"Webhook Security - Create or Store Egress Symmetric Key - Store oAuth Credentials For Symmetric Key\" to store these oAuth credentials that CYBS will need for oAuth.  For JWT authentication, attach your oAuth details to the webhook subscription. See the example \"Create Webhook using oAuth with JWT\" 
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import CyberSource
-from CyberSource.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = CyberSource.CreateNewWebhooksApi()
-create_webhook = CyberSource.CreateWebhook() # CreateWebhook | The webhook payload (optional)
-
-try: 
-    # Create a New Webhook Subscription
-    api_response = api_instance.notification_subscriptions_v2_webhooks_post(create_webhook=create_webhook)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CreateNewWebhooksApi->notification_subscriptions_v2_webhooks_post: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **create_webhook** | [**CreateWebhook**](CreateWebhook.md)| The webhook payload | [optional] 
-
-### Return type
-
-[**InlineResponse2018**](InlineResponse2018.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/json;charset=utf-8
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **save_sym_egress_key**
-> InlineResponse2017 save_sym_egress_key(v_c_correlation_id=v_c_correlation_id, v_c_sender_organization_id=v_c_sender_organization_id, v_c_permissions=v_c_permissions, save_sym_egress_key=save_sym_egress_key)
+> SaveSymEgressKeyResponse save_sym_egress_key(v_c_correlation_id=v_c_correlation_id, v_c_sender_organization_id=v_c_sender_organization_id, v_c_permissions=v_c_permissions, save_sym_egress_key=save_sym_egress_key)
 
 Create Webhook Security Keys
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2017**](InlineResponse2017.md)
+[**SaveSymEgressKeyResponse**](SaveSymEgressKeyResponse.md)
 
 ### Authorization
 

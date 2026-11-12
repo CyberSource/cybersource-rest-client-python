@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **create_follow_on_subscription**
-> CreateSubscriptionResponse create_follow_on_subscription(request_id, create_subscription_request)
+> CreateSubscriptionResponse create_follow_on_subscription(request_id, create_follow_on_subscription_request)
 
 Create a Follow-On Subscription
 
@@ -26,11 +26,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.SubscriptionsFollowOnsApi()
 request_id = 'request_id_example' # str | Request Id of an existing successful Transaction
-create_subscription_request = CyberSource.CreateSubscriptionRequest1() # CreateSubscriptionRequest1 | 
+create_follow_on_subscription_request = CyberSource.CreateFollowOnSubscriptionRequest() # CreateFollowOnSubscriptionRequest | 
 
 try: 
     # Create a Follow-On Subscription
-    api_response = api_instance.create_follow_on_subscription(request_id, create_subscription_request)
+    api_response = api_instance.create_follow_on_subscription(request_id, create_follow_on_subscription_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsFollowOnsApi->create_follow_on_subscription: %s\n" % e)
@@ -41,7 +41,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request_id** | **str**| Request Id of an existing successful Transaction | 
- **create_subscription_request** | [**CreateSubscriptionRequest1**](CreateSubscriptionRequest1.md)|  | 
+ **create_follow_on_subscription_request** | [**CreateFollowOnSubscriptionRequest**](CreateFollowOnSubscriptionRequest.md)|  | 
 
 ### Return type
 
@@ -59,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_follow_on_subscription**
-> GetSubscriptionResponse1 get_follow_on_subscription(request_id)
+> GetFollowOnSubscriptionResponse get_follow_on_subscription(request_id)
 
 Get a Follow-On Subscription
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetSubscriptionResponse1**](GetSubscriptionResponse1.md)
+[**GetFollowOnSubscriptionResponse**](GetFollowOnSubscriptionResponse.md)
 
 ### Authorization
 

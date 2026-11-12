@@ -61,7 +61,7 @@ class TokenizeApi(object):
             for asynchronous request. (optional)
         :param PostTokenizeRequest post_tokenize_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: InlineResponse200
+        :return: PostTokenizeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -91,7 +91,7 @@ class TokenizeApi(object):
             for asynchronous request. (optional)
         :param PostTokenizeRequest post_tokenize_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: InlineResponse200
+        :return: PostTokenizeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -133,8 +133,10 @@ class TokenizeApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'post_tokenize_request' in params:
@@ -146,7 +148,7 @@ class TokenizeApi(object):
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "tokenize,tokenize_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "tokenize,tokenize_with_http_info")
 
@@ -160,7 +162,7 @@ class TokenizeApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse200',
+                                        response_type='PostTokenizeResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

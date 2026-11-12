@@ -36,8 +36,8 @@ class MerchantUpdate(object):
         'payment_payload_type': 'str',
         'acceptance_relationships': 'list[str]',
         'protocol_interactions': 'list[Iccv1merchantsProtocolInteractions]',
-        'web_integrations': 'MerchantRegistrationResponse201WebIntegrations',
-        'api_integrations': 'MerchantRegistrationResponse201ApiIntegrations'
+        'web_integrations': 'Iccv1merchantsWebIntegrations',
+        'api_integrations': 'Iccv1merchantsApiIntegrations'
     }
 
     attribute_map = {
@@ -226,7 +226,7 @@ class MerchantUpdate(object):
         Gets the web_integrations of this MerchantUpdate.
 
         :return: The web_integrations of this MerchantUpdate.
-        :rtype: MerchantRegistrationResponse201WebIntegrations
+        :rtype: Iccv1merchantsWebIntegrations
         """
         return self._web_integrations
 
@@ -236,7 +236,7 @@ class MerchantUpdate(object):
         Sets the web_integrations of this MerchantUpdate.
 
         :param web_integrations: The web_integrations of this MerchantUpdate.
-        :type: MerchantRegistrationResponse201WebIntegrations
+        :type: Iccv1merchantsWebIntegrations
         """
 
         self._web_integrations = web_integrations
@@ -247,7 +247,7 @@ class MerchantUpdate(object):
         Gets the api_integrations of this MerchantUpdate.
 
         :return: The api_integrations of this MerchantUpdate.
-        :rtype: MerchantRegistrationResponse201ApiIntegrations
+        :rtype: Iccv1merchantsApiIntegrations
         """
         return self._api_integrations
 
@@ -257,7 +257,7 @@ class MerchantUpdate(object):
         Sets the api_integrations of this MerchantUpdate.
 
         :param api_integrations: The api_integrations of this MerchantUpdate.
-        :type: MerchantRegistrationResponse201ApiIntegrations
+        :type: Iccv1merchantsApiIntegrations
         """
 
         self._api_integrations = api_integrations

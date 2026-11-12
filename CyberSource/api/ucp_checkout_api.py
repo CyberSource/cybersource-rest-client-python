@@ -60,7 +60,7 @@ class UCPCheckoutApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str session_id: The unique identifier of the UCP checkout session to cancel. (required)
-        :return: InlineResponse20113
+        :return: UcpCheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -89,7 +89,7 @@ class UCPCheckoutApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str session_id: The unique identifier of the UCP checkout session to cancel. (required)
-        :return: InlineResponse20113
+        :return: UcpCheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -132,8 +132,10 @@ class UCPCheckoutApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'POST' in ('POST'):
@@ -142,11 +144,12 @@ class UCPCheckoutApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "ucp_cancel_checkout,ucp_cancel_checkout_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "ucp_cancel_checkout,ucp_cancel_checkout_with_http_info")
 
@@ -160,7 +163,7 @@ class UCPCheckoutApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20113',
+                                        response_type='UcpCheckoutSessionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -186,7 +189,7 @@ class UCPCheckoutApi(object):
         :param str session_id: The unique identifier of the UCP checkout session to complete. (required)
         :param str idempotency_key: **Strongly recommended.** A unique key that ensures this order is placed exactly once on retries. Lowercase per UCP spec. 
         :param UcpCompleteCheckoutRequest ucp_complete_checkout_request: UCP completion payload containing payment instrument and optional risk signals. If payment context was already provided in the Create or Update call, the body can be omitted. Risk signals are logged for fraud analysis and are not forwarded to the merchant. 
-        :return: InlineResponse20113
+        :return: UcpCheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -217,7 +220,7 @@ class UCPCheckoutApi(object):
         :param str session_id: The unique identifier of the UCP checkout session to complete. (required)
         :param str idempotency_key: **Strongly recommended.** A unique key that ensures this order is placed exactly once on retries. Lowercase per UCP spec. 
         :param UcpCompleteCheckoutRequest ucp_complete_checkout_request: UCP completion payload containing payment instrument and optional risk signals. If payment context was already provided in the Create or Update call, the body can be omitted. Risk signals are logged for fraud analysis and are not forwarded to the merchant. 
-        :return: InlineResponse20113
+        :return: UcpCheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -262,8 +265,10 @@ class UCPCheckoutApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'ucp_complete_checkout_request' in params:
@@ -275,7 +280,7 @@ class UCPCheckoutApi(object):
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "ucp_complete_checkout,ucp_complete_checkout_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "ucp_complete_checkout,ucp_complete_checkout_with_http_info")
 
@@ -289,7 +294,7 @@ class UCPCheckoutApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20113',
+                                        response_type='UcpCheckoutSessionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -314,7 +319,7 @@ class UCPCheckoutApi(object):
             for asynchronous request. (optional)
         :param UcpCreateCheckoutSessionRequest ucp_create_checkout_session_request: UCP checkout session creation payload containing line items, buyer details, currency, and optional payment, fulfillment, and discount information.  (required)
         :param str idempotency_key: Client-generated unique key (UUID recommended) to ensure this request is processed exactly once. Lowercase per UCP specification. 
-        :return: InlineResponse20113
+        :return: UcpCheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -344,7 +349,7 @@ class UCPCheckoutApi(object):
             for asynchronous request. (optional)
         :param UcpCreateCheckoutSessionRequest ucp_create_checkout_session_request: UCP checkout session creation payload containing line items, buyer details, currency, and optional payment, fulfillment, and discount information.  (required)
         :param str idempotency_key: Client-generated unique key (UUID recommended) to ensure this request is processed exactly once. Lowercase per UCP specification. 
-        :return: InlineResponse20113
+        :return: UcpCheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -386,8 +391,10 @@ class UCPCheckoutApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'ucp_create_checkout_session_request' in params:
@@ -399,7 +406,7 @@ class UCPCheckoutApi(object):
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "ucp_create_checkout_session,ucp_create_checkout_session_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "ucp_create_checkout_session,ucp_create_checkout_session_with_http_info")
 
@@ -413,7 +420,7 @@ class UCPCheckoutApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20113',
+                                        response_type='UcpCheckoutSessionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -438,7 +445,7 @@ class UCPCheckoutApi(object):
             for asynchronous request. (optional)
         :param str session_id: The unique identifier of the UCP checkout session to retrieve. Obtained from the `id` field in the Create Session response.  (required)
         :param object ucp_get_checkout_session_request: Empty request body. (required)
-        :return: InlineResponse20113
+        :return: UcpCheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -468,7 +475,7 @@ class UCPCheckoutApi(object):
             for asynchronous request. (optional)
         :param str session_id: The unique identifier of the UCP checkout session to retrieve. Obtained from the `id` field in the Create Session response.  (required)
         :param object ucp_get_checkout_session_request: Empty request body. (required)
-        :return: InlineResponse20113
+        :return: UcpCheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -515,8 +522,10 @@ class UCPCheckoutApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'ucp_get_checkout_session_request' in params:
@@ -528,7 +537,7 @@ class UCPCheckoutApi(object):
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "ucp_get_checkout_session,ucp_get_checkout_session_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "ucp_get_checkout_session,ucp_get_checkout_session_with_http_info")
 
@@ -542,7 +551,7 @@ class UCPCheckoutApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20113',
+                                        response_type='UcpCheckoutSessionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -568,7 +577,7 @@ class UCPCheckoutApi(object):
         :param str session_id: The unique identifier of the UCP checkout session to update. (required)
         :param UcpUpdateCheckoutSessionRequest ucp_update_checkout_session_request: UCP session update payload. All fields are optional — only fields you include will be applied.  (required)
         :param str idempotency_key: Client-generated unique key for idempotency. Lowercase per UCP spec.
-        :return: InlineResponse20113
+        :return: UcpCheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -599,7 +608,7 @@ class UCPCheckoutApi(object):
         :param str session_id: The unique identifier of the UCP checkout session to update. (required)
         :param UcpUpdateCheckoutSessionRequest ucp_update_checkout_session_request: UCP session update payload. All fields are optional — only fields you include will be applied.  (required)
         :param str idempotency_key: Client-generated unique key for idempotency. Lowercase per UCP spec.
-        :return: InlineResponse20113
+        :return: UcpCheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -648,8 +657,10 @@ class UCPCheckoutApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'ucp_update_checkout_session_request' in params:
@@ -661,7 +672,7 @@ class UCPCheckoutApi(object):
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "ucp_update_checkout_session,ucp_update_checkout_session_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "ucp_update_checkout_session,ucp_update_checkout_session_with_http_info")
 
@@ -675,7 +686,7 @@ class UCPCheckoutApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20113',
+                                        response_type='UcpCheckoutSessionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

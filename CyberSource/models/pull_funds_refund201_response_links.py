@@ -30,7 +30,7 @@ class PullFundsRefund201ResponseLinks(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        '_self': 'PullFundsRefund201ResponseLinksSelf'
+        '_self': 'PtsV2PaymentsPost201ResponseLinksSelf12'
     }
 
     attribute_map = {
@@ -53,7 +53,7 @@ class PullFundsRefund201ResponseLinks(object):
         Gets the _self of this PullFundsRefund201ResponseLinks.
 
         :return: The _self of this PullFundsRefund201ResponseLinks.
-        :rtype: PullFundsRefund201ResponseLinksSelf
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf12
         """
         return self.__self
 
@@ -63,7 +63,7 @@ class PullFundsRefund201ResponseLinks(object):
         Sets the _self of this PullFundsRefund201ResponseLinks.
 
         :param _self: The _self of this PullFundsRefund201ResponseLinks.
-        :type: PullFundsRefund201ResponseLinksSelf
+        :type: PtsV2PaymentsPost201ResponseLinksSelf12
         """
 
         self.__self = _self

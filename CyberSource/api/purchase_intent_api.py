@@ -138,8 +138,10 @@ class PurchaseIntentApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'agentic_cancel_purchase_intent_request' in params:
@@ -151,7 +153,7 @@ class PurchaseIntentApi(object):
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "cancel_purchase_intent,cancel_purchase_intent_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "cancel_purchase_intent,cancel_purchase_intent_with_http_info")
 
@@ -258,8 +260,10 @@ class PurchaseIntentApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'agentic_create_purchase_intent_request' in params:
@@ -271,7 +275,7 @@ class PurchaseIntentApi(object):
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "initiate_purchase_intent,initiate_purchase_intent_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "initiate_purchase_intent,initiate_purchase_intent_with_http_info")
 
@@ -387,8 +391,10 @@ class PurchaseIntentApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'agentic_update_purchase_intent_request' in params:
@@ -400,7 +406,7 @@ class PurchaseIntentApi(object):
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "update_purchase_intent,update_purchase_intent_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "update_purchase_intent,update_purchase_intent_with_http_info")
 

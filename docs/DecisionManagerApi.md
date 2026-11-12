@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **action_decision_manager_case**
-> InlineResponse2003 action_decision_manager_case(id, case_management_actions_request)
+> CaseManagementActionsResponse action_decision_manager_case(id, case_management_actions_request)
 
 Take action on a DM post-transactional case
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**CaseManagementActionsResponse**](CaseManagementActionsResponse.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **comment_decision_manager_case**
-> InlineResponse2012 comment_decision_manager_case(id, case_management_comments_request)
+> CommentDecisionManagerCaseResponse comment_decision_manager_case(id, case_management_comments_request)
 
 Add a comment to a DM post-transactional case
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2012**](InlineResponse2012.md)
+[**CommentDecisionManagerCaseResponse**](CommentDecisionManagerCaseResponse.md)
 
 ### Authorization
 

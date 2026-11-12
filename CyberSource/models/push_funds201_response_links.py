@@ -30,10 +30,10 @@ class PushFunds201ResponseLinks(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        '_self': 'PushFunds201ResponseLinksSelf',
-        'customer': 'PushFunds201ResponseLinksCustomer',
-        'payment_instrument': 'PushFunds201ResponseLinksPaymentInstrument',
-        'instrument_identifier': 'PushFunds201ResponseLinksInstrumentIdentifier'
+        '_self': 'PtsV2PaymentsPost201ResponseLinksSelf1',
+        'customer': 'PtsV2PaymentsPost201ResponseLinksSelf2',
+        'payment_instrument': 'PtsV2PaymentsPost201ResponseLinksSelf3',
+        'instrument_identifier': 'PtsV2PaymentsPost201ResponseLinksSelf4'
     }
 
     attribute_map = {
@@ -68,7 +68,7 @@ class PushFunds201ResponseLinks(object):
         Gets the _self of this PushFunds201ResponseLinks.
 
         :return: The _self of this PushFunds201ResponseLinks.
-        :rtype: PushFunds201ResponseLinksSelf
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf1
         """
         return self.__self
 
@@ -78,7 +78,7 @@ class PushFunds201ResponseLinks(object):
         Sets the _self of this PushFunds201ResponseLinks.
 
         :param _self: The _self of this PushFunds201ResponseLinks.
-        :type: PushFunds201ResponseLinksSelf
+        :type: PtsV2PaymentsPost201ResponseLinksSelf1
         """
 
         self.__self = _self
@@ -89,7 +89,7 @@ class PushFunds201ResponseLinks(object):
         Gets the customer of this PushFunds201ResponseLinks.
 
         :return: The customer of this PushFunds201ResponseLinks.
-        :rtype: PushFunds201ResponseLinksCustomer
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf2
         """
         return self._customer
 
@@ -99,7 +99,7 @@ class PushFunds201ResponseLinks(object):
         Sets the customer of this PushFunds201ResponseLinks.
 
         :param customer: The customer of this PushFunds201ResponseLinks.
-        :type: PushFunds201ResponseLinksCustomer
+        :type: PtsV2PaymentsPost201ResponseLinksSelf2
         """
 
         self._customer = customer
@@ -110,7 +110,7 @@ class PushFunds201ResponseLinks(object):
         Gets the payment_instrument of this PushFunds201ResponseLinks.
 
         :return: The payment_instrument of this PushFunds201ResponseLinks.
-        :rtype: PushFunds201ResponseLinksPaymentInstrument
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf3
         """
         return self._payment_instrument
 
@@ -120,7 +120,7 @@ class PushFunds201ResponseLinks(object):
         Sets the payment_instrument of this PushFunds201ResponseLinks.
 
         :param payment_instrument: The payment_instrument of this PushFunds201ResponseLinks.
-        :type: PushFunds201ResponseLinksPaymentInstrument
+        :type: PtsV2PaymentsPost201ResponseLinksSelf3
         """
 
         self._payment_instrument = payment_instrument
@@ -131,7 +131,7 @@ class PushFunds201ResponseLinks(object):
         Gets the instrument_identifier of this PushFunds201ResponseLinks.
 
         :return: The instrument_identifier of this PushFunds201ResponseLinks.
-        :rtype: PushFunds201ResponseLinksInstrumentIdentifier
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf4
         """
         return self._instrument_identifier
 
@@ -141,7 +141,7 @@ class PushFunds201ResponseLinks(object):
         Sets the instrument_identifier of this PushFunds201ResponseLinks.
 
         :param instrument_identifier: The instrument_identifier of this PushFunds201ResponseLinks.
-        :type: PushFunds201ResponseLinksInstrumentIdentifier
+        :type: PtsV2PaymentsPost201ResponseLinksSelf4
         """
 
         self._instrument_identifier = instrument_identifier

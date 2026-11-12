@@ -30,43 +30,155 @@ class InlineResponse502(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'errors': 'list[InlineResponse500Errors]'
+        'submit_time_utc': 'str',
+        'status': 'str',
+        'reason': 'str',
+        'message': 'str',
+        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
     }
 
     attribute_map = {
-        'errors': 'errors'
+        'submit_time_utc': 'submitTimeUtc',
+        'status': 'status',
+        'reason': 'reason',
+        'message': 'message',
+        'details': 'details'
     }
 
-    def __init__(self, errors=None):
+    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, details=None):
         """
         InlineResponse502 - a model defined in Swagger
         """
 
-        self._errors = None
+        self._submit_time_utc = None
+        self._status = None
+        self._reason = None
+        self._message = None
+        self._details = None
 
-        if errors is not None:
-          self.errors = errors
+        if submit_time_utc is not None:
+          self.submit_time_utc = submit_time_utc
+        if status is not None:
+          self.status = status
+        if reason is not None:
+          self.reason = reason
+        if message is not None:
+          self.message = message
+        if details is not None:
+          self.details = details
 
     @property
-    def errors(self):
+    def submit_time_utc(self):
         """
-        Gets the errors of this InlineResponse502.
+        Gets the submit_time_utc of this InlineResponse502.
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
 
-        :return: The errors of this InlineResponse502.
-        :rtype: list[InlineResponse500Errors]
+        :return: The submit_time_utc of this InlineResponse502.
+        :rtype: str
         """
-        return self._errors
+        return self._submit_time_utc
 
-    @errors.setter
-    def errors(self, errors):
+    @submit_time_utc.setter
+    def submit_time_utc(self, submit_time_utc):
         """
-        Sets the errors of this InlineResponse502.
+        Sets the submit_time_utc of this InlineResponse502.
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
 
-        :param errors: The errors of this InlineResponse502.
-        :type: list[InlineResponse500Errors]
+        :param submit_time_utc: The submit_time_utc of this InlineResponse502.
+        :type: str
         """
 
-        self._errors = errors
+        self._submit_time_utc = submit_time_utc
+
+    @property
+    def status(self):
+        """
+        Gets the status of this InlineResponse502.
+        The status of the submitted transaction. Possible values: - `SERVER_ERROR` 
+
+        :return: The status of this InlineResponse502.
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this InlineResponse502.
+        The status of the submitted transaction. Possible values: - `SERVER_ERROR` 
+
+        :param status: The status of this InlineResponse502.
+        :type: str
+        """
+
+        self._status = status
+
+    @property
+    def reason(self):
+        """
+        Gets the reason of this InlineResponse502.
+        The reason of the status. Possible Values: - `INTERNAL_SERVICE_ERROR` 
+
+        :return: The reason of this InlineResponse502.
+        :rtype: str
+        """
+        return self._reason
+
+    @reason.setter
+    def reason(self, reason):
+        """
+        Sets the reason of this InlineResponse502.
+        The reason of the status. Possible Values: - `INTERNAL_SERVICE_ERROR` 
+
+        :param reason: The reason of this InlineResponse502.
+        :type: str
+        """
+
+        self._reason = reason
+
+    @property
+    def message(self):
+        """
+        Gets the message of this InlineResponse502.
+        Application failed.
+
+        :return: The message of this InlineResponse502.
+        :rtype: str
+        """
+        return self._message
+
+    @message.setter
+    def message(self, message):
+        """
+        Sets the message of this InlineResponse502.
+        Application failed.
+
+        :param message: The message of this InlineResponse502.
+        :type: str
+        """
+
+        self._message = message
+
+    @property
+    def details(self):
+        """
+        Gets the details of this InlineResponse502.
+
+        :return: The details of this InlineResponse502.
+        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        """
+        return self._details
+
+    @details.setter
+    def details(self, details):
+        """
+        Sets the details of this InlineResponse502.
+
+        :param details: The details of this InlineResponse502.
+        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        """
+
+        self._details = details
 
     def to_dict(self):
         """

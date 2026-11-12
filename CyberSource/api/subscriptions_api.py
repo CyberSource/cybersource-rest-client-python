@@ -136,8 +136,10 @@ class SubscriptionsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/hal+json', 'application/json;charset=utf-8', 'application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'POST' in ('POST'):
@@ -146,11 +148,12 @@ class SubscriptionsApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "activate_subscription,activate_subscription_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "activate_subscription,activate_subscription_with_http_info")
 
@@ -260,8 +263,10 @@ class SubscriptionsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/hal+json', 'application/json;charset=utf-8', 'application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'POST' in ('POST'):
@@ -270,11 +275,12 @@ class SubscriptionsApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "cancel_subscription,cancel_subscription_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "cancel_subscription,cancel_subscription_with_http_info")
 
@@ -381,8 +387,10 @@ class SubscriptionsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/hal+json', 'application/json;charset=utf-8', 'application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'create_subscription_request' in params:
@@ -394,7 +402,7 @@ class SubscriptionsApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_subscription,create_subscription_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_subscription,create_subscription_with_http_info")
 
@@ -519,8 +527,10 @@ class SubscriptionsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/hal+json', 'application/json;charset=utf-8', 'application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -529,11 +539,12 @@ class SubscriptionsApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_all_subscriptions,get_all_subscriptions_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_all_subscriptions,get_all_subscriptions_with_http_info")
 
@@ -643,8 +654,10 @@ class SubscriptionsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/hal+json', 'application/json;charset=utf-8', 'application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -653,11 +666,12 @@ class SubscriptionsApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_subscription,get_subscription_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_subscription,get_subscription_with_http_info")
 
@@ -757,8 +771,10 @@ class SubscriptionsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/hal+json', 'application/json;charset=utf-8', 'application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -767,11 +783,12 @@ class SubscriptionsApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_subscription_code,get_subscription_code_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_subscription_code,get_subscription_code_with_http_info")
 
@@ -893,8 +910,10 @@ class SubscriptionsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -903,11 +922,12 @@ class SubscriptionsApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "subscriptions_id_payments_get,subscriptions_id_payments_get_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "subscriptions_id_payments_get,subscriptions_id_payments_get_with_http_info")
 
@@ -946,7 +966,7 @@ class SubscriptionsApi(object):
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
         :param UpdatePayments update_payments: Modify payments of a subscription (required)
-        :return: GetSubscriptionsPaymentsResponse1
+        :return: UpdateSubscriptionsPaymentsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -976,7 +996,7 @@ class SubscriptionsApi(object):
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
         :param UpdatePayments update_payments: Modify payments of a subscription (required)
-        :return: GetSubscriptionsPaymentsResponse1
+        :return: UpdateSubscriptionsPaymentsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1023,8 +1043,10 @@ class SubscriptionsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'update_payments' in params:
@@ -1036,7 +1058,7 @@ class SubscriptionsApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "subscriptions_id_payments_put,subscriptions_id_payments_put_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "subscriptions_id_payments_put,subscriptions_id_payments_put_with_http_info")
 
@@ -1050,7 +1072,7 @@ class SubscriptionsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='GetSubscriptionsPaymentsResponse1',
+                                        response_type='UpdateSubscriptionsPaymentsResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1146,8 +1168,10 @@ class SubscriptionsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/hal+json', 'application/json;charset=utf-8', 'application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'POST' in ('POST'):
@@ -1156,11 +1180,12 @@ class SubscriptionsApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "suspend_subscription,suspend_subscription_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "suspend_subscription,suspend_subscription_with_http_info")
 
@@ -1276,8 +1301,10 @@ class SubscriptionsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/hal+json', 'application/json;charset=utf-8', 'application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'update_subscription' in params:
@@ -1289,7 +1316,7 @@ class SubscriptionsApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "update_subscription,update_subscription_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "update_subscription,update_subscription_with_http_info")
 

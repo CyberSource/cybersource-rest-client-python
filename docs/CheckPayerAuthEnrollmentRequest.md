@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **token_information** | [**Riskv1authenticationsetupsTokenInformation**](Riskv1authenticationsetupsTokenInformation.md) |  | [optional] 
 **buyer_information** | [**Riskv1authenticationsBuyerInformation**](Riskv1authenticationsBuyerInformation.md) |  | [optional] 
 **device_information** | [**Riskv1authenticationsDeviceInformation**](Riskv1authenticationsDeviceInformation.md) |  | [optional] 
-**merchant_information** | [**Riskv1decisionsMerchantInformation**](Riskv1decisionsMerchantInformation.md) |  | [optional] 
+**merchant_information** | [**Riskv1authenticationsMerchantInformation**](Riskv1authenticationsMerchantInformation.md) |  | [optional] 
 **acquirer_information** | [**Riskv1decisionsAcquirerInformation**](Riskv1decisionsAcquirerInformation.md) |  | [optional] 
 **recurring_payment_information** | [**Ptsv2paymentsRecurringPaymentInformation**](Ptsv2paymentsRecurringPaymentInformation.md) |  | [optional] 
 **consumer_authentication_information** | [**Riskv1decisionsConsumerAuthenticationInformation**](Riskv1decisionsConsumerAuthenticationInformation.md) |  | [optional] 

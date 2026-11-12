@@ -36,7 +36,7 @@ class AgentRequest(object):
         'contact_email': 'str',
         'token_requestor_id': 'str',
         'agent_metadata': 'object',
-        'keys': 'list[Iccv1agentsKeys]'
+        'keys': 'list[AddAgentKeyRequest]'
     }
 
     attribute_map = {
@@ -217,7 +217,7 @@ class AgentRequest(object):
         Optional array of public keys to register alongside the agent. Keys are created in ***deactivated*** state and must be activated separately via POST /agents/{agentId}/keys/{keyId}/activate. 
 
         :return: The keys of this AgentRequest.
-        :rtype: list[Iccv1agentsKeys]
+        :rtype: list[AddAgentKeyRequest]
         """
         return self._keys
 
@@ -228,7 +228,7 @@ class AgentRequest(object):
         Optional array of public keys to register alongside the agent. Keys are created in ***deactivated*** state and must be activated separately via POST /agents/{agentId}/keys/{keyId}/activate. 
 
         :param keys: The keys of this AgentRequest.
-        :type: list[Iccv1agentsKeys]
+        :type: list[AddAgentKeyRequest]
         """
 
         self._keys = keys

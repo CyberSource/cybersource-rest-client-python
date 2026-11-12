@@ -107,7 +107,7 @@ class Ptsv2paymentreferencesProcessingInformation(object):
     def action_list(self):
         """
         Gets the action_list of this Ptsv2paymentreferencesProcessingInformation.
-        Possible values are one or more of follows:   - `AP_SESSIONS`: Use this when Alternative Payment Sessions service is requested. 
+        Possible values are one or more of follows:  - `AP_SESSIONS`: Use this when Alternative Payment Sessions service is requested. 
 
         :return: The action_list of this Ptsv2paymentreferencesProcessingInformation.
         :rtype: list[str]
@@ -118,7 +118,7 @@ class Ptsv2paymentreferencesProcessingInformation(object):
     def action_list(self, action_list):
         """
         Sets the action_list of this Ptsv2paymentreferencesProcessingInformation.
-        Possible values are one or more of follows:   - `AP_SESSIONS`: Use this when Alternative Payment Sessions service is requested. 
+        Possible values are one or more of follows:  - `AP_SESSIONS`: Use this when Alternative Payment Sessions service is requested. 
 
         :param action_list: The action_list of this Ptsv2paymentreferencesProcessingInformation.
         :type: list[str]

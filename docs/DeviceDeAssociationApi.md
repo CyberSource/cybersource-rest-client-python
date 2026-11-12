@@ -56,7 +56,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_de_associate_v3_terminal**
-> list[InlineResponse20010] post_de_associate_v3_terminal(device_de_associate_v3_request)
+> list[DeviceDeAssociateV3Response] post_de_associate_v3_terminal(device_de_associate_v3_request)
 
 De-associate a device from merchant to account or reseller and from account to reseller
 
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[InlineResponse20010]**](InlineResponse20010.md)
+[**list[DeviceDeAssociateV3Response]**](DeviceDeAssociateV3Response.md)
 
 ### Authorization
 

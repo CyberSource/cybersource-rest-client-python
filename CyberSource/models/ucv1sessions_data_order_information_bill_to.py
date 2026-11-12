@@ -553,7 +553,7 @@ class Ucv1sessionsDataOrderInformationBillTo(object):
     def phone_type(self):
         """
         Gets the phone_type of this Ucv1sessionsDataOrderInformationBillTo.
-        Customer's phone number type.  #### For Payouts: This field may be sent only for FDC Compass.  Possible Values: * day * home * night * work 
+        Customer's phone number type.  Possible Values: * day * home * night * work 
 
         :return: The phone_type of this Ucv1sessionsDataOrderInformationBillTo.
         :rtype: str
@@ -564,7 +564,7 @@ class Ucv1sessionsDataOrderInformationBillTo(object):
     def phone_type(self, phone_type):
         """
         Sets the phone_type of this Ucv1sessionsDataOrderInformationBillTo.
-        Customer's phone number type.  #### For Payouts: This field may be sent only for FDC Compass.  Possible Values: * day * home * night * work 
+        Customer's phone number type.  Possible Values: * day * home * night * work 
 
         :param phone_type: The phone_type of this Ucv1sessionsDataOrderInformationBillTo.
         :type: str

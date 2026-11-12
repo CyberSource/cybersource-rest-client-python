@@ -34,9 +34,10 @@ class Riskv1decisionsTravelInformation(object):
         'complete_route': 'str',
         'departure_time': 'str',
         'journey_type': 'str',
-        'legs': 'list[Riskv1decisionsTravelInformationLegs]',
+        'legs': 'list[Riskv1decisionsBundledTravelInformationLegs]',
         'number_of_passengers': 'int',
-        'passengers': 'list[Riskv1decisionsTravelInformationPassengers]'
+        'passengers': 'list[Riskv1decisionsTravelInformationPassengers]',
+        'lodging': 'Riskv1decisionsTravelInformationLodging'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class Riskv1decisionsTravelInformation(object):
         'journey_type': 'journeyType',
         'legs': 'legs',
         'number_of_passengers': 'numberOfPassengers',
-        'passengers': 'passengers'
+        'passengers': 'passengers',
+        'lodging': 'lodging'
     }
 
-    def __init__(self, actual_final_destination=None, complete_route=None, departure_time=None, journey_type=None, legs=None, number_of_passengers=None, passengers=None):
+    def __init__(self, actual_final_destination=None, complete_route=None, departure_time=None, journey_type=None, legs=None, number_of_passengers=None, passengers=None, lodging=None):
         """
         Riskv1decisionsTravelInformation - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class Riskv1decisionsTravelInformation(object):
         self._legs = None
         self._number_of_passengers = None
         self._passengers = None
+        self._lodging = None
 
         if actual_final_destination is not None:
           self.actual_final_destination = actual_final_destination
@@ -76,6 +79,8 @@ class Riskv1decisionsTravelInformation(object):
           self.number_of_passengers = number_of_passengers
         if passengers is not None:
           self.passengers = passengers
+        if lodging is not None:
+          self.lodging = lodging
 
     @property
     def actual_final_destination(self):
@@ -175,7 +180,7 @@ class Riskv1decisionsTravelInformation(object):
         Gets the legs of this Riskv1decisionsTravelInformation.
 
         :return: The legs of this Riskv1decisionsTravelInformation.
-        :rtype: list[Riskv1decisionsTravelInformationLegs]
+        :rtype: list[Riskv1decisionsBundledTravelInformationLegs]
         """
         return self._legs
 
@@ -185,7 +190,7 @@ class Riskv1decisionsTravelInformation(object):
         Sets the legs of this Riskv1decisionsTravelInformation.
 
         :param legs: The legs of this Riskv1decisionsTravelInformation.
-        :type: list[Riskv1decisionsTravelInformationLegs]
+        :type: list[Riskv1decisionsBundledTravelInformationLegs]
         """
 
         self._legs = legs
@@ -233,6 +238,27 @@ class Riskv1decisionsTravelInformation(object):
         """
 
         self._passengers = passengers
+
+    @property
+    def lodging(self):
+        """
+        Gets the lodging of this Riskv1decisionsTravelInformation.
+
+        :return: The lodging of this Riskv1decisionsTravelInformation.
+        :rtype: Riskv1decisionsTravelInformationLodging
+        """
+        return self._lodging
+
+    @lodging.setter
+    def lodging(self, lodging):
+        """
+        Sets the lodging of this Riskv1decisionsTravelInformation.
+
+        :param lodging: The lodging of this Riskv1decisionsTravelInformation.
+        :type: Riskv1decisionsTravelInformationLodging
+        """
+
+        self._lodging = lodging
 
     def to_dict(self):
         """

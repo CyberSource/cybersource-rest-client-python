@@ -39,7 +39,7 @@ class CardProcessingConfigCommonProcessors(object):
         'merchant_id': 'str',
         'terminal_id': 'str',
         'payment_types': 'dict(str, CardProcessingConfigCommonPaymentTypes)',
-        'currencies': 'dict(str, CardProcessingConfigCommonCurrencies1)',
+        'currencies': 'dict(str, CurrencyUpdatedConfiguration)',
         'visa_aggregator_id': 'str',
         'amex_aggregator_id': 'str',
         'master_card_aggregator_id': 'str',
@@ -513,7 +513,7 @@ class CardProcessingConfigCommonProcessors(object):
         Three-character [ISO 4217 ALPHA-3 Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)
 
         :return: The currencies of this CardProcessingConfigCommonProcessors.
-        :rtype: dict(str, CardProcessingConfigCommonCurrencies1)
+        :rtype: dict(str, CurrencyUpdatedConfiguration)
         """
         return self._currencies
 
@@ -524,7 +524,7 @@ class CardProcessingConfigCommonProcessors(object):
         Three-character [ISO 4217 ALPHA-3 Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)
 
         :param currencies: The currencies of this CardProcessingConfigCommonProcessors.
-        :type: dict(str, CardProcessingConfigCommonCurrencies1)
+        :type: dict(str, CurrencyUpdatedConfiguration)
         """
 
         self._currencies = currencies

@@ -32,7 +32,7 @@ class PaymentsProductsDigitalPaymentsSubscriptionInformation(object):
     swagger_types = {
         'enabled': 'bool',
         'self_serviceability': 'str',
-        'features': 'dict(str, PaymentsProductsDigitalPaymentsSubscriptionInformationFeatures)'
+        'features': 'dict(str, DigitalPaymentsFeatureSubscriptionItem)'
     }
 
     attribute_map = {
@@ -108,7 +108,7 @@ class PaymentsProductsDigitalPaymentsSubscriptionInformation(object):
         Allowed values are; <table>    <tr>       <td>visaCheckout</td>    </tr>    <tr>       <td>applePay</td>    </tr>    <tr>       <td>samsungPay</td>    </tr>    <tr>        <td>googlePay</td>     </tr> </table> 
 
         :return: The features of this PaymentsProductsDigitalPaymentsSubscriptionInformation.
-        :rtype: dict(str, PaymentsProductsDigitalPaymentsSubscriptionInformationFeatures)
+        :rtype: dict(str, DigitalPaymentsFeatureSubscriptionItem)
         """
         return self._features
 
@@ -119,7 +119,7 @@ class PaymentsProductsDigitalPaymentsSubscriptionInformation(object):
         Allowed values are; <table>    <tr>       <td>visaCheckout</td>    </tr>    <tr>       <td>applePay</td>    </tr>    <tr>       <td>samsungPay</td>    </tr>    <tr>        <td>googlePay</td>     </tr> </table> 
 
         :param features: The features of this PaymentsProductsDigitalPaymentsSubscriptionInformation.
-        :type: dict(str, PaymentsProductsDigitalPaymentsSubscriptionInformationFeatures)
+        :type: dict(str, DigitalPaymentsFeatureSubscriptionItem)
         """
 
         self._features = features

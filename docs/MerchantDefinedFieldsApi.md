@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **create_merchant_defined_field_definition**
-> list[InlineResponse2004] create_merchant_defined_field_definition(reference_type, merchant_defined_field_definition_request)
+> list[MerchantDefinedFieldWithIdResponse] create_merchant_defined_field_definition(reference_type, merchant_defined_field_definition_request)
 
 Create merchant defined field for a given reference type
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[InlineResponse2004]**](InlineResponse2004.md)
+[**list[MerchantDefinedFieldWithIdResponse]**](MerchantDefinedFieldWithIdResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_pbl_merchant_defined_field_definition**
-> list[InlineResponse2004] create_pbl_merchant_defined_field_definition(reference_type, merchant_defined_field_definition_request)
+> list[MerchantDefinedFieldWithIdResponse] create_pbl_merchant_defined_field_definition(reference_type, pbl_merchant_defined_field_definition_request)
 
 Create a PayByLink merchant defined field for a given reference type
 
@@ -80,11 +80,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.MerchantDefinedFieldsApi()
 reference_type = 'reference_type_example' # str | The reference type for which the merchant defined field is to be created. Available values are Purchase and Donation
-merchant_defined_field_definition_request = CyberSource.MerchantDefinedFieldDefinitionRequest1() # MerchantDefinedFieldDefinitionRequest1 | 
+pbl_merchant_defined_field_definition_request = CyberSource.PblMerchantDefinedFieldDefinitionRequest() # PblMerchantDefinedFieldDefinitionRequest | 
 
 try: 
     # Create a PayByLink merchant defined field for a given reference type
-    api_response = api_instance.create_pbl_merchant_defined_field_definition(reference_type, merchant_defined_field_definition_request)
+    api_response = api_instance.create_pbl_merchant_defined_field_definition(reference_type, pbl_merchant_defined_field_definition_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MerchantDefinedFieldsApi->create_pbl_merchant_defined_field_definition: %s\n" % e)
@@ -95,11 +95,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reference_type** | **str**| The reference type for which the merchant defined field is to be created. Available values are Purchase and Donation | 
- **merchant_defined_field_definition_request** | [**MerchantDefinedFieldDefinitionRequest1**](MerchantDefinedFieldDefinitionRequest1.md)|  | 
+ **pbl_merchant_defined_field_definition_request** | [**PblMerchantDefinedFieldDefinitionRequest**](PblMerchantDefinedFieldDefinitionRequest.md)|  | 
 
 ### Return type
 
-[**list[InlineResponse2004]**](InlineResponse2004.md)
+[**list[MerchantDefinedFieldWithIdResponse]**](MerchantDefinedFieldWithIdResponse.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_merchant_defined_fields_definitions**
-> list[InlineResponse2004] get_merchant_defined_fields_definitions(reference_type)
+> list[MerchantDefinedFieldWithIdResponse] get_merchant_defined_fields_definitions(reference_type)
 
 Get all merchant defined fields for a given reference type
 
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[InlineResponse2004]**](InlineResponse2004.md)
+[**list[MerchantDefinedFieldWithIdResponse]**](MerchantDefinedFieldWithIdResponse.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_pbl_merchant_defined_fields_definitions**
-> list[InlineResponse2004] get_pbl_merchant_defined_fields_definitions(reference_type)
+> list[MerchantDefinedFieldWithIdResponse] get_pbl_merchant_defined_fields_definitions(reference_type)
 
 Get all PayByLink merchant defined fields for a given reference type
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[InlineResponse2004]**](InlineResponse2004.md)
+[**list[MerchantDefinedFieldWithIdResponse]**](MerchantDefinedFieldWithIdResponse.md)
 
 ### Authorization
 
@@ -299,7 +299,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_merchant_defined_fields_definitions**
-> list[InlineResponse2004] put_merchant_defined_fields_definitions(reference_type, id, merchant_defined_field_core)
+> list[MerchantDefinedFieldWithIdResponse] put_merchant_defined_fields_definitions(reference_type, id, update_merchant_defined_field_core_by_id_request)
 
 Update a MerchantDefinedField by ID
 
@@ -315,11 +315,11 @@ from pprint import pprint
 api_instance = CyberSource.MerchantDefinedFieldsApi()
 reference_type = 'reference_type_example' # str | 
 id = 789 # int | 
-merchant_defined_field_core = CyberSource.MerchantDefinedFieldCore() # MerchantDefinedFieldCore | 
+update_merchant_defined_field_core_by_id_request = CyberSource.UpdateMerchantDefinedFieldCoreByIdRequest() # UpdateMerchantDefinedFieldCoreByIdRequest | 
 
 try: 
     # Update a MerchantDefinedField by ID
-    api_response = api_instance.put_merchant_defined_fields_definitions(reference_type, id, merchant_defined_field_core)
+    api_response = api_instance.put_merchant_defined_fields_definitions(reference_type, id, update_merchant_defined_field_core_by_id_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MerchantDefinedFieldsApi->put_merchant_defined_fields_definitions: %s\n" % e)
@@ -331,11 +331,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reference_type** | **str**|  | 
  **id** | **int**|  | 
- **merchant_defined_field_core** | [**MerchantDefinedFieldCore**](MerchantDefinedFieldCore.md)|  | 
+ **update_merchant_defined_field_core_by_id_request** | [**UpdateMerchantDefinedFieldCoreByIdRequest**](UpdateMerchantDefinedFieldCoreByIdRequest.md)|  | 
 
 ### Return type
 
-[**list[InlineResponse2004]**](InlineResponse2004.md)
+[**list[MerchantDefinedFieldWithIdResponse]**](MerchantDefinedFieldWithIdResponse.md)
 
 ### Authorization
 
@@ -349,7 +349,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_pbl_merchant_defined_fields_definitions**
-> list[InlineResponse2004] put_pbl_merchant_defined_fields_definitions(reference_type, id, merchant_defined_field_core)
+> list[MerchantDefinedFieldWithIdResponse] put_pbl_merchant_defined_fields_definitions(reference_type, id, update_pbl_merchant_defined_field_core_by_id_request)
 
 Update a PayByLink MerchantDefinedField by ID
 
@@ -365,11 +365,11 @@ from pprint import pprint
 api_instance = CyberSource.MerchantDefinedFieldsApi()
 reference_type = 'reference_type_example' # str | 
 id = 789 # int | 
-merchant_defined_field_core = CyberSource.MerchantDefinedFieldCore1() # MerchantDefinedFieldCore1 | 
+update_pbl_merchant_defined_field_core_by_id_request = CyberSource.UpdatePblMerchantDefinedFieldCoreByIdRequest() # UpdatePblMerchantDefinedFieldCoreByIdRequest | 
 
 try: 
     # Update a PayByLink MerchantDefinedField by ID
-    api_response = api_instance.put_pbl_merchant_defined_fields_definitions(reference_type, id, merchant_defined_field_core)
+    api_response = api_instance.put_pbl_merchant_defined_fields_definitions(reference_type, id, update_pbl_merchant_defined_field_core_by_id_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MerchantDefinedFieldsApi->put_pbl_merchant_defined_fields_definitions: %s\n" % e)
@@ -381,11 +381,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reference_type** | **str**|  | 
  **id** | **int**|  | 
- **merchant_defined_field_core** | [**MerchantDefinedFieldCore1**](MerchantDefinedFieldCore1.md)|  | 
+ **update_pbl_merchant_defined_field_core_by_id_request** | [**UpdatePblMerchantDefinedFieldCoreByIdRequest**](UpdatePblMerchantDefinedFieldCoreByIdRequest.md)|  | 
 
 ### Return type
 
-[**list[InlineResponse2004]**](InlineResponse2004.md)
+[**list[MerchantDefinedFieldWithIdResponse]**](MerchantDefinedFieldWithIdResponse.md)
 
 ### Authorization
 

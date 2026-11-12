@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **cancel_checkout**
-> InlineResponse20018 cancel_checkout(session_id, idempotency_key=idempotency_key, accept_language=accept_language, user_agent=user_agent, request_id=request_id, signature=signature, timestamp=timestamp, api_version=api_version)
+> CancelCheckoutResponse cancel_checkout(session_id, idempotency_key=idempotency_key, accept_language=accept_language, user_agent=user_agent, request_id=request_id, signature=signature, timestamp=timestamp, api_version=api_version)
 
 Cancel Checkout ACP
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**CancelCheckoutResponse**](CancelCheckoutResponse.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **complete_checkout**
-> InlineResponse20017 complete_checkout(session_id, acp_complete_checkout_request, idempotency_key=idempotency_key, accept_language=accept_language, user_agent=user_agent, request_id=request_id, signature=signature, timestamp=timestamp, api_version=api_version)
+> CompleteCheckoutResponse complete_checkout(session_id, acp_complete_checkout_request, idempotency_key=idempotency_key, accept_language=accept_language, user_agent=user_agent, request_id=request_id, signature=signature, timestamp=timestamp, api_version=api_version)
 
 Complete Checkout ACP
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**CompleteCheckoutResponse**](CompleteCheckoutResponse.md)
 
 ### Authorization
 
@@ -138,7 +138,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_checkout_session**
-> InlineResponse20112 create_checkout_session(acp_create_checkout_session_request, idempotency_key=idempotency_key, accept_language=accept_language, user_agent=user_agent, request_id=request_id, signature=signature, timestamp=timestamp, api_version=api_version)
+> CheckoutSessionResponse create_checkout_session(acp_create_checkout_session_request, idempotency_key=idempotency_key, accept_language=accept_language, user_agent=user_agent, request_id=request_id, signature=signature, timestamp=timestamp, api_version=api_version)
 
 Create Checkout Session ACP
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20112**](InlineResponse20112.md)
+[**CheckoutSessionResponse**](CheckoutSessionResponse.md)
 
 ### Authorization
 
@@ -200,7 +200,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_checkout_session**
-> InlineResponse20112 get_checkout_session(session_id, acp_get_checkout_session_request, idempotency_key=idempotency_key, accept_language=accept_language, user_agent=user_agent, request_id=request_id, signature=signature, timestamp=timestamp, api_version=api_version)
+> CheckoutSessionResponse get_checkout_session(session_id, acp_get_checkout_session_request, idempotency_key=idempotency_key, accept_language=accept_language, user_agent=user_agent, request_id=request_id, signature=signature, timestamp=timestamp, api_version=api_version)
 
 Get Checkout Session ACP
 
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20112**](InlineResponse20112.md)
+[**CheckoutSessionResponse**](CheckoutSessionResponse.md)
 
 ### Authorization
 
@@ -264,7 +264,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_checkout_session**
-> InlineResponse20112 update_checkout_session(session_id, acp_update_checkout_session_request, idempotency_key=idempotency_key, accept_language=accept_language, user_agent=user_agent, request_id=request_id, signature=signature, timestamp=timestamp, api_version=api_version)
+> CheckoutSessionResponse update_checkout_session(session_id, acp_update_checkout_session_request, idempotency_key=idempotency_key, accept_language=accept_language, user_agent=user_agent, request_id=request_id, signature=signature, timestamp=timestamp, api_version=api_version)
 
 Update Checkout Session ACP
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20112**](InlineResponse20112.md)
+[**CheckoutSessionResponse**](CheckoutSessionResponse.md)
 
 ### Authorization
 

@@ -65,7 +65,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_merchant_key**
-> ActivateMerchantKeyResponse200 add_merchant_key(merchant_id, key_request)
+> ActivateMerchantKeyResponse200 add_merchant_key(merchant_id, add_merchant_key_request)
 
 Add a key to a merchant
 
@@ -82,11 +82,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.MerchantRegistrationApi()
 merchant_id = 'merchant_id_example' # str | Unique merchant identifier (UUID)
-key_request = CyberSource.KeyRequest1() # KeyRequest1 | Key creation request
+add_merchant_key_request = CyberSource.AddMerchantKeyRequest() # AddMerchantKeyRequest | Key creation request
 
 try: 
     # Add a key to a merchant
-    api_response = api_instance.add_merchant_key(merchant_id, key_request)
+    api_response = api_instance.add_merchant_key(merchant_id, add_merchant_key_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MerchantRegistrationApi->add_merchant_key: %s\n" % e)
@@ -97,7 +97,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **merchant_id** | **str**| Unique merchant identifier (UUID) | 
- **key_request** | [**KeyRequest1**](KeyRequest1.md)| Key creation request | 
+ **add_merchant_key_request** | [**AddMerchantKeyRequest**](AddMerchantKeyRequest.md)| Key creation request | 
 
 ### Return type
 
@@ -361,7 +361,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_merchant_key**
-> ActivateMerchantKeyResponse200 update_merchant_key(merchant_id, key_id, key_update)
+> ActivateMerchantKeyResponse200 update_merchant_key(merchant_id, key_id, update_merchant_key_request)
 
 Update a merchant key
 
@@ -379,11 +379,11 @@ from pprint import pprint
 api_instance = CyberSource.MerchantRegistrationApi()
 merchant_id = 'merchant_id_example' # str | Unique merchant identifier (UUID)
 key_id = 'key_id_example' # str | Unique key identifier (UUID)
-key_update = CyberSource.KeyUpdate1() # KeyUpdate1 | Key update request
+update_merchant_key_request = CyberSource.UpdateMerchantKeyRequest() # UpdateMerchantKeyRequest | Key update request
 
 try: 
     # Update a merchant key
-    api_response = api_instance.update_merchant_key(merchant_id, key_id, key_update)
+    api_response = api_instance.update_merchant_key(merchant_id, key_id, update_merchant_key_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MerchantRegistrationApi->update_merchant_key: %s\n" % e)
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **merchant_id** | **str**| Unique merchant identifier (UUID) | 
  **key_id** | **str**| Unique key identifier (UUID) | 
- **key_update** | [**KeyUpdate1**](KeyUpdate1.md)| Key update request | 
+ **update_merchant_key_request** | [**UpdateMerchantKeyRequest**](UpdateMerchantKeyRequest.md)| Key update request | 
 
 ### Return type
 

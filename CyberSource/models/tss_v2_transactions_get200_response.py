@@ -46,6 +46,7 @@ class TssV2TransactionsGet200Response(object):
         'installment_information': 'TssV2TransactionsGet200ResponseInstallmentInformation',
         'fraud_marking_information': 'TssV2TransactionsGet200ResponseFraudMarkingInformation',
         'health_care_information': 'Ptsv2paymentsHealthCareInformation',
+        'travel_information': 'TssV2TransactionsGet200ResponseTravelInformation',
         'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
         'merchant_information': 'TssV2TransactionsGet200ResponseMerchantInformation',
         'order_information': 'TssV2TransactionsGet200ResponseOrderInformation',
@@ -80,6 +81,7 @@ class TssV2TransactionsGet200Response(object):
         'installment_information': 'installmentInformation',
         'fraud_marking_information': 'fraudMarkingInformation',
         'health_care_information': 'healthCareInformation',
+        'travel_information': 'travelInformation',
         'merchant_defined_information': 'merchantDefinedInformation',
         'merchant_information': 'merchantInformation',
         'order_information': 'orderInformation',
@@ -97,7 +99,7 @@ class TssV2TransactionsGet200Response(object):
         'links': '_links'
     }
 
-    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, submit_time_utc=None, status=None, application_information=None, bank_account_validation=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, payment_insights_information=None, payout_options=None, unscheduled_payment_information=None, processing_information=None, processor_information=None, recurring_payment_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, token_information=None, links=None):
+    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, submit_time_utc=None, status=None, application_information=None, bank_account_validation=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, travel_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, payment_insights_information=None, payout_options=None, unscheduled_payment_information=None, processing_information=None, processor_information=None, recurring_payment_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, token_information=None, links=None):
         """
         TssV2TransactionsGet200Response - a model defined in Swagger
         """
@@ -118,6 +120,7 @@ class TssV2TransactionsGet200Response(object):
         self._installment_information = None
         self._fraud_marking_information = None
         self._health_care_information = None
+        self._travel_information = None
         self._merchant_defined_information = None
         self._merchant_information = None
         self._order_information = None
@@ -166,6 +169,8 @@ class TssV2TransactionsGet200Response(object):
           self.fraud_marking_information = fraud_marking_information
         if health_care_information is not None:
           self.health_care_information = health_care_information
+        if travel_information is not None:
+          self.travel_information = travel_information
         if merchant_defined_information is not None:
           self.merchant_defined_information = merchant_defined_information
         if merchant_information is not None:
@@ -544,6 +549,27 @@ class TssV2TransactionsGet200Response(object):
         """
 
         self._health_care_information = health_care_information
+
+    @property
+    def travel_information(self):
+        """
+        Gets the travel_information of this TssV2TransactionsGet200Response.
+
+        :return: The travel_information of this TssV2TransactionsGet200Response.
+        :rtype: TssV2TransactionsGet200ResponseTravelInformation
+        """
+        return self._travel_information
+
+    @travel_information.setter
+    def travel_information(self, travel_information):
+        """
+        Sets the travel_information of this TssV2TransactionsGet200Response.
+
+        :param travel_information: The travel_information of this TssV2TransactionsGet200Response.
+        :type: TssV2TransactionsGet200ResponseTravelInformation
+        """
+
+        self._travel_information = travel_information
 
     @property
     def merchant_defined_information(self):

@@ -34,8 +34,9 @@ class Ptsv2paymentsOrderInformation(object):
         'amount_details': 'Ptsv2paymentsOrderInformationAmountDetails',
         'bill_to': 'Ptsv2paymentsOrderInformationBillTo',
         'ship_to': 'Ptsv2paymentsOrderInformationShipTo',
-        'line_items': 'list[Ptsv2paymentsOrderInformationLineItems]',
+        'line_items': 'list[Ptsv2paymentsOrderInformationLineItemsExtended]',
         'invoice_details': 'Ptsv2paymentsOrderInformationInvoiceDetails',
+        'vouchers': 'list[Ptsv2paymentsOrderInformationVouchers]',
         'shipping_details': 'Ptsv2paymentsOrderInformationShippingDetails',
         'digital_currency': 'Ptsv2paymentsOrderInformationDigitalCurrency',
         'returns_accepted': 'bool',
@@ -54,6 +55,7 @@ class Ptsv2paymentsOrderInformation(object):
         'ship_to': 'shipTo',
         'line_items': 'lineItems',
         'invoice_details': 'invoiceDetails',
+        'vouchers': 'vouchers',
         'shipping_details': 'shippingDetails',
         'digital_currency': 'digitalCurrency',
         'returns_accepted': 'returnsAccepted',
@@ -65,7 +67,7 @@ class Ptsv2paymentsOrderInformation(object):
         'total_offers_count': 'totalOffersCount'
     }
 
-    def __init__(self, extension_days=None, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None, shipping_details=None, digital_currency=None, returns_accepted=None, is_cryptocurrency_purchase=None, cutoff_date_time=None, pre_order=None, pre_order_date=None, reordered=None, total_offers_count=None):
+    def __init__(self, extension_days=None, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None, vouchers=None, shipping_details=None, digital_currency=None, returns_accepted=None, is_cryptocurrency_purchase=None, cutoff_date_time=None, pre_order=None, pre_order_date=None, reordered=None, total_offers_count=None):
         """
         Ptsv2paymentsOrderInformation - a model defined in Swagger
         """
@@ -76,6 +78,7 @@ class Ptsv2paymentsOrderInformation(object):
         self._ship_to = None
         self._line_items = None
         self._invoice_details = None
+        self._vouchers = None
         self._shipping_details = None
         self._digital_currency = None
         self._returns_accepted = None
@@ -98,6 +101,8 @@ class Ptsv2paymentsOrderInformation(object):
           self.line_items = line_items
         if invoice_details is not None:
           self.invoice_details = invoice_details
+        if vouchers is not None:
+          self.vouchers = vouchers
         if shipping_details is not None:
           self.shipping_details = shipping_details
         if digital_currency is not None:
@@ -209,7 +214,7 @@ class Ptsv2paymentsOrderInformation(object):
         Gets the line_items of this Ptsv2paymentsOrderInformation.
 
         :return: The line_items of this Ptsv2paymentsOrderInformation.
-        :rtype: list[Ptsv2paymentsOrderInformationLineItems]
+        :rtype: list[Ptsv2paymentsOrderInformationLineItemsExtended]
         """
         return self._line_items
 
@@ -219,7 +224,7 @@ class Ptsv2paymentsOrderInformation(object):
         Sets the line_items of this Ptsv2paymentsOrderInformation.
 
         :param line_items: The line_items of this Ptsv2paymentsOrderInformation.
-        :type: list[Ptsv2paymentsOrderInformationLineItems]
+        :type: list[Ptsv2paymentsOrderInformationLineItemsExtended]
         """
 
         self._line_items = line_items
@@ -244,6 +249,27 @@ class Ptsv2paymentsOrderInformation(object):
         """
 
         self._invoice_details = invoice_details
+
+    @property
+    def vouchers(self):
+        """
+        Gets the vouchers of this Ptsv2paymentsOrderInformation.
+
+        :return: The vouchers of this Ptsv2paymentsOrderInformation.
+        :rtype: list[Ptsv2paymentsOrderInformationVouchers]
+        """
+        return self._vouchers
+
+    @vouchers.setter
+    def vouchers(self, vouchers):
+        """
+        Sets the vouchers of this Ptsv2paymentsOrderInformation.
+
+        :param vouchers: The vouchers of this Ptsv2paymentsOrderInformation.
+        :type: list[Ptsv2paymentsOrderInformationVouchers]
+        """
+
+        self._vouchers = vouchers
 
     @property
     def shipping_details(self):

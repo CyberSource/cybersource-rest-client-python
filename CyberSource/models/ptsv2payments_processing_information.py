@@ -78,7 +78,9 @@ class Ptsv2paymentsProcessingInformation(object):
         'wallet_transaction_intent': 'float',
         'destination_type': 'float',
         'program_indicators': 'Ptsv2paymentsProcessingInformationProgramIndicators',
-        'inquiry_type': 'str'
+        'inquiry_type': 'str',
+        'pre_auth_status': 'str',
+        'pre_auth_response_code': 'str'
     }
 
     attribute_map = {
@@ -130,10 +132,12 @@ class Ptsv2paymentsProcessingInformation(object):
         'wallet_transaction_intent': 'walletTransactionIntent',
         'destination_type': 'destinationType',
         'program_indicators': 'programIndicators',
-        'inquiry_type': 'inquiryType'
+        'inquiry_type': 'inquiryType',
+        'pre_auth_status': 'preAuthStatus',
+        'pre_auth_response_code': 'preAuthResponseCode'
     }
 
-    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, card_verification=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, merchant_verification_value=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, timeout=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None, enabler_id=None, processing_instruction=None, transaction_type_indicator=None, purpose_of_payment=None, language_code=None, original_payment_id=None, amex_indirect_model_type=None, wallet_transaction_intent=None, destination_type=None, program_indicators=None, inquiry_type=None):
+    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, card_verification=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, merchant_verification_value=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, timeout=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None, enabler_id=None, processing_instruction=None, transaction_type_indicator=None, purpose_of_payment=None, language_code=None, original_payment_id=None, amex_indirect_model_type=None, wallet_transaction_intent=None, destination_type=None, program_indicators=None, inquiry_type=None, pre_auth_status=None, pre_auth_response_code=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
@@ -187,6 +191,8 @@ class Ptsv2paymentsProcessingInformation(object):
         self._destination_type = None
         self._program_indicators = None
         self._inquiry_type = None
+        self._pre_auth_status = None
+        self._pre_auth_response_code = None
 
         if action_list is not None:
           self.action_list = action_list
@@ -286,6 +292,10 @@ class Ptsv2paymentsProcessingInformation(object):
           self.program_indicators = program_indicators
         if inquiry_type is not None:
           self.inquiry_type = inquiry_type
+        if pre_auth_status is not None:
+          self.pre_auth_status = pre_auth_status
+        if pre_auth_response_code is not None:
+          self.pre_auth_response_code = pre_auth_response_code
 
     @property
     def action_list(self):
@@ -1393,6 +1403,52 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._inquiry_type = inquiry_type
+
+    @property
+    def pre_auth_status(self):
+        """
+        Gets the pre_auth_status of this Ptsv2paymentsProcessingInformation.
+        Outcome of a pre-authorization process. Used when processing payment outside of CyberSource and sent to Decision Manager post-authorisation.  Possible values: Approved, Rejected, Hold. 
+
+        :return: The pre_auth_status of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._pre_auth_status
+
+    @pre_auth_status.setter
+    def pre_auth_status(self, pre_auth_status):
+        """
+        Sets the pre_auth_status of this Ptsv2paymentsProcessingInformation.
+        Outcome of a pre-authorization process. Used when processing payment outside of CyberSource and sent to Decision Manager post-authorisation.  Possible values: Approved, Rejected, Hold. 
+
+        :param pre_auth_status: The pre_auth_status of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._pre_auth_status = pre_auth_status
+
+    @property
+    def pre_auth_response_code(self):
+        """
+        Gets the pre_auth_response_code of this Ptsv2paymentsProcessingInformation.
+        Alphanumeric code returned by the issuer or payment gateway during the pre-authorization stage of a transaction. 
+
+        :return: The pre_auth_response_code of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._pre_auth_response_code
+
+    @pre_auth_response_code.setter
+    def pre_auth_response_code(self, pre_auth_response_code):
+        """
+        Sets the pre_auth_response_code of this Ptsv2paymentsProcessingInformation.
+        Alphanumeric code returned by the issuer or payment gateway during the pre-authorization stage of a transaction. 
+
+        :param pre_auth_response_code: The pre_auth_response_code of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._pre_auth_response_code = pre_auth_response_code
 
     def to_dict(self):
         """

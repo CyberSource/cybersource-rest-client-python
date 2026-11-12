@@ -30,12 +30,12 @@ class PullFunds201ResponseLinks(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        '_self': 'PullFunds201ResponseLinksSelf',
-        'reversal': 'PullFunds201ResponseLinksReversal',
-        'refund': 'PullFunds201ResponseLinksRefund',
-        'customer': 'PullFunds201ResponseLinksCustomer',
-        'payment_instrument': 'PullFunds201ResponseLinksPaymentInstrument',
-        'instrument_identifier': 'PullFunds201ResponseLinksInstrumentIdentifier'
+        '_self': 'PtsV2PaymentsPost201ResponseLinksSelf5',
+        'reversal': 'PtsV2PaymentsPost201ResponseLinksSelf6',
+        'refund': 'PtsV2PaymentsPost201ResponseLinksSelf7',
+        'customer': 'PtsV2PaymentsPost201ResponseLinksSelf8',
+        'payment_instrument': 'PtsV2PaymentsPost201ResponseLinksSelf9',
+        'instrument_identifier': 'PtsV2PaymentsPost201ResponseLinksSelf10'
     }
 
     attribute_map = {
@@ -78,7 +78,7 @@ class PullFunds201ResponseLinks(object):
         Gets the _self of this PullFunds201ResponseLinks.
 
         :return: The _self of this PullFunds201ResponseLinks.
-        :rtype: PullFunds201ResponseLinksSelf
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf5
         """
         return self.__self
 
@@ -88,7 +88,7 @@ class PullFunds201ResponseLinks(object):
         Sets the _self of this PullFunds201ResponseLinks.
 
         :param _self: The _self of this PullFunds201ResponseLinks.
-        :type: PullFunds201ResponseLinksSelf
+        :type: PtsV2PaymentsPost201ResponseLinksSelf5
         """
 
         self.__self = _self
@@ -99,7 +99,7 @@ class PullFunds201ResponseLinks(object):
         Gets the reversal of this PullFunds201ResponseLinks.
 
         :return: The reversal of this PullFunds201ResponseLinks.
-        :rtype: PullFunds201ResponseLinksReversal
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf6
         """
         return self._reversal
 
@@ -109,7 +109,7 @@ class PullFunds201ResponseLinks(object):
         Sets the reversal of this PullFunds201ResponseLinks.
 
         :param reversal: The reversal of this PullFunds201ResponseLinks.
-        :type: PullFunds201ResponseLinksReversal
+        :type: PtsV2PaymentsPost201ResponseLinksSelf6
         """
 
         self._reversal = reversal
@@ -120,7 +120,7 @@ class PullFunds201ResponseLinks(object):
         Gets the refund of this PullFunds201ResponseLinks.
 
         :return: The refund of this PullFunds201ResponseLinks.
-        :rtype: PullFunds201ResponseLinksRefund
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf7
         """
         return self._refund
 
@@ -130,7 +130,7 @@ class PullFunds201ResponseLinks(object):
         Sets the refund of this PullFunds201ResponseLinks.
 
         :param refund: The refund of this PullFunds201ResponseLinks.
-        :type: PullFunds201ResponseLinksRefund
+        :type: PtsV2PaymentsPost201ResponseLinksSelf7
         """
 
         self._refund = refund
@@ -141,7 +141,7 @@ class PullFunds201ResponseLinks(object):
         Gets the customer of this PullFunds201ResponseLinks.
 
         :return: The customer of this PullFunds201ResponseLinks.
-        :rtype: PullFunds201ResponseLinksCustomer
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf8
         """
         return self._customer
 
@@ -151,7 +151,7 @@ class PullFunds201ResponseLinks(object):
         Sets the customer of this PullFunds201ResponseLinks.
 
         :param customer: The customer of this PullFunds201ResponseLinks.
-        :type: PullFunds201ResponseLinksCustomer
+        :type: PtsV2PaymentsPost201ResponseLinksSelf8
         """
 
         self._customer = customer
@@ -162,7 +162,7 @@ class PullFunds201ResponseLinks(object):
         Gets the payment_instrument of this PullFunds201ResponseLinks.
 
         :return: The payment_instrument of this PullFunds201ResponseLinks.
-        :rtype: PullFunds201ResponseLinksPaymentInstrument
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf9
         """
         return self._payment_instrument
 
@@ -172,7 +172,7 @@ class PullFunds201ResponseLinks(object):
         Sets the payment_instrument of this PullFunds201ResponseLinks.
 
         :param payment_instrument: The payment_instrument of this PullFunds201ResponseLinks.
-        :type: PullFunds201ResponseLinksPaymentInstrument
+        :type: PtsV2PaymentsPost201ResponseLinksSelf9
         """
 
         self._payment_instrument = payment_instrument
@@ -183,7 +183,7 @@ class PullFunds201ResponseLinks(object):
         Gets the instrument_identifier of this PullFunds201ResponseLinks.
 
         :return: The instrument_identifier of this PullFunds201ResponseLinks.
-        :rtype: PullFunds201ResponseLinksInstrumentIdentifier
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf10
         """
         return self._instrument_identifier
 
@@ -193,7 +193,7 @@ class PullFunds201ResponseLinks(object):
         Sets the instrument_identifier of this PullFunds201ResponseLinks.
 
         :param instrument_identifier: The instrument_identifier of this PullFunds201ResponseLinks.
-        :type: PullFunds201ResponseLinksInstrumentIdentifier
+        :type: PtsV2PaymentsPost201ResponseLinksSelf10
         """
 
         self._instrument_identifier = instrument_identifier

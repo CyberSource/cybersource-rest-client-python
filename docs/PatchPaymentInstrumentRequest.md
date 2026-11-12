@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **merchant_information** | [**TmsMerchantInformation**](TmsMerchantInformation.md) |  | [optional] 
 **instrument_identifier** | [**DefaultPaymentInstrumentInstrumentIdentifier**](DefaultPaymentInstrumentInstrumentIdentifier.md) |  | [optional] 
 **metadata** | [**DefaultPaymentInstrumentMetadata**](DefaultPaymentInstrumentMetadata.md) |  | [optional] 
-**embedded** | [**Tmsv1paymentinstrumentsEmbedded**](Tmsv1paymentinstrumentsEmbedded.md) |  | [optional] 
+**embedded** | [**PaymentInstrumentEmbedded2**](PaymentInstrumentEmbedded2.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

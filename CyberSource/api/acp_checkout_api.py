@@ -67,7 +67,7 @@ class ACPCheckoutApi(object):
         :param str signature: Request signature for payload integrity verification. 
         :param str timestamp: ISO 8601 timestamp of when the request was generated. Used in conjunction with Signature for replay protection. 
         :param str api_version: ACP specification version the client is targeting (e.g. `2024-01-01`). When omitted, the latest supported version is assumed. 
-        :return: InlineResponse20018
+        :return: CancelCheckoutResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -103,7 +103,7 @@ class ACPCheckoutApi(object):
         :param str signature: Request signature for payload integrity verification. 
         :param str timestamp: ISO 8601 timestamp of when the request was generated. Used in conjunction with Signature for replay protection. 
         :param str api_version: ACP specification version the client is targeting (e.g. `2024-01-01`). When omitted, the latest supported version is assumed. 
-        :return: InlineResponse20018
+        :return: CancelCheckoutResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -160,8 +160,10 @@ class ACPCheckoutApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'POST' in ('POST'):
@@ -170,11 +172,12 @@ class ACPCheckoutApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "cancel_checkout,cancel_checkout_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "cancel_checkout,cancel_checkout_with_http_info")
 
@@ -188,7 +191,7 @@ class ACPCheckoutApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20018',
+                                        response_type='CancelCheckoutResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -220,7 +223,7 @@ class ACPCheckoutApi(object):
         :param str signature: Request signature for payload integrity verification. 
         :param str timestamp: ISO 8601 timestamp of when the request was generated. Used in conjunction with Signature for replay protection. 
         :param str api_version: ACP specification version the client is targeting (e.g. `2024-01-01`). When omitted, the latest supported version is assumed. 
-        :return: InlineResponse20017
+        :return: CompleteCheckoutResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -257,7 +260,7 @@ class ACPCheckoutApi(object):
         :param str signature: Request signature for payload integrity verification. 
         :param str timestamp: ISO 8601 timestamp of when the request was generated. Used in conjunction with Signature for replay protection. 
         :param str api_version: ACP specification version the client is targeting (e.g. `2024-01-01`). When omitted, the latest supported version is assumed. 
-        :return: InlineResponse20017
+        :return: CompleteCheckoutResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -318,8 +321,10 @@ class ACPCheckoutApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'acp_complete_checkout_request' in params:
@@ -331,7 +336,7 @@ class ACPCheckoutApi(object):
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "complete_checkout,complete_checkout_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "complete_checkout,complete_checkout_with_http_info")
 
@@ -345,7 +350,7 @@ class ACPCheckoutApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20017',
+                                        response_type='CompleteCheckoutResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -376,7 +381,7 @@ class ACPCheckoutApi(object):
         :param str signature: Request signature for payload integrity verification. 
         :param str timestamp: ISO 8601 timestamp of when the request was generated. Used in conjunction with Signature for replay protection. 
         :param str api_version: ACP specification version the client is targeting (e.g. `2024-01-01`). When omitted, the latest supported version is assumed. 
-        :return: InlineResponse20112
+        :return: CheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -412,7 +417,7 @@ class ACPCheckoutApi(object):
         :param str signature: Request signature for payload integrity verification. 
         :param str timestamp: ISO 8601 timestamp of when the request was generated. Used in conjunction with Signature for replay protection. 
         :param str api_version: ACP specification version the client is targeting (e.g. `2024-01-01`). When omitted, the latest supported version is assumed. 
-        :return: InlineResponse20112
+        :return: CheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -466,8 +471,10 @@ class ACPCheckoutApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'acp_create_checkout_session_request' in params:
@@ -479,7 +486,7 @@ class ACPCheckoutApi(object):
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_checkout_session,create_checkout_session_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_checkout_session,create_checkout_session_with_http_info")
 
@@ -493,7 +500,7 @@ class ACPCheckoutApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20112',
+                                        response_type='CheckoutSessionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -525,7 +532,7 @@ class ACPCheckoutApi(object):
         :param str signature: Request signature for payload integrity verification. 
         :param str timestamp: ISO 8601 timestamp of when the request was generated. Used in conjunction with Signature for replay protection. 
         :param str api_version: ACP specification version the client is targeting (e.g. `2024-01-01`). When omitted, the latest supported version is assumed. 
-        :return: InlineResponse20112
+        :return: CheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -562,7 +569,7 @@ class ACPCheckoutApi(object):
         :param str signature: Request signature for payload integrity verification. 
         :param str timestamp: ISO 8601 timestamp of when the request was generated. Used in conjunction with Signature for replay protection. 
         :param str api_version: ACP specification version the client is targeting (e.g. `2024-01-01`). When omitted, the latest supported version is assumed. 
-        :return: InlineResponse20112
+        :return: CheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -623,8 +630,10 @@ class ACPCheckoutApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'acp_get_checkout_session_request' in params:
@@ -636,7 +645,7 @@ class ACPCheckoutApi(object):
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_checkout_session,get_checkout_session_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_checkout_session,get_checkout_session_with_http_info")
 
@@ -650,7 +659,7 @@ class ACPCheckoutApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20112',
+                                        response_type='CheckoutSessionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -682,7 +691,7 @@ class ACPCheckoutApi(object):
         :param str signature: Request signature for payload integrity verification. 
         :param str timestamp: ISO 8601 timestamp of when the request was generated. Used in conjunction with Signature for replay protection. 
         :param str api_version: ACP specification version the client is targeting (e.g. `2024-01-01`). When omitted, the latest supported version is assumed. 
-        :return: InlineResponse20112
+        :return: CheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -719,7 +728,7 @@ class ACPCheckoutApi(object):
         :param str signature: Request signature for payload integrity verification. 
         :param str timestamp: ISO 8601 timestamp of when the request was generated. Used in conjunction with Signature for replay protection. 
         :param str api_version: ACP specification version the client is targeting (e.g. `2024-01-01`). When omitted, the latest supported version is assumed. 
-        :return: InlineResponse20112
+        :return: CheckoutSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -780,8 +789,10 @@ class ACPCheckoutApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'acp_update_checkout_session_request' in params:
@@ -793,7 +804,7 @@ class ACPCheckoutApi(object):
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "update_checkout_session,update_checkout_session_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "update_checkout_session,update_checkout_session_with_http_info")
 
@@ -807,7 +818,7 @@ class ACPCheckoutApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20112',
+                                        response_type='CheckoutSessionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
