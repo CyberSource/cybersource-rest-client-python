@@ -48,7 +48,8 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         'company': 'str',
         'destination_types': 'str',
         'destination_code': 'int',
-        'method': 'str'
+        'method': 'str',
+        'carrier_name': 'str'
     }
 
     attribute_map = {
@@ -70,10 +71,11 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         'company': 'company',
         'destination_types': 'destinationTypes',
         'destination_code': 'destinationCode',
-        'method': 'method'
+        'method': 'method',
+        'carrier_name': 'carrierName'
     }
 
-    def __init__(self, title=None, first_name=None, middle_name=None, last_name=None, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, county=None, country=None, district=None, building_number=None, phone_number=None, email=None, company=None, destination_types=None, destination_code=None, method=None):
+    def __init__(self, title=None, first_name=None, middle_name=None, last_name=None, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, county=None, country=None, district=None, building_number=None, phone_number=None, email=None, company=None, destination_types=None, destination_code=None, method=None, carrier_name=None):
         """
         Ptsv2paymentsOrderInformationShipTo - a model defined in Swagger
         """
@@ -97,6 +99,7 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         self._destination_types = None
         self._destination_code = None
         self._method = None
+        self._carrier_name = None
 
         if title is not None:
           self.title = title
@@ -136,6 +139,8 @@ class Ptsv2paymentsOrderInformationShipTo(object):
           self.destination_code = destination_code
         if method is not None:
           self.method = method
+        if carrier_name is not None:
+          self.carrier_name = carrier_name
 
     @property
     def title(self):
@@ -573,6 +578,29 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         """
 
         self._method = method
+
+    @property
+    def carrier_name(self):
+        """
+        Gets the carrier_name of this Ptsv2paymentsOrderInformationShipTo.
+        Name of carrier (UPS, FedEx, USPS, etc.) 
+
+        :return: The carrier_name of this Ptsv2paymentsOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._carrier_name
+
+    @carrier_name.setter
+    def carrier_name(self, carrier_name):
+        """
+        Sets the carrier_name of this Ptsv2paymentsOrderInformationShipTo.
+        Name of carrier (UPS, FedEx, USPS, etc.) 
+
+        :param carrier_name: The carrier_name of this Ptsv2paymentsOrderInformationShipTo.
+        :type: str
+        """
+
+        self._carrier_name = carrier_name
 
     def to_dict(self):
         """

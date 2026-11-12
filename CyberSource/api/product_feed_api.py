@@ -62,7 +62,7 @@ class ProductFeedApi(object):
         :param object get_all_products_request: Empty request body. (required)
         :param int page: Page number to retrieve (0-based). Defaults to 0.
         :param int size: Number of products per page. Defaults to 300. Server enforces a maximum of 1000; values above 1000 are capped. 
-        :return: InlineResponse20020
+        :return: ProductCatalogResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -93,7 +93,7 @@ class ProductFeedApi(object):
         :param object get_all_products_request: Empty request body. (required)
         :param int page: Page number to retrieve (0-based). Defaults to 0.
         :param int size: Number of products per page. Defaults to 300. Server enforces a maximum of 1000; values above 1000 are capped. 
-        :return: InlineResponse20020
+        :return: ProductCatalogResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -137,8 +137,10 @@ class ProductFeedApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'get_all_products_request' in params:
@@ -150,7 +152,7 @@ class ProductFeedApi(object):
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_all_products,get_all_products_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_all_products,get_all_products_with_http_info")
 
@@ -164,7 +166,7 @@ class ProductFeedApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20020',
+                                        response_type='ProductCatalogResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -189,7 +191,7 @@ class ProductFeedApi(object):
             for asynchronous request. (optional)
         :param str job_id: Unique identifier of the feed submission job, returned by the Ingest Product Feed endpoint.  (required)
         :param object get_feed_job_status_request: Empty request body. (required)
-        :return: InlineResponse20019
+        :return: FeedJobStatusResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -219,7 +221,7 @@ class ProductFeedApi(object):
             for asynchronous request. (optional)
         :param str job_id: Unique identifier of the feed submission job, returned by the Ingest Product Feed endpoint.  (required)
         :param object get_feed_job_status_request: Empty request body. (required)
-        :return: InlineResponse20019
+        :return: FeedJobStatusResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -266,8 +268,10 @@ class ProductFeedApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'get_feed_job_status_request' in params:
@@ -279,7 +283,7 @@ class ProductFeedApi(object):
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_feed_job_status,get_feed_job_status_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_feed_job_status,get_feed_job_status_with_http_info")
 
@@ -293,7 +297,7 @@ class ProductFeedApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20019',
+                                        response_type='FeedJobStatusResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -318,7 +322,7 @@ class ProductFeedApi(object):
             for asynchronous request. (optional)
         :param str product_id: The unique product identifier (SKU) assigned by the merchant and provided during feed ingestion. Example: `SKU-1001`.  (required)
         :param object get_product_request: Empty request body. (required)
-        :return: InlineResponse20021
+        :return: ProductDetailResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -348,7 +352,7 @@ class ProductFeedApi(object):
             for asynchronous request. (optional)
         :param str product_id: The unique product identifier (SKU) assigned by the merchant and provided during feed ingestion. Example: `SKU-1001`.  (required)
         :param object get_product_request: Empty request body. (required)
-        :return: InlineResponse20021
+        :return: ProductDetailResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -395,8 +399,10 @@ class ProductFeedApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'get_product_request' in params:
@@ -408,7 +414,7 @@ class ProductFeedApi(object):
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_product,get_product_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_product,get_product_with_http_info")
 
@@ -422,7 +428,7 @@ class ProductFeedApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20021',
+                                        response_type='ProductDetailResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -446,7 +452,7 @@ class ProductFeedApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param ProductFeedRequest product_feed_request: Product feed payload. The `products` array is required and must contain at least one product. See `ProductInput` for the full list of required fields.  (required)
-        :return: InlineResponse2021
+        :return: ProductAcceptedFeedResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -475,7 +481,7 @@ class ProductFeedApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param ProductFeedRequest product_feed_request: Product feed payload. The `products` array is required and must contain at least one product. See `ProductInput` for the full list of required fields.  (required)
-        :return: InlineResponse2021
+        :return: ProductAcceptedFeedResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -515,8 +521,10 @@ class ProductFeedApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'product_feed_request' in params:
@@ -528,7 +536,7 @@ class ProductFeedApi(object):
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "submit_product_feed_json,submit_product_feed_json_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "submit_product_feed_json,submit_product_feed_json_with_http_info")
 
@@ -542,7 +550,7 @@ class ProductFeedApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2021',
+                                        response_type='ProductAcceptedFeedResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

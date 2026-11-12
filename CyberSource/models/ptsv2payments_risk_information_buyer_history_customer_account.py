@@ -35,7 +35,13 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
         'modification_history': 'str',
         'password_history': 'str',
         'create_date': 'str',
-        'password_change_date': 'str'
+        'password_change_date': 'str',
+        'previous_login': 'Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccountPreviousLogin',
+        'previous_order': 'Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccountPreviousOrder',
+        'payment_methods_count': 'float',
+        'total_orders_count': 'float',
+        'proof_of_id_received': 'bool',
+        'last_email_change_date': 'str'
     }
 
     attribute_map = {
@@ -44,10 +50,16 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
         'modification_history': 'modificationHistory',
         'password_history': 'passwordHistory',
         'create_date': 'createDate',
-        'password_change_date': 'passwordChangeDate'
+        'password_change_date': 'passwordChangeDate',
+        'previous_login': 'previousLogin',
+        'previous_order': 'previousOrder',
+        'payment_methods_count': 'paymentMethodsCount',
+        'total_orders_count': 'totalOrdersCount',
+        'proof_of_id_received': 'proofOfIdReceived',
+        'last_email_change_date': 'lastEmailChangeDate'
     }
 
-    def __init__(self, last_change_date=None, creation_history=None, modification_history=None, password_history=None, create_date=None, password_change_date=None):
+    def __init__(self, last_change_date=None, creation_history=None, modification_history=None, password_history=None, create_date=None, password_change_date=None, previous_login=None, previous_order=None, payment_methods_count=None, total_orders_count=None, proof_of_id_received=None, last_email_change_date=None):
         """
         Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount - a model defined in Swagger
         """
@@ -58,6 +70,12 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
         self._password_history = None
         self._create_date = None
         self._password_change_date = None
+        self._previous_login = None
+        self._previous_order = None
+        self._payment_methods_count = None
+        self._total_orders_count = None
+        self._proof_of_id_received = None
+        self._last_email_change_date = None
 
         if last_change_date is not None:
           self.last_change_date = last_change_date
@@ -71,6 +89,18 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
           self.create_date = create_date
         if password_change_date is not None:
           self.password_change_date = password_change_date
+        if previous_login is not None:
+          self.previous_login = previous_login
+        if previous_order is not None:
+          self.previous_order = previous_order
+        if payment_methods_count is not None:
+          self.payment_methods_count = payment_methods_count
+        if total_orders_count is not None:
+          self.total_orders_count = total_orders_count
+        if proof_of_id_received is not None:
+          self.proof_of_id_received = proof_of_id_received
+        if last_email_change_date is not None:
+          self.last_email_change_date = last_email_change_date
 
     @property
     def last_change_date(self):
@@ -209,6 +239,140 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
         """
 
         self._password_change_date = password_change_date
+
+    @property
+    def previous_login(self):
+        """
+        Gets the previous_login of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+
+        :return: The previous_login of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        :rtype: Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccountPreviousLogin
+        """
+        return self._previous_login
+
+    @previous_login.setter
+    def previous_login(self, previous_login):
+        """
+        Sets the previous_login of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+
+        :param previous_login: The previous_login of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        :type: Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccountPreviousLogin
+        """
+
+        self._previous_login = previous_login
+
+    @property
+    def previous_order(self):
+        """
+        Gets the previous_order of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+
+        :return: The previous_order of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        :rtype: Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccountPreviousOrder
+        """
+        return self._previous_order
+
+    @previous_order.setter
+    def previous_order(self, previous_order):
+        """
+        Sets the previous_order of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+
+        :param previous_order: The previous_order of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        :type: Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccountPreviousOrder
+        """
+
+        self._previous_order = previous_order
+
+    @property
+    def payment_methods_count(self):
+        """
+        Gets the payment_methods_count of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        Number of Payment methods (all types) created on customer account
+
+        :return: The payment_methods_count of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        :rtype: float
+        """
+        return self._payment_methods_count
+
+    @payment_methods_count.setter
+    def payment_methods_count(self, payment_methods_count):
+        """
+        Sets the payment_methods_count of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        Number of Payment methods (all types) created on customer account
+
+        :param payment_methods_count: The payment_methods_count of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        :type: float
+        """
+
+        self._payment_methods_count = payment_methods_count
+
+    @property
+    def total_orders_count(self):
+        """
+        Gets the total_orders_count of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        Number of total orders made by this customer account
+
+        :return: The total_orders_count of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        :rtype: float
+        """
+        return self._total_orders_count
+
+    @total_orders_count.setter
+    def total_orders_count(self, total_orders_count):
+        """
+        Sets the total_orders_count of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        Number of total orders made by this customer account
+
+        :param total_orders_count: The total_orders_count of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        :type: float
+        """
+
+        self._total_orders_count = total_orders_count
+
+    @property
+    def proof_of_id_received(self):
+        """
+        Gets the proof_of_id_received of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        True if the customer provided a proof of any id
+
+        :return: The proof_of_id_received of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        :rtype: bool
+        """
+        return self._proof_of_id_received
+
+    @proof_of_id_received.setter
+    def proof_of_id_received(self, proof_of_id_received):
+        """
+        Sets the proof_of_id_received of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        True if the customer provided a proof of any id
+
+        :param proof_of_id_received: The proof_of_id_received of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        :type: bool
+        """
+
+        self._proof_of_id_received = proof_of_id_received
+
+    @property
+    def last_email_change_date(self):
+        """
+        Gets the last_email_change_date of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        Date of last email change. Format: 'YYYYMMDD' 
+
+        :return: The last_email_change_date of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        :rtype: str
+        """
+        return self._last_email_change_date
+
+    @last_email_change_date.setter
+    def last_email_change_date(self, last_email_change_date):
+        """
+        Sets the last_email_change_date of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        Date of last email change. Format: 'YYYYMMDD' 
+
+        :param last_email_change_date: The last_email_change_date of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
+        :type: str
+        """
+
+        self._last_email_change_date = last_email_change_date
 
     def to_dict(self):
         """

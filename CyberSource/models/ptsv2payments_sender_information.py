@@ -41,7 +41,8 @@ class Ptsv2paymentsSenderInformation(object):
         'reference_number': 'str',
         'account': 'Ptsv2paymentsSenderInformationAccount',
         'postal_code': 'str',
-        'tax_id_number': 'float'
+        'tax_id_number': 'float',
+        'email': 'str'
     }
 
     attribute_map = {
@@ -56,10 +57,11 @@ class Ptsv2paymentsSenderInformation(object):
         'reference_number': 'referenceNumber',
         'account': 'account',
         'postal_code': 'postalCode',
-        'tax_id_number': 'taxIdNumber'
+        'tax_id_number': 'taxIdNumber',
+        'email': 'email'
     }
 
-    def __init__(self, first_name=None, middle_name=None, last_name=None, address1=None, locality=None, administrative_area=None, country_code=None, alias_name=None, reference_number=None, account=None, postal_code=None, tax_id_number=None):
+    def __init__(self, first_name=None, middle_name=None, last_name=None, address1=None, locality=None, administrative_area=None, country_code=None, alias_name=None, reference_number=None, account=None, postal_code=None, tax_id_number=None, email=None):
         """
         Ptsv2paymentsSenderInformation - a model defined in Swagger
         """
@@ -76,6 +78,7 @@ class Ptsv2paymentsSenderInformation(object):
         self._account = None
         self._postal_code = None
         self._tax_id_number = None
+        self._email = None
 
         if first_name is not None:
           self.first_name = first_name
@@ -101,6 +104,8 @@ class Ptsv2paymentsSenderInformation(object):
           self.postal_code = postal_code
         if tax_id_number is not None:
           self.tax_id_number = tax_id_number
+        if email is not None:
+          self.email = email
 
     @property
     def first_name(self):
@@ -375,6 +380,29 @@ class Ptsv2paymentsSenderInformation(object):
         """
 
         self._tax_id_number = tax_id_number
+
+    @property
+    def email(self):
+        """
+        Gets the email of this Ptsv2paymentsSenderInformation.
+        Sender's email address, including the full domain name. 
+
+        :return: The email of this Ptsv2paymentsSenderInformation.
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this Ptsv2paymentsSenderInformation.
+        Sender's email address, including the full domain name. 
+
+        :param email: The email of this Ptsv2paymentsSenderInformation.
+        :type: str
+        """
+
+        self._email = email
 
     def to_dict(self):
         """

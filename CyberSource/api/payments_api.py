@@ -138,8 +138,10 @@ class PaymentsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'order_payment_request' in params:
@@ -151,7 +153,7 @@ class PaymentsApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_order_request,create_order_request_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_order_request,create_order_request_with_http_info")
 
@@ -258,8 +260,10 @@ class PaymentsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'create_payment_request' in params:
@@ -271,7 +275,7 @@ class PaymentsApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_payment,create_payment_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_payment,create_payment_with_http_info")
 
@@ -309,7 +313,7 @@ class PaymentsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreateSessionReq create_session_req: (required)
-        :return: PtsV2PaymentsPost201Response2
+        :return: CreateSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -338,7 +342,7 @@ class PaymentsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreateSessionReq create_session_req: (required)
-        :return: PtsV2PaymentsPost201Response2
+        :return: CreateSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -378,8 +382,10 @@ class PaymentsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'create_session_req' in params:
@@ -391,7 +397,7 @@ class PaymentsApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_session_request,create_session_request_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_session_request,create_session_request_with_http_info")
 
@@ -405,7 +411,7 @@ class PaymentsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='PtsV2PaymentsPost201Response2',
+                                        response_type='CreateSessionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -507,8 +513,10 @@ class PaymentsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'increment_auth_request' in params:
@@ -520,7 +528,7 @@ class PaymentsApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "increment_auth,increment_auth_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "increment_auth,increment_auth_with_http_info")
 
@@ -559,7 +567,7 @@ class PaymentsApi(object):
             for asynchronous request. (optional)
         :param str id: The payment id whose status needs to be checked and updated. (required)
         :param RefreshPaymentStatusRequest refresh_payment_status_request: (required)
-        :return: PtsV2PaymentsPost201Response1
+        :return: RefreshPaymentStatusResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -589,7 +597,7 @@ class PaymentsApi(object):
             for asynchronous request. (optional)
         :param str id: The payment id whose status needs to be checked and updated. (required)
         :param RefreshPaymentStatusRequest refresh_payment_status_request: (required)
-        :return: PtsV2PaymentsPost201Response1
+        :return: RefreshPaymentStatusResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -636,8 +644,10 @@ class PaymentsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'refresh_payment_status_request' in params:
@@ -649,7 +659,7 @@ class PaymentsApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "refresh_payment_status,refresh_payment_status_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "refresh_payment_status,refresh_payment_status_with_http_info")
 
@@ -663,7 +673,7 @@ class PaymentsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='PtsV2PaymentsPost201Response1',
+                                        response_type='RefreshPaymentStatusResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -688,7 +698,7 @@ class PaymentsApi(object):
             for asynchronous request. (optional)
         :param CreateSessionRequest create_session_request: (required)
         :param str id: The payment ID. This ID is returned from a previous payment request. (required)
-        :return: PtsV2PaymentsPost201Response2
+        :return: CreateSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -718,7 +728,7 @@ class PaymentsApi(object):
             for asynchronous request. (optional)
         :param CreateSessionRequest create_session_request: (required)
         :param str id: The payment ID. This ID is returned from a previous payment request. (required)
-        :return: PtsV2PaymentsPost201Response2
+        :return: CreateSessionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -765,8 +775,10 @@ class PaymentsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'create_session_request' in params:
@@ -778,7 +790,7 @@ class PaymentsApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "update_session_request,update_session_request_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "update_session_request,update_session_request_with_http_info")
 
@@ -792,7 +804,7 @@ class PaymentsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='PtsV2PaymentsPost201Response2',
+                                        response_type='CreateSessionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

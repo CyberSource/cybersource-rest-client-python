@@ -30,27 +30,55 @@ class Riskv1decisionsMerchantInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'category_code': 'str',
         'merchant_descriptor': 'Riskv1decisionsMerchantInformationMerchantDescriptor',
         'merchant_name': 'str'
     }
 
     attribute_map = {
+        'category_code': 'categoryCode',
         'merchant_descriptor': 'merchantDescriptor',
         'merchant_name': 'merchantName'
     }
 
-    def __init__(self, merchant_descriptor=None, merchant_name=None):
+    def __init__(self, category_code=None, merchant_descriptor=None, merchant_name=None):
         """
         Riskv1decisionsMerchantInformation - a model defined in Swagger
         """
 
+        self._category_code = None
         self._merchant_descriptor = None
         self._merchant_name = None
 
+        if category_code is not None:
+          self.category_code = category_code
         if merchant_descriptor is not None:
           self.merchant_descriptor = merchant_descriptor
         if merchant_name is not None:
           self.merchant_name = merchant_name
+
+    @property
+    def category_code(self):
+        """
+        Gets the category_code of this Riskv1decisionsMerchantInformation.
+        MCC code of the merchant or transaction
+
+        :return: The category_code of this Riskv1decisionsMerchantInformation.
+        :rtype: str
+        """
+        return self._category_code
+
+    @category_code.setter
+    def category_code(self, category_code):
+        """
+        Sets the category_code of this Riskv1decisionsMerchantInformation.
+        MCC code of the merchant or transaction
+
+        :param category_code: The category_code of this Riskv1decisionsMerchantInformation.
+        :type: str
+        """
+
+        self._category_code = category_code
 
     @property
     def merchant_descriptor(self):

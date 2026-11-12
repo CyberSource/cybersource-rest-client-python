@@ -44,7 +44,7 @@ class PostPaymentInstrumentRequest(object):
         'merchant_information': 'TmsMerchantInformation',
         'instrument_identifier': 'DefaultPaymentInstrumentInstrumentIdentifier',
         'metadata': 'DefaultPaymentInstrumentMetadata',
-        'embedded': 'Tmsv1paymentinstrumentsEmbedded'
+        'embedded': 'PaymentInstrumentEmbedded2'
     }
 
     attribute_map = {
@@ -427,7 +427,7 @@ class PostPaymentInstrumentRequest(object):
         Gets the embedded of this PostPaymentInstrumentRequest.
 
         :return: The embedded of this PostPaymentInstrumentRequest.
-        :rtype: Tmsv1paymentinstrumentsEmbedded
+        :rtype: PaymentInstrumentEmbedded2
         """
         return self._embedded
 
@@ -437,7 +437,7 @@ class PostPaymentInstrumentRequest(object):
         Sets the embedded of this PostPaymentInstrumentRequest.
 
         :param embedded: The embedded of this PostPaymentInstrumentRequest.
-        :type: Tmsv1paymentinstrumentsEmbedded
+        :type: PaymentInstrumentEmbedded2
         """
 
         self._embedded = embedded

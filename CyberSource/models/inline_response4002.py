@@ -30,11 +30,11 @@ class InlineResponse4002(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
+        'submit_time_utc': 'datetime',
         'status': 'str',
         'reason': 'str',
         'message': 'str',
-        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
+        'details': 'list[InlineResponse4002Details]'
     }
 
     attribute_map = {
@@ -71,10 +71,10 @@ class InlineResponse4002(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this InlineResponse4002.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
 
         :return: The submit_time_utc of this InlineResponse4002.
-        :rtype: str
+        :rtype: datetime
         """
         return self._submit_time_utc
 
@@ -82,10 +82,10 @@ class InlineResponse4002(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this InlineResponse4002.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
 
         :param submit_time_utc: The submit_time_utc of this InlineResponse4002.
-        :type: str
+        :type: datetime
         """
 
         self._submit_time_utc = submit_time_utc
@@ -94,7 +94,7 @@ class InlineResponse4002(object):
     def status(self):
         """
         Gets the status of this InlineResponse4002.
-        The status of the submitted transaction. Possible values: - `INVALID_REQUEST` 
+        The http status description of the submitted request.
 
         :return: The status of this InlineResponse4002.
         :rtype: str
@@ -105,7 +105,7 @@ class InlineResponse4002(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse4002.
-        The status of the submitted transaction. Possible values: - `INVALID_REQUEST` 
+        The http status description of the submitted request.
 
         :param status: The status of this InlineResponse4002.
         :type: str
@@ -117,7 +117,7 @@ class InlineResponse4002(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse4002.
-        The reason of the status. Possible Values: - `INVALID_DATA` 
+        Documented reason codes. Client should be able to use the key for generating their own error message Possible Values:   - 'INVALID_DATA'   - 'SYSTEM_ERROR'   - 'RESOURCE_NOT_FOUND' 
 
         :return: The reason of this InlineResponse4002.
         :rtype: str
@@ -128,7 +128,7 @@ class InlineResponse4002(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse4002.
-        The reason of the status. Possible Values: - `INVALID_DATA` 
+        Documented reason codes. Client should be able to use the key for generating their own error message Possible Values:   - 'INVALID_DATA'   - 'SYSTEM_ERROR'   - 'RESOURCE_NOT_FOUND' 
 
         :param reason: The reason of this InlineResponse4002.
         :type: str
@@ -140,7 +140,7 @@ class InlineResponse4002(object):
     def message(self):
         """
         Gets the message of this InlineResponse4002.
-        Input request error.
+        Descriptive message for the error.
 
         :return: The message of this InlineResponse4002.
         :rtype: str
@@ -151,7 +151,7 @@ class InlineResponse4002(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse4002.
-        Input request error.
+        Descriptive message for the error.
 
         :param message: The message of this InlineResponse4002.
         :type: str
@@ -165,7 +165,7 @@ class InlineResponse4002(object):
         Gets the details of this InlineResponse4002.
 
         :return: The details of this InlineResponse4002.
-        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        :rtype: list[InlineResponse4002Details]
         """
         return self._details
 
@@ -175,7 +175,7 @@ class InlineResponse4002(object):
         Sets the details of this InlineResponse4002.
 
         :param details: The details of this InlineResponse4002.
-        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        :type: list[InlineResponse4002Details]
         """
 
         self._details = details

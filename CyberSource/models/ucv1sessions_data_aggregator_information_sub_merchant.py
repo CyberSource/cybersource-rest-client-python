@@ -124,7 +124,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def id(self):
         """
         Gets the id of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        The ID you assigned to your sub-merchant. CyberSource through VisaNet: For American Express transaction, the value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCRB - Position: 65-84 - Field: American Express Seller ID For  Mastercard transactions, the value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR6 - Position: 117-131 - Field: Sub-Merchant ID FDC Compass: This value must consist of uppercase characters.  American Express Direct: String (20) CyberSource through VisaNet with American Express: String (20) CyberSource through VisaNet with Visa,Mastercard and Discover: String (15) FDC Compass: String (20) FDC Nashville Global: String (14) 
+        The ID you assigned to your sub-merchant.  American Express Direct: String (20) 
 
         :return: The id of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :rtype: str
@@ -135,7 +135,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def id(self, id):
         """
         Sets the id of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        The ID you assigned to your sub-merchant. CyberSource through VisaNet: For American Express transaction, the value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCRB - Position: 65-84 - Field: American Express Seller ID For  Mastercard transactions, the value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR6 - Position: 117-131 - Field: Sub-Merchant ID FDC Compass: This value must consist of uppercase characters.  American Express Direct: String (20) CyberSource through VisaNet with American Express: String (20) CyberSource through VisaNet with Visa,Mastercard and Discover: String (15) FDC Compass: String (20) FDC Nashville Global: String (14) 
+        The ID you assigned to your sub-merchant.  American Express Direct: String (20) 
 
         :param id: The id of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :type: str
@@ -147,7 +147,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def name(self):
         """
         Gets the name of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        Sub-merchant's business name.  #### American Express Direct The maximum length of the sub-merchant name depends on the length of the aggregator name. The combined length for both values must not exceed 36 characters.  #### CyberSource through VisaNet With American Express, the maximum length of the sub-merchant name depends on the length of the aggregator name. The combined length for both values must not exceed 36 characters. The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters.  #### FDC Nashville Global With Mastercard, the maximum length of the sub-merchant name depends on the length of the aggregator name: - If aggregator name length is 1 through 3, maximum sub-merchant name length is 21. - If aggregator name length is 4 through 7, maximum sub-merchant name length is 17. - If aggregator name length is 8 through 12, maximum sub-merchant name length is 12. 
+        Sub-merchant's business name.  #### American Express Direct The maximum length of the sub-merchant name depends on the length of the aggregator name. The combined length for both values must not exceed 36 characters. 
 
         :return: The name of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :rtype: str
@@ -158,7 +158,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def name(self, name):
         """
         Sets the name of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        Sub-merchant's business name.  #### American Express Direct The maximum length of the sub-merchant name depends on the length of the aggregator name. The combined length for both values must not exceed 36 characters.  #### CyberSource through VisaNet With American Express, the maximum length of the sub-merchant name depends on the length of the aggregator name. The combined length for both values must not exceed 36 characters. The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters.  #### FDC Nashville Global With Mastercard, the maximum length of the sub-merchant name depends on the length of the aggregator name: - If aggregator name length is 1 through 3, maximum sub-merchant name length is 21. - If aggregator name length is 4 through 7, maximum sub-merchant name length is 17. - If aggregator name length is 8 through 12, maximum sub-merchant name length is 12. 
+        Sub-merchant's business name.  #### American Express Direct The maximum length of the sub-merchant name depends on the length of the aggregator name. The combined length for both values must not exceed 36 characters. 
 
         :param name: The name of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :type: str
@@ -170,7 +170,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def address1(self):
         """
         Gets the address1 of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        First line of the sub-merchant's street address.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        First line of the sub-merchant's street address. 
 
         :return: The address1 of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :rtype: str
@@ -181,7 +181,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def address1(self, address1):
         """
         Sets the address1 of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        First line of the sub-merchant's street address.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        First line of the sub-merchant's street address. 
 
         :param address1: The address1 of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :type: str
@@ -193,7 +193,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def locality(self):
         """
         Gets the locality of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        Sub-merchant's city.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's city. 
 
         :return: The locality of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :rtype: str
@@ -204,7 +204,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def locality(self, locality):
         """
         Sets the locality of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        Sub-merchant's city.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's city. 
 
         :param locality: The locality of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :type: str
@@ -216,7 +216,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def administrative_area(self):
         """
         Gets the administrative_area of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        Sub-merchant's state or province.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's state or province. 
 
         :return: The administrative_area of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :rtype: str
@@ -227,7 +227,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        Sub-merchant's state or province.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's state or province. 
 
         :param administrative_area: The administrative_area of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :type: str
@@ -262,7 +262,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def postal_code(self):
         """
         Gets the postal_code of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        Partial postal code for the sub-merchant's address.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        Partial postal code for the sub-merchant's address. 
 
         :return: The postal_code of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :rtype: str
@@ -273,7 +273,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        Partial postal code for the sub-merchant's address.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        Partial postal code for the sub-merchant's address. 
 
         :param postal_code: The postal_code of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :type: str
@@ -285,7 +285,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def country(self):
         """
         Gets the country of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        Sub-merchant's country. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf).  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file.  #### FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's country. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf). 
 
         :return: The country of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :rtype: str
@@ -296,7 +296,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def country(self, country):
         """
         Sets the country of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        Sub-merchant's country. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf).  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file.  #### FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's country. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf). 
 
         :param country: The country of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :type: str
@@ -308,7 +308,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def email(self):
         """
         Gets the email of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        Sub-merchant's email address.  **Maximum length for processors**   - American Express Direct: 40  - CyberSource through VisaNet: 40  - FDC Compass: 40  - FDC Nashville Global: 19  #### CyberSource through VisaNet With American Express, the value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCRB - Position: 25-64 - Field: American Express Seller E-mail Address  **Note** The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant's acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies. 
+        Sub-merchant's email address.  **Maximum length for processors**   - American Express Direct: 40 
 
         :return: The email of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :rtype: str
@@ -319,7 +319,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def email(self, email):
         """
         Sets the email of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        Sub-merchant's email address.  **Maximum length for processors**   - American Express Direct: 40  - CyberSource through VisaNet: 40  - FDC Compass: 40  - FDC Nashville Global: 19  #### CyberSource through VisaNet With American Express, the value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCRB - Position: 25-64 - Field: American Express Seller E-mail Address  **Note** The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant's acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies. 
+        Sub-merchant's email address.  **Maximum length for processors**   - American Express Direct: 40 
 
         :param email: The email of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :type: str
@@ -331,7 +331,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def phone_number(self):
         """
         Gets the phone_number of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        Sub-merchant's telephone number.  **Maximum length for procesors**   - American Express Direct: 20  - CyberSource through VisaNet: 20  - FDC Compass: 13  - FDC Nashville Global: 10  #### CyberSource through VisaNet With American Express, the value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCRB - Position: 5-24 - Field: American Express Seller Telephone Number  **FDC Compass**\\ This value must consist of uppercase characters. Use one of these recommended formats:\\ `NNN-NNN-NNNN`\\ `NNN-AAAAAAA` 
+        Sub-merchant's telephone number.  **Maximum length for procesors**   - American Express Direct: 20 
 
         :return: The phone_number of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :rtype: str
@@ -342,7 +342,7 @@ class Ucv1sessionsDataAggregatorInformationSubMerchant(object):
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this Ucv1sessionsDataAggregatorInformationSubMerchant.
-        Sub-merchant's telephone number.  **Maximum length for procesors**   - American Express Direct: 20  - CyberSource through VisaNet: 20  - FDC Compass: 13  - FDC Nashville Global: 10  #### CyberSource through VisaNet With American Express, the value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCRB - Position: 5-24 - Field: American Express Seller Telephone Number  **FDC Compass**\\ This value must consist of uppercase characters. Use one of these recommended formats:\\ `NNN-NNN-NNNN`\\ `NNN-AAAAAAA` 
+        Sub-merchant's telephone number.  **Maximum length for procesors**   - American Express Direct: 20 
 
         :param phone_number: The phone_number of this Ucv1sessionsDataAggregatorInformationSubMerchant.
         :type: str

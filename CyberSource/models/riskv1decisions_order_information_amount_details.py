@@ -31,23 +31,28 @@ class Riskv1decisionsOrderInformationAmountDetails(object):
     """
     swagger_types = {
         'currency': 'str',
+        'discount_amount': 'str',
         'total_amount': 'str'
     }
 
     attribute_map = {
         'currency': 'currency',
+        'discount_amount': 'discountAmount',
         'total_amount': 'totalAmount'
     }
 
-    def __init__(self, currency=None, total_amount=None):
+    def __init__(self, currency=None, discount_amount=None, total_amount=None):
         """
         Riskv1decisionsOrderInformationAmountDetails - a model defined in Swagger
         """
 
         self._currency = None
+        self._discount_amount = None
         self._total_amount = None
 
         self.currency = currency
+        if discount_amount is not None:
+          self.discount_amount = discount_amount
         if total_amount is not None:
           self.total_amount = total_amount
 
@@ -73,6 +78,29 @@ class Riskv1decisionsOrderInformationAmountDetails(object):
         """
 
         self._currency = currency
+
+    @property
+    def discount_amount(self):
+        """
+        Gets the discount_amount of this Riskv1decisionsOrderInformationAmountDetails.
+        Total discount amount applied to the order 
+
+        :return: The discount_amount of this Riskv1decisionsOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._discount_amount
+
+    @discount_amount.setter
+    def discount_amount(self, discount_amount):
+        """
+        Sets the discount_amount of this Riskv1decisionsOrderInformationAmountDetails.
+        Total discount amount applied to the order 
+
+        :param discount_amount: The discount_amount of this Riskv1decisionsOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._discount_amount = discount_amount
 
     @property
     def total_amount(self):

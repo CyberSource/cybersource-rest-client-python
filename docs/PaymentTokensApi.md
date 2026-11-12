@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **retrieve_or_delete_payment_token**
-> InlineResponse201 retrieve_or_delete_payment_token(request)
+> RetrieveOrDeletePaymentTokenResponse retrieve_or_delete_payment_token(payment_token_request)
 
 Retrieve or Delete Payment Token
 
@@ -24,11 +24,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.PaymentTokensApi()
-request = CyberSource.Request() # Request | 
+payment_token_request = CyberSource.PaymentTokenRequest() # PaymentTokenRequest | 
 
 try: 
     # Retrieve or Delete Payment Token
-    api_response = api_instance.retrieve_or_delete_payment_token(request)
+    api_response = api_instance.retrieve_or_delete_payment_token(payment_token_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentTokensApi->retrieve_or_delete_payment_token: %s\n" % e)
@@ -38,11 +38,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**Request**](Request.md)|  | 
+ **payment_token_request** | [**PaymentTokenRequest**](PaymentTokenRequest.md)|  | 
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**RetrieveOrDeletePaymentTokenResponse**](RetrieveOrDeletePaymentTokenResponse.md)
 
 ### Authorization
 

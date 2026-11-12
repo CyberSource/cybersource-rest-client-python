@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **shipping_discount_amount** | **str** | Shipping discount amount for the transaction.   | [optional] 
 **tax_amount** | **str** | Total tax amount.   | [optional] 
 **insurance_amount** | **str** | Amount being charged for the insurance fee.   | [optional] 
-**duty_amount** | **str** | Amount being charged as duty amount.              | [optional] 
+**duty_amount** | **str** | Amount being charged as duty amount.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

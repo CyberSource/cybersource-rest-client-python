@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **tokenize**
-> InlineResponse200 tokenize(post_tokenize_request, profile_id=profile_id)
+> PostTokenizeResponse tokenize(post_tokenize_request, profile_id=profile_id)
 
 Tokenize
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**PostTokenizeResponse**](PostTokenizeResponse.md)
 
 ### Authorization
 

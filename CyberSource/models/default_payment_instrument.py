@@ -44,7 +44,7 @@ class DefaultPaymentInstrument(object):
         'merchant_information': 'TmsMerchantInformation',
         'instrument_identifier': 'DefaultPaymentInstrumentInstrumentIdentifier',
         'metadata': 'DefaultPaymentInstrumentMetadata',
-        'embedded': 'DefaultPaymentInstrumentEmbedded'
+        'embedded': 'PaymentInstrumentEmbedded'
     }
 
     attribute_map = {
@@ -427,7 +427,7 @@ class DefaultPaymentInstrument(object):
         Gets the embedded of this DefaultPaymentInstrument.
 
         :return: The embedded of this DefaultPaymentInstrument.
-        :rtype: DefaultPaymentInstrumentEmbedded
+        :rtype: PaymentInstrumentEmbedded
         """
         return self._embedded
 
@@ -437,7 +437,7 @@ class DefaultPaymentInstrument(object):
         Sets the embedded of this DefaultPaymentInstrument.
 
         :param embedded: The embedded of this DefaultPaymentInstrument.
-        :type: DefaultPaymentInstrumentEmbedded
+        :type: PaymentInstrumentEmbedded
         """
 
         self._embedded = embedded

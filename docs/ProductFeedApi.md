@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **get_all_products**
-> InlineResponse20020 get_all_products(get_all_products_request, page=page, size=size)
+> ProductCatalogResponse get_all_products(get_all_products_request, page=page, size=size)
 
 Get All Products
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**ProductCatalogResponse**](ProductCatalogResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_feed_job_status**
-> InlineResponse20019 get_feed_job_status(job_id, get_feed_job_status_request)
+> FeedJobStatusResponse get_feed_job_status(job_id, get_feed_job_status_request)
 
 Get Feed Job Status
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20019**](InlineResponse20019.md)
+[**FeedJobStatusResponse**](FeedJobStatusResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_product**
-> InlineResponse20021 get_product(product_id, get_product_request)
+> ProductDetailResponse get_product(product_id, get_product_request)
 
 Get Product by ID
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20021**](InlineResponse20021.md)
+[**ProductDetailResponse**](ProductDetailResponse.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **submit_product_feed_json**
-> InlineResponse2021 submit_product_feed_json(product_feed_request)
+> ProductAcceptedFeedResponse submit_product_feed_json(product_feed_request)
 
 Ingest Product Feed
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2021**](InlineResponse2021.md)
+[**ProductAcceptedFeedResponse**](ProductAcceptedFeedResponse.md)
 
 ### Authorization
 

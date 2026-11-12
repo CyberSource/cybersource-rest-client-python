@@ -30,12 +30,12 @@ class PaymentInstrumentList(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'PaymentInstrumentListLinks',
+        'links': 'InstrumentIdentifierPaymentInstrumentListLinks',
         'offset': 'int',
         'limit': 'int',
         'count': 'int',
         'total': 'int',
-        'embedded': 'PaymentInstrumentListEmbedded'
+        'embedded': 'InstrumentIdentifierPaymentInstrumentListEmbedded'
     }
 
     attribute_map = {
@@ -78,7 +78,7 @@ class PaymentInstrumentList(object):
         Gets the links of this PaymentInstrumentList.
 
         :return: The links of this PaymentInstrumentList.
-        :rtype: PaymentInstrumentListLinks
+        :rtype: InstrumentIdentifierPaymentInstrumentListLinks
         """
         return self._links
 
@@ -88,7 +88,7 @@ class PaymentInstrumentList(object):
         Sets the links of this PaymentInstrumentList.
 
         :param links: The links of this PaymentInstrumentList.
-        :type: PaymentInstrumentListLinks
+        :type: InstrumentIdentifierPaymentInstrumentListLinks
         """
 
         self._links = links
@@ -191,7 +191,7 @@ class PaymentInstrumentList(object):
         Gets the embedded of this PaymentInstrumentList.
 
         :return: The embedded of this PaymentInstrumentList.
-        :rtype: PaymentInstrumentListEmbedded
+        :rtype: InstrumentIdentifierPaymentInstrumentListEmbedded
         """
         return self._embedded
 
@@ -201,7 +201,7 @@ class PaymentInstrumentList(object):
         Sets the embedded of this PaymentInstrumentList.
 
         :param embedded: The embedded of this PaymentInstrumentList.
-        :type: PaymentInstrumentListEmbedded
+        :type: InstrumentIdentifierPaymentInstrumentListEmbedded
         """
 
         self._embedded = embedded

@@ -76,7 +76,7 @@ class MLEUtility:
         return is_response_mle_for_api
 
     @staticmethod
-    def encrypt_request_payload(merchant_config, request_body):
+    def encrypt_request_payload(merchant_config, request_body, content_type=None):
         if MLEUtility.logger is None:
             MLEUtility.logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
         logger = MLEUtility.logger
@@ -121,6 +121,8 @@ class MLEUtility:
             "kid": serial_number,
             "iat": int(time.time())
         }
+        if isinstance(content_type, str) and content_type.strip() != "":
+            headers["cty"] = content_type
 
         # Create the JWE object and encrypt
         jwe_token = jwe.JWE(plaintext=payload_bytes, protected=json.dumps(headers))

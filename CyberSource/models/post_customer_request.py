@@ -39,7 +39,7 @@ class PostCustomerRequest(object):
         'default_payment_instrument': 'Tmsv2tokenizeTokenInformationCustomerDefaultPaymentInstrument',
         'default_shipping_address': 'Tmsv2tokenizeTokenInformationCustomerDefaultShippingAddress',
         'metadata': 'Tmsv2tokenizeTokenInformationCustomerMetadata',
-        'embedded': 'Tmsv2customersEmbedded'
+        'embedded': 'Tmsv2tokenizeTokenInformationCustomerEmbedded1'
     }
 
     attribute_map = {
@@ -291,7 +291,7 @@ class PostCustomerRequest(object):
         Gets the embedded of this PostCustomerRequest.
 
         :return: The embedded of this PostCustomerRequest.
-        :rtype: Tmsv2customersEmbedded
+        :rtype: Tmsv2tokenizeTokenInformationCustomerEmbedded1
         """
         return self._embedded
 
@@ -301,7 +301,7 @@ class PostCustomerRequest(object):
         Sets the embedded of this PostCustomerRequest.
 
         :param embedded: The embedded of this PostCustomerRequest.
-        :type: Tmsv2customersEmbedded
+        :type: Tmsv2tokenizeTokenInformationCustomerEmbedded1
         """
 
         self._embedded = embedded

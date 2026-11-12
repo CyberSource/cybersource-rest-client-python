@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **get_batch_report**
-> InlineResponse20014 get_batch_report(batch_id)
+> BatchReportResponse get_batch_report(batch_id)
 
 Retrieve a Batch Report
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**BatchReportResponse**](BatchReportResponse.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_batch_status**
-> InlineResponse20013 get_batch_status(batch_id)
+> BatchStatusResponse get_batch_status(batch_id)
 
 Retrieve a Batch Status
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**BatchStatusResponse**](BatchStatusResponse.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_batches_list**
-> InlineResponse20012 get_batches_list(offset=offset, limit=limit, from_date=from_date, to_date=to_date)
+> BatchesListResponse get_batches_list(offset=offset, limit=limit, from_date=from_date, to_date=to_date)
 
 List Batches
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**BatchesListResponse**](BatchesListResponse.md)
 
 ### Authorization
 
@@ -161,7 +161,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_batch**
-> InlineResponse202 post_batch(body)
+> BatchCreateResponse post_batch(post_batch_request)
 
 Create a Batch
 
@@ -177,11 +177,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.BatchesApi()
-body = CyberSource.Body() # Body | 
+post_batch_request = CyberSource.PostBatchRequest() # PostBatchRequest | 
 
 try: 
     # Create a Batch
-    api_response = api_instance.post_batch(body)
+    api_response = api_instance.post_batch(post_batch_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BatchesApi->post_batch: %s\n" % e)
@@ -191,11 +191,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body**](Body.md)|  | 
+ **post_batch_request** | [**PostBatchRequest**](PostBatchRequest.md)|  | 
 
 ### Return type
 
-[**InlineResponse202**](InlineResponse202.md)
+[**BatchCreateResponse**](BatchCreateResponse.md)
 
 ### Authorization
 

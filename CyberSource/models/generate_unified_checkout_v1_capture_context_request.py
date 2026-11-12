@@ -30,7 +30,6 @@ class GenerateUnifiedCheckoutV1CaptureContextRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_version': 'str',
         'target_origins': 'list[str]',
         'allowed_card_networks': 'list[str]',
         'allowed_payment_types': 'list[str]',
@@ -46,7 +45,6 @@ class GenerateUnifiedCheckoutV1CaptureContextRequest(object):
     }
 
     attribute_map = {
-        'client_version': 'clientVersion',
         'target_origins': 'targetOrigins',
         'allowed_card_networks': 'allowedCardNetworks',
         'allowed_payment_types': 'allowedPaymentTypes',
@@ -61,12 +59,11 @@ class GenerateUnifiedCheckoutV1CaptureContextRequest(object):
         'data': 'data'
     }
 
-    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, allowed_payment_types=None, payment_configurations=None, appearance=None, country=None, locale=None, button_type=None, capture_mandate=None, complete_mandate=None, transient_token_response_options=None, data=None):
+    def __init__(self, target_origins=None, allowed_card_networks=None, allowed_payment_types=None, payment_configurations=None, appearance=None, country=None, locale=None, button_type=None, capture_mandate=None, complete_mandate=None, transient_token_response_options=None, data=None):
         """
         GenerateUnifiedCheckoutV1CaptureContextRequest - a model defined in Swagger
         """
 
-        self._client_version = None
         self._target_origins = None
         self._allowed_card_networks = None
         self._allowed_payment_types = None
@@ -80,8 +77,6 @@ class GenerateUnifiedCheckoutV1CaptureContextRequest(object):
         self._transient_token_response_options = None
         self._data = None
 
-        if client_version is not None:
-          self.client_version = client_version
         if target_origins is not None:
           self.target_origins = target_origins
         if allowed_card_networks is not None:
@@ -106,29 +101,6 @@ class GenerateUnifiedCheckoutV1CaptureContextRequest(object):
           self.transient_token_response_options = transient_token_response_options
         if data is not None:
           self.data = data
-
-    @property
-    def client_version(self):
-        """
-        Gets the client_version of this GenerateUnifiedCheckoutV1CaptureContextRequest.
-        This field is used to specify the Unified Checkout API version your integration should use.  The recommended approach is to omit this field from the uc/v1/sessions API request.  When omitted, Unified Checkout automatically uses the latest available version, ensuring access to the most recent enhancements and updates without requiring integration changes. If included, the value must be provided in Major.Minor format (for example, 1.1 or 1.2).<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center but can be provided in the uc/v1/sessions API request. 
-
-        :return: The client_version of this GenerateUnifiedCheckoutV1CaptureContextRequest.
-        :rtype: str
-        """
-        return self._client_version
-
-    @client_version.setter
-    def client_version(self, client_version):
-        """
-        Sets the client_version of this GenerateUnifiedCheckoutV1CaptureContextRequest.
-        This field is used to specify the Unified Checkout API version your integration should use.  The recommended approach is to omit this field from the uc/v1/sessions API request.  When omitted, Unified Checkout automatically uses the latest available version, ensuring access to the most recent enhancements and updates without requiring integration changes. If included, the value must be provided in Major.Minor format (for example, 1.1 or 1.2).<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center but can be provided in the uc/v1/sessions API request. 
-
-        :param client_version: The client_version of this GenerateUnifiedCheckoutV1CaptureContextRequest.
-        :type: str
-        """
-
-        self._client_version = client_version
 
     @property
     def target_origins(self):
@@ -180,7 +152,7 @@ class GenerateUnifiedCheckoutV1CaptureContextRequest(object):
     def allowed_payment_types(self):
         """
         Gets the allowed_payment_types of this GenerateUnifiedCheckoutV1CaptureContextRequest.
-        The payment types that are allowed for the merchant.    Possible values when launching Unified Checkout:   - APPLEPAY   - CHECK   - CLICKTOPAY   - GOOGLEPAY   - PANENTRY                 - PAZE    - TMS_TOKEN<br><br>  Unified Checkout supports the following wallet based payment methods:   - PayPal v2: PAYPAL   - Venmo: VENMO <br><br>  Unified Checkout supports the following Buy Now, Pay Later (BNPL) payment methods:   - Affirm (US): AFFIRM   - Cash App Afterpay (US): AFTERPAY   - Clearpay (GB): AFTERPAY   - Afterpay (CA, AU, NZ): AFTERPAY<br><br>  Unified Checkout supports the following Online Bank Transfer payment methods:   - Bancontact (BE): BANCONTACT   - DragonPay (PH): DRAGONPAY   - iDEAL (NL): IDEAL   - Multibanco (PT): MULTIBANCO   - MyBank (IT, BE, PT, ES): MYBANK    - Przelewy24|P24 (PL): PRZELEWY24   - Tink Pay By Bank (DE, ES, FR, GB, IE, NL): TINKPAYBYBANK<br><br>  Unified Checkout supports the following Post-Pay Reference payment methods:   - Konbini (JP): KONBINI<br><br>  Possible values when launching Click To Pay Drop-In UI: - CLICKTOPAY  - PANENTRY <br><br>  **Important:**    - CLICKTOPAY only available for Visa, Mastercard and AMEX for saved cards.   - Visa and Mastercard will look to tokenize using network tokenization for all Click to Pay requests.  Click to Pay uses Click to Pay token requester IDs and not the merchant's existing token requester.   - Apple Pay, Google Pay, Check, and Paze can be used independently without requiring PAN entry in the allowedPaymentTypes field.<br><br>  Optional field:   This field can be configured through the Merchant Experience Screens in the Business Center.  The configured value may be overridden on a per transaction basis in the uc/v1/sessions API request. 
+        The payment types that are allowed for the merchant.    Possible values when launching Unified Checkout:   - APPLEPAY   - CHECK   - CLICKTOPAY   - GOOGLEPAY   - PANENTRY                 - PAZE    - TMS_TOKEN<br><br>  Unified Checkout supports the following wallet based payment methods:   - PayPal v2: PAYPAL   - Venmo: VENMO <br><br>  Unified Checkout supports the following Buy Now, Pay Later (BNPL) payment methods:   - Affirm (US): AFFIRM   - Cash App Afterpay (US): AFTERPAY   - Clearpay (GB): AFTERPAY   - Afterpay (CA, AU, NZ): AFTERPAY<br><br>  Unified Checkout supports the following Online Bank Transfer payment methods:   - Bancontact (BE): BANCONTACT   - DragonPay (PH): DRAGONPAY   - iDEAL (NL): IDEAL   - Multibanco (PT): MULTIBANCO   - MyBank (IT, BE, PT, ES): MYBANK    - Przelewy24|P24 (PL): PRZELEWY24   - Tink Pay By Bank (DE, ES, FR, GB, IE, NL): TINKPAYBYBANK<br><br>  Possible values when launching Click To Pay Drop-In UI: - CLICKTOPAY  - PANENTRY <br><br>  **Important:**    - CLICKTOPAY only available for Visa, Mastercard and AMEX for saved cards.   - Visa and Mastercard will look to tokenize using network tokenization for all Click to Pay requests.  Click to Pay uses Click to Pay token requester IDs and not the merchant's existing token requester.   - Apple Pay, Google Pay, Check, and Paze can be used independently without requiring PAN entry in the allowedPaymentTypes field.<br><br>  Optional field:   This field can be configured through the Merchant Experience Screens in the Business Center.  The configured value may be overridden on a per transaction basis in the uc/v1/sessions API request. 
 
         :return: The allowed_payment_types of this GenerateUnifiedCheckoutV1CaptureContextRequest.
         :rtype: list[str]
@@ -191,7 +163,7 @@ class GenerateUnifiedCheckoutV1CaptureContextRequest(object):
     def allowed_payment_types(self, allowed_payment_types):
         """
         Sets the allowed_payment_types of this GenerateUnifiedCheckoutV1CaptureContextRequest.
-        The payment types that are allowed for the merchant.    Possible values when launching Unified Checkout:   - APPLEPAY   - CHECK   - CLICKTOPAY   - GOOGLEPAY   - PANENTRY                 - PAZE    - TMS_TOKEN<br><br>  Unified Checkout supports the following wallet based payment methods:   - PayPal v2: PAYPAL   - Venmo: VENMO <br><br>  Unified Checkout supports the following Buy Now, Pay Later (BNPL) payment methods:   - Affirm (US): AFFIRM   - Cash App Afterpay (US): AFTERPAY   - Clearpay (GB): AFTERPAY   - Afterpay (CA, AU, NZ): AFTERPAY<br><br>  Unified Checkout supports the following Online Bank Transfer payment methods:   - Bancontact (BE): BANCONTACT   - DragonPay (PH): DRAGONPAY   - iDEAL (NL): IDEAL   - Multibanco (PT): MULTIBANCO   - MyBank (IT, BE, PT, ES): MYBANK    - Przelewy24|P24 (PL): PRZELEWY24   - Tink Pay By Bank (DE, ES, FR, GB, IE, NL): TINKPAYBYBANK<br><br>  Unified Checkout supports the following Post-Pay Reference payment methods:   - Konbini (JP): KONBINI<br><br>  Possible values when launching Click To Pay Drop-In UI: - CLICKTOPAY  - PANENTRY <br><br>  **Important:**    - CLICKTOPAY only available for Visa, Mastercard and AMEX for saved cards.   - Visa and Mastercard will look to tokenize using network tokenization for all Click to Pay requests.  Click to Pay uses Click to Pay token requester IDs and not the merchant's existing token requester.   - Apple Pay, Google Pay, Check, and Paze can be used independently without requiring PAN entry in the allowedPaymentTypes field.<br><br>  Optional field:   This field can be configured through the Merchant Experience Screens in the Business Center.  The configured value may be overridden on a per transaction basis in the uc/v1/sessions API request. 
+        The payment types that are allowed for the merchant.    Possible values when launching Unified Checkout:   - APPLEPAY   - CHECK   - CLICKTOPAY   - GOOGLEPAY   - PANENTRY                 - PAZE    - TMS_TOKEN<br><br>  Unified Checkout supports the following wallet based payment methods:   - PayPal v2: PAYPAL   - Venmo: VENMO <br><br>  Unified Checkout supports the following Buy Now, Pay Later (BNPL) payment methods:   - Affirm (US): AFFIRM   - Cash App Afterpay (US): AFTERPAY   - Clearpay (GB): AFTERPAY   - Afterpay (CA, AU, NZ): AFTERPAY<br><br>  Unified Checkout supports the following Online Bank Transfer payment methods:   - Bancontact (BE): BANCONTACT   - DragonPay (PH): DRAGONPAY   - iDEAL (NL): IDEAL   - Multibanco (PT): MULTIBANCO   - MyBank (IT, BE, PT, ES): MYBANK    - Przelewy24|P24 (PL): PRZELEWY24   - Tink Pay By Bank (DE, ES, FR, GB, IE, NL): TINKPAYBYBANK<br><br>  Possible values when launching Click To Pay Drop-In UI: - CLICKTOPAY  - PANENTRY <br><br>  **Important:**    - CLICKTOPAY only available for Visa, Mastercard and AMEX for saved cards.   - Visa and Mastercard will look to tokenize using network tokenization for all Click to Pay requests.  Click to Pay uses Click to Pay token requester IDs and not the merchant's existing token requester.   - Apple Pay, Google Pay, Check, and Paze can be used independently without requiring PAN entry in the allowedPaymentTypes field.<br><br>  Optional field:   This field can be configured through the Merchant Experience Screens in the Business Center.  The configured value may be overridden on a per transaction basis in the uc/v1/sessions API request. 
 
         :param allowed_payment_types: The allowed_payment_types of this GenerateUnifiedCheckoutV1CaptureContextRequest.
         :type: list[str]

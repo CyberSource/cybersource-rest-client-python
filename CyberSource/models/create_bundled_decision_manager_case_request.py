@@ -39,11 +39,14 @@ class CreateBundledDecisionManagerCaseRequest(object):
         'device_information': 'Riskv1decisionsDeviceInformation',
         'risk_information': 'Riskv1decisionsRiskInformation',
         'travel_information': 'Riskv1decisionsTravelInformation',
+        'recipient_information': 'Riskv1decisionsRecipientInformation',
+        'sender_information': 'Riskv1decisionsSenderInformation',
+        'aggregator_information': 'Riskv1decisionsAggregatorInformation',
         'merchant_defined_information': 'list[Riskv1decisionsMerchantDefinedInformation]',
         'merchant_information': 'Riskv1decisionsMerchantInformation',
         'acquirer_information': 'Riskv1decisionsAcquirerInformation',
         'recurring_payment_information': 'Ptsv2paymentsRecurringPaymentInformation',
-        'consumer_authentication_information': 'Riskv1decisionsConsumerAuthenticationInformation',
+        'consumer_authentication_information': 'Riskv1decisionsBundledConsumerAuthenticationInformation',
         'watchlist_screening_information': 'Ptsv2paymentsWatchlistScreeningInformation',
         'token_information': 'Riskv1decisionsTokenInformation'
     }
@@ -58,6 +61,9 @@ class CreateBundledDecisionManagerCaseRequest(object):
         'device_information': 'deviceInformation',
         'risk_information': 'riskInformation',
         'travel_information': 'travelInformation',
+        'recipient_information': 'recipientInformation',
+        'sender_information': 'senderInformation',
+        'aggregator_information': 'aggregatorInformation',
         'merchant_defined_information': 'merchantDefinedInformation',
         'merchant_information': 'merchantInformation',
         'acquirer_information': 'acquirerInformation',
@@ -67,7 +73,7 @@ class CreateBundledDecisionManagerCaseRequest(object):
         'token_information': 'tokenInformation'
     }
 
-    def __init__(self, client_reference_information=None, processor_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, risk_information=None, travel_information=None, merchant_defined_information=None, merchant_information=None, acquirer_information=None, recurring_payment_information=None, consumer_authentication_information=None, watchlist_screening_information=None, token_information=None):
+    def __init__(self, client_reference_information=None, processor_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, risk_information=None, travel_information=None, recipient_information=None, sender_information=None, aggregator_information=None, merchant_defined_information=None, merchant_information=None, acquirer_information=None, recurring_payment_information=None, consumer_authentication_information=None, watchlist_screening_information=None, token_information=None):
         """
         CreateBundledDecisionManagerCaseRequest - a model defined in Swagger
         """
@@ -81,6 +87,9 @@ class CreateBundledDecisionManagerCaseRequest(object):
         self._device_information = None
         self._risk_information = None
         self._travel_information = None
+        self._recipient_information = None
+        self._sender_information = None
+        self._aggregator_information = None
         self._merchant_defined_information = None
         self._merchant_information = None
         self._acquirer_information = None
@@ -106,6 +115,12 @@ class CreateBundledDecisionManagerCaseRequest(object):
           self.risk_information = risk_information
         if travel_information is not None:
           self.travel_information = travel_information
+        if recipient_information is not None:
+          self.recipient_information = recipient_information
+        if sender_information is not None:
+          self.sender_information = sender_information
+        if aggregator_information is not None:
+          self.aggregator_information = aggregator_information
         if merchant_defined_information is not None:
           self.merchant_defined_information = merchant_defined_information
         if merchant_information is not None:
@@ -311,6 +326,69 @@ class CreateBundledDecisionManagerCaseRequest(object):
         self._travel_information = travel_information
 
     @property
+    def recipient_information(self):
+        """
+        Gets the recipient_information of this CreateBundledDecisionManagerCaseRequest.
+
+        :return: The recipient_information of this CreateBundledDecisionManagerCaseRequest.
+        :rtype: Riskv1decisionsRecipientInformation
+        """
+        return self._recipient_information
+
+    @recipient_information.setter
+    def recipient_information(self, recipient_information):
+        """
+        Sets the recipient_information of this CreateBundledDecisionManagerCaseRequest.
+
+        :param recipient_information: The recipient_information of this CreateBundledDecisionManagerCaseRequest.
+        :type: Riskv1decisionsRecipientInformation
+        """
+
+        self._recipient_information = recipient_information
+
+    @property
+    def sender_information(self):
+        """
+        Gets the sender_information of this CreateBundledDecisionManagerCaseRequest.
+
+        :return: The sender_information of this CreateBundledDecisionManagerCaseRequest.
+        :rtype: Riskv1decisionsSenderInformation
+        """
+        return self._sender_information
+
+    @sender_information.setter
+    def sender_information(self, sender_information):
+        """
+        Sets the sender_information of this CreateBundledDecisionManagerCaseRequest.
+
+        :param sender_information: The sender_information of this CreateBundledDecisionManagerCaseRequest.
+        :type: Riskv1decisionsSenderInformation
+        """
+
+        self._sender_information = sender_information
+
+    @property
+    def aggregator_information(self):
+        """
+        Gets the aggregator_information of this CreateBundledDecisionManagerCaseRequest.
+
+        :return: The aggregator_information of this CreateBundledDecisionManagerCaseRequest.
+        :rtype: Riskv1decisionsAggregatorInformation
+        """
+        return self._aggregator_information
+
+    @aggregator_information.setter
+    def aggregator_information(self, aggregator_information):
+        """
+        Sets the aggregator_information of this CreateBundledDecisionManagerCaseRequest.
+
+        :param aggregator_information: The aggregator_information of this CreateBundledDecisionManagerCaseRequest.
+        :type: Riskv1decisionsAggregatorInformation
+        """
+
+        self._aggregator_information = aggregator_information
+
+    @property
     def merchant_defined_information(self):
         """
         Gets the merchant_defined_information of this CreateBundledDecisionManagerCaseRequest.
@@ -400,7 +478,7 @@ class CreateBundledDecisionManagerCaseRequest(object):
         Gets the consumer_authentication_information of this CreateBundledDecisionManagerCaseRequest.
 
         :return: The consumer_authentication_information of this CreateBundledDecisionManagerCaseRequest.
-        :rtype: Riskv1decisionsConsumerAuthenticationInformation
+        :rtype: Riskv1decisionsBundledConsumerAuthenticationInformation
         """
         return self._consumer_authentication_information
 
@@ -410,7 +488,7 @@ class CreateBundledDecisionManagerCaseRequest(object):
         Sets the consumer_authentication_information of this CreateBundledDecisionManagerCaseRequest.
 
         :param consumer_authentication_information: The consumer_authentication_information of this CreateBundledDecisionManagerCaseRequest.
-        :type: Riskv1decisionsConsumerAuthenticationInformation
+        :type: Riskv1decisionsBundledConsumerAuthenticationInformation
         """
 
         self._consumer_authentication_information = consumer_authentication_information

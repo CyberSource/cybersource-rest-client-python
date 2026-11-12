@@ -33,17 +33,25 @@ class Riskv1decisionsRiskInformation(object):
         'profile': 'Ptsv2paymentsRiskInformationProfile',
         'event_type': 'str',
         'buyer_history': 'Ptsv2paymentsRiskInformationBuyerHistory',
-        'auxiliary_data': 'list[Ptsv2paymentsRiskInformationAuxiliaryData]'
+        'auxiliary_data': 'list[Ptsv2paymentsRiskInformationAuxiliaryData]',
+        'store': 'Ptsv2paymentsRiskInformationStore',
+        'authentication_type': 'str',
+        'pickup_days': 'float',
+        'external_score': 'Ptsv2paymentsRiskInformationExternalScore'
     }
 
     attribute_map = {
         'profile': 'profile',
         'event_type': 'eventType',
         'buyer_history': 'buyerHistory',
-        'auxiliary_data': 'auxiliaryData'
+        'auxiliary_data': 'auxiliaryData',
+        'store': 'store',
+        'authentication_type': 'authenticationType',
+        'pickup_days': 'pickupDays',
+        'external_score': 'externalScore'
     }
 
-    def __init__(self, profile=None, event_type=None, buyer_history=None, auxiliary_data=None):
+    def __init__(self, profile=None, event_type=None, buyer_history=None, auxiliary_data=None, store=None, authentication_type=None, pickup_days=None, external_score=None):
         """
         Riskv1decisionsRiskInformation - a model defined in Swagger
         """
@@ -52,6 +60,10 @@ class Riskv1decisionsRiskInformation(object):
         self._event_type = None
         self._buyer_history = None
         self._auxiliary_data = None
+        self._store = None
+        self._authentication_type = None
+        self._pickup_days = None
+        self._external_score = None
 
         if profile is not None:
           self.profile = profile
@@ -61,6 +73,14 @@ class Riskv1decisionsRiskInformation(object):
           self.buyer_history = buyer_history
         if auxiliary_data is not None:
           self.auxiliary_data = auxiliary_data
+        if store is not None:
+          self.store = store
+        if authentication_type is not None:
+          self.authentication_type = authentication_type
+        if pickup_days is not None:
+          self.pickup_days = pickup_days
+        if external_score is not None:
+          self.external_score = external_score
 
     @property
     def profile(self):
@@ -147,6 +167,94 @@ class Riskv1decisionsRiskInformation(object):
         """
 
         self._auxiliary_data = auxiliary_data
+
+    @property
+    def store(self):
+        """
+        Gets the store of this Riskv1decisionsRiskInformation.
+
+        :return: The store of this Riskv1decisionsRiskInformation.
+        :rtype: Ptsv2paymentsRiskInformationStore
+        """
+        return self._store
+
+    @store.setter
+    def store(self, store):
+        """
+        Sets the store of this Riskv1decisionsRiskInformation.
+
+        :param store: The store of this Riskv1decisionsRiskInformation.
+        :type: Ptsv2paymentsRiskInformationStore
+        """
+
+        self._store = store
+
+    @property
+    def authentication_type(self):
+        """
+        Gets the authentication_type of this Riskv1decisionsRiskInformation.
+        • 01 = Static Passcode • 02 = SMS OTP • 03 = Key fob or EMV card reader OTP • 04 = App OTP • 05 = OTP Other • 07 = OOB Biometrics • 08 = OOB Login • 09 = OOB Other • 10 = Other • 11 = Push Confirmation • 12 = Decoupled • 13 = WebAuthn • 14 = SPC • 15 = Behavioural biometrics 
+
+        :return: The authentication_type of this Riskv1decisionsRiskInformation.
+        :rtype: str
+        """
+        return self._authentication_type
+
+    @authentication_type.setter
+    def authentication_type(self, authentication_type):
+        """
+        Sets the authentication_type of this Riskv1decisionsRiskInformation.
+        • 01 = Static Passcode • 02 = SMS OTP • 03 = Key fob or EMV card reader OTP • 04 = App OTP • 05 = OTP Other • 07 = OOB Biometrics • 08 = OOB Login • 09 = OOB Other • 10 = Other • 11 = Push Confirmation • 12 = Decoupled • 13 = WebAuthn • 14 = SPC • 15 = Behavioural biometrics 
+
+        :param authentication_type: The authentication_type of this Riskv1decisionsRiskInformation.
+        :type: str
+        """
+
+        self._authentication_type = authentication_type
+
+    @property
+    def pickup_days(self):
+        """
+        Gets the pickup_days of this Riskv1decisionsRiskInformation.
+        Number of days between transaction date and rental pickup date 
+
+        :return: The pickup_days of this Riskv1decisionsRiskInformation.
+        :rtype: float
+        """
+        return self._pickup_days
+
+    @pickup_days.setter
+    def pickup_days(self, pickup_days):
+        """
+        Sets the pickup_days of this Riskv1decisionsRiskInformation.
+        Number of days between transaction date and rental pickup date 
+
+        :param pickup_days: The pickup_days of this Riskv1decisionsRiskInformation.
+        :type: float
+        """
+
+        self._pickup_days = pickup_days
+
+    @property
+    def external_score(self):
+        """
+        Gets the external_score of this Riskv1decisionsRiskInformation.
+
+        :return: The external_score of this Riskv1decisionsRiskInformation.
+        :rtype: Ptsv2paymentsRiskInformationExternalScore
+        """
+        return self._external_score
+
+    @external_score.setter
+    def external_score(self, external_score):
+        """
+        Sets the external_score of this Riskv1decisionsRiskInformation.
+
+        :param external_score: The external_score of this Riskv1decisionsRiskInformation.
+        :type: Ptsv2paymentsRiskInformationExternalScore
+        """
+
+        self._external_score = external_score
 
     def to_dict(self):
         """

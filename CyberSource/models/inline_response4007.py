@@ -30,117 +30,71 @@ class InlineResponse4007(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
-        'status': 'str',
-        'reason': 'str',
+        'error': 'str',
         'message': 'str',
-        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
+        'status': 'int',
+        'timestamp': 'datetime',
+        'path': 'str'
     }
 
     attribute_map = {
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status',
-        'reason': 'reason',
+        'error': 'error',
         'message': 'message',
-        'details': 'details'
+        'status': 'status',
+        'timestamp': 'timestamp',
+        'path': 'path'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, details=None):
+    def __init__(self, error=None, message=None, status=None, timestamp=None, path=None):
         """
         InlineResponse4007 - a model defined in Swagger
         """
 
-        self._submit_time_utc = None
-        self._status = None
-        self._reason = None
+        self._error = None
         self._message = None
-        self._details = None
+        self._status = None
+        self._timestamp = None
+        self._path = None
 
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
-        if reason is not None:
-          self.reason = reason
+        if error is not None:
+          self.error = error
         if message is not None:
           self.message = message
-        if details is not None:
-          self.details = details
+        if status is not None:
+          self.status = status
+        if timestamp is not None:
+          self.timestamp = timestamp
+        if path is not None:
+          self.path = path
 
     @property
-    def submit_time_utc(self):
+    def error(self):
         """
-        Gets the submit_time_utc of this InlineResponse4007.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Gets the error of this InlineResponse4007.
+        Machine-readable error code (e.g. `BAD_REQUEST`, `NOT_FOUND`, `INTERNAL_ERROR`).
 
-        :return: The submit_time_utc of this InlineResponse4007.
+        :return: The error of this InlineResponse4007.
         :rtype: str
         """
-        return self._submit_time_utc
+        return self._error
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @error.setter
+    def error(self, error):
         """
-        Sets the submit_time_utc of this InlineResponse4007.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Sets the error of this InlineResponse4007.
+        Machine-readable error code (e.g. `BAD_REQUEST`, `NOT_FOUND`, `INTERNAL_ERROR`).
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse4007.
+        :param error: The error of this InlineResponse4007.
         :type: str
         """
 
-        self._submit_time_utc = submit_time_utc
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse4007.
-        The status of the submitted transaction.  Possible values:  - INVALID_REQUEST 
-
-        :return: The status of this InlineResponse4007.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse4007.
-        The status of the submitted transaction.  Possible values:  - INVALID_REQUEST 
-
-        :param status: The status of this InlineResponse4007.
-        :type: str
-        """
-
-        self._status = status
-
-    @property
-    def reason(self):
-        """
-        Gets the reason of this InlineResponse4007.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE  - INVALID_FOLLOW_ON_TRANSACTION_STATUS 
-
-        :return: The reason of this InlineResponse4007.
-        :rtype: str
-        """
-        return self._reason
-
-    @reason.setter
-    def reason(self, reason):
-        """
-        Sets the reason of this InlineResponse4007.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE  - INVALID_FOLLOW_ON_TRANSACTION_STATUS 
-
-        :param reason: The reason of this InlineResponse4007.
-        :type: str
-        """
-
-        self._reason = reason
+        self._error = error
 
     @property
     def message(self):
         """
         Gets the message of this InlineResponse4007.
-        The detail message related to the status and reason listed above.
+        Human-readable description of what went wrong and how to fix it.
 
         :return: The message of this InlineResponse4007.
         :rtype: str
@@ -151,7 +105,7 @@ class InlineResponse4007(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse4007.
-        The detail message related to the status and reason listed above.
+        Human-readable description of what went wrong and how to fix it.
 
         :param message: The message of this InlineResponse4007.
         :type: str
@@ -160,25 +114,73 @@ class InlineResponse4007(object):
         self._message = message
 
     @property
-    def details(self):
+    def status(self):
         """
-        Gets the details of this InlineResponse4007.
+        Gets the status of this InlineResponse4007.
+        HTTP status code.
 
-        :return: The details of this InlineResponse4007.
-        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        :return: The status of this InlineResponse4007.
+        :rtype: int
         """
-        return self._details
+        return self._status
 
-    @details.setter
-    def details(self, details):
+    @status.setter
+    def status(self, status):
         """
-        Sets the details of this InlineResponse4007.
+        Sets the status of this InlineResponse4007.
+        HTTP status code.
 
-        :param details: The details of this InlineResponse4007.
-        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        :param status: The status of this InlineResponse4007.
+        :type: int
         """
 
-        self._details = details
+        self._status = status
+
+    @property
+    def timestamp(self):
+        """
+        Gets the timestamp of this InlineResponse4007.
+        ISO 8601 timestamp when the error occurred.
+
+        :return: The timestamp of this InlineResponse4007.
+        :rtype: datetime
+        """
+        return self._timestamp
+
+    @timestamp.setter
+    def timestamp(self, timestamp):
+        """
+        Sets the timestamp of this InlineResponse4007.
+        ISO 8601 timestamp when the error occurred.
+
+        :param timestamp: The timestamp of this InlineResponse4007.
+        :type: datetime
+        """
+
+        self._timestamp = timestamp
+
+    @property
+    def path(self):
+        """
+        Gets the path of this InlineResponse4007.
+        The request path that produced this error.
+
+        :return: The path of this InlineResponse4007.
+        :rtype: str
+        """
+        return self._path
+
+    @path.setter
+    def path(self, path):
+        """
+        Sets the path of this InlineResponse4007.
+        The request path that produced this error.
+
+        :param path: The path of this InlineResponse4007.
+        :type: str
+        """
+
+        self._path = path
 
     def to_dict(self):
         """

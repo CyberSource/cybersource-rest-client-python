@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **get_registration**
-> InlineResponse2005 get_registration(registration_id)
+> BoardingRegistrationGetResponse get_registration(registration_id)
 
 Gets all the information on a boarding registration
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**BoardingRegistrationGetResponse**](BoardingRegistrationGetResponse.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_registration**
-> InlineResponse2005 patch_registration(registration_id, patch_registration_body, v_c_idempotency_id=v_c_idempotency_id)
+> BoardingRegistrationGetResponse patch_registration(registration_id, patch_registration_body, v_c_idempotency_id=v_c_idempotency_id)
 
 Updates the information on a boarding registration
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**BoardingRegistrationGetResponse**](BoardingRegistrationGetResponse.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_registration**
-> InlineResponse2016 post_registration(post_registration_body, v_c_idempotency_id=v_c_idempotency_id)
+> BoardingRegistrationCreateResponse post_registration(post_registration_body, v_c_idempotency_id=v_c_idempotency_id)
 
 Create a boarding registration
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2016**](InlineResponse2016.md)
+[**BoardingRegistrationCreateResponse**](BoardingRegistrationCreateResponse.md)
 
 ### Authorization
 

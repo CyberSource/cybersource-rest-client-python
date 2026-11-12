@@ -138,8 +138,10 @@ class BillingAgreementsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'modify_billing_agreement' in params:
@@ -151,7 +153,7 @@ class BillingAgreementsApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "billing_agreements_de_registration,billing_agreements_de_registration_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "billing_agreements_de_registration,billing_agreements_de_registration_with_http_info")
 
@@ -190,7 +192,7 @@ class BillingAgreementsApi(object):
             for asynchronous request. (optional)
         :param IntimateBillingAgreement intimate_billing_agreement: (required)
         :param str id: ID for intimation of Billing Agreement (required)
-        :return: PtsV2CreditsPost201Response1
+        :return: IntimateBillingAgreementResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -220,7 +222,7 @@ class BillingAgreementsApi(object):
             for asynchronous request. (optional)
         :param IntimateBillingAgreement intimate_billing_agreement: (required)
         :param str id: ID for intimation of Billing Agreement (required)
-        :return: PtsV2CreditsPost201Response1
+        :return: IntimateBillingAgreementResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -267,8 +269,10 @@ class BillingAgreementsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'intimate_billing_agreement' in params:
@@ -280,7 +284,7 @@ class BillingAgreementsApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "billing_agreements_intimation,billing_agreements_intimation_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "billing_agreements_intimation,billing_agreements_intimation_with_http_info")
 
@@ -294,7 +298,7 @@ class BillingAgreementsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='PtsV2CreditsPost201Response1',
+                                        response_type='IntimateBillingAgreementResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -387,8 +391,10 @@ class BillingAgreementsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'create_billing_agreement' in params:
@@ -400,7 +406,7 @@ class BillingAgreementsApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "billing_agreements_registration,billing_agreements_registration_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "billing_agreements_registration,billing_agreements_registration_with_http_info")
 

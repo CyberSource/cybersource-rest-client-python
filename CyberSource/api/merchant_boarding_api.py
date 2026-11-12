@@ -60,7 +60,7 @@ class MerchantBoardingApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str registration_id: Identifies the boarding registration to be updated (required)
-        :return: InlineResponse2005
+        :return: BoardingRegistrationGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -89,7 +89,7 @@ class MerchantBoardingApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str registration_id: Identifies the boarding registration to be updated (required)
-        :return: InlineResponse2005
+        :return: BoardingRegistrationGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -132,8 +132,10 @@ class MerchantBoardingApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -142,11 +144,12 @@ class MerchantBoardingApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_registration,get_registration_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_registration,get_registration_with_http_info")
 
@@ -160,7 +163,7 @@ class MerchantBoardingApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2005',
+                                        response_type='BoardingRegistrationGetResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -186,7 +189,7 @@ class MerchantBoardingApi(object):
         :param str registration_id: Identifies the boarding registration to be updated (required)
         :param PatchRegistrationBody patch_registration_body: Boarding registration data to be patched (required)
         :param str v_c_idempotency_id: defines idempotency of the request
-        :return: InlineResponse2005
+        :return: BoardingRegistrationGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -217,7 +220,7 @@ class MerchantBoardingApi(object):
         :param str registration_id: Identifies the boarding registration to be updated (required)
         :param PatchRegistrationBody patch_registration_body: Boarding registration data to be patched (required)
         :param str v_c_idempotency_id: defines idempotency of the request
-        :return: InlineResponse2005
+        :return: BoardingRegistrationGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -266,8 +269,10 @@ class MerchantBoardingApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'patch_registration_body' in params:
@@ -279,7 +284,7 @@ class MerchantBoardingApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "patch_registration,patch_registration_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "patch_registration,patch_registration_with_http_info")
 
@@ -293,7 +298,7 @@ class MerchantBoardingApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2005',
+                                        response_type='BoardingRegistrationGetResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -318,7 +323,7 @@ class MerchantBoardingApi(object):
             for asynchronous request. (optional)
         :param PostRegistrationBody post_registration_body: Boarding registration data (required)
         :param str v_c_idempotency_id: defines idempotency of the request
-        :return: InlineResponse2016
+        :return: BoardingRegistrationCreateResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -348,7 +353,7 @@ class MerchantBoardingApi(object):
             for asynchronous request. (optional)
         :param PostRegistrationBody post_registration_body: Boarding registration data (required)
         :param str v_c_idempotency_id: defines idempotency of the request
-        :return: InlineResponse2016
+        :return: BoardingRegistrationCreateResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -390,8 +395,10 @@ class MerchantBoardingApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'post_registration_body' in params:
@@ -403,7 +410,7 @@ class MerchantBoardingApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_registration,post_registration_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_registration,post_registration_with_http_info")
 
@@ -417,7 +424,7 @@ class MerchantBoardingApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2016',
+                                        response_type='BoardingRegistrationCreateResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

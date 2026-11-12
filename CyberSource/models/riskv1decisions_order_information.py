@@ -36,10 +36,11 @@ class Riskv1decisionsOrderInformation(object):
         'cutoff_date_time': 'str',
         'reordered': 'bool',
         'shipping_details': 'Riskv1decisionsOrderInformationShippingDetails',
-        'ship_to': 'Riskv1decisionsOrderInformationShipTo',
+        'ship_to': 'Riskv1decisionsBundledOrderInformationShipTo',
         'returns_accepted': 'bool',
         'line_items': 'list[Riskv1decisionsOrderInformationLineItems]',
         'bill_to': 'Riskv1decisionsOrderInformationBillTo',
+        'vouchers': 'list[Riskv1decisionsOrderInformationVouchers]',
         'total_offers_count': 'str'
     }
 
@@ -54,10 +55,11 @@ class Riskv1decisionsOrderInformation(object):
         'returns_accepted': 'returnsAccepted',
         'line_items': 'lineItems',
         'bill_to': 'billTo',
+        'vouchers': 'vouchers',
         'total_offers_count': 'totalOffersCount'
     }
 
-    def __init__(self, amount_details=None, pre_order=None, pre_order_date=None, cutoff_date_time=None, reordered=None, shipping_details=None, ship_to=None, returns_accepted=None, line_items=None, bill_to=None, total_offers_count=None):
+    def __init__(self, amount_details=None, pre_order=None, pre_order_date=None, cutoff_date_time=None, reordered=None, shipping_details=None, ship_to=None, returns_accepted=None, line_items=None, bill_to=None, vouchers=None, total_offers_count=None):
         """
         Riskv1decisionsOrderInformation - a model defined in Swagger
         """
@@ -72,6 +74,7 @@ class Riskv1decisionsOrderInformation(object):
         self._returns_accepted = None
         self._line_items = None
         self._bill_to = None
+        self._vouchers = None
         self._total_offers_count = None
 
         if amount_details is not None:
@@ -94,6 +97,8 @@ class Riskv1decisionsOrderInformation(object):
           self.line_items = line_items
         if bill_to is not None:
           self.bill_to = bill_to
+        if vouchers is not None:
+          self.vouchers = vouchers
         if total_offers_count is not None:
           self.total_offers_count = total_offers_count
 
@@ -237,7 +242,7 @@ class Riskv1decisionsOrderInformation(object):
         Gets the ship_to of this Riskv1decisionsOrderInformation.
 
         :return: The ship_to of this Riskv1decisionsOrderInformation.
-        :rtype: Riskv1decisionsOrderInformationShipTo
+        :rtype: Riskv1decisionsBundledOrderInformationShipTo
         """
         return self._ship_to
 
@@ -247,7 +252,7 @@ class Riskv1decisionsOrderInformation(object):
         Sets the ship_to of this Riskv1decisionsOrderInformation.
 
         :param ship_to: The ship_to of this Riskv1decisionsOrderInformation.
-        :type: Riskv1decisionsOrderInformationShipTo
+        :type: Riskv1decisionsBundledOrderInformationShipTo
         """
 
         self._ship_to = ship_to
@@ -318,6 +323,29 @@ class Riskv1decisionsOrderInformation(object):
         """
 
         self._bill_to = bill_to
+
+    @property
+    def vouchers(self):
+        """
+        Gets the vouchers of this Riskv1decisionsOrderInformation.
+        Array of voucher/coupon information used in the order
+
+        :return: The vouchers of this Riskv1decisionsOrderInformation.
+        :rtype: list[Riskv1decisionsOrderInformationVouchers]
+        """
+        return self._vouchers
+
+    @vouchers.setter
+    def vouchers(self, vouchers):
+        """
+        Sets the vouchers of this Riskv1decisionsOrderInformation.
+        Array of voucher/coupon information used in the order
+
+        :param vouchers: The vouchers of this Riskv1decisionsOrderInformation.
+        :type: list[Riskv1decisionsOrderInformationVouchers]
+        """
+
+        self._vouchers = vouchers
 
     @property
     def total_offers_count(self):

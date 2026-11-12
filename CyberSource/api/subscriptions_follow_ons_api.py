@@ -45,7 +45,7 @@ class SubscriptionsFollowOnsApi(object):
 
 
 
-    def create_follow_on_subscription(self, request_id, create_subscription_request, **kwargs):
+    def create_follow_on_subscription(self, request_id, create_follow_on_subscription_request, **kwargs):
         """
         Create a Follow-On Subscription
         Create a new Subscription based on the Request Id of an existing successful Transaction.
@@ -55,12 +55,12 @@ class SubscriptionsFollowOnsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_follow_on_subscription(request_id, create_subscription_request, callback=callback_function)
+        >>> thread = api.create_follow_on_subscription(request_id, create_follow_on_subscription_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str request_id: Request Id of an existing successful Transaction (required)
-        :param CreateSubscriptionRequest1 create_subscription_request: (required)
+        :param CreateFollowOnSubscriptionRequest create_follow_on_subscription_request: (required)
         :return: CreateSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -70,12 +70,12 @@ class SubscriptionsFollowOnsApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_follow_on_subscription_with_http_info(request_id, create_subscription_request, **kwargs)
+            return self.create_follow_on_subscription_with_http_info(request_id, create_follow_on_subscription_request, **kwargs)
         else:
-            (data) = self.create_follow_on_subscription_with_http_info(request_id, create_subscription_request, **kwargs)
+            (data) = self.create_follow_on_subscription_with_http_info(request_id, create_follow_on_subscription_request, **kwargs)
             return data
 
-    def create_follow_on_subscription_with_http_info(self, request_id, create_subscription_request, **kwargs):
+    def create_follow_on_subscription_with_http_info(self, request_id, create_follow_on_subscription_request, **kwargs):
         """
         Create a Follow-On Subscription
         Create a new Subscription based on the Request Id of an existing successful Transaction.
@@ -85,18 +85,18 @@ class SubscriptionsFollowOnsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_follow_on_subscription_with_http_info(request_id, create_subscription_request, callback=callback_function)
+        >>> thread = api.create_follow_on_subscription_with_http_info(request_id, create_follow_on_subscription_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str request_id: Request Id of an existing successful Transaction (required)
-        :param CreateSubscriptionRequest1 create_subscription_request: (required)
+        :param CreateFollowOnSubscriptionRequest create_follow_on_subscription_request: (required)
         :return: CreateSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['request_id', 'create_subscription_request']
+        all_params = ['request_id', 'create_follow_on_subscription_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -115,10 +115,10 @@ class SubscriptionsFollowOnsApi(object):
         if ('request_id' not in params) or (params['request_id'] is None):
             self.logger.error("InvalidArgumentException : Missing the required parameter `request_id` when calling `create_follow_on_subscription`")
             raise ValueError("Missing the required parameter `request_id` when calling `create_follow_on_subscription`")
-        # verify the required parameter 'create_subscription_request' is set
-        if ('create_subscription_request' not in params) or (params['create_subscription_request'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `create_subscription_request` when calling `create_follow_on_subscription`")
-            raise ValueError("Missing the required parameter `create_subscription_request` when calling `create_follow_on_subscription`")
+        # verify the required parameter 'create_follow_on_subscription_request' is set
+        if ('create_follow_on_subscription_request' not in params) or (params['create_follow_on_subscription_request'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `create_follow_on_subscription_request` when calling `create_follow_on_subscription`")
+            raise ValueError("Missing the required parameter `create_follow_on_subscription_request` when calling `create_follow_on_subscription`")
 
 
         collection_formats = {}
@@ -138,20 +138,22 @@ class SubscriptionsFollowOnsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/hal+json', 'application/json;charset=utf-8', 'application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
-        if 'create_subscription_request' in params:
-            body_params = params['create_subscription_request']
+        if 'create_follow_on_subscription_request' in params:
+            body_params = params['create_follow_on_subscription_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_subscription_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_follow_on_subscription_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_follow_on_subscription,create_follow_on_subscription_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_follow_on_subscription,create_follow_on_subscription_with_http_info")
 
@@ -189,7 +191,7 @@ class SubscriptionsFollowOnsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str request_id: Request Id of an existing successful Transaction (required)
-        :return: GetSubscriptionResponse1
+        :return: GetFollowOnSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -218,7 +220,7 @@ class SubscriptionsFollowOnsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str request_id: Request Id of an existing successful Transaction (required)
-        :return: GetSubscriptionResponse1
+        :return: GetFollowOnSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -261,8 +263,10 @@ class SubscriptionsFollowOnsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/hal+json', 'application/json;charset=utf-8', 'application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -271,11 +275,12 @@ class SubscriptionsFollowOnsApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_follow_on_subscription,get_follow_on_subscription_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_follow_on_subscription,get_follow_on_subscription_with_http_info")
 
@@ -289,7 +294,7 @@ class SubscriptionsFollowOnsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='GetSubscriptionResponse1',
+                                        response_type='GetFollowOnSubscriptionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

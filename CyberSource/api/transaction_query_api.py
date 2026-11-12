@@ -45,7 +45,7 @@ class TransactionQueryApi(object):
 
 
 
-    def create_query_api(self, id, body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs):
+    def create_query_api(self, id, create_query_api_request, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs):
         """
         Query Transaction Details
         Query the status and details of payouts transactions including Pull Funds, Push Funds, and Pull Funds Reversals 
@@ -55,12 +55,12 @@ class TransactionQueryApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_query_api(id, body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, callback=callback_function)
+        >>> thread = api.create_query_api(id, create_query_api_request, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: This is the CyberSource Request ID generated for successfully processed AFT/OCT that needs to be queried.  (required)
-        :param Body1 body: (required)
+        :param CreateQueryApiRequest create_query_api_request: (required)
         :param str content_type: (required)
         :param str x_requestid: (required)
         :param str v_c_merchant_id: (required)
@@ -69,7 +69,7 @@ class TransactionQueryApi(object):
         :param str v_c_organization_id: (required)
         :param int limit: The maximum number of options to be retrieved from the processor and displayed to the consumer. 
         :param int offset: Offset from the first item in the list of options received from the processor. If you want to display the options in multiple lists, this number represents the first option displayed in each list. 
-        :return: InlineResponse2014
+        :return: CreateQueryApiResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -78,12 +78,12 @@ class TransactionQueryApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_query_api_with_http_info(id, body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs)
+            return self.create_query_api_with_http_info(id, create_query_api_request, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs)
         else:
-            (data) = self.create_query_api_with_http_info(id, body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs)
+            (data) = self.create_query_api_with_http_info(id, create_query_api_request, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs)
             return data
 
-    def create_query_api_with_http_info(self, id, body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs):
+    def create_query_api_with_http_info(self, id, create_query_api_request, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs):
         """
         Query Transaction Details
         Query the status and details of payouts transactions including Pull Funds, Push Funds, and Pull Funds Reversals 
@@ -93,12 +93,12 @@ class TransactionQueryApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_query_api_with_http_info(id, body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, callback=callback_function)
+        >>> thread = api.create_query_api_with_http_info(id, create_query_api_request, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: This is the CyberSource Request ID generated for successfully processed AFT/OCT that needs to be queried.  (required)
-        :param Body1 body: (required)
+        :param CreateQueryApiRequest create_query_api_request: (required)
         :param str content_type: (required)
         :param str x_requestid: (required)
         :param str v_c_merchant_id: (required)
@@ -107,12 +107,12 @@ class TransactionQueryApi(object):
         :param str v_c_organization_id: (required)
         :param int limit: The maximum number of options to be retrieved from the processor and displayed to the consumer. 
         :param int offset: Offset from the first item in the list of options received from the processor. If you want to display the options in multiple lists, this number represents the first option displayed in each list. 
-        :return: InlineResponse2014
+        :return: CreateQueryApiResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'body', 'content_type', 'x_requestid', 'v_c_merchant_id', 'v_c_permissions', 'v_c_correlation_id', 'v_c_organization_id', 'limit', 'offset']
+        all_params = ['id', 'create_query_api_request', 'content_type', 'x_requestid', 'v_c_merchant_id', 'v_c_permissions', 'v_c_correlation_id', 'v_c_organization_id', 'limit', 'offset']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -131,10 +131,10 @@ class TransactionQueryApi(object):
         if ('id' not in params) or (params['id'] is None):
             self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `create_query_api`")
             raise ValueError("Missing the required parameter `id` when calling `create_query_api`")
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `body` when calling `create_query_api`")
-            raise ValueError("Missing the required parameter `body` when calling `create_query_api`")
+        # verify the required parameter 'create_query_api_request' is set
+        if ('create_query_api_request' not in params) or (params['create_query_api_request'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `create_query_api_request` when calling `create_query_api`")
+            raise ValueError("Missing the required parameter `create_query_api_request` when calling `create_query_api`")
         # verify the required parameter 'content_type' is set
         if ('content_type' not in params) or (params['content_type'] is None):
             self.logger.error("InvalidArgumentException : Missing the required parameter `content_type` when calling `create_query_api`")
@@ -194,20 +194,22 @@ class TransactionQueryApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if 'create_query_api_request' in params:
+            body_params = params['create_query_api_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'body', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_query_api_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_query_api,create_query_api_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_query_api,create_query_api_with_http_info")
 
@@ -221,7 +223,7 @@ class TransactionQueryApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2014',
+                                        response_type='CreateQueryApiResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

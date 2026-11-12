@@ -30,45 +30,73 @@ class TmsMerchantInformationMerchantDescriptor(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'alternate_name': 'str'
+        'name': 'str',
+        'url': 'str'
     }
 
     attribute_map = {
-        'alternate_name': 'alternateName'
+        'name': 'name',
+        'url': 'url'
     }
 
-    def __init__(self, alternate_name=None):
+    def __init__(self, name=None, url=None):
         """
         TmsMerchantInformationMerchantDescriptor - a model defined in Swagger
         """
 
-        self._alternate_name = None
+        self._name = None
+        self._url = None
 
-        if alternate_name is not None:
-          self.alternate_name = alternate_name
+        if name is not None:
+          self.name = name
+        if url is not None:
+          self.url = url
 
     @property
-    def alternate_name(self):
+    def name(self):
         """
-        Gets the alternate_name of this TmsMerchantInformationMerchantDescriptor.
-        Alternate contact information for your business,such as an email address or URL. This value might be displayed on the cardholder's statement. When you do not include this value in your capture or credit request, the merchant URL from your CyberSource account is used. Important This value must consist of English characters 
+        Gets the name of this TmsMerchantInformationMerchantDescriptor.
+        Merchant's name
 
-        :return: The alternate_name of this TmsMerchantInformationMerchantDescriptor.
+        :return: The name of this TmsMerchantInformationMerchantDescriptor.
         :rtype: str
         """
-        return self._alternate_name
+        return self._name
 
-    @alternate_name.setter
-    def alternate_name(self, alternate_name):
+    @name.setter
+    def name(self, name):
         """
-        Sets the alternate_name of this TmsMerchantInformationMerchantDescriptor.
-        Alternate contact information for your business,such as an email address or URL. This value might be displayed on the cardholder's statement. When you do not include this value in your capture or credit request, the merchant URL from your CyberSource account is used. Important This value must consist of English characters 
+        Sets the name of this TmsMerchantInformationMerchantDescriptor.
+        Merchant's name
 
-        :param alternate_name: The alternate_name of this TmsMerchantInformationMerchantDescriptor.
+        :param name: The name of this TmsMerchantInformationMerchantDescriptor.
         :type: str
         """
 
-        self._alternate_name = alternate_name
+        self._name = name
+
+    @property
+    def url(self):
+        """
+        Gets the url of this TmsMerchantInformationMerchantDescriptor.
+        Address of company's website provided by merchant
+
+        :return: The url of this TmsMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """
+        Sets the url of this TmsMerchantInformationMerchantDescriptor.
+        Address of company's website provided by merchant
+
+        :param url: The url of this TmsMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._url = url
 
     def to_dict(self):
         """

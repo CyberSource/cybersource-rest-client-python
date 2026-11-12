@@ -30,22 +30,27 @@ class Ucv1sessionsPaymentConfigurationsCLICKTOPAY(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'auto_check_enrollment': 'bool'
+        'auto_check_enrollment': 'bool',
+        'allowed_card_networks': 'list[str]'
     }
 
     attribute_map = {
-        'auto_check_enrollment': 'autoCheckEnrollment'
+        'auto_check_enrollment': 'autoCheckEnrollment',
+        'allowed_card_networks': 'allowedCardNetworks'
     }
 
-    def __init__(self, auto_check_enrollment=None):
+    def __init__(self, auto_check_enrollment=None, allowed_card_networks=None):
         """
         Ucv1sessionsPaymentConfigurationsCLICKTOPAY - a model defined in Swagger
         """
 
         self._auto_check_enrollment = None
+        self._allowed_card_networks = None
 
         if auto_check_enrollment is not None:
           self.auto_check_enrollment = auto_check_enrollment
+        if allowed_card_networks is not None:
+          self.allowed_card_networks = allowed_card_networks
 
     @property
     def auto_check_enrollment(self):
@@ -69,6 +74,29 @@ class Ucv1sessionsPaymentConfigurationsCLICKTOPAY(object):
         """
 
         self._auto_check_enrollment = auto_check_enrollment
+
+    @property
+    def allowed_card_networks(self):
+        """
+        Gets the allowed_card_networks of this Ucv1sessionsPaymentConfigurationsCLICKTOPAY.
+        allowedCardNetworks (optional): Specifies the card networks eligible for Click to Pay. When provided, only the listed networks invoke Click to Pay; when omitted, all Click to Pay–supported networks in the top-level allowedCardNetworks configuration are eligible.<br><br>  Optional field: This field can be configured through the Merchant Experience Screens in the Business Center.  The configured value may be overridden on a per transaction basis in the uc/v1/sessions API request. 
+
+        :return: The allowed_card_networks of this Ucv1sessionsPaymentConfigurationsCLICKTOPAY.
+        :rtype: list[str]
+        """
+        return self._allowed_card_networks
+
+    @allowed_card_networks.setter
+    def allowed_card_networks(self, allowed_card_networks):
+        """
+        Sets the allowed_card_networks of this Ucv1sessionsPaymentConfigurationsCLICKTOPAY.
+        allowedCardNetworks (optional): Specifies the card networks eligible for Click to Pay. When provided, only the listed networks invoke Click to Pay; when omitted, all Click to Pay–supported networks in the top-level allowedCardNetworks configuration are eligible.<br><br>  Optional field: This field can be configured through the Merchant Experience Screens in the Business Center.  The configured value may be overridden on a per transaction basis in the uc/v1/sessions API request. 
+
+        :param allowed_card_networks: The allowed_card_networks of this Ucv1sessionsPaymentConfigurationsCLICKTOPAY.
+        :type: list[str]
+        """
+
+        self._allowed_card_networks = allowed_card_networks
 
     def to_dict(self):
         """

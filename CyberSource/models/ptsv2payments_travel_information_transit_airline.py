@@ -68,7 +68,7 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         'reservation_type': 'str',
         'boarding_fee_amount': 'str',
         'legs': 'list[Ptsv2paymentsTravelInformationTransitAirlineLegs]',
-        'ancillary_information': 'Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation',
+        'ancillary_information': 'Ptsv2paymentsTravelInformationTransitAirlineEnhancedAncillaryInformation',
         'flight_type': 'str',
         'insurance_amount': 'str',
         'frequent_flyer_number': 'str',
@@ -1143,7 +1143,7 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         Gets the ancillary_information of this Ptsv2paymentsTravelInformationTransitAirline.
 
         :return: The ancillary_information of this Ptsv2paymentsTravelInformationTransitAirline.
-        :rtype: Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation
+        :rtype: Ptsv2paymentsTravelInformationTransitAirlineEnhancedAncillaryInformation
         """
         return self._ancillary_information
 
@@ -1153,7 +1153,7 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         Sets the ancillary_information of this Ptsv2paymentsTravelInformationTransitAirline.
 
         :param ancillary_information: The ancillary_information of this Ptsv2paymentsTravelInformationTransitAirline.
-        :type: Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation
+        :type: Ptsv2paymentsTravelInformationTransitAirlineEnhancedAncillaryInformation
         """
 
         self._ancillary_information = ancillary_information

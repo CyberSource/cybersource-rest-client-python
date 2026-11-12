@@ -247,7 +247,7 @@ class Ptsv2intentsOrderInformationAmountDetails(object):
     def duty_amount(self):
         """
         Gets the duty_amount of this Ptsv2intentsOrderInformationAmountDetails.
-        Amount being charged as duty amount.             
+        Amount being charged as duty amount. 
 
         :return: The duty_amount of this Ptsv2intentsOrderInformationAmountDetails.
         :rtype: str
@@ -258,7 +258,7 @@ class Ptsv2intentsOrderInformationAmountDetails(object):
     def duty_amount(self, duty_amount):
         """
         Sets the duty_amount of this Ptsv2intentsOrderInformationAmountDetails.
-        Amount being charged as duty amount.             
+        Amount being charged as duty amount. 
 
         :param duty_amount: The duty_amount of this Ptsv2intentsOrderInformationAmountDetails.
         :type: str

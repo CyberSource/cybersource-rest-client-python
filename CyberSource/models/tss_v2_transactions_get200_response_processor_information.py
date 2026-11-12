@@ -42,7 +42,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'card_verification': 'Riskv1decisionsProcessorInformationCardVerification',
         'ach_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationAchVerification',
         'electronic_verification_results': 'TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults',
-        'issuer_information': 'PtsV2PaymentsPost201Response1IssuerInformation',
+        'issuer_information': 'RefreshPaymentStatusResponseIssuerInformation',
         'event_status': 'str',
         'system_trace_audit_number': 'str',
         'response_code_source': 'str',
@@ -419,7 +419,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         Gets the issuer_information of this TssV2TransactionsGet200ResponseProcessorInformation.
 
         :return: The issuer_information of this TssV2TransactionsGet200ResponseProcessorInformation.
-        :rtype: PtsV2PaymentsPost201Response1IssuerInformation
+        :rtype: RefreshPaymentStatusResponseIssuerInformation
         """
         return self._issuer_information
 
@@ -429,7 +429,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         Sets the issuer_information of this TssV2TransactionsGet200ResponseProcessorInformation.
 
         :param issuer_information: The issuer_information of this TssV2TransactionsGet200ResponseProcessorInformation.
-        :type: PtsV2PaymentsPost201Response1IssuerInformation
+        :type: RefreshPaymentStatusResponseIssuerInformation
         """
 
         self._issuer_information = issuer_information

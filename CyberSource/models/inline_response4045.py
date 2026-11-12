@@ -30,106 +30,37 @@ class InlineResponse4045(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'submit_time_utc': 'str',
         'status': 'str',
-        'message': 'str',
-        'code': 'str',
-        'submit_time_utc': 'str'
+        'reason': 'str',
+        'message': 'str'
     }
 
     attribute_map = {
+        'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
-        'message': 'message',
-        'code': 'code',
-        'submit_time_utc': 'submitTimeUtc'
+        'reason': 'reason',
+        'message': 'message'
     }
 
-    def __init__(self, status=None, message=None, code=None, submit_time_utc=None):
+    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None):
         """
         InlineResponse4045 - a model defined in Swagger
         """
 
-        self._status = None
-        self._message = None
-        self._code = None
         self._submit_time_utc = None
+        self._status = None
+        self._reason = None
+        self._message = None
 
-        if status is not None:
-          self.status = status
-        if message is not None:
-          self.message = message
-        if code is not None:
-          self.code = code
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse4045.
-        The status of the submitted request.   Possible values: - NOT_FOUND
-
-        :return: The status of this InlineResponse4045.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse4045.
-        The status of the submitted request.   Possible values: - NOT_FOUND
-
-        :param status: The status of this InlineResponse4045.
-        :type: str
-        """
-
-        self._status = status
-
-    @property
-    def message(self):
-        """
-        Gets the message of this InlineResponse4045.
-        The detail message related to the status and reason listed above.
-
-        :return: The message of this InlineResponse4045.
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """
-        Sets the message of this InlineResponse4045.
-        The detail message related to the status and reason listed above.
-
-        :param message: The message of this InlineResponse4045.
-        :type: str
-        """
-
-        self._message = message
-
-    @property
-    def code(self):
-        """
-        Gets the code of this InlineResponse4045.
-        An optional short string which identifies the exact error.
-
-        :return: The code of this InlineResponse4045.
-        :rtype: str
-        """
-        return self._code
-
-    @code.setter
-    def code(self, code):
-        """
-        Sets the code of this InlineResponse4045.
-        An optional short string which identifies the exact error.
-
-        :param code: The code of this InlineResponse4045.
-        :type: str
-        """
-
-        self._code = code
+        if status is not None:
+          self.status = status
+        if reason is not None:
+          self.reason = reason
+        if message is not None:
+          self.message = message
 
     @property
     def submit_time_utc(self):
@@ -153,6 +84,75 @@ class InlineResponse4045(object):
         """
 
         self._submit_time_utc = submit_time_utc
+
+    @property
+    def status(self):
+        """
+        Gets the status of this InlineResponse4045.
+        The status of the submitted request.  Possible values: - NOT_FOUND
+
+        :return: The status of this InlineResponse4045.
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this InlineResponse4045.
+        The status of the submitted request.  Possible values: - NOT_FOUND
+
+        :param status: The status of this InlineResponse4045.
+        :type: str
+        """
+
+        self._status = status
+
+    @property
+    def reason(self):
+        """
+        Gets the reason of this InlineResponse4045.
+        The reason of the status.  Possible values: - NOT_FOUND
+
+        :return: The reason of this InlineResponse4045.
+        :rtype: str
+        """
+        return self._reason
+
+    @reason.setter
+    def reason(self, reason):
+        """
+        Sets the reason of this InlineResponse4045.
+        The reason of the status.  Possible values: - NOT_FOUND
+
+        :param reason: The reason of this InlineResponse4045.
+        :type: str
+        """
+
+        self._reason = reason
+
+    @property
+    def message(self):
+        """
+        Gets the message of this InlineResponse4045.
+        The detail message related to the status and reason listed above.
+
+        :return: The message of this InlineResponse4045.
+        :rtype: str
+        """
+        return self._message
+
+    @message.setter
+    def message(self, message):
+        """
+        Sets the message of this InlineResponse4045.
+        The detail message related to the status and reason listed above.
+
+        :param message: The message of this InlineResponse4045.
+        :type: str
+        """
+
+        self._message = message
 
     def to_dict(self):
         """

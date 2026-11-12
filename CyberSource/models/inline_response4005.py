@@ -32,38 +32,38 @@ class InlineResponse4005(object):
     swagger_types = {
         'submit_time_utc': 'str',
         'status': 'str',
-        'reason': 'str',
         'message': 'str',
-        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
+        'reason': 'str',
+        'details': 'list[InlineResponse4005Details]'
     }
 
     attribute_map = {
         'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
-        'reason': 'reason',
         'message': 'message',
+        'reason': 'reason',
         'details': 'details'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, details=None):
+    def __init__(self, submit_time_utc=None, status=None, message=None, reason=None, details=None):
         """
         InlineResponse4005 - a model defined in Swagger
         """
 
         self._submit_time_utc = None
         self._status = None
-        self._reason = None
         self._message = None
+        self._reason = None
         self._details = None
 
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
         if status is not None:
           self.status = status
-        if reason is not None:
-          self.reason = reason
         if message is not None:
           self.message = message
+        if reason is not None:
+          self.reason = reason
         if details is not None:
           self.details = details
 
@@ -71,7 +71,7 @@ class InlineResponse4005(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this InlineResponse4005.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Time verification was requested  Format: `YYYY-MM-DDThhmmssZ`, where: - `T`:  Separates the date and the time - `Z`:  Indicates Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT)  Example:  `2020-01-11T224757Z` equals January 11, 2020, at 22:47:57 (10:47:57 p.m.) 
 
         :return: The submit_time_utc of this InlineResponse4005.
         :rtype: str
@@ -82,7 +82,7 @@ class InlineResponse4005(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this InlineResponse4005.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Time verification was requested  Format: `YYYY-MM-DDThhmmssZ`, where: - `T`:  Separates the date and the time - `Z`:  Indicates Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT)  Example:  `2020-01-11T224757Z` equals January 11, 2020, at 22:47:57 (10:47:57 p.m.) 
 
         :param submit_time_utc: The submit_time_utc of this InlineResponse4005.
         :type: str
@@ -94,7 +94,7 @@ class InlineResponse4005(object):
     def status(self):
         """
         Gets the status of this InlineResponse4005.
-        The status of the submitted transaction.  Possible values:  - INVALID_REQUEST 
+        Possible values:   - `INVALID_REQUEST` 
 
         :return: The status of this InlineResponse4005.
         :rtype: str
@@ -105,7 +105,7 @@ class InlineResponse4005(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse4005.
-        The status of the submitted transaction.  Possible values:  - INVALID_REQUEST 
+        Possible values:   - `INVALID_REQUEST` 
 
         :param status: The status of this InlineResponse4005.
         :type: str
@@ -114,33 +114,10 @@ class InlineResponse4005(object):
         self._status = status
 
     @property
-    def reason(self):
-        """
-        Gets the reason of this InlineResponse4005.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION 
-
-        :return: The reason of this InlineResponse4005.
-        :rtype: str
-        """
-        return self._reason
-
-    @reason.setter
-    def reason(self, reason):
-        """
-        Sets the reason of this InlineResponse4005.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION 
-
-        :param reason: The reason of this InlineResponse4005.
-        :type: str
-        """
-
-        self._reason = reason
-
-    @property
     def message(self):
         """
         Gets the message of this InlineResponse4005.
-        The detail message related to the status and reason listed above.
+        The detail message related to the status and reason
 
         :return: The message of this InlineResponse4005.
         :rtype: str
@@ -151,7 +128,7 @@ class InlineResponse4005(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse4005.
-        The detail message related to the status and reason listed above.
+        The detail message related to the status and reason
 
         :param message: The message of this InlineResponse4005.
         :type: str
@@ -160,12 +137,35 @@ class InlineResponse4005(object):
         self._message = message
 
     @property
+    def reason(self):
+        """
+        Gets the reason of this InlineResponse4005.
+        The reason of the status.  Possible values:   - `INVALID_REQUEST` 
+
+        :return: The reason of this InlineResponse4005.
+        :rtype: str
+        """
+        return self._reason
+
+    @reason.setter
+    def reason(self, reason):
+        """
+        Sets the reason of this InlineResponse4005.
+        The reason of the status.  Possible values:   - `INVALID_REQUEST` 
+
+        :param reason: The reason of this InlineResponse4005.
+        :type: str
+        """
+
+        self._reason = reason
+
+    @property
     def details(self):
         """
         Gets the details of this InlineResponse4005.
 
         :return: The details of this InlineResponse4005.
-        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        :rtype: list[InlineResponse4005Details]
         """
         return self._details
 
@@ -175,7 +175,7 @@ class InlineResponse4005(object):
         Sets the details of this InlineResponse4005.
 
         :param details: The details of this InlineResponse4005.
-        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        :type: list[InlineResponse4005Details]
         """
 
         self._details = details

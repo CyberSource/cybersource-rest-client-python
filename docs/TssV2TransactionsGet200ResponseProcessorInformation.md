@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **card_verification** | [**Riskv1decisionsProcessorInformationCardVerification**](Riskv1decisionsProcessorInformationCardVerification.md) |  | [optional] 
 **ach_verification** | [**PtsV2PaymentsPost201ResponseProcessorInformationAchVerification**](PtsV2PaymentsPost201ResponseProcessorInformationAchVerification.md) |  | [optional] 
 **electronic_verification_results** | [**TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults**](TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.md) |  | [optional] 
-**issuer_information** | [**PtsV2PaymentsPost201Response1IssuerInformation**](PtsV2PaymentsPost201Response1IssuerInformation.md) |  | [optional] 
+**issuer_information** | [**RefreshPaymentStatusResponseIssuerInformation**](RefreshPaymentStatusResponseIssuerInformation.md) |  | [optional] 
 **event_status** | **str** | The event status.  | [optional] 
 **system_trace_audit_number** | **str** | This field is returned only for **American Express Direct** and **CyberSource through VisaNet**. Returned by authorization and incremental authorization services.  #### American Express Direct  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  #### CyberSource through VisaNet  System trace number that must be printed on the customer&#39;s receipt.  | [optional] 
 **response_code_source** | **str** | Used by Visa only and contains the response source/reason code that identifies the source of the response decision.  | [optional] 

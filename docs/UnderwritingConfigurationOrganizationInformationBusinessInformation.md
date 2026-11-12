@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **trading_address** | [**UnderwritingConfigurationOrganizationInformationBusinessInformationTradingAddress**](UnderwritingConfigurationOrganizationInformationBusinessInformationTradingAddress.md) |  | [optional] 
 **business_contact** | [**UnderwritingConfigurationOrganizationInformationBusinessInformationBusinessContact**](UnderwritingConfigurationOrganizationInformationBusinessInformationBusinessContact.md) |  | [optional] 
 **business_details** | [**UnderwritingConfigurationBusinessDetails**](UnderwritingConfigurationBusinessDetails.md) |  | [optional] 
-**owner_information** | [**list[UnderwritingConfigurationOrganizationInformationBusinessInformationOwnerInformation]**](UnderwritingConfigurationOrganizationInformationBusinessInformationOwnerInformation.md) |  | [optional] 
+**owner_information** | [**list[UnderwritingConfigurationOwnerInformation]**](UnderwritingConfigurationOwnerInformation.md) |  | [optional] 
 **director_information** | [**list[UnderwritingConfigurationOrganizationInformationBusinessInformationDirectorInformation]**](UnderwritingConfigurationOrganizationInformationBusinessInformationDirectorInformation.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

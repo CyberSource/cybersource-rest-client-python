@@ -60,7 +60,7 @@ class BankAccountValidationApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param AccountValidationsRequest account_validations_request: (required)
-        :return: InlineResponse20015
+        :return: BankAccountValidationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -89,7 +89,7 @@ class BankAccountValidationApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param AccountValidationsRequest account_validations_request: (required)
-        :return: InlineResponse20015
+        :return: BankAccountValidationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -129,8 +129,10 @@ class BankAccountValidationApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'account_validations_request' in params:
@@ -142,7 +144,7 @@ class BankAccountValidationApi(object):
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "bank_account_validation_request,bank_account_validation_request_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "bank_account_validation_request,bank_account_validation_request_with_http_info")
 
@@ -156,7 +158,7 @@ class BankAccountValidationApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20015',
+                                        response_type='BankAccountValidationResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

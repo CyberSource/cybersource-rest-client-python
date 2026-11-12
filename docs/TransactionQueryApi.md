@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **create_query_api**
-> InlineResponse2014 create_query_api(id, body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, limit=limit, offset=offset)
+> CreateQueryApiResponse create_query_api(id, create_query_api_request, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, limit=limit, offset=offset)
 
 Query Transaction Details
 
@@ -25,7 +25,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.TransactionQueryApi()
 id = 'id_example' # str | This is the CyberSource Request ID generated for successfully processed AFT/OCT that needs to be queried. 
-body = CyberSource.Body1() # Body1 | 
+create_query_api_request = CyberSource.CreateQueryApiRequest() # CreateQueryApiRequest | 
 content_type = 'content_type_example' # str | 
 x_requestid = 'x_requestid_example' # str | 
 v_c_merchant_id = 'v_c_merchant_id_example' # str | 
@@ -37,7 +37,7 @@ offset = 56 # int | Offset from the first item in the list of options received f
 
 try: 
     # Query Transaction Details
-    api_response = api_instance.create_query_api(id, body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, limit=limit, offset=offset)
+    api_response = api_instance.create_query_api(id, create_query_api_request, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, limit=limit, offset=offset)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TransactionQueryApi->create_query_api: %s\n" % e)
@@ -48,7 +48,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| This is the CyberSource Request ID generated for successfully processed AFT/OCT that needs to be queried.  | 
- **body** | [**Body1**](Body1.md)|  | 
+ **create_query_api_request** | [**CreateQueryApiRequest**](CreateQueryApiRequest.md)|  | 
  **content_type** | **str**|  | 
  **x_requestid** | **str**|  | 
  **v_c_merchant_id** | **str**|  | 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2014**](InlineResponse2014.md)
+[**CreateQueryApiResponse**](CreateQueryApiResponse.md)
 
 ### Authorization
 

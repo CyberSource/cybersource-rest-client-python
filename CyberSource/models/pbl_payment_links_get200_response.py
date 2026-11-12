@@ -30,7 +30,7 @@ class PblPaymentLinksGet200Response(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'GetSubscriptionsPaymentsResponse1Links',
+        'links': 'UpdateSubscriptionsPaymentsResponseLinks',
         'id': 'str',
         'submit_time_utc': 'str',
         'status': 'str',
@@ -88,7 +88,7 @@ class PblPaymentLinksGet200Response(object):
         Gets the links of this PblPaymentLinksGet200Response.
 
         :return: The links of this PblPaymentLinksGet200Response.
-        :rtype: GetSubscriptionsPaymentsResponse1Links
+        :rtype: UpdateSubscriptionsPaymentsResponseLinks
         """
         return self._links
 
@@ -98,7 +98,7 @@ class PblPaymentLinksGet200Response(object):
         Sets the links of this PblPaymentLinksGet200Response.
 
         :param links: The links of this PblPaymentLinksGet200Response.
-        :type: GetSubscriptionsPaymentsResponse1Links
+        :type: UpdateSubscriptionsPaymentsResponseLinks
         """
 
         self._links = links

@@ -33,7 +33,7 @@ class PaymentsProductsMicroformSubscriptionInformation(object):
         'enabled': 'bool',
         'enablement_status': 'str',
         'self_serviceability': 'str',
-        'features': 'dict(str, PaymentsProductsCardProcessingSubscriptionInformationFeatures)'
+        'features': 'dict(str, CardProessingFeatureSubscriptionItem)'
     }
 
     attribute_map = {
@@ -135,7 +135,7 @@ class PaymentsProductsMicroformSubscriptionInformation(object):
         Gets the features of this PaymentsProductsMicroformSubscriptionInformation.
 
         :return: The features of this PaymentsProductsMicroformSubscriptionInformation.
-        :rtype: dict(str, PaymentsProductsCardProcessingSubscriptionInformationFeatures)
+        :rtype: dict(str, CardProessingFeatureSubscriptionItem)
         """
         return self._features
 
@@ -145,7 +145,7 @@ class PaymentsProductsMicroformSubscriptionInformation(object):
         Sets the features of this PaymentsProductsMicroformSubscriptionInformation.
 
         :param features: The features of this PaymentsProductsMicroformSubscriptionInformation.
-        :type: dict(str, PaymentsProductsCardProcessingSubscriptionInformationFeatures)
+        :type: dict(str, CardProessingFeatureSubscriptionItem)
         """
 
         self._features = features

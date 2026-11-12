@@ -30,112 +30,43 @@ class InlineResponse4032(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'submit_time_utc': 'str',
         'status': 'str',
-        'message': 'str',
-        'code': 'str',
-        'submit_time_utc': 'str'
+        'reason': 'str',
+        'message': 'str'
     }
 
     attribute_map = {
+        'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
-        'message': 'message',
-        'code': 'code',
-        'submit_time_utc': 'submitTimeUtc'
+        'reason': 'reason',
+        'message': 'message'
     }
 
-    def __init__(self, status=None, message=None, code=None, submit_time_utc=None):
+    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None):
         """
         InlineResponse4032 - a model defined in Swagger
         """
 
-        self._status = None
-        self._message = None
-        self._code = None
         self._submit_time_utc = None
+        self._status = None
+        self._reason = None
+        self._message = None
 
-        if status is not None:
-          self.status = status
-        if message is not None:
-          self.message = message
-        if code is not None:
-          self.code = code
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse4032.
-        The status of the submitted request.   Possible values: - FORBIDDEN
-
-        :return: The status of this InlineResponse4032.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse4032.
-        The status of the submitted request.   Possible values: - FORBIDDEN
-
-        :param status: The status of this InlineResponse4032.
-        :type: str
-        """
-
-        self._status = status
-
-    @property
-    def message(self):
-        """
-        Gets the message of this InlineResponse4032.
-        The detail message related to the status and reason listed above.
-
-        :return: The message of this InlineResponse4032.
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """
-        Sets the message of this InlineResponse4032.
-        The detail message related to the status and reason listed above.
-
-        :param message: The message of this InlineResponse4032.
-        :type: str
-        """
-
-        self._message = message
-
-    @property
-    def code(self):
-        """
-        Gets the code of this InlineResponse4032.
-        An optional short string which identifies the exact error.
-
-        :return: The code of this InlineResponse4032.
-        :rtype: str
-        """
-        return self._code
-
-    @code.setter
-    def code(self, code):
-        """
-        Sets the code of this InlineResponse4032.
-        An optional short string which identifies the exact error.
-
-        :param code: The code of this InlineResponse4032.
-        :type: str
-        """
-
-        self._code = code
+        if status is not None:
+          self.status = status
+        if reason is not None:
+          self.reason = reason
+        if message is not None:
+          self.message = message
 
     @property
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this InlineResponse4032.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC.  Format: `YYYY-MM-DDThhmmssZ`, where: - `T`:  Separates the date and the time - `Z`:  Indicates Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT)  Example:  `2020-01-11T224757Z` equals January 11, 2020, at 22:47:57 (10:47:57 p.m.) 
 
         :return: The submit_time_utc of this InlineResponse4032.
         :rtype: str
@@ -146,13 +77,82 @@ class InlineResponse4032(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this InlineResponse4032.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC.  Format: `YYYY-MM-DDThhmmssZ`, where: - `T`:  Separates the date and the time - `Z`:  Indicates Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT)  Example:  `2020-01-11T224757Z` equals January 11, 2020, at 22:47:57 (10:47:57 p.m.) 
 
         :param submit_time_utc: The submit_time_utc of this InlineResponse4032.
         :type: str
         """
 
         self._submit_time_utc = submit_time_utc
+
+    @property
+    def status(self):
+        """
+        Gets the status of this InlineResponse4032.
+        Possible values:   - `UNAUTHORIZED` 
+
+        :return: The status of this InlineResponse4032.
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this InlineResponse4032.
+        Possible values:   - `UNAUTHORIZED` 
+
+        :param status: The status of this InlineResponse4032.
+        :type: str
+        """
+
+        self._status = status
+
+    @property
+    def reason(self):
+        """
+        Gets the reason of this InlineResponse4032.
+        The reason of the status.  Possible values:   - `UNAUTHORIZED` 
+
+        :return: The reason of this InlineResponse4032.
+        :rtype: str
+        """
+        return self._reason
+
+    @reason.setter
+    def reason(self, reason):
+        """
+        Sets the reason of this InlineResponse4032.
+        The reason of the status.  Possible values:   - `UNAUTHORIZED` 
+
+        :param reason: The reason of this InlineResponse4032.
+        :type: str
+        """
+
+        self._reason = reason
+
+    @property
+    def message(self):
+        """
+        Gets the message of this InlineResponse4032.
+        The detail message related to the status and reason. 
+
+        :return: The message of this InlineResponse4032.
+        :rtype: str
+        """
+        return self._message
+
+    @message.setter
+    def message(self, message):
+        """
+        Sets the message of this InlineResponse4032.
+        The detail message related to the status and reason. 
+
+        :param message: The message of this InlineResponse4032.
+        :type: str
+        """
+
+        self._message = message
 
     def to_dict(self):
         """

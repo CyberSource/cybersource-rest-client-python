@@ -53,7 +53,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **parse_emv_tags**
-> TssV2PostEmvTags200Response parse_emv_tags(body)
+> TssV2PostEmvTags200Response parse_emv_tags(parse_emv_tags_request)
 
 Parse an EMV String
 
@@ -69,11 +69,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.EMVTagDetailsApi()
-body = CyberSource.Body2() # Body2 | 
+parse_emv_tags_request = CyberSource.ParseEmvTagsRequest() # ParseEmvTagsRequest | 
 
 try: 
     # Parse an EMV String
-    api_response = api_instance.parse_emv_tags(body)
+    api_response = api_instance.parse_emv_tags(parse_emv_tags_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EMVTagDetailsApi->parse_emv_tags: %s\n" % e)
@@ -83,7 +83,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body2**](Body2.md)|  | 
+ **parse_emv_tags_request** | [**ParseEmvTagsRequest**](ParseEmvTagsRequest.md)|  | 
 
 ### Return type
 

@@ -129,6 +129,7 @@ class JwtSignatureToken(TokenGeneration):
             logger = LogFactory.setup_logger(__name__, self.merchant_config.log_config)
             response_mle_kid = MLEUtility.validate_and_auto_extract_response_mle_kid(self.merchant_config, logger)
             jwt_payload['v-c-response-mle-kid'] = response_mle_kid
+            jwt_payload['v-c-response-mle-algo'] = 'RSA-OAEP-256'
 
         return jwt_payload
 

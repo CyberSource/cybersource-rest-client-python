@@ -32,7 +32,7 @@ class PaymentsProductsCardProcessingSubscriptionInformation(object):
     swagger_types = {
         'enabled': 'bool',
         'self_serviceability': 'str',
-        'features': 'dict(str, PaymentsProductsCardProcessingSubscriptionInformationFeatures)'
+        'features': 'dict(str, CardProessingFeatureSubscriptionItem)'
     }
 
     attribute_map = {
@@ -108,7 +108,7 @@ class PaymentsProductsCardProcessingSubscriptionInformation(object):
         This is a map. The allowed keys are below. Value should be an object containing a sole boolean property - enabled. <table>    <tr>       <td>cardPresent</td>    </tr>    <tr>       <td>cardNotPresent</td>    </tr> </table> 
 
         :return: The features of this PaymentsProductsCardProcessingSubscriptionInformation.
-        :rtype: dict(str, PaymentsProductsCardProcessingSubscriptionInformationFeatures)
+        :rtype: dict(str, CardProessingFeatureSubscriptionItem)
         """
         return self._features
 
@@ -119,7 +119,7 @@ class PaymentsProductsCardProcessingSubscriptionInformation(object):
         This is a map. The allowed keys are below. Value should be an object containing a sole boolean property - enabled. <table>    <tr>       <td>cardPresent</td>    </tr>    <tr>       <td>cardNotPresent</td>    </tr> </table> 
 
         :param features: The features of this PaymentsProductsCardProcessingSubscriptionInformation.
-        :type: dict(str, PaymentsProductsCardProcessingSubscriptionInformationFeatures)
+        :type: dict(str, CardProessingFeatureSubscriptionItem)
         """
 
         self._features = features

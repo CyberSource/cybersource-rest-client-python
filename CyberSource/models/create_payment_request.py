@@ -47,7 +47,7 @@ class CreatePaymentRequest(object):
         'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
         'merchant_defined_secure_information': 'Ptsv2paymentsMerchantDefinedSecureInformation',
         'installment_information': 'Ptsv2paymentsInstallmentInformation',
-        'travel_information': 'Ptsv2paymentsTravelInformation',
+        'travel_information': 'Ptsv2paymentsTravelInformationExtended',
         'health_care_information': 'Ptsv2paymentsHealthCareInformation',
         'promotion_information': 'Ptsv2paymentsPromotionInformation',
         'token_information': 'Ptsv2paymentsTokenInformation',
@@ -559,7 +559,7 @@ class CreatePaymentRequest(object):
         Gets the travel_information of this CreatePaymentRequest.
 
         :return: The travel_information of this CreatePaymentRequest.
-        :rtype: Ptsv2paymentsTravelInformation
+        :rtype: Ptsv2paymentsTravelInformationExtended
         """
         return self._travel_information
 
@@ -569,7 +569,7 @@ class CreatePaymentRequest(object):
         Sets the travel_information of this CreatePaymentRequest.
 
         :param travel_information: The travel_information of this CreatePaymentRequest.
-        :type: Ptsv2paymentsTravelInformation
+        :type: Ptsv2paymentsTravelInformationExtended
         """
 
         self._travel_information = travel_information

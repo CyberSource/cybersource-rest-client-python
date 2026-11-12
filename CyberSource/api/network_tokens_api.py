@@ -62,7 +62,7 @@ class NetworkTokensApi(object):
         :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
         :param str token_provider: The token provider. (required)
         :param str asset_type: The type of asset. (required)
-        :return: InlineResponse2002
+        :return: CardArtAssetResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -93,7 +93,7 @@ class NetworkTokensApi(object):
         :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
         :param str token_provider: The token provider. (required)
         :param str asset_type: The type of asset. (required)
-        :return: InlineResponse2002
+        :return: CardArtAssetResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -150,8 +150,10 @@ class NetworkTokensApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -160,11 +162,12 @@ class NetworkTokensApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_card_art_asset,get_card_art_asset_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_card_art_asset,get_card_art_asset_with_http_info")
 
@@ -178,7 +181,7 @@ class NetworkTokensApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2002',
+                                        response_type='CardArtAssetResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -203,7 +206,7 @@ class NetworkTokensApi(object):
             for asynchronous request. (optional)
         :param str tokenized_card_id: The Id of a tokenized card. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: InlineResponse2001
+        :return: GetTokenizedCardResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -233,7 +236,7 @@ class NetworkTokensApi(object):
             for asynchronous request. (optional)
         :param str tokenized_card_id: The Id of a tokenized card. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: InlineResponse2001
+        :return: GetTokenizedCardResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -278,8 +281,10 @@ class NetworkTokensApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -288,11 +293,12 @@ class NetworkTokensApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_tokenized_card,get_tokenized_card_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_tokenized_card,get_tokenized_card_with_http_info")
 
@@ -306,7 +312,7 @@ class NetworkTokensApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2001',
+                                        response_type='GetTokenizedCardResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -416,8 +422,10 @@ class NetworkTokensApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'post_issuer_life_cycle_simulation_request' in params:
@@ -429,7 +437,7 @@ class NetworkTokensApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_issuer_life_cycle_simulation,post_issuer_life_cycle_simulation_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_issuer_life_cycle_simulation,post_issuer_life_cycle_simulation_with_http_info")
 
@@ -467,7 +475,7 @@ class NetworkTokensApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str token_id: The Id of a token representing a Customer, Payment Instrument or Instrument Identifier. (required)
-        :param PostPaymentCredentialsRequest1 post_payment_credentials_request: (required)
+        :param PostPaymentCredentialsRequest post_payment_credentials_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: str
                  If the method is called asynchronously,
@@ -498,7 +506,7 @@ class NetworkTokensApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str token_id: The Id of a token representing a Customer, Payment Instrument or Instrument Identifier. (required)
-        :param PostPaymentCredentialsRequest1 post_payment_credentials_request: (required)
+        :param PostPaymentCredentialsRequest post_payment_credentials_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: str
                  If the method is called asynchronously,
@@ -549,8 +557,10 @@ class NetworkTokensApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/jose;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'post_payment_credentials_request' in params:
@@ -562,7 +572,7 @@ class NetworkTokensApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_token_payment_credentials,post_token_payment_credentials_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_token_payment_credentials,post_token_payment_credentials_with_http_info")
 
@@ -585,7 +595,7 @@ class NetworkTokensApi(object):
                                         collection_formats=collection_formats,
                                         isResponseMLEforApi=isResponseMLEforApi)
 
-    def post_token_payment_credentials_v3(self, token_id, post_payment_credentials_request, **kwargs):
+    def post_token_payment_credentials_v3(self, token_id, post_payment_credentials_v3_request, **kwargs):
         """
         Generate Payment Credentials Latest Version v3
         **Payment Credentials**<br>Contains payment information such as the network token, generated TAVV cryptogram for Visa & MasterCard, dynamic CVV for Amex, or DTVV cryptogram for VISA. This latest version (v3) returns the Primary Account Number details, if the network token is not present. The response is provided in JSON Web Encryption (JWE) format. <br>Your system can use this API to retrieve the Payment Credentials for an existing Customer, Payment Instrument, Instrument Identifier or Tokenized Card.<br>Optionally, **authenticated identities** information from Passkey authentication can be provided to potentially achieve liability shift, which may result in the return of an e-commerce indicator of 5 if successful. 
@@ -595,14 +605,14 @@ class NetworkTokensApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.post_token_payment_credentials_v3(token_id, post_payment_credentials_request, callback=callback_function)
+        >>> thread = api.post_token_payment_credentials_v3(token_id, post_payment_credentials_v3_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str token_id: The Id of a token representing a Customer, Payment Instrument or Instrument Identifier. (required)
-        :param PostPaymentCredentialsRequest post_payment_credentials_request: (required)
+        :param PostPaymentCredentialsV3Request post_payment_credentials_v3_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: InlineResponse2011
+        :return: PostPaymentCredentialsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -611,12 +621,12 @@ class NetworkTokensApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.post_token_payment_credentials_v3_with_http_info(token_id, post_payment_credentials_request, **kwargs)
+            return self.post_token_payment_credentials_v3_with_http_info(token_id, post_payment_credentials_v3_request, **kwargs)
         else:
-            (data) = self.post_token_payment_credentials_v3_with_http_info(token_id, post_payment_credentials_request, **kwargs)
+            (data) = self.post_token_payment_credentials_v3_with_http_info(token_id, post_payment_credentials_v3_request, **kwargs)
             return data
 
-    def post_token_payment_credentials_v3_with_http_info(self, token_id, post_payment_credentials_request, **kwargs):
+    def post_token_payment_credentials_v3_with_http_info(self, token_id, post_payment_credentials_v3_request, **kwargs):
         """
         Generate Payment Credentials Latest Version v3
         **Payment Credentials**<br>Contains payment information such as the network token, generated TAVV cryptogram for Visa & MasterCard, dynamic CVV for Amex, or DTVV cryptogram for VISA. This latest version (v3) returns the Primary Account Number details, if the network token is not present. The response is provided in JSON Web Encryption (JWE) format. <br>Your system can use this API to retrieve the Payment Credentials for an existing Customer, Payment Instrument, Instrument Identifier or Tokenized Card.<br>Optionally, **authenticated identities** information from Passkey authentication can be provided to potentially achieve liability shift, which may result in the return of an e-commerce indicator of 5 if successful. 
@@ -626,19 +636,19 @@ class NetworkTokensApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.post_token_payment_credentials_v3_with_http_info(token_id, post_payment_credentials_request, callback=callback_function)
+        >>> thread = api.post_token_payment_credentials_v3_with_http_info(token_id, post_payment_credentials_v3_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str token_id: The Id of a token representing a Customer, Payment Instrument or Instrument Identifier. (required)
-        :param PostPaymentCredentialsRequest post_payment_credentials_request: (required)
+        :param PostPaymentCredentialsV3Request post_payment_credentials_v3_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: InlineResponse2011
+        :return: PostPaymentCredentialsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['token_id', 'post_payment_credentials_request', 'profile_id']
+        all_params = ['token_id', 'post_payment_credentials_v3_request', 'profile_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -657,10 +667,10 @@ class NetworkTokensApi(object):
         if ('token_id' not in params) or (params['token_id'] is None):
             self.logger.error("InvalidArgumentException : Missing the required parameter `token_id` when calling `post_token_payment_credentials_v3`")
             raise ValueError("Missing the required parameter `token_id` when calling `post_token_payment_credentials_v3`")
-        # verify the required parameter 'post_payment_credentials_request' is set
-        if ('post_payment_credentials_request' not in params) or (params['post_payment_credentials_request'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `post_payment_credentials_request` when calling `post_token_payment_credentials_v3`")
-            raise ValueError("Missing the required parameter `post_payment_credentials_request` when calling `post_token_payment_credentials_v3`")
+        # verify the required parameter 'post_payment_credentials_v3_request' is set
+        if ('post_payment_credentials_v3_request' not in params) or (params['post_payment_credentials_v3_request'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `post_payment_credentials_v3_request` when calling `post_token_payment_credentials_v3`")
+            raise ValueError("Missing the required parameter `post_payment_credentials_v3_request` when calling `post_token_payment_credentials_v3`")
 
 
         collection_formats = {}
@@ -682,20 +692,22 @@ class NetworkTokensApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/jose;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
-        if 'post_payment_credentials_request' in params:
-            body_params = params['post_payment_credentials_request']
+        if 'post_payment_credentials_v3_request' in params:
+            body_params = params['post_payment_credentials_v3_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_payment_credentials_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_payment_credentials_v3_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_token_payment_credentials_v3,post_token_payment_credentials_v3_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_token_payment_credentials_v3,post_token_payment_credentials_v3_with_http_info")
 
@@ -709,7 +721,7 @@ class NetworkTokensApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2011',
+                                        response_type='PostPaymentCredentialsResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -734,7 +746,7 @@ class NetworkTokensApi(object):
             for asynchronous request. (optional)
         :param PostTokenizedCardRequest post_tokenized_card_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: InlineResponse2001
+        :return: GetTokenizedCardResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -764,7 +776,7 @@ class NetworkTokensApi(object):
             for asynchronous request. (optional)
         :param PostTokenizedCardRequest post_tokenized_card_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: InlineResponse2001
+        :return: GetTokenizedCardResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -806,8 +818,10 @@ class NetworkTokensApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'post_tokenized_card_request' in params:
@@ -819,7 +833,7 @@ class NetworkTokensApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_tokenized_card,post_tokenized_card_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_tokenized_card,post_tokenized_card_with_http_info")
 
@@ -833,7 +847,7 @@ class NetworkTokensApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2001',
+                                        response_type='GetTokenizedCardResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -935,8 +949,10 @@ class NetworkTokensApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'post_tokenized_card_delete_request' in params:
@@ -948,7 +964,7 @@ class NetworkTokensApi(object):
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_tokenized_card_delete,post_tokenized_card_delete_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_tokenized_card_delete,post_tokenized_card_delete_with_http_info")
 

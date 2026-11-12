@@ -30,144 +30,108 @@ class InlineResponse4004(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'submit_time_stamp_utc': 'str',
-        'status': 'str',
-        'reason': 'str',
+        'correlation_id': 'str',
+        'details': 'list[Flex400ErrorResponseDetails]',
+        'information_link': 'str',
         'message': 'str',
-        'details': 'list[InlineResponse2013ErrorInformationDetails]'
+        'reason': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'submit_time_stamp_utc': 'submitTimeStampUtc',
-        'status': 'status',
-        'reason': 'reason',
+        'correlation_id': 'correlationId',
+        'details': 'details',
+        'information_link': 'informationLink',
         'message': 'message',
-        'details': 'details'
+        'reason': 'reason'
     }
 
-    def __init__(self, id=None, submit_time_stamp_utc=None, status=None, reason=None, message=None, details=None):
+    def __init__(self, correlation_id=None, details=None, information_link=None, message=None, reason=None):
         """
         InlineResponse4004 - a model defined in Swagger
         """
 
-        self._id = None
-        self._submit_time_stamp_utc = None
-        self._status = None
-        self._reason = None
-        self._message = None
+        self._correlation_id = None
         self._details = None
+        self._information_link = None
+        self._message = None
+        self._reason = None
 
-        if id is not None:
-          self.id = id
-        if submit_time_stamp_utc is not None:
-          self.submit_time_stamp_utc = submit_time_stamp_utc
-        self.status = status
-        if reason is not None:
-          self.reason = reason
-        if message is not None:
-          self.message = message
+        if correlation_id is not None:
+          self.correlation_id = correlation_id
         if details is not None:
           self.details = details
+        if information_link is not None:
+          self.information_link = information_link
+        self.message = message
+        self.reason = reason
 
     @property
-    def id(self):
+    def correlation_id(self):
         """
-        Gets the id of this InlineResponse4004.
-        A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource. 
+        Gets the correlation_id of this InlineResponse4004.
 
-        :return: The id of this InlineResponse4004.
+        :return: The correlation_id of this InlineResponse4004.
         :rtype: str
         """
-        return self._id
+        return self._correlation_id
 
-    @id.setter
-    def id(self, id):
+    @correlation_id.setter
+    def correlation_id(self, correlation_id):
         """
-        Sets the id of this InlineResponse4004.
-        A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource. 
+        Sets the correlation_id of this InlineResponse4004.
 
-        :param id: The id of this InlineResponse4004.
+        :param correlation_id: The correlation_id of this InlineResponse4004.
         :type: str
         """
 
-        self._id = id
+        self._correlation_id = correlation_id
 
     @property
-    def submit_time_stamp_utc(self):
+    def details(self):
         """
-        Gets the submit_time_stamp_utc of this InlineResponse4004.
-        Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Gets the details of this InlineResponse4004.
 
-        :return: The submit_time_stamp_utc of this InlineResponse4004.
+        :return: The details of this InlineResponse4004.
+        :rtype: list[Flex400ErrorResponseDetails]
+        """
+        return self._details
+
+    @details.setter
+    def details(self, details):
+        """
+        Sets the details of this InlineResponse4004.
+
+        :param details: The details of this InlineResponse4004.
+        :type: list[Flex400ErrorResponseDetails]
+        """
+
+        self._details = details
+
+    @property
+    def information_link(self):
+        """
+        Gets the information_link of this InlineResponse4004.
+
+        :return: The information_link of this InlineResponse4004.
         :rtype: str
         """
-        return self._submit_time_stamp_utc
+        return self._information_link
 
-    @submit_time_stamp_utc.setter
-    def submit_time_stamp_utc(self, submit_time_stamp_utc):
+    @information_link.setter
+    def information_link(self, information_link):
         """
-        Sets the submit_time_stamp_utc of this InlineResponse4004.
-        Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Sets the information_link of this InlineResponse4004.
 
-        :param submit_time_stamp_utc: The submit_time_stamp_utc of this InlineResponse4004.
+        :param information_link: The information_link of this InlineResponse4004.
         :type: str
         """
 
-        self._submit_time_stamp_utc = submit_time_stamp_utc
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse4004.
-        Possible values: - INVALID_REQUEST 
-
-        :return: The status of this InlineResponse4004.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse4004.
-        Possible values: - INVALID_REQUEST 
-
-        :param status: The status of this InlineResponse4004.
-        :type: str
-        """
-
-        self._status = status
-
-    @property
-    def reason(self):
-        """
-        Gets the reason of this InlineResponse4004.
-        The reason of the status.  Possible values: - INVALID_DATA - MISSING_FIELD 
-
-        :return: The reason of this InlineResponse4004.
-        :rtype: str
-        """
-        return self._reason
-
-    @reason.setter
-    def reason(self, reason):
-        """
-        Sets the reason of this InlineResponse4004.
-        The reason of the status.  Possible values: - INVALID_DATA - MISSING_FIELD 
-
-        :param reason: The reason of this InlineResponse4004.
-        :type: str
-        """
-
-        self._reason = reason
+        self._information_link = information_link
 
     @property
     def message(self):
         """
         Gets the message of this InlineResponse4004.
-        The detail message related to the status and reason listed above. 
 
         :return: The message of this InlineResponse4004.
         :rtype: str
@@ -178,7 +142,6 @@ class InlineResponse4004(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse4004.
-        The detail message related to the status and reason listed above. 
 
         :param message: The message of this InlineResponse4004.
         :type: str
@@ -187,25 +150,27 @@ class InlineResponse4004(object):
         self._message = message
 
     @property
-    def details(self):
+    def reason(self):
         """
-        Gets the details of this InlineResponse4004.
+        Gets the reason of this InlineResponse4004.
+        Possible values: - INVALID_APIKEY - INVALID_SHIPPING_INPUT_PARAMS - CAPTURE_CONTEXT_INVALID - CAPTURE_CONTEXT_EXPIRED - SDK_XHR_ERROR - UNIFIEDPAYMENTS_VALIDATION_PARAMS - UNIFIEDPAYMENTS_VALIDATION_FIELDS - UNIFIEDPAYMENT_PAYMENT_PARAMITERS - CREATE_TOKEN_TIMEOUT - CREATE_TOKEN_XHR_ERROR - SHOW_LOAD_CONTAINER_SELECTOR - SHOW_LOAD_INVALID_CONTAINER - SHOW_TOKEN_TIMEOUT - SHOW_TOKEN_XHR_ERROR - SHOW_PAYMENT_TIMEOUT
 
-        :return: The details of this InlineResponse4004.
-        :rtype: list[InlineResponse2013ErrorInformationDetails]
+        :return: The reason of this InlineResponse4004.
+        :rtype: str
         """
-        return self._details
+        return self._reason
 
-    @details.setter
-    def details(self, details):
+    @reason.setter
+    def reason(self, reason):
         """
-        Sets the details of this InlineResponse4004.
+        Sets the reason of this InlineResponse4004.
+        Possible values: - INVALID_APIKEY - INVALID_SHIPPING_INPUT_PARAMS - CAPTURE_CONTEXT_INVALID - CAPTURE_CONTEXT_EXPIRED - SDK_XHR_ERROR - UNIFIEDPAYMENTS_VALIDATION_PARAMS - UNIFIEDPAYMENTS_VALIDATION_FIELDS - UNIFIEDPAYMENT_PAYMENT_PARAMITERS - CREATE_TOKEN_TIMEOUT - CREATE_TOKEN_XHR_ERROR - SHOW_LOAD_CONTAINER_SELECTOR - SHOW_LOAD_INVALID_CONTAINER - SHOW_TOKEN_TIMEOUT - SHOW_TOKEN_XHR_ERROR - SHOW_PAYMENT_TIMEOUT
 
-        :param details: The details of this InlineResponse4004.
-        :type: list[InlineResponse2013ErrorInformationDetails]
+        :param reason: The reason of this InlineResponse4004.
+        :type: str
         """
 
-        self._details = details
+        self._reason = reason
 
     def to_dict(self):
         """

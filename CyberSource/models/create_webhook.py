@@ -33,7 +33,7 @@ class CreateWebhook(object):
         'name': 'str',
         'description': 'str',
         'organization_id': 'str',
-        'products': 'list[Notificationsubscriptionsv2webhooksProducts1]',
+        'products': 'list[CreateWebhookRequestProductItem]',
         'webhook_url': 'str',
         'health_check_url': 'str',
         'retry_policy': 'Notificationsubscriptionsv2webhooksRetryPolicy',
@@ -163,7 +163,7 @@ class CreateWebhook(object):
         To see the valid productId and eventTypes, call the \"Create and Manage Webhooks - Retrieve a list of event types\" endpoint.
 
         :return: The products of this CreateWebhook.
-        :rtype: list[Notificationsubscriptionsv2webhooksProducts1]
+        :rtype: list[CreateWebhookRequestProductItem]
         """
         return self._products
 
@@ -174,7 +174,7 @@ class CreateWebhook(object):
         To see the valid productId and eventTypes, call the \"Create and Manage Webhooks - Retrieve a list of event types\" endpoint.
 
         :param products: The products of this CreateWebhook.
-        :type: list[Notificationsubscriptionsv2webhooksProducts1]
+        :type: list[CreateWebhookRequestProductItem]
         """
 
         self._products = products

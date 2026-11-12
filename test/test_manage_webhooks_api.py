@@ -54,22 +54,6 @@ class TestManageWebhooksApi(unittest.TestCase):
         """
         pass
 
-    def test_notification_subscriptions_v1_webhooks_webhook_id_post(self):
-        """
-        Test case for notification_subscriptions_v1_webhooks_webhook_id_post
-
-        Test a Webhook Configuration
-        """
-        pass
-
-    def test_notification_subscriptions_v2_webhooks_webhook_id_patch(self):
-        """
-        Test case for notification_subscriptions_v2_webhooks_webhook_id_patch
-
-        Update a Webhook Subscription
-        """
-        pass
-
     def test_notification_subscriptions_v2_webhooks_webhook_id_status_put(self):
         """
         Test case for notification_subscriptions_v2_webhooks_webhook_id_status_put
@@ -83,6 +67,22 @@ class TestManageWebhooksApi(unittest.TestCase):
         Test case for save_asym_egress_key
 
         Message Level Encryption
+        """
+        pass
+
+    def test_test_webhook_subscription(self):
+        """
+        Test case for test_webhook_subscription
+
+        Test a Webhook Configuration
+        """
+        pass
+
+    def test_update_webhook_subscription(self):
+        """
+        Test case for update_webhook_subscription
+
+        Update a Webhook Subscription
         """
         pass
 

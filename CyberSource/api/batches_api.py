@@ -60,7 +60,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse20014
+        :return: BatchReportResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -89,7 +89,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse20014
+        :return: BatchReportResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -132,8 +132,10 @@ class BatchesApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -142,11 +144,12 @@ class BatchesApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_batch_report,get_batch_report_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_batch_report,get_batch_report_with_http_info")
 
@@ -160,7 +163,7 @@ class BatchesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20014',
+                                        response_type='BatchReportResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -184,7 +187,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse20013
+        :return: BatchStatusResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -213,7 +216,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse20013
+        :return: BatchStatusResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -256,8 +259,10 @@ class BatchesApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -266,11 +271,12 @@ class BatchesApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_batch_status,get_batch_status_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_batch_status,get_batch_status_with_http_info")
 
@@ -284,7 +290,7 @@ class BatchesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20013',
+                                        response_type='BatchStatusResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -311,7 +317,7 @@ class BatchesApi(object):
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset.
         :param str from_date: ISO-8601 format: yyyyMMddTHHmmssZ
         :param str to_date: ISO-8601 format: yyyyMMddTHHmmssZ
-        :return: InlineResponse20012
+        :return: BatchesListResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -343,7 +349,7 @@ class BatchesApi(object):
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset.
         :param str from_date: ISO-8601 format: yyyyMMddTHHmmssZ
         :param str to_date: ISO-8601 format: yyyyMMddTHHmmssZ
-        :return: InlineResponse20012
+        :return: BatchesListResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -387,8 +393,10 @@ class BatchesApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -397,11 +405,12 @@ class BatchesApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_batches_list,get_batches_list_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_batches_list,get_batches_list_with_http_info")
 
@@ -415,7 +424,7 @@ class BatchesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20012',
+                                        response_type='BatchesListResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -424,7 +433,7 @@ class BatchesApi(object):
                                         collection_formats=collection_formats,
                                         isResponseMLEforApi=isResponseMLEforApi)
 
-    def post_batch(self, body, **kwargs):
+    def post_batch(self, post_batch_request, **kwargs):
         """
         Create a Batch
         **Create a Batch**<br>This resource accepts TMS tokens ids of a Customer, Payment Instrument or Instrument Identifier. <br> The card numbers for the supplied tokens ids are then sent to the relevant card associations to check for updates.<br>The following type of batches can be submitted: -  **oneOff** batch containing tokens id for Visa or MasterCard card numbers. - **amexRegistration** batch containing tokens id for Amex card numbers.  A batch id will be returned on a successful response which can be used to get the batch status and the batch report. The availability of API features for a merchant may depend on the portfolio configuration and may need to be enabled at the portfolio level before they can be added to merchant accounts. 
@@ -434,12 +443,12 @@ class BatchesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.post_batch(body, callback=callback_function)
+        >>> thread = api.post_batch(post_batch_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param Body body: (required)
-        :return: InlineResponse202
+        :param PostBatchRequest post_batch_request: (required)
+        :return: BatchCreateResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -448,12 +457,12 @@ class BatchesApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.post_batch_with_http_info(body, **kwargs)
+            return self.post_batch_with_http_info(post_batch_request, **kwargs)
         else:
-            (data) = self.post_batch_with_http_info(body, **kwargs)
+            (data) = self.post_batch_with_http_info(post_batch_request, **kwargs)
             return data
 
-    def post_batch_with_http_info(self, body, **kwargs):
+    def post_batch_with_http_info(self, post_batch_request, **kwargs):
         """
         Create a Batch
         **Create a Batch**<br>This resource accepts TMS tokens ids of a Customer, Payment Instrument or Instrument Identifier. <br> The card numbers for the supplied tokens ids are then sent to the relevant card associations to check for updates.<br>The following type of batches can be submitted: -  **oneOff** batch containing tokens id for Visa or MasterCard card numbers. - **amexRegistration** batch containing tokens id for Amex card numbers.  A batch id will be returned on a successful response which can be used to get the batch status and the batch report. The availability of API features for a merchant may depend on the portfolio configuration and may need to be enabled at the portfolio level before they can be added to merchant accounts. 
@@ -463,17 +472,17 @@ class BatchesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.post_batch_with_http_info(body, callback=callback_function)
+        >>> thread = api.post_batch_with_http_info(post_batch_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param Body body: (required)
-        :return: InlineResponse202
+        :param PostBatchRequest post_batch_request: (required)
+        :return: BatchCreateResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body']
+        all_params = ['post_batch_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -488,10 +497,10 @@ class BatchesApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `body` when calling `post_batch`")
-            raise ValueError("Missing the required parameter `body` when calling `post_batch`")
+        # verify the required parameter 'post_batch_request' is set
+        if ('post_batch_request' not in params) or (params['post_batch_request'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `post_batch_request` when calling `post_batch`")
+            raise ValueError("Missing the required parameter `post_batch_request` when calling `post_batch`")
 
 
         collection_formats = {}
@@ -508,20 +517,22 @@ class BatchesApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if 'post_batch_request' in params:
+            body_params = params['post_batch_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'body', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_batch_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_batch,post_batch_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "post_batch,post_batch_with_http_info")
 
@@ -535,7 +546,7 @@ class BatchesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse202',
+                                        response_type='BatchCreateResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

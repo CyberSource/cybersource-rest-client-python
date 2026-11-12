@@ -51,7 +51,7 @@ class Ucv1sessionsDataProcessingInformationRecurringOptions(object):
     def first_recurring_payment(self):
         """
         Gets the first_recurring_payment of this Ucv1sessionsDataProcessingInformationRecurringOptions.
-        Flag that indicates whether this transaction is the first in a series of recurring payments.  This field is supported only for **Atos**, **FDC Nashville Global**, and **OmniPay Direct**.  Possible values:  - `true` Indicates this is the first payment in a series of recurring payments  - `false` (default) Indicates this is not the first payment in a series of recurring payments. 
+        Flag that indicates whether this transaction is the first in a series of recurring payments.  Possible values:  - `true` Indicates this is the first payment in a series of recurring payments  - `false` (default) Indicates this is not the first payment in a series of recurring payments. 
 
         :return: The first_recurring_payment of this Ucv1sessionsDataProcessingInformationRecurringOptions.
         :rtype: bool
@@ -62,7 +62,7 @@ class Ucv1sessionsDataProcessingInformationRecurringOptions(object):
     def first_recurring_payment(self, first_recurring_payment):
         """
         Sets the first_recurring_payment of this Ucv1sessionsDataProcessingInformationRecurringOptions.
-        Flag that indicates whether this transaction is the first in a series of recurring payments.  This field is supported only for **Atos**, **FDC Nashville Global**, and **OmniPay Direct**.  Possible values:  - `true` Indicates this is the first payment in a series of recurring payments  - `false` (default) Indicates this is not the first payment in a series of recurring payments. 
+        Flag that indicates whether this transaction is the first in a series of recurring payments.  Possible values:  - `true` Indicates this is the first payment in a series of recurring payments  - `false` (default) Indicates this is not the first payment in a series of recurring payments. 
 
         :param first_recurring_payment: The first_recurring_payment of this Ucv1sessionsDataProcessingInformationRecurringOptions.
         :type: bool

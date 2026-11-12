@@ -40,7 +40,8 @@ class Ptsv2paymentsBuyerInformation(object):
         'language': 'str',
         'note_to_seller': 'str',
         'mobile_phone': 'int',
-        'wallet_id': 'str'
+        'wallet_id': 'str',
+        'loyalty': 'Ptsv2paymentsBuyerInformationLoyalty'
     }
 
     attribute_map = {
@@ -54,10 +55,11 @@ class Ptsv2paymentsBuyerInformation(object):
         'language': 'language',
         'note_to_seller': 'noteToSeller',
         'mobile_phone': 'mobilePhone',
-        'wallet_id': 'walletId'
+        'wallet_id': 'walletId',
+        'loyalty': 'loyalty'
     }
 
-    def __init__(self, merchant_customer_id=None, date_of_birth=None, vat_registration_number=None, company_tax_id=None, personal_identification=None, hashed_password=None, gender=None, language=None, note_to_seller=None, mobile_phone=None, wallet_id=None):
+    def __init__(self, merchant_customer_id=None, date_of_birth=None, vat_registration_number=None, company_tax_id=None, personal_identification=None, hashed_password=None, gender=None, language=None, note_to_seller=None, mobile_phone=None, wallet_id=None, loyalty=None):
         """
         Ptsv2paymentsBuyerInformation - a model defined in Swagger
         """
@@ -73,6 +75,7 @@ class Ptsv2paymentsBuyerInformation(object):
         self._note_to_seller = None
         self._mobile_phone = None
         self._wallet_id = None
+        self._loyalty = None
 
         if merchant_customer_id is not None:
           self.merchant_customer_id = merchant_customer_id
@@ -96,6 +99,8 @@ class Ptsv2paymentsBuyerInformation(object):
           self.mobile_phone = mobile_phone
         if wallet_id is not None:
           self.wallet_id = wallet_id
+        if loyalty is not None:
+          self.loyalty = loyalty
 
     @property
     def merchant_customer_id(self):
@@ -347,6 +352,27 @@ class Ptsv2paymentsBuyerInformation(object):
         """
 
         self._wallet_id = wallet_id
+
+    @property
+    def loyalty(self):
+        """
+        Gets the loyalty of this Ptsv2paymentsBuyerInformation.
+
+        :return: The loyalty of this Ptsv2paymentsBuyerInformation.
+        :rtype: Ptsv2paymentsBuyerInformationLoyalty
+        """
+        return self._loyalty
+
+    @loyalty.setter
+    def loyalty(self, loyalty):
+        """
+        Sets the loyalty of this Ptsv2paymentsBuyerInformation.
+
+        :param loyalty: The loyalty of this Ptsv2paymentsBuyerInformation.
+        :type: Ptsv2paymentsBuyerInformationLoyalty
+        """
+
+        self._loyalty = loyalty
 
     def to_dict(self):
         """

@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**category_code** | **str** | MCC code of the merchant or transaction | [optional] 
 **merchant_descriptor** | [**Riskv1decisionsMerchantInformationMerchantDescriptor**](Riskv1decisionsMerchantInformationMerchantDescriptor.md) |  | [optional] 
 **merchant_name** | **str** | Your company&#39;s name as you want it to appear to the customer in the issuing bank&#39;s authentication form. This value overrides the value specified by your merchant bank.  | [optional] 
 

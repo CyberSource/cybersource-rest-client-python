@@ -45,7 +45,7 @@ class ForeignExchangeRatesApi(object):
 
 
 
-    def create_fx_rates(self, body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs):
+    def create_fx_rates(self, create_fx_rates_request, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs):
         """
         Retrieve Foreign Exchange Rates
         Retrieve current foreign exchange rates for cross-border payouts. 
@@ -55,18 +55,18 @@ class ForeignExchangeRatesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_fx_rates(body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, callback=callback_function)
+        >>> thread = api.create_fx_rates(create_fx_rates_request, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param Body body: (required)
+        :param CreateFxRatesRequest create_fx_rates_request: (required)
         :param str content_type: (required)
         :param str x_requestid: (required)
         :param str v_c_merchant_id: (required)
         :param str v_c_permissions: (required)
         :param str v_c_correlation_id: (required)
         :param str v_c_organization_id: (required)
-        :return: InlineResponse2013
+        :return: CreateFxRatesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -75,12 +75,12 @@ class ForeignExchangeRatesApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_fx_rates_with_http_info(body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs)
+            return self.create_fx_rates_with_http_info(create_fx_rates_request, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs)
         else:
-            (data) = self.create_fx_rates_with_http_info(body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs)
+            (data) = self.create_fx_rates_with_http_info(create_fx_rates_request, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs)
             return data
 
-    def create_fx_rates_with_http_info(self, body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs):
+    def create_fx_rates_with_http_info(self, create_fx_rates_request, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, **kwargs):
         """
         Retrieve Foreign Exchange Rates
         Retrieve current foreign exchange rates for cross-border payouts. 
@@ -90,23 +90,23 @@ class ForeignExchangeRatesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_fx_rates_with_http_info(body, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, callback=callback_function)
+        >>> thread = api.create_fx_rates_with_http_info(create_fx_rates_request, content_type, x_requestid, v_c_merchant_id, v_c_permissions, v_c_correlation_id, v_c_organization_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param Body body: (required)
+        :param CreateFxRatesRequest create_fx_rates_request: (required)
         :param str content_type: (required)
         :param str x_requestid: (required)
         :param str v_c_merchant_id: (required)
         :param str v_c_permissions: (required)
         :param str v_c_correlation_id: (required)
         :param str v_c_organization_id: (required)
-        :return: InlineResponse2013
+        :return: CreateFxRatesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'content_type', 'x_requestid', 'v_c_merchant_id', 'v_c_permissions', 'v_c_correlation_id', 'v_c_organization_id']
+        all_params = ['create_fx_rates_request', 'content_type', 'x_requestid', 'v_c_merchant_id', 'v_c_permissions', 'v_c_correlation_id', 'v_c_organization_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -121,10 +121,10 @@ class ForeignExchangeRatesApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `body` when calling `create_fx_rates`")
-            raise ValueError("Missing the required parameter `body` when calling `create_fx_rates`")
+        # verify the required parameter 'create_fx_rates_request' is set
+        if ('create_fx_rates_request' not in params) or (params['create_fx_rates_request'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `create_fx_rates_request` when calling `create_fx_rates`")
+            raise ValueError("Missing the required parameter `create_fx_rates_request` when calling `create_fx_rates`")
         # verify the required parameter 'content_type' is set
         if ('content_type' not in params) or (params['content_type'] is None):
             self.logger.error("InvalidArgumentException : Missing the required parameter `content_type` when calling `create_fx_rates`")
@@ -177,20 +177,22 @@ class ForeignExchangeRatesApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if 'create_fx_rates_request' in params:
+            body_params = params['create_fx_rates_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'body', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_fx_rates_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
         inbound_mle_status = "mandatory"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_fx_rates,create_fx_rates_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_fx_rates,create_fx_rates_with_http_info")
 
@@ -204,7 +206,7 @@ class ForeignExchangeRatesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2013',
+                                        response_type='CreateFxRatesResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

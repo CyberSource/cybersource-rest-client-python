@@ -132,8 +132,10 @@ class ManageWebhooksApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'DELETE' in ('POST'):
@@ -142,11 +144,12 @@ class ManageWebhooksApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "delete_webhook_subscription,delete_webhook_subscription_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "delete_webhook_subscription,delete_webhook_subscription_with_http_info")
 
@@ -184,7 +187,7 @@ class ManageWebhooksApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str webhook_id: The webhook Identifier (required)
-        :return: InlineResponse2018
+        :return: CreateWebhookSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -213,7 +216,7 @@ class ManageWebhooksApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str webhook_id: The webhook Identifier (required)
-        :return: InlineResponse2018
+        :return: CreateWebhookSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -256,8 +259,10 @@ class ManageWebhooksApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -266,11 +271,12 @@ class ManageWebhooksApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_webhook_subscription_by_id,get_webhook_subscription_by_id_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_webhook_subscription_by_id,get_webhook_subscription_by_id_with_http_info")
 
@@ -284,7 +290,7 @@ class ManageWebhooksApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2018',
+                                        response_type='CreateWebhookSubscriptionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -310,7 +316,7 @@ class ManageWebhooksApi(object):
         :param str organization_id: The Organization Identifier. (required)
         :param str product_id: The Product Identifier.
         :param str event_type: The Event Type.
-        :return: list[InlineResponse2007]
+        :return: list[WebhookSubscription]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -341,7 +347,7 @@ class ManageWebhooksApi(object):
         :param str organization_id: The Organization Identifier. (required)
         :param str product_id: The Product Identifier.
         :param str event_type: The Event Type.
-        :return: list[InlineResponse2007]
+        :return: list[WebhookSubscription]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -387,8 +393,10 @@ class ManageWebhooksApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -397,11 +405,12 @@ class ManageWebhooksApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_webhook_subscriptions_by_org,get_webhook_subscriptions_by_org_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "get_webhook_subscriptions_by_org,get_webhook_subscriptions_by_org_with_http_info")
 
@@ -415,256 +424,7 @@ class ManageWebhooksApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='list[InlineResponse2007]',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats,
-                                        isResponseMLEforApi=isResponseMLEforApi)
-
-    def notification_subscriptions_v1_webhooks_webhook_id_post(self, webhook_id, **kwargs):
-        """
-        Test a Webhook Configuration
-        Test the webhook configuration by sending a sample webhook. Calling this endpoint sends a sample webhook to the endpoint identified in the user's subscription.   It will contain sample values for the product & eventType based on values present in your subscription along with a sample message in the payload.   Based on the webhook response users can make any necessary modifications or rest assured knowing their setup is configured correctly. 
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.notification_subscriptions_v1_webhooks_webhook_id_post(webhook_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str webhook_id: The Webhook Identifier. (required)
-        :return: InlineResponse2019
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        self.logger.info("CALL TO METHOD `notification_subscriptions_v1_webhooks_webhook_id_post` STARTED")
-
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.notification_subscriptions_v1_webhooks_webhook_id_post_with_http_info(webhook_id, **kwargs)
-        else:
-            (data) = self.notification_subscriptions_v1_webhooks_webhook_id_post_with_http_info(webhook_id, **kwargs)
-            return data
-
-    def notification_subscriptions_v1_webhooks_webhook_id_post_with_http_info(self, webhook_id, **kwargs):
-        """
-        Test a Webhook Configuration
-        Test the webhook configuration by sending a sample webhook. Calling this endpoint sends a sample webhook to the endpoint identified in the user's subscription.   It will contain sample values for the product & eventType based on values present in your subscription along with a sample message in the payload.   Based on the webhook response users can make any necessary modifications or rest assured knowing their setup is configured correctly. 
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.notification_subscriptions_v1_webhooks_webhook_id_post_with_http_info(webhook_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str webhook_id: The Webhook Identifier. (required)
-        :return: InlineResponse2019
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['webhook_id']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method notification_subscriptions_v1_webhooks_webhook_id_post" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'webhook_id' is set
-        if ('webhook_id' not in params) or (params['webhook_id'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `notification_subscriptions_v1_webhooks_webhook_id_post`")
-            raise ValueError("Missing the required parameter `webhook_id` when calling `notification_subscriptions_v1_webhooks_webhook_id_post`")
-
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'webhook_id' in params:
-            path_params['webhookId'] = params['webhook_id']
-            webhookId=webhook_id
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
-
-        body_params = None
-        if 'POST' in ('POST'):
-            body_params = '{}'
-        
-        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
-        if file_post_body_and_delimiter is not None:
-            body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
-
-        inbound_mle_status = "false"
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "notification_subscriptions_v1_webhooks_webhook_id_post,notification_subscriptions_v1_webhooks_webhook_id_post_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
-        
-        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "notification_subscriptions_v1_webhooks_webhook_id_post,notification_subscriptions_v1_webhooks_webhook_id_post_with_http_info")
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(f'/notification-subscriptions/v1/webhooks/{webhookId}', 'POST',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='InlineResponse2019',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats,
-                                        isResponseMLEforApi=isResponseMLEforApi)
-
-    def notification_subscriptions_v2_webhooks_webhook_id_patch(self, webhook_id, **kwargs):
-        """
-        Update a Webhook Subscription
-        Update a Webhook Subscription.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.notification_subscriptions_v2_webhooks_webhook_id_patch(webhook_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str webhook_id: The Webhook Identifier. (required)
-        :param UpdateWebhook update_webhook: The webhook payload or changes to apply.
-        :return: InlineResponse2008
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        self.logger.info("CALL TO METHOD `notification_subscriptions_v2_webhooks_webhook_id_patch` STARTED")
-
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.notification_subscriptions_v2_webhooks_webhook_id_patch_with_http_info(webhook_id, **kwargs)
-        else:
-            (data) = self.notification_subscriptions_v2_webhooks_webhook_id_patch_with_http_info(webhook_id, **kwargs)
-            return data
-
-    def notification_subscriptions_v2_webhooks_webhook_id_patch_with_http_info(self, webhook_id, **kwargs):
-        """
-        Update a Webhook Subscription
-        Update a Webhook Subscription.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.notification_subscriptions_v2_webhooks_webhook_id_patch_with_http_info(webhook_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str webhook_id: The Webhook Identifier. (required)
-        :param UpdateWebhook update_webhook: The webhook payload or changes to apply.
-        :return: InlineResponse2008
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['webhook_id', 'update_webhook']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method notification_subscriptions_v2_webhooks_webhook_id_patch" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'webhook_id' is set
-        if ('webhook_id' not in params) or (params['webhook_id'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `notification_subscriptions_v2_webhooks_webhook_id_patch`")
-            raise ValueError("Missing the required parameter `webhook_id` when calling `notification_subscriptions_v2_webhooks_webhook_id_patch`")
-
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'webhook_id' in params:
-            path_params['webhookId'] = params['webhook_id']
-            webhookId=webhook_id
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
-
-        body_params = None
-        if 'update_webhook' in params:
-            body_params = params['update_webhook']
-        
-            sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'update_webhook', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
-            body_params = process_body(body_params)
-
-        inbound_mle_status = "false"
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "notification_subscriptions_v2_webhooks_webhook_id_patch,notification_subscriptions_v2_webhooks_webhook_id_patch_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
-        
-        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "notification_subscriptions_v2_webhooks_webhook_id_patch,notification_subscriptions_v2_webhooks_webhook_id_patch_with_http_info")
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(f'/notification-subscriptions/v2/webhooks/{webhookId}', 'PATCH',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='InlineResponse2008',
+                                        response_type='list[WebhookSubscription]',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -762,8 +522,10 @@ class ManageWebhooksApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'update_status' in params:
@@ -775,7 +537,7 @@ class ManageWebhooksApi(object):
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "notification_subscriptions_v2_webhooks_webhook_id_status_put,notification_subscriptions_v2_webhooks_webhook_id_status_put_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "notification_subscriptions_v2_webhooks_webhook_id_status_put,notification_subscriptions_v2_webhooks_webhook_id_status_put_with_http_info")
 
@@ -816,7 +578,7 @@ class ManageWebhooksApi(object):
         :param str v_c_correlation_id: A globally unique id associated with your request
         :param str v_c_sender_organization_id: Sender organization id
         :param str v_c_permissions: Encoded user permissions returned by the CGK, for the entity user who initiated the boarding
-        :return: InlineResponse20110
+        :return: SaveAsymEgressKeyResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -848,7 +610,7 @@ class ManageWebhooksApi(object):
         :param str v_c_correlation_id: A globally unique id associated with your request
         :param str v_c_sender_organization_id: Sender organization id
         :param str v_c_permissions: Encoded user permissions returned by the CGK, for the entity user who initiated the boarding
-        :return: InlineResponse20110
+        :return: SaveAsymEgressKeyResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -894,8 +656,10 @@ class ManageWebhooksApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'save_asym_egress_key' in params:
@@ -907,7 +671,7 @@ class ManageWebhooksApi(object):
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "save_asym_egress_key,save_asym_egress_key_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "save_asym_egress_key,save_asym_egress_key_with_http_info")
 
@@ -921,7 +685,261 @@ class ManageWebhooksApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20110',
+                                        response_type='SaveAsymEgressKeyResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
+    def test_webhook_subscription(self, webhook_id, **kwargs):
+        """
+        Test a Webhook Configuration
+        Test the webhook configuration by sending a sample webhook. Calling this endpoint sends a sample webhook to the endpoint identified in the user's subscription.   It will contain sample values for the product & eventType based on values present in your subscription along with a sample message in the payload.   Based on the webhook response users can make any necessary modifications or rest assured knowing their setup is configured correctly. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.test_webhook_subscription(webhook_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str webhook_id: The Webhook Identifier. (required)
+        :return: TestWebhookSubscriptionResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `test_webhook_subscription` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.test_webhook_subscription_with_http_info(webhook_id, **kwargs)
+        else:
+            (data) = self.test_webhook_subscription_with_http_info(webhook_id, **kwargs)
+            return data
+
+    def test_webhook_subscription_with_http_info(self, webhook_id, **kwargs):
+        """
+        Test a Webhook Configuration
+        Test the webhook configuration by sending a sample webhook. Calling this endpoint sends a sample webhook to the endpoint identified in the user's subscription.   It will contain sample values for the product & eventType based on values present in your subscription along with a sample message in the payload.   Based on the webhook response users can make any necessary modifications or rest assured knowing their setup is configured correctly. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.test_webhook_subscription_with_http_info(webhook_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str webhook_id: The Webhook Identifier. (required)
+        :return: TestWebhookSubscriptionResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['webhook_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method test_webhook_subscription" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'webhook_id' is set
+        if ('webhook_id' not in params) or (params['webhook_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `test_webhook_subscription`")
+            raise ValueError("Missing the required parameter `webhook_id` when calling `test_webhook_subscription`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'webhook_id' in params:
+            path_params['webhookId'] = params['webhook_id']
+            webhookId=webhook_id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
+
+        local_var_content_type = None
+        # HTTP header `Content-Type`
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
+
+        body_params = None
+        if 'POST' in ('POST'):
+            body_params = '{}'
+        
+        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
+        if file_post_body_and_delimiter is not None:
+            body_params = file_post_body_and_delimiter[0]
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
+
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "test_webhook_subscription,test_webhook_subscription_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "test_webhook_subscription,test_webhook_subscription_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/notification-subscriptions/v1/webhooks/{webhookId}', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='TestWebhookSubscriptionResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
+    def update_webhook_subscription(self, webhook_id, **kwargs):
+        """
+        Update a Webhook Subscription
+        Update a Webhook Subscription.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_webhook_subscription(webhook_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str webhook_id: The Webhook Identifier. (required)
+        :param UpdateWebhook update_webhook: The webhook payload or changes to apply.
+        :return: UpdateWebhookSubscriptionResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `update_webhook_subscription` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_webhook_subscription_with_http_info(webhook_id, **kwargs)
+        else:
+            (data) = self.update_webhook_subscription_with_http_info(webhook_id, **kwargs)
+            return data
+
+    def update_webhook_subscription_with_http_info(self, webhook_id, **kwargs):
+        """
+        Update a Webhook Subscription
+        Update a Webhook Subscription.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_webhook_subscription_with_http_info(webhook_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str webhook_id: The Webhook Identifier. (required)
+        :param UpdateWebhook update_webhook: The webhook payload or changes to apply.
+        :return: UpdateWebhookSubscriptionResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['webhook_id', 'update_webhook']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_webhook_subscription" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'webhook_id' is set
+        if ('webhook_id' not in params) or (params['webhook_id'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `update_webhook_subscription`")
+            raise ValueError("Missing the required parameter `webhook_id` when calling `update_webhook_subscription`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'webhook_id' in params:
+            path_params['webhookId'] = params['webhook_id']
+            webhookId=webhook_id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
+
+        local_var_content_type = None
+        # HTTP header `Content-Type`
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
+
+        body_params = None
+        if 'update_webhook' in params:
+            body_params = params['update_webhook']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'update_webhook', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = process_body(body_params)
+
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "update_webhook_subscription,update_webhook_subscription_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "update_webhook_subscription,update_webhook_subscription_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/notification-subscriptions/v2/webhooks/{webhookId}', 'PATCH',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='UpdateWebhookSubscriptionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

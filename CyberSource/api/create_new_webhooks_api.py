@@ -45,6 +45,124 @@ class CreateNewWebhooksApi(object):
 
 
 
+    def create_webhook_subscription(self, **kwargs):
+        """
+        Create a New Webhook Subscription
+        Create a new webhook subscription. Before creating a webhook, ensure that a signature key has been created.  For the example \"Create Webhook using oAuth with Client Credentials\" - for clients who have more than one oAuth Provider and have different client secrets that they would like to config for a given webhook, they may do so by overriding the keyId inside security config of webhook subscription. See the Developer Center examples section titled \"Webhook Security - Create or Store Egress Symmetric Key - Store oAuth Credentials For Symmetric Key\" to store these oAuth credentials that CYBS will need for oAuth.  For JWT authentication, attach your oAuth details to the webhook subscription. See the example \"Create Webhook using oAuth with JWT\" 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_webhook_subscription(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param CreateWebhook create_webhook: The webhook payload
+        :return: CreateWebhookSubscriptionResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        self.logger.info("CALL TO METHOD `create_webhook_subscription` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_webhook_subscription_with_http_info(**kwargs)
+        else:
+            (data) = self.create_webhook_subscription_with_http_info(**kwargs)
+            return data
+
+    def create_webhook_subscription_with_http_info(self, **kwargs):
+        """
+        Create a New Webhook Subscription
+        Create a new webhook subscription. Before creating a webhook, ensure that a signature key has been created.  For the example \"Create Webhook using oAuth with Client Credentials\" - for clients who have more than one oAuth Provider and have different client secrets that they would like to config for a given webhook, they may do so by overriding the keyId inside security config of webhook subscription. See the Developer Center examples section titled \"Webhook Security - Create or Store Egress Symmetric Key - Store oAuth Credentials For Symmetric Key\" to store these oAuth credentials that CYBS will need for oAuth.  For JWT authentication, attach your oAuth details to the webhook subscription. See the example \"Create Webhook using oAuth with JWT\" 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_webhook_subscription_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param CreateWebhook create_webhook: The webhook payload
+        :return: CreateWebhookSubscriptionResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['create_webhook']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_webhook_subscription" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
+
+        local_var_content_type = None
+        # HTTP header `Content-Type`
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
+
+        body_params = None
+        if 'create_webhook' in params:
+            body_params = params['create_webhook']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_webhook', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = process_body(body_params)
+
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "create_webhook_subscription,create_webhook_subscription_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
+        
+        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "create_webhook_subscription,create_webhook_subscription_with_http_info")
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/notification-subscriptions/v2/webhooks', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CreateWebhookSubscriptionResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats,
+                                        isResponseMLEforApi=isResponseMLEforApi)
+
     def find_products_to_subscribe(self, organization_id, **kwargs):
         """
         Find Products You Can Subscribe To
@@ -60,7 +178,7 @@ class CreateNewWebhooksApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str organization_id: The Organization Identifier. (required)
-        :return: list[InlineResponse2006]
+        :return: list[ProductCatalogProduct]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -89,7 +207,7 @@ class CreateNewWebhooksApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str organization_id: The Organization Identifier. (required)
-        :return: list[InlineResponse2006]
+        :return: list[ProductCatalogProduct]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -132,8 +250,10 @@ class CreateNewWebhooksApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'GET' in ('POST'):
@@ -142,11 +262,12 @@ class CreateNewWebhooksApi(object):
         file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
         if file_post_body_and_delimiter is not None:
             body_params = file_post_body_and_delimiter[0]
-            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+            local_var_content_type = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}"
+            header_params['Content-Type'] = local_var_content_type
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "find_products_to_subscribe,find_products_to_subscribe_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "find_products_to_subscribe,find_products_to_subscribe_with_http_info")
 
@@ -160,123 +281,7 @@ class CreateNewWebhooksApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='list[InlineResponse2006]',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats,
-                                        isResponseMLEforApi=isResponseMLEforApi)
-
-    def notification_subscriptions_v2_webhooks_post(self, **kwargs):
-        """
-        Create a New Webhook Subscription
-        Create a new webhook subscription. Before creating a webhook, ensure that a signature key has been created.  For the example \"Create Webhook using oAuth with Client Credentials\" - for clients who have more than one oAuth Provider and have different client secrets that they would like to config for a given webhook, they may do so by overriding the keyId inside security config of webhook subscription. See the Developer Center examples section titled \"Webhook Security - Create or Store Egress Symmetric Key - Store oAuth Credentials For Symmetric Key\" to store these oAuth credentials that CYBS will need for oAuth.  For JWT authentication, attach your oAuth details to the webhook subscription. See the example \"Create Webhook using oAuth with JWT\" 
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.notification_subscriptions_v2_webhooks_post(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param CreateWebhook create_webhook: The webhook payload
-        :return: InlineResponse2018
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        self.logger.info("CALL TO METHOD `notification_subscriptions_v2_webhooks_post` STARTED")
-
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.notification_subscriptions_v2_webhooks_post_with_http_info(**kwargs)
-        else:
-            (data) = self.notification_subscriptions_v2_webhooks_post_with_http_info(**kwargs)
-            return data
-
-    def notification_subscriptions_v2_webhooks_post_with_http_info(self, **kwargs):
-        """
-        Create a New Webhook Subscription
-        Create a new webhook subscription. Before creating a webhook, ensure that a signature key has been created.  For the example \"Create Webhook using oAuth with Client Credentials\" - for clients who have more than one oAuth Provider and have different client secrets that they would like to config for a given webhook, they may do so by overriding the keyId inside security config of webhook subscription. See the Developer Center examples section titled \"Webhook Security - Create or Store Egress Symmetric Key - Store oAuth Credentials For Symmetric Key\" to store these oAuth credentials that CYBS will need for oAuth.  For JWT authentication, attach your oAuth details to the webhook subscription. See the example \"Create Webhook using oAuth with JWT\" 
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.notification_subscriptions_v2_webhooks_post_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param CreateWebhook create_webhook: The webhook payload
-        :return: InlineResponse2018
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['create_webhook']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method notification_subscriptions_v2_webhooks_post" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
-
-        body_params = None
-        if 'create_webhook' in params:
-            body_params = params['create_webhook']
-        
-            sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_webhook', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
-            body_params = process_body(body_params)
-
-        inbound_mle_status = "false"
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "notification_subscriptions_v2_webhooks_post,notification_subscriptions_v2_webhooks_post_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
-        
-        isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "notification_subscriptions_v2_webhooks_post,notification_subscriptions_v2_webhooks_post_with_http_info")
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(f'/notification-subscriptions/v2/webhooks', 'POST',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='InlineResponse2018',
+                                        response_type='list[ProductCatalogProduct]',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -303,7 +308,7 @@ class CreateNewWebhooksApi(object):
         :param str v_c_sender_organization_id: Sender organization id
         :param str v_c_permissions: Encoded user permissions returned by the CGK, for the entity user who initiated the boarding
         :param SaveSymEgressKey save_sym_egress_key: Provide egress Symmetric key information to save (create or store or refresh)
-        :return: InlineResponse2017
+        :return: SaveSymEgressKeyResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -335,7 +340,7 @@ class CreateNewWebhooksApi(object):
         :param str v_c_sender_organization_id: Sender organization id
         :param str v_c_permissions: Encoded user permissions returned by the CGK, for the entity user who initiated the boarding
         :param SaveSymEgressKey save_sym_egress_key: Provide egress Symmetric key information to save (create or store or refresh)
-        :return: InlineResponse2017
+        :return: SaveSymEgressKeyResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -377,8 +382,10 @@ class CreateNewWebhooksApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
         if 'save_sym_egress_key' in params:
@@ -390,7 +397,7 @@ class CreateNewWebhooksApi(object):
 
         inbound_mle_status = "false"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "save_sym_egress_key,save_sym_egress_key_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "save_sym_egress_key,save_sym_egress_key_with_http_info")
 
@@ -404,7 +411,7 @@ class CreateNewWebhooksApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2017',
+                                        response_type='SaveSymEgressKeyResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

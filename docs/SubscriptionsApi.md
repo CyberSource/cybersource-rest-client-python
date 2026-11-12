@@ -367,7 +367,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **subscriptions_id_payments_put**
-> GetSubscriptionsPaymentsResponse1 subscriptions_id_payments_put(id, update_payments)
+> UpdateSubscriptionsPaymentsResponse subscriptions_id_payments_put(id, update_payments)
 
 Update Payments for a subscription
 
@@ -403,7 +403,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetSubscriptionsPaymentsResponse1**](GetSubscriptionsPaymentsResponse1.md)
+[**UpdateSubscriptionsPaymentsResponse**](UpdateSubscriptionsPaymentsResponse.md)
 
 ### Authorization
 

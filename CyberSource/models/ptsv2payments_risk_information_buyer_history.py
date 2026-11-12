@@ -38,7 +38,8 @@ class Ptsv2paymentsRiskInformationBuyerHistory(object):
         'payment_account_history': 'str',
         'payment_account_date': 'int',
         'transaction_count_day': 'int',
-        'transaction_count_year': 'int'
+        'transaction_count_year': 'int',
+        'failed_payment_attempts_count': 'float'
     }
 
     attribute_map = {
@@ -50,10 +51,11 @@ class Ptsv2paymentsRiskInformationBuyerHistory(object):
         'payment_account_history': 'paymentAccountHistory',
         'payment_account_date': 'paymentAccountDate',
         'transaction_count_day': 'transactionCountDay',
-        'transaction_count_year': 'transactionCountYear'
+        'transaction_count_year': 'transactionCountYear',
+        'failed_payment_attempts_count': 'failedPaymentAttemptsCount'
     }
 
-    def __init__(self, customer_account=None, account_history=None, account_purchases=None, add_card_attempts=None, prior_suspicious_activity=None, payment_account_history=None, payment_account_date=None, transaction_count_day=None, transaction_count_year=None):
+    def __init__(self, customer_account=None, account_history=None, account_purchases=None, add_card_attempts=None, prior_suspicious_activity=None, payment_account_history=None, payment_account_date=None, transaction_count_day=None, transaction_count_year=None, failed_payment_attempts_count=None):
         """
         Ptsv2paymentsRiskInformationBuyerHistory - a model defined in Swagger
         """
@@ -67,6 +69,7 @@ class Ptsv2paymentsRiskInformationBuyerHistory(object):
         self._payment_account_date = None
         self._transaction_count_day = None
         self._transaction_count_year = None
+        self._failed_payment_attempts_count = None
 
         if customer_account is not None:
           self.customer_account = customer_account
@@ -86,6 +89,8 @@ class Ptsv2paymentsRiskInformationBuyerHistory(object):
           self.transaction_count_day = transaction_count_day
         if transaction_count_year is not None:
           self.transaction_count_year = transaction_count_year
+        if failed_payment_attempts_count is not None:
+          self.failed_payment_attempts_count = failed_payment_attempts_count
 
     @property
     def customer_account(self):
@@ -289,6 +294,29 @@ class Ptsv2paymentsRiskInformationBuyerHistory(object):
         """
 
         self._transaction_count_year = transaction_count_year
+
+    @property
+    def failed_payment_attempts_count(self):
+        """
+        Gets the failed_payment_attempts_count of this Ptsv2paymentsRiskInformationBuyerHistory.
+        Number of failed payment attempts linked to order
+
+        :return: The failed_payment_attempts_count of this Ptsv2paymentsRiskInformationBuyerHistory.
+        :rtype: float
+        """
+        return self._failed_payment_attempts_count
+
+    @failed_payment_attempts_count.setter
+    def failed_payment_attempts_count(self, failed_payment_attempts_count):
+        """
+        Sets the failed_payment_attempts_count of this Ptsv2paymentsRiskInformationBuyerHistory.
+        Number of failed payment attempts linked to order
+
+        :param failed_payment_attempts_count: The failed_payment_attempts_count of this Ptsv2paymentsRiskInformationBuyerHistory.
+        :type: float
+        """
+
+        self._failed_payment_attempts_count = failed_payment_attempts_count
 
     def to_dict(self):
         """

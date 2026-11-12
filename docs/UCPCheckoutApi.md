@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **ucp_cancel_checkout**
-> InlineResponse20113 ucp_cancel_checkout(session_id)
+> UcpCheckoutSessionResponse ucp_cancel_checkout(session_id)
 
 Cancel Checkout UCP
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20113**](InlineResponse20113.md)
+[**UcpCheckoutSessionResponse**](UcpCheckoutSessionResponse.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ucp_complete_checkout**
-> InlineResponse20113 ucp_complete_checkout(session_id, idempotency_key=idempotency_key, ucp_complete_checkout_request=ucp_complete_checkout_request)
+> UcpCheckoutSessionResponse ucp_complete_checkout(session_id, idempotency_key=idempotency_key, ucp_complete_checkout_request=ucp_complete_checkout_request)
 
 Complete Checkout UCP
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20113**](InlineResponse20113.md)
+[**UcpCheckoutSessionResponse**](UcpCheckoutSessionResponse.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ucp_create_checkout_session**
-> InlineResponse20113 ucp_create_checkout_session(ucp_create_checkout_session_request, idempotency_key=idempotency_key)
+> UcpCheckoutSessionResponse ucp_create_checkout_session(ucp_create_checkout_session_request, idempotency_key=idempotency_key)
 
 Create Checkout Session UCP
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20113**](InlineResponse20113.md)
+[**UcpCheckoutSessionResponse**](UcpCheckoutSessionResponse.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ucp_get_checkout_session**
-> InlineResponse20113 ucp_get_checkout_session(session_id, ucp_get_checkout_session_request)
+> UcpCheckoutSessionResponse ucp_get_checkout_session(session_id, ucp_get_checkout_session_request)
 
 Get Checkout Session UCP
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20113**](InlineResponse20113.md)
+[**UcpCheckoutSessionResponse**](UcpCheckoutSessionResponse.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ucp_update_checkout_session**
-> InlineResponse20113 ucp_update_checkout_session(session_id, ucp_update_checkout_session_request, idempotency_key=idempotency_key)
+> UcpCheckoutSessionResponse ucp_update_checkout_session(session_id, ucp_update_checkout_session_request, idempotency_key=idempotency_key)
 
 Update Checkout Session UCP
 
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20113**](InlineResponse20113.md)
+[**UcpCheckoutSessionResponse**](UcpCheckoutSessionResponse.md)
 
 ### Authorization
 

@@ -45,7 +45,7 @@ class PaymentTokensApi(object):
 
 
 
-    def retrieve_or_delete_payment_token(self, request, **kwargs):
+    def retrieve_or_delete_payment_token(self, payment_token_request, **kwargs):
         """
         Retrieve or Delete Payment Token
         This API can be used in two flavours - for retrieval or deletion of vault id. 
@@ -55,12 +55,12 @@ class PaymentTokensApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.retrieve_or_delete_payment_token(request, callback=callback_function)
+        >>> thread = api.retrieve_or_delete_payment_token(payment_token_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param Request request: (required)
-        :return: InlineResponse201
+        :param PaymentTokenRequest payment_token_request: (required)
+        :return: RetrieveOrDeletePaymentTokenResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -69,12 +69,12 @@ class PaymentTokensApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.retrieve_or_delete_payment_token_with_http_info(request, **kwargs)
+            return self.retrieve_or_delete_payment_token_with_http_info(payment_token_request, **kwargs)
         else:
-            (data) = self.retrieve_or_delete_payment_token_with_http_info(request, **kwargs)
+            (data) = self.retrieve_or_delete_payment_token_with_http_info(payment_token_request, **kwargs)
             return data
 
-    def retrieve_or_delete_payment_token_with_http_info(self, request, **kwargs):
+    def retrieve_or_delete_payment_token_with_http_info(self, payment_token_request, **kwargs):
         """
         Retrieve or Delete Payment Token
         This API can be used in two flavours - for retrieval or deletion of vault id. 
@@ -84,17 +84,17 @@ class PaymentTokensApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.retrieve_or_delete_payment_token_with_http_info(request, callback=callback_function)
+        >>> thread = api.retrieve_or_delete_payment_token_with_http_info(payment_token_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param Request request: (required)
-        :return: InlineResponse201
+        :param PaymentTokenRequest payment_token_request: (required)
+        :return: RetrieveOrDeletePaymentTokenResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['request']
+        all_params = ['payment_token_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -109,10 +109,10 @@ class PaymentTokensApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'request' is set
-        if ('request' not in params) or (params['request'] is None):
-            self.logger.error("InvalidArgumentException : Missing the required parameter `request` when calling `retrieve_or_delete_payment_token`")
-            raise ValueError("Missing the required parameter `request` when calling `retrieve_or_delete_payment_token`")
+        # verify the required parameter 'payment_token_request' is set
+        if ('payment_token_request' not in params) or (params['payment_token_request'] is None):
+            self.logger.error("InvalidArgumentException : Missing the required parameter `payment_token_request` when calling `retrieve_or_delete_payment_token`")
+            raise ValueError("Missing the required parameter `payment_token_request` when calling `retrieve_or_delete_payment_token`")
 
 
         collection_formats = {}
@@ -129,20 +129,22 @@ class PaymentTokensApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 
+        local_var_content_type = None
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        local_var_content_type = self.api_client.select_header_content_type(['application/json', 'application/json; charset=utf-8'])
+        header_params['Content-Type'] = local_var_content_type
 
         body_params = None
-        if 'request' in params:
-            body_params = params['request']
+        if 'payment_token_request' in params:
+            body_params = params['payment_token_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'payment_token_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
         inbound_mle_status = "optional"
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "retrieve_or_delete_payment_token,retrieve_or_delete_payment_token_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params, local_var_content_type)
         
         isResponseMLEforApi = MLEUtility.check_is_response_mle_for_api(self.api_client.mconfig, "retrieve_or_delete_payment_token,retrieve_or_delete_payment_token_with_http_info")
 
@@ -156,7 +158,7 @@ class PaymentTokensApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse201',
+                                        response_type='RetrieveOrDeletePaymentTokenResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
