@@ -23,13 +23,13 @@ setup(
         "certifi",
         "pycryptodome",
         "DateTime",
-        "setuptools<=81.0.0",
         "six",
         "urllib3-future",
         "jwcrypto",
         "cryptography",
         "pgpy",
-        "standard-imghdr; python_version >= '3.13'"
+        "standard-imghdr; python_version >= '3.13'",
+        "importlib_metadata; python_version < '3.8'"
     ],
     packages=find_packages(),
     include_package_data=True,
