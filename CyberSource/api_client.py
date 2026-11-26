@@ -16,7 +16,10 @@ import json
 import mimetypes
 import tempfile
 import threading
-import pkg_resources
+try:
+    from importlib.metadata import version as _package_version, PackageNotFoundError
+except ImportError:  # Python < 3.8
+    from importlib_metadata import version as _package_version, PackageNotFoundError
 
 from datetime import date, datetime
 
@@ -105,8 +108,11 @@ class ApiClient(object):
         self.default_headers[header_name] = header_value
 
     def get_client_id(self):
-        version = pkg_resources.require("cybersource-rest-client-python")[0].version
-        return "cybs-rest-sdk-python-" + version
+        try:
+            sdk_version = _package_version("cybersource-rest-client-python")
+        except PackageNotFoundError:
+            sdk_version = "unknown"
+        return "cybs-rest-sdk-python-" + sdk_version
     
     def remove_first_underscore(self, dict_obj):
         converted_dict_obj = {}
